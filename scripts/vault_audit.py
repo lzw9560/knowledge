@@ -150,10 +150,16 @@ WIKILINK_RE = re.compile(r"\[\[([^\]]+)\]\]")
 
 def extract_wikilinks(text: str) -> list:
     """提取所有 [[链接]]，返回原始目标（去掉 |别名 后的路径部分）。
-    过滤掉 dataview 代码块内的伪链接——dataview 块内的 FROM/WHERE 不是链接。
+
+    过滤规则：
+    1. 先剥掉 frontmatter（frontmatter 字段值里的 [[...]] 是规则描述/占位文本，非真实链接）
+    2. 去掉 ```dataview ... ``` 代码块内的伪链接（dataview 块内的 FROM/WHERE 不是链接）
+    3. 去掉普通 ``` 代码块内的链接（示例/伪代码里的 [[...]] 非真实链接）
+    4. 去掉行内 `code` 中的潜在干扰
     """
+    body = strip_frontmatter(text)
     # 先去掉 ```dataview ... ``` 代码块
-    cleaned = re.sub(r"```dataview\b.*?```", "", text, flags=re.DOTALL | re.IGNORECASE)
+    cleaned = re.sub(r"```dataview\b.*?```", "", body, flags=re.DOTALL | re.IGNORECASE)
     # 去掉普通 ``` 代码块
     cleaned = re.sub(r"```.*?```", "", cleaned, flags=re.DOTALL)
     # 去掉行内 `code` 中的潜在干扰
@@ -511,8 +517,14 @@ class VaultAudit:
         return result
 
     def check_duplicates(self) -> dict:
-        """7. duplicate_check — 按 code 字段分组，同 code 多份"""
-        code_map: dict[str, list[str]] = defaultdict(list)
+        """7. duplicate_check — 按 code+type 联合分组，同 code+type 多份才算重复
+
+        stocks/metrics/valuations/reports 共享同一 code 是正常跨类型关联
+        （如 code=600519 的股票/财务/估值/研报都指向同一标的），不算重复。
+        只有同 code + 同 type 多份才是真正的重复实体。
+        """
+        # key = (code, type)
+        code_type_map: dict[tuple[str, str], list[str]] = defaultdict(list)
         for p in self.all_files:
             rel = p.relative_to(self.investing).as_posix()
             if is_structural_file(rel):
@@ -520,17 +532,21 @@ class VaultAudit:
             full_rel = p.relative_to(self.vault_root).as_posix()
             fm = self.file_frontmatter.get(full_rel, {})
             code = fm.get("code")
-            if code and str(code).strip():
-                code_map[str(code).strip()].append(rel)
+            t = fm.get("type")
+            if code and str(code).strip() and t and str(t).strip():
+                key = (str(code).strip(), str(t).strip())
+                code_type_map[key].append(rel)
 
         duplicates = []
-        for code, paths in code_map.items():
+        for (code, t), paths in code_type_map.items():
             if len(paths) > 1:
-                duplicates.append({"code": code, "paths": paths, "count": len(paths)})
+                duplicates.append({
+                    "code": code, "type": t, "paths": paths, "count": len(paths)
+                })
                 self.findings.append({
                     "check": "duplicate_check",
                     "severity": "critical",
-                    "message": f"重复 code='{code}'：{len(paths)} 份记录 {paths}",
+                    "message": f"重复 code='{code}' type='{t}'：{len(paths)} 份记录 {paths}",
                     "entity": code,
                 })
         result = {"duplicates": duplicates, "count": len(duplicates)}
@@ -706,7 +722,7 @@ class VaultAudit:
         if d.get("duplicates"):
             lines.append("- 重复列表：")
             for x in d["duplicates"]:
-                lines.append(f"  - code=`{x['code']}`（{x['count']} 份）：{', '.join(x['paths'])}")
+                lines.append(f"  - code=`{x['code']}` type=`{x['type']}`（{x['count']} 份）：{', '.join(x['paths'])}")
         lines.append("")
 
         # 8. stale_check

@@ -1,11 +1,12 @@
 [
-  "obsidian-icon-folder",
-  "obsidian-dataview",
-  "templater-obsidian",
-  "obsidian-calendar-plugin",
-  "obsidian-tasks-plugin",
-  "obsidian-excalidraw-plugin",
-  "obsidian-kanban",
-  "quickadd",
-  "obsidian-git"
+    "obsidian-icon-folder",
+    "obsidian-dataview",
+    "templater-obsidian",
+    "obsidian-calendar-plugin",
+    "obsidian-tasks-plugin",
+    "obsidian-excalidraw-plugin",
+    "obsidian-kanban",
+    "quickadd",
+    "obsidian-git",
+    "obsidian-local-rest-api"
 ]

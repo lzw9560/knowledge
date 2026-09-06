@@ -60,4 +60,4 @@ SORT pe_ttm ASC
 - 触发动作：[[actions/]]（人工复核流程，待建）
 - 约束实体：[[stocks/]]
 - 来源：ora-3 诊断 §2.5（`docs/knowledge-graph-improvement-vision.md` line 285：PE 是不可信的静态值）
-- 相关规则：[[static-value-ban]]（ora-3 D8-9 规划，frontmatter 禁止放时点数据——PE 应走 valuations/ 实体，本规则是过渡期校验）
+- 相关规则：[[logic/static-value-ban]]（ora-3 D8-9 规划，frontmatter 禁止放时点数据——PE 应走 valuations/ 实体，本规则是过渡期校验）

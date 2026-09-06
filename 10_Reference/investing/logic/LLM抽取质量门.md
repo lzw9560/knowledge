@@ -68,4 +68,4 @@ ora-3 诊断 §6.5 line 946 明确：
 - 触发动作：[[actions/promote-from-inbox]]（inbox → 正式区的 mv + approved_date）—— ora-3 D10 规划，待建
 - 约束实体：[[inbox/]]
 - 来源：ora-3 诊断 §6.5（`docs/knowledge-graph-improvement-vision.md` line 928-929, 946）+ pipeline §4（`docs/knowledge-graph-llm-pipeline.md` line 259-264）
-- 相关规则：[[报告图谱关联]]（报告扫描出的待入图谱代码 → 进 inbox 走本规则）
+- 相关规则：[[logic/报告图谱关联]]（报告扫描出的待入图谱代码 → 进 inbox 走本规则）
