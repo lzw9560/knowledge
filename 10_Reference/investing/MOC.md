@@ -6,21 +6,21 @@
 
 > 四构件本体模型蒸馏自 nano-ontoprompt。构件 1-2 为静态层，3-4 为动态层。
 
-| 实体类  | 文件夹               | 说明                                                  | 当前数量                                                              |
-| ---- | ----------------- | --------------------------------------------------- | ----------------------------------------------------------------- |
-| 股票   | [[stocks/]]       | A 股/美股/港股个股，对应 `Quote` + `CompanyInfo`              | `= length(filter(this.file.inlinks, (l) => l.folder = "stocks"))` |
-| 行业板块 | [[industries/]]   | 证监会行业分类，对应 `IndustrySector`                         | `= length(filter(this.file.inlinks, (l) => l.folder = "industries"))` |
-| 概念板块 | [[concepts/]]     | 概念题材板块，对应 `ConceptBlock` + `Sector`                 | `= length(filter(this.file.inlinks, (l) => l.folder = "concepts"))` |
-| 指数   | [[indices/]]      | 沪深300/中证500等宽基与行业指数                                 | `= length(filter(this.file.inlinks, (l) => l.folder = "indices"))` |
-| 研报   | [[reports/]]      | 机构研报，对应 `Report` 契约                                 | `= length(filter(this.file.inlinks, (l) => l.folder = "reports"))` |
-| 分析师  | [[analysts/]]     | 研报作者，对应 `Report.researcher`                         | `= length(filter(this.file.inlinks, (l) => l.folder = "analysts"))` |
-| 财务指标 | [[metrics/]]      | 营收/ROE/毛利率等，对应 `Financials` + `FinancialPeriod`     | `= length(filter(this.file.inlinks, (l) => l.folder = "metrics"))` |
-| 估值   | [[valuations/]]   | PE/PB/PEG/分位，对应 `Valuation` + `ValuationPercentile` | `= length(filter(this.file.inlinks, (l) => l.folder = "valuations"))` |
+| 实体类  | 文件夹               | 说明                                                  | 当前数量                                                                    |
+| ---- | ----------------- | --------------------------------------------------- | ----------------------------------------------------------------------- |
+| 股票   | [[stocks/]]       | A 股/美股/港股个股，对应 `Quote` + `CompanyInfo`              | `= length(filter(this.file.inlinks, (l) => l.folder = "stocks"))`       |
+| 行业板块 | [[industries/]]   | 证监会行业分类，对应 `IndustrySector`                         | `= length(filter(this.file.inlinks, (l) => l.folder = "industries"))`   |
+| 概念板块 | [[concepts/]]     | 概念题材板块，对应 `ConceptBlock` + `Sector`                 | `= length(filter(this.file.inlinks, (l) => l.folder = "concepts"))`     |
+| 指数   | [[indices/]]      | 沪深300/中证500等宽基与行业指数                                 | `= length(filter(this.file.inlinks, (l) => l.folder = "indices"))`      |
+| 研报   | [[reports/]]      | 机构研报，对应 `Report` 契约                                 | `= length(filter(this.file.inlinks, (l) => l.folder = "reports"))`      |
+| 分析师  | [[analysts/]]     | 研报作者，对应 `Report.researcher`                         | `= length(filter(this.file.inlinks, (l) => l.folder = "analysts"))`     |
+| 财务指标 | [[metrics/]]      | 营收/ROE/毛利率等，对应 `Financials` + `FinancialPeriod`     | `= length(filter(this.file.inlinks, (l) => l.folder = "metrics"))`      |
+| 估值   | [[valuations/]]   | PE/PB/PEG/分位，对应 `Valuation` + `ValuationPercentile` | `= length(filter(this.file.inlinks, (l) => l.folder = "valuations"))`   |
 | 龙虎榜  | [[dragon-tiger/]] | 游资席位，对应 `Seat` + `BillboardDetail` + `DragonTiger`  | `= length(filter(this.file.inlinks, (l) => l.folder = "dragon-tiger"))` |
-| 事件   | [[events/]]       | 新闻/公告/涨停，对应 `News` + `Announcement` + `ZTPoolItem`  | `= length(filter(this.file.inlinks, (l) => l.folder = "events"))` |
-| 战法   | [[strategies/]]   | 战法卡（从 `backend/strategies/cards/` 导入）          | `= length(filter(this.file.inlinks, (l) => l.folder = "strategies"))` |
-| 项目决策 | [[specs/]]        | SDD spec 决策实体，对应 `specs/` 目录                        | `= length(filter(this.file.inlinks, (l) => l.folder = "specs"))` |
-| 数据源  | [[data-sources/]] | 外部数据源，对应 `ARCHITECTURE` 数据流                     | `= length(filter(this.file.inlinks, (l) => l.folder = "data-sources"))` |
+| 事件   | [[events/]]       | 新闻/公告/涨停，对应 `News` + `Announcement` + `ZTPoolItem`  | `= length(filter(this.file.inlinks, (l) => l.folder = "events"))`       |
+| 战法   | [[strategies/]]   | 战法卡（从 `backend/strategies/cards/` 导入）               | `= length(filter(this.file.inlinks, (l) => l.folder = "strategies"))`   |
+| 项目决策 | [[specs/]]        | SDD spec 决策实体，对应 `specs/` 目录                        | `= length(filter(this.file.inlinks, (l) => l.folder = "specs"))`        |
+| 数据源  | [[data-sources/]] | 外部数据源，对应 `ARCHITECTURE` 数据流                         | `= length(filter(this.file.inlinks, (l) => l.folder = "data-sources"))` |
 
 ### 各类型实体计数（Dataview 动态）
 
