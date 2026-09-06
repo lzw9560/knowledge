@@ -40,4 +40,12 @@ __pycache__/
 
 # Codex 本地状态
 .codex/
-.quartz/
+
+# Quartz 静态站点（源码提交供 GitHub Actions 构建，忽略构建产物）
+.quartz/node_modules/
+.quartz/public/
+.quartz/.quartz-cache/
+.quartz/content
+.quartz/content/
+.quartz/quartz.lock.json
+.quartz/.quartz/plugins/
