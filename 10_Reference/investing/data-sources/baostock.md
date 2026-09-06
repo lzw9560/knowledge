@@ -10,6 +10,7 @@ provides: [K线日更]
 projects: [vibe-research, daily-stock-analysis]
 origin_project: vibe-research
 created: 2026-09-06
+last_synced: 2026-09-07
 ---
 
 # baostock（K线日更）
@@ -30,3 +31,14 @@ created: 2026-09-06
 
 ## 相关 spec
 - [[specs/]] S090 baostock kline 日更
+
+<!-- pipeline: P4 extract_relations.py 生成 -->
+
+## 数据流关系
+
+**对应函数**（`backend/data/sources/`）：
+- `data.sources.baostock_src.ensure_login`
+- `data.sources.baostock_src.fetch_5min_bars`
+
+**关联 spec**：
+- [[specs/S008-后端数据层迁移]]（S008）

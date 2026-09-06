@@ -10,6 +10,7 @@ provides: [A股行情, 财务, 指数, 期货, 基金, 可转债]
 projects: [a-plate-sentinel]
 origin_project: a-plate-sentinel
 created: 2026-09-07
+last_synced: 2026-09-07
 ---
 
 # Tushare

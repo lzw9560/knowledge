@@ -8,6 +8,7 @@ fallback: 无
 compliance: ok
 provides: [公告, 互动易问答]
 created: 2026-09-06
+last_synced: 2026-09-07
 ---
 
 # 巨潮 cninfo（互动易）
@@ -29,3 +30,10 @@ created: 2026-09-06
 
 ## 相关 spec
 - [[specs/]] 后端数据层迁移 / 公告接入
+
+<!-- pipeline: P4 extract_relations.py 生成 -->
+
+## 数据流关系
+
+**对应函数**（`backend/data/sources/`）：
+- `data.sources.cninfo.investor_qa`

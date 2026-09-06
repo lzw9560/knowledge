@@ -4,6 +4,7 @@ number: S001
 title: 修复 chat._get_env_llm_config 缺失 → /api/chat 500
 status: 已实现
 created: 2026-09-07
+last_synced: 2026-09-07
 ---
 
 # S001 修复 chat._get_env_llm_config 缺失 → /api/chat 500

@@ -8,6 +8,7 @@ fallback: 底座层，无降级
 compliance: ok
 provides: [现价, 涨跌, PE, PB, 市值, 换手, 涨跌停]
 created: 2026-09-06
+last_synced: 2026-09-07
 ---
 
 # 腾讯行情
@@ -35,3 +36,23 @@ created: 2026-09-06
 
 ## 相关 spec
 - [[specs/]] 后端数据层基础（A 股全栈数据层五源分级中的 Layer 1 底座）
+
+<!-- pipeline: P4 extract_relations.py 生成 -->
+
+## 数据流关系
+
+**相关工具**：
+- `query_quote` → `astock.tencent_quote`
+
+**对应函数**（`backend/data/sources/`）：
+- `data.sources.tencent.get_prefix`
+- `data.sources.tencent.fetch_raw`
+- `data.sources.tencent.index_raw`
+
+**关联 spec**：
+- [[specs/S008-后端数据层迁移]]（S008）
+
+**喂给实体类型**：
+- [[stocks/]]
+- [[valuations/]]
+- [[metrics/]]

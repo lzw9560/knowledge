@@ -8,6 +8,7 @@ fallback: 无
 compliance: ok
 provides: [宏观指标]
 created: 2026-09-06
+last_synced: 2026-09-07
 ---
 
 # FRED（宏观）
@@ -28,3 +29,13 @@ created: 2026-09-06
 
 ## 相关 spec
 - [[specs/]] S019 Fred API 接入
+
+<!-- pipeline: P4 extract_relations.py 生成 -->
+
+## 数据流关系
+
+**关联 spec**：
+- [[specs/S017-A股涨跌预测模型栈]]（S017）
+- [[specs/S018-多源特征工程]]（S018）
+- [[specs/S019-macro-Fred-API]]（S019）
+- [[specs/S020-worldmonitor决策因子接入]]（S020）

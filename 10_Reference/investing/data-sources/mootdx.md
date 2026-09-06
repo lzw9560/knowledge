@@ -10,6 +10,7 @@ provides: [K线, 财报(待补)]
 projects: [vibe-research, trading-agents, daily-stock-analysis]
 origin_project: vibe-research
 created: 2026-09-06
+last_synced: 2026-09-07
 ---
 
 # mootdx
@@ -32,3 +33,17 @@ created: 2026-09-06
 
 ## 相关 spec
 - [[specs/]] 后端数据层迁移 / mootdx 惰性导入
+
+<!-- pipeline: P4 extract_relations.py 生成 -->
+
+## 数据流关系
+
+**对应函数**（`backend/data/sources/`）：
+- `data.sources.mootdx_src.kline`
+- `data.sources.mootdx_src.finance`
+- `data.sources.tickflow.fetch_klines`
+- `data.sources.tickflow.fetch_klines_as_bars`
+
+**喂给实体类型**：
+- [[stocks/]]
+- [[valuations/]]

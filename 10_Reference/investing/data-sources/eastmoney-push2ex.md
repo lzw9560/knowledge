@@ -8,6 +8,7 @@ fallback: 熔断器+push2delay降级
 compliance: ok
 provides: [涨停四池, 连板梯队, 封板率, 炸板率, 晋级率]
 created: 2026-09-06
+last_synced: 2026-09-07
 ---
 
 # 东财 push2ex（涨停四池）

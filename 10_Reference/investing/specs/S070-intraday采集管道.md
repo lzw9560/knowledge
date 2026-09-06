@@ -4,6 +4,7 @@ number: S070
 title: intraday 数据采集管道
 status: 已实现
 created: 2026-09-07
+last_synced: 2026-09-07
 ---
 
 # S070 intraday 数据采集管道

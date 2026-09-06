@@ -4,6 +4,7 @@ number: S094
 title: 战法分类与双 pipeline 统一底座重构
 status: 已实现
 created: 2026-09-06
+last_synced: 2026-09-07
 ---
 
 # S094 战法分类与双 pipeline 重构

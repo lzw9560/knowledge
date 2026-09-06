@@ -4,6 +4,7 @@ number: S035
 title: ai_proxy 删除（死代码清理）
 status: 已实现
 created: 2026-09-07
+last_synced: 2026-09-07
 ---
 
 # S035 ai_proxy 删除（死代码清理）

@@ -4,6 +4,7 @@ number: S090
 title: premarket_selection 前端接入 + kline 日更
 status: 已实现
 created: 2026-09-07
+last_synced: 2026-09-07
 ---
 
 # S090 premarket_selection 前端接入 + kline 日更

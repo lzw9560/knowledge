@@ -136,3 +136,20 @@ SORT pe_ttm ASC
 关联项目使用的数据源：
 - [[data-sources/tushare]]（a-Plate-Sentinel 专用，积分制）
 - [[data-sources/akshare]] / [[data-sources/baostock]] / [[data-sources/mootdx]]（与 Vibe-Research 共用）
+
+## 跨领域链接（ora-3 §4）
+
+> 投研方法论与其他知识域的"同构"链接。判据（[[logic/cross-domain-gate]]，待建）：
+> 跨域实体必须有 ≥ 2 个具体实例 + 1 条 invariant，否则不建。
+
+### 已建链接
+
+- [[strategies/dragon_head]] §方法论链接 — 「板块轮动识别龙头」↔ 时间序列状态识别（🚧 待建）
+- [[10_Reference/meta/four-construct-ontology]] — 四构件本体方法论（领域无关模板）
+
+### 待建领域
+
+- **技术学习领域**（智驾/时序模型/世界模型）：与投研的同构点见 ora-3 §4.2 表（时序模型↔情绪温度 ΔZ / 世界模型↔反事实推演 / 端到端 vs 模块化↔规则+LLM 兜底 / 多传感器融合↔6 层 z-score+三重护栏 / corner case↔熔断机制）
+- **元知识层**：[[10_Reference/meta/]] — 通用方法论（PARA/MOC/四构件本体）
+
+> 跨域链接数 / 单域链接数 < 20%（防"什么都记但什么都不深"）。当前投研子区跨域链接 = 0，远未到风险，待跨域实体落地后监控。

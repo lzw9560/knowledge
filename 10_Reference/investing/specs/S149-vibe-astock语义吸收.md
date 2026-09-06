@@ -4,6 +4,7 @@ number: S149
 title: vibe-astock 语义吸收（4 阶段框架 spec）
 status: 草案
 created: 2026-09-07
+last_synced: 2026-09-07
 ---
 
 # S149 vibe-astock 语义吸收（4 阶段框架 spec）

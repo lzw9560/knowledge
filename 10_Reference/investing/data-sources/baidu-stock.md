@@ -8,6 +8,7 @@ fallback: 无
 compliance: ok
 provides: [日K线]
 created: 2026-09-06
+last_synced: 2026-09-07
 ---
 
 # 百度股市通（日K线）
@@ -28,3 +29,10 @@ created: 2026-09-06
 
 ## 相关 spec
 - [[specs/]] 后端数据层迁移 / 日 K 线接入
+
+<!-- pipeline: P4 extract_relations.py 生成 -->
+
+## 数据流关系
+
+**对应函数**（`backend/data/sources/`）：
+- `data.sources.baidu.fetch_raw`

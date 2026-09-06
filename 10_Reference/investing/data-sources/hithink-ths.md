@@ -10,6 +10,7 @@ provides: [一致预期, 涨停揭秘]
 projects: [vibe-research, trading-agents]
 origin_project: vibe-research
 created: 2026-09-06
+last_synced: 2026-09-07
 ---
 
 # 同花顺 THS（一致预期/涨停揭秘）
@@ -31,3 +32,19 @@ created: 2026-09-06
 
 ## 相关 spec
 - [[specs/]] 后端数据层迁移 / 一致预期接入
+
+<!-- pipeline: P4 extract_relations.py 生成 -->
+
+## 数据流关系
+
+**对应函数**（`backend/data/sources/`）：
+- `data.sources.hithink_src.valuation_snapshot`
+- `data.sources.hithink_src.skyrocket`
+- `data.sources.hithink_src.hot_stock`
+- `data.sources.hithink_src.anomaly_list`
+- `data.sources.hithink_src.anomaly_stock`
+- `data.sources.hithink_src.limit_up_pool`
+- `data.sources.hithink_src.auction_snapshot`
+
+**关联 spec**：
+- [[specs/S010-工具注册表与SYSTEM_PROMPT]]（S010）

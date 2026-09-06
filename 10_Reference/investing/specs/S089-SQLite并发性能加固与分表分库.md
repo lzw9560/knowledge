@@ -4,6 +4,7 @@ number: S089
 title: SQLite 并发性能加固与 seal_intraday 分表分库
 status: 已实现
 created: 2026-09-07
+last_synced: 2026-09-07
 ---
 
 # S089 SQLite 并发性能加固与 seal_intraday 分表分库

@@ -4,6 +4,7 @@ number: S022
 title: 熔断器 health 读路径修复（尊重 recovery_timeout）
 status: 已实现
 created: 2026-09-07
+last_synced: 2026-09-07
 ---
 
 # S022 熔断器 health 读路径修复（尊重 recovery_timeout）

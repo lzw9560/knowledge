@@ -4,6 +4,7 @@ number: S078
 title: 涨停历史 snapshot 数据地基
 status: 已实现
 created: 2026-09-07
+last_synced: 2026-09-07
 ---
 
 # S078 涨停历史 snapshot 数据地基

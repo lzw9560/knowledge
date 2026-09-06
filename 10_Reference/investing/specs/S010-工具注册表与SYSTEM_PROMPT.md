@@ -4,6 +4,7 @@ number: S010
 title: AI 工具注册表 + SYSTEM_PROMPT 新边界
 status: 已实现
 created: 2026-09-06
+last_synced: 2026-09-07
 ---
 
 # S010 AI 工具注册表 + SYSTEM_PROMPT

@@ -10,6 +10,7 @@ provides: [资产负债表, 利润表, 现金流量表]
 projects: [vibe-research, trading-agents]
 origin_project: vibe-research
 created: 2026-09-06
+last_synced: 2026-09-07
 ---
 
 # 新浪财经（财报三表）
@@ -30,3 +31,12 @@ created: 2026-09-06
 
 ## 相关 spec
 - [[specs/]] 后端数据层迁移 / 财报三表接入
+
+<!-- pipeline: P4 extract_relations.py 生成 -->
+
+## 数据流关系
+
+**对应函数**（`backend/data/sources/`）：
+- `data.sources.sina.fetch_raw`
+- `data.sources.sina_financial.fetch_raw`
+- `data.sources.sina_financial.fetch_merged_periods`

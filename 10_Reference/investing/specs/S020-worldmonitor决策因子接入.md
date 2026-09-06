@@ -4,6 +4,7 @@ number: S020
 title: worldmonitor 决策因子接入（全球宏观/地缘/另类数据）
 status: 已实现
 created: 2026-09-06
+last_synced: 2026-09-07
 ---
 
 # S020 worldmonitor 决策因子接入

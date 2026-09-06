@@ -4,6 +4,7 @@ number: S046
 title: fallback 空写防护（限流返空不覆盖好缓存）
 status: 已实现
 created: 2026-09-07
+last_synced: 2026-09-07
 ---
 
 # S046 fallback 空写防护（限流返空不覆盖好缓存）

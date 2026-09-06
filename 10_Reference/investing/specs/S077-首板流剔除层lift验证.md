@@ -4,6 +4,7 @@ number: S077
 title: 首板流剔除层 §44 lift 验证（B1）
 status: 已实现
 created: 2026-09-07
+last_synced: 2026-09-07
 ---
 
 # S077 首板流剔除层 §44 lift 验证（B1）

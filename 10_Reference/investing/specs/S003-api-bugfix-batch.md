@@ -4,6 +4,7 @@ number: S003
 title: 后端 API 冒烟测试缺陷修复批次
 status: 已实现
 created: 2026-09-07
+last_synced: 2026-09-07
 ---
 
 # S003 后端 API 冒烟测试缺陷修复批次

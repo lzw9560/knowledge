@@ -4,6 +4,7 @@ number: S074
 title: market_phase 统一判定与盘后桩对接
 status: 已实现
 created: 2026-09-07
+last_synced: 2026-09-07
 ---
 
 # S074 market_phase 统一判定与盘后桩对接

@@ -8,6 +8,7 @@ fallback: 熔断器+push2delay降级
 compliance: ok
 provides: [研报标题, 机构, 评级, 日期, 一致预期EPS]
 created: 2026-09-06
+last_synced: 2026-09-07
 ---
 
 # 东财 reportapi（研报）
@@ -32,3 +33,10 @@ created: 2026-09-06
 
 ## 相关 spec
 - [[specs/]] 后端数据层迁移 / 机构一致预期
+
+<!-- pipeline: P4 extract_relations.py 生成 -->
+
+## 数据流关系
+
+**相关工具**：
+- `query_reports` → `astock.eastmoney_reports`

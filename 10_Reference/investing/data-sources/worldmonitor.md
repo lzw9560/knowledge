@@ -8,6 +8,7 @@ fallback: 无
 compliance: ok
 provides: [全球宏观指标]
 created: 2026-09-06
+last_synced: 2026-09-07
 ---
 
 # worldmonitor（全球宏观 MCP）
@@ -28,3 +29,30 @@ created: 2026-09-06
 
 ## 相关 spec
 - [[specs/]] 待补（worldmonitor 接入 spec）
+
+<!-- pipeline: P4 extract_relations.py 生成 -->
+
+## 数据流关系
+
+**对应函数**（`backend/data/sources/`）：
+- `data.sources.worldmonitor.get_worldmonitor_api_key`
+- `data.sources.worldmonitor.fetch_market_data`
+- `data.sources.worldmonitor.fetch_country_risk`
+- `data.sources.worldmonitor.fetch_news_intelligence`
+- `data.sources.worldmonitor.fetch_news_clusters`
+- `data.sources.worldmonitor.fetch_economic_data_china`
+- `data.sources.worldmonitor.fetch_country_macro`
+- `data.sources.worldmonitor.fetch_tariff_trends`
+- `data.sources.worldmonitor.fetch_supply_chain`
+- `data.sources.worldmonitor.fetch_energy_intelligence`
+- `data.sources.worldmonitor.fetch_china_decision_signals`
+- `data.sources.worldmonitor.fetch_hotspot_escalation`
+- `data.sources.worldmonitor.parse_market_data`
+- `data.sources.worldmonitor.parse_country_risk`
+- `data.sources.worldmonitor.parse_news_clusters`
+- `data.sources.worldmonitor.parse_news_intelligence`
+- `data.sources.worldmonitor.parse_hotspot_escalation`
+- `data.sources.worldmonitor.parse_supply_chain`
+
+**关联 spec**：
+- [[specs/S020-worldmonitor决策因子接入]]（S020）

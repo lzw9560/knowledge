@@ -4,6 +4,7 @@ number: S039
 title: StockDeep 个股深度页面接线（消费已有端点，第一批核心四块）
 status: 已实现
 created: 2026-09-07
+last_synced: 2026-09-07
 ---
 
 # S039 StockDeep 个股深度页面接线（消费已有端点，第一批核心四块）

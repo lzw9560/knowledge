@@ -8,6 +8,7 @@ fallback: 单源失败不拖垮整体
 compliance: ok
 provides: [资讯, 12赛道分类, 合规过滤]
 created: 2026-09-06
+last_synced: 2026-09-07
 ---
 
 # 108 RSS 源（资讯雷达）
@@ -33,3 +34,10 @@ created: 2026-09-06
 
 ## 相关 spec
 - [[specs/]] 资讯雷达接入 / 12 赛道 / 合规词表
+
+<!-- pipeline: P4 extract_relations.py 生成 -->
+
+## 数据流关系
+
+**关联 spec**：
+- [[specs/S020-worldmonitor决策因子接入]]（S020）

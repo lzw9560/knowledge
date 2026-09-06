@@ -4,6 +4,7 @@ number: S067
 title: advisory 端点性能优化
 status: 已实现
 created: 2026-09-07
+last_synced: 2026-09-07
 ---
 
 # S067 advisory 端点性能优化
