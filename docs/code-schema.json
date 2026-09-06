@@ -1,0 +1,266 @@
+{
+  "Announcement": {
+    "date": "str",
+    "title": "str",
+    "type": "str"
+  },
+  "BillboardDetail": {
+    "buy": "float",
+    "net": "float",
+    "operate_dept_code": "str",
+    "operate_dept_name": "str",
+    "security_code": "str",
+    "sell": "float",
+    "trade_date": "str"
+  },
+  "CompanyInfo": {
+    "industry": "str",
+    "listing_date": "str"
+  },
+  "ConceptBlock": {
+    "name": "str"
+  },
+  "DragonTiger": {
+    "buy_seats": "tuple[Seat, ...]",
+    "institution_net": "float",
+    "records": "tuple[DragonTigerRecord, ...]",
+    "sell_seats": "tuple[Seat, ...]"
+  },
+  "DragonTigerRecord": {
+    "net_buy": "float"
+  },
+  "Emotion": {
+    "advance_rate": "float",
+    "broken_rate": "float",
+    "ladder": "tuple[dict, ...]",
+    "limit_down_count": "int",
+    "limit_up_count": "int",
+    "max_boards": "int",
+    "seal_rate": "float"
+  },
+  "EmotionResponse": {
+    "cross_source": "dict",
+    "data_source": "str",
+    "date": "str",
+    "emotion": "Emotion",
+    "lianban_count": "int",
+    "lianban_stocks": "tuple[LianbanStock, ...]",
+    "yzt_count": "int",
+    "zb_count": "int"
+  },
+  "FinancialPeriod": {
+    "accounts_receivable": "float",
+    "admin_expense": "float",
+    "capex": "float",
+    "cash_and_equivalents": "float",
+    "eps_basic": "float",
+    "eps_diluted": "float",
+    "financial_expense": "float",
+    "financing_cash_flow": "float",
+    "fixed_assets": "float",
+    "goodwill": "float",
+    "gross_profit": "float",
+    "income_tax_expense": "float",
+    "inventory": "float",
+    "investing_cash_flow": "float",
+    "net_change_in_cash": "float",
+    "net_profit": "float",
+    "net_profit_attr_parent": "float",
+    "net_profit_excluding_nonrecurring": "float",
+    "operating_cash_flow": "float",
+    "operating_cost": "float",
+    "operating_profit": "float",
+    "period": "str",
+    "r_and_d_expense": "float",
+    "revenue": "float",
+    "selling_expense": "float",
+    "share_capital": "float",
+    "shareholders_equity": "float",
+    "total_assets": "float",
+    "total_current_assets": "float",
+    "total_current_liabilities": "float",
+    "total_liabilities": "float",
+    "total_noncurrent_assets": "float",
+    "total_noncurrent_liabilities": "float",
+    "total_profit": "float"
+  },
+  "Financials": {
+    "gross_margin": "float",
+    "net_margin": "float",
+    "net_profit": "float",
+    "period": "str",
+    "revenue": "float",
+    "roe": "float"
+  },
+  "FundFlow": {
+    "code": "str",
+    "date": "str",
+    "large_net": "float",
+    "main_net": "float",
+    "market": "Market",
+    "medium_net": "float",
+    "small_net": "float",
+    "super_large_net": "float"
+  },
+  "GlobalMetrics": {
+    "debt_ratio": "float",
+    "eps": "float",
+    "gross_margin": "float",
+    "net_margin": "float",
+    "net_profit": "float",
+    "report_date": "str",
+    "revenue": "float",
+    "revenue_yoy": "float",
+    "roe": "float"
+  },
+  "GlobalStock": {
+    "code": "str",
+    "market": "str",
+    "metrics": "GlobalMetrics",
+    "name": "str",
+    "quote": "Quote",
+    "quote_status": "str"
+  },
+  "IndustrySector": {
+    "change_pct": "float",
+    "down_count": "int",
+    "name": "str",
+    "up_count": "int"
+  },
+  "KLine": {
+    "bars": "tuple[KLineBar, ...]",
+    "code": "str",
+    "market": "Market"
+  },
+  "KLineBar": {
+    "amplitude": "float",
+    "close": "float",
+    "date": "str",
+    "high": "float",
+    "low": "float",
+    "ma10": "float",
+    "ma20": "float",
+    "ma5": "float",
+    "open": "float",
+    "turnover": "float",
+    "volume": "int"
+  },
+  "LianbanStock": {
+    "amount": "float",
+    "boards": "int",
+    "code": "str",
+    "float_cap": "float",
+    "industry": "str",
+    "name": "str",
+    "pct": "float",
+    "price": "float"
+  },
+  "MarketSnapshot": {
+    "emotion": "Emotion",
+    "sectors": "tuple[Sector, ...]",
+    "updated": "str"
+  },
+  "News": {
+    "code": "str",
+    "content": "str",
+    "keywords": "str",
+    "market": "Market",
+    "publish_time": "str",
+    "source": "str",
+    "title": "str"
+  },
+  "Quote": {
+    "amplitude": "float",
+    "change_amount": "float",
+    "change_pct": "float",
+    "code": "str",
+    "float_market_cap": "float",
+    "high": "float",
+    "is_delayed": "bool",
+    "last_close": "float",
+    "limit_down_price": "float",
+    "limit_up_price": "float",
+    "low": "float",
+    "market": "Market",
+    "market_cap": "float",
+    "name": "str",
+    "open": "float",
+    "pb": "float",
+    "pe_static": "float",
+    "pe_ttm": "float",
+    "price": "float",
+    "turnover": "float",
+    "turnover_rate": "float",
+    "updated_at": "str",
+    "vol_ratio": "float",
+    "volume": "int"
+  },
+  "Report": {
+    "code": "str",
+    "eps_forecast": "float",
+    "market": "Market",
+    "org": "str",
+    "publish_date": "str",
+    "rating_change": "str",
+    "report_type": "ReportType",
+    "researcher": "str",
+    "target_price": "float",
+    "title": "str",
+    "updated_at": "str"
+  },
+  "Seat": {
+    "buy_amt": "float",
+    "name": "str",
+    "net": "float",
+    "sell_amt": "float"
+  },
+  "Sector": {
+    "firms": "int",
+    "inflow": "float",
+    "name": "str",
+    "net": "float",
+    "outflow": "float",
+    "pct": "float"
+  },
+  "Valuation": {
+    "analyst_count": "int",
+    "cagr_pct": "float",
+    "code": "str",
+    "consensus_eps": "float",
+    "data_status": "str",
+    "digest_years": "float",
+    "discrepancy": "list[dict]",
+    "dividend_yield": "float",
+    "forecast_status": "str",
+    "forward_pe": "float",
+    "market": "Market",
+    "market_cap": "float",
+    "name": "str",
+    "pb": "float",
+    "pcf_ttm": "float",
+    "pe_ttm": "float",
+    "peg": "float",
+    "price": "float",
+    "ps_ttm": "float",
+    "updated_at": "str"
+  },
+  "ValuationPercentile": {
+    "pb_percentile": "float",
+    "pe_ttm_percentile": "float"
+  },
+  "ZTPoolItem": {
+    "boards": "float",
+    "broken_count": "float",
+    "code": "str",
+    "float_shares": "float",
+    "industry": "str",
+    "limit_pct": "float",
+    "limit_price": "float",
+    "name": "str",
+    "open": "float",
+    "pool_date": "str",
+    "prev_close": "float",
+    "seal_amount": "float",
+    "seal_time": "float"
+  }
+}
