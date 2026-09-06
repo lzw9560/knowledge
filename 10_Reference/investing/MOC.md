@@ -2,7 +2,9 @@
 
 > 这个 vault 是 Vibe-Research 项目的**语义层**，把代码里的实体（Pydantic 契约模型）、spec 决策、战法、数据源链接成可导航的知识图谱。代码层管"数据怎么流"，本 vault 管"知识怎么连"——个股属于哪个行业、被哪些研报覆盖、触发哪张战法、数据从哪个源来，都在这里通过 `[[]]` 双链和 Dataview 查询织成网。
 
-## 实体类导航
+## 实体类导航（本体构件 1：实体）
+
+> 四构件本体模型蒸馏自 nano-ontoprompt。构件 1-2 为静态层，3-4 为动态层。
 
 | 实体类 | 文件夹 | 说明 | 当前数量 |
 |---|---|---|---|
@@ -19,6 +21,27 @@
 | 战法 | [[strategies/]] | 12 张战法卡（已从 `backend/strategies/cards/` 导入） | 见下表 |
 | 项目决策 | [[specs/]] | SDD spec 决策实体，对应 `specs/` 目录 | 见下表 |
 | 数据源 | [[data-sources/]] | 15+ 外部数据源，对应 `ARCHITECTURE` 数据流 | 待导入 |
+
+## 关系层（本体构件 2：关系）
+
+关系通过 `[[]]` 双向链接 + frontmatter 谓词标注实现。预定义关系谓词：
+`belongs_to` / `tagged` / `covered_by` / `has_metric` / `valued_at` / `involves` / `affects` / `matches` / `authored_by` / `triggered_by`
+
+## 动态层（本体构件 3-4）
+
+| 构件 | 文件夹 | 说明 |
+|---|---|---|
+| **逻辑规则** | [[logic/]] | schema 约束/校验/状态机/推断规则 |
+| **动作** | [[actions/]] | CRUD/状态流转/链接维护/审计快照 |
+
+## 质量门（Curated）
+
+| 层 | 文件夹 | 作用 |
+|---|---|---|
+| **待审** | [[inbox/]] | LLM 抽取实体先进此，带 confidence + source + quality_score，审核通过才进正式区 |
+| **审查** | [[reviews/]] | ReAct Agent 定期体检报告（8 项检查） |
+
+> 不直接灌入是知识图谱健康的第一道防线。详见 [[inbox/index]] 质量四维度。
 
 ### 战法卡统计
 
