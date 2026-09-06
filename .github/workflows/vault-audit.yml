@@ -1,0 +1,139 @@
+name: Vault Knowledge Graph Audit
+
+on:
+  schedule:
+    # 每周日凌晨 2:00 北京时间 = 周六 18:00 UTC
+    - cron: '0 18 * * 6'
+  workflow_dispatch: {}  # 支持手动触发
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read   # 读取仓库
+      issues: write    # 创建 issue 需要
+    
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0    # 需要完整 git log 做 stale_check
+      
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Run vault audit
+        id: audit
+        run: |
+          python scripts/vault_audit.py --quiet || EXIT=$?
+          # 无论是否有 findings，都继续后续步骤；退出码 1 仅表示有 critical
+          EXIT=${EXIT:-0}
+          echo "exit_code=$EXIT" >> "$GITHUB_OUTPUT"
+          echo "::notice::Audit finished with exit code $EXIT"
+      
+      - name: Read audit report path
+        id: report
+        run: |
+          # 取最新生成的 ci-audit 报告文件名
+          REPORT=$(ls -t 10_Reference/investing/reviews/*-ci-audit.md 2>/dev/null | head -1)
+          if [ -n "$REPORT" ]; then
+            echo "report_path=$REPORT" >> "$GITHUB_OUTPUT"
+            echo "Report found: $REPORT"
+          else
+            echo "No report file found"
+          fi
+      
+      - name: Create issue if critical findings
+        if: steps.audit.outputs.exit_code == '1'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const reportPath = '${{ steps.report.outputs.report_path }}';
+            const today = new Date().toISOString().slice(0, 10);
+            
+            // 读 JSON 输出（脚本默认输出到 stdout，但 --quiet 模式下没输出。
+            // 这里改读报告文件解析 frontmatter 的 critical 数量。）
+            let reportContent = '';
+            if (reportPath && fs.existsSync(reportPath)) {
+              reportContent = fs.readFileSync(reportPath, 'utf8');
+            }
+            
+            // 从报告 frontmatter 提取 critical 数
+            const criticalMatch = reportContent.match(/^critical:\s*(\d+)/m);
+            const highMatch = reportContent.match(/^high:\s*(\d+)/m);
+            const mediumMatch = reportContent.match(/^medium:\s*(\d+)/m);
+            const lowMatch = reportContent.match(/^low:\s*(\d+)/m);
+            
+            const critical = criticalMatch ? parseInt(criticalMatch[1]) : 0;
+            const high = highMatch ? parseInt(highMatch[1]) : 0;
+            const medium = mediumMatch ? parseInt(mediumMatch[1]) : 0;
+            const low = lowMatch ? parseInt(lowMatch[1]) : 0;
+            
+            // 只在有 critical 时创建 issue（critical 才返回退出码 1）
+            if (critical === 0) {
+              core.info('No critical findings, skipping issue creation');
+              return;
+            }
+            
+            // 提取问题清单部分（从 "## 问题清单" 到 "## 修复建议"）
+            const findingsSection = reportContent.split('## 问题清单')[1]?.split('## 修复建议')[0] || '(详见报告文件)';
+            
+            const title = `🔍 Vault 审查报告 ${today}`;
+            const body = `## 知识图谱自动审查发现 Critical 问题
+            
+            \`${today}\` 的定时审查发现 **${critical} 个 Critical** 问题（High ${high} / Medium ${medium} / Low ${low}），需要处理。
+            
+            ## 问题清单
+            
+            ${findingsSection.trim()}
+            
+            ## 修复建议
+            
+            1. **Critical**：立即处理——coverage 完全缺失类型需导入实体；duplicate 同 code 多份需合并去重。
+            2. **High**：本周期内修——broken_link 断链需补建目标文件或修正链接；schema 缺失必填字段需补全。
+            3. **Medium**：进 backlog——orphan 孤立实体需建立入边链接。
+            
+            ---
+            
+            报告文件：\`${reportPath}\`
+            
+            触发方式：${{ github.event_name === 'schedule' && '定时（每周日 02:00 北京时间）' || '手动触发' }}
+            
+            > 本 issue 由 github-actions[bot] 自动创建。审查脚本：\`scripts/vault_audit.py\``;
+            
+            // 创建 issue，标签 audit（不存在则创建）
+            const labels = ['audit'];
+            try {
+              await github.rest.issues.createLabel({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                name: 'audit',
+                color: 'd73a4a',
+                description: 'Vault 知识图谱自动审查发现',
+              });
+            } catch (e) {
+              // label 已存在，忽略
+            }
+            
+            const issue = await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title,
+              body,
+              labels,
+            });
+            
+            core.info(`Created issue #${issue.data.number}: ${issue.data.html_url}`);
+      
+      - name: Commit audit report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "actions@github.com"
+          git add 10_Reference/investing/reviews/*-ci-audit.md
+          if git diff --cached --quiet; then
+            echo "No report changes to commit"
+          else
+            git commit -m "chore: 自动审查报告 $(date -u +%Y-%m-%d)"
+            git push
+          fi
