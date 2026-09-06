@@ -98,7 +98,7 @@ jobs:
             
             报告文件：\`${reportPath}\`
             
-            触发方式：${{ github.event_name === 'schedule' && '定时（每周日 02:00 北京时间）' || '手动触发' }}
+            触发方式：${{ github.event_name == 'schedule' && '定时（每周日 02:00 北京时间）' || '手动触发' }}
             
             > 本 issue 由 github-actions[bot] 自动创建。审查脚本：\`scripts/vault_audit.py\``;
             
