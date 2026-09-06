@@ -7,6 +7,8 @@ rate_limit: 无
 fallback: S090 kline_refresh
 compliance: ok
 provides: [K线日更]
+projects: [vibe-research, daily-stock-analysis]
+origin_project: vibe-research
 created: 2026-09-06
 ---
 

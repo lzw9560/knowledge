@@ -27,7 +27,7 @@ created: 2026-09-06
 - `force` 参数强制刷新
 
 ## 相关实体
-- 喂给实体类型：[[news/]]
+- 喂给实体类型：[[events/]]
 - 对应代码：`backend/data/sources/newsradar.py` → `fetch_radar`、`get_radar(force)`
 - 缓存：`backend/.cache/radar.json`
 

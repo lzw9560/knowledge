@@ -24,7 +24,7 @@ created: 2026-09-06
 - 路由级缓存 `cache_response(ttl)`
 
 ## 相关实体
-- 喂给实体类型：[[news/]] [[stocks/]]
+- 喂给实体类型：[[events/]] [[stocks/]]
 - 对应代码：`backend/data/sources/astock.py` → `stock_news`
 - MCP 暴露：`query_news`
 

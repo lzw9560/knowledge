@@ -24,7 +24,7 @@ created: 2026-09-06
 - 无
 
 ## 相关实体
-- 喂给实体类型：[[news/]] [[events/]] [[stocks/]]
+- 喂给实体类型：[[events/]] [[events/]] [[stocks/]]
 - 对应代码：`backend/data/sources/astock.py`（待补：具体函数名）
 
 ## 相关 spec

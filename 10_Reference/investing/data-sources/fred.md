@@ -23,7 +23,7 @@ created: 2026-09-06
 - 无
 
 ## 相关实体
-- 喂给实体类型：[[macro/]]
+- 喂给实体类型：[[data-sources/]]
 - 对应代码：`backend/data/sources/`（待补：具体文件名，可能为 fred.py 或并入 market.py）
 
 ## 相关 spec

@@ -7,6 +7,8 @@ rate_limit: 无（惰性导入）
 fallback: DependencyMissing 优雅报错
 compliance: ok
 provides: [legu行业资金流, 行业资金流, 财报三表(待补)]
+projects: [vibe-research, trading-agents, daily-stock-analysis]
+origin_project: vibe-research
 created: 2026-09-06
 ---
 
@@ -26,7 +28,7 @@ created: 2026-09-06
 - 无进一步降级
 
 ## 相关实体
-- 喂给实体类型：[[sectors/]] [[metrics/]]
+- 喂给实体类型：[[industries/]] [[metrics/]]
 - 对应代码：`backend/data/sources/astock.py`（惰性导入点）、`market.py` → `_sentiment/_sectors`
 
 ## 相关 spec
