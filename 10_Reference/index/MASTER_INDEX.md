@@ -1,0 +1,34 @@
+# 📚 主索引（Master Index）
+
+> 跨项目全局索引。Codex 按需查阅，不全量加载。
+> 自动更新 — 最后整理：2026-09-06 02:30
+
+## 项目目录
+
+| 项目名 | 状态 | 路径 | 最后更新 |
+|--------|------|------|----------|
+| quant-limit-up | 🟢 活跃 | `00_Active/projects/quant-limit-up` | 2026-09-06 |
+| vibe-research | 🟢 活跃 | `00_Active/projects/vibe-research` | 2026-09-06 |
+
+## 归档项目
+
+| 项目名 | 归档日期 | 路径 |
+|--------|----------|------|
+
+## 知识图谱（10_Reference 子区）
+
+| 领域 | 入口 | 状态 | 说明 |
+|------|------|------|------|
+| 投研知识图谱 | `10_Reference/investing/MOC.md` | ✅ 已建 | 13 实体类（股票/行业/概念/研报/分析师/财务/估值/龙虎榜/事件/战法/spec/数据源/指数）+ 13 模板 + 12 战法卡 |
+| 市场情绪追踪 | `10_Reference/market_sentiment/DASHBOARD.md` | ✅ 运行中 | 每日 pre/mid/post 报告 + SQLite 数据管道 + 专家评审 |
+
+## 周复盘记录
+
+| 期次 | 日期 | 路径 |
+|------|------|------|
+| weekly_review_2026-08-30_to_2026-09-06 | 2026-09-06 | `20_Archive/reviews/weekly_review_2026-08-30_to_2026-09-06.md` |
+| weekly_review_2026-08-23_to_2026-08-30 | 2026-09-06 | `20_Archive/reviews/weekly_review_2026-08-23_to_2026-08-30.md` |
+| weekly_review_2026-08-22_to_2026-08-29 | 2026-09-06 | `20_Archive/reviews/weekly_review_2026-08-22_to_2026-08-29.md` |
+
+---
+> 每日凌晨2点自动更新。周复盘时归档已结束项目。

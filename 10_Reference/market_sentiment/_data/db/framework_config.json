@@ -1,0 +1,407 @@
+{
+  "_comment": "大A舆情预判框架 v2.0 配置文件 - 基于10位专家评审P0改造",
+  "_version": "2.0.0",
+  "_updated": "2026-09-03",
+
+  "layers": {
+    "L0_macro": {
+      "name": "宏观周期层",
+      "weight": 0.30,
+      "role": "strategic_direction",
+      "signals": {
+        "social_finance": {
+          "name": "社融存量同比",
+          "weight": 0.12,
+          "frequency": "monthly",
+          "lag_days": 12,
+          "source": "央行",
+          "zscore_window": 60,
+          "thresholds": {"bullish": 0.5, "bearish": -0.5}
+        },
+        "m1_m2_scissors": {
+          "name": "M1-M2剪刀差",
+          "weight": 0.06,
+          "frequency": "monthly",
+          "lag_days": 12,
+          "source": "央行",
+          "zscore_window": 60,
+          "thresholds": {"bullish": 0.5, "bearish": -0.5}
+        },
+        "pmi": {
+          "name": "制造业PMI",
+          "weight": 0.05,
+          "frequency": "monthly",
+          "lag_days": 0,
+          "source": "统计局",
+          "zscore_window": 60,
+          "thresholds": {"bullish": 0.5, "bearish": -0.5}
+        },
+        "credit_structure": {
+          "name": "中长贷占比",
+          "weight": 0.04,
+          "frequency": "monthly",
+          "lag_days": 12,
+          "source": "央行",
+          "zscore_window": 60
+        },
+        "dr007": {
+          "name": "DR007",
+          "weight": 0.04,
+          "frequency": "daily",
+          "lag_days": 0,
+          "source": "银行间",
+          "zscore_window": 20,
+          "thresholds": {"bullish": -0.5, "bearish": 0.5}
+        },
+        "cpi_ppi": {
+          "name": "CPI-PPI剪刀差",
+          "weight": 0.03,
+          "frequency": "monthly",
+          "lag_days": 10,
+          "source": "统计局",
+          "zscore_window": 60
+        }
+      }
+    },
+
+    "L1_policy": {
+      "name": "政策与监管层",
+      "weight": 0.15,
+      "role": "strategic_direction",
+      "signals": {
+        "policy_event": {
+          "name": "政策事件",
+          "weight": 0.06,
+          "frequency": "event_driven",
+          "strength_grades": [1, 2, 3, 4, 5]
+        },
+        "capital_market_regulation": {
+          "name": "资本市场制度",
+          "weight": 0.05,
+          "frequency": "event_driven"
+        },
+        "regulatory_attitude": {
+          "name": "监管态度(问询函/窗口指导)",
+          "weight": 0.04,
+          "frequency": "daily"
+        }
+      }
+    },
+
+    "L2_institution": {
+      "name": "机构动向层",
+      "weight": 0.20,
+      "role": "tactical_timing",
+      "signals": {
+        "lhb_inst_vs_retail_divergence": {
+          "name": "龙虎榜机构vs游资分歧度",
+          "weight": 0.06,
+          "frequency": "daily",
+          "lag_days": 0,
+          "source": "hithink",
+          "zscore_window": 60
+        },
+        "margin_balance_change": {
+          "name": "融资融券余额变化",
+          "weight": 0.05,
+          "frequency": "daily",
+          "lag_days": 0,
+          "source": "hithink",
+          "zscore_window": 20
+        },
+        "block_trade_discount": {
+          "name": "大宗交易折价率",
+          "weight": 0.04,
+          "frequency": "daily",
+          "source": "hithink",
+          "zscore_window": 60
+        },
+        "inst_buyback_repurchase": {
+          "name": "增持/回购公告",
+          "weight": 0.05,
+          "frequency": "event_driven"
+        }
+      }
+    },
+
+    "L3_capital": {
+      "name": "资金面层",
+      "weight": 0.20,
+      "role": "tactical_timing",
+      "signals": {
+        "northbound_net": {
+          "name": "北向资金净流入(降权)",
+          "weight": 0.04,
+          "frequency": "daily",
+          "lag_days": 0,
+          "source": "hithink",
+          "zscore_window": 20,
+          "_note": "从原25%降至4%，数据质量下降"
+        },
+        "main_capital_net": {
+          "name": "主力资金净流入",
+          "weight": 0.06,
+          "frequency": "daily",
+          "lag_days": 0,
+          "source": "hithink",
+          "zscore_window": 20
+        },
+        "auction_anomaly": {
+          "name": "竞价异动(9:20-9:25不可撤单)",
+          "weight": 0.04,
+          "frequency": "daily",
+          "lag_days": 0,
+          "source": "hithink",
+          "zscore_window": 20
+        },
+        "etf_net_subscribe": {
+          "name": "ETF净申赎",
+          "weight": 0.03,
+          "frequency": "daily",
+          "zscore_window": 20
+        },
+        "cds_spread": {
+          "name": "CDS利差/信用利差",
+          "weight": 0.03,
+          "frequency": "daily",
+          "zscore_window": 60
+        }
+      }
+    },
+
+    "L4_sentiment": {
+      "name": "市场情绪层",
+      "weight": 0.15,
+      "role": "tactical_confirmation",
+      "signals": {
+        "limit_up_structure": {
+          "name": "涨停池结构(首板/连板/一字/换手)",
+          "weight": 0.04,
+          "frequency": "daily",
+          "lag_days": 0,
+          "source": "hithink",
+          "zscore_window": 60
+        },
+        "broken_rate": {
+          "name": "炸板率+连板晋级率",
+          "weight": 0.04,
+          "frequency": "daily",
+          "zscore_window": 60
+        },
+        "volume_ratio": {
+          "name": "成交额/20日均值",
+          "weight": 0.03,
+          "frequency": "daily",
+          "zscore_window": 20
+        },
+        "board_rotation": {
+          "name": "板块轮动速度",
+          "weight": 0.04,
+          "frequency": "daily",
+          "zscore_window": 60
+        }
+      }
+    },
+
+    "L5_derivatives": {
+      "name": "衍生品/情绪预期层",
+      "weight": 0.15,
+      "role": "leading_confirmation",
+      "signals": {
+        "pcr_position": {
+          "name": "持仓量PCR(沪深300)",
+          "weight": 0.0375,
+          "frequency": "daily",
+          "zscore_window": 60
+        },
+        "iv_change": {
+          "name": "IV变化率+期限结构",
+          "weight": 0.0375,
+          "frequency": "daily",
+          "zscore_window": 20
+        },
+        "option_position_anomaly": {
+          "name": "期权持仓量异动",
+          "weight": 0.0225,
+          "frequency": "daily"
+        },
+        "basis": {
+          "name": "股指期货基差(IF/IC/IM/IH)",
+          "weight": 0.03,
+          "frequency": "daily",
+          "zscore_window": 20
+        },
+        "skew": {
+          "name": "25Delta Skew",
+          "weight": 0.0225,
+          "frequency": "daily",
+          "zscore_window": 60
+        }
+      }
+    },
+
+    "sentiment_extreme_filter": {
+      "name": "舆情极端值过滤器(不纳入权重)",
+      "weight": 0.0,
+      "role": "risk_warning",
+      "_note": "仅在股吧热度/搜索指数出现3σ异常时触发反向预警",
+      "trigger_threshold": 2.0,
+      "action": "reverse_warning_only"
+    }
+  },
+
+  "scoring": {
+    "method": "robust_zscore",
+    "description": "稳健z-score: (x - median) / MAD, 而非 (x - mean) / std",
+    "mad_factor": 1.4826,
+    "default_window": 60,
+    "short_window": 20,
+    "clip_range": [-3.0, 3.0],
+    "confidence_interval": true,
+    "percentile_report": true,
+    "three_dimensional": {
+      "temperature": "绝对温度Z - 当前状态 vs 历史分位",
+      "velocity": "变化速率 ΔZ - 5日变化率",
+      "divergence": "信号背离度 D - 层间方向不一致程度"
+    }
+  },
+
+  "circuit_breaker": {
+    "level_1": {
+      "name": "降权",
+      "trigger": "连续3次方向预测错误",
+      "action": "信号权重降至60%",
+      "duration_days": 5,
+      "recovery": "连续2次正确后恢复"
+    },
+    "level_2": {
+      "name": "暂停",
+      "trigger": "连续5次错误 或 当日亏损>3%",
+      "action": "暂停信号输出，仅推送风险提示",
+      "duration_days": 10,
+      "recovery": "人工确认后恢复"
+    },
+    "level_3": {
+      "name": "冻结",
+      "trigger": "系统性风险事件(千股跌停/流动性危机)",
+      "action": "框架冻结，强制降仓至20%以下",
+      "duration_days": 20,
+      "recovery": "人工确认+市场恢复正常后恢复"
+    },
+    "self_failure_detection": {
+      "enabled": true,
+      "consecutive_wrong_threshold": 3,
+      "auto_degrade": true,
+      "notify_user": true
+    }
+  },
+
+  "position_mapping": {
+    "description": "情绪指数 → 建议仓位映射",
+    "levels": [
+      {"score_range": "Z > 1.5", "label": "极度乐观", "position_range": [0.2, 0.3], "action": "减仓/防守", "reason": "过热风险，均值回归概率高"},
+      {"score_range": "0.5 < Z <= 1.5", "label": "偏乐观", "position_range": [0.4, 0.6], "action": "持有/微减", "reason": "趋势中段，注意拐点"},
+      {"score_range": "-0.5 <= Z <= 0.5", "label": "中性", "position_range": [0.5, 0.7], "action": "正常配置", "reason": "信号不明确"},
+      {"score_range": "-1.5 <= Z < -0.5", "label": "偏悲观", "position_range": [0.3, 0.5], "action": "谨慎/观望", "reason": "等待确认信号"},
+      {"score_range": "Z < -1.5", "label": "极度悲观", "position_range": [0.5, 0.8], "action": "逆向建仓", "reason": "恐慌见底概率高"}
+    ],
+    "guardrails": {
+      "max_single_position": 0.25,
+      "max_total_position": 0.90,
+      "min_cash_reserve": 0.10,
+      "leverage_cap": 1.0,
+      "stop_loss": -0.07,
+      "daily_loss_limit": -0.03
+    }
+  },
+
+  "decision_process": {
+    "step_1_strategic": {
+      "description": "L0+L1确定战略方向",
+      "layers": ["L0_macro", "L1_policy"],
+      "output": "多/空/中性",
+      "horizon": "1-3个月"
+    },
+    "step_2_tactical": {
+      "description": "L2+L3确定战术时机",
+      "layers": ["L2_institution", "L3_capital"],
+      "output": "入场/出场时机",
+      "horizon": "1-5天"
+    },
+    "step_3_confirmation": {
+      "description": "L4+L5交叉确认",
+      "layers": ["L4_sentiment", "L5_derivatives"],
+      "output": "置信度调整",
+      "horizon": "0-3天"
+    },
+    "cross_validation_rules": [
+      "L5衍生品 + L4涨停池萎缩 → 强烈看多(恐慌见底)",
+      "L5 IV飙升 + L3北向大幅流出 → 确认下跌",
+      "L5基差收敛 + L2机构调研增加 → 底部信号",
+      "L5 Skew转正 + 舆情极度乐观 → 顶部预警"
+    ]
+  },
+
+  "publish_schedule": {
+    "modes": {
+      "retail": {
+        "name": "散户模式",
+        "schedule": [
+          {"time": "08:15", "name": "盘前版", "content": "L0+L1+隔夜外盘"},
+          {"time": "09:26", "name": "竞价版", "content": "竞价异动+L4"},
+          {"time": "15:15", "name": "收盘版", "content": "全信号综合"},
+          {"time": "17:30", "name": "龙虎榜版", "content": "L2+L5"}
+        ]
+      },
+      "professional": {
+        "name": "专业模式",
+        "schedule": [
+          {"time": "08:15", "name": "盘前版"},
+          {"time": "09:20", "name": "预热版"},
+          {"time": "09:26", "name": "竞价版"},
+          {"time": "11:35", "name": "上午盘版"},
+          {"time": "14:00", "name": "下午盘版"},
+          {"time": "14:45", "name": "尾盘决策版"},
+          {"time": "15:15", "name": "收盘版"},
+          {"time": "17:30", "name": "龙虎榜版"}
+        ],
+        "event_driven": {
+          "enabled": true,
+          "triggers": [
+            "northbound_1min_outflow > 5亿",
+            "broken_rate > 50%",
+            "limit_up_count < 10 且 指数跌幅 > 1%",
+            "IV日变化 > 3个波动率点",
+            "基差日内变化 > 0.3%"
+          ]
+        }
+      }
+    },
+    "expiry_week_adjustment": {
+      "enabled": true,
+      "days_before_expiry": 3,
+      "score_discount": 0.7,
+      "_note": "到期周前3天对预测打0.7折"
+    }
+  },
+
+  "data_source_failover": {
+    "hithink": {
+      "priority": 1,
+      "fallback": "eastmoney_api",
+      "max_retries": 3,
+      "timeout_ms": 10000
+    },
+    "eastmoney_api": {
+      "priority": 2,
+      "fallback": "manual_entry",
+      "max_retries": 2,
+      "timeout_ms": 15000
+    },
+    "manual_entry": {
+      "priority": 3,
+      "fallback": null,
+      "action": "推送提示用户手动输入"
+    }
+  }
+}

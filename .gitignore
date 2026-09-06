@@ -2,13 +2,41 @@
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
 .obsidian/cache
+.obsidian/plugins/*/data.json
+.obsidian/plugins/obsidian-git/
 .trash/
+
+# 插件二进制包（体积大，各设备用 Community Plugins 面板自装；只保留清单 community-plugins.json）
+.obsidian/plugins/*/main.js
+.obsidian/plugins/*/manifest.json
+.obsidian/plugins/*/styles.css
+.obsidian/plugins/*/*.js.map
 
 # 嵌入向量索引（体积大，各设备重建）
 .obsidian/plugins/smart-connections/
 .obsidian/plugins/obsidian-copilot/
 
+# Claude-Memory 软链目标（指向外部，不进仓）
+Claude-Memory/claude-memory
+
+# Python 缓存（market_sentiment 数据管道）
+__pycache__/
+*.pyc
+
+# SQLite 数据库（各设备独立，不进仓）
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# CodeGraph 索引
+.codegraph/
+
 # 系统
 .DS_Store
 *.tmp
 *.swp
+*~
+
+# Codex 本地状态
+.codex/
