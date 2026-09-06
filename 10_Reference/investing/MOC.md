@@ -126,3 +126,13 @@ SORT pe_ttm ASC
 
 - [[10_Reference/market_sentiment/DASHBOARD]] — 市场情绪追踪（每日 pre/mid/post 报告 + z-score 温度）
 - 战法卡有"适用天气：阴天"，market_sentiment 有温度 Z 值——但定义"阴天 = 哪个 Z 区间"的逻辑待建（见 [[logic/战法天气映射]]）
+
+### 关联项目（ora-2 方案 D 纳入的外部投研项目）
+
+- [[specs/a-plate-sentinel-project]] — A股打板情绪监控与投研决策看板（8 大模块，Tushare 数据源，MVP 骨架阶段）
+- [[specs/trading-agents-project]] — TradingAgents A股深度特化 fork（7 Analyst + 多 Agent 辩论）
+- [[specs/daily-stock-analysis-project]] — 每日股票分析报告生成器（多市场、多渠道推送）
+
+关联项目使用的数据源：
+- [[data-sources/tushare]]（a-Plate-Sentinel 专用，积分制）
+- [[data-sources/akshare]] / [[data-sources/baostock]] / [[data-sources/mootdx]]（与 Vibe-Research 共用）

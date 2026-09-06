@@ -45,3 +45,9 @@ SORT number ASC
 ### Decision 实体
 
 - [[specs/DEC-001]] · [[specs/DEC-002]] · [[specs/DEC-003]] · [[specs/DEC-004]] · [[specs/DEC-005]]
+
+## 关联项目实体（ora-2 方案 D 纳入的外部投研项目）
+
+- [[specs/a-plate-sentinel-project]] — A股打板情绪监控与投研决策看板（8 大模块，Tushare 数据源，MVP 骨架）
+- [[specs/trading-agents-project]] — TradingAgents A股深度特化 fork（7 Analyst + 多 Agent 辩论）
+- [[specs/daily-stock-analysis-project]] — 每日股票分析报告生成器（多市场、多渠道推送）
