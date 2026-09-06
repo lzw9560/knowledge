@@ -1,0 +1,14 @@
+# Obsidian 个人状态（不同步）
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.trash/
+
+# 嵌入向量索引（体积大，各设备重建）
+.obsidian/plugins/smart-connections/
+.obsidian/plugins/obsidian-copilot/
+
+# 系统
+.DS_Store
+*.tmp
+*.swp
