@@ -20,3 +20,14 @@ SORT name ASC
 ## 新建实体
 
 用 Templater 应用 `templates/analyst` 新建。
+
+## 实体清单（入边）
+
+> 本段手工列出实体以建立入边链接（Dataview 表格不计入边）。
+
+- [[analysts/placeholder-analyst-1]]
+
+- [[analysts/placeholder-analyst-2]]
+
+- [[analysts/placeholder-analyst-3]]
+

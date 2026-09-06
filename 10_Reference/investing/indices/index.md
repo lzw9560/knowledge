@@ -20,3 +20,18 @@ SORT code ASC
 ## 新建实体
 
 用 Templater 应用 `templates/index` 新建。
+
+## 实体清单（入边）
+
+> 本段手工列出实体以建立入边链接（Dataview 表格不计入边）。
+
+- [[indices/000001]]
+
+- [[indices/000300]]
+
+- [[indices/000905]]
+
+- [[indices/399001]]
+
+- [[indices/399006]]
+

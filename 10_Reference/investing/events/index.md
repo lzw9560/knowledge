@@ -32,3 +32,12 @@ SORT date DESC
 ## 新建实体
 
 用 Templater 应用 `templates/event` 新建。
+
+## 实体清单（入边）
+
+> 本段手工列出实体以建立入边链接（Dataview 表格不计入边）。
+
+- [[events/2026-09-04-竞价异动]]
+
+- [[events/2026-09-05-涨停池]]
+

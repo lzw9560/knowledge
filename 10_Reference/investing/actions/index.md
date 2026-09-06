@@ -30,3 +30,10 @@ SORT action_type ASC
 - 触发自 → [[logic/]]（规则满足时触发动作）
 - 作用于 → [[stocks/]] [[reports/]] 等实体
 - 执行记录 → [[reviews/]]（动作执行的审计追踪）
+
+## 实体清单（入边）
+
+> 本段手工列出实体以建立入边链接（Dataview 表格不计入边）。
+
+- [[actions/auto-link-report]]
+

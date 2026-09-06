@@ -2219,6 +2219,342 @@
     "弱转强接力": {
       "path": "strategies/weak_turn_strong",
       "type": "strategy"
+    },
+    "S103": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S103-涨停池缓存承重切片"
+    },
+    "S104": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S104-hithink结构性缺口唯一源"
+    },
+    "S105": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S105-hithink直连HTTP复刻"
+    },
+    "S106": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S106-cross_validate接线"
+    },
+    "S107": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S107-龙虎榜hithink集成"
+    },
+    "S108": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S108-新浪三表孤儿管道接线"
+    },
+    "S109": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S109-缓存治理Tier1"
+    },
+    "S110": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S110-fund_flow测试断言对齐"
+    },
+    "S111": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S111-真实裂缝登记册"
+    },
+    "S112": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S112-Tier2撒谎诚实化"
+    },
+    "S113": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S113-诚实缺陷availability修复"
+    },
+    "S114": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S114-chip-cyq自建走emget"
+    },
+    "S115": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S115-completeness-gaps三修"
+    },
+    "S116": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S116-storm-daemon-availability"
+    },
+    "S117": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S117-premarket-offbyone"
+    },
+    "S119": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S119-source-em-raise-honesty"
+    },
+    "S120": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S120-hithink-rank-raise"
+    },
+    "S121": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S121-tencent-num-zero-honesty"
+    },
+    "S122": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S122-market-emotion-weekend-gate"
+    },
+    "S123": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S123-s118-lying-ledger-cleanup"
+    },
+    "S125": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S125-s124-high-lying-fix"
+    },
+    "S126": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S126-frontend-render-honesty"
+    },
+    "S128": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S128-orzero-contract-and-high-fix"
+    },
+    "S129": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S129-risk-trio-provenance"
+    },
+    "S130": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S130-非承重lying批量修"
+    },
+    "S131": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S131-scan-confirmed-lying"
+    },
+    "S132": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S132-ai-tool-source-unreachable"
+    },
+    "S133": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S133-emotion-date-keyed-cache"
+    },
+    "S134": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S134-新浪源熔断器"
+    },
+    "S135": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S135-延时数据前端诚实消费"
+    },
+    "S136": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S136-premarket-kill-switch-开盘后实时核"
+    },
+    "S137": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S137-catalyst-并行化"
+    },
+    "S138": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S138-activity-并行化"
+    },
+    "S139": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S139-sector_phase-纯LABEL接线"
+    },
+    "S140": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S140-工作流层重脊柱-盘前垂直切片试点"
+    },
+    "S141": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S141-FirstBoardPipeline节点化拆分"
+    },
+    "S142": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S142-pipeline-step-state契约"
+    },
+    "S143": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S143-盘中盘后rail复制"
+    },
+    "S144": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S144-§44测量地基修复"
+    },
+    "S145": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S145-§44路径胜率门"
+    },
+    "S146": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S146-选股pipeline重设计"
+    },
+    "S147": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S147-strategy-winrate-honest-rename"
+    },
+    "S148": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S148-选股第二层过滤"
+    },
+    "S152": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S152-盘中H2harness"
+    },
+    "S154": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S154-debate辅助层"
+    },
+    "S155": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S155-vol-surge-volatility-profit-verify"
+    },
+    "S156": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S156-zt-pool-seal-time-retest"
+    },
+    "S159": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S159-§44应用规约v2"
+    },
+    "S160": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S160-底座重建"
+    },
+    "S161": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S161-§44v2验证框架"
+    },
+    "S162": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S162-反前视引擎三层"
+    },
+    "S163": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S163-数据质量门+轻量血缘"
+    },
+    "S164": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S164-防封backbone+secrets-gate"
+    },
+    "S165": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S165-UI契约先行"
+    },
+    "S166": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S166-TradeJournal+RiskLedger"
+    },
+    "S167": {
+      "path": null,
+      "type": "spec",
+      "status": "not_imported",
+      "source_dir": "S167-盘中微结构数据累积"
     }
   },
   "by_type": {
@@ -3173,5 +3509,13 @@
       "new_path": "valuations/688981-latest",
       "new_type": "valuation"
     }
-  ]
+  ],
+  "meta": {
+    "generated": "2026-09-07",
+    "source": "fix-18 base + Week1 not_imported 标记 (ora-3 任务 4)",
+    "description": "实体词典——别名归一到规范路径。status:not_imported 标记源仓存在但 vault 未导入的 spec，供 broken_link 分级使用。",
+    "not_imported_specs_count": 56,
+    "alias_count": 611,
+    "type_count": 18
+  }
 }

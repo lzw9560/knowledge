@@ -29,3 +29,18 @@ SORT layer ASC, name ASC
 用 Templater 应用 `templates/data-source` 新建。
 
 > 2026-09-06 已从 `ARCHITECTURE.md` 批量灌入 16 个数据源（规则脚本，非 LLM）。ARCHITECTURE.md 未明示的字段标"待补"。
+
+## 实体清单（入边）
+
+> 本段手工列出实体以建立入边链接（Dataview 表格不计入边）。
+
+- [[data-sources/baidu-stock]]
+
+- [[data-sources/cninfo]]
+
+- [[data-sources/eastmoney-push2ex]]
+
+- [[data-sources/eastmoney-reportapi]]
+
+- [[data-sources/eastmoney-searchapi]]
+

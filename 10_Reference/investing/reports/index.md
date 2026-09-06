@@ -21,3 +21,14 @@ SORT publish_date DESC
 ## 新建实体
 
 用 Templater 应用 `templates/report` 新建。模板 frontmatter 对应 `Report` Pydantic 字段（title/org/researcher/publish_date/report_type/rating_change/target_price/eps_forecast）。
+
+## 实体清单（入边）
+
+> 本段手工列出实体以建立入边链接（Dataview 表格不计入边）。
+
+- [[reports/000858-research-placeholder]]
+
+- [[reports/300750-research-placeholder]]
+
+- [[reports/600519-research-placeholder]]
+

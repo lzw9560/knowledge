@@ -21,3 +21,10 @@ SORT date DESC, code ASC
 ## 新建实体
 
 用 Templater 应用 `templates/dragon-tiger` 新建。
+
+## 实体清单（入边）
+
+> 本段手工列出实体以建立入边链接（Dataview 表格不计入边）。
+
+- [[dragon-tiger/2026-09-05]]
+
