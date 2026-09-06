@@ -119,3 +119,10 @@ SORT pe_ttm ASC
 | 决策记录层 | `specs/` | SDD spec 决策文档 |
 
 本 vault 不复制代码逻辑，只做**知识表征**：一个股票笔记链接它的行业、研报、财务、估值、龙虎榜、相关战法，形成可回溯的投研上下文。代码改了模型字段，来这里改对应模板的 frontmatter 即可。
+
+---
+
+## 关联子区
+
+- [[10_Reference/market_sentiment/DASHBOARD]] — 市场情绪追踪（每日 pre/mid/post 报告 + z-score 温度）
+- 战法卡有"适用天气：阴天"，market_sentiment 有温度 Z 值——但定义"阴天 = 哪个 Z 区间"的逻辑待建（见 [[logic/战法天气映射]]）

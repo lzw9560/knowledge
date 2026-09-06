@@ -431,3 +431,13 @@ LIMIT 1
 | manual_entry | P3 | — | 推送提示用户 |
 
 > 脚本路径: `_data/db/alert_monitor.py` · 数据库: `_data/db/sentiment.db`
+
+---
+
+## 知识图谱关联
+
+本子区的情绪数据可关联到 [[10_Reference/investing/MOC]] 投研知识图谱：
+
+- 情绪温度 → 战法卡"适用天气"判定（规则见 [[10_Reference/investing/logic/战法天气映射]]）
+- 涨停池个股 → [[10_Reference/investing/stocks/]] 实体
+- 板块资金流 → [[10_Reference/investing/industries/]] 实体
