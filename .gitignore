@@ -40,3 +40,4 @@ __pycache__/
 
 # Codex 本地状态
 .codex/
+.quartz/
