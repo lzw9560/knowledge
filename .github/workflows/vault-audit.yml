@@ -10,7 +10,7 @@ jobs:
   audit:
     runs-on: ubuntu-latest
     permissions:
-      contents: read   # 读取仓库
+      contents: write  # 读取+提交审查报告
       issues: write    # 创建 issue 需要
     
     steps:
