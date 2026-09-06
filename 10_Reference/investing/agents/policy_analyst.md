@@ -5,7 +5,7 @@ project: trading-agents
 origin_project: trading-agents
 role: policy_analyst
 data_sources: [eastmoney, worldmonitor]
-debates_with: [[agents/fundamental_analyst]], [[agents/hot_money_tracker]]
+debates_with: "[[agents/fundamental_analyst]], [[agents/hot_money_tracker]]"
 created: 2026-09-07
 ---
 

@@ -5,7 +5,7 @@ project: trading-agents
 origin_project: trading-agents
 role: social_media_analyst
 data_sources: [eastmoney]
-debates_with: [[agents/market_analyst]], [[agents/news_analyst]]
+debates_with: "[[agents/market_analyst]], [[agents/news_analyst]]"
 created: 2026-09-07
 ---
 

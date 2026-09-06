@@ -5,7 +5,7 @@ project: trading-agents
 origin_project: trading-agents
 role: fundamentals_analyst
 data_sources: [mootdx, sina, hithink-ths]
-debates_with: [[agents/news_analyst]], [[agents/policy_analyst]]
+debates_with: "[[agents/news_analyst]], [[agents/policy_analyst]]"
 created: 2026-09-07
 ---
 

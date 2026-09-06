@@ -5,7 +5,7 @@ project: trading-agents
 origin_project: trading-agents
 role: hot_money_tracker
 data_sources: [mootdx, eastmoney]
-debates_with: [[agents/policy_analyst]], [[agents/lockup_monitor]]
+debates_with: "[[agents/policy_analyst]], [[agents/lockup_monitor]]"
 created: 2026-09-07
 ---
 

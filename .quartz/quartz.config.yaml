@@ -8,12 +8,21 @@ configuration:
   baseUrl: lzw9560.github.io/knowledge
   ignorePatterns:
     - private
-    - templates
+    - "**/templates/**"
+    - "**/_templates/**"
+    - "**/_data/**"
     - .obsidian
     - .quartz
     - .git
     - .entity-dictionary.json
+    - .scratch
     - scripts
+    - Claude-Memory
+    - daily
+    - "**/*.py"
+    - "**/*.db"
+    - "**/*.json"
+    - "**/*.sql"
   theme:
     fontOrigin: googleFonts
     cdnCaching: true
