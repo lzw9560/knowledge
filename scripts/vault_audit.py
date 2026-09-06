@@ -114,6 +114,34 @@ def extract_template_fields(template_text: str) -> list:
 
 
 # ──────────────────────────────────────────────────────────────────────────
+# 正文标题承载的字段（卡片风格实体）
+# ──────────────────────────────────────────────────────────────────────────
+# 部分实体类型用正文标题而非 frontmatter 承载信息（卡片风格）。
+# frontmatter 缺这些字段但正文有对应标题 → 不算缺失（避免误报）。
+# 映射：实体 type → { 缺失的 frontmatter 字段 → 正文标题正则 }
+BODY_HEADING_FOR_FIELD = {
+    "strategy": {
+        # 12 张战法卡实证：正文用 ## 入场条件 / ## 退出参数 / ## 核心逻辑 承载
+        # （frontmatter 的 entry_conditions/exit_conditions/match_conditions 为模板字段但实体未填）
+        "entry_conditions": r"^##\s*入场条件\b",
+        "exit_conditions": r"^##\s*(?:退出参数|出场条件|退出条件)\b",
+        "match_conditions": r"^##\s*核心逻辑\b",
+    },
+}
+
+
+def has_body_heading(body_text: str, heading_re: str) -> bool:
+    """检查正文（已剥掉 frontmatter）是否存在指定二级标题。多行匹配。"""
+    return re.search(heading_re, body_text, re.MULTILINE) is not None
+
+
+def strip_frontmatter(text: str) -> str:
+    """返回剥掉 frontmatter 后的正文（若无 frontmatter 返回原文）。"""
+    m = FRONTMATTER_RE.match(text)
+    return text[m.end():] if m else text
+
+
+# ──────────────────────────────────────────────────────────────────────────
 # [[链接]] 解析
 # ──────────────────────────────────────────────────────────────────────────
 
@@ -419,6 +447,15 @@ class VaultAudit:
             expected_set = set(expected)
             # 必填字段缺失（排除 created，created 通常由 Templater 自动填）
             missing = sorted(expected_set - actual_keys - {"created"})
+            # 正文标题承载豁免：strategy 等卡片风格实体用 ## 标题承载信息，
+            # frontmatter 缺字段但正文有对应标题 → 不算缺失（见 BODY_HEADING_FOR_FIELD）
+            if missing:
+                body_text = strip_frontmatter(self.file_contents.get(rel, ""))
+                heading_map = BODY_HEADING_FOR_FIELD.get(t, {})
+                missing = [
+                    f for f in missing
+                    if not (f in heading_map and has_body_heading(body_text, heading_map[f]))
+                ]
             # 多余字段（实际有但模板没有，仅记录不报错）
             extra = sorted(actual_keys - expected_set)
             if missing:

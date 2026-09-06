@@ -21,6 +21,7 @@
 | 战法   | [[strategies/]]   | 战法卡（从 `backend/strategies/cards/` 导入）               | `= length(filter(this.file.inlinks, (l) => l.folder = "strategies"))`   |
 | 项目决策 | [[specs/]]        | SDD spec 决策实体，对应 `specs/` 目录                        | `= length(filter(this.file.inlinks, (l) => l.folder = "specs"))`        |
 | 数据源  | [[data-sources/]] | 外部数据源，对应 `ARCHITECTURE` 数据流                         | `= length(filter(this.file.inlinks, (l) => l.folder = "data-sources"))` |
+| AI 角色 | [[agents/]]       | trading-agents 的 7 Analyst（区别于 analysts 真人）          | `= length(filter(this.file.inlinks, (l) => l.folder = "agents"))`       |
 
 ### 各类型实体计数（Dataview 动态）
 

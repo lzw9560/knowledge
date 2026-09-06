@@ -7,6 +7,8 @@ rate_limit: 无（惰性导入）
 fallback: DependencyMissing 优雅报错
 compliance: ok
 provides: [K线, 财报(待补)]
+projects: [vibe-research, trading-agents]
+origin_project: vibe-research
 created: 2026-09-06
 ---
 

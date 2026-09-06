@@ -7,6 +7,8 @@ rate_limit: 直连
 fallback: 无
 compliance: ok
 provides: [一致预期, 涨停揭秘]
+projects: [vibe-research, trading-agents]
+origin_project: vibe-research
 created: 2026-09-06
 ---
 

@@ -7,6 +7,8 @@ rate_limit: urllib 直连
 fallback: 无
 compliance: ok
 provides: [资产负债表, 利润表, 现金流量表]
+projects: [vibe-research, trading-agents]
+origin_project: vibe-research
 created: 2026-09-06
 ---
 

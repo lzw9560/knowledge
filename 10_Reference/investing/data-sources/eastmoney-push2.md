@@ -7,6 +7,8 @@ rate_limit: em_get 限流 QPS≤2（1.0s+抖动0.1~0.5s）
 fallback: 熔断器+push2delay降级
 compliance: ok
 provides: [行情, K线, 分时]
+projects: [vibe-research, trading-agents]
+origin_project: vibe-research
 created: 2026-09-06
 ---
 
