@@ -1,14 +1,14 @@
 # 数据源 索引
 
-> 外部数据源节点。对应 `ARCHITECTURE.md` 数据流。15+ 数据源。每条记录链接其提供字段、限流策略、降级链、相关实体。
+> 外部数据源节点。对应 `ARCHITECTURE.md` 数据流。16 数据源（2026-09-06 从 ARCHITECTURE.md 批量灌入）。每条记录链接其提供字段、限流策略、降级链、相关实体。
 
 ## 实体列表（Dataview 动态）
 
 ```dataview
-TABLE name AS "名称", layer AS "层级", rate_limit AS "限流", fallback AS "降级"
-FROM "data-sources"
+TABLE name AS "名称", layer AS "层级", rate_limit AS "限流", fallback AS "降级", provides AS "提供字段"
+FROM "10_Reference/investing/data-sources"
 WHERE type = "data_source"
-SORT name ASC
+SORT layer ASC, name ASC
 ```
 
 ## 关系
@@ -28,4 +28,4 @@ SORT name ASC
 
 用 Templater 应用 `templates/data-source` 新建。
 
-> 注：阶段 0 不自动导入数据源清单。阶段 1 计划从 `ARCHITECTURE.md` 批量导入。
+> 2026-09-06 已从 `ARCHITECTURE.md` 批量灌入 16 个数据源（规则脚本，非 LLM）。ARCHITECTURE.md 未明示的字段标"待补"。
