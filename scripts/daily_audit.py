@@ -67,14 +67,25 @@ def run_audit():
     for f in VAULT.rglob("*.md"):
         if "templates" in str(f) or ".quartz" in str(f):
             continue
-        if f.name in ("index.md", "MOC.md", "README.md", "SUMMARY.md"):
+        # index.md / MOC.md / README.md 不作为实体，但它们的 [[]] 链接计入入边
+        is_index = f.name in ("index.md", "MOC.md", "README.md", "SUMMARY.md")
+        if "reviews" in str(f) or "scripts" in str(f):
             continue
-        if "reviews" in str(f) or "inbox" in str(f) or "scripts" in str(f):
+        if "inbox" in str(f) and not is_index:
             continue
         
         content = f.read_text(encoding="utf-8")
         fm = parse_frontmatter(content)
         body = strip_frontmatter(content)
+        
+        # index.md/MOC.md 不作为实体，但其 [[]] 链接计入入边
+        if is_index:
+            links = extract_links(body)
+            for target in links:
+                in_degree[target] += 1
+                if not resolve_link(target):
+                    broken_links.append(target)
+            continue
         
         rel = str(f.relative_to(VAULT)).replace(".md", "")
         all_entities[rel] = fm
