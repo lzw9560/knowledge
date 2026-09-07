@@ -3,9 +3,9 @@ type: audit
 audit_date: 2026-09-08
 auditor: daily-audit-script
 scope: 全量
-findings_count: 242
-critical: 15
-high: 242
+findings_count: 2
+critical: 0
+high: 2
 medium: 0
 low: 43
 status: 已完成
@@ -22,8 +22,8 @@ created: 2026-09-08
 |---|---|
 | 总实体数 | 2490 |
 | stub 实体 | 43 |
-| LLM 生成内容 | 948 |
-| 断链 | 242 |
+| LLM 生成内容 | 952 |
+| 断链 | 2 |
 | 孤立实体 | 0 |
 | confidence 覆盖 | 2449/2490 (98%) |
 
@@ -45,16 +45,8 @@ created: 2026-09-08
 
 | 断链目标 | 次数 |
 |---|---|
-| ../tech-learning/concepts/graceful-degradation | 22 |
-| ../tech-learning/concepts/caching-strategy | 21 |
-| ../tech-learning/concepts/data-contract | 20 |
-| 10_Reference/investing/MOC | 16 |
-| 10_Reference/investing/reviews/index | 16 |
-| 10_Reference/investing/inbox/index | 16 |
-| ../reading/notes/均值回归-笔记 | 16 |
-| ../reading/notes/趋势跟踪-笔记 | 14 |
-| ../tech-learning/architecture/layered-architecture | 12 |
-| ../tech-learning/concepts/circuit-breaker | 11 |
+| 链接 | 1 |
+| logic/stale_check | 1 |
 
 ## 🏝️ 孤立实体分布
 
@@ -73,7 +65,7 @@ created: 2026-09-08
 
 | KPI | 当前值 | 阈值 | 状态 |
 |---|---|---|---|
-| 断链 | 242 | ≤50 | 🔴 |
+| 断链 | 2 | ≤50 | 🟢 |
 | 孤立实体 | 0 | ≤200 | 🟢 |
 | stub 实体 | 43 | ≤100 | 🟢 |
 | confidence 覆盖 | 98% | ≥95% | 🟢 |

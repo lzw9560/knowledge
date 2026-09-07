@@ -22,53 +22,21 @@
     "action": 4
   },
   "stub_count": 43,
-  "llm_generated_count": 948,
+  "llm_generated_count": 952,
   "confidence_distribution": {
     "medium": 1027,
     "high": 1422
   },
   "no_confidence_count": 41,
-  "broken_links": 242,
+  "broken_links": 2,
   "broken_links_top10": [
     [
-      "../tech-learning/concepts/graceful-degradation",
-      22
+      "链接",
+      1
     ],
     [
-      "../tech-learning/concepts/caching-strategy",
-      21
-    ],
-    [
-      "../tech-learning/concepts/data-contract",
-      20
-    ],
-    [
-      "10_Reference/investing/MOC",
-      16
-    ],
-    [
-      "10_Reference/investing/reviews/index",
-      16
-    ],
-    [
-      "10_Reference/investing/inbox/index",
-      16
-    ],
-    [
-      "../reading/notes/均值回归-笔记",
-      16
-    ],
-    [
-      "../reading/notes/趋势跟踪-笔记",
-      14
-    ],
-    [
-      "../tech-learning/architecture/layered-architecture",
-      12
-    ],
-    [
-      "../tech-learning/concepts/circuit-breaker",
-      11
+      "logic/stale_check",
+      1
     ]
   ],
   "orphan_count": 0,
