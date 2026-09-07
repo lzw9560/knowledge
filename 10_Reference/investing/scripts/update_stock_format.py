@@ -112,8 +112,11 @@ def parse_file(filepath: Path) -> tuple[str | None, str]:
 
 
 def get_fm_field(fm: str, key: str) -> str:
-    """提取 frontmatter 标量字段值。支持 `key: value` 与 `key: "value"`。"""
-    m = re.search(rf"^{re.escape(key)}:\s*(.+?)\s*$", fm, re.MULTILINE)
+    """提取 frontmatter 标量字段值。支持 `key: value` 与 `key: "value"`。
+
+    注意：用 [ \\t] 代替 \\s 避免 \\s 跨行匹配（如 `concept: \\nlist_date: ` 误读）。
+    """
+    m = re.search(rf"^{re.escape(key)}:[ \t]*(.+?)\s*$", fm, re.MULTILINE)
     if not m:
         return ""
     v = m.group(1).strip()
@@ -160,11 +163,13 @@ def build_callout(fm: str) -> str:
 
     industry_link = f"[[industries/{industry}]]" if industry else "待核实"
     # concept 是逗号分隔字符串，如 "高端白酒, 白酒龙头, 食品饮料"
+    # 注意：过滤 "list_date:" 片段（数据源污染，不是真实概念）
     concept_links = []
     if concept:
         for c in re.split(r"[,，、]", concept):
             c = c.strip()
-            if c:
+            # 跳过 "list_date:" 等非概念字段污染
+            if c and not c.endswith(":"):
                 concept_links.append(f"[[concepts/{c}]]")
     concept_link = " · ".join(concept_links) if concept_links else "待核实"
 
