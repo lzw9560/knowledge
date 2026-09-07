@@ -4,6 +4,8 @@ rule_type: 推断规则
 target_entity: events
 severity: medium
 created: 2026-09-07
+confidence: high
+source: ora-3_diagnosis
 ---
 
 > [!info] ⚙️ 规则

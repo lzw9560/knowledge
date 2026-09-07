@@ -7,6 +7,8 @@ github:
 data_source: Tushare
 modules: 情绪看板/打板选股/个股深度/每日复盘/设置管理/龙虎榜席位引擎/回测系统/AI复盘Agent
 created: 2026-09-07
+confidence: high
+source: README.md
 ---
 
 > [!info] 📋 项目决策

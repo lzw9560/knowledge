@@ -5,6 +5,8 @@ title: GeneScreener 接通（阈值可配+执行检索+多层明细）
 status: 已实现
 created: 2026-09-07
 last_synced: 2026-09-07
+confidence: medium
+source: scripts/extract_specs.py
 ---
 
 # S029 GeneScreener 接通（阈值可配+执行检索+多层明细）

@@ -4,6 +4,8 @@ name: 形态反包
 edge_family: 形态突破
 imported_from: backend/strategies/cards/
 created: 2026-09-06
+confidence: high
+source: manual
 ---
 
 # 形态反包（pattern_reversal）

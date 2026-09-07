@@ -6,6 +6,8 @@ trigger: 报告入库后，扫描正文 6 位代码并建 [[stocks/代码]] 链�
 target: reports/, daily/
 audit: true
 created: 2026-09-07
+confidence: high
+source: logic_rules
 ---
 
 > [!info] ⚡ 动作

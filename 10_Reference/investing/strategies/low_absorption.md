@@ -4,6 +4,8 @@ name: 低吸龙头
 edge_family: 均值回归
 imported_from: backend/strategies/cards/
 created: 2026-09-06
+confidence: high
+source: manual
 ---
 
 # 低吸龙头（low_absorption）

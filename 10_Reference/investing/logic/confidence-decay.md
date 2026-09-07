@@ -8,6 +8,7 @@ condition: 实体 confidence 字段随时间衰减——90 天未验证降一级
 action_on_violation: 不自动改值，只生成审查报告提醒（ora-3 §2.5 否决自动衰减算法）
 source: ora-3 §2.5（时效性：用最后验证日期替代置信度衰减）+ AGENTS.md 工程底线（不臆造数据 / 参数选择需数据支撑）
 created: 2026-09-07
+confidence: high
 ---
 
 > [!info] ⚙️ 规则

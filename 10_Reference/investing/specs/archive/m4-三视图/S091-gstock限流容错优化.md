@@ -5,6 +5,8 @@ title: gstock.global_indices 限流容错优化
 status: 已实现
 created: 2026-09-07
 last_synced: 2026-09-07
+confidence: medium
+source: scripts/extract_specs.py
 ---
 
 # S091 gstock.global_indices 限流容错优化

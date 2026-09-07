@@ -8,6 +8,7 @@ condition: 实体从创建到归档/删除的状态流转，强制走 inbox 质�
 action_on_violation: 不经 inbox 直接进正式区 → 报 high；正式区直接删 → 报 critical
 source: ora-3 §1.3（inbox stub 通道）+ AGENTS.md 工程底线（不臆造数据 / 私有数据隔离）
 created: 2026-09-07
+confidence: high
 ---
 
 > [!info] ⚙️ 规则

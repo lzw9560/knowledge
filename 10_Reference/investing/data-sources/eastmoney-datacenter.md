@@ -9,6 +9,8 @@ compliance: ok
 provides: [龙虎榜, 解禁, 融资融券, 大宗交易, 股东户数, 分红, 资金流, 行业排名]
 created: 2026-09-06
 last_synced: 2026-09-07
+confidence: high
+source: ARCHITECTURE.md
 ---
 
 > [!info] 📡 数据源

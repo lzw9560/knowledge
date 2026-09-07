@@ -6,6 +6,8 @@ trigger: inbox 实体通过审查，需迁移到正式区
 target: inbox/, stocks/, industries/, concepts/
 audit: true
 created: 2026-09-07
+confidence: high
+source: logic_rules
 ---
 
 > [!info] ⚡ 动作

@@ -4,6 +4,8 @@ name: 龙头战法
 edge_family: 龙头追踪
 imported_from: backend/strategies/cards/
 created: 2026-09-06
+confidence: high
+source: manual
 ---
 
 # 龙头战法（dragon_head）

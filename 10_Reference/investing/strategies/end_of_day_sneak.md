@@ -4,6 +4,8 @@ name: 尾盘偷袭
 edge_family: 动量溢价
 imported_from: backend/strategies/cards/
 created: 2026-09-06
+confidence: high
+source: manual
 ---
 
 # 尾盘偷袭（end_of_day_sneak）

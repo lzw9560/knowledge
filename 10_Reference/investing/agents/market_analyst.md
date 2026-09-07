@@ -7,6 +7,8 @@ role: market_analyst
 data_sources: [mootdx, eastmoney, sina]
 debates_with: "[[agents/sentiment_analyst]], [[agents/news_analyst]]"
 created: 2026-09-07
+confidence: high
+source: trading-agents/README.md
 ---
 
 > [!info] 🤖 AI 角色

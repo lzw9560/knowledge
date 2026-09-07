@@ -7,6 +7,8 @@ role: lockup_watcher
 data_sources: [mootdx, eastmoney, hithink-ths]
 debates_with: "[[agents/hot_money_tracker]], [[agents/fundamental_analyst]]"
 created: 2026-09-07
+confidence: high
+source: trading-agents/README.md
 ---
 
 > [!info] 🤖 AI 角色

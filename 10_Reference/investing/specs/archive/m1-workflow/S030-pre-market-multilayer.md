@@ -5,6 +5,8 @@ title: 盘前简报多层化 + UX 收敛
 status: 已废弃
 created: 2026-09-07
 last_synced: 2026-09-07
+confidence: medium
+source: scripts/extract_specs.py
 ---
 
 # S030 盘前简报多层化 + UX 收敛

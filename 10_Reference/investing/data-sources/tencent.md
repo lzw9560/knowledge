@@ -9,6 +9,8 @@ compliance: ok
 provides: [现价, 涨跌, PE, PB, 市值, 换手, 涨跌停]
 created: 2026-09-06
 last_synced: 2026-09-07
+confidence: high
+source: ARCHITECTURE.md
 ---
 
 > [!info] 📡 数据源

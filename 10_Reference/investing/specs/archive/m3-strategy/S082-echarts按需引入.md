@@ -5,6 +5,8 @@ title: echarts 按需引入优化
 status: 已实现
 created: 2026-09-07
 last_synced: 2026-09-07
+confidence: medium
+source: scripts/extract_specs.py
 ---
 
 # S082 echarts 按需引入优化

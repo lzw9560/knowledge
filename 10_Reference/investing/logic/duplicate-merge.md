@@ -8,6 +8,7 @@ condition: 同一 code 出现多份实体（不同文件同 code）
 action_on_violation: 触发合并工单（保留最新/最完整，合并关系后删除冗余）
 source: AGENTS.md 工程底线（不臆造数据——重复实体导致数据不一致）
 created: 2026-09-07
+confidence: high
 ---
 
 > [!info] ⚙️ 规则

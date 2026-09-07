@@ -5,6 +5,8 @@ title: gene DB 路径迁移（三库 + winrate 统一到 .vibe-research/）
 status: 已实现
 created: 2026-09-07
 last_synced: 2026-09-07
+confidence: medium
+source: scripts/extract_specs.py
 ---
 
 # S037 gene DB 路径迁移（三库 + winrate 统一到 .vibe-research/）

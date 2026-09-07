@@ -4,6 +4,8 @@ name: 暴风雨逆势涨停
 edge_family: 事件溢价
 imported_from: backend/strategies/cards/
 created: 2026-09-06
+confidence: high
+source: manual
 ---
 
 # 暴风雨逆势涨停（storm_reversal）

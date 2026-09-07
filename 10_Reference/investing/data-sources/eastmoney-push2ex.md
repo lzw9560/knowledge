@@ -9,6 +9,8 @@ compliance: ok
 provides: [涨停四池, 连板梯队, 封板率, 炸板率, 晋级率]
 created: 2026-09-06
 last_synced: 2026-09-07
+confidence: high
+source: ARCHITECTURE.md
 ---
 
 > [!info] 📡 数据源

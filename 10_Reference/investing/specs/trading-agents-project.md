@@ -6,6 +6,8 @@ status: 活跃
 github: lzwfirst/tradingagents-astock
 upstream: TauricResearch/TradingAgents
 created: 2026-09-07
+confidence: high
+source: README.md
 ---
 
 > [!info] 📋 项目决策

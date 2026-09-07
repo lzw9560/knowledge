@@ -9,6 +9,8 @@ compliance: ok
 provides: [资讯, 12赛道分类, 合规过滤]
 created: 2026-09-06
 last_synced: 2026-09-07
+confidence: high
+source: ARCHITECTURE.md
 ---
 
 > [!info] 📡 数据源

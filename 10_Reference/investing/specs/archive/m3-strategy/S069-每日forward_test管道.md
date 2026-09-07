@@ -5,6 +5,8 @@ title: 每日 forward_test 管道 + T+1 收益回填
 status: 已实现
 created: 2026-09-07
 last_synced: 2026-09-07
+confidence: medium
+source: scripts/extract_specs.py
 ---
 
 # S069 每日 forward_test 管道 + T+1 收益回填

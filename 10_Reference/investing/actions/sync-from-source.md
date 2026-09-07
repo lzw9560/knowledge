@@ -7,6 +7,8 @@ target: strategies/
 audit: true
 status: stub
 created: 2026-09-07
+confidence: high
+source: logic_rules
 ---
 
 > [!info] ⚡ 动作

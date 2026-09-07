@@ -7,6 +7,8 @@ role: policy_analyst
 data_sources: [eastmoney, worldmonitor]
 debates_with: "[[agents/fundamental_analyst]], [[agents/hot_money_tracker]]"
 created: 2026-09-07
+confidence: high
+source: trading-agents/README.md
 ---
 
 > [!info] 🤖 AI 角色

@@ -7,6 +7,8 @@ role: fundamentals_analyst
 data_sources: [mootdx, sina, hithink-ths]
 debates_with: "[[agents/news_analyst]], [[agents/policy_analyst]]"
 created: 2026-09-07
+confidence: high
+source: trading-agents/README.md
 ---
 
 > [!info] 🤖 AI 角色

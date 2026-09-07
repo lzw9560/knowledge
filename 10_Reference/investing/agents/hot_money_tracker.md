@@ -7,6 +7,8 @@ role: hot_money_tracker
 data_sources: [mootdx, eastmoney]
 debates_with: "[[agents/policy_analyst]], [[agents/lockup_monitor]]"
 created: 2026-09-07
+confidence: high
+source: trading-agents/README.md
 ---
 
 > [!info] 🤖 AI 角色

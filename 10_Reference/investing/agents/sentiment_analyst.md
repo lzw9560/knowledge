@@ -7,6 +7,8 @@ role: social_media_analyst
 data_sources: [eastmoney]
 debates_with: "[[agents/market_analyst]], [[agents/news_analyst]]"
 created: 2026-09-07
+confidence: high
+source: trading-agents/README.md
 ---
 
 > [!info] 🤖 AI 角色

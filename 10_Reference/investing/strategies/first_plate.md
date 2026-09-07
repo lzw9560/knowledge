@@ -4,6 +4,8 @@ name: 首板挖掘
 edge_family: 动量溢价
 imported_from: backend/strategies/cards/
 created: 2026-09-06
+confidence: high
+source: manual
 ---
 
 # 首板挖掘（first_plate）

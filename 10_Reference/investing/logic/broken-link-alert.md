@@ -8,6 +8,7 @@ condition: 断链（[[xxx]] 指向不存在的文件）数量 > 3
 action_on_violation: 触发修复工单（列出断链源 + 目标）
 source: ora-3 诊断 §6.5（move_note 危险操作约束——直接 rename 会导致断链）
 created: 2026-09-07
+confidence: high
 ---
 
 > [!info] ⚙️ 规则

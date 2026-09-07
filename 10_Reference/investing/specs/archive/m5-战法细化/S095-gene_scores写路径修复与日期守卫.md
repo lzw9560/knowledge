@@ -5,6 +5,8 @@ title: gene_scores 写路径修复与日期自证守卫
 status: 已实现
 created: 2026-09-07
 last_synced: 2026-09-07
+confidence: medium
+source: scripts/extract_specs.py
 ---
 
 # S095 gene_scores 写路径修复与日期自证守卫

@@ -4,6 +4,8 @@ name: 炸板回封
 edge_family: 事件溢价
 imported_from: backend/strategies/cards/
 created: 2026-09-06
+confidence: high
+source: manual
 ---
 
 # 炸板回封（break_reseal）

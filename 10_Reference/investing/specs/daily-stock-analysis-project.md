@@ -5,6 +5,8 @@ title: 每日股票分析（ZhuLinsen/daily-stock-analysis）
 status: 活跃
 github: ZhuLinsen/daily_stock_analysis
 created: 2026-09-07
+confidence: high
+source: README.md
 ---
 
 > [!info] 📋 项目决策

@@ -9,6 +9,7 @@ action_on_violation: 标记 data_suspect + 提示迁移到对应时点实体（v
 source: ora-3 诊断 §2.5（frontmatter 禁止放时点数据）+ D8-9 规划
 status: stub
 created: 2026-09-07
+confidence: high
 ---
 
 > [!info] ⚙️ 规则

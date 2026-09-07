@@ -9,6 +9,8 @@ compliance: ok
 provides: [研报标题, 机构, 评级, 日期, 一致预期EPS]
 created: 2026-09-06
 last_synced: 2026-09-07
+confidence: high
+source: ARCHITECTURE.md
 ---
 
 > [!info] 📡 数据源

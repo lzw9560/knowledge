@@ -5,6 +5,8 @@ title: 候选池漏斗 run_funnel 性能优化
 status: 草案
 created: 2026-09-07
 last_synced: 2026-09-07
+confidence: high
+source: specs/README.md
 ---
 
 > [!info] 📋 项目决策

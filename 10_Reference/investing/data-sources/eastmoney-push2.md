@@ -11,6 +11,8 @@ projects: [vibe-research, trading-agents]
 origin_project: vibe-research
 created: 2026-09-06
 last_synced: 2026-09-07
+confidence: high
+source: ARCHITECTURE.md
 ---
 
 > [!info] 📡 数据源

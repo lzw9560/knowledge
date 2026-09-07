@@ -6,6 +6,8 @@ trigger: 实体改名时，重写所有反向链接
 target: 全类型
 audit: true
 created: 2026-09-07
+confidence: high
+source: logic_rules
 ---
 
 > [!info] ⚡ 动作

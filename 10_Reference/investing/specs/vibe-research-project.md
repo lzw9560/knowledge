@@ -9,6 +9,8 @@ data_sources: 16
 spec_count: 109
 strategy_count: 12
 created: 2026-09-07
+confidence: high
+source: README.md
 ---
 
 > [!info] 📋 项目决策

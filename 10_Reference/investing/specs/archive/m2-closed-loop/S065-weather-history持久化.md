@@ -5,6 +5,8 @@ title: weather_history 持久化
 status: 已实现
 created: 2026-09-07
 last_synced: 2026-09-07
+confidence: medium
+source: scripts/extract_specs.py
 ---
 
 # S065 weather_history 持久化

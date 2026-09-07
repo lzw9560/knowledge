@@ -8,6 +8,7 @@ condition: 任一实体类型（stocks/industries/metrics/valuations 等）实�
 action_on_violation: 触发灌入任务（从代码/数据源灌入种子数据）
 source: AGENTS.md 分级工作流（图谱覆盖不足影响投研可用性）
 created: 2026-09-07
+confidence: high
 ---
 
 > [!info] ⚙️ 规则

@@ -8,6 +8,7 @@ condition: pe_ttm < 0 OR pe_ttm > 500
 action_on_violation: 标记 data_suspect
 source: ora-3 诊断 §2.5（PE 静态值不可信）+ logic/index.md 示例
 created: 2026-09-07
+confidence: high
 ---
 
 > [!info] ⚙️ 规则

@@ -4,6 +4,8 @@ code: BK1035
 name: CPO概念
 related_industry: 通信设备
 created: 2026-09-07
+confidence: medium
+source: astock.concept_blocks
 ---
 
 > [!info] 💡 概念信息

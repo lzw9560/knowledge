@@ -8,6 +8,7 @@ condition: 孤立实体（无反向链接、无出链）数量 > 5
 action_on_violation: 触发审查工单（列出孤立体单 + 灌入/删除建议）
 source: ora-3 诊断 §3（图谱连通性——孤立实体降低图谱可用性）
 created: 2026-09-07
+confidence: high
 ---
 
 > [!info] ⚙️ 规则

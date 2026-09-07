@@ -5,6 +5,8 @@ title: W-C 盯盘教练 MVP
 status: 已实现
 created: 2026-09-07
 last_synced: 2026-09-07
+confidence: medium
+source: scripts/extract_specs.py
 ---
 
 # S064 W-C 盯盘教练 MVP

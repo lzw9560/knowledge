@@ -5,6 +5,8 @@ title: 工作流 tab 按 pipeline 步骤重设计
 status: 已实现
 created: 2026-09-07
 last_synced: 2026-09-07
+confidence: medium
+source: scripts/extract_specs.py
 ---
 
 # S087 工作流 tab 按 pipeline 步骤重设计

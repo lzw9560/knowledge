@@ -4,6 +4,8 @@ name: 连板接力
 edge_family: 动量溢价
 imported_from: backend/strategies/cards/
 created: 2026-09-06
+confidence: high
+source: manual
 ---
 
 # 连板接力（consecutive_relay）

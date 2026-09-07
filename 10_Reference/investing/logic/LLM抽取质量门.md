@@ -8,6 +8,7 @@ condition: confidence = low 的实体 → 必须进 inbox/ → 人工审核通�
 action_on_violation: 拒绝写入正式区（stocks/industries/concepts 等实体文件夹）
 source: ora-3 诊断 §6.5 + pipeline §4（confidence 语义）
 created: 2026-09-07
+confidence: high
 ---
 
 > [!info] ⚙️ 规则

@@ -5,6 +5,8 @@ title: 宏观特征 Fred API 接入（macro.py 第二批）
 status: 已实现
 created: 2026-09-06
 last_synced: 2026-09-07
+confidence: medium
+source: scripts/extract_specs.py
 ---
 
 # S019 宏观 Fred API 接入

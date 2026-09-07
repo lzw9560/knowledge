@@ -4,6 +4,8 @@ code: BK1160
 name: AI应用
 related_industry: 软件
 created: 2026-09-07
+confidence: medium
+source: astock.concept_blocks
 ---
 
 > [!info] 💡 概念信息

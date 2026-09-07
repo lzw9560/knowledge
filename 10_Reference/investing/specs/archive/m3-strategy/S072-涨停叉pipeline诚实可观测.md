@@ -5,6 +5,8 @@ title: 涨停叉 pipeline 诚实可观测层
 status: 已实现
 created: 2026-09-07
 last_synced: 2026-09-07
+confidence: medium
+source: scripts/extract_specs.py
 ---
 
 # S072 涨停叉 pipeline 诚实可观测层

@@ -5,6 +5,8 @@ title: limitup-screener 修复（文案三态/trigger/因子层 conditions）
 status: 已实现
 created: 2026-09-07
 last_synced: 2026-09-07
+confidence: medium
+source: scripts/extract_specs.py
 ---
 
 # S028 limitup-screener 修复（文案三态/trigger/因子层 conditions）
