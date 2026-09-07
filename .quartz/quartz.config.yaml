@@ -132,7 +132,7 @@ plugins:
   - source: "@quartz-community/og-image"
     enabled: true
   - source: "@quartz-community/cname"
-    enabled: true
+    enabled: false
   - source: "@quartz-community/canvas-page"
     enabled: true
   - source: "@quartz-community/content-page"
@@ -143,16 +143,56 @@ plugins:
     enabled: true
   - source: "@quartz-community/explorer"
     enabled: true
+    options:
+      title: 导航
+      folderDefaultState: collapsed
+      folderClickBehavior: link
+      useSavedState: true
     layout:
       position: left
       priority: 50
   - source: "@quartz-community/graph"
     enabled: true
+    options:
+      localGraph:
+        drag: true
+        zoom: true
+        depth: 1
+        scale: 0.8
+        repelForce: 1.5
+        centerForce: 0.2
+        linkDistance: 30
+        fontSize: 0.6
+        opacityScale: 3
+        removeTags: []
+        showTags: false
+        focusOnHover: true
+        enableRadial: true
+      globalGraph:
+        drag: true
+        zoom: true
+        depth: 1
+        scale: 0.4
+        repelForce: 2
+        centerForce: 0.05
+        linkDistance: 20
+        fontSize: 0.5
+        opacityScale: 3
+        removeTags: []
+        showTags: false
+        focusOnHover: true
+        enableRadial: true
     layout:
       position: right
       priority: 10
   - source: "@quartz-community/search"
     enabled: true
+    options:
+      enablePreview: true
+      fieldPriority:
+        - title
+        - content
+        - tags
     layout:
       position: left
       priority: 20
