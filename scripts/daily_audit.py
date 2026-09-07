@@ -46,8 +46,8 @@ def extract_links(content):
 def resolve_link(target):
     # 支持 ../../ 相对路径跳层
     if target.startswith("../"):
-        # 从 VAULT 目录开始向上跳
-        resolved = VAULT
+        # 从 VAULT 的父目录开始（investing/ 的上级是 10_Reference/）
+        resolved = VAULT.parent  # 10_Reference/
         parts = target.split("/")
         i = 0
         while i < len(parts) and parts[i] == "..":
