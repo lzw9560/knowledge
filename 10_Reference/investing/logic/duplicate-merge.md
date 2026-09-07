@@ -10,20 +10,25 @@ source: AGENTS.md 工程底线（不臆造数据——重复实体导致数据�
 created: 2026-09-07
 ---
 
-# 规则：重复实体合并
+> [!info] ⚙️ 规则
+> **规则**：`DUP-MERGE-001`  **类型**：校验规则
+> **严重级**：high  **适用实体**：全类型
+>
+> **违反处置**：`触发合并工单（保留最新/最完整，合并关系后删除冗余）`
 
-## 规则定义
+## 📋 规则定义
 
-- **类型**：校验规则
-- **适用实体**：全类型（以 code 为唯一键的类型：stocks/metrics/valuations/reports/dragon-tiger 等）
-- **严重级**：high
-- **条件**：`同一 code 对应多个文件`（如 `stocks/600519.md` 和 `stocks/maotai.md` 同 code=600519）
+- 类型：`校验规则`
+- 适用实体：`全类型`
+- 严重级：`high`
 
-## 触发条件
+
+## ⚡ 触发条件
 
 `vault_audit.py` 按 frontmatter `code` 字段分组，若同一 code 对应多个文件路径触发合并。
 
-## 执行逻辑
+
+## 🔧 执行逻辑
 
 ```
 code_files = {}
@@ -52,7 +57,8 @@ GROUP BY code
 HAVING length(rows) > 1
 ```
 
-## 违反处置
+
+## ⚠️ 违反处置
 
 - `action_on_violation`：触发合并工单
 - 合并原则：
@@ -61,13 +67,10 @@ HAVING length(rows) > 1
   3. 冗余文件 move_note 到 `archive/duplicates/`（可恢复，不真删）
 - 合并后需更新所有指向冗余文件的反向链接（走 [[actions/rename-entity]]）
 
-## 阈值依据
 
-- **>1 份即触发**：以 code 为唯一键的类型，重复会导致数据不一致，是硬规则。无阈值校准需求。
+## 🔗 关联
 
-## 关联
-
-- 触发动作：[[actions/rename-entity]]（合并后重定向链接）
-- 约束实体：以 code 为键的类型（stocks/metrics/valuations/reports/dragon-tiger 等）
-- 来源：AGENTS.md 工程底线（不臆造数据——重复实体是一致性风险）
-- 相关规则：[[logic/coverage-floor]]（灌入时检查是否已有同 code 实体）
+- **触发动作**：[[actions/]]
+- **约束实体**：[[stocks/]]
+- **来源决策**：[[specs/]]
+- **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个

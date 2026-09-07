@@ -39,3 +39,24 @@ SORT date DESC, code ASC
 - [[dragon-tiger/603626-2026-08-21]]
 - [[dragon-tiger/002156-2026-08-17]]
 
+---
+
+## ⚡ 快速操作
+
+用 Templater 应用 `templates/dragon-tiger` 新建 龙虎榜 实体。
+模板会自动填入 YAML frontmatter + 正文骨架（callout + emoji + Dataview 查询）。
+
+## 📊 Dataview 实时统计
+
+```dataview
+TABLE WITHOUT ID
+  length(rows) AS "龙虎榜总数"
+FROM "10_Reference/investing/dragon-tiger"
+WHERE type = "dragon_tiger" AND file.name != "index"
+```
+
+## 🔗 相关子区
+
+- [[10_Reference/investing/MOC|投研 MOC]] — 知识图谱入口
+- [[10_Reference/investing/reviews/index|审查报告]] — ReAct Agent 体检
+- [[10_Reference/investing/inbox/index|待审区]] — LLM 抽取实体暂存

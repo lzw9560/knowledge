@@ -11,28 +11,40 @@ created: 2026-09-06
 last_synced: 2026-09-07
 ---
 
-# 百度股市通（日K线）
+> [!info] 📡 数据源
+> **名称**：百度股市通（日K线）  **层级**：L4
+> **接口**：`finance.pae.baidu.com`
+> **限流**：`不封IP`  **降级**：`无`
 
-## 提供字段
-- 日 K 线
+## 📋 提供字段
 
-## 限流策略
+待补充
+
+
+## ⏱ 限流策略
+
 - 不封 IP
 - 直连
 
-## 降级链
+
+## 🔄 降级链
+
 - 无
 
-## 相关实体
-- 喂给实体类型：[[stocks/]] [[metrics/]]
-- 对应代码：`backend/data/sources/astock.py`（待补：具体函数名，可能并入 kline）
 
-## 相关 spec
-- [[specs/]] 后端数据层迁移 / 日 K 线接入
+## 🔗 相关实体
 
-<!-- pipeline: P4 extract_relations.py 生成 -->
+- [[stocks/]]
+- [[reports/]]
+- [[dragon-tiger/]]
+- [[metrics/]]
+- [[valuations/]]
+- [[events/]]
 
-## 数据流关系
+## 📜 关联 spec
 
-**对应函数**（`backend/data/sources/`）：
-- `data.sources.baidu.fetch_raw`
+- [[specs/]]
+
+## 🔗 关联
+
+- **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个

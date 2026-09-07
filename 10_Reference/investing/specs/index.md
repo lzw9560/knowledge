@@ -59,3 +59,25 @@ SORT number ASC
 - [[specs/a-plate-sentinel-project]] — A股打板情绪监控与投研决策看板（8 大模块，Tushare 数据源，MVP 骨架）
 - [[specs/trading-agents-project]] — TradingAgents A股深度特化 fork（7 Analyst + 多 Agent 辩论）
 - [[specs/daily-stock-analysis-project]] — 每日股票分析报告生成器（多市场、多渠道推送）
+
+---
+
+## ⚡ 快速操作
+
+用 Templater 应用 `templates/spec` 新建 项目决策 实体。
+模板会自动填入 YAML frontmatter + 正文骨架（callout + emoji + Dataview 查询）。
+
+## 📊 Dataview 实时统计
+
+```dataview
+TABLE WITHOUT ID
+  length(rows) AS "项目决策总数"
+FROM "10_Reference/investing/specs"
+WHERE type = "spec" AND file.name != "index"
+```
+
+## 🔗 相关子区
+
+- [[10_Reference/investing/MOC|投研 MOC]] — 知识图谱入口
+- [[10_Reference/investing/reviews/index|审查报告]] — ReAct Agent 体检
+- [[10_Reference/investing/inbox/index|待审区]] — LLM 抽取实体暂存

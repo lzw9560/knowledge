@@ -11,33 +11,42 @@ created: 2026-09-06
 last_synced: 2026-09-07
 ---
 
-# 108 RSS 源（资讯雷达）
+> [!info] 📡 数据源
+> **名称**：108 RSS 源（资讯雷达）  **层级**：L资讯层
+> **接口**：`108 源`
+> **限流**：`40线程并发`  **降级**：`单源失败不拖垮整体`
 
-## 提供字段
-- 资讯条目（标题/时间/来源/正文）
-- 12 赛道分类
-- 合规词表过滤（赌/预测市场/加密/色情命中即跳过）
+## 📋 提供字段
 
-## 限流策略
+待补充
+
+
+## ⏱ 限流策略
+
 - `ThreadPoolExecutor(40)` 并发
 - 单源失败不拖垮整体
 
-## 降级链
+
+## 🔄 降级链
+
 - 单源失败 → 跳过该源，不影响整体
 - 缓存原子写（tmp + `os.replace`）
 - `force` 参数强制刷新
 
-## 相关实体
-- 喂给实体类型：[[events/]]
-- 对应代码：`backend/data/sources/newsradar.py` → `fetch_radar`、`get_radar(force)`
-- 缓存：`backend/.cache/radar.json`
 
-## 相关 spec
-- [[specs/]] 资讯雷达接入 / 12 赛道 / 合规词表
+## 🔗 相关实体
 
-<!-- pipeline: P4 extract_relations.py 生成 -->
+- [[stocks/]]
+- [[reports/]]
+- [[dragon-tiger/]]
+- [[metrics/]]
+- [[valuations/]]
+- [[events/]]
 
-## 数据流关系
+## 📜 关联 spec
 
-**关联 spec**：
-- [[specs/S020-worldmonitor决策因子接入]]（S020）
+- [[specs/]]
+
+## 🔗 关联
+
+- **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个

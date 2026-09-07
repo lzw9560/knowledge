@@ -13,37 +13,41 @@ created: 2026-09-06
 last_synced: 2026-09-07
 ---
 
-# mootdx
+> [!info] 📡 数据源
+> **名称**：mootdx  **层级**：L3
+> **接口**：`TCP 7709`
+> **限流**：`无（惰性导入）`  **降级**：`DependencyMissing 优雅报错`
 
-## 提供字段
-- K 线数据
-- 财报数据（待补：具体三表分工与新浪重叠，待核对）
+## 📋 提供字段
 
-## 限流策略
+待补充
+
+
+## ⏱ 限流策略
+
 - 无（惰性导入，按需调用）
 - TCP 7709 通达信协议
 
-## 降级链
+
+## 🔄 降级链
+
 - 惰性导入：缺失时 `DependencyMissing` 优雅报错，不挡启动
 - 无进一步降级
 
-## 相关实体
-- 喂给实体类型：[[stocks/]] [[metrics/]]
-- 对应代码：`backend/data/sources/astock.py` → `kline`、`finance`（惰性导入点）
 
-## 相关 spec
-- [[specs/]] 后端数据层迁移 / mootdx 惰性导入
+## 🔗 相关实体
 
-<!-- pipeline: P4 extract_relations.py 生成 -->
-
-## 数据流关系
-
-**对应函数**（`backend/data/sources/`）：
-- `data.sources.mootdx_src.kline`
-- `data.sources.mootdx_src.finance`
-- `data.sources.tickflow.fetch_klines`
-- `data.sources.tickflow.fetch_klines_as_bars`
-
-**喂给实体类型**：
 - [[stocks/]]
+- [[reports/]]
+- [[dragon-tiger/]]
+- [[metrics/]]
 - [[valuations/]]
+- [[events/]]
+
+## 📜 关联 spec
+
+- [[specs/]]
+
+## 🔗 关联
+
+- **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个

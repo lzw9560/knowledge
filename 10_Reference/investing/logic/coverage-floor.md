@@ -10,20 +10,25 @@ source: AGENTS.md 分级工作流（图谱覆盖不足影响投研可用性）
 created: 2026-09-07
 ---
 
-# 规则：覆盖下限
+> [!info] ⚙️ 规则
+> **规则**：`COVERAGE-001`  **类型**：校验规则
+> **严重级**：medium  **适用实体**：全类型
+>
+> **违反处置**：`触发灌入任务（从代码/数据源灌入种子数据）`
 
-## 规则定义
+## 📋 规则定义
 
-- **类型**：校验规则
-- **适用实体**：全类型（按 type 分类统计）
-- **严重级**：medium
-- **条件**：`任一 type 的实体数 < 3`（如 metrics/ 只有 2 条记录 → 触发灌入）
+- 类型：`校验规则`
+- 适用实体：`全类型`
+- 严重级：`medium`
 
-## 触发条件
+
+## ⚡ 触发条件
 
 `vault_audit.py` 按 frontmatter `type` 字段分组统计每个类型的实体数。任一类型 < 3 触发灌入任务。
 
-## 执行逻辑
+
+## 🔧 执行逻辑
 
 ```
 type_counts = {}
@@ -51,19 +56,17 @@ WHERE type != null
 GROUP BY type AS "类型"
 ```
 
-## 违反处置
+
+## ⚠️ 违反处置
 
 - `action_on_violation`：触发灌入任务
 - 灌入优先级：先建占位实体（status=placeholder）保证图谱连通，再逐步填充真实数据
 - 占位实体必须标注 `status: placeholder`，避免被误用为真实数据源
 
-## 阈值依据
 
-- **3 个**：图谱可用性下限。某类型 < 3 时该类型无法支撑任何统计/对比分析。待 vault 成熟后可上调至 5 或 10。
+## 🔗 关联
 
-## 关联
-
-- 触发动作：[[actions/approve-entity]]（灌入的 inbox 实体走审批进正式区）
-- 约束实体：全类型
-- 来源：AGENTS.md 分级工作流（图谱覆盖是投研基础）
-- 相关规则：[[logic/orphan-threshold]]（灌入后避免产生孤立项）、[[logic/duplicate-merge]]（灌入避免重复）
+- **触发动作**：[[actions/]]
+- **约束实体**：[[stocks/]]
+- **来源决策**：[[specs/]]
+- **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个

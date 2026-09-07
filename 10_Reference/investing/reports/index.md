@@ -76,3 +76,25 @@ SORT publish_date DESC
 - [[reports/000301-2026-04-30-2025年年报&2026年一季报点评：地]] — 000301 2025年年报&2026年一季报点评：地缘冲突推动炼化景气度
 - [[reports/000301-2026-05-06-石化新材料销量稳步增长，高端新材料矩阵持]] — 000301 石化新材料销量稳步增长，高端新材料矩阵持续丰富
 - [[reports/000301-2026-09-03-2026年半年报点评：地缘冲突推升炼化景]] — 000301 2026年半年报点评：地缘冲突推升炼化景气，一体化盈利弹性凸
+
+---
+
+## ⚡ 快速操作
+
+用 Templater 应用 `templates/report` 新建 研报 实体。
+模板会自动填入 YAML frontmatter + 正文骨架（callout + emoji + Dataview 查询）。
+
+## 📊 Dataview 实时统计
+
+```dataview
+TABLE WITHOUT ID
+  length(rows) AS "研报总数"
+FROM "10_Reference/investing/reports"
+WHERE type = "report" AND file.name != "index"
+```
+
+## 🔗 相关子区
+
+- [[10_Reference/investing/MOC|投研 MOC]] — 知识图谱入口
+- [[10_Reference/investing/reviews/index|审查报告]] — ReAct Agent 体检
+- [[10_Reference/investing/inbox/index|待审区]] — LLM 抽取实体暂存

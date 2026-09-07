@@ -41,3 +41,25 @@ SORT audit_date DESC
 - **新 spec 落地后**：跑 `broken_link` + `orphan_check`（看是否引入新断链）
 - **实体改名后**：跑 `broken_link`（确认 `move_note` 重写了反向链接）
 - **大批量灌入后**：跑 `coverage` + `duplicate_check`
+
+---
+
+## ⚡ 快速操作
+
+用 Templater 应用 `templates/audit` 新建 审查报告 实体。
+模板会自动填入 YAML frontmatter + 正文骨架（callout + emoji + Dataview 查询）。
+
+## 📊 Dataview 实时统计
+
+```dataview
+TABLE WITHOUT ID
+  length(rows) AS "审查报告总数"
+FROM "10_Reference/investing/reviews"
+WHERE type = "audit" AND file.name != "index"
+```
+
+## 🔗 相关子区
+
+- [[10_Reference/investing/MOC|投研 MOC]] — 知识图谱入口
+- [[10_Reference/investing/reviews/index|审查报告]] — ReAct Agent 体检
+- [[10_Reference/investing/inbox/index|待审区]] — LLM 抽取实体暂存

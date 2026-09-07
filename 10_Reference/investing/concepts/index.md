@@ -22,3 +22,25 @@ SORT name ASC
 ## 新建实体
 
 用 Templater 应用 `templates/concept` 新建。模板侧重题材轮动节奏记录。
+
+---
+
+## ⚡ 快速操作
+
+用 Templater 应用 `templates/concept` 新建 概念板块 实体。
+模板会自动填入 YAML frontmatter + 正文骨架（callout + emoji + Dataview 查询）。
+
+## 📊 Dataview 实时统计
+
+```dataview
+TABLE WITHOUT ID
+  length(rows) AS "概念板块总数"
+FROM "10_Reference/investing/concepts"
+WHERE type = "concept" AND file.name != "index"
+```
+
+## 🔗 相关子区
+
+- [[10_Reference/investing/MOC|投研 MOC]] — 知识图谱入口
+- [[10_Reference/investing/reviews/index|审查报告]] — ReAct Agent 体检
+- [[10_Reference/investing/inbox/index|待审区]] — LLM 抽取实体暂存

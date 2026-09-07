@@ -47,3 +47,24 @@ SORT date DESC
 
 - [[events/2026-09-07-异动]]
 
+---
+
+## ⚡ 快速操作
+
+用 Templater 应用 `templates/event` 新建 事件 实体。
+模板会自动填入 YAML frontmatter + 正文骨架（callout + emoji + Dataview 查询）。
+
+## 📊 Dataview 实时统计
+
+```dataview
+TABLE WITHOUT ID
+  length(rows) AS "事件总数"
+FROM "10_Reference/investing/events"
+WHERE type = "event" AND file.name != "index"
+```
+
+## 🔗 相关子区
+
+- [[10_Reference/investing/MOC|投研 MOC]] — 知识图谱入口
+- [[10_Reference/investing/reviews/index|审查报告]] — ReAct Agent 体检
+- [[10_Reference/investing/inbox/index|待审区]] — LLM 抽取实体暂存

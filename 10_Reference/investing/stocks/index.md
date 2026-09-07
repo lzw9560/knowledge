@@ -27,3 +27,25 @@ SORT code ASC
 ## 新建实体
 
 用 Templater 应用 `templates/stock` 新建。模板会自动填入 YAML frontmatter（code/name/market/industry/pe_ttm/pb/market_cap 等）+ 正文骨架（基本信息/核心业务/财务速览/估值/相关研报/龙虎榜/相关事件/匹配战法）。
+
+---
+
+## ⚡ 快速操作
+
+用 Templater 应用 `templates/stock` 新建 股票 实体。
+模板会自动填入 YAML frontmatter + 正文骨架（callout + emoji + Dataview 查询）。
+
+## 📊 Dataview 实时统计
+
+```dataview
+TABLE WITHOUT ID
+  length(rows) AS "股票总数"
+FROM "10_Reference/investing/stocks"
+WHERE type = "stock" AND file.name != "index"
+```
+
+## 🔗 相关子区
+
+- [[10_Reference/investing/MOC|投研 MOC]] — 知识图谱入口
+- [[10_Reference/investing/reviews/index|审查报告]] — ReAct Agent 体检
+- [[10_Reference/investing/inbox/index|待审区]] — LLM 抽取实体暂存

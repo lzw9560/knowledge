@@ -11,26 +11,42 @@ created: 2026-09-06
 last_synced: 2026-09-07
 ---
 
-# 东财 push2ex（涨停四池）
+> [!info] 📡 数据源
+> **名称**：东财 push2ex（涨停四池）  **层级**：L2
+> **接口**：`push2ex.eastmoney.com`
+> **限流**：`em_get 限流 QPS≤2`  **降级**：`熔断器+push2delay降级`
 
-## 提供字段
-- 涨停四池（首板/二板/三板/高度板）
-- 连板梯队
-- 封板率、炸板率、晋级率
+## 📋 提供字段
 
-## 限流策略
+待补充
+
+
+## ⏱ 限流策略
+
 - 统一走 `em_get()`，QPS≤2（同 push2）
 - HTTP 缓存 24h（涨停四池专用）
 
-## 降级链
+
+## 🔄 降级链
+
 - 熔断器 `circuit_breaker.get_breaker("eastmoney")`
 - 路由级缓存 `cache_response(ttl)`
 - 复用 push2→push2delay 降级链
 
-## 相关实体
-- 喂给实体类型：[[stocks/]] [[events/]]（涨停事件）
-- 对应代码：`backend/data/sources/astock.py` → `em_zt_topic_pool`
-- 聚合层：`market.py` → `_emotion`（涨停四池聚合为连板梯队/封板率/炸板率/晋级率）
 
-## 相关 spec
-- [[specs/]] 涨停四池接入 / market.py 情绪聚合
+## 🔗 相关实体
+
+- [[stocks/]]
+- [[reports/]]
+- [[dragon-tiger/]]
+- [[metrics/]]
+- [[valuations/]]
+- [[events/]]
+
+## 📜 关联 spec
+
+- [[specs/]]
+
+## 🔗 关联
+
+- **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个

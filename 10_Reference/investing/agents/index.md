@@ -37,3 +37,25 @@ SORT name ASC
 trading-agents 与 Vibe-Research 共享 4 个数据源（mootdx/东财/新浪/同花顺），但定位不同：
 - Vibe-Research：私人投研助理，单点查询 + 弱合规研判
 - trading-agents：多 Agent 辩论框架，输出完整投资计划 + Buy/Hold/Sell 决策
+
+---
+
+## ⚡ 快速操作
+
+用 Templater 应用 `templates/agent` 新建 AI 角色 实体。
+模板会自动填入 YAML frontmatter + 正文骨架（callout + emoji + Dataview 查询）。
+
+## 📊 Dataview 实时统计
+
+```dataview
+TABLE WITHOUT ID
+  length(rows) AS "AI 角色总数"
+FROM "10_Reference/investing/agents"
+WHERE type = "agent_role" AND file.name != "index"
+```
+
+## 🔗 相关子区
+
+- [[10_Reference/investing/MOC|投研 MOC]] — 知识图谱入口
+- [[10_Reference/investing/reviews/index|审查报告]] — ReAct Agent 体检
+- [[10_Reference/investing/inbox/index|待审区]] — LLM 抽取实体暂存

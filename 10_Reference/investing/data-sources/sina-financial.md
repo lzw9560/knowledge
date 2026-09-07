@@ -13,30 +13,40 @@ created: 2026-09-06
 last_synced: 2026-09-07
 ---
 
-# 新浪财经（财报三表）
+> [!info] 📡 数据源
+> **名称**：新浪财经（财报三表）  **层级**：L4
+> **接口**：`vip.stock.finance.sina.com.cn`
+> **限流**：`urllib 直连`  **降级**：`无`
 
-## 提供字段
-- 财报三表（资产负债表/利润表/现金流量表）
+## 📋 提供字段
 
-## 限流策略
+待补充
+
+
+## ⏱ 限流策略
+
 - urllib 直连
 - 待补：具体限流策略（未在 ARCHITECTURE.md 明示封禁行为）
 
-## 降级链
+
+## 🔄 降级链
+
 - 无
 
-## 相关实体
-- 喂给实体类型：[[metrics/]] [[stocks/]]
-- 对应代码：`backend/data/sources/astock.py` → `finance`、`full_valuation`
 
-## 相关 spec
-- [[specs/]] 后端数据层迁移 / 财报三表接入
+## 🔗 相关实体
 
-<!-- pipeline: P4 extract_relations.py 生成 -->
+- [[stocks/]]
+- [[reports/]]
+- [[dragon-tiger/]]
+- [[metrics/]]
+- [[valuations/]]
+- [[events/]]
 
-## 数据流关系
+## 📜 关联 spec
 
-**对应函数**（`backend/data/sources/`）：
-- `data.sources.sina.fetch_raw`
-- `data.sources.sina_financial.fetch_raw`
-- `data.sources.sina_financial.fetch_merged_periods`
+- [[specs/]]
+
+## 🔗 关联
+
+- **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个

@@ -13,32 +13,40 @@ created: 2026-09-06
 last_synced: 2026-09-07
 ---
 
-# baostock（K线日更）
+> [!info] 📡 数据源
+> **名称**：baostock（K线日更）  **层级**：L4
+> **接口**：`bbaostock.com`
+> **限流**：`无`  **降级**：`S090 kline_refresh`
 
-## 提供字段
-- K 线日更数据
+## 📋 提供字段
 
-## 限流策略
+待补充
+
+
+## ⏱ 限流策略
+
 - 无（待补：是否有上游限流）
 
-## 降级链
+
+## 🔄 降级链
+
 - 无网络降级
 - 任务级：由 `scheduled_tasks.py` 的 `kline_refresh`（S090）定时执行
 
-## 相关实体
-- 喂给实体类型：[[stocks/]] [[metrics/]]
-- 对应代码：`backend/data/sources/`（待补：具体文件名）+ `scheduled_tasks.py` → `kline_refresh` 任务
 
-## 相关 spec
-- [[specs/]] S090 baostock kline 日更
+## 🔗 相关实体
 
-<!-- pipeline: P4 extract_relations.py 生成 -->
+- [[stocks/]]
+- [[reports/]]
+- [[dragon-tiger/]]
+- [[metrics/]]
+- [[valuations/]]
+- [[events/]]
 
-## 数据流关系
+## 📜 关联 spec
 
-**对应函数**（`backend/data/sources/`）：
-- `data.sources.baostock_src.ensure_login`
-- `data.sources.baostock_src.fetch_5min_bars`
+- [[specs/]]
 
-**关联 spec**：
-- [[specs/S008-后端数据层迁移]]（S008）
+## 🔗 关联
+
+- **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个

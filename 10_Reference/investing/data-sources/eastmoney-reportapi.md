@@ -11,32 +11,41 @@ created: 2026-09-06
 last_synced: 2026-09-07
 ---
 
-# 东财 reportapi（研报）
+> [!info] 📡 数据源
+> **名称**：东财 reportapi（研报）  **层级**：L2
+> **接口**：`reportapi.eastmoney.com`
+> **限流**：`em_get 限流 QPS≤2`  **降级**：`熔断器+push2delay降级`
 
-## 提供字段
-- 个股近期研报（标题/机构/评级/日期）
-- 机构一致预期 EPS
-- 前向 PE/PEG/PE 消化年数（待补：具体字段需对照 `astock.full_valuation`）
+## 📋 提供字段
 
-## 限流策略
+待补充
+
+
+## ⏱ 限流策略
+
 - 统一走 `em_get()`，QPS≤2（同 push2）
 - 复用 `requests.Session`、直连优先失败降级代理
 
-## 降级链
+
+## 🔄 降级链
+
 - 熔断器 `circuit_breaker.get_breaker("eastmoney")`
 - 路由级缓存 `cache_response(ttl)`
 
-## 相关实体
-- 喂给实体类型：[[reports/]] [[valuations/]]
-- 对应代码：`backend/data/sources/astock.py` → `eastmoney_reports`、`full_valuation`、`valuation_percentile`、`profit_forecast`
-- MCP 暴露：`query_reports`、`query_valuation`
 
-## 相关 spec
-- [[specs/]] 后端数据层迁移 / 机构一致预期
+## 🔗 相关实体
 
-<!-- pipeline: P4 extract_relations.py 生成 -->
+- [[stocks/]]
+- [[reports/]]
+- [[dragon-tiger/]]
+- [[metrics/]]
+- [[valuations/]]
+- [[events/]]
 
-## 数据流关系
+## 📜 关联 spec
 
-**相关工具**：
-- `query_reports` → `astock.eastmoney_reports`
+- [[specs/]]
+
+## 🔗 关联
+
+- **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个
