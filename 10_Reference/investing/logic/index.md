@@ -33,6 +33,35 @@ LIMIT 50
 - 约束 → [[stocks/]] [[industries/]] 等实体（规则作用于哪些实体类型）
 - 来源 → [[specs/]]（项目 spec 决策是规则的重要来源）
 
+## 实体清单（入边）
+
+> 本段列出该类型所有实体以建立入边链接（Dataview 表格不计入边）。
+
+- [[logic/LLM抽取质量门]]
+- [[logic/PE异常]]
+- [[logic/broken-link-alert]]
+- [[logic/broken-link-grading]]
+- [[logic/causal-chains]]
+- [[logic/confidence-decay]]
+- [[logic/coverage-floor]]
+- [[logic/cross-domain-gate]]
+- [[logic/data-freshness]]
+- [[logic/duplicate-merge]]
+- [[logic/entity-archive]]
+- [[logic/entity-lifecycle]]
+- [[logic/entity-merge]]
+- [[logic/entity-promotion]]
+- [[logic/orphan-threshold]]
+- [[logic/relation-cardinality]]
+- [[logic/sentiment-weather-mapping]]
+- [[logic/source-drift]]
+- [[logic/static-value-ban]]
+- [[logic/stub-lifecycle]]
+- [[logic/实体改名]]
+- [[logic/战法卡漂移检测]]
+- [[logic/战法天气映射]]
+- [[logic/报告图谱关联]]
+
 ---
 
 ## ⚡ 快速操作

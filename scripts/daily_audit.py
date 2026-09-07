@@ -1,0 +1,243 @@
+#!/usr/bin/env python3
+"""每日知识图谱深度审查脚本。
+
+轻量版——不调 git log（慢），纯文件扫描，5 秒内完成。
+
+用法：python3 scripts/daily_audit.py [--quiet]
+"""
+import re
+import json
+import sys
+from pathlib import Path
+from collections import Counter, defaultdict
+from datetime import datetime
+
+VAULT = Path(__file__).resolve().parent.parent / "10_Reference" / "investing"
+
+
+def parse_frontmatter(content):
+    m = re.match(r"^---\n(.*?)\n---", content, re.DOTALL)
+    if not m:
+        return {}
+    fm = {}
+    for line in m.group(1).split("\n"):
+        if ":" in line:
+            key, _, val = line.partition(":")
+            val = val.strip().strip("'\"")
+            val = re.sub(r"<%.*%>", "", val).strip()
+            if val:
+                fm[key.strip()] = val
+    return fm
+
+
+def strip_frontmatter(content):
+    return re.sub(r"^---\n.*?\n---\n?", "", content, flags=re.DOTALL)
+
+
+def extract_links(content):
+    links = []
+    for m in re.finditer(r"\[\[([^\]]+)\]\]", content):
+        target = m.group(1).split("|")[0].strip()
+        if target and not target.startswith("http") and "<" not in target:
+            links.append(target)
+    return links
+
+
+def resolve_link(target):
+    candidates = [
+        VAULT / (target + ".md"),
+        VAULT / target,
+    ]
+    return any(c.exists() for c in candidates)
+
+
+def run_audit():
+    today = datetime.now().strftime("%Y-%m-%d")
+    
+    # 扫描所有实体
+    all_entities = {}
+    in_degree = Counter()
+    broken_links = []
+    type_counts = Counter()
+    stub_count = 0
+    llm_count = 0
+    confidence_dist = Counter()
+    no_confidence = 0
+    
+    for f in VAULT.rglob("*.md"):
+        if "templates" in str(f) or ".quartz" in str(f):
+            continue
+        if f.name in ("index.md", "MOC.md", "README.md", "SUMMARY.md"):
+            continue
+        if "reviews" in str(f) or "inbox" in str(f) or "scripts" in str(f):
+            continue
+        
+        content = f.read_text(encoding="utf-8")
+        fm = parse_frontmatter(content)
+        body = strip_frontmatter(content)
+        
+        rel = str(f.relative_to(VAULT)).replace(".md", "")
+        all_entities[rel] = fm
+        
+        # 类型计数
+        entity_type = fm.get("type", "unknown")
+        type_counts[entity_type] += 1
+        
+        # stub 计数
+        if fm.get("status") == "stub":
+            stub_count += 1
+        
+        # LLM 生成计数
+        if "LLM 生成" in content:
+            llm_count += 1
+        
+        # confidence 分布
+        conf = fm.get("confidence", "")
+        if conf:
+            confidence_dist[conf] += 1
+        else:
+            no_confidence += 1
+        
+        # 入边 + 断链
+        links = extract_links(body)
+        for target in links:
+            in_degree[target] += 1
+            if not resolve_link(target):
+                broken_links.append(target)
+    
+    # 孤立实体
+    orphan = set(all_entities.keys()) - set(in_degree.keys())
+    
+    # 统计
+    total = len(all_entities)
+    broken_count = len(broken_links)
+    orphan_count = len(orphan)
+    
+    # 断链去重 Top 10
+    broken_counter = Counter(broken_links)
+    
+    # 孤立按类型
+    orphan_by_type = defaultdict(list)
+    for o in orphan:
+        folder = o.split("/")[0] if "/" in o else "root"
+        orphan_by_type[folder].append(o)
+    
+    # 输出 JSON
+    result = {
+        "audit_date": today,
+        "total_entities": total,
+        "type_distribution": dict(type_counts.most_common()),
+        "stub_count": stub_count,
+        "llm_generated_count": llm_count,
+        "confidence_distribution": dict(confidence_dist),
+        "no_confidence_count": no_confidence,
+        "broken_links": broken_count,
+        "broken_links_top10": broken_counter.most_common(10),
+        "orphan_count": orphan_count,
+        "orphan_by_type": {k: len(v) for k, v in sorted(orphan_by_type.items())},
+    }
+    
+    # 写审查报告
+    report_path = VAULT / "reviews" / f"{today}-daily-audit.md"
+    report_path.parent.mkdir(parents=True, exist_ok=True)
+    
+    report = f"""---
+type: audit
+audit_date: {today}
+auditor: daily-audit-script
+scope: 全量
+findings_count: {broken_count + orphan_count}
+critical: {sum(1 for t, c in broken_counter.items() if c >= 5)}
+high: {len(broken_links)}
+medium: {orphan_count}
+low: {stub_count}
+status: 已完成
+created: {today}
+---
+
+# 每日审查报告：{today}
+
+> 自动审查（daily_audit.py 轻量版，纯文件扫描）。
+
+## 📊 图谱统计
+
+| 指标 | 值 |
+|---|---|
+| 总实体数 | {total} |
+| stub 实体 | {stub_count} |
+| LLM 生成内容 | {llm_count} |
+| 断链 | {broken_count} |
+| 孤立实体 | {orphan_count} |
+| confidence 覆盖 | {total - no_confidence}/{total} ({(total-no_confidence)*100//total}%) |
+
+## 📋 各类型分布
+
+| 类型 | 数量 | 类型 | 数量 |
+|---|---|---|---|
+"""
+    items = list(type_counts.most_common())
+    for i in range(0, len(items), 2):
+        left = f"{items[i][0]} | {items[i][1]}"
+        right = f"{items[i+1][0]} | {items[i+1][1]}" if i+1 < len(items) else ""
+        report += f"| {left} | {right} |\n"
+    
+    report += f"""
+## 🔗 断链 Top 10
+
+| 断链目标 | 次数 |
+|---|---|
+"""
+    for target, count in broken_counter.most_common(10):
+        report += f"| {target} | {count} |\n"
+    
+    report += f"""
+## 🏝️ 孤立实体分布
+
+| 类型 | 数量 |
+|---|---|
+"""
+    for folder, count in sorted(orphan_by_type.items()):
+        report += f"| {folder} | {count} |\n"
+    
+    report += f"""
+## 📊 confidence 分布
+
+| confidence | 数量 |
+|---|---|
+"""
+    for conf, count in confidence_dist.most_common():
+        report += f"| {conf} | {count} |\n"
+    report += f"| (未标注) | {no_confidence} |\n"
+    
+    report += f"""
+## 📅 KPI 仪表盘
+
+| KPI | 当前值 | 阈值 | 状态 |
+|---|---|---|---|
+| 断链 | {broken_count} | ≤50 | {'🟢' if broken_count <= 50 else '🔴'} |
+| 孤立实体 | {orphan_count} | ≤200 | {'🟢' if orphan_count <= 200 else '🟡' if orphan_count <= 500 else '🔴'} |
+| stub 实体 | {stub_count} | ≤100 | {'🟢' if stub_count <= 100 else '🟡'} |
+| confidence 覆盖 | {(total-no_confidence)*100//total}% | ≥95% | {'🟢' if (total-no_confidence)*100//total >= 95 else '🟡'} |
+
+## 📈 趋势
+
+> 与上次审查对比（如有 reviews/ 前一份报告）
+
+待填充（需要读前一份报告对比）
+"""
+    
+    report_path.write_text(report, encoding="utf-8")
+    
+    # 输出 JSON
+    json_path = VAULT / "reviews" / f"{today}-daily-audit.json"
+    json_path.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
+    
+    if "--quiet" not in sys.argv:
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+    else:
+        print(f"✅ 审查完成: {total} 实体, {broken_count} 断链, {orphan_count} 孤立, {llm_count} LLM生成")
+        print(f"📄 报告: {report_path}")
+
+
+if __name__ == "__main__":
+    run_audit()

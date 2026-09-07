@@ -1,0 +1,88 @@
+{
+  "audit_date": "2026-09-08",
+  "total_entities": 2490,
+  "type_distribution": {
+    "stock": 411,
+    "metric": 401,
+    "valuation": 401,
+    "analyst": 396,
+    "report": 392,
+    "concept": 130,
+    "industry": 126,
+    "spec": 101,
+    "dragon_tiger": 41,
+    "logic": 24,
+    "data_source": 17,
+    "event": 13,
+    "strategy": 12,
+    "agent_role": 7,
+    "index": 5,
+    "decision": 5,
+    "project": 4,
+    "action": 4
+  },
+  "stub_count": 43,
+  "llm_generated_count": 524,
+  "confidence_distribution": {
+    "medium": 1027,
+    "high": 1422
+  },
+  "no_confidence_count": 41,
+  "broken_links": 193,
+  "broken_links_top10": [
+    [
+      "10_Reference/tech-learning/concepts/graceful-degradation",
+      22
+    ],
+    [
+      "10_Reference/tech-learning/concepts/caching-strategy",
+      21
+    ],
+    [
+      "10_Reference/tech-learning/concepts/data-contract",
+      20
+    ],
+    [
+      "10_Reference/reading/notes/均值回归-笔记",
+      16
+    ],
+    [
+      "10_Reference/reading/notes/趋势跟踪-笔记",
+      14
+    ],
+    [
+      "10_Reference/tech-learning/architecture/layered-architecture",
+      12
+    ],
+    [
+      "10_Reference/tech-learning/concepts/circuit-breaker",
+      11
+    ],
+    [
+      "10_Reference/tech-learning/concepts/rate-limiting",
+      11
+    ],
+    [
+      "10_Reference/reading/notes/道氏理论-笔记",
+      11
+    ],
+    [
+      "10_Reference/reading/notes/周期定位-笔记",
+      11
+    ]
+  ],
+  "orphan_count": 193,
+  "orphan_by_type": {
+    "actions": 1,
+    "concepts": 1,
+    "data-sources": 8,
+    "dragon-tiger": 41,
+    "events": 13,
+    "indices": 3,
+    "industries": 5,
+    "logic": 10,
+    "reports": 33,
+    "specs": 76,
+    "stocks": 2
+  }
+}

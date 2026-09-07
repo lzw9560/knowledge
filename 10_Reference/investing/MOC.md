@@ -166,6 +166,27 @@ LIMIT 10
 | 📡 数据源 | [[data-sources/]] | 外部数据源，对应 `ARCHITECTURE` 数据流 |
 | 🤖 AI 角色 | [[agents/]] | trading-agents 的 7 Analyst（区别于 analysts 真人） |
 
+
+<!-- index 入边段 -->
+> 各类型 index.md 入边——确保每个类型索引页至少有 1 个入边。
+
+- [[actions/index]]
+- [[agents/index]]
+- [[analysts/index]]
+- [[concepts/index]]
+- [[data-sources/index]]
+- [[dragon-tiger/index]]
+- [[events/index]]
+- [[indices/index]]
+- [[industries/index]]
+- [[logic/index]]
+- [[metrics/index]]
+- [[reports/index]]
+- [[specs/index]]
+- [[stocks/index]]
+- [[strategies/index]]
+- [[valuations/index]]
+
 ### 各类型实体计数（Dataview 动态）
 
 ```dataview

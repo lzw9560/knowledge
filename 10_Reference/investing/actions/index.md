@@ -35,9 +35,14 @@ LIMIT 50
 
 ## 实体清单（入边）
 
-> 本段手工列出实体以建立入边链接（Dataview 表格不计入边）。
+> 本段列出该类型所有实体以建立入边链接（Dataview 表格不计入边）。
 
+- [[actions/approve-entity]]
 - [[actions/auto-link-report]]
+- [[actions/promote-from-inbox]]
+- [[actions/rename-entity]]
+- [[actions/sync-from-source]]
+
 
 ---
 
