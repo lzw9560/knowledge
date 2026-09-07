@@ -54,6 +54,6 @@ source: ARCHITECTURE.md
 
 ## 🔧 技术栈
 
-- 🔧 [[../../tech-learning/concepts/circuit-breaker|熔断器]] — 研报接口采集加熔断
-- 🔧 [[../../tech-learning/concepts/rate-limiting|限流]] — 共用 em_get QPS≤2 限流防封
-- 🔧 [[../../tech-learning/concepts/caching-strategy|缓存策略]] — 研报数据低频更新，入缓存降低请求
+- 🔧 [[tech-learning/concepts/circuit-breaker|熔断器]] — 研报接口采集加熔断
+- 🔧 [[tech-learning/concepts/rate-limiting|限流]] — 共用 em_get QPS≤2 限流防封
+- 🔧 [[tech-learning/concepts/caching-strategy|缓存策略]] — 研报数据低频更新，入缓存降低请求

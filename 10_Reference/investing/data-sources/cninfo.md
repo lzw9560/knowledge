@@ -53,6 +53,6 @@ source: ARCHITECTURE.md
 
 ## 🔧 技术栈
 
-- 🔧 [[../../tech-learning/concepts/graceful-degradation|优雅降级]] — 巨潮互动易无降级，失败标灰
-- 🔧 [[../../tech-learning/concepts/data-contract|数据契约]] — 互动易数据由契约层统一形状
-- 🔧 [[../../tech-learning/concepts/caching-strategy|缓存策略]] — 低频数据入缓存
+- 🔧 [[tech-learning/concepts/graceful-degradation|优雅降级]] — 巨潮互动易无降级，失败标灰
+- 🔧 [[tech-learning/concepts/data-contract|数据契约]] — 互动易数据由契约层统一形状
+- 🔧 [[tech-learning/concepts/caching-strategy|缓存策略]] — 低频数据入缓存

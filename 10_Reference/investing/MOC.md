@@ -312,7 +312,7 @@ SORT pe_ttm ASC
 
 ## 🔗 关联子区
 
-- [[../market_sentiment/DASHBOARD]] — 市场情绪追踪（每日 pre/mid/post 报告 + z-score 温度）
+- [[market_sentiment/DASHBOARD]] — 市场情绪追踪（每日 pre/mid/post 报告 + z-score 温度）
 - 战法卡有"适用天气：阴天"，market_sentiment 有温度 Z 值——但定义"阴天 = 哪个 Z 区间"的逻辑待建（见 [[logic/战法天气映射]]）
 
 ### 关联项目（ora-2 方案 D 纳入的外部投研项目）
@@ -333,7 +333,7 @@ SORT pe_ttm ASC
 ### 已建链接
 
 - [[strategies/dragon_head]] §方法论链接 — 「板块轮动识别龙头」↔ 时间序列状态识别（🚧 待建）
-- [[../../meta/four-construct-ontology]] — 四构件本体方法论（领域无关模板）
+- [[meta/four-construct-ontology]] — 四构件本体方法论（领域无关模板）
 
 ### 待建领域
 

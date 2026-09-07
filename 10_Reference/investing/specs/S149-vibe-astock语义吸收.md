@@ -50,6 +50,6 @@ source: specs/README.md
 
 ## 🔗 技术参考
 
-- 🔧 [[../../tech-learning/concepts/data-contract|数据契约]] — 语义吸收即把裸 dict + 魔法字符串吸收为 Pydantic 契约模型
-- 🔧 [[../../tech-learning/frameworks/pydantic|Pydantic]] — 4 阶段框架用 Pydantic 做形状统一
-- 🏗️ [[../../tech-learning/architecture/layered-architecture|分层架构]] — 吸收过程遵循分层，不跨层泄漏
+- 🔧 [[tech-learning/concepts/data-contract|数据契约]] — 语义吸收即把裸 dict + 魔法字符串吸收为 Pydantic 契约模型
+- 🔧 [[tech-learning/frameworks/pydantic|Pydantic]] — 4 阶段框架用 Pydantic 做形状统一
+- 🏗️ [[tech-learning/architecture/layered-architecture|分层架构]] — 吸收过程遵循分层，不跨层泄漏

@@ -55,6 +55,6 @@ source: ARCHITECTURE.md
 
 ## 🔧 技术栈
 
-- 🔧 [[../../tech-learning/concepts/graceful-degradation|优雅降级]] — 108 源单源失败不拖垮整体，聚合层容错
-- 🔧 [[../../tech-learning/concepts/circuit-breaker|熔断器]] — 单源连续失败可加熔断
-- 🔧 [[../../tech-learning/concepts/caching-strategy|缓存策略]] — 资讯入缓存降低重复抓取
+- 🔧 [[tech-learning/concepts/graceful-degradation|优雅降级]] — 108 源单源失败不拖垮整体，聚合层容错
+- 🔧 [[tech-learning/concepts/circuit-breaker|熔断器]] — 单源连续失败可加熔断
+- 🔧 [[tech-learning/concepts/caching-strategy|缓存策略]] — 资讯入缓存降低重复抓取

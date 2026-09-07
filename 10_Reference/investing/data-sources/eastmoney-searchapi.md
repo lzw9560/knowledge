@@ -54,6 +54,6 @@ source: ARCHITECTURE.md
 
 ## 🔧 技术栈
 
-- 🔧 [[../../tech-learning/concepts/circuit-breaker|熔断器]] — 个股新闻接口采集加熔断
-- 🔧 [[../../tech-learning/concepts/rate-limiting|限流]] — 共用 em_get QPS≤2 限流
-- 🔧 [[../../tech-learning/concepts/graceful-degradation|优雅降级]] — 新闻缺失时标灰不臆造
+- 🔧 [[tech-learning/concepts/circuit-breaker|熔断器]] — 个股新闻接口采集加熔断
+- 🔧 [[tech-learning/concepts/rate-limiting|限流]] — 共用 em_get QPS≤2 限流
+- 🔧 [[tech-learning/concepts/graceful-degradation|优雅降级]] — 新闻缺失时标灰不臆造

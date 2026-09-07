@@ -56,6 +56,6 @@ source: ARCHITECTURE.md
 
 ## 🔧 技术栈
 
-- 🔧 [[../../tech-learning/tools/uv|uv 包管理]] — mootdx Python 包由 uv 管理锁版本
-- 🔧 [[../../tech-learning/concepts/graceful-degradation|优雅降级]] — 惰性导入，缺失时 DependencyMissing 优雅报错
-- 🔧 [[../../tech-learning/concepts/data-contract|数据契约]] — TCP 7709 返回数据由契约层统一形状
+- 🔧 [[tech-learning/tools/uv|uv 包管理]] — mootdx Python 包由 uv 管理锁版本
+- 🔧 [[tech-learning/concepts/graceful-degradation|优雅降级]] — 惰性导入，缺失时 DependencyMissing 优雅报错
+- 🔧 [[tech-learning/concepts/data-contract|数据契约]] — TCP 7709 返回数据由契约层统一形状

@@ -22,24 +22,24 @@
     "action": 4
   },
   "stub_count": 43,
-  "llm_generated_count": 576,
+  "llm_generated_count": 948,
   "confidence_distribution": {
     "medium": 1027,
     "high": 1422
   },
   "no_confidence_count": 41,
-  "broken_links": 244,
+  "broken_links": 242,
   "broken_links_top10": [
     [
-      "10_Reference/tech-learning/concepts/graceful-degradation",
+      "../tech-learning/concepts/graceful-degradation",
       22
     ],
     [
-      "10_Reference/tech-learning/concepts/caching-strategy",
+      "../tech-learning/concepts/caching-strategy",
       21
     ],
     [
-      "10_Reference/tech-learning/concepts/data-contract",
+      "../tech-learning/concepts/data-contract",
       20
     ],
     [
@@ -55,19 +55,19 @@
       16
     ],
     [
-      "10_Reference/reading/notes/均值回归-笔记",
+      "../reading/notes/均值回归-笔记",
       16
     ],
     [
-      "10_Reference/reading/notes/趋势跟踪-笔记",
+      "../reading/notes/趋势跟踪-笔记",
       14
     ],
     [
-      "10_Reference/tech-learning/architecture/layered-architecture",
+      "../tech-learning/architecture/layered-architecture",
       12
     ],
     [
-      "10_Reference/tech-learning/concepts/circuit-breaker",
+      "../tech-learning/concepts/circuit-breaker",
       11
     ]
   ],
