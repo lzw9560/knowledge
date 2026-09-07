@@ -41,8 +41,24 @@ jobs:
         working-directory: .quartz
         run: npx quartz build -d .. -o public
 
-      - name: Add .nojekyll
-        run: touch .quartz/public/.nojekyll
+      - name: Add .nojekyll and index redirect
+        run: |
+          touch .quartz/public/.nojekyll
+          # Quartz 不生成根 index.html（首页是 🏠-首页.html），加重定向
+          cat > .quartz/public/index.html << 'EOF'
+          <!DOCTYPE html>
+          <html>
+          <head>
+          <meta charset="utf-8">
+          <meta http-equiv="refresh" content="0; url=🏠-首页">
+          <title>投研知识图谱</title>
+          <script>window.location.href='🏠-首页';</script>
+          </head>
+          <body>
+          <p>跳转中... <a href="🏠-首页">投研知识图谱</a></p>
+          </body>
+          </html>
+          EOF
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
