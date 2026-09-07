@@ -47,3 +47,9 @@ source: specs/README.md
 ## 🔗 关联
 
 - **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个
+
+## 🔗 技术参考
+
+- 🔧 [[10_Reference/tech-learning/concepts/data-contract|数据契约]] — 语义吸收即把裸 dict + 魔法字符串吸收为 Pydantic 契约模型
+- 🔧 [[10_Reference/tech-learning/frameworks/pydantic|Pydantic]] — 4 阶段框架用 Pydantic 做形状统一
+- 🏗️ [[10_Reference/tech-learning/architecture/layered-architecture|分层架构]] — 吸收过程遵循分层，不跨层泄漏

@@ -255,6 +255,8 @@ class VaultAudit:
         self.findings: list[dict] = []
         self.report_data: dict = {}
         self.quiet = False
+        # 上次审查的指标（用于趋势对比），None=无对比基准
+        self.prev_metrics: dict | None = None
 
     # ── 收集阶段 ──────────────────────────────────────────────────────
 
@@ -372,7 +374,11 @@ class VaultAudit:
         return result
 
     def check_orphan(self) -> dict:
-        """3. orphan_check — 未被任何 [[链接]] 引用的孤立文件"""
+        """3. orphan_check — 未被任何 [[链接]] 引用的孤立文件
+
+        例外：status: stub 的实体允许孤立（stub 是待填充占位，本就未建关系），
+        不报 orphan，避免把"计划中待填充"误判为"信息孤岛"。
+        """
         orphans = []
         for p in self.all_files:
             rel = p.relative_to(self.investing).as_posix()
@@ -380,10 +386,14 @@ class VaultAudit:
                 continue  # 结构文件不算孤立
             full_rel = p.relative_to(self.vault_root).as_posix()
             if self.inbound_count.get(full_rel, 0) == 0:
+                fm = self.file_frontmatter.get(full_rel, {})
+                # stub 实体允许孤立（待填充占位，未建关系属正常状态）
+                if str(fm.get("status", "")).strip().lower() == "stub":
+                    continue
                 # 例外：MOC.md / index.md 本身是导航枢纽，不算 orphan
                 orphans.append({
                     "path": rel,
-                    "type": self.file_frontmatter.get(full_rel, {}).get("type", "?"),
+                    "type": fm.get("type", "?"),
                 })
                 self.findings.append({
                     "check": "orphan_check",
@@ -443,6 +453,10 @@ class VaultAudit:
             t = fm.get("type")
             if not t:
                 continue  # 无 type 的不查 schema
+            # stub 实体跳过字段检查——stub 本就是待填充占位，字段不完整属正常状态，
+            # 报其缺字段会制造噪声（详见 logic/stub-lifecycle.md）
+            if str(fm.get("status", "")).strip().lower() == "stub":
+                continue
             template_stem = TYPE_TO_TEMPLATE.get(t)
             if not template_stem:
                 continue  # 无对应模板
@@ -590,6 +604,77 @@ class VaultAudit:
         return result
 
     # ── 报告生成 ──────────────────────────────────────────────────────
+
+    def _kpi_status(self, value: int, threshold: int, strict: bool = False) -> str:
+        """KPI 状态判定：🟢 达标 / 🟡 警戒（阈值<值≤2×阈值）/ 🔴 超标（>2×阈值）。
+        strict=True 时（如 duplicate）任一非零即 🔴。"""
+        if strict:
+            return "🔴" if value > 0 else "🟢"
+        if value <= threshold:
+            return "🟢"
+        elif value <= threshold * 2:
+            return "🟡"
+        else:
+            return "🔴"
+
+    def load_prev_metrics(self) -> dict | None:
+        """加载上次审查报告的指标，用于本次趋势对比。
+
+        扫描 reviews/ 下 *-ci-audit.md（排除当前日期），取日期最大的，
+        从 frontmatter 读 audit_date + findings_count + critical/high/medium/low，
+        从 checks 段读各项 count。
+        """
+        reviews_path = self.vault_root / REVIEWS_DIR
+        if not reviews_path.is_dir():
+            return None
+        today = datetime.now().strftime("%Y-%m-%d")
+        candidates = []
+        for p in reviews_path.glob("*-ci-audit.md"):
+            if p.name.startswith(today):
+                continue  # 跳过今天的（可能是本次覆盖前）
+            try:
+                text = p.read_text(encoding="utf-8")
+            except (UnicodeDecodeError, OSError):
+                continue
+            fm = parse_frontmatter(text)
+            audit_date = fm.get("audit_date", "")
+            if audit_date:
+                candidates.append((audit_date, p, fm, text))
+        if not candidates:
+            return None
+        # 取日期最大
+        candidates.sort(key=lambda x: x[0], reverse=True)
+        _, _, fm, text = candidates[0]
+        # 从 frontmatter 直接取汇总（CI 报告会写 critical/high/medium/low）
+        metrics = {
+            "audit_date": fm.get("audit_date", "?"),
+            "断链数": self._extract_count_from_report(text, "broken_link"),
+            "孤立实体数": self._extract_count_from_report(text, "orphan_check"),
+            "重复实体数": self._extract_count_from_report(text, "duplicate_check"),
+            "过期实体数": self._extract_count_from_report(text, "stale_check"),
+            "schema 偏差数": self._extract_count_from_report(text, "schema_infer"),
+            "实体总数": self._extract_count_from_report(text, "entity_total"),
+        }
+        return metrics
+
+    def _extract_count_from_report(self, text: str, key: str) -> int | None:
+        """从报告 markdown 文本提取某指标的数值。返回 None 表示未找到。
+        匹配模式：'断链数：N' / '无入边实体数：N' / '实体总数：N' 等。
+        """
+        # 按中文冒号或英文冒号匹配，key 后跟数字
+        patterns = {
+            "broken_link": r"断链数[：:]\s*(\d+)",
+            "orphan_check": r"(?:无入边实体数|孤立实体数)[：:]\s*(\d+)",
+            "duplicate_check": r"重复\s*(?:code|实体)\s*数[：:]\s*(\d+)",
+            "stale_check": r"90\+\s*天未更新实体数[：:]\s*(\d+)",
+            "schema_infer": r"字段缺失的实体数[：:]\s*(\d+)",
+            "entity_total": r"实体总数[：:]\s*(\d+)",
+        }
+        pat = patterns.get(key)
+        if not pat:
+            return None
+        m = re.search(pat, text)
+        return int(m.group(1)) if m else None
 
     def generate_findings_summary(self) -> dict:
         """按 severity 汇总 findings"""
@@ -766,6 +851,92 @@ class VaultAudit:
             lines.append("1. 图谱健康，无需修复。")
         lines.append("")
 
+        # 修复跟踪（逐条问题带 status: open）
+        lines.append("## 修复跟踪")
+        lines.append("")
+        lines.append("| # | 检查 | 严重级 | 问题描述 | status | 负责人 | 备注 |")
+        lines.append("|---|---|---|---|---|---|---|")
+        if not self.findings:
+            lines.append("| 1 | — | — | 无问题 | resolved | ci-bot | 图谱健康 |")
+        else:
+            for i, f in enumerate(self.findings, 1):
+                msg = f["message"].replace("|", "\\|")
+                if len(msg) > 80:
+                    msg = msg[:77] + "..."
+                lines.append(f"| {i} | {f['check']} | {f['severity']} | {msg} | open |  | 待处置 |")
+        lines.append("")
+
+        # KPI 仪表盘
+        lines.append("## KPI 仪表盘")
+        lines.append("")
+        bl = self.report_data.get("broken_link", {}).get("count", 0)
+        oc = self.report_data.get("orphan_check", {}).get("count", 0)
+        dc = self.report_data.get("duplicate_check", {}).get("count", 0)
+        sc = self.report_data.get("stale_check", {}).get("count", 0)
+        si = self.report_data.get("schema_infer", {}).get("count", 0)
+        lines.append("| KPI | 本次值 | 阈值 | 状态 |")
+        lines.append("|---|---|---|---|")
+        lines.append(f"| 断链数（broken_link） | {bl} | ≤ 3 | {self._kpi_status(bl, 3, strict=False)} |")
+        lines.append(f"| 孤立实体数（orphan_check） | {oc} | ≤ 5 | {self._kpi_status(oc, 5, strict=False)} |")
+        lines.append(f"| 重复实体数（duplicate_check） | {dc} | 0 | {self._kpi_status(dc, 0, strict=True)} |")
+        lines.append(f"| 过期实体数（stale_check，90+ 天） | {sc} | ≤ 10 | {self._kpi_status(sc, 10, strict=False)} |")
+        lines.append(f"| schema 偏差数（schema_infer） | {si} | ≤ 5 | {self._kpi_status(si, 5, strict=False)} |")
+        lines.append("")
+        lines.append("> 状态判定：值 ≤ 阈值 🟢；阈值 < 值 ≤ 2×阈值 🟡；> 2×阈值 🔴。duplicate 严格 0 容忍（任一非零即 🔴）。")
+        lines.append("")
+
+        # 趋势对比（与上次审查对比）
+        lines.append("## 趋势对比")
+        lines.append("")
+        prev = self.prev_metrics
+        if prev is None:
+            lines.append("| KPI | 上次 | 本次 | 变化 | 趋势 |")
+            lines.append("|---|---|---|---|---|")
+            lines.append(f"| 断链数 | — | {bl} | — | 首次 |")
+            lines.append(f"| 孤立实体数 | — | {oc} | — | 首次 |")
+            lines.append(f"| 重复实体数 | — | {dc} | — | 首次 |")
+            lines.append(f"| 过期实体数 | — | {sc} | — | 首次 |")
+            lines.append(f"| schema 偏差数 | — | {si} | — | 首次 |")
+            lines.append(f"| 实体总数 | — | {s.get('entity_total', 0)} | — | 首次 |")
+            lines.append("")
+            lines.append("> 首次审查，无对比基准。下次审查将自动加载本次数据作对比。")
+        else:
+            def _trend(cur, prv):
+                if prv is None or prv == cur:
+                    return "→", "持平"
+                delta = cur - prv
+                arrow = "↑" if delta > 0 else "↓"
+                # 断链/孤立/重复/过期/schema 偏差：下降为改善；实体总数：上升为增长
+                return arrow, "改善" if delta < 0 else "恶化"
+            lines.append(f"| KPI | 上次（{prev.get('audit_date', '?')}） | 本次 | 变化 | 趋势 |")
+            lines.append("|---|---|---|---|---|")
+            for label, cur_val in [
+                ("断链数", bl), ("孤立实体数", oc), ("重复实体数", dc),
+                ("过期实体数", sc), ("schema 偏差数", si),
+            ]:
+                prv_val = prev.get(label)
+                if prv_val is not None:
+                    arrow, note = _trend(cur_val, prv_val)
+                    lines.append(f"| {label} | {prv_val} | {cur_val} | {arrow} | {note} |")
+                else:
+                    lines.append(f"| {label} | — | {cur_val} | — | 首次 |")
+            # 实体总数特殊：上升为增长（非恶化）
+            prv_total = prev.get("实体总数")
+            cur_total = s.get("entity_total", 0)
+            if prv_total is not None:
+                delta = cur_total - prv_total
+                if delta == 0:
+                    lines.append(f"| 实体总数 | {prv_total} | {cur_total} | → | 持平 |")
+                elif delta > 0:
+                    lines.append(f"| 实体总数 | {prv_total} | {cur_total} | ↑ | 增长 |")
+                else:
+                    lines.append(f"| 实体总数 | {prv_total} | {cur_total} | ↓ | 缩减 |")
+            else:
+                lines.append(f"| 实体总数 | — | {cur_total} | — | 首次 |")
+            lines.append("")
+            lines.append("> 趋势判读：↓ 下降为改善，↑ 上升为恶化，→ 持平为稳定（实体总数除外，上升为增长）。")
+        lines.append("")
+
         # 跟踪
         lines.append("## 跟踪")
         lines.append("")
@@ -795,6 +966,8 @@ class VaultAudit:
         """跑全部 8 项检查，返回退出码（1=有 critical，0=无）"""
         self.collect_files()
         self.collect_links()
+        # 加载上次审查指标用于趋势对比（在生成报告前）
+        self.prev_metrics = self.load_prev_metrics()
         self.check_summary()
         self.check_coverage()
         self.check_orphan()

@@ -1,12 +1,21 @@
+---
+draft: false
+description: 投研知识图谱入口——将代码实体（Pydantic 契约模型）、spec 决策、战法、数据源链接成可导航的语义层。16 实体类，2400+ 实体，12 战法卡。
+---
+
 # Vibe-Research 投研知识图谱
 
+> [!abstract] 关于本图谱
 > 这个 vault 是 Vibe-Research 项目的**语义层**，把代码里的实体（Pydantic 契约模型）、spec 决策、战法、数据源链接成可导航的知识图谱。代码层管"数据怎么流"，本 vault 管"知识怎么连"——个股属于哪个行业、被哪些研报覆盖、触发哪张战法、数据从哪个源来，都在这里通过 `[[]]` 双链和 Dataview 查询织成网。
+
+> [!tip] 🔍 快速搜索
+> 在特定类型里找内容？按 `Ctrl/Cmd + K` 打开搜索，支持按标题/正文/标签匹配。下方「热门查询」段直接展示 5 个最常用查询的结果。
 
 ---
 
 ## 📊 图谱健康摘要
 
-> 实时统计——总实体数、各类型分布、最近更新、孤立节点。
+> [!summary] 实时统计——总实体数、各类型分布、最近更新、孤立节点。
 
 ```dataview
 TABLE WITHOUT ID
@@ -40,42 +49,26 @@ SORT type ASC
 
 ---
 
-## 🗂 实体类导航（本体构件 1：实体）
+## 🕐 最近更新
 
-> 四构件本体模型蒸馏自 nano-ontoprompt。构件 1-2 为静态层，3-4 为动态层。
-
-| 实体类 | 文件夹 | 说明 |
-|---|---|---|
-| 📈 股票 | [[stocks/]] | A 股/美股/港股个股，对应 `Quote` + `CompanyInfo` |
-| 🏭 行业板块 | [[industries/]] | 证监会行业分类，对应 `IndustrySector` |
-| 💡 概念板块 | [[concepts/]] | 概念题材板块，对应 `ConceptBlock` + `Sector` |
-| 📊 指数 | [[indices/]] | 沪深300/中证500等宽基与行业指数 |
-| 📰 研报 | [[reports/]] | 机构研报，对应 `Report` 契约 |
-| 👤 分析师 | [[analysts/]] | 研报作者，对应 `Report.researcher` |
-| 💰 财务指标 | [[metrics/]] | 营收/ROE/毛利率等，对应 `Financials` + `FinancialPeriod` |
-| 📈 估值 | [[valuations/]] | PE/PB/PEG/分位，对应 `Valuation` + `ValuationPercentile` |
-| 🐉 龙虎榜 | [[dragon-tiger/]] | 游资席位，对应 `Seat` + `BillboardDetail` + `DragonTiger` |
-| ⚡ 事件 | [[events/]] | 新闻/公告/涨停，对应 `News` + `Announcement` + `ZTPoolItem` |
-| ⚔️ 战法 | [[strategies/]] | 战法卡（从 `backend/strategies/cards/` 导入） |
-| 📋 项目决策 | [[specs/]] | SDD spec 决策实体，对应 `specs/` 目录 |
-| 📡 数据源 | [[data-sources/]] | 外部数据源，对应 `ARCHITECTURE` 数据流 |
-| 🤖 AI 角色 | [[agents/]] | trading-agents 的 7 Analyst（区别于 analysts 真人） |
-
-### 各类型实体计数（Dataview 动态）
+> [!note] 最近 7 天修改的 10 个文件——追踪图谱最新活动。侧边栏「最近更新」组件同步显示。
 
 ```dataview
-TABLE length(rows) AS "实体数"
+TABLE WITHOUT ID
+  file.link AS "文件",
+  type AS "类型",
+  dateformat(file.mtime, "MM-dd HH:mm") AS "修改时间"
 FROM "10_Reference/investing"
-WHERE type != null AND file.name != "index" AND file.name != "MOC" AND file.name != "README"
-GROUP BY type
-SORT type ASC
+WHERE type != null AND file.mtime >= date(today) - dur(7 days)
+SORT file.mtime DESC
+LIMIT 10
 ```
 
 ---
 
-## 🔍 快速查询
+## 🔥 热门查询
 
-> 5 个最常用的 Dataview 查询模板——复制粘贴即可用。
+> [!example] 5 个最常用的查询——直接展示结果，复制查询代码到其他笔记即可复用。
 
 ### 1. 白酒行业股票 PE 排序
 
@@ -148,19 +141,35 @@ LIMIT 10
 
 ---
 
-## 🕐 最近更新
+## 🗂 实体类导航（本体构件 1：实体）
 
-> 最近修改的 10 个文件——追踪图谱最新活动。
+> 四构件本体模型蒸馏自 nano-ontoprompt。构件 1-2 为静态层，3-4 为动态层。
+
+| 实体类 | 文件夹 | 说明 |
+|---|---|---|
+| 📈 股票 | [[stocks/]] | A 股/美股/港股个股，对应 `Quote` + `CompanyInfo` |
+| 🏭 行业板块 | [[industries/]] | 证监会行业分类，对应 `IndustrySector` |
+| 💡 概念板块 | [[concepts/]] | 概念题材板块，对应 `ConceptBlock` + `Sector` |
+| 📊 指数 | [[indices/]] | 沪深300/中证500等宽基与行业指数 |
+| 📰 研报 | [[reports/]] | 机构研报，对应 `Report` 契约 |
+| 👤 分析师 | [[analysts/]] | 研报作者，对应 `Report.researcher` |
+| 💰 财务指标 | [[metrics/]] | 营收/ROE/毛利率等，对应 `Financials` + `FinancialPeriod` |
+| 📈 估值 | [[valuations/]] | PE/PB/PEG/分位，对应 `Valuation` + `ValuationPercentile` |
+| 🐉 龙虎榜 | [[dragon-tiger/]] | 游资席位，对应 `Seat` + `BillboardDetail` + `DragonTiger` |
+| ⚡ 事件 | [[events/]] | 新闻/公告/涨停，对应 `News` + `Announcement` + `ZTPoolItem` |
+| ⚔️ 战法 | [[strategies/]] | 战法卡（从 `backend/strategies/cards/` 导入） |
+| 📋 项目决策 | [[specs/]] | SDD spec 决策实体，对应 `specs/` 目录 |
+| 📡 数据源 | [[data-sources/]] | 外部数据源，对应 `ARCHITECTURE` 数据流 |
+| 🤖 AI 角色 | [[agents/]] | trading-agents 的 7 Analyst（区别于 analysts 真人） |
+
+### 各类型实体计数（Dataview 动态）
 
 ```dataview
-TABLE WITHOUT ID
-  file.link AS "文件",
-  type AS "类型",
-  file.mtime AS "修改时间"
+TABLE length(rows) AS "实体数"
 FROM "10_Reference/investing"
-WHERE type != null
-SORT file.mtime DESC
-LIMIT 10
+WHERE type != null AND file.name != "index" AND file.name != "MOC" AND file.name != "README"
+GROUP BY type
+SORT type ASC
 ```
 
 ---

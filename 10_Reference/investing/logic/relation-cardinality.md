@@ -1,0 +1,84 @@
+---
+type: logic
+rule_id: RELATION-CARDINALITY-001
+rule_type: 校验规则
+target_entity: stocks, industries, concepts
+severity: medium
+condition: 实体间关系基数违反约束（如 1:1 被建多份、N:1 反向建多对一）
+action_on_violation: 标记 data_suspect + 触发关系审查工单
+source: ora-3 §2（图谱关系建模——基数约束是关系合法性的基础）
+created: 2026-09-07
+confidence: high
+---
+
+> [!info] ⚙️ 规则
+> **规则**：`RELATION-CARDINALITY-001`  **类型**：校验规则
+> **严重级**：medium  **适用实体**：stocks, industries, concepts
+>
+> **违反处置**：`标记 data_suspect + 触发关系审查工单`
+
+## 📋 规则定义
+
+- **类型**：`校验规则`
+- **适用实体**：stocks, industries, concepts
+- **严重级**：`medium`
+- **条件**：`实体间关系基数违反下表约束`
+
+## ⚡ 触发条件
+
+实体间关系的实际基数超出下表允许范围。基数约束表：
+
+| 关系 | 基数 | 说明 |
+|---|---|---|
+| stock → industry | N:1 | 一只股票属一个行业；行业含多只股票 |
+| industry → stock | 1:N | 行业反向含多只股票 |
+| stock → concept | N:M | 一只股票属多个概念；一个概念含多只股票 |
+| concept → stock | M:N | 概念反向含多只股票 |
+| stock → metric | 1:N（时序） | 一只股票有多个时点指标（按 date 区分） |
+| stock → valuation | 1:N（时序） | 一只股票有多个时点估值 |
+| stock → report | N:M | 一只股票被多份研报覆盖；一份研报覆盖多只股票 |
+| stock → analyst | N:M | 一只股票被多位分析师覆盖；一位分析师覆盖多只股票 |
+| report → analyst | N:1 | 一份研报有唯一署名分析师（主笔） |
+
+## 🔧 执行逻辑
+
+```
+对每对 (entity_a, entity_b) 的关系类型：
+  actual_cardinality = count_links(a → b)  # a 的出边指向 b 的数量
+  expected = CARDINALITY_TABLE[(type_a, type_b)]
+  if violates(actual_cardinality, expected):
+    标记 a.frontmatter: + data_suspect: true
+    触发关系审查工单（.scratch/relation-cardinality/）
+
+violates 判定：
+  N:1 → a 指向多个 b（a 的同类型出边 > 1）→ 违反（除非时序字段 date 区分）
+  1:1 → a 指向多个 b → 违反
+  N:M → 永不违反（多对多无上限）
+```
+
+Dataview 查询（stock → industry 多于 1 个的嫌疑）：
+
+```dataview
+TABLE file.name AS "股票", length(rows) AS "行业数"
+FROM "10_Reference/investing/stocks"
+WHERE industry != null
+GROUP BY file.link
+HAVING length(rows) > 1
+```
+
+## ⚠️ 违反处置
+
+| 违反 | 严重级 | 处置 |
+|---|---|---|
+| stock 指向多个 industry（N:1 违反） | medium | 标 data_suspect + 审查选主行业 |
+| 时序实体（metric/valuation）未带 date | high | 补 date 字段（否则无法区分时点） |
+| N:M 关系建为 1:1 | low | 改建为 N:M（多对多无上限） |
+| 跨类型共享 code 误判为 1:1 违反 | low | 已豁免（code 跨类型是正常关联，见 entity-merge） |
+
+## 🔗 关联
+
+- **触发动作**：[[actions/]]
+- **相关规则**：[[logic/duplicate-merge]]（合并去重避免虚假多对一）
+- **约束实体**：[[stocks/]] [[industries/]] [[concepts/]]
+- **来源决策**：[[specs/]]
+- **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个

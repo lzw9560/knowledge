@@ -157,7 +157,7 @@ plugins:
       localGraph:
         drag: true
         zoom: true
-        depth: 1
+        depth: 2
         scale: 0.8
         repelForce: 1.5
         centerForce: 0.2
@@ -171,7 +171,7 @@ plugins:
       globalGraph:
         drag: true
         zoom: true
-        depth: 1
+        depth: 2
         scale: 0.4
         repelForce: 2
         centerForce: 0.05
@@ -259,7 +259,16 @@ plugins:
       position: footer
       priority: 50
   - source: "@quartz-community/recent-notes"
-    enabled: false
+    enabled: true
+    options:
+      title: 最近更新
+      limit: 5
+      showTags: false
+      hideTagPages: true
+      hideFolderPages: true
+    layout:
+      position: right
+      priority: 40
   - source: "@quartz-community/spacer"
     enabled: true
     options: {}

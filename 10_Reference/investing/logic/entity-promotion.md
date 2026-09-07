@@ -1,0 +1,82 @@
+---
+type: logic
+rule_id: ENTITY-PROMOTION-001
+rule_type: 状态机
+target_entity: inbox_item
+severity: high
+condition: inbox 实体 quality_score ≥ 60 → 自动晋级到正式区；< 60 留 inbox
+action_on_violation: quality_score ≥ 60 仍滞留 inbox > 7 天 → 标滞留告警；未评 quality_score 直接 mv → 报 high
+source: ora-3 §1.3（inbox stub 通道）+ AGENTS.md 工程底线（不臆造数据，质量门是第一道防线）
+created: 2026-09-07
+confidence: high
+---
+
+> [!info] ⚙️ 规则
+> **规则**：`ENTITY-PROMOTION-001`  **类型**：状态机
+> **严重级**：high  **适用实体**：`inbox_item`
+>
+> **违反处置**：`quality_score ≥ 60 仍滞留 inbox > 7 天 → 标滞留告警；未评 quality_score 直接 mv → 报 high`
+
+## 📋 规则定义
+
+- **类型**：`状态机`
+- **适用实体**：`inbox_item`（inbox 下所有待审实体）
+- **严重级**：`high`
+- **条件**：`quality_score >= 60`
+
+## ⚡ 触发条件
+
+inbox 实体的 `quality_score` 字段更新后触发评估：
+- `quality_score >= 60` → 满足晋级阈值，可转正到正式区
+- `quality_score < 60` → 不达标，留 inbox 继续补全或标 rejected
+- `quality_score` 缺失/为 0 → 待评，不晋级
+
+阈值 60 的依据：质量四维度（完整度 30% + 一致性 25% + 链接度 25% + 溯源 20%）中，缺任一关键维度都会跌破 60。
+
+## 🔧 执行逻辑
+
+```
+对每个 inbox/<entity>.md：
+  fm = frontmatter
+  if fm.quality_score is None or fm.quality_score < 60:
+    continue  # 留 inbox
+  if fm.quality_score >= 60:
+    target_folder = TYPE_TO_FOLDER[fm.entity_type]  # stock → stocks/, report → reports/
+    mv inbox/<entity>.md → <target_folder>/<entity>.md
+    更新 frontmatter: + approved_date: <today>
+    记录晋级日志（reviews/inbox-promotion-<date>.md）
+```
+
+批量审核命令（评分后批量晋级）：
+
+```bash
+python3 scripts/review_inbox.py --auto   # 评 quality_score + 自动 mv 达标的
+python3 scripts/review_inbox.py --dry-run # 只评不迁，预览
+```
+
+Dataview 查询（待晋级实体——quality_score ≥ 60 但仍在 inbox）：
+
+```dataview
+TABLE entity_type AS "类型", quality_score AS "质量分", confidence AS "置信度"
+FROM "inbox"
+WHERE type = "inbox_item" AND quality_score >= 60
+SORT quality_score DESC
+```
+
+## ⚠️ 违反处置
+
+| 违反 | 严重级 | 处置 |
+|---|---|---|
+| quality_score ≥ 60 仍滞留 inbox > 7 天 | low | 标滞留告警，提醒处置 |
+| 未评 quality_score 直接 mv 到正式区 | high | 移回 inbox + 补评分 |
+| quality_score < 60 被 mv 到正式区 | high | 移回 inbox + 走补全流程 |
+| 晋级后未加 approved_date | low | 补 approved_date 字段 |
+
+## 🔗 关联
+
+- **触发动作**：[[actions/]]
+- **前置规则**：[[logic/LLM抽取质量门]]（抽取阶段打分）
+- **后置规则**：[[logic/entity-lifecycle]]（正式区生命周期）
+- **约束实体**：[[inbox/]]
+- **来源决策**：[[specs/]]
+- **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个
