@@ -6,11 +6,13 @@
 
 ## 实体类导航（本体构件 1：实体）
 
-| 实体类 | 文件夹 | 说明 |
-|---|---|---|
-| 项目 | [[active/]] | 进行中 |
-| 候选 | [[backlog/]] | 待启动 |
-| 归档 | [[archived/]] | 已结束 |
+| 实体类 | 文件夹 | 数量 | 说明 |
+|---|---|---|---|
+| 项目 | [[active/]] | 5 | 进行中 |
+| 候选 | [[backlog/]] | 2 | 待启动 |
+| 归档 | [[archived/]] | 1 | 已结束 |
+
+> 种子实体合计 8 个。
 
 ## 种子实体
 
@@ -18,6 +20,15 @@
 - [[active/vibe-research]] — Vibe-Research 私人投研助理（本知识图谱的宿主项目）
 - [[active/trading-agents]] — TradingAgents A 股深度特化 fork
 - [[active/knowledge-graph]] — 本知识图谱项目本身（元项目）
+- [[active/a-plate-sentinel]] — A-Plate-Sentinel 板块情绪哨兵
+- [[active/daily-stock-analysis]] — 每日股票分析
+
+### 待启动
+- [[backlog/quartz-site]] — Quartz 静态站点（刚部署）
+- [[backlog/wechat-bot]] — 微信 bot（代码就绪待配置）
+
+### 已归档
+- [[archived/vibe-research-bakup]] — Vibe-Research 备份仓（S006 重写后归档）
 
 ## 与投研的跨领域链接
 
