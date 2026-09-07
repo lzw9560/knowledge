@@ -185,4 +185,4 @@ created: YYYY-MM-DD
 - 周度报告：`reviews/YYYY-MM-DD-ci-audit.md`（CI 自动生成）
 - 工单目录：`.scratch/kg-audit/`（对齐 AGENTS.md issue tracker）
 - 规则来源：[[logic/broken-link-grading]] / [[logic/source-drift]] / [[logic/static-value-ban]]
-- 方法论：[[10_Reference/meta/four-construct-ontology]]（四构件填充度判定）
+- 方法论：[[../../meta/four-construct-ontology]]（四构件填充度判定）

@@ -55,6 +55,6 @@ source: ARCHITECTURE.md
 
 ## 🔧 技术栈
 
-- 🔧 [[10_Reference/tech-learning/concepts/circuit-breaker|熔断器]] — 涨停四池采集加熔断，连续失败快速失败
-- 🔧 [[10_Reference/tech-learning/concepts/rate-limiting|限流]] — 共用 em_get QPS≤2 限流防封
-- 🔧 [[10_Reference/tech-learning/concepts/graceful-degradation|优雅降级]] — push2ex 失败 → push2delay 降级
+- 🔧 [[../../tech-learning/concepts/circuit-breaker|熔断器]] — 涨停四池采集加熔断，连续失败快速失败
+- 🔧 [[../../tech-learning/concepts/rate-limiting|限流]] — 共用 em_get QPS≤2 限流防封
+- 🔧 [[../../tech-learning/concepts/graceful-degradation|优雅降级]] — push2ex 失败 → push2delay 降级

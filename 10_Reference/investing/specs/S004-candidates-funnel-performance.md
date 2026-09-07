@@ -48,6 +48,6 @@ source: specs/README.md
 
 ## 🔗 技术参考
 
-- 🔧 [[10_Reference/tech-learning/concepts/caching-strategy|缓存策略]] — 性能优化的核心手段：热点数据（行情/估值）入缓存降低 DB 压力
-- 🏗️ [[10_Reference/tech-learning/architecture/layered-architecture|分层架构]] — 漏斗性能优化在 service 与 repository 之间加缓存层
-- 🔧 [[10_Reference/tech-learning/concepts/graceful-degradation|优雅降级]] — 性能降级时的兜底处理
+- 🔧 [[../../tech-learning/concepts/caching-strategy|缓存策略]] — 性能优化的核心手段：热点数据（行情/估值）入缓存降低 DB 压力
+- 🏗️ [[../../tech-learning/architecture/layered-architecture|分层架构]] — 漏斗性能优化在 service 与 repository 之间加缓存层
+- 🔧 [[../../tech-learning/concepts/graceful-degradation|优雅降级]] — 性能降级时的兜底处理
