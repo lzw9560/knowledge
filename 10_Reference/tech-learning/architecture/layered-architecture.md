@@ -1,0 +1,49 @@
+---
+type: architecture
+name: 分层架构
+category: 架构模式
+created: 2026-09-07
+---
+
+# 分层架构
+
+## 类别
+- 架构模式（最经典的软件架构模式，1960s 起沿用）
+- 演进：三层架构 → N 层架构 → [[10_Reference/tech-learning/architecture/clean-architecture|清洁架构]] → 六边形架构
+
+## 核心特性
+- **单向依赖**：上层依赖下层，下层不感知上层（依赖方向自上而下）
+- **职责分离**：每层只负责一类关注点（presentation / business / data）
+- **跨层通信**：层间通过明确接口（DTO/Service 接口）通信，不泄漏层内实现
+- **可替换性**：下层实现可替换（如 DB 换 MongoDB），上层无感
+
+## 经典分层
+| 层 | 职责 | Vibe-Research 对应 |
+|---|---|---|
+| 表现层（Presentation） | 路由 / 序列化 / 鉴权 | `backend/routers/` |
+| 应用层（Application） | 用例编排 / 事务边界 | `backend/services/` |
+| 领域层（Domain） | 业务规则 / 实体 | `backend/domain/`（战法卡） |
+| 持久层（Persistence） | DB 访问 / ORM | `backend/repositories/` |
+
+## 与清洁架构的对比
+- 分层架构：上下依赖，层是横向切分
+- [[10_Reference/tech-learning/architecture/clean-architecture|清洁架构]]：同心圆分层，依赖方向由外向内——更强调"领域核心独立"
+- 二者本质同源：清洁架构是分层架构的"依赖反转"强化版
+
+## 在 Vibe-Research 中的使用
+- [[10_Reference/investing/specs/S006-系统重写纲领|S006 系统重写纲领]] — 重写遵循分层架构：routers → services → domain → repositories
+- [[10_Reference/investing/specs/S007-契约层|S007 契约层]] — 契约层是表现层与应用层之间的 DTO 边界
+- [[10_Reference/investing/specs/S013-前端数据层|S013 前端数据层]] — 前端也分层：TanStack Query（数据层）→ 组件（表现层）
+
+## 反模式（避免）
+- 跨层调用（routers 直接调 repositories，绕过 services）——层失去意义
+- 领域层依赖 ORM（领域感知 DB）——破坏可替换性
+- DTO 跨层穿透（HTTP 模型直接传到 DB）——层间耦合
+
+## 相关链接
+- [[10_Reference/tech-learning/MOC]]
+- [[10_Reference/tech-learning/architecture/clean-architecture]]
+- [[10_Reference/tech-learning/architecture/hexagonal]]
+- [[10_Reference/investing/specs/S006-系统重写纲领]]
+- [[10_Reference/investing/specs/S007-契约层]]
+- [[10_Reference/meta/four-construct-ontology]]

@@ -9,10 +9,10 @@
 | 实体类 | 文件夹 | 数量 | 说明 |
 |---|---|---|---|
 | 项目 | [[active/]] | 7 | 进行中 |
-| 候选 | [[backlog/]] | 5 | 待启动 |
+| 候选 | [[backlog/]] | 7 | 待启动 |
 | 归档 | [[archived/]] | 1 | 已结束 |
 
-> 实体合计 13 个。
+> 实体合计 15 个。
 
 ## 种子实体
 
@@ -31,6 +31,8 @@
 - [[backlog/daily-stock-analysis-integration]] — daily-stock-analysis 纳入图谱
 - [[backlog/a-plate-sentinel-integration]] — a-Plate-Sentinel 纳入图谱
 - [[backlog/incremental-sync-automation]] — 增量同步自动化
+- [[backlog/realtime-data-pipeline]] — 实时数据管道（盘中信号生成基础设施）
+- [[backlog/llm-extraction-automation]] — LLM 抽取自动化（非结构化→结构化管线）
 
 ### 已归档
 - [[archived/vibe-research-bakup]] — Vibe-Research 备份仓（S006 重写后归档）
