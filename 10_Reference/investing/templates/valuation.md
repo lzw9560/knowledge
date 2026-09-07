@@ -14,9 +14,15 @@ pb_percentile:
 created: <% tp.date.now("YYYY-MM-DD") %>
 ---
 
-# 估值快照
+> [!info] 📈 估值快照
+> **股票**：`code`  **PE(TTM)**：pe_ttm  **PB**：pb  **PEG**：peg
+> **PE 分位**：pe_percentile%  **PB 分位**：pb_percentile%
+> 
+> **所属股票**：[[stocks/]]
 
-- 股票代码：`code`（链接 [[stocks/]]）
+## 💰 估值指标
+
+- 股票代码：`code`
 - PE(TTM)：`pe_ttm`
 - PB：`pb`
 - PS(TTM)：`ps_ttm`
@@ -25,30 +31,34 @@ created: <% tp.date.now("YYYY-MM-DD") %>
 - PEG：`peg`
 - 远期 PE：`forward_pe`
 
-# 历史分位
+## 📊 历史分位
 
 - PE 历史分位：`pe_percentile`%
 - PB 历史分位：`pb_percentile`%
 
 > 分位口径待统一（3 年/5 年/全上市以来）。建议在 `data-sources` 的估值源笔记里记录口径。
 
-# 一致预期
+## 📋 一致预期
 
 - 一致预期 EPS：`consensus_eps`
 
-# 所属股票
+## 📉 历史估值序列
 
 ```dataview
-TABLE name AS "名称", industry AS "行业", market_cap AS "市值"
-FROM "stocks"
-WHERE type = "stock" AND code = this.code
-```
-
-# 历史估值序列
-
-```dataview
-TABLE created AS "日期", pe_ttm AS "PE(TTM)", pb AS "PB", pe_percentile AS "PE分位%"
-FROM "valuations"
+TABLE WITHOUT ID
+  created AS "日期",
+  pe_ttm AS "PE(TTM)",
+  pb AS "PB",
+  pe_percentile AS "PE分位%",
+  pb_percentile AS "PB分位%"
+FROM "10_Reference/investing/valuations"
 WHERE type = "valuation" AND code = this.code
 SORT created DESC
+LIMIT 10
 ```
+
+## 🔗 关联
+
+- **所属股票**：[[stocks/]]
+- **数据源**：[[data-sources/]]
+- **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个

@@ -2,26 +2,64 @@
 
 > 这个 vault 是 Vibe-Research 项目的**语义层**，把代码里的实体（Pydantic 契约模型）、spec 决策、战法、数据源链接成可导航的知识图谱。代码层管"数据怎么流"，本 vault 管"知识怎么连"——个股属于哪个行业、被哪些研报覆盖、触发哪张战法、数据从哪个源来，都在这里通过 `[[]]` 双链和 Dataview 查询织成网。
 
-## 实体类导航（本体构件 1：实体）
+---
+
+## 📊 图谱健康摘要
+
+> 实时统计——总实体数、各类型分布、最近更新、孤立节点。
+
+```dataview
+TABLE WITHOUT ID
+  length(rows) AS "实体总数"
+FROM "10_Reference/investing"
+WHERE type != null AND file.name != "index" AND file.name != "MOC" AND file.name != "README"
+```
+
+### 各类型实体计数
+
+```dataview
+TABLE WITHOUT ID
+  key AS "类型",
+  length(rows) AS "数量",
+  rows.file.link AS "样本"
+FROM "10_Reference/investing"
+WHERE type != null AND file.name != "index" AND file.name != "MOC" AND file.name != "README"
+GROUP BY type AS key
+SORT key ASC
+FLATTEN rows
+LIMIT 1
+```
+
+```dataview
+TABLE length(rows) AS "实体数"
+FROM "10_Reference/investing"
+WHERE type != null AND file.name != "index" AND file.name != "MOC" AND file.name != "README"
+GROUP BY type
+SORT type ASC
+```
+
+---
+
+## 🗂 实体类导航（本体构件 1：实体）
 
 > 四构件本体模型蒸馏自 nano-ontoprompt。构件 1-2 为静态层，3-4 为动态层。
 
-| 实体类  | 文件夹               | 说明                                                  | 当前数量                                                                    |
-| ---- | ----------------- | --------------------------------------------------- | ----------------------------------------------------------------------- |
-| 股票   | [[stocks/]]       | A 股/美股/港股个股，对应 `Quote` + `CompanyInfo`              | `= length(filter(this.file.inlinks, (l) => l.folder = "stocks"))`       |
-| 行业板块 | [[industries/]]   | 证监会行业分类，对应 `IndustrySector`                         | `= length(filter(this.file.inlinks, (l) => l.folder = "industries"))`   |
-| 概念板块 | [[concepts/]]     | 概念题材板块，对应 `ConceptBlock` + `Sector`                 | `= length(filter(this.file.inlinks, (l) => l.folder = "concepts"))`     |
-| 指数   | [[indices/]]      | 沪深300/中证500等宽基与行业指数                                 | `= length(filter(this.file.inlinks, (l) => l.folder = "indices"))`      |
-| 研报   | [[reports/]]      | 机构研报，对应 `Report` 契约                                 | `= length(filter(this.file.inlinks, (l) => l.folder = "reports"))`      |
-| 分析师  | [[analysts/]]     | 研报作者，对应 `Report.researcher`                         | `= length(filter(this.file.inlinks, (l) => l.folder = "analysts"))`     |
-| 财务指标 | [[metrics/]]      | 营收/ROE/毛利率等，对应 `Financials` + `FinancialPeriod`     | `= length(filter(this.file.inlinks, (l) => l.folder = "metrics"))`      |
-| 估值   | [[valuations/]]   | PE/PB/PEG/分位，对应 `Valuation` + `ValuationPercentile` | `= length(filter(this.file.inlinks, (l) => l.folder = "valuations"))`   |
-| 龙虎榜  | [[dragon-tiger/]] | 游资席位，对应 `Seat` + `BillboardDetail` + `DragonTiger`  | `= length(filter(this.file.inlinks, (l) => l.folder = "dragon-tiger"))` |
-| 事件   | [[events/]]       | 新闻/公告/涨停，对应 `News` + `Announcement` + `ZTPoolItem`  | `= length(filter(this.file.inlinks, (l) => l.folder = "events"))`       |
-| 战法   | [[strategies/]]   | 战法卡（从 `backend/strategies/cards/` 导入）               | `= length(filter(this.file.inlinks, (l) => l.folder = "strategies"))`   |
-| 项目决策 | [[specs/]]        | SDD spec 决策实体，对应 `specs/` 目录                        | `= length(filter(this.file.inlinks, (l) => l.folder = "specs"))`        |
-| 数据源  | [[data-sources/]] | 外部数据源，对应 `ARCHITECTURE` 数据流                         | `= length(filter(this.file.inlinks, (l) => l.folder = "data-sources"))` |
-| AI 角色 | [[agents/]]       | trading-agents 的 7 Analyst（区别于 analysts 真人）          | `= length(filter(this.file.inlinks, (l) => l.folder = "agents"))`       |
+| 实体类 | 文件夹 | 说明 |
+|---|---|---|
+| 📈 股票 | [[stocks/]] | A 股/美股/港股个股，对应 `Quote` + `CompanyInfo` |
+| 🏭 行业板块 | [[industries/]] | 证监会行业分类，对应 `IndustrySector` |
+| 💡 概念板块 | [[concepts/]] | 概念题材板块，对应 `ConceptBlock` + `Sector` |
+| 📊 指数 | [[indices/]] | 沪深300/中证500等宽基与行业指数 |
+| 📰 研报 | [[reports/]] | 机构研报，对应 `Report` 契约 |
+| 👤 分析师 | [[analysts/]] | 研报作者，对应 `Report.researcher` |
+| 💰 财务指标 | [[metrics/]] | 营收/ROE/毛利率等，对应 `Financials` + `FinancialPeriod` |
+| 📈 估值 | [[valuations/]] | PE/PB/PEG/分位，对应 `Valuation` + `ValuationPercentile` |
+| 🐉 龙虎榜 | [[dragon-tiger/]] | 游资席位，对应 `Seat` + `BillboardDetail` + `DragonTiger` |
+| ⚡ 事件 | [[events/]] | 新闻/公告/涨停，对应 `News` + `Announcement` + `ZTPoolItem` |
+| ⚔️ 战法 | [[strategies/]] | 战法卡（从 `backend/strategies/cards/` 导入） |
+| 📋 项目决策 | [[specs/]] | SDD spec 决策实体，对应 `specs/` 目录 |
+| 📡 数据源 | [[data-sources/]] | 外部数据源，对应 `ARCHITECTURE` 数据流 |
+| 🤖 AI 角色 | [[agents/]] | trading-agents 的 7 Analyst（区别于 analysts 真人） |
 
 ### 各类型实体计数（Dataview 动态）
 
@@ -33,48 +71,149 @@ GROUP BY type
 SORT type ASC
 ```
 
-## 关系层（本体构件 2：关系）
+---
+
+## 🔍 快速查询
+
+> 5 个最常用的 Dataview 查询模板——复制粘贴即可用。
+
+### 1. 白酒行业股票 PE 排序
+
+```dataview
+TABLE WITHOUT ID
+  code AS "代码",
+  name AS "名称",
+  pe_ttm AS "PE(TTM)",
+  market_cap AS "市值"
+FROM "10_Reference/investing/stocks"
+WHERE type = "stock" AND industry = "白酒"
+SORT pe_ttm ASC
+```
+
+### 2. PE < 15 低估值股票
+
+```dataview
+TABLE WITHOUT ID
+  code AS "代码",
+  name AS "名称",
+  pe_ttm AS "PE(TTM)",
+  pb AS "PB",
+  market_cap AS "市值"
+FROM "10_Reference/investing/stocks"
+WHERE type = "stock" AND pe_ttm < 15 AND pe_ttm > 0
+SORT pe_ttm ASC
+LIMIT 20
+```
+
+### 3. 近期涨停池事件
+
+```dataview
+TABLE WITHOUT ID
+  date AS "日期",
+  event_type AS "类型",
+  summary AS "摘要"
+FROM "10_Reference/investing/events"
+WHERE type = "event"
+SORT date DESC
+LIMIT 10
+```
+
+### 4. 最近研报
+
+```dataview
+TABLE WITHOUT ID
+  publish_date AS "日期",
+  org AS "机构",
+  researcher AS "分析师",
+  title AS "标题"
+FROM "10_Reference/investing/reports"
+WHERE type = "report"
+SORT publish_date DESC
+LIMIT 15
+```
+
+### 5. 龙虎榜游资席位
+
+```dataview
+TABLE WITHOUT ID
+  date AS "日期",
+  code AS "股票",
+  institution_net AS "机构净额",
+  seats AS "席位"
+FROM "10_Reference/investing/dragon-tiger"
+WHERE type = "dragon_tiger"
+SORT date DESC
+LIMIT 10
+```
+
+---
+
+## 🕐 最近更新
+
+> 最近修改的 10 个文件——追踪图谱最新活动。
+
+```dataview
+TABLE WITHOUT ID
+  file.link AS "文件",
+  type AS "类型",
+  file.mtime AS "修改时间"
+FROM "10_Reference/investing"
+WHERE type != null
+SORT file.mtime DESC
+LIMIT 10
+```
+
+---
+
+## 🔗 关系层（本体构件 2：关系）
 
 关系通过 `[[]]` 双向链接 + frontmatter 谓词标注实现。预定义关系谓词：
 `belongs_to` / `tagged` / `covered_by` / `has_metric` / `valued_at` / `involves` / `affects` / `matches` / `authored_by` / `triggered_by`
 
-## 动态层（本体构件 3-4）
+## ⚙️ 动态层（本体构件 3-4）
 
 | 构件 | 文件夹 | 说明 |
 |---|---|---|
-| **逻辑规则** | [[logic/]] | schema 约束/校验/状态机/推断规则 |
-| **动作** | [[actions/]] | CRUD/状态流转/链接维护/审计快照 |
+| **⚙️ 逻辑规则** | [[logic/]] | schema 约束/校验/状态机/推断规则 |
+| **⚡ 动作** | [[actions/]] | CRUD/状态流转/链接维护/审计快照 |
 
-## 质量门（Curated）
+## 🛡 质量门（Curated）
 
 | 层 | 文件夹 | 作用 |
 |---|---|---|
-| **待审** | [[inbox/]] | LLM 抽取实体先进此，带 confidence + source + quality_score，审核通过才进正式区 |
-| **审查** | [[reviews/]] | ReAct Agent 定期体检报告（8 项检查） |
+| **📥 待审** | [[inbox/]] | LLM 抽取实体先进此，带 confidence + source + quality_score，审核通过才进正式区 |
+| **🔍 审查** | [[reviews/]] | ReAct Agent 定期体检报告（8 项检查） |
 
 > 不直接灌入是知识图谱健康的第一道防线。详见 [[inbox/index]] 质量四维度。
 
-### 战法卡统计
+### ⚔️ 战法卡统计
 
 ```dataview
-TABLE name AS "战法", edge_family AS "edge 家族"
-FROM "strategies"
+TABLE WITHOUT ID
+  name AS "战法",
+  edge_family AS "edge 家族",
+  file.link AS "详情"
+FROM "10_Reference/investing/strategies"
 WHERE type = "strategy"
 SORT name ASC
 ```
 
-### 项目决策统计
+### 📋 项目决策统计
 
 ```dataview
-TABLE number AS "编号", title AS "标题", status AS "状态"
-FROM "specs"
+TABLE WITHOUT ID
+  number AS "编号",
+  title AS "标题",
+  status AS "状态",
+  file.link AS "详情"
+FROM "10_Reference/investing/specs"
 WHERE type = "spec"
 SORT number ASC
 ```
 
 ---
 
-## 使用说明
+## 📖 使用说明
 
 ### 1. 新建实体（Templater）
 
@@ -118,7 +257,7 @@ SORT pe_ttm ASC
 
 ---
 
-## 与项目代码的关系
+## 🏗 与项目代码的关系
 
 | 层 | 位置 | 职责 |
 |---|---|---|
@@ -132,7 +271,7 @@ SORT pe_ttm ASC
 
 ---
 
-## 关联子区
+## 🔗 关联子区
 
 - [[10_Reference/market_sentiment/DASHBOARD]] — 市场情绪追踪（每日 pre/mid/post 报告 + z-score 温度）
 - 战法卡有"适用天气：阴天"，market_sentiment 有温度 Z 值——但定义"阴天 = 哪个 Z 区间"的逻辑待建（见 [[logic/战法天气映射]]）
@@ -147,7 +286,7 @@ SORT pe_ttm ASC
 - [[data-sources/tushare]]（a-Plate-Sentinel 专用，积分制）
 - [[data-sources/akshare]] / [[data-sources/baostock]] / [[data-sources/mootdx]]（与 Vibe-Research 共用）
 
-## 跨领域链接（ora-3 §4）
+## 🌐 跨领域链接（ora-3 §4）
 
 > 投研方法论与其他知识域的"同构"链接。判据（[[logic/cross-domain-gate]]，待建）：
 > 跨域实体必须有 ≥ 2 个具体实例 + 1 条 invariant，否则不建。

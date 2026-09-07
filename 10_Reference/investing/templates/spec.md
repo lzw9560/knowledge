@@ -6,24 +6,29 @@ status:
 created: <% tp.date.now("YYYY-MM-DD") %>
 ---
 
-# 问题/目标
+> [!info] 📋 项目决策
+> **编号**：number  **标题**：title  **状态**：status
+> 
+> **关联**：[[specs/]] · [[strategies/]] · [[data-sources/]]
+
+## 🎯 问题/目标
 
 
 
-# 需求
+## 📝 需求
 
 
 
-# 受影响文件
+## 📂 受影响文件
 
 
 
-# 验收标准
+## ✅ 验收标准
 
 - [ ] 
 - [ ] 
 
-# 关联决策
+## 🔗 关联决策
 
 > 与其他 spec 的依赖/冲突/替代关系。
 

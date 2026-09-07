@@ -7,34 +7,47 @@ seats:
 created: <% tp.date.now("YYYY-MM-DD") %>
 ---
 
-# 席位明细
+> [!info] 🐉 龙虎榜
+> **股票**：`code`  **日期**：date  **机构净额**：institution_net
+> **席位**：seats
+> 
+> **关联**：[[stocks/]] · [[events/]] · [[strategies/]]
 
-- 股票代码：`code`（链接 [[stocks/]]）
+## 📊 席位明细
+
+- 股票代码：`code`（[[stocks/]]）
 - 日期：`date`
 - 机构净额（亿）：`institution_net`
 - 席位：`seats`
 
-# 游资画像
+## 🎭 游资画像
 
 > 记录上榜席位的游资风格：一日游/趋势/接力/量化。可链接到 [[strategies/]] 的对应战法。
 
-# 所属股票
+## 📈 所属股票
 
 ```dataview
-TABLE name AS "名称", industry AS "行业"
-FROM "stocks"
+TABLE WITHOUT ID
+  name AS "名称",
+  industry AS "行业"
+FROM "10_Reference/investing/stocks"
 WHERE type = "stock" AND code = this.code
 ```
 
-# 相关事件
+## ⚡ 相关事件
 
 ```dataview
-TABLE date AS "日期", event_type AS "类型", summary AS "摘要"
-FROM "events"
+TABLE WITHOUT ID
+  date AS "日期",
+  event_type AS "类型",
+  summary AS "摘要"
+FROM "10_Reference/investing/events"
 WHERE type = "event" AND contains(codes, this.code) AND date = this.date
 SORT date DESC
+LIMIT 5
 ```
 
-# 近期同席位个股
+## 🔗 关联
 
-> 查该游资席位近期还上过哪些股——手动维护或后续 LLM 推断。
+- **数据源**：[[data-sources/]]
+- **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个
