@@ -44,6 +44,21 @@ def extract_links(content):
 
 
 def resolve_link(target):
+    # 支持 ../../ 相对路径跳层
+    if target.startswith("../"):
+        # 从 VAULT 目录开始向上跳
+        resolved = VAULT
+        parts = target.split("/")
+        i = 0
+        while i < len(parts) and parts[i] == "..":
+            resolved = resolved.parent
+            i += 1
+        remaining = "/".join(parts[i:])
+        candidates = [
+            resolved / (remaining + ".md"),
+            resolved / remaining,
+        ]
+        return any(c.exists() for c in candidates)
     candidates = [
         VAULT / (target + ".md"),
         VAULT / target,
