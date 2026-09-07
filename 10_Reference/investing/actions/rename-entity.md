@@ -28,8 +28,8 @@ source: logic_rules
 1. 校验调用方：if agent 直接调用 → 拒绝（ora-3 §6.5）；if 人工调用 → 继续
 2. 执行 `move_note(old_path, new_path)`：
    - 移动/重命名文件
-   - 扫描全库 `[[链接]]`，把指向 old_path 的链接重写为 new_path
-   - 处理别名（`[[old|alias]]` → `[[new|alias]]`）
+   - 扫描全库 wikilink，把指向 old_path 的链接重写为 new_path
+   - 处理别名（old|alias → new|alias）
 3. 记录改名日志（who/when/old/new）到 `reviews/`
 
 

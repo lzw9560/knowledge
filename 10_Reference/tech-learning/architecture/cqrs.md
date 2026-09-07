@@ -30,14 +30,14 @@ created: 2026-09-07
 - 进一步即 [[10_Reference/tech-learning/architecture/event-sourcing|事件溯源]] + CQRS 的经典组合
 
 ## 在 Vibe-Research 中的使用
-- [[10_Reference/investing/specs/S007-契约层|S007 契约层]] 的读路径（前端查询战法/候选/快照）与写路径（调度器写状态）天然是 CQRS 雏形
-- [[10_Reference/investing/specs/S013-前端数据层|S013]] TanStack Query 是前端的"读模型适配器"——只读 + 缓存
-- [[10_Reference/investing/specs/S033-状态机前端呈现|S033]] 工作流状态机读路径独立于调度写路径
+- [[10_Reference/investing/specs/archive/m0-foundation/S007-契约层|S007 契约层]] 的读路径（前端查询战法/候选/快照）与写路径（调度器写状态）天然是 CQRS 雏形
+- [[10_Reference/investing/specs/archive/m0-foundation/S013-前端数据层|S013]] TanStack Query 是前端的"读模型适配器"——只读 + 缓存
+- [[10_Reference/investing/specs/archive/m1-workflow/S033-状态机前端呈现|S033]] 工作流状态机读路径独立于调度写路径
 
 ## 相关链接
 - [[10_Reference/tech-learning/MOC]]
 - [[10_Reference/tech-learning/architecture/clean-architecture]]
 - [[10_Reference/tech-learning/architecture/event-driven]]
 - [[10_Reference/tech-learning/architecture/event-sourcing]]
-- [[10_Reference/investing/specs/S007-契约层]]
+- [[10_Reference/investing/specs/archive/m0-foundation/S007-契约层]]
 - [[10_Reference/meta/four-construct-ontology]]

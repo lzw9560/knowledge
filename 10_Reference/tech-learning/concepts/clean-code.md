@@ -30,7 +30,7 @@ created: 2026-09-07
 
 ## 在 Vibe-Research 中的使用
 - [[10_Reference/investing/specs/S006-系统重写纲领|S006 系统重写纲领]] 即遵循清洁代码 + [[10_Reference/tech-learning/architecture/clean-architecture|清洁架构]] 重写
-- 契约层 [[10_Reference/investing/specs/S007-契约层|S007]] 的 Pydantic 模型职责单一——纯数据契约不含业务逻辑
+- 契约层 [[10_Reference/investing/specs/archive/m0-foundation/S007-契约层|S007]] 的 Pydantic 模型职责单一——纯数据契约不含业务逻辑
 - AGENTS.md 的"工程底线不降级"是清洁代码的项目治理化
 
 ## 相关链接
@@ -38,5 +38,5 @@ created: 2026-09-07
 - [[10_Reference/tech-learning/architecture/clean-architecture]]
 - [[10_Reference/tech-learning/concepts/type-safety]]
 - [[10_Reference/investing/specs/S006-系统重写纲领]]
-- [[10_Reference/investing/specs/S007-契约层]]
+- [[10_Reference/investing/specs/archive/m0-foundation/S007-契约层]]
 - [[10_Reference/meta/four-construct-ontology]]

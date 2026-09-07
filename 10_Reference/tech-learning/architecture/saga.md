@@ -25,8 +25,8 @@ created: 2026-09-07
 - 与 [[10_Reference/tech-learning/architecture/microservices|微服务]]：跨服务事务的标配
 
 ## 在 Vibe-Research 中的使用
-- [[10_Reference/investing/specs/S011-调度收口|S011 调度收口]] 的多层调度本质是编排式 Saga：盘前准备 → 盘中扫描 → 盘后复盘，每步失败需回滚前序（如盘前数据源失败，盘中扫描跳过 + 标灰）
-- [[10_Reference/investing/specs/S033-状态机前端呈现|S033]] 工作流状态机即 Saga 的状态机视图——每步状态 = Ti，失败路径 = Ci
+- [[10_Reference/investing/specs/archive/m0-foundation/S011-调度收口|S011 调度收口]] 的多层调度本质是编排式 Saga：盘前准备 → 盘中扫描 → 盘后复盘，每步失败需回滚前序（如盘前数据源失败，盘中扫描跳过 + 标灰）
+- [[10_Reference/investing/specs/archive/m1-workflow/S033-状态机前端呈现|S033]] 工作流状态机即 Saga 的状态机视图——每步状态 = Ti，失败路径 = Ci
 - [[10_Reference/investing/specs/S012-工作流标灰|S012 工作流标灰]] 即失败时的"补偿可视化"
 
 ## 相关链接
@@ -34,6 +34,6 @@ created: 2026-09-07
 - [[10_Reference/tech-learning/architecture/event-driven]]
 - [[10_Reference/tech-learning/architecture/event-sourcing]]
 - [[10_Reference/tech-learning/architecture/microservices]]
-- [[10_Reference/investing/specs/S011-调度收口]]
-- [[10_Reference/investing/specs/S033-状态机前端呈现]]
+- [[10_Reference/investing/specs/archive/m0-foundation/S011-调度收口]]
+- [[10_Reference/investing/specs/archive/m1-workflow/S033-状态机前端呈现]]
 - [[10_Reference/meta/four-construct-ontology]]

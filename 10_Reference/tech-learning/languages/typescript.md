@@ -25,7 +25,7 @@ created: 2026-09-07
 - 工具链：Vite / esbuild / tsc
 
 ## 在 Vibe-Research 中的使用
-- 前端主语言：[[10_Reference/investing/specs/S009-前后端类型同步|S009]] 前后端类型同步契约
+- 前端主语言：[[10_Reference/investing/specs/archive/m0-foundation/S009-前后端类型同步|S009]] 前后端类型同步契约
 - 类型定义在 `frontend/src/types/` 与后端 Pydantic 模型对齐
 - 配套框架：[[frameworks/react]]
 
@@ -33,5 +33,5 @@ created: 2026-09-07
 - [[10_Reference/tech-learning/MOC]]
 - [[frameworks/react]]
 - [[10_Reference/investing/MOC]]
-- [[10_Reference/investing/specs/S009-前后端类型同步]]
+- [[10_Reference/investing/specs/archive/m0-foundation/S009-前后端类型同步]]
 - [[10_Reference/meta/four-construct-ontology]]

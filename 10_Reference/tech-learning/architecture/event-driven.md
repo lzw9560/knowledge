@@ -18,15 +18,15 @@ created: 2026-09-07
 - 典型实现：Redis pub/sub / RabbitMQ / Kafka / 内存 EventBus
 
 ## 在 Vibe-Research 中的使用
-- [[10_Reference/investing/specs/S011-调度收口|S011 调度收口]]：盘前/盘中/盘后多层调度从同步改异步事件驱动
-- 状态机推进：[[10_Reference/investing/specs/S033-状态机前端呈现|S033]] 工作流状态机用事件驱动前端呈现
-- 盘前异步：[[10_Reference/investing/specs/S026-pre-market-async|S026]] pre-market 异步化
+- [[10_Reference/investing/specs/archive/m0-foundation/S011-调度收口|S011 调度收口]]：盘前/盘中/盘后多层调度从同步改异步事件驱动
+- 状态机推进：[[10_Reference/investing/specs/archive/m1-workflow/S033-状态机前端呈现|S033]] 工作流状态机用事件驱动前端呈现
+- 盘前异步：[[10_Reference/investing/specs/archive/m1-workflow/S026-pre-market-async|S026]] pre-market 异步化
 - 与投研战法天气映射的同构：事件触发 ↔ 战法适用天气判定（[[10_Reference/investing/logic/战法天气映射]]，待建）
 
 ## 相关链接
 - [[10_Reference/tech-learning/MOC]]
 - [[10_Reference/investing/MOC]]
-- [[10_Reference/investing/specs/S011-调度收口]]
-- [[10_Reference/investing/specs/S033-状态机前端呈现]]
-- [[10_Reference/investing/specs/S026-pre-market-async]]
+- [[10_Reference/investing/specs/archive/m0-foundation/S011-调度收口]]
+- [[10_Reference/investing/specs/archive/m1-workflow/S033-状态机前端呈现]]
+- [[10_Reference/investing/specs/archive/m1-workflow/S026-pre-market-async]]
 - [[10_Reference/meta/four-construct-ontology]]

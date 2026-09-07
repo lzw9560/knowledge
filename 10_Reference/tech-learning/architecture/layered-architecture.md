@@ -32,8 +32,8 @@ created: 2026-09-07
 
 ## 在 Vibe-Research 中的使用
 - [[10_Reference/investing/specs/S006-系统重写纲领|S006 系统重写纲领]] — 重写遵循分层架构：routers → services → domain → repositories
-- [[10_Reference/investing/specs/S007-契约层|S007 契约层]] — 契约层是表现层与应用层之间的 DTO 边界
-- [[10_Reference/investing/specs/S013-前端数据层|S013 前端数据层]] — 前端也分层：TanStack Query（数据层）→ 组件（表现层）
+- [[10_Reference/investing/specs/archive/m0-foundation/S007-契约层|S007 契约层]] — 契约层是表现层与应用层之间的 DTO 边界
+- [[10_Reference/investing/specs/archive/m0-foundation/S013-前端数据层|S013 前端数据层]] — 前端也分层：TanStack Query（数据层）→ 组件（表现层）
 
 ## 反模式（避免）
 - 跨层调用（routers 直接调 repositories，绕过 services）——层失去意义
@@ -45,5 +45,5 @@ created: 2026-09-07
 - [[10_Reference/tech-learning/architecture/clean-architecture]]
 - [[10_Reference/tech-learning/architecture/hexagonal]]
 - [[10_Reference/investing/specs/S006-系统重写纲领]]
-- [[10_Reference/investing/specs/S007-契约层]]
+- [[10_Reference/investing/specs/archive/m0-foundation/S007-契约层]]
 - [[10_Reference/meta/four-construct-ontology]]

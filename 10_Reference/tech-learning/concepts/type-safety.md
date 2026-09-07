@@ -27,8 +27,8 @@ created: 2026-09-07
 
 ## 在 Vibe-Research 中的使用
 - [[10_Reference/tech-learning/frameworks/pydantic|Pydantic]] 是 Python 的运行时类型安全——schema 校验 + 自动文档
-- [[10_Reference/investing/specs/S007-契约层|S007 契约层]] 用 Pydantic 模型做前后端共享契约，类型安全跨语言传递
-- [[10_Reference/investing/specs/S009-前后端类型同步|S009 前后端类型同步]] — 后端 Pydantic schema 自动生成前端 TS 类型，端到端类型安全
+- [[10_Reference/investing/specs/archive/m0-foundation/S007-契约层|S007 契约层]] 用 Pydantic 模型做前后端共享契约，类型安全跨语言传递
+- [[10_Reference/investing/specs/archive/m0-foundation/S009-前后端类型同步|S009 前后端类型同步]] — 后端 Pydantic schema 自动生成前端 TS 类型，端到端类型安全
 - [[10_Reference/tech-learning/languages/typescript|TypeScript]] 前端全静态类型
 
 ## 相关链接
@@ -36,6 +36,6 @@ created: 2026-09-07
 - [[10_Reference/tech-learning/frameworks/pydantic]]
 - [[10_Reference/tech-learning/languages/typescript]]
 - [[10_Reference/tech-learning/concepts/clean-code]]
-- [[10_Reference/investing/specs/S007-契约层]]
-- [[10_Reference/investing/specs/S009-前后端类型同步]]
+- [[10_Reference/investing/specs/archive/m0-foundation/S007-契约层]]
+- [[10_Reference/investing/specs/archive/m0-foundation/S009-前后端类型同步]]
 - [[10_Reference/meta/four-construct-ontology]]

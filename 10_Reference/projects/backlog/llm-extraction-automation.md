@@ -35,7 +35,7 @@ created: 2026-09-07
 - [[10_Reference/projects/backlog/incremental-sync-automation|增量同步自动化]] — 本项目的图谱同步部分可复用增量同步管线
 
 ## 技术栈候选
-- LLM 调度：百炼 API（[[10_Reference/investing/specs/S015-config-分层|S015 config]] 管理 key）
+- LLM 调度：百炼 API（[[10_Reference/investing/specs/archive/m0-foundation/S015-配置与基础设施|S015 config]] 管理 key）
 - 抽取模板：Jinja2 / JSON schema
 - 校验：Pydantic（[[10_Reference/tech-learning/frameworks/fastapi|FastAPI]] 同栈）
 - 存储：PostgreSQL + Obsidian md 双写

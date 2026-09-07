@@ -33,8 +33,8 @@ confidence: high
 
 ```
 对每个实体文件：
-  in_links = count(其他文件含 [[this]] 的链接)
-  out_links = count(本文件正文 [[xxx]] 链接)
+  in_links = count(其他文件含指向本文件链接的链接)
+  out_links = count(本文件正文出链数量)
   if in_links == 0 AND out_links == 0:
     孤立实体 += 1
 

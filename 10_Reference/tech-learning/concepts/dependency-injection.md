@@ -25,7 +25,7 @@ created: 2026-09-07
 | 依赖注入 | 容器注入 | 易（可 mock） |
 
 ## 在 Vibe-Research 中的使用
-- [[10_Reference/investing/specs/S015-config-分层|S015 config 分层]] — 配置拆分后通过 DI 注入到各 service，避免全局单例耦合
+- [[10_Reference/investing/specs/archive/m0-foundation/S015-配置与基础设施|S015 config 分层]] — 配置拆分后通过 DI 注入到各 service，避免全局单例耦合
 - [[10_Reference/tech-learning/frameworks/fastapi|FastAPI]] 的 `Depends()` 是 Python 原生 DI 实现——路由通过 `Depends` 注入 service / config
 - [[10_Reference/tech-learning/architecture/clean-architecture|清洁架构]] — DI 是"依赖反转"层级的运行时实现
 
@@ -37,5 +37,5 @@ created: 2026-09-07
 - [[10_Reference/tech-learning/MOC]]
 - [[10_Reference/tech-learning/frameworks/fastapi]]
 - [[10_Reference/tech-learning/architecture/clean-architecture]]
-- [[10_Reference/investing/specs/S015-config-分层]]
+- [[10_Reference/investing/specs/archive/m0-foundation/S015-配置与基础设施]]
 - [[10_Reference/meta/four-construct-ontology]]

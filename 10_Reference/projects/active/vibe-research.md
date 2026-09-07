@@ -20,9 +20,9 @@ created: 2026-09-07
 
 ## 架构决策
 - [[10_Reference/investing/specs/S006-系统重写纲领|S006 系统重写纲领]]
-- [[10_Reference/investing/specs/S007-契约层|S007 契约层]]
-- [[10_Reference/investing/specs/S008-后端数据层迁移|S008 后端数据层迁移]]
-- [[10_Reference/investing/specs/S011-调度收口|S011 调度收口]]（事件驱动架构，见 [[10_Reference/tech-learning/architecture/event-driven|事件驱动]]）
+- [[10_Reference/investing/specs/archive/m0-foundation/S007-契约层|S007 契约层]]
+- [[10_Reference/investing/specs/archive/m0-foundation/S008-后端数据层迁移|S008 后端数据层迁移]]
+- [[10_Reference/investing/specs/archive/m0-foundation/S011-调度收口|S011 调度收口]]（事件驱动架构，见 [[10_Reference/tech-learning/architecture/event-driven|事件驱动]]）
 
 ## 数据源
 - [[10_Reference/investing/data-sources/akshare|akshare]]
@@ -38,5 +38,5 @@ created: 2026-09-07
 - [[10_Reference/investing/MOC]] — 投研知识图谱语义层入口
 - [[10_Reference/tech-learning/MOC]]
 - [[10_Reference/investing/specs/S006-系统重写纲领]]
-- [[10_Reference/investing/specs/S011-调度收口]]
+- [[10_Reference/investing/specs/archive/m0-foundation/S011-调度收口]]
 - [[10_Reference/meta/four-construct-ontology]]

@@ -28,14 +28,14 @@ created: 2026-09-07
 
 ## 在 Vibe-Research 中的使用
 - 数据源抽象是六边形出站端口的实例：[[10_Reference/investing/data-sources/akshare|akshare]] / [[10_Reference/investing/data-sources/mootdx|mootdx]] / [[10_Reference/investing/data-sources/eastmoney-push2|东财 push2]] 都实现统一的"行情数据源"端口，可互换
-- [[10_Reference/investing/specs/S008-后端数据层迁移|S008 后端数据层迁移]] 即更换/新增数据源适配器而不动核心
-- 契约层 [[10_Reference/investing/specs/S007-契约层|S007]] 的 Pydantic 模型即入站端口的契约定义
+- [[10_Reference/investing/specs/archive/m0-foundation/S008-后端数据层迁移|S008 后端数据层迁移]] 即更换/新增数据源适配器而不动核心
+- 契约层 [[10_Reference/investing/specs/archive/m0-foundation/S007-契约层|S007]] 的 Pydantic 模型即入站端口的契约定义
 
 ## 相关链接
 - [[10_Reference/tech-learning/MOC]]
 - [[10_Reference/tech-learning/architecture/clean-architecture]]
 - [[10_Reference/tech-learning/architecture/microservices]]
 - [[10_Reference/investing/data-sources/akshare]]
-- [[10_Reference/investing/specs/S007-契约层]]
-- [[10_Reference/investing/specs/S008-后端数据层迁移]]
+- [[10_Reference/investing/specs/archive/m0-foundation/S007-契约层]]
+- [[10_Reference/investing/specs/archive/m0-foundation/S008-后端数据层迁移]]
 - [[10_Reference/meta/four-construct-ontology]]

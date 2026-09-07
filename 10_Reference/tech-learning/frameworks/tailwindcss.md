@@ -25,7 +25,7 @@ created: 2026-09-07
 
 ## 在 Vibe-Research 中的使用
 - 前端样式方案：`frontend/` 用 Tailwind 替代手写 CSS
-- 与 [[10_Reference/investing/specs/S014-前端UI重设计|S014 前端 UI 重设计]] 关联：S014 的视觉重构基于 Tailwind 原子类实现
+- 与 [[10_Reference/investing/specs/archive/m0-foundation/S014-前端UI重设计|S014 前端 UI 重设计]] 关联：S014 的视觉重构基于 Tailwind 原子类实现
 - 配合 [[frameworks/react|React]]：组件样式直接写在 className，无 CSS-in-JS 运行时开销
 - 配合 [[frameworks/vite|Vite]]：PostCSS 插件链处理
 
@@ -33,5 +33,5 @@ created: 2026-09-07
 - [[10_Reference/tech-learning/MOC]]
 - [[frameworks/react]]
 - [[frameworks/vite]]
-- [[10_Reference/investing/specs/S014-前端UI重设计]]
+- [[10_Reference/investing/specs/archive/m0-foundation/S014-前端UI重设计]]
 - [[10_Reference/meta/four-construct-ontology]]

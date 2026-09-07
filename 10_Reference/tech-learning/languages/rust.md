@@ -34,13 +34,13 @@ created: 2026-09-07
 
 ## 与 Vibe-Research 的关系
 - Vibe-Research 当前未用 Rust
-- 但前端构建工具 [[tools/vite|Vite]] 底层依赖 esbuild（Go）/ rolldown（Rust 重写）——技术栈间接关联
+- 但前端构建工具 [[frameworks/vite|Vite]] 底层依赖 esbuild（Go）/ rolldown（Rust 重写）——技术栈间接关联
 - 参考架构：[[10_Reference/tech-learning/architecture/event-sourcing|事件溯源]] 的高性能 event store 可用 Rust 实现
 
 ## 相关链接
 - [[10_Reference/tech-learning/MOC]]
 - [[languages/go]]
 - [[languages/python]]
-- [[10_Reference/tech-learning/tools/vite]]
+- [[10_Reference/tech-learning/frameworks/vite]]
 - [[10_Reference/tech-learning/architecture/event-sourcing]]
 - [[10_Reference/meta/four-construct-ontology]]

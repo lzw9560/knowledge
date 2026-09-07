@@ -26,7 +26,7 @@ created: 2026-09-07
 - **一致性**：先写 DB 后删缓存（Cache-Aside 标准做法），或延迟双删
 
 ## 在 Vibe-Research 中的使用
-- [[10_Reference/investing/specs/S004-性能优化|S004 性能优化]] — 缓存是性能优化的核心手段：热点数据（行情/估值）入缓存降低 DB 压力
+- [[10_Reference/investing/specs/S004-candidates-funnel-performance|S004 性能优化]] — 缓存是性能优化的核心手段：热点数据（行情/估值）入缓存降低 DB 压力
 - [[10_Reference/tech-learning/concepts/circuit-breaker|熔断器]] — 熔断降级常返回缓存值作为 fallback
 - [[10_Reference/tech-learning/architecture/layered-architecture|分层架构]] — 缓存层通常位于 service 与 repository 之间
 
@@ -38,5 +38,5 @@ created: 2026-09-07
 - [[10_Reference/tech-learning/MOC]]
 - [[10_Reference/tech-learning/concepts/circuit-breaker]]
 - [[10_Reference/tech-learning/architecture/layered-architecture]]
-- [[10_Reference/investing/specs/S004-性能优化]]
+- [[10_Reference/investing/specs/S004-candidates-funnel-performance]]
 - [[10_Reference/meta/four-construct-ontology]]

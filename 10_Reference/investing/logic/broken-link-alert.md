@@ -4,7 +4,7 @@ rule_id: BROKEN-LINK-001
 rule_type: 校验规则
 target_entity: 全类型
 severity: high
-condition: 断链（[[xxx]] 指向不存在的文件）数量 > 3
+condition: 断链（指向不存在的文件的链接）数量 > 3
 action_on_violation: 触发修复工单（列出断链源 + 目标）
 source: ora-3 诊断 §6.5（move_note 危险操作约束——直接 rename 会导致断链）
 created: 2026-09-07
@@ -33,7 +33,7 @@ confidence: high
 
 ```
 对所有 .md 文件：
-  for each [[link]] in file:
+  for each link in file:
     if not exists(resolve(link)):
       broken_links += (源文件, 链接文本, 目标路径)
 

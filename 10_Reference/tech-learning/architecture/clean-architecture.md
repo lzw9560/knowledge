@@ -22,17 +22,17 @@ created: 2026-09-07
 |---|---|---|
 | Entity | 战法卡 / 数据源抽象 | [[10_Reference/investing/strategies/|战法卡]] 业务规则 |
 | Use Case | `backend/services/` | 调度 / 战法执行编排 |
-| Adapter | `backend/routers/` + Pydantic 模型 | [[10_Reference/investing/specs/S007-契约层\|S007 契约层]] |
+| Adapter | `backend/routers/` + Pydantic 模型 | [[10_Reference/investing/specs/archive/m0-foundation/S007-契约层\|S007 契约层]] |
 | Framework | FastAPI / React / Docker | 外层框架 |
 
 ## 在 Vibe-Research 中的使用
 - [[10_Reference/investing/specs/S006-系统重写纲领|S006 系统重写纲领]] 遵循清洁架构思想：领域层独立于框架
-- 契约层（[[10_Reference/investing/specs/S007-契约层|S007]]）是"接口适配器"层，用 [[frameworks/pydantic|Pydantic]] 模型隔离领域与传输
-- 前端数据层（[[10_Reference/investing/specs/S013-前端数据层|S013]]）也遵循同构——TanStack Query 是前端的"适配器"
+- 契约层（[[10_Reference/investing/specs/archive/m0-foundation/S007-契约层|S007]]）是"接口适配器"层，用 [[frameworks/pydantic|Pydantic]] 模型隔离领域与传输
+- 前端数据层（[[10_Reference/investing/specs/archive/m0-foundation/S013-前端数据层|S013]]）也遵循同构——TanStack Query 是前端的"适配器"
 
 ## 相关链接
 - [[10_Reference/tech-learning/MOC]]
 - [[10_Reference/tech-learning/architecture/microservices]]
 - [[10_Reference/investing/specs/S006-系统重写纲领]]
-- [[10_Reference/investing/specs/S007-契约层]]
+- [[10_Reference/investing/specs/archive/m0-foundation/S007-契约层]]
 - [[10_Reference/meta/four-construct-ontology]]

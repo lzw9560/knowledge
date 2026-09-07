@@ -336,7 +336,7 @@ name: 龙头战法
 edge_family: 龙头追踪
 project: vibe-research                          # 【新增】发源项目
 imported_from: backend/strategies/cards/
-variant_of: "[[projects/daily-stock-analysis]]#dragon_head.yaml"  # 【新增】跨项目同源
+variant_of: "[[10_Reference/projects/active/daily-stock-analysis]]#dragon_head.yaml"  # 【新增】跨项目同源
 created: 2026-09-06
 ---
 ```
@@ -473,10 +473,10 @@ MOC.md 改造点（在现有内容基础上新增，不删）：
 
 | 项目 | 定位 | 许可证 | 状态 | 专属实体数 |
 |---|---|---|---|---|
-| [[projects/vibe-research]] | 个人 AI 投研看板 | 私有 | 🟢 活跃 | `= length(filter(...))` |
-| [[projects/trading-agents]] | 多 Agent 辩论投研 | Apache 2.0 | 🟢 活跃 | ... |
-| [[projects/daily-stock-analysis]] | 多市场智能分析推送 | MIT | 🟢 活跃 | ... |
-| [[projects/a-plate-sentinel]] | 打板情绪监控看板 | 私有 | 🟡 MVP | ... |
+| [[10_Reference/projects/active/vibe-research]] | 个人 AI 投研看板 | 私有 | 🟢 活跃 | `= length(filter(...))` |
+| [[10_Reference/projects/active/trading-agents]] | 多 Agent 辩论投研 | Apache 2.0 | 🟢 活跃 | ... |
+| [[10_Reference/projects/active/daily-stock-analysis]] | 多市场智能分析推送 | MIT | 🟢 活跃 | ... |
+| [[10_Reference/projects/active/a-plate-sentinel]] | 打板情绪监控看板 | 私有 | 🟡 MVP | ... |
 
 ### 各项目实体计数（Dataview 动态）
 

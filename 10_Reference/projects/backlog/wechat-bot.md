@@ -17,7 +17,7 @@ created: 2026-09-07
 
 ## 技术栈
 - 语言：[[10_Reference/tech-learning/languages/python|Python]]
-- 集成：[[10_Reference/projects/active/vibe-research|Vibe-Research]] 的 [[10_Reference/investing/specs/S011-调度收口|S011 调度收口]] 调度产出 → 微信推送
+- 集成：[[10_Reference/projects/active/vibe-research|Vibe-Research]] 的 [[10_Reference/investing/specs/archive/m0-foundation/S011-调度收口|S011 调度收口]] 调度产出 → 微信推送
 
 ## 与 Vibe-Research 的关系
 - wechat-bot 是 Vibe-Research 的**输出渠道扩展**

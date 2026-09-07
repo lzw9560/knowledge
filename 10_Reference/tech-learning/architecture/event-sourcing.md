@@ -20,9 +20,9 @@ created: 2026-09-07
 - **不可变**：事件永不修改，错误用补偿事件（compensation）而非删除
 
 ## 投研工作流状态机的同构
-- [[10_Reference/investing/specs/S033-状态机前端呈现|S033 状态机前端呈现]]：盘前工作流的状态推进（idle → fetching → analyzing → ready）本质是状态机
+- [[10_Reference/investing/specs/archive/m1-workflow/S033-状态机前端呈现|S033 状态机前端呈现]]：盘前工作流的状态推进（idle → fetching → analyzing → ready）本质是状态机
 - 事件溯源视角：每次状态迁移记录为事件，当前态 = 重放事件序列
-- [[10_Reference/investing/specs/S011-调度收口|S011 调度收口]] 的多层调度（盘前/盘中/盘后）可参考事件溯源——调度任务作为事件，执行结果追加到日志
+- [[10_Reference/investing/specs/archive/m0-foundation/S011-调度收口|S011 调度收口]] 的多层调度（盘前/盘中/盘后）可参考事件溯源——调度任务作为事件，执行结果追加到日志
 - 与 [[10_Reference/investing/logic/战法天气映射|战法天气映射]]（待建）的同构：战法适用天气是状态，市场事件触发天气变更
 
 ## 在 Vibe-Research 中的潜在应用
@@ -34,6 +34,6 @@ created: 2026-09-07
 - [[10_Reference/tech-learning/MOC]]
 - [[10_Reference/tech-learning/architecture/event-driven]]
 - [[10_Reference/tech-learning/architecture/clean-architecture]]
-- [[10_Reference/investing/specs/S011-调度收口]]
-- [[10_Reference/investing/specs/S033-状态机前端呈现]]
+- [[10_Reference/investing/specs/archive/m0-foundation/S011-调度收口]]
+- [[10_Reference/investing/specs/archive/m1-workflow/S033-状态机前端呈现]]
 - [[10_Reference/meta/four-construct-ontology]]

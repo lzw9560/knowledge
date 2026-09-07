@@ -29,7 +29,7 @@ created: 2026-09-07
 
 ## 与 Vibe-Research 的关系
 - Vibe-Research 当前是**单体**（FastAPI 单进程 + React 单页），团队规模 1 人，单体是正确选择
-- [[10_Reference/investing/specs/S011-调度收口|S011 调度收口]] 在单体内用事件驱动解耦，是"单体 + 事件"的中间形态（参考 [[10_Reference/tech-learning/architecture/event-driven|事件驱动架构]]）
+- [[10_Reference/investing/specs/archive/m0-foundation/S011-调度收口|S011 调度收口]] 在单体内用事件驱动解耦，是"单体 + 事件"的中间形态（参考 [[10_Reference/tech-learning/architecture/event-driven|事件驱动架构]]）
 - 关联项目 [[10_Reference/projects/active/trading-agents|TradingAgents]] 是独立服务，与 Vibe-Research 通过共享数据源松耦合——这是**类微服务**边界
 - S011 调度收口参考微服务的"服务边界"思想，但在单体内实现（事件总线而非网络）
 
@@ -37,6 +37,6 @@ created: 2026-09-07
 - [[10_Reference/tech-learning/MOC]]
 - [[10_Reference/tech-learning/architecture/event-driven]]
 - [[10_Reference/tech-learning/architecture/clean-architecture]]
-- [[10_Reference/investing/specs/S011-调度收口]]
+- [[10_Reference/investing/specs/archive/m0-foundation/S011-调度收口]]
 - [[10_Reference/projects/active/trading-agents]]
 - [[10_Reference/meta/four-construct-ontology]]

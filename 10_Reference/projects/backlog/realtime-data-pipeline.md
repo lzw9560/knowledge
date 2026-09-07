@@ -19,9 +19,9 @@ created: 2026-09-07
 - **回放能力**：历史数据可"回放"到流处理管线，用于战法回测与模型训练
 
 ## 候选理由
-- 当前 [[10_Reference/investing/specs/S026-pre-market-async|S026]] 是盘前批量拉取，盘中无法实时监控
+- 当前 [[10_Reference/investing/specs/archive/m1-workflow/S026-pre-market-async|S026]] 是盘前批量拉取，盘中无法实时监控
 - 实时管道是"盘中战法监控"的基础设施，但工程复杂度高，需先验证数据源稳定性
-- [[10_Reference/investing/specs/S022-em_get-防封熔断|S022]] 防封熔断是实时管道的前置依赖——实时拉取风控更严
+- [[10_Reference/investing/specs/archive/m1-workflow/S022-熔断器health读路径修复|S022]] 防封熔断是实时管道的前置依赖——实时拉取风控更严
 
 ## 技术栈候选
 - 接入层：WebSocket / SSE / 长轮询
@@ -31,8 +31,8 @@ created: 2026-09-07
 
 ## 与投研的跨领域链接
 - [[10_Reference/investing/strategies/|战法卡体系]] — 实时管道的核心消费方：战法触发判定
-- [[10_Reference/investing/specs/S022-em_get-防封熔断|S022 em_get 防封]] — 数据源风控前置依赖
-- [[10_Reference/investing/specs/S017-A股涨跌预测模型栈|S017 预测模型栈]] — 实时特征喂给预测模型，盘中实时预测
+- [[10_Reference/investing/specs/archive/m1-workflow/S022-熔断器health读路径修复|S022 em_get 防封]] — 数据源风控前置依赖
+- [[10_Reference/investing/specs/archive/m0-foundation/S017-A股涨跌预测模型栈|S017 预测模型栈]] — 实时特征喂给预测模型，盘中实时预测
 - [[10_Reference/tech-learning/concepts/async-await|async/await]] — 流处理底层依赖 async 事件循环
 
 ## 相关链接

@@ -21,7 +21,7 @@ created: 2026-09-07
 ## 与 Vibe-Research 的关系
 - 定位差异：Vibe-Research = 交互式助理，daily-stock-analysis = 定时批处理
 - 战法复用：共享 [[10_Reference/investing/strategies/|战法卡体系]]
-- 调度：参考 [[10_Reference/investing/specs/S011-调度收口|S011 调度收口]] 的事件驱动架构
+- 调度：参考 [[10_Reference/investing/specs/archive/m0-foundation/S011-调度收口|S011 调度收口]] 的事件驱动架构
 
 ## 相关链接
 - [[10_Reference/projects/MOC]]

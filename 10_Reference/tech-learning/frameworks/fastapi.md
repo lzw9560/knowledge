@@ -25,15 +25,15 @@ created: 2026-09-07
 ## 在 Vibe-Research 中的使用
 - 后端主框架：`backend/app.py` FastAPI 实例
 - 路由层：`backend/routers/` 各 router 模块
-- 契约层：[[10_Reference/investing/specs/S007-契约层|S007 契约层]] 用 Pydantic 定义所有数据契约
-- 数据层：[[10_Reference/investing/specs/S008-后端数据层迁移|S008]] 后端数据层迁移到 Pydantic 模型
-- 与前端 TS 类型对齐：[[10_Reference/investing/specs/S009-前后端类型同步|S009]] 前后端类型同步
+- 契约层：[[10_Reference/investing/specs/archive/m0-foundation/S007-契约层|S007 契约层]] 用 Pydantic 定义所有数据契约
+- 数据层：[[10_Reference/investing/specs/archive/m0-foundation/S008-后端数据层迁移|S008]] 后端数据层迁移到 Pydantic 模型
+- 与前端 TS 类型对齐：[[10_Reference/investing/specs/archive/m0-foundation/S009-前后端类型同步|S009]] 前后端类型同步
 
 ## 相关链接
 - [[10_Reference/tech-learning/MOC]]
 - [[languages/python]]
 - [[10_Reference/investing/MOC]]
-- [[10_Reference/investing/specs/S007-契约层]]
-- [[10_Reference/investing/specs/S008-后端数据层迁移]]
-- [[10_Reference/investing/specs/S009-前后端类型同步]]
+- [[10_Reference/investing/specs/archive/m0-foundation/S007-契约层]]
+- [[10_Reference/investing/specs/archive/m0-foundation/S008-后端数据层迁移]]
+- [[10_Reference/investing/specs/archive/m0-foundation/S009-前后端类型同步]]
 - [[10_Reference/meta/four-construct-ontology]]

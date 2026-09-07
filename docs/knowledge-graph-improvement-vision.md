@@ -666,7 +666,7 @@ SORT date ASC
    type: methodology
    instances:
      - 智驾：多传感器融合（camera + lidar + radar）+ 冗余降级
-     - 投研：[[market_sentiment/DASHBOARD|6 层 z-score]] + 三维向量交叉确认 + 三重护栏
+     - 投研：[[10_Reference/market_sentiment/DASHBOARD|6 层 z-score]] + 三维向量交叉确认 + 三重护栏
      - 知识图谱：四层关系推断（L1 精确 → L4 LLM 语义），逐层降置信度
    invariant: 多源独立信号交叉确认，单源失效不导致系统失效；置信度随推断层级递减
    ```
@@ -732,7 +732,7 @@ SORT date ASC
    price: null            # 私有数据，见下方合规
    size_pct: null
    strategy: "[[strategies/first_plate]]"
-   weather: "[[market_sentiment/daily/2026-09-05_pre_盘前情绪报告]]"
+   weather: "[[10_Reference/market_sentiment/daily/2026-09-05_pre_盘前情绪报告]]"
    sentiment_z: 0.1210
    divergence_d: 0.6593
    thesis: "首板 + 基因分达标，情绪中性偏修复，游资净买入"

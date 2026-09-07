@@ -25,7 +25,7 @@ created: 2026-09-07
 | async/await | 协程 | 用户态 | IO 密集 |
 
 ## 在 Vibe-Research 中的使用
-- [[10_Reference/investing/specs/S026-pre-market-async|S026 pre-market async]] — 盘前数据拉取从同步改 async/await，多数据源并发拉取
+- [[10_Reference/investing/specs/archive/m1-workflow/S026-pre-market-async|S026 pre-market async]] — 盘前数据拉取从同步改 async/await，多数据源并发拉取
 - [[10_Reference/tech-learning/frameworks/fastapi|FastAPI]] 基于 Starlette + async/await，路由天然异步
 - [[10_Reference/tech-learning/architecture/event-driven|事件驱动]] 架构的运行时即基于 async 事件循环
 
@@ -37,5 +37,5 @@ created: 2026-09-07
 - [[10_Reference/tech-learning/MOC]]
 - [[10_Reference/tech-learning/frameworks/fastapi]]
 - [[10_Reference/tech-learning/architecture/event-driven]]
-- [[10_Reference/investing/specs/S026-pre-market-async]]
+- [[10_Reference/investing/specs/archive/m1-workflow/S026-pre-market-async]]
 - [[10_Reference/meta/four-construct-ontology]]

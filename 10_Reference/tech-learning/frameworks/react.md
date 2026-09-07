@@ -25,15 +25,15 @@ created: 2026-09-07
 ## 在 Vibe-Research 中的使用
 - 前端主框架：`frontend/` Vite + React + TypeScript
 - 组件层：`frontend/src/components/` 战法卡 / 漏斗 / 状态机呈现
-- 数据层：[[10_Reference/investing/specs/S013-前端数据层|S013]] 前端数据层（TanStack Query）
-- UI 重设计：[[10_Reference/investing/specs/S014-前端UI重设计|S014]]
-- 与后端 FastAPI 契约对齐：[[10_Reference/investing/specs/S009-前后端类型同步|S009]]
+- 数据层：[[10_Reference/investing/specs/archive/m0-foundation/S013-前端数据层|S013]] 前端数据层（TanStack Query）
+- UI 重设计：[[10_Reference/investing/specs/archive/m0-foundation/S014-前端UI重设计|S014]]
+- 与后端 FastAPI 契约对齐：[[10_Reference/investing/specs/archive/m0-foundation/S009-前后端类型同步|S009]]
 
 ## 相关链接
 - [[10_Reference/tech-learning/MOC]]
 - [[languages/typescript]]
 - [[10_Reference/investing/MOC]]
-- [[10_Reference/investing/specs/S013-前端数据层]]
-- [[10_Reference/investing/specs/S014-前端UI重设计]]
-- [[10_Reference/investing/specs/S009-前后端类型同步]]
+- [[10_Reference/investing/specs/archive/m0-foundation/S013-前端数据层]]
+- [[10_Reference/investing/specs/archive/m0-foundation/S014-前端UI重设计]]
+- [[10_Reference/investing/specs/archive/m0-foundation/S009-前后端类型同步]]
 - [[10_Reference/meta/four-construct-ontology]]

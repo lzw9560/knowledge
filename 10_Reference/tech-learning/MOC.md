@@ -65,7 +65,7 @@
 > 跨域链接判据遵循 [[10_Reference/investing/logic/cross-domain-gate]]（待建）：跨域实体必须有 ≥ 2 个具体实例 + 1 条 invariant，否则不建。
 
 - [[10_Reference/investing/data-sources/akshare|akshare]] — 数据源库，技术学习 + 投研共享
-- [[10_Reference/investing/specs/S008-后端数据层迁移|S008 后端数据层迁移]] — 架构决策，技术学习参考
+- [[10_Reference/investing/specs/archive/m0-foundation/S008-后端数据层迁移|S008 后端数据层迁移]] — 架构决策，技术学习参考
 - [[10_Reference/meta/four-construct-ontology|四构件本体]] — 通用方法论，本子区同样遵循
 
 ## 关联子区

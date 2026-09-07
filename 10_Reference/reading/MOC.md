@@ -58,7 +58,7 @@
 > 跨域链接判据遵循 [[10_Reference/investing/logic/cross-domain-gate]]（待建）：跨域实体必须有 ≥ 2 个具体实例 + 1 条 invariant，否则不建。
 
 - [[10_Reference/investing/strategies/low_absorption|低吸龙头战法]] — 价值投资理念在 A 股战法中的实例化
-- [[10_Reference/investing/specs/S017-A股涨跌预测模型栈|S017 预测模型栈]] — 量化交易书与投研预测模型互参
+- [[10_Reference/investing/specs/archive/m0-foundation/S017-A股涨跌预测模型栈|S017 预测模型栈]] — 量化交易书与投研预测模型互参
 - [[10_Reference/meta/four-construct-ontology|四构件本体]] — 通用方法论
 
 ## 关联子区

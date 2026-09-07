@@ -34,7 +34,7 @@ created: 2026-09-07
 ```
 
 ## 在 Vibe-Research 中的使用
-- [[10_Reference/investing/specs/S022-em_get-防封熔断|S022 em_get 防封熔断]] — em_get 调用加熔断，连续失败快速失败避免触发更严风控
+- [[10_Reference/investing/specs/archive/m1-workflow/S022-熔断器health读路径修复|S022 em_get 防封熔断]] — em_get 调用加熔断，连续失败快速失败避免触发更严风控
 - [[10_Reference/investing/strategies/storm_reversal|暴风雨反转战法]] — 名字类比：股市"急跌反弹"即市场级"熔断后 Half-Open 探测"
 - [[10_Reference/tech-learning/concepts/caching-strategy|缓存策略]] — 降级 fallback 常用缓存值
 
@@ -45,6 +45,6 @@ created: 2026-09-07
 ## 相关链接
 - [[10_Reference/tech-learning/MOC]]
 - [[10_Reference/tech-learning/concepts/caching-strategy]]
-- [[10_Reference/investing/specs/S022-em_get-防封熔断]]
+- [[10_Reference/investing/specs/archive/m1-workflow/S022-熔断器health读路径修复]]
 - [[10_Reference/investing/strategies/storm_reversal]]
 - [[10_Reference/meta/four-construct-ontology]]

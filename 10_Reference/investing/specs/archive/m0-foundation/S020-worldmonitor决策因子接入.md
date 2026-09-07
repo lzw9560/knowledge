@@ -33,9 +33,9 @@ S018 特征层缺另类数据层（全球宏观/地缘/另类）。需通过远�
 
 ## 关联
 
-- 上游特征层：[[specs/S018-多源特征工程]]
-- 宏观主源：[[specs/S019-macro-Fred-API]]（FRED 7 系列，worldmonitor 互补不替代）
-- 下游模型：[[specs/S017-A股涨跌预测模型栈]]
+- 上游特征层：[[specs/archive/m0-foundation/S018-多源特征工程]]
+- 宏观主源：[[specs/archive/m0-foundation/S019-macro-Fred-API]]（FRED 7 系列，worldmonitor 互补不替代）
+- 下游模型：[[specs/archive/m0-foundation/S017-A股涨跌预测模型栈]]
 - 数据源：[[data-sources/worldmonitor]] [[data-sources/rss-newsradar]] [[data-sources/fred]]
 - 影响实体：[[indices/]]（全球指数） [[events/]]（地缘新闻）
 - 源文件：`specs/archive/m0-foundation/S020-worldmonitor决策因子接入/spec.md`

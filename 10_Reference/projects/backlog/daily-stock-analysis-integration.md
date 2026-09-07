@@ -22,7 +22,7 @@ created: 2026-09-07
 
 ## 与投研的跨领域链接
 - [[10_Reference/investing/data-sources/akshare|akshare]] — 共享数据源
-- [[10_Reference/investing/specs/S017-A股涨跌预测模型栈|S017 预测模型栈]] — daily-stock-analysis 的候选可作为预测模型的输入
+- [[10_Reference/investing/specs/archive/m0-foundation/S017-A股涨跌预测模型栈|S017 预测模型栈]] — daily-stock-analysis 的候选可作为预测模型的输入
 
 ## 相关链接
 - [[10_Reference/projects/MOC]]

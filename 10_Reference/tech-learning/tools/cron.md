@@ -26,13 +26,13 @@ created: 2026-09-07
 | `0 0 * * 0` | 每周日凌晨 |
 
 ## 在 Vibe-Research 生态中的使用
-- [[10_Reference/investing/specs/S011-调度收口|S011 调度收口]] — 盘前/盘中/盘后多层调度的底层触发器（cron 表达式映射交易时段）
-- [[10_Reference/investing/specs/S031-调度收口盘前多层按战法回测|S031]] — 盘前多层调度的 cron 粒度细化
+- [[10_Reference/investing/specs/archive/m0-foundation/S011-调度收口|S011 调度收口]] — 盘前/盘中/盘后多层调度的底层触发器（cron 表达式映射交易时段）
+- [[10_Reference/investing/specs/archive/m1-workflow/S031-调度收口盘前多层按战法回测|S031]] — 盘前多层调度的 cron 粒度细化
 - 与事件驱动 [[10_Reference/tech-learning/architecture/event-driven|事件驱动]] 的关系：cron 是"时间触发器"，事件驱动是"事件触发器"，二者在 S011 中合并为统一调度层
 
 ## 相关链接
 - [[10_Reference/tech-learning/MOC]]
 - [[10_Reference/tech-learning/tools/github-actions]]
 - [[10_Reference/tech-learning/architecture/event-driven]]
-- [[10_Reference/investing/specs/S011-调度收口]]
+- [[10_Reference/investing/specs/archive/m0-foundation/S011-调度收口]]
 - [[10_Reference/meta/four-construct-ontology]]

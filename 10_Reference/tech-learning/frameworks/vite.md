@@ -26,12 +26,12 @@ created: 2026-09-07
 ## 在 Vibe-Research 中的使用
 - 前端构建：`frontend/` 的 `vite.config.ts` 是构建配置入口
 - React Fast Refresh：[[frameworks/react|React]] 组件修改即时生效
-- 与 [[10_Reference/investing/specs/S014-前端UI重设计|S014 前端 UI 重设计]] 关联：Vite 的快速 HMR 让 UI 迭代效率高
+- 与 [[10_Reference/investing/specs/archive/m0-foundation/S014-前端UI重设计|S014 前端 UI 重设计]] 关联：Vite 的快速 HMR 让 UI 迭代效率高
 - 类型检查：配合 [[languages/typescript|TypeScript]] 的 `tsc --noEmit`
 
 ## 相关链接
 - [[10_Reference/tech-learning/MOC]]
 - [[frameworks/react]]
 - [[languages/typescript]]
-- [[10_Reference/investing/specs/S014-前端UI重设计]]
+- [[10_Reference/investing/specs/archive/m0-foundation/S014-前端UI重设计]]
 - [[10_Reference/meta/four-construct-ontology]]

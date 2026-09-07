@@ -30,7 +30,7 @@ created: 2026-09-07
 - 后端服务 / 微服务（Docker / Kubernetes / etcd 都是 Go 写的）
 - 云原生基础设施（CNCF 生态主力语言）
 - CLI 工具（gh / cobra 生态）
-- 投研可参考场景：高性能数据采集网关、调度器（[[10_Reference/investing/specs/S011-调度收口|S011]] 的备选实现语言）
+- 投研可参考场景：高性能数据采集网关、调度器（[[10_Reference/investing/specs/archive/m0-foundation/S011-调度收口|S011]] 的备选实现语言）
 
 ## 与 Vibe-Research 的关系
 - Vibe-Research 当前主语言是 Python + TypeScript，未用 Go
@@ -42,5 +42,5 @@ created: 2026-09-07
 - [[languages/python]]
 - [[languages/rust]]
 - [[10_Reference/tech-learning/architecture/microservices]]
-- [[10_Reference/investing/specs/S011-调度收口]]
+- [[10_Reference/investing/specs/archive/m0-foundation/S011-调度收口]]
 - [[10_Reference/meta/four-construct-ontology]]
