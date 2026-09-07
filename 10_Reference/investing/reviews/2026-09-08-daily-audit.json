@@ -22,13 +22,13 @@
     "action": 4
   },
   "stub_count": 43,
-  "llm_generated_count": 524,
+  "llm_generated_count": 576,
   "confidence_distribution": {
     "medium": 1027,
     "high": 1422
   },
   "no_confidence_count": 41,
-  "broken_links": 193,
+  "broken_links": 244,
   "broken_links_top10": [
     [
       "10_Reference/tech-learning/concepts/graceful-degradation",
@@ -41,6 +41,18 @@
     [
       "10_Reference/tech-learning/concepts/data-contract",
       20
+    ],
+    [
+      "10_Reference/investing/MOC",
+      16
+    ],
+    [
+      "10_Reference/investing/reviews/index",
+      16
+    ],
+    [
+      "10_Reference/investing/inbox/index",
+      16
     ],
     [
       "10_Reference/reading/notes/均值回归-笔记",
@@ -57,32 +69,8 @@
     [
       "10_Reference/tech-learning/concepts/circuit-breaker",
       11
-    ],
-    [
-      "10_Reference/tech-learning/concepts/rate-limiting",
-      11
-    ],
-    [
-      "10_Reference/reading/notes/道氏理论-笔记",
-      11
-    ],
-    [
-      "10_Reference/reading/notes/周期定位-笔记",
-      11
     ]
   ],
-  "orphan_count": 193,
-  "orphan_by_type": {
-    "actions": 1,
-    "concepts": 1,
-    "data-sources": 8,
-    "dragon-tiger": 41,
-    "events": 13,
-    "indices": 3,
-    "industries": 5,
-    "logic": 10,
-    "reports": 33,
-    "specs": 76,
-    "stocks": 2
-  }
+  "orphan_count": 0,
+  "orphan_by_type": {}
 }
