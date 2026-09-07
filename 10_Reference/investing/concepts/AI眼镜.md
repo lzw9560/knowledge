@@ -4,6 +4,8 @@ code: BK1178
 name: AI眼镜
 related_industry: 消费电子
 created: 2026-09-07
+confidence: medium
+source: astock.concept_blocks
 ---
 
 > [!info] 💡 概念信息
