@@ -5,10 +5,12 @@
 ## 实体列表（Dataview 动态）
 
 ```dataview
-TABLE name AS "战法名", edge_family AS "edge 家族", entry_conditions AS "入场条件"
-FROM "strategies"
-WHERE type = "strategy"
+TABLE WITHOUT ID
+  name AS "战法名", edge_family AS "edge 家族", entry_conditions AS "入场条件"
+FROM "10_Reference/investing/strategies"
+WHERE type = "strategy" AND file.name != "index"
 SORT name ASC
+LIMIT 50
 ```
 
 ## 关系

@@ -5,10 +5,12 @@
 ## 实体列表（Dataview 动态）
 
 ```dataview
-TABLE code AS "股票代码", pe_ttm AS "PE(TTM)", pb AS "PB", peg AS "PEG", pe_percentile AS "PE分位%", pb_percentile AS "PB分位%", dividend_yield AS "股息率%"
-FROM "valuations"
-WHERE type = "valuation"
+TABLE WITHOUT ID
+  code AS "股票代码", pe_ttm AS "PE(TTM)", pb AS "PB", peg AS "PEG", pe_percentile AS "PE分位%", pb_percentile AS "PB分位%", dividend_yield AS "股息率%"
+FROM "10_Reference/investing/valuations"
+WHERE type = "valuation" AND file.name != "index"
 SORT code ASC, created DESC
+LIMIT 50
 ```
 
 

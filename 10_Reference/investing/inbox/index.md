@@ -6,10 +6,12 @@
 ## 待审实体（Dataview 动态）
 
 ```dataview
-TABLE entity_type AS "类型", name AS "名称", confidence AS "置信度", quality_score AS "质量分", source AS "来源"
-FROM "inbox"
+TABLE WITHOUT ID
+  entity_type AS "类型", name AS "名称", confidence AS "置信度", quality_score AS "质量分", source AS "来源"
+FROM "10_Reference/investing/inbox"
 WHERE type != "index"
 SORT quality_score ASC, confidence ASC
+LIMIT 50
 ```
 
 ## 质量四维度
@@ -63,9 +65,10 @@ python3 scripts/review_inbox.py --auto --type stock
 最新审核报告见 [[reviews/index|审查报告索引]]，inbox 专属晋级日志在 `reviews/inbox-promotion-<date>.md`。
 
 ```dataview
-TABLE audit_date AS "日期", findings_count AS "问题数", status AS "状态"
-FROM "reviews"
-WHERE type = "audit"
+TABLE WITHOUT ID
+  audit_date AS "日期", findings_count AS "问题数", status AS "状态"
+FROM "10_Reference/investing/reviews"
+WHERE type = "audit" AND file.name != "index"
 SORT audit_date DESC
 LIMIT 5
 ```

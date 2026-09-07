@@ -5,10 +5,12 @@
 ## 实体列表（Dataview 动态）
 
 ```dataview
-TABLE code AS "指数代码", name AS "指数名称", market AS "市场"
-FROM "indices"
-WHERE type = "index"
+TABLE WITHOUT ID
+  code AS "指数代码", name AS "指数名称", market AS "市场"
+FROM "10_Reference/investing/indices"
+WHERE type = "index" AND file.name != "index"
 SORT code ASC
+LIMIT 50
 ```
 
 ## 关系

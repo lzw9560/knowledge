@@ -5,10 +5,12 @@
 ## 实体列表（Dataview 动态）
 
 ```dataview
-TABLE code AS "股票代码", period AS "报告期", revenue AS "营收(亿)", net_profit AS "净利(亿)", roe AS "ROE%", gross_margin AS "毛利率%", eps AS "EPS"
-FROM "metrics"
-WHERE type = "metric"
+TABLE WITHOUT ID
+  code AS "股票代码", period AS "报告期", revenue AS "营收(亿)", net_profit AS "净利(亿)", roe AS "ROE%", gross_margin AS "毛利率%", eps AS "EPS"
+FROM "10_Reference/investing/metrics"
+WHERE type = "metric" AND file.name != "index"
 SORT code ASC, period DESC
+LIMIT 50
 ```
 
 

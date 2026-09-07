@@ -5,10 +5,12 @@
 ## 实体列表（Dataview 动态）
 
 ```dataview
-TABLE name AS "名称", layer AS "层级", rate_limit AS "限流", fallback AS "降级", provides AS "提供字段"
+TABLE WITHOUT ID
+  name AS "名称", layer AS "层级", rate_limit AS "限流", fallback AS "降级", provides AS "提供字段"
 FROM "10_Reference/investing/data-sources"
-WHERE type = "data_source"
+WHERE type = "data_source" AND file.name != "index"
 SORT layer ASC, name ASC
+LIMIT 50
 ```
 
 ## 关系

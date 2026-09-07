@@ -5,10 +5,12 @@
 ## 实体列表（Dataview 动态）
 
 ```dataview
-TABLE name AS "姓名", org AS "机构", coverage_count AS "覆盖数"
-FROM "analysts"
-WHERE type = "analyst"
+TABLE WITHOUT ID
+  name AS "姓名", org AS "机构", coverage_count AS "覆盖数"
+FROM "10_Reference/investing/analysts"
+WHERE type = "analyst" AND file.name != "index"
 SORT name ASC
+LIMIT 50
 ```
 
 ## 关系

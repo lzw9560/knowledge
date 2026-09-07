@@ -44,10 +44,12 @@ confidence: high
 Dataview 查询（在审查脚本或 MOC 渲染时用）：
 
 ```dataview
-TABLE code AS "代码", name AS "名称", pe_ttm AS "PE(TTM)"
-FROM "stocks"
-WHERE type = "stock" AND (pe_ttm < 0 OR pe_ttm > 500)
+TABLE WITHOUT ID
+  code AS "代码", name AS "名称", pe_ttm AS "PE(TTM)"
+FROM "10_Reference/investing/stocks"
+WHERE type = "stock" AND file.name != "index" AND (pe_ttm < 0 OR pe_ttm > 500)
 SORT pe_ttm ASC
+LIMIT 50
 ```
 
 

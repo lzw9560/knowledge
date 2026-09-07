@@ -5,10 +5,12 @@
 ## 实体列表（Dataview 动态）
 
 ```dataview
-TABLE date AS "日期", event_type AS "类型", summary AS "摘要", source AS "来源"
-FROM "events"
-WHERE type = "event"
+TABLE WITHOUT ID
+  date AS "日期", event_type AS "类型", summary AS "摘要", source AS "来源"
+FROM "10_Reference/investing/events"
+WHERE type = "event" AND file.name != "index"
 SORT date DESC
+LIMIT 50
 ```
 
 ## 关系

@@ -6,19 +6,23 @@
 ## Spec 实体列表（Dataview 动态）
 
 ```dataview
-TABLE number AS "编号", title AS "标题", status AS "状态"
-FROM "specs"
-WHERE type = "spec"
+TABLE WITHOUT ID
+  number AS "编号", title AS "标题", status AS "状态"
+FROM "10_Reference/investing/specs"
+WHERE type = "spec" AND file.name != "index"
 SORT number ASC
+LIMIT 50
 ```
 
 ## Decision 实体列表（Dataview 动态）
 
 ```dataview
-TABLE number AS "编号", title AS "标题", status AS "状态"
-FROM "specs"
-WHERE type = "decision"
+TABLE WITHOUT ID
+  number AS "编号", title AS "标题", status AS "状态"
+FROM "10_Reference/investing/specs"
+WHERE type = "decision" AND file.name != "index"
 SORT number ASC
+LIMIT 50
 ```
 
 ## 关系

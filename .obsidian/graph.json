@@ -99,6 +99,41 @@
       }
     },
     {
+      "query": "path:10_Reference/investing/reports/",
+      "color": {
+        "a": 1,
+        "rgb": 16753920
+      }
+    },
+    {
+      "query": "path:10_Reference/investing/analysts/",
+      "color": {
+        "a": 1,
+        "rgb": 10027008
+      }
+    },
+    {
+      "query": "path:10_Reference/investing/dragon-tiger/",
+      "color": {
+        "a": 1,
+        "rgb": 255
+      }
+    },
+    {
+      "query": "path:10_Reference/investing/reviews/",
+      "color": {
+        "a": 1,
+        "rgb": 8421504
+      }
+    },
+    {
+      "query": "path:10_Reference/investing/inbox/",
+      "color": {
+        "a": 1,
+        "rgb": 16711680
+      }
+    },
+    {
       "query": "path:10_Reference/market_sentiment/",
       "color": {
         "a": 1,
@@ -119,9 +154,9 @@
   "nodeSizeMultiplier": 1.2,
   "lineSizeMultiplier": 0.5,
   "collapse-forces": false,
-  "centerStrength": 0.3,
-  "repelStrength": 15,
-  "linkStrength": 0.5,
+  "centerStrength": 0.5,
+  "repelStrength": 10,
+  "linkStrength": 0.6,
   "linkDistance": 150,
   "scale": 1.5,
   "close": true

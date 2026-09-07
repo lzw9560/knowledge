@@ -6,10 +6,12 @@
 ## 规则列表（Dataview 动态）
 
 ```dataview
-TABLE rule_type AS "类型", target_entity AS "适用实体", severity AS "严重级"
-FROM "logic"
-WHERE type = "logic"
+TABLE WITHOUT ID
+  rule_type AS "类型", target_entity AS "适用实体", severity AS "严重级"
+FROM "10_Reference/investing/logic"
+WHERE type = "logic" AND file.name != "index"
 SORT severity DESC, rule_type ASC
+LIMIT 50
 ```
 
 ## 规则类型

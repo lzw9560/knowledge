@@ -5,10 +5,12 @@
 ## 实体列表（Dataview 动态）
 
 ```dataview
-TABLE date AS "日期", code AS "股票代码", institution_net AS "机构净额(亿)", seats AS "席位"
-FROM "dragon-tiger"
-WHERE type = "dragon_tiger"
+TABLE WITHOUT ID
+  date AS "日期", code AS "股票代码", institution_net AS "机构净额(亿)", seats AS "席位"
+FROM "10_Reference/investing/dragon-tiger"
+WHERE type = "dragon_tiger" AND file.name != "index"
 SORT date DESC, code ASC
+LIMIT 50
 ```
 
 ## 关系

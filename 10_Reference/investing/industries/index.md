@@ -5,10 +5,12 @@
 ## 实体列表（Dataview 动态）
 
 ```dataview
-TABLE code AS "行业代码", name AS "行业名称", source AS "分类来源"
-FROM "industries"
-WHERE type = "industry"
+TABLE WITHOUT ID
+  code AS "行业代码", name AS "行业名称", source AS "分类来源"
+FROM "10_Reference/investing/industries"
+WHERE type = "industry" AND file.name != "index"
 SORT code ASC
+LIMIT 50
 ```
 
 ## 关系

@@ -33,10 +33,12 @@ created: <% tp.date.now("YYYY-MM-DD") %>
 > 若下表为空，说明尚未有股票笔记链接本战法（可在股票笔记的"匹配战法"段手工补 `[[strategies/<本战法名>]]`）。
 
 ```dataview
-TABLE code AS "代码", name AS "名称", industry AS "行业"
-FROM "stocks"
-WHERE type = "stock" AND contains(file.outlinks, this.file.link)
+TABLE WITHOUT ID
+  code AS "代码", name AS "名称", industry AS "行业"
+FROM "10_Reference/investing/stocks"
+WHERE type = "stock" AND file.name != "index" AND contains(file.outlinks, this.file.link)
 SORT code ASC
+LIMIT 50
 ```
 
 # 关联事件
@@ -46,9 +48,10 @@ SORT code ASC
 > events/ 当前为空壳（仅 index.md），下表预期为空，待事件实体灌入后自动填充。
 
 ```dataview
-TABLE date AS "日期", event_type AS "类型", summary AS "摘要"
-FROM "events"
-WHERE type = "event" AND contains(file.outlinks, this.file.link)
+TABLE WITHOUT ID
+  date AS "日期", event_type AS "类型", summary AS "摘要"
+FROM "10_Reference/investing/events"
+WHERE type = "event" AND file.name != "index" AND contains(file.outlinks, this.file.link)
 SORT date DESC
 LIMIT 10
 ```

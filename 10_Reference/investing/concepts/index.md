@@ -5,10 +5,12 @@
 ## 实体列表（Dataview 动态）
 
 ```dataview
-TABLE code AS "概念代码", name AS "概念名称", related_industry AS "关联行业"
-FROM "concepts"
-WHERE type = "concept"
+TABLE WITHOUT ID
+  code AS "概念代码", name AS "概念名称", related_industry AS "关联行业"
+FROM "10_Reference/investing/concepts"
+WHERE type = "concept" AND file.name != "index"
 SORT name ASC
+LIMIT 50
 ```
 
 ## 关系

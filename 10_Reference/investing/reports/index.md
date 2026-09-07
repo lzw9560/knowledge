@@ -5,10 +5,12 @@
 ## 实体列表（Dataview 动态）
 
 ```dataview
-TABLE title AS "标题", org AS "机构", researcher AS "分析师", publish_date AS "日期", rating_change AS "评级", target_price AS "目标价"
-FROM "reports"
-WHERE type = "report"
+TABLE WITHOUT ID
+  title AS "标题", org AS "机构", researcher AS "分析师", publish_date AS "日期", rating_change AS "评级", target_price AS "目标价"
+FROM "10_Reference/investing/reports"
+WHERE type = "report" AND file.name != "index"
 SORT publish_date DESC
+LIMIT 50
 ```
 
 ## 关系

@@ -6,10 +6,12 @@
 ## 审查报告列表
 
 ```dataview
-TABLE audit_date AS "日期", findings_count AS "问题数", critical AS "严重", status AS "状态"
-FROM "reviews"
-WHERE type = "audit"
+TABLE WITHOUT ID
+  audit_date AS "日期", findings_count AS "问题数", critical AS "严重", status AS "状态"
+FROM "10_Reference/investing/reviews"
+WHERE type = "audit" AND file.name != "index"
 SORT audit_date DESC
+LIMIT 20
 ```
 
 ## 8 个检查工具
@@ -19,7 +21,7 @@ SORT audit_date DESC
 | 检查 | 目的 | Obsidian/MCP 实现 |
 |---|---|---|
 | `summary` | 图谱整体摘要 | Dataview 聚合 + `get_vault_stats` |
-| `coverage` | 各实体类型覆盖率 | `TABLE FROM "stocks"` 计数对比预期 |
+| `coverage` | 各实体类型覆盖率 | `TABLE FROM "10_Reference/investing/stocks"` 计数对比预期 |
 | `orphan_check` | 无入边实体 | `find_orphans` MCP |
 | `broken_link` | `[[]]` 指向不存在文件 | `find_broken_links` MCP |
 | `schema_infer` | 实际 schema vs 设计偏差 | Dataview 查 frontmatter 字段分布 |

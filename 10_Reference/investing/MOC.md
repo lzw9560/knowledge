@@ -40,11 +40,14 @@ LIMIT 1
 ```
 
 ```dataview
-TABLE length(rows) AS "实体数"
+TABLE WITHOUT ID
+  type AS "类型",
+  length(rows) AS "实体数"
 FROM "10_Reference/investing"
 WHERE type != null AND file.name != "index" AND file.name != "MOC" AND file.name != "README"
 GROUP BY type
 SORT type ASC
+LIMIT 30
 ```
 
 ---
@@ -81,6 +84,7 @@ TABLE WITHOUT ID
 FROM "10_Reference/investing/stocks"
 WHERE type = "stock" AND industry = "白酒"
 SORT pe_ttm ASC
+LIMIT 20
 ```
 
 ### 2. PE < 15 低估值股票
@@ -165,11 +169,14 @@ LIMIT 10
 ### 各类型实体计数（Dataview 动态）
 
 ```dataview
-TABLE length(rows) AS "实体数"
+TABLE WITHOUT ID
+  type AS "类型",
+  length(rows) AS "实体数"
 FROM "10_Reference/investing"
 WHERE type != null AND file.name != "index" AND file.name != "MOC" AND file.name != "README"
 GROUP BY type
 SORT type ASC
+LIMIT 30
 ```
 
 ---
@@ -205,6 +212,7 @@ TABLE WITHOUT ID
 FROM "10_Reference/investing/strategies"
 WHERE type = "strategy"
 SORT name ASC
+LIMIT 20
 ```
 
 ### 📋 项目决策统计
@@ -218,6 +226,7 @@ TABLE WITHOUT ID
 FROM "10_Reference/investing/specs"
 WHERE type = "spec"
 SORT number ASC
+LIMIT 30
 ```
 
 ---
@@ -245,7 +254,7 @@ SORT number ASC
 
 ```dataview
 TABLE code AS "代码", name AS "名称", pe_ttm AS "PE(TTM)", pb AS "PB"
-FROM "stocks"
+FROM "10_Reference/investing/stocks"
 WHERE type = "stock" AND pe_ttm < 15
 SORT pe_ttm ASC
 ```

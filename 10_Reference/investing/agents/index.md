@@ -5,10 +5,12 @@
 ## 角色列表
 
 ```dataview
-TABLE name AS "角色", role AS "职能", debates_with AS "辩论对手"
+TABLE WITHOUT ID
+  name AS "角色", role AS "职能", debates_with AS "辩论对手"
 FROM "10_Reference/investing/agents"
-WHERE type = "agent_role"
+WHERE type = "agent_role" AND file.name != "index"
 SORT name ASC
+LIMIT 50
 ```
 
 ## 角色分类

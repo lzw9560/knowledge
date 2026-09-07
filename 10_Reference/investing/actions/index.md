@@ -6,10 +6,12 @@
 ## 动作列表（Dataview 动态）
 
 ```dataview
-TABLE action_type AS "类型", trigger AS "触发条件", target AS "目标实体"
-FROM "actions"
-WHERE type = "action"
+TABLE WITHOUT ID
+  action_type AS "类型", trigger AS "触发条件", target AS "目标实体"
+FROM "10_Reference/investing/actions"
+WHERE type = "action" AND file.name != "index"
 SORT action_type ASC
+LIMIT 50
 ```
 
 ## 动作类型
