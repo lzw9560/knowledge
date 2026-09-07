@@ -8,11 +8,11 @@
 
 | 实体类 | 文件夹 | 数量 | 说明 |
 |---|---|---|---|
-| 项目 | [[active/]] | 5 | 进行中 |
-| 候选 | [[backlog/]] | 2 | 待启动 |
+| 项目 | [[active/]] | 7 | 进行中 |
+| 候选 | [[backlog/]] | 5 | 待启动 |
 | 归档 | [[archived/]] | 1 | 已结束 |
 
-> 种子实体合计 8 个。
+> 实体合计 13 个。
 
 ## 种子实体
 
@@ -22,10 +22,15 @@
 - [[active/knowledge-graph]] — 本知识图谱项目本身（元项目）
 - [[active/a-plate-sentinel]] — A-Plate-Sentinel 板块情绪哨兵
 - [[active/daily-stock-analysis]] — 每日股票分析
+- [[active/obsidian-mcp]] — Obsidian MCP 连接项目
+- [[active/quartz-deploy]] — Quartz 站点部署项目
 
 ### 待启动
 - [[backlog/quartz-site]] — Quartz 静态站点（刚部署）
 - [[backlog/wechat-bot]] — 微信 bot（代码就绪待配置）
+- [[backlog/daily-stock-analysis-integration]] — daily-stock-analysis 纳入图谱
+- [[backlog/a-plate-sentinel-integration]] — a-Plate-Sentinel 纳入图谱
+- [[backlog/incremental-sync-automation]] — 增量同步自动化
 
 ### 已归档
 - [[archived/vibe-research-bakup]] — Vibe-Research 备份仓（S006 重写后归档）

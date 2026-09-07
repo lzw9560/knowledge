@@ -106,6 +106,16 @@ SORT pe_ttm ASC
 
 左侧栏图标 → Graph View（快捷键 `Ctrl/Cmd+G`），可看到所有实体的双链网络。建议按 `type` 字段染色区分股票/行业/研报/战法。
 
+## 🔍 分析工具
+
+> 知识图谱深度分析层——图算法/时间线/因果链，从"实体+关系"两层扩展到可计算的图结构。
+
+- **图算法分析**：`scripts/graph_analysis.py` → `docs/graph-analysis-report.md`
+  - 社区发现（LPA 标签传播）/ 入度中心性（hub 节点）/ 桥节点（跨社区连接者）/ BFS 最短路径
+- **时间线视图**：`scripts/timeline_view.py` → `docs/timeline-report.md`
+  - 按 frontmatter date 字段排列所有事件实体，按月分组
+- **因果链规则**：[[logic/causal-chains]] — 因果（→）vs 相关（↔）vs 待验证（?>）标注规范
+
 ---
 
 ## 与项目代码的关系

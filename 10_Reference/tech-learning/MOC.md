@@ -10,11 +10,12 @@
 |---|---|---|---|
 | 语言 | [[languages/]] | 4 | 编程语言（Python/TS/Go/Rust） |
 | 框架 | [[frameworks/]] | 5 | 前后端框架（FastAPI/React/Vite/Tailwind/Pydantic） |
-| 工具 | [[tools/]] | 4 | 工具链（Docker/Git/uv/Obsidian） |
-| 架构 | [[architecture/]] | 4 | 架构模式（事件驱动/清洁架构/微服务/事件溯源） |
+| 工具 | [[tools/]] | 8 | 工具链（Docker/Git/uv/Obsidian + Compose/GH Actions/obsidian-git/cron） |
+| 架构 | [[architecture/]] | 7 | 架构模式（事件驱动/清洁架构/微服务/事件溯源 + CQRS/六边形/Saga） |
+| 概念 | [[concepts/]] | 3 | 编程概念（async-await/类型安全/清洁代码） |
 | 项目 | [[projects/]] | — | 技术项目笔记（区别于 [[10_Reference/projects/]] 项目追踪元数据） |
 
-> 种子实体合计 17 个 + 3 个模板 = 20 文件。
+> 实体合计 27 个 + 3 个模板 = 30 文件。
 
 ## 种子实体
 
@@ -36,12 +37,24 @@
 - [[tools/git]] — Git：版本控制
 - [[tools/uv]] — uv：Python 包管理器/Vibe-Research 用
 - [[tools/obsidian]] — Obsidian：知识管理工具/本 vault 用
+- [[tools/docker-compose]] — Docker Compose：多容器编排
+- [[tools/github-actions]] — GitHub Actions：CI/CD
+- [[tools/obsidian-git]] — obsidian-git：Obsidian git 同步插件
+- [[tools/cron]] — cron：定时任务
 
 ### 架构
 - [[architecture/event-driven]] — 事件驱动：S011 调度收口参考
 - [[architecture/clean-architecture]] — 清洁架构：分层模式/S006 系统重写参考
 - [[architecture/microservices]] — 微服务：S011 调度收口边界参考
 - [[architecture/event-sourcing]] — 事件溯源：工作流状态机参考
+- [[architecture/cqrs]] — CQRS：命令查询职责分离/S007 契约层读路径参考
+- [[architecture/hexagonal]] — 六边形架构：端口适配器/数据源抽象参考
+- [[architecture/saga]] — Saga：分布式事务/S011 多层调度补偿参考
+
+### 概念
+- [[concepts/async-await]] — async/await：异步编程/S026 异步化参考
+- [[concepts/type-safety]] — 类型安全：静态类型/S007 Pydantic 契约参考
+- [[concepts/clean-code]] — 清洁代码：代码层清洁/S006 重写参考
 
 ## 与投研的跨领域链接
 
