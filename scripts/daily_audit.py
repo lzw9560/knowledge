@@ -13,6 +13,9 @@ from collections import Counter, defaultdict
 from datetime import datetime
 
 VAULT = Path(__file__).resolve().parent.parent / "10_Reference" / "investing"
+# 跨领域搜索根——用于解析跨子目录的 [[]] 链接
+REFERENCE_ROOT = Path(__file__).resolve().parent.parent / "10_Reference"
+VAULT_ROOT = Path(__file__).resolve().parent.parent
 
 
 def parse_frontmatter(content):
@@ -44,24 +47,25 @@ def extract_links(content):
 
 
 def resolve_link(target):
-    # 支持 ../../ 相对路径跳层
-    if target.startswith("../"):
-        # 从 VAULT 的父目录开始（investing/ 的上级是 10_Reference/）
-        resolved = VAULT.parent  # 10_Reference/
-        parts = target.split("/")
-        i = 0
-        while i < len(parts) and parts[i] == "..":
-            resolved = resolved.parent
-            i += 1
-        remaining = "/".join(parts[i:])
-        candidates = [
-            resolved / (remaining + ".md"),
-            resolved / remaining,
-        ]
-        return any(c.exists() for c in candidates)
+    # Obsidian [[]] 短路径——在 vault 全局搜索
+    # 先试 investing/ 内
     candidates = [
         VAULT / (target + ".md"),
         VAULT / target,
+    ]
+    if any(c.exists() for c in candidates):
+        return True
+    # 再试 10_Reference/ 下其他子目录（tech-learning/reading/projects/meta/market_sentiment）
+    candidates = [
+        REFERENCE_ROOT / (target + ".md"),
+        REFERENCE_ROOT / target,
+    ]
+    if any(c.exists() for c in candidates):
+        return True
+    # 最后试 vault 根（如 🏠 首页）
+    candidates = [
+        VAULT_ROOT / (target + ".md"),
+        VAULT_ROOT / target,
     ]
     return any(c.exists() for c in candidates)
 
