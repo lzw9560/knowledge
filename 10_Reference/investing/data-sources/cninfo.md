@@ -50,3 +50,9 @@ source: ARCHITECTURE.md
 ## 🔗 关联
 
 - **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个
+
+## 🔧 技术栈
+
+- 🔧 [[10_Reference/tech-learning/concepts/graceful-degradation|优雅降级]] — 巨潮互动易无降级，失败标灰
+- 🔧 [[10_Reference/tech-learning/concepts/data-contract|数据契约]] — 互动易数据由契约层统一形状
+- 🔧 [[10_Reference/tech-learning/concepts/caching-strategy|缓存策略]] — 低频数据入缓存

@@ -4,7 +4,7 @@ rule_id: ENTITY-ARCHIVE-001
 rule_type: 状态机
 target_entity: 全类型
 severity: medium
-condition: 实体废弃（status: deprecated 或 90+ 天无更新且无入边）
+condition: "实体废弃（status: deprecated 或 90+ 天无更新且无入边）"
 action_on_violation: 废弃实体未归档直接删 → 报 critical；归档未留 redirect → 报 low
 source: AGENTS.md 工程底线（正式区直接删 → critical，从 git 恢复 + 归档而非删除）
 created: 2026-09-07

@@ -50,3 +50,9 @@ source: ARCHITECTURE.md
 ## 🔗 关联
 
 - **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个
+
+## 🔧 技术栈
+
+- 🔧 [[10_Reference/tech-learning/concepts/graceful-degradation|优雅降级]] — 百度股市通日 K 线无降级，失败即标灰
+- 🔧 [[10_Reference/tech-learning/concepts/data-contract|数据契约]] — 返回数据由 Pydantic 契约层统一形状
+- 🔧 [[10_Reference/tech-learning/concepts/caching-strategy|缓存策略]] — 日 K 入缓存

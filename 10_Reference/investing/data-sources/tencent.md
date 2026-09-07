@@ -52,3 +52,9 @@ source: ARCHITECTURE.md
 ## 🔗 关联
 
 - **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个
+
+## 🔧 技术栈
+
+- 🏗️ [[10_Reference/tech-learning/architecture/layered-architecture|分层架构]] — 腾讯行情为底座层（L1），无降级，上层依赖此层
+- 🔧 [[10_Reference/tech-learning/concepts/caching-strategy|缓存策略]] — 高频行情入缓存降低请求
+- 🔧 [[10_Reference/tech-learning/concepts/data-contract|数据契约]] — 行情返回由 Pydantic 契约层统一形状

@@ -51,3 +51,9 @@ source: ARCHITECTURE.md
 ## 🔗 关联
 
 - **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个
+
+## 🔧 技术栈
+
+- 🔧 [[10_Reference/tech-learning/concepts/circuit-breaker|熔断器]] — datacenter（龙虎榜/解禁/融资融券）采集加熔断
+- 🔧 [[10_Reference/tech-learning/concepts/rate-limiting|限流]] — 共用 em_get QPS≤2 限流
+- 🔧 [[10_Reference/tech-learning/concepts/caching-strategy|缓存策略]] — 低频数据入缓存降低重复请求

@@ -53,3 +53,9 @@ source: ARCHITECTURE.md
 ## 🔗 关联
 
 - **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个
+
+## 🔧 技术栈
+
+- 🔧 [[10_Reference/tech-learning/tools/uv|uv 包管理]] — akshare Python 包由 uv 统一管理与锁版本（pyproject.toml + uv.lock）
+- 🔧 [[10_Reference/tech-learning/concepts/graceful-degradation|优雅降级]] — 惰性导入，缺失时 DependencyMissing 优雅报错不挡启动
+- 🔧 [[10_Reference/tech-learning/frameworks/pydantic|Pydantic]] — akshare 返回的裸 dict 由契约层吸收为 Pydantic 模型

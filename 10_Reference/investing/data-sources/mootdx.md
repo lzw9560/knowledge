@@ -53,3 +53,9 @@ source: ARCHITECTURE.md
 ## 🔗 关联
 
 - **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个
+
+## 🔧 技术栈
+
+- 🔧 [[10_Reference/tech-learning/tools/uv|uv 包管理]] — mootdx Python 包由 uv 管理锁版本
+- 🔧 [[10_Reference/tech-learning/concepts/graceful-degradation|优雅降级]] — 惰性导入，缺失时 DependencyMissing 优雅报错
+- 🔧 [[10_Reference/tech-learning/concepts/data-contract|数据契约]] — TCP 7709 返回数据由契约层统一形状

@@ -50,3 +50,9 @@ source: ARCHITECTURE.md
 ## 🔗 关联
 
 - **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个
+
+## 🔧 技术栈
+
+- 🔧 [[10_Reference/tech-learning/concepts/data-contract|数据契约]] — 全球宏观决策因子由契约层统一形状（S020 接入）
+- 🔧 [[10_Reference/tech-learning/concepts/graceful-degradation|优雅降级]] — MCP 远程无降级，失败标灰
+- 🔧 [[10_Reference/tech-learning/concepts/caching-strategy|缓存策略]] — 宏观决策因子低频，入缓存

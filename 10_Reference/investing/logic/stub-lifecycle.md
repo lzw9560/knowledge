@@ -4,7 +4,7 @@ rule_id: STUB-LIFECYCLE-001
 rule_type: 状态机
 target_entity: 全类型
 severity: low
-condition: stub 实体（status: stub）→ 填充关键字段 → 转 status: active
+condition: "stub 实体（status: stub）→ 填充关键字段 → 转 status: active"
 action_on_violation: stub 滞留 > 30 天未填充 → 标 stub_stale；stub 直接当 active 用 → 报 medium
 source: ora-3 §1.3（inbox stub 通道）+ AGENTS.md 工程底线（不臆造数据——stub 是占位非成品）
 created: 2026-09-07
