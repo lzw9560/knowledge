@@ -78,7 +78,7 @@ SORT type ASC
 
 - **触发动作**：[[10_Reference/investing/actions/index|actions/]]
 - **前置规则**：[[10_Reference/investing/logic/entity-lifecycle]]（生命周期末端进归档）
-- **相关规则**：[[10_Reference/investing/logic/stale_check]]（90 天未更新判定）
+- **相关规则**：[[10_Reference/investing/logic/data-freshness]]（90 天未更新判定）
 - **约束实体**：[[10_Reference/investing/stocks/index|stocks/]] [[10_Reference/investing/industries/index|industries/]] [[10_Reference/investing/concepts/index|concepts/]]
 - **来源决策**：[[10_Reference/investing/specs/index|specs/]]
 - **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个

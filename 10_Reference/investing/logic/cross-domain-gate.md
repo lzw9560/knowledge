@@ -33,5 +33,5 @@ confidence: high
 
 ## 🔗 关联
 
-- 被引用于：[[MOC]]（跨领域链接段）
+- 被引用于：[[10_Reference/investing/MOC]]（跨领域链接段）
 - **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个
