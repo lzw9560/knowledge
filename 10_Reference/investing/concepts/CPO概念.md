@@ -10,7 +10,7 @@ source: astock.concept_blocks
 
 > [!info] 💡 概念信息
 > **概念**：CPO概念  **关联行业**：通信设备
-> **成分股数**：0
+> **成分股数**：8
 >
 > **关联**：[[10_Reference/investing/industries/index|industries/]] · [[10_Reference/investing/data-sources/index|data-sources/]]
 

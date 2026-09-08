@@ -10,7 +10,7 @@ source: astock.concept_blocks
 
 > [!info] 💡 概念信息
 > **概念**：IPO受益  **关联行业**：证券
-> **成分股数**：0
+> **成分股数**：2
 >
 > **关联**：[[10_Reference/investing/industries/index|industries/]] · [[10_Reference/investing/data-sources/eastmoney-push2|东财 push2]]
 

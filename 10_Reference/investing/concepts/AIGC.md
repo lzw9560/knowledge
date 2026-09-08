@@ -7,7 +7,7 @@ created: 2026-09-07
 ---
 
 > [!info] 概念信息
-> **概念**：AIGC  **关联行业**：传媒  **成分股数**：0
+> **概念**：AIGC  **关联行业**：传媒  **成分股数**：2
 > 
 > **关联**：[[10_Reference/investing/industries/index|industries/]] · [[10_Reference/investing/data-sources/index|data-sources/]]
 
