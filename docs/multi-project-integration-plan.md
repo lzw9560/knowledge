@@ -80,7 +80,7 @@ vault 路径：`/Users/lizhiwei/Documents/Obsidian Vault/`，投研子区在 `10
 这三个事实直接推翻/修正了任务描述里的部分假设，是后续决策的依据：
 
 **事实 1：daily-stock-analysis 不是「待查」，且已与 Vibe-Research 交叉引用。**
-它是成熟开源项目（ZhuLinsen/daily_stock_analysis，MIT，Trendshift #1 Python Repo），有 18+ 个 yaml 战法。Vibe-Research 的 `strategies/dragon_head.md` 第 38 行已明确引用 `ZhuLinsen/daily_stock_analysis strategies/dragon_head.yaml` 作为参数来源。**这意味着战法体系已经存在跨项目交叉引用，不是「未来可能」，是「已经发生」。**
+它是成熟开源项目（ZhuLinsen/daily_stock_analysis，MIT，Trendshift #1 Python Repo），有 18+ 个 yaml 战法。Vibe-Research 的 `strategies/龙头战法.md` 第 38 行已明确引用 `ZhuLinsen/daily_stock_analysis strategies/dragon_head.yaml` 作为参数来源。**这意味着战法体系已经存在跨项目交叉引用，不是「未来可能」，是「已经发生」。**
 
 **事实 2：`analysts/` 文件夹语义冲突。**
 现有 `analysts/` 模板（`type: analyst`，字段 `name/org/coverage_count`）对应 Pydantic 契约 `Report.researcher`，是**真人券商研报作者**。trading-agents 的 7 个 Analyst 是 **AI agent 角色**（market_analyst.py / policy_analyst.py 等代码模块）。两者语义完全不同，不能复用同一文件夹——否则 Dataview `FROM "analysts" WHERE type = "analyst"` 会把真人和 AI 角色混在一张表里。

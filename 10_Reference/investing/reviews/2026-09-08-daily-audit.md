@@ -3,9 +3,9 @@ type: audit
 audit_date: 2026-09-08
 auditor: daily-audit-script
 scope: 全量
-findings_count: 22
+findings_count: 18
 critical: 0
-high: 19
+high: 15
 medium: 3
 low: 15
 status: 已完成
@@ -24,7 +24,7 @@ created: 2026-09-08
 | stub 实体 | 15 |
 | LLM 生成内容 | 0 |
 | 占位符残留 | 0 |
-| 断链 | 19 |
+| 断链 | 15 |
 | 孤立实体 | 3 |
 | confidence 覆盖 | 2469/2500 (98%) |
 
@@ -53,16 +53,16 @@ created: 2026-09-08
 | [[10_Reference/tech-learning/concepts/限流 — stale-run 堵塞的根因之一是限流队列积压 | 1 |
 | specs/Vibe-Research项目 — Vibe-Research 个人 AI 投研看板（本图谱主体，109 spec + 16 数据源 + 12 战法） | 1 |
 | specs/a-Plate-Sentinel项目 — A股打板情绪监控与投研决策看板（8 大模块，Tushare 数据源，MVP 骨架） | 1 |
-| actions/rename-entity | 1 |
-| actions/promote-from-inbox | 1 |
 | [[10_Reference/tech-learning/concepts/限流 — 光伏/风能/氢能多概念聚合，数据源限流防封 | 1 |
+| [[10_Reference/tech-learning/concepts/限流 — 行情数据源限流防封 | 1 |
+| [[10_Reference/tech-learning/concepts/限流 — 行情数据源限流 | 1 |
 
 ## 🏝️ 孤立实体分布
 
 | 类型 | 数量 |
 |---|---|
 | events | ['events/2026-09-08-龙虎榜衍生品'] |
-| specs | ['specs/Vibe-Research项目', 'specs/a-Plate-Sentinel项目'] |
+| specs | ['specs/a-Plate-Sentinel项目', 'specs/Vibe-Research项目'] |
 
 ## 🔍 占位符残留分布
 
@@ -82,7 +82,7 @@ created: 2026-09-08
 
 | KPI | 当前值 | 阈值 | 状态 |
 |---|---|---|---|
-| 断链 | 19 | ≤50 | 🟢 |
+| 断链 | 15 | ≤50 | 🟢 |
 | 孤立实体 | 3 | ≤200 | 🟢 |
 | stub 实体 | 15 | ≤100 | 🟢 |
 | 占位符残留 | 0 | ≤10 | 🟢 |

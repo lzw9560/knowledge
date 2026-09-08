@@ -30,7 +30,7 @@
     "high": 1432
   },
   "no_confidence_count": 31,
-  "broken_links": 19,
+  "broken_links": 15,
   "broken_links_top10": [
     [
       "data-sources/同花顺 THS（一致预期·涨停揭秘）（LLM 服务）",
@@ -61,15 +61,15 @@
       1
     ],
     [
-      "actions/rename-entity",
-      1
-    ],
-    [
-      "actions/promote-from-inbox",
-      1
-    ],
-    [
       "[[10_Reference/tech-learning/concepts/限流 — 光伏/风能/氢能多概念聚合，数据源限流防封",
+      1
+    ],
+    [
+      "[[10_Reference/tech-learning/concepts/限流 — 行情数据源限流防封",
+      1
+    ],
+    [
+      "[[10_Reference/tech-learning/concepts/限流 — 行情数据源限流",
       1
     ]
   ],

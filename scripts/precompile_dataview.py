@@ -22,6 +22,7 @@ import argparse
 import base64
 import binascii
 import hashlib
+import json
 import os
 import re
 import sys
@@ -36,6 +37,8 @@ from typing import Any
 # --------------------------------------------------------------------------- #
 VAULT = Path(__file__).resolve().parent.parent
 INVESTING = VAULT / "10_Reference" / "investing"
+# mtime 增量缓存：{ "files": { rel_path: mtime_float }, "deps": { rel_path: [rel_path, ...] }, "version": 2 }
+PRECOMPILE_CACHE_FILE = VAULT / ".precompile_cache.json"
 # --------------------------------------------------------------------------- #
 # Frontmatter 解析（手写，无需 pyyaml）
 # --------------------------------------------------------------------------- #
@@ -1474,7 +1477,96 @@ def reconstruct_query_from_block(
     return "\n".join(parts) + "\n"
 
 
-def process_file(path: Path, idx: VaultIndex, dry_run: bool, qmap: QueryHashMap | None = None) -> dict:
+def load_precompile_cache() -> dict:
+    """加载 mtime 增量缓存。结构：
+        {
+          "version": 2,
+          "files": { "<相对 vault 路径无 .md>": <mtime_float>, ... },
+          "deps":  { "<源文件 key>": [<被引用文件 key>, ...], ... }
+        }
+    失败/缺失返回空骨架。
+    """
+    if PRECOMPILE_CACHE_FILE.exists():
+        try:
+            data = json.loads(PRECOMPILE_CACHE_FILE.read_text(encoding="utf-8"))
+            if isinstance(data, dict) and data.get("version") == 2:
+                data.setdefault("files", {})
+                data.setdefault("deps", {})
+                return data
+        except (json.JSONDecodeError, OSError):
+            pass
+    return {"version": 2, "files": {}, "deps": {}}
+
+
+def save_precompile_cache(cache: dict) -> None:
+    """持久化 mtime 增量缓存。"""
+    try:
+        PRECOMPILE_CACHE_FILE.write_text(
+            json.dumps(cache, ensure_ascii=False, indent=2), encoding="utf-8"
+        )
+    except OSError:
+        pass
+
+
+def _file_mtime(path: Path) -> float:
+    try:
+        return path.stat().st_mtime
+    except OSError:
+        return 0.0
+
+
+def should_skip_file(
+    path: Path,
+    idx: "VaultIndex",
+    cache: dict,
+) -> bool:
+    """mtime 增量判定：文件 mtime 未变 且 所有被引用文件（outlinks）mtime 未变 才跳过。
+
+    被引用文件变化会改变本文件预编译表格内容——所以必须连带重算。
+    本函数有副作用：命中跳过时会顺手更新 cache 里本文件的 mtime（保证 cache 漂移自愈），
+    且把 outlinks mtime 一起记录进 cache['deps']。
+    """
+    try:
+        rel_key = path.resolve().relative_to(VAULT).with_suffix("").as_posix()
+    except ValueError:
+        return False
+    cur_mtime = _file_mtime(path)
+    files_cache = cache["files"]
+    deps_cache = cache["deps"]
+    # 文件本身 mtime 变了 → 不跳过
+    if files_cache.get(rel_key) != cur_mtime:
+        files_cache[rel_key] = cur_mtime
+        # mtime 变了，deps 也要重新记
+        out_targets = idx.outlinks.get(rel_key, set())
+        deps_cache[rel_key] = sorted(t for t in out_targets)
+        return False
+    # 文件 mtime 没变——再查 deps
+    deps = deps_cache.get(rel_key)
+    out_targets = idx.outlinks.get(rel_key, set())
+    if deps is None or set(deps) != out_targets:
+        # outlinks 集合变了（新增/删链）→ 不跳过
+        files_cache[rel_key] = cur_mtime
+        deps_cache[rel_key] = sorted(t for t in out_targets)
+        return False
+    # outlinks 没变——逐个查被引用文件 mtime
+    for dep_key in deps:
+        dep_path = (VAULT / (dep_key + ".md"))
+        if not dep_path.exists():
+            # 被引用文件被删——本文件要重算（表格会变）
+            return False
+        if files_cache.get(dep_key) != _file_mtime(dep_path):
+            # 被引用文件 mtime 变了——本文件要重算
+            return False
+    # 全部没变——跳过
+    return True
+
+
+def process_file(path: Path, idx: VaultIndex, dry_run: bool, qmap: QueryHashMap | None = None,
+                 cache: dict | None = None) -> dict:
+    # mtime 增量跳过：文件 + 被引用文件 mtime 都没变 → 直接还原 precompiled 块
+    if cache is not None and should_skip_file(path, idx, cache):
+        return {"status": "skipped-mtime", "parsed": 0, "success": 0,
+                "failed": 0, "unchanged": 0, "recomputed": 0}
     try:
         content = path.read_text(encoding="utf-8")
     except Exception:
@@ -1652,6 +1744,8 @@ def main():
     ap.add_argument("--stats-only", action="store_true", help="仅统计不写文件")
     ap.add_argument("--path", default=str(INVESTING), help="处理路径")
     ap.add_argument("--verbose", "-v", action="store_true")
+    ap.add_argument("--full", action="store_true", help="强制全量重算，忽略 mtime 缓存")
+    ap.add_argument("--no-cache", action="store_true", help="不读/不写 mtime 缓存文件")
     args = ap.parse_args()
 
     target = Path(args.path)
@@ -1666,28 +1760,51 @@ def main():
     qmap.build_from_vault(VAULT)
     print(f"    query 模板数: {len(qmap._map)}")
 
+    # mtime 增量缓存
+    use_cache = (not args.no_cache) and (not args.dry_run) and (not args.stats_only)
+    cache: dict | None = None
+    if use_cache:
+        if args.full:
+            # 全量：清空缓存重建
+            cache = {"version": 2, "files": {}, "deps": {}}
+            print("    mtime 缓存：--full，清空重建")
+        else:
+            cache = load_precompile_cache()
+            print(f"    mtime 缓存：已记录 {len(cache['files'])} 个文件")
+    else:
+        print("    mtime 缓存：禁用")
+
     # 收集待处理 .md
     md_files = [p for p in target.rglob("*.md")]
     # 排除 templates
     md_files = [p for p in md_files if "templates" not in p.parts]
 
     print(f"[3/4] 处理 {len(md_files)} 个文件")
-    total = {"parsed": 0, "success": 0, "failed": 0, "changed": 0, "unchanged": 0, "recomputed": 0}
+    total = {"parsed": 0, "success": 0, "failed": 0, "changed": 0,
+             "unchanged": 0, "recomputed": 0, "skipped_mtime": 0}
     failed_samples = []
     for i, p in enumerate(sorted(md_files), 1):
         if i % 200 == 0:
             print(f"    进度 {i}/{len(md_files)}")
-        r = process_file(p, idx, dry_run=args.dry_run or args.stats_only, qmap=qmap)
+        r = process_file(p, idx, dry_run=args.dry_run or args.stats_only,
+                         qmap=qmap, cache=cache)
         total["parsed"] += r.get("parsed", 0)
         total["success"] += r.get("success", 0)
         total["failed"] += r.get("failed", 0)
         total["recomputed"] += r.get("recomputed", 0)
-        if r.get("status") == "changed":
+        st = r.get("status")
+        if st == "changed":
             total["changed"] += 1
+        elif st == "skipped-mtime":
+            total["skipped_mtime"] += 1
         else:
             total["unchanged"] += 1
         if args.verbose and r.get("failed"):
             failed_samples.append((p, r))
+
+    # 持久化缓存（只在真实写入模式 + 启用缓存时）
+    if use_cache and cache is not None:
+        save_precompile_cache(cache)
 
     print(f"[4/4] 统计")
     print(f"    解析 dataview 块: {total['parsed']}")
@@ -1696,6 +1813,8 @@ def main():
     print(f"    重算更新: {total['recomputed']}")
     print(f"    变更文件: {total['changed']}")
     print(f"    未变文件: {total['unchanged']}")
+    if total["skipped_mtime"]:
+        print(f"    mtime 增量跳过: {total['skipped_mtime']}")
     if args.dry_run or args.stats_only:
         print("    （dry-run 模式，未写文件）")
 

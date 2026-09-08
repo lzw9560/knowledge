@@ -51,7 +51,7 @@ confidence: high
   2. inbox/ 审核流程：
      if 人工审核通过:
        标记 approved: true, approved_date: <date>
-       触发 [[10_Reference/investing/actions/promote-from-inbox]] 移入正式区
+       触发 [[10_Reference/investing/actions/inbox晋级]] 移入正式区
      if 滞留 > 14 天未晋级:
        标记 rejected: true, reject_reason: 未达引用阈值
 ```
