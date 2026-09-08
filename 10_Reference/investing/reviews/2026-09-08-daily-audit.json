@@ -2,33 +2,34 @@
   "audit_date": "2026-09-08",
   "total_entities": 2498,
   "type_distribution": {
-    "unknown": 735,
+    "stock": 411,
     "metric": 401,
     "valuation": 401,
     "analyst": 396,
     "report": 392,
-    "spec": 81,
-    "concept": 28,
-    "dragon_tiger": 12,
-    "strategy": 11,
-    "event": 11,
-    "logic": 10,
+    "concept": 130,
+    "industry": 126,
+    "spec": 101,
+    "dragon_tiger": 41,
+    "logic": 24,
+    "event": 20,
+    "data_source": 17,
+    "strategy": 13,
     "agent_role": 7,
     "index": 5,
-    "project": 3,
-    "action": 3,
-    "decision": 1,
-    "industry": 1
+    "decision": 5,
+    "project": 4,
+    "action": 4
   },
-  "stub_count": 2,
+  "stub_count": 15,
   "llm_generated_count": 0,
   "placeholder_count": 0,
   "placeholder_by_type": {},
   "confidence_distribution": {
-    "medium": 787,
-    "high": 947
+    "medium": 1027,
+    "high": 1430
   },
-  "no_confidence_count": 764,
+  "no_confidence_count": 41,
   "broken_links": 2,
   "broken_links_top10": [
     [
@@ -47,5 +48,8 @@
     "logic": 16,
     "specs": 4,
     "strategies": 12
-  }
+  },
+  "fragment_links": 0,
+  "missing_frontmatter": 0,
+  "broken_md_links": 10
 }
