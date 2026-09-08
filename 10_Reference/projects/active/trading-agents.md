@@ -30,7 +30,7 @@ created: 2026-09-07
 
 ## 与 Vibe-Research 的关系
 - 共享 4 数据源（mootdx/东财/新浪/同花顺）
-- 定位差异：[[active/vibe-research|Vibe-Research]] 是私人助理单点查询，trading-agents 是完整投资计划生成
+- 定位差异：[[10_Reference/projects/active/vibe-research|Vibe-Research]] 是私人助理单点查询，trading-agents 是完整投资计划生成
 
 ## 相关链接
 - [[10_Reference/projects/MOC]]

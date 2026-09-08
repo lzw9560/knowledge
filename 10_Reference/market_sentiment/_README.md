@@ -1,7 +1,7 @@
 # 大A舆情预判框架 v2.0
 
 > 更新日期：2026-09-03 | 版本：v2.0（基于10位专家评审P0改造）
-> 评审报告：[[reviews/2026-09-03-expert-review-full|第一轮]] · [[reviews/2026-09-03-expert-review-round2|第二轮]]
+> 评审报告：[[10_Reference/investing/reviews/2026-09-03-expert-review-full|第一轮]] · [[10_Reference/investing/reviews/2026-09-03-expert-review-round2|第二轮]]
 
 ---
 
@@ -196,8 +196,8 @@
 
 | 轮次 | 日期 | 专家数 | 报告 |
 |------|------|--------|------|
-| 第一轮 | 2026-09-03 | 5位 | [[reviews/2026-09-03-expert-review-full|完整报告]] |
-| 第二轮 | 2026-09-03 | 5位 | [[reviews/2026-09-03-expert-review-round2|完整报告]] |
+| 第一轮 | 2026-09-03 | 5位 | [[10_Reference/investing/reviews/2026-09-03-expert-review-full|完整报告]] |
+| 第二轮 | 2026-09-03 | 5位 | [[10_Reference/investing/reviews/2026-09-03-expert-review-round2|完整报告]] |
 
 ### 十位专家核心共识
 

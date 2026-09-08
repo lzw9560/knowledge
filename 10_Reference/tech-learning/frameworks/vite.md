@@ -9,7 +9,7 @@ created: 2026-09-07
 # Vite
 
 ## 语言
-- [[languages/typescript|TypeScript]] / JavaScript
+- [[10_Reference/tech-learning/languages/typescript|TypeScript]] / JavaScript
 - 底层：esbuild（Go，开发期依赖预构建）+ Rollup（JS，生产构建）+ rolldown（Rust 重写中）
 
 ## 类别
@@ -25,13 +25,13 @@ created: 2026-09-07
 
 ## 在 Vibe-Research 中的使用
 - 前端构建：`frontend/` 的 `vite.config.ts` 是构建配置入口
-- React Fast Refresh：[[frameworks/react|React]] 组件修改即时生效
+- React Fast Refresh：[[10_Reference/tech-learning/frameworks/react|React]] 组件修改即时生效
 - 与 [[10_Reference/investing/specs/archive/m0-foundation/S014-前端UI重设计|S014 前端 UI 重设计]] 关联：Vite 的快速 HMR 让 UI 迭代效率高
-- 类型检查：配合 [[languages/typescript|TypeScript]] 的 `tsc --noEmit`
+- 类型检查：配合 [[10_Reference/tech-learning/languages/typescript|TypeScript]] 的 `tsc --noEmit`
 
 ## 相关链接
 - [[10_Reference/tech-learning/MOC]]
-- [[frameworks/react]]
-- [[languages/typescript]]
+- [[10_Reference/tech-learning/frameworks/react]]
+- [[10_Reference/tech-learning/languages/typescript]]
 - [[10_Reference/investing/specs/archive/m0-foundation/S014-前端UI重设计]]
 - [[10_Reference/meta/four-construct-ontology]]

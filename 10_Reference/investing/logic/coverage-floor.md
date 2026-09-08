@@ -53,27 +53,27 @@ Dataview 查询（类型计数）：
 <!-- dataview-precompiled:9c9945e86630 -->
 | 文件 | 实体数 |
 |---|---|
-| [[approve-entity]] | 6 |
-| [[fundamental_analyst]] | 8 |
-| [[Austin Liang-招银国际]] | 397 |
-| [[5G概念]] | 131 |
-| [[akshare]] | 18 |
-| [[000019-2026-09-02]] | 42 |
-| [[2026-09-01-涨停池]] | 21 |
-| [[20260907-122605-industry-海工]] | 5 |
-| [[000001]] | 6 |
-| [[IT服务]] | 127 |
-| [[LLM抽取质量门]] | 25 |
-| [[000001-latest]] | 402 |
-| [[000001-2026-04-26-2025年报及2026一季报点评：收入利]] | 393 |
-| [[2026-09-06-ci-audit]] | 6 |
-| [[audit-procedure]] | 1 |
-| [[DEC-001]] | 5 |
-| [[S004-candidates-funnel-performance]] | 102 |
-| [[a-plate-sentinel-project]] | 4 |
-| [[000001]] | 412 |
-| [[break_reseal]] | 14 |
-| [[valuation]] | 402 |
+| [[10_Reference/investing/actions/approve-entity]] | 6 |
+| [[10_Reference/investing/agents/fundamental_analyst]] | 8 |
+| [[10_Reference/investing/analysts/Austin Liang-招银国际]] | 397 |
+| [[10_Reference/investing/concepts/5G概念]] | 131 |
+| [[10_Reference/investing/data-sources/akshare]] | 18 |
+| [[10_Reference/investing/dragon-tiger/000019-2026-09-02]] | 42 |
+| [[10_Reference/investing/events/2026-09-01-涨停池]] | 21 |
+| [[10_Reference/investing/inbox/20260907-122605-industry-海工]] | 5 |
+| [[10_Reference/investing/indices/000001]] | 6 |
+| [[10_Reference/investing/industries/IT服务]] | 127 |
+| [[10_Reference/investing/logic/LLM抽取质量门]] | 25 |
+| [[10_Reference/investing/metrics/000001-latest]] | 402 |
+| [[10_Reference/investing/reports/000001-2026-04-26-2025年报及2026一季报点评：收入利]] | 393 |
+| [[10_Reference/investing/reviews/2026-09-06-ci-audit]] | 6 |
+| [[10_Reference/investing/reviews/audit-procedure]] | 1 |
+| [[10_Reference/investing/specs/DEC-001]] | 5 |
+| [[10_Reference/investing/specs/S004-candidates-funnel-performance]] | 102 |
+| [[10_Reference/investing/specs/a-plate-sentinel-project]] | 4 |
+| [[10_Reference/investing/indices/000001]] | 412 |
+| [[10_Reference/investing/strategies/break_reseal]] | 14 |
+| [[10_Reference/investing/templates/valuation]] | 402 |
 <!-- /dataview-precompiled -->
 
 

@@ -9,7 +9,7 @@ created: 2026-09-07
 # React
 
 ## 语言
-- [[languages/typescript|TypeScript]] / JavaScript
+- [[10_Reference/tech-learning/languages/typescript|TypeScript]] / JavaScript
 - JSX/TSX 语法扩展
 
 ## 类别
@@ -31,7 +31,7 @@ created: 2026-09-07
 
 ## 相关链接
 - [[10_Reference/tech-learning/MOC]]
-- [[languages/typescript]]
+- [[10_Reference/tech-learning/languages/typescript]]
 - [[10_Reference/investing/MOC]]
 - [[10_Reference/investing/specs/archive/m0-foundation/S013-前端数据层]]
 - [[10_Reference/investing/specs/archive/m0-foundation/S014-前端UI重设计]]

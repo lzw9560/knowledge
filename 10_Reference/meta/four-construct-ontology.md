@@ -68,7 +68,7 @@ source: nano-ontoprompt skill（ontology-knowledge-graph）
 - [[10_Reference/investing/logic/index]] — 构件 3 实例化清单
 - [[10_Reference/investing/actions/index]] — 构件 4 实例化清单
 - [[10_Reference/investing/inbox/index]] — 质量门实例化
-- [[docs/knowledge-graph-llm-pipeline]] — LLM 抽取管线（四构件的自动化填充路径）
+- [[10_Reference/investing/docs/knowledge-graph-llm-pipeline]] — LLM 抽取管线（四构件的自动化填充路径）
 - [[10_Reference/meta/PARA-method]] / [[10_Reference/meta/MOC-method]] — 配套的组织与导航方法论
 
 ## 来源

@@ -1,6 +1,6 @@
 # Vibe-Research Obsidian MCP 连接配置
 
-> 本文档讲怎么把 Obsidian vault 接入 MCP（Model Context Protocol），让 Claude Code 等 AI agent 能直接读写 `knowledge/` vault。配套文档：[obsidian-vault-guide.md](./obsidian-vault-guide.md) 讲 vault 内操作。
+> 本文档讲怎么把 Obsidian vault 接入 MCP（Model Context Protocol），让 Claude Code 等 AI agent 能直接读写 `knowledge/` vault。配套文档：[obsidian-vault-guide.md](obsidian-vault-guide.md) 讲 vault 内操作。
 >
 > 命令均为可复制粘贴执行。涉及具体插件版本/工具参数不确定处标注"待验证"。
 

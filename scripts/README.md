@@ -82,8 +82,8 @@ python scripts/vault_audit.py --root /path/to/vault
 
 ## 链接解析规则
 
-- `[[stocks/600519]]` → `10_Reference/investing/stocks/600519.md`（先试加 `.md`，再试原路径）
-- `[[stocks/]]` → 文件夹链接，指向 `stocks/index.md`
+- `[[10_Reference/investing/stocks/600519]]` → `10_Reference/investing/stocks/600519.md`（先试加 `.md`，再试原路径）
+- `[[10_Reference/investing/stocks/index|stocks/]]` → 文件夹链接，指向 `stocks/index.md`
 - `[[path|alias]]` → 别名剥离，取 `path`
 - 优先在 `10_Reference/investing/` 下找，再在 vault 根找
 - 过滤 ` ```dataview ... ``` ` 代码块内的伪链接（避免把 `FROM "stocks"` 当链接）

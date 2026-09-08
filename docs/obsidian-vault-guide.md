@@ -2,7 +2,7 @@
 
 > 面向"vault 已搭好但不知道怎么用"的用户。本指南假设你已经能跟着 [knowledge/README.md](../knowledge/README.md) 用 Obsidian 打开 `knowledge/` 文件夹，但想真正把它跑起来——装插件、新建实体、做查询、看图谱、接 AI。
 >
-> 配套文档：[obsidian-mcp-setup.md](./obsidian-mcp-setup.md) 讲 MCP 连接的详细步骤。本文只讲 vault 内的操作。
+> 配套文档：[obsidian-mcp-setup.md](obsidian-mcp-setup.md) 讲 MCP 连接的详细步骤。本文只讲 vault 内的操作。
 
 ---
 
@@ -180,8 +180,8 @@ created: 2026-09-06
 ```markdown
 # 核心业务
 
-贵州茅台是 [[industries/食品饮料]] 龙头，主营高端酱香型白酒。
-品牌矩阵：飞天茅台为主，[[concepts/白酒]] 题材核心标的。
+贵州茅台是 [[10_Reference/investing/industries/食品饮料]] 龙头，主营高端酱香型白酒。
+品牌矩阵：飞天茅台为主，[[10_Reference/investing/concepts/白酒]] 题材核心标的。
 被多份研报覆盖，详见"相关研报"章节自动渲染。
 ```
 
@@ -272,7 +272,7 @@ Dataview 查询可以放在任意 `.md` 笔记里。建议放法：
 #### 基本语法
 
 ```markdown
-[[stocks/600519]]
+[[10_Reference/investing/stocks/600519]]
 ```
 
 链接到 `stocks/600519.md`。若笔记不存在，Obsidian 高亮提示，点击即创建。
@@ -280,7 +280,7 @@ Dataview 查询可以放在任意 `.md` 笔记里。建议放法：
 #### 别名语法
 
 ```markdown
-[[stocks/600519|茅台]]
+[[10_Reference/investing/stocks/600519|茅台]]
 ```
 
 显示为"茅台"，实际指向 600519 笔记。在正文里写"[[stocks/600519|茅台]]今日涨停"更自然。
@@ -288,7 +288,7 @@ Dataview 查询可以放在任意 `.md` 笔记里。建议放法：
 #### 嵌入语法
 
 ```markdown
-![[stocks/600519]]
+![[10_Reference/investing/stocks/600519]]
 ```
 
 把 600519 笔记内容嵌入当前笔记——适合在战法卡里嵌入它匹配的股票的财务摘要。
@@ -296,7 +296,7 @@ Dataview 查询可以放在任意 `.md` 笔记里。建议放法：
 #### 文件夹链接
 
 ```markdown
-[[stocks/]]
+[[10_Reference/investing/stocks/index|stocks/]]
 ```
 
 指向 `stocks/index.md`，作为该实体类的入口。
@@ -357,8 +357,8 @@ SORT market_cap DESC
 ```markdown
 # 近期触发标的
 
-- [[stocks/600519]]（2026-09-05 弱转强，2 连板）
-- [[stocks/000858]]（2026-09-04 首板）
+- [[10_Reference/investing/stocks/600519]]（2026-09-05 弱转强，2 连板）
+- [[10_Reference/investing/stocks/000858]]（2026-09-04 首板）
 ```
 
 保存后，股票笔记的"匹配战法"章节反向链接区会自动出现这张战法卡。
@@ -412,7 +412,7 @@ SORT market_cap DESC
    claude mcp add obsidian -e OBSIDIAN_API_KEY=你的key -- npx -y @yanxue06/obsidian-mcp
    ```
 3. 完全退出并重开 Claude Code → `/mcp` → 看到 `obsidian ✓ Connected`。
-4. 详细配置 + 故障排除 + 工具列表见 [obsidian-mcp-setup.md](./obsidian-mcp-setup.md)。
+4. 详细配置 + 故障排除 + 工具列表见 [obsidian-mcp-setup.md](obsidian-mcp-setup.md)。
 
 ### 9.4 用 AI 做"从研报自动抽取实体灌入 vault"
 

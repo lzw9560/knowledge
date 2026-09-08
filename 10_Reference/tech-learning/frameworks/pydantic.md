@@ -9,7 +9,7 @@ created: 2026-09-07
 # Pydantic
 
 ## 语言
-- [[languages/python|Python]] 3.7+（v2 需要 3.8+）
+- [[10_Reference/tech-learning/languages/python|Python]] 3.7+（v2 需要 3.8+）
 - 核心引擎用 Rust 重写（pydantic-core），v2 性能比 v1 快 5-50x
 
 ## 类别
@@ -26,13 +26,13 @@ created: 2026-09-07
 ## 在 Vibe-Research 中的使用
 - **契约层核心**：[[10_Reference/investing/specs/archive/m0-foundation/S007-契约层|S007 契约层]] 用 Pydantic 定义所有 API 请求/响应模型
 - **数据层**：[[10_Reference/investing/specs/archive/m0-foundation/S008-后端数据层迁移|S008 后端数据层迁移]] 把 dataclass 迁到 Pydantic，统一验证 + 序列化
-- **前后端类型同步**：[[10_Reference/investing/specs/archive/m0-foundation/S009-前后端类型同步|S009]] 从 Pydantic 模型生成 TypeScript 类型，供 [[frameworks/react|React]] 前端使用
-- 配套框架：[[frameworks/fastapi|FastAPI]] 把 Pydantic 作为一等依赖
+- **前后端类型同步**：[[10_Reference/investing/specs/archive/m0-foundation/S009-前后端类型同步|S009]] 从 Pydantic 模型生成 TypeScript 类型，供 [[10_Reference/tech-learning/frameworks/react|React]] 前端使用
+- 配套框架：[[10_Reference/tech-learning/frameworks/fastapi|FastAPI]] 把 Pydantic 作为一等依赖
 
 ## 相关链接
 - [[10_Reference/tech-learning/MOC]]
-- [[languages/python]]
-- [[frameworks/fastapi]]
+- [[10_Reference/tech-learning/languages/python]]
+- [[10_Reference/tech-learning/frameworks/fastapi]]
 - [[10_Reference/investing/specs/archive/m0-foundation/S007-契约层]]
 - [[10_Reference/investing/specs/archive/m0-foundation/S008-后端数据层迁移]]
 - [[10_Reference/investing/specs/archive/m0-foundation/S009-前后端类型同步]]

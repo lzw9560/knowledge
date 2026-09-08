@@ -9,7 +9,7 @@ created: 2026-09-07
 # FastAPI
 
 ## 语言
-- [[languages/python|Python]] 3.7+
+- [[10_Reference/tech-learning/languages/python|Python]] 3.7+
 - 基于 Starlette（ASGI）+ Pydantic
 
 ## 类别
@@ -31,7 +31,7 @@ created: 2026-09-07
 
 ## 相关链接
 - [[10_Reference/tech-learning/MOC]]
-- [[languages/python]]
+- [[10_Reference/tech-learning/languages/python]]
 - [[10_Reference/investing/MOC]]
 - [[10_Reference/investing/specs/archive/m0-foundation/S007-契约层]]
 - [[10_Reference/investing/specs/archive/m0-foundation/S008-后端数据层迁移]]

@@ -15,7 +15,7 @@ created: 2026-09-07
 - 接口是隐式实现（duck typing 的静态版本）
 
 ## 类型系统
-- 静态类型 + nominal typing（与 [[languages/typescript|TS]] 的 structural 相反）
+- 静态类型 + nominal typing（与 [[10_Reference/tech-learning/languages/typescript|TS]] 的 structural 相反）
 - 无类继承，用 struct embedding 组合
 - interface 是隐式满足（struct 实现了 interface 的方法集即算实现）
 - 错误处理：error 作为返回值（无异常），`if err != nil` 是惯用法
@@ -39,8 +39,8 @@ created: 2026-09-07
 
 ## 相关链接
 - [[10_Reference/tech-learning/MOC]]
-- [[languages/python]]
-- [[languages/rust]]
+- [[10_Reference/tech-learning/languages/python]]
+- [[10_Reference/tech-learning/languages/rust]]
 - [[10_Reference/tech-learning/architecture/microservices]]
 - [[10_Reference/investing/specs/archive/m0-foundation/S011-调度收口]]
 - [[10_Reference/meta/four-construct-ontology]]

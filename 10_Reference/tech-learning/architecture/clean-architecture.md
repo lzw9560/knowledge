@@ -27,7 +27,7 @@ created: 2026-09-07
 
 ## 在 Vibe-Research 中的使用
 - [[10_Reference/investing/specs/S006-系统重写纲领|S006 系统重写纲领]] 遵循清洁架构思想：领域层独立于框架
-- 契约层（[[10_Reference/investing/specs/archive/m0-foundation/S007-契约层|S007]]）是"接口适配器"层，用 [[frameworks/pydantic|Pydantic]] 模型隔离领域与传输
+- 契约层（[[10_Reference/investing/specs/archive/m0-foundation/S007-契约层|S007]]）是"接口适配器"层，用 [[10_Reference/tech-learning/frameworks/pydantic|Pydantic]] 模型隔离领域与传输
 - 前端数据层（[[10_Reference/investing/specs/archive/m0-foundation/S013-前端数据层|S013]]）也遵循同构——TanStack Query 是前端的"适配器"
 
 ## 相关链接

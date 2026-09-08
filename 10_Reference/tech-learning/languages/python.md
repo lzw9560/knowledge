@@ -28,11 +28,11 @@ created: 2026-09-07
 - 后端主语言：[[10_Reference/investing/specs/archive/m0-foundation/S008-后端数据层迁移|S008]] 数据层用 Pydantic 契约模型
 - 数据源接入：[[10_Reference/investing/data-sources/akshare|akshare]] / mootdx / 东财均用 Python SDK
 - 战法执行：[[10_Reference/investing/strategies/|战法卡]] 在 `backend/strategies/cards/` 实现
-- 配套框架：[[frameworks/fastapi]]
+- 配套框架：[[10_Reference/tech-learning/frameworks/fastapi]]
 
 ## 相关链接
 - [[10_Reference/tech-learning/MOC]]
-- [[frameworks/fastapi]]
+- [[10_Reference/tech-learning/frameworks/fastapi]]
 - [[10_Reference/investing/MOC]]
 - [[10_Reference/investing/data-sources/akshare]]
 - [[10_Reference/investing/specs/archive/m0-foundation/S008-后端数据层迁移]]

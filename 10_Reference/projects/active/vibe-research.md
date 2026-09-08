@@ -30,7 +30,7 @@ created: 2026-09-07
 - [[10_Reference/investing/data-sources/eastmoney-push2|东财 push2]]
 
 ## 关联项目
-- [[active/trading-agents]] — TradingAgents fork（共享 4 数据源）
+- [[10_Reference/projects/active/trading-agents]] — TradingAgents fork（共享 4 数据源）
 - [[10_Reference/investing/specs/a-plate-sentinel-project|a-Plate-Sentinel]] — 互补项目（情绪监控 vs 全栈看板）
 
 ## 相关链接

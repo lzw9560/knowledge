@@ -34,8 +34,8 @@ created: 2026-09-07
 - [[10_Reference/meta/MOC-method|MOC 方法]] — Map of Content 导航
 
 ## 关联项目
-- [[active/vibe-research]] — 本 vault 的宿主项目
-- [[active/trading-agents]] — 共享数据源的关联项目
+- [[10_Reference/projects/active/vibe-research]] — 本 vault 的宿主项目
+- [[10_Reference/projects/active/trading-agents]] — 共享数据源的关联项目
 
 ## 相关链接
 - [[10_Reference/projects/MOC]]

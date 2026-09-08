@@ -28,7 +28,7 @@ description: 投研知识图谱入口——将代码实体（Pydantic 契约模�
 <!-- dataview-precompiled:e123ff43d395 -->
 | 类型 | 数量 | 样本 |
 |---|---|---|
-| action | 6 | [[approve-entity]], [[auto-link-report]], [[promote-from-inbox]], [[rename-entity]], [[sync-from-source]], [[action]] |
+| action | 6 | [[10_Reference/investing/actions/approve-entity]], [[10_Reference/investing/actions/auto-link-report]], [[10_Reference/investing/actions/promote-from-inbox]], [[10_Reference/investing/actions/rename-entity]], [[10_Reference/investing/actions/sync-from-source]], [[10_Reference/investing/templates/action]] |
 <!-- /dataview-precompiled -->
 
 <!-- dataview-precompiled:c649e86810b8 -->
@@ -271,19 +271,19 @@ description: 投研知识图谱入口——将代码实体（Pydantic 契约模�
 <!-- dataview-precompiled:9a939da0f746 -->
 | 战法 | edge 家族 | 详情 |
 |---|---|---|
-| N字反击 | 动量溢价 | [[n_shape_counterattack]] |
-| 一字竞价选股法 | 动量溢价 | [[一字竞价选股法]] |
-| 低吸龙头 | 均值回归 | [[low_absorption]] |
-| 反包战法 | 事件溢价 | [[reverse_package]] |
-| 尾盘偷袭 | 动量溢价 | [[end_of_day_sneak]] |
-| 平台突破 | 形态突破 | [[platform_breakout]] |
-| 弱转强接力 | 事件溢价 | [[weak_turn_strong]] |
-| 形态反包 | 形态突破 | [[pattern_reversal]] |
-| 暴风雨逆势涨停 | 事件溢价 | [[storm_reversal]] |
-| 炸板回封 | 事件溢价 | [[break_reseal]] |
-| 连板接力 | 动量溢价 | [[consecutive_relay]] |
-| 首板挖掘 | 动量溢价 | [[first_plate]] |
-| 龙头战法 | 龙头追踪 | [[dragon_head]] |
+| N字反击 | 动量溢价 | [[10_Reference/investing/strategies/n_shape_counterattack]] |
+| 一字竞价选股法 | 动量溢价 | [[10_Reference/investing/strategies/一字竞价选股法]] |
+| 低吸龙头 | 均值回归 | [[10_Reference/investing/strategies/low_absorption]] |
+| 反包战法 | 事件溢价 | [[10_Reference/investing/strategies/reverse_package]] |
+| 尾盘偷袭 | 动量溢价 | [[10_Reference/investing/strategies/end_of_day_sneak]] |
+| 平台突破 | 形态突破 | [[10_Reference/investing/strategies/platform_breakout]] |
+| 弱转强接力 | 事件溢价 | [[10_Reference/investing/strategies/weak_turn_strong]] |
+| 形态反包 | 形态突破 | [[10_Reference/investing/strategies/pattern_reversal]] |
+| 暴风雨逆势涨停 | 事件溢价 | [[10_Reference/investing/strategies/storm_reversal]] |
+| 炸板回封 | 事件溢价 | [[10_Reference/investing/strategies/break_reseal]] |
+| 连板接力 | 动量溢价 | [[10_Reference/investing/strategies/consecutive_relay]] |
+| 首板挖掘 | 动量溢价 | [[10_Reference/investing/strategies/first_plate]] |
+| 龙头战法 | 龙头追踪 | [[10_Reference/investing/strategies/dragon_head]] |
 <!-- /dataview-precompiled -->
 
 ### 📋 项目决策统计
@@ -291,36 +291,36 @@ description: 投研知识图谱入口——将代码实体（Pydantic 契约模�
 <!-- dataview-precompiled:e42015199fcb -->
 | 编号 | 标题 | 状态 | 详情 |
 |---|---|---|---|
-| S001 | 修复 chat._get_env_llm_config 缺失 → /api/chat 500 | 已实现 | [[S001-fix-chat-env-llm-config]] |
-| S002 | 打板工作流重构 · P1 候选池诊断统一 | 已实现 | [[S002-打板工作流重构]] |
-| S003 | 后端 API 冒烟测试缺陷修复批次 | 已实现 | [[S003-api-bugfix-batch]] |
-| S004 | 候选池漏斗 run_funnel 性能优化 | 草案 | [[S004-candidates-funnel-performance]] |
-| S005 | 中长线价值选股漏斗（与短线 S002 并列） | 已实现 | [[S005-中长线价值选股漏斗]] |
-| S006 | 系统重写纲领（渐进式长分支） | 草案 | [[S006-系统重写纲领]] |
-| S007 | 契约层（数据模型+回归基线+契约测试骨架） | 已实现 | [[S007-契约层]] |
-| S008 | 后端数据层迁移（astock/gstock/market→模型） | 已实现 | [[S008-后端数据层迁移]] |
-| S009 | 前后端类型同步（openapi-codegen） | 已实现 | [[S009-前后端类型同步]] |
-| S010 | AI 工具注册表 + SYSTEM_PROMPT 新边界 | 已实现 | [[S010-工具注册表与SYSTEM_PROMPT]] |
-| S011 | 调度收口（删 scheduler.py+重写 scheduled_tasks+状态机接线） | 已实现 | [[S011-调度收口]] |
-| S012 | 工作流标灰（realtime/post 桩+pre 清理） | 草案 | [[S012-工作流标灰]] |
-| S013 | 前端数据层（统一 client+TanStack Query+懒加载+apiKey 代理） | 已实现 | [[S013-前端数据层]] |
-| S014 | 前端 UI 重设计（信息架构+交互统一+视觉+AI 对话） | 已实现 | [[S014-前端UI重设计]] |
-| S015 | 配置与基础设施（config 拆分+infra 收口+路由自动发现） | 已实现 | [[S015-配置与基础设施]] |
-| S016 | 测试网（后端覆盖率+IO 录制回放+前端 vitest+CI） | 草案 | [[S016-测试网]] |
-| S017 | A股涨跌预测模型栈（四头解耦） | 已实现 | [[S017-A股涨跌预测模型栈]] |
-| S018 | 多源特征工程（预测模型特征供给） | 已实现 | [[S018-多源特征工程]] |
-| S019 | 宏观特征 Fred API 接入（macro.py 第二批） | 已实现 | [[S019-macro-Fred-API]] |
-| S020 | worldmonitor 决策因子接入（全球宏观/地缘/另类数据） | 已实现 | [[S020-worldmonitor决策因子接入]] |
-| S022 | 熔断器 health 读路径修复（尊重 recovery_timeout） | 已实现 | [[S022-熔断器health读路径修复]] |
-| S023 | 漏斗可用性与因子解耦（P1 打磨：盘前简报接因子+候选详情依据链+漏斗每层可观测可调参+真实数据不静默返空） | 已实现 | [[S023-漏斗可用性与因子解耦]] |
-| S024 | 拓扑展示（关系网+漏斗流程+连板梯队树，EdgeProvider 扩展位） | 已实现 | [[S024-拓扑展示]] |
-| S025 | 补前端入口 | 已实现 | [[S025-补前端入口]] |
-| S026 | pre-market 异步化 | 已实现 | [[S026-pre-market-async]] |
-| S028 | limitup-screener 修复（文案三态/trigger/因子层 conditions） | 已实现 | [[S028-limitup-screener-fix]] |
-| S029 | GeneScreener 接通（阈值可配+执行检索+多层明细） | 已实现 | [[S029-gene-screener-wireup]] |
-| S030 | 盘前简报多层化 + UX 收敛 | 已废弃 | [[S030-pre-market-multilayer]] |
-| S031 | 调度收口 + 盘前简报多层 + 交互式战法 + 按战法回测 | 已实现 | [[S031-调度收口盘前多层按战法回测]] |
-| S032 | 调度收口第二轮（S011b）：主循环收口 + portfolio 日志重试 + 状态机接线落库 | 已实现 | [[S032-调度收口第二轮]] |
+| S001 | 修复 chat._get_env_llm_config 缺失 → /api/chat 500 | 已实现 | [[10_Reference/investing/specs/archive/m0-foundation/S001-fix-chat-env-llm-config]] |
+| S002 | 打板工作流重构 · P1 候选池诊断统一 | 已实现 | [[10_Reference/investing/specs/archive/m0-foundation/S002-打板工作流重构]] |
+| S003 | 后端 API 冒烟测试缺陷修复批次 | 已实现 | [[10_Reference/investing/specs/archive/m0-foundation/S003-api-bugfix-batch]] |
+| S004 | 候选池漏斗 run_funnel 性能优化 | 草案 | [[10_Reference/investing/specs/S004-candidates-funnel-performance]] |
+| S005 | 中长线价值选股漏斗（与短线 S002 并列） | 已实现 | [[10_Reference/investing/specs/archive/m0-foundation/S005-中长线价值选股漏斗]] |
+| S006 | 系统重写纲领（渐进式长分支） | 草案 | [[10_Reference/investing/specs/S006-系统重写纲领]] |
+| S007 | 契约层（数据模型+回归基线+契约测试骨架） | 已实现 | [[10_Reference/investing/specs/archive/m0-foundation/S007-契约层]] |
+| S008 | 后端数据层迁移（astock/gstock/market→模型） | 已实现 | [[10_Reference/investing/specs/archive/m0-foundation/S008-后端数据层迁移]] |
+| S009 | 前后端类型同步（openapi-codegen） | 已实现 | [[10_Reference/investing/specs/archive/m0-foundation/S009-前后端类型同步]] |
+| S010 | AI 工具注册表 + SYSTEM_PROMPT 新边界 | 已实现 | [[10_Reference/investing/specs/archive/m0-foundation/S010-工具注册表与SYSTEM_PROMPT]] |
+| S011 | 调度收口（删 scheduler.py+重写 scheduled_tasks+状态机接线） | 已实现 | [[10_Reference/investing/specs/archive/m0-foundation/S011-调度收口]] |
+| S012 | 工作流标灰（realtime/post 桩+pre 清理） | 草案 | [[10_Reference/investing/specs/S012-工作流标灰]] |
+| S013 | 前端数据层（统一 client+TanStack Query+懒加载+apiKey 代理） | 已实现 | [[10_Reference/investing/specs/archive/m0-foundation/S013-前端数据层]] |
+| S014 | 前端 UI 重设计（信息架构+交互统一+视觉+AI 对话） | 已实现 | [[10_Reference/investing/specs/archive/m0-foundation/S014-前端UI重设计]] |
+| S015 | 配置与基础设施（config 拆分+infra 收口+路由自动发现） | 已实现 | [[10_Reference/investing/specs/archive/m0-foundation/S015-配置与基础设施]] |
+| S016 | 测试网（后端覆盖率+IO 录制回放+前端 vitest+CI） | 草案 | [[10_Reference/investing/specs/S016-测试网]] |
+| S017 | A股涨跌预测模型栈（四头解耦） | 已实现 | [[10_Reference/investing/specs/archive/m0-foundation/S017-A股涨跌预测模型栈]] |
+| S018 | 多源特征工程（预测模型特征供给） | 已实现 | [[10_Reference/investing/specs/archive/m0-foundation/S018-多源特征工程]] |
+| S019 | 宏观特征 Fred API 接入（macro.py 第二批） | 已实现 | [[10_Reference/investing/specs/archive/m0-foundation/S019-macro-Fred-API]] |
+| S020 | worldmonitor 决策因子接入（全球宏观/地缘/另类数据） | 已实现 | [[10_Reference/investing/specs/archive/m0-foundation/S020-worldmonitor决策因子接入]] |
+| S022 | 熔断器 health 读路径修复（尊重 recovery_timeout） | 已实现 | [[10_Reference/investing/specs/archive/m1-workflow/S022-熔断器health读路径修复]] |
+| S023 | 漏斗可用性与因子解耦（P1 打磨：盘前简报接因子+候选详情依据链+漏斗每层可观测可调参+真实数据不静默返空） | 已实现 | [[10_Reference/investing/specs/archive/m1-workflow/S023-漏斗可用性与因子解耦]] |
+| S024 | 拓扑展示（关系网+漏斗流程+连板梯队树，EdgeProvider 扩展位） | 已实现 | [[10_Reference/investing/specs/archive/m1-workflow/S024-拓扑展示]] |
+| S025 | 补前端入口 | 已实现 | [[10_Reference/investing/specs/archive/m1-workflow/S025-补前端入口]] |
+| S026 | pre-market 异步化 | 已实现 | [[10_Reference/investing/specs/archive/m1-workflow/S026-pre-market-async]] |
+| S028 | limitup-screener 修复（文案三态/trigger/因子层 conditions） | 已实现 | [[10_Reference/investing/specs/archive/m1-workflow/S028-limitup-screener-fix]] |
+| S029 | GeneScreener 接通（阈值可配+执行检索+多层明细） | 已实现 | [[10_Reference/investing/specs/archive/m1-workflow/S029-gene-screener-wireup]] |
+| S030 | 盘前简报多层化 + UX 收敛 | 已废弃 | [[10_Reference/investing/specs/archive/m1-workflow/S030-pre-market-multilayer]] |
+| S031 | 调度收口 + 盘前简报多层 + 交互式战法 + 按战法回测 | 已实现 | [[10_Reference/investing/specs/archive/m1-workflow/S031-调度收口盘前多层按战法回测]] |
+| S032 | 调度收口第二轮（S011b）：主循环收口 + portfolio 日志重试 + 状态机接线落库 | 已实现 | [[10_Reference/investing/specs/archive/m1-workflow/S032-调度收口第二轮]] |
 <!-- /dataview-precompiled -->
 
 ---
@@ -349,178 +349,178 @@ description: 投研知识图谱入口——将代码实体（Pydantic 契约模�
 <!-- dataview-precompiled:06cd9327e597 -->
 | 文件 | 代码 | 名称 | PE(TTM) | PB |
 |---|---|---|---|---|
-| [[600371]] | 600371 | 万向德农 | -727.72 | 7.71 |
-| [[003040]] | 003040 | 楚天龙 | -640.55 | 7.03 |
-| [[688167]] | 688167 | 炬光科技 | -506.06 | 17.96 |
-| [[600127]] | 600127 | 金健米业 | -451.85 | 11.93 |
-| [[002104]] | 002104 | 恒宝股份 | -444.18 | 4.78 |
-| [[002354]] | 002354 | 天娱数科 | -440.37 | 8.1 |
-| [[600698]] | 600698 | 湖南天雁 | -277.77 | 11.41 |
-| [[000009]] | 000009 | 中国宝安 | -258.73 | 1.87 |
-| [[002714]] | 002714 | 牧原股份 | -225.29 | 3.19 |
-| [[600048]] | 600048 | 保利发展 | -195.72 | 0.32 |
-| [[002564]] | 002564 | 天沃科技 | -195.11 | 38.74 |
-| [[603122]] | 603122 | 合富中国 | -159.67 | 5.20 |
-| [[603533]] | 603533 | 掌阅科技 | -158.51 | 4.63 |
-| [[000039]] | 000039 | 中集集团 | -157.11 | 1.09 |
-| [[600540]] | 600540 | 新赛股份 | -149.48 | 7.59 |
-| [[000560]] | 000560 | 我爱我家 | -136.80 | 0.79 |
-| [[688521]] | 688521 | 芯原股份 | -118.76 | 33.29 |
-| [[600865]] | 600865 | 百大集团 | -116.92 | 1.86 |
-| [[688047]] | 688047 | 龙芯中科 | -104.87 | 17.56 |
-| [[003005]] | 003005 | 竞业达 | -91.36 | 2.45 |
-| [[002909]] | 002909 | 集泰股份 | -84.97 | 3.28 |
-| [[000661]] | 000661 | 长春高新 | -84.36 | 1.33 |
-| [[000592]] | 000592 | 平潭发展 | -73.25 | 8.49 |
-| [[002702]] | 002702 | 海欣食品 | -72.53 | 3.09 |
-| [[000032]] | 000032 | 深桑达A | -71.79 | 2.36 |
-| [[600029]] | 600029 | 南方航空 | -69.79 | 3.03 |
-| [[600611]] | 600611 | 大众交通 | -68.87 | 1.25 |
-| [[688506]] | 688506 | 百利天恒 | -66.07 | 22.54 |
-| [[688141]] | 688141 | 杰华特 | -57.30 | 49.52 |
-| [[002868]] | 002868 | 绿康生化 | -54.71 | 56.58 |
-| [[601111]] | 601111 | 中国国航 | -53.18 | 2.00 |
-| [[300498]] | 300498 | 温氏股份 | -39.60 | 2.91 |
-| [[688126]] | 688126 | 沪硅产业 | -36.05 | 3.92 |
-| [[002084]] | 002084 | 海鸥住工 | -34.75 | 3.61 |
-| [[600115]] | 600115 | 中国东航 | -32.38 | 7.72 |
-| [[600892]] | 600892 | 大晟文化 | -31.84 | -201.94 |
-| [[603123]] | 603123 | 翠微股份 | -25.51 | 5.63 |
-| [[000428]] | 000428 | 华天酒店 | -22.05 | 3.90 |
-| [[000050]] | 000050 | 深天马A | -21.04 | 0.61 |
-| [[600828]] | 600828 | 茂业商业 | -18.36 | 1.31 |
-| [[002059]] | 002059 | 云南旅游 | -15.43 | 6.03 |
-| [[000892]] | 000892 | 欢瑞世纪 | -14.08 | 10.85 |
-| [[001330]] | 001330 | 博纳影业 | -13.73 | 2.14 |
-| [[002855]] | 002855 | 捷荣技术 | -13.35 | 23.90 |
-| [[002403]] | 002403 | 爱仕达 | -12.27 | 2.93 |
-| [[601012]] | 601012 | 隆基绿能 | -11.89 | 1.86 |
-| [[600802]] | 600802 | 福建水泥 | -11.01 | 2.85 |
-| [[600121]] | 600121 | 郑州煤电 | -5.98 | 10.37 |
-| [[688223]] | 688223 | 晶科能源 | -5.89 | 1.78 |
-| [[600438]] | 600438 | 通威股份 | -5.37 | 1.62 |
-| [[000635]] | 000635 | 英 力 特 | -4.70 | 3.08 |
-| [[600657]] | 600657 | 信达地产 | -1.81 | 0.68 |
-| [[002124]] | 002124 | 天邦食品 | -1.68 | 6.53 |
-| [[000002]] | 000002 | 万科A | -0.41 | 0.37 |
-| [[600015]] | 600015 | 华夏银行 | 3.96 | 0.31 |
-| [[601336]] | 601336 | 新华保险 | 4.29 | 1.54 |
-| [[601628]] | 601628 | 中国人寿 | 4.38 | 1.63 |
-| [[601186]] | 601186 | 中国铁建 | 5.03 | 0.30 |
-| [[601166]] | 601166 | 兴业银行 | 5.07 | 0.46 |
-| [[000001]] | 000001 | 平安银行 | 5.22 | 0.48 |
-| [[601390]] | 601390 | 中国中铁 | 5.40 | 0.33 |
-| [[601818]] | 601818 | 光大银行 | 5.42 | 0.35 |
-| [[600016]] | 600016 | 民生银行 | 5.47 | 0.27 |
-| [[601169]] | 601169 | 北京银行 | 5.52 | 0.41 |
-| [[601229]] | 601229 | 上海银行 | 5.54 | 0.52 |
-| [[601601]] | 601601 | 中国太保 | 5.66 | 1.00 |
-| [[601668]] | 601668 | 中国建筑 | 5.68 | 0.36 |
-| [[000415]] | 000415 | 渤海租赁 | 5.74 | 0.89 |
-| [[600000]] | 600000 | 浦发银行 | 6.03 | 0.41 |
-| [[601077]] | 601077 | 渝农商行 | 6.06 | 0.55 |
-| [[601838]] | 601838 | 成都银行 | 6.06 | 0.89 |
-| [[600926]] | 600926 | 杭州银行 | 6.09 | 0.85 |
-| [[601319]] | 601319 | 中国人保 | 6.14 | 1.03 |
-| [[600919]] | 600919 | 江苏银行 | 6.16 | 0.82 |
-| [[601916]] | 601916 | 浙商银行 | 6.17 | 0.44 |
-| [[601009]] | 601009 | 南京银行 | 6.39 | 0.76 |
-| [[601318]] | 601318 | 中国平安 | 6.41 | 0.99 |
-| [[601328]] | 601328 | 交通银行 | 6.64 | 0.55 |
-| [[601998]] | 601998 | 中信银行 | 6.74 | 0.65 |
-| [[600036]] | 600036 | 招商银行 | 6.84 | 0.91 |
-| [[601117]] | 601117 | 中国化学 | 6.89 | 0.64 |
-| [[000623]] | 000623 | 吉林敖东 | 6.9 | 0.68 |
-| [[601825]] | 601825 | 沪农商行 | 6.90 | 0.64 |
-| [[600741]] | 600741 | 华域汽车 | 6.98 | 0.73 |
-| [[002142]] | 002142 | 宁波银行 | 7.18 | 0.94 |
-| [[601658]] | 601658 | 邮储银行 | 7.19 | 0.62 |
-| [[601398]] | 601398 | 工商银行 | 7.59 | 0.72 |
-| [[601800]] | 601800 | 中国交建 | 7.73 | 0.33 |
-| [[000651]] | 000651 | 格力电器 | 7.81 | 1.47 |
-| [[601288]] | 601288 | 农业银行 | 8.01 | 0.84 |
-| [[601939]] | 601939 | 建设银行 | 8.10 | 0.78 |
-| [[601988]] | 601988 | 中国银行 | 8.33 | 0.75 |
-| [[000807]] | 000807 | 云铝股份 | 8.45 | 2.43 |
-| [[601688]] | 601688 | 华泰证券 | 8.53 | 0.98 |
-| [[002532]] | 002532 | 天山铝业 | 8.64 | 1.86 |
-| [[600999]] | 600999 | 招商证券 | 8.86 | 1.25 |
-| [[600018]] | 600018 | 上港集团 | 8.98 | 0.86 |
-| [[000776]] | 000776 | 广发证券 | 9.05 | 1.24 |
-| [[002736]] | 002736 | 国信证券 | 9.11 | 1.07 |
-| [[600011]] | 600011 | 华能国际 | 9.11 | 1.66 |
-| [[601919]] | 601919 | 中远海控 | 9.18 | 1.05 |
-| [[601600]] | 601600 | 中国铝业 | 9.34 | 1.93 |
-| [[601669]] | 601669 | 中国电建 | 9.49 | 0.55 |
-| [[601211]] | 601211 | 国泰海通 | 9.53 | 0.93 |
-| [[601881]] | 601881 | 中国银河 | 9.71 | 1.11 |
-| [[600233]] | 600233 | 圆通速递 | 10.10 | 1.54 |
-| [[002648]] | 002648 | 卫星化学 | 10.35 | 2.39 |
-| [[000166]] | 000166 | 申万宏源 | 10.36 | 0.99 |
-| [[000598]] | 000598 | 兴蓉环境 | 10.39 | 1.06 |
-| [[603799]] | 603799 | 华友钴业 | 10.40 | 1.41 |
-| [[601898]] | 601898 | 中煤能源 | 10.41 | 1.15 |
-| [[600039]] | 600039 | 四川路桥 | 10.47 | 1.58 |
-| [[600027]] | 600027 | 华电国际 | 10.53 | 1.12 |
-| [[601877]] | 601877 | 正泰电器 | 10.90 | 1.20 |
-| [[600030]] | 600030 | 中信证券 | 10.91 | 1.46 |
-| [[600061]] | 600061 | 国投资本 | 10.94 | 0.77 |
-| [[000708]] | 000708 | 中信特钢 | 11.05 | 1.54 |
-| [[600938]] | 600938 | 中国海油 | 11.20 | 1.81 |
-| [[600989]] | 600989 | 宝丰能源 | 11.21 | 3.30 |
-| [[600690]] | 600690 | 海尔智家 | 11.24 | 1.68 |
-| [[000528]] | 000528 | 柳工 | 11.29 | 0.87 |
-| [[000703]] | 000703 | 恒逸石化 | 11.34 | 2.26 |
-| [[002001]] | 002001 | 新和成 | 11.34 | 2.33 |
-| [[601857]] | 601857 | 中国石油 | 11.34 | 1.22 |
-| [[600066]] | 600066 | 宇通客车 | 11.40 | 4.82 |
-| [[600346]] | 600346 | 恒力石化 | 11.53 | 1.80 |
-| [[000792]] | 000792 | 盐湖股份 | 11.55 | 2.92 |
-| [[600958]] | 600958 | 东方证券 | 11.66 | 0.96 |
-| [[600023]] | 600023 | 浙能电力 | 11.76 | 0.88 |
-| [[601995]] | 601995 | 中金公司 | 11.81 | 1.55 |
-| [[601225]] | 601225 | 陕西煤业 | 12.08 | 2.44 |
-| [[601901]] | 601901 | 方正证券 | 12.43 | 1.07 |
-| [[601058]] | 601058 | 赛轮轮胎 | 12.46 | 2.12 |
-| [[000999]] | 000999 | 华润三九 | 12.47 | 1.79 |
-| [[600019]] | 600019 | 宝钢股份 | 12.48 | 0.61 |
-| [[601766]] | 601766 | 中国中车 | 12.74 | 1.00 |
-| [[301308]] | 301308 | 江波龙 | 12.79 | 6.89 |
-| [[601607]] | 601607 | 上海医药 | 12.79 | 0.78 |
-| [[600219]] | 600219 | 南山铝业 | 12.81 | 1.12 |
-| [[000027]] | 000027 | 深圳能源 | 12.96 | 0.89 |
-| [[600104]] | 600104 | 上汽集团 | 13.02 | 0.40 |
-| [[601899]] | 601899 | 紫金矿业 | 13.11 | 4.65 |
-| [[601018]] | 601018 | 宁波港 | 13.13 | 0.82 |
-| [[600551]] | 600551 | 时代出版 | 13.55 | 0.91 |
-| [[600426]] | 600426 | 华鲁恒升 | 13.62 | 1.60 |
-| [[600362]] | 600362 | 江西铜业 | 13.64 | 1.80 |
-| [[000157]] | 000157 | 中联重科 | 13.69 | 1.0 |
-| [[600803]] | 600803 | 新奥股份 | 13.69 | 2.55 |
-| [[000963]] | 000963 | 华东医药 | 13.74 | 1.87 |
-| [[002074]] | 002074 | 国轩高科 | 13.83 | 1.57 |
-| [[601377]] | 601377 | 兴业证券 | 13.84 | 0.90 |
-| [[001965]] | 001965 | 招商公路 | 13.96 | 0.96 |
-| [[601872]] | 601872 | 招商轮船 | 13.98 | 3.24 |
-| [[002236]] | 002236 | 大华股份 | 14.12 | 1.36 |
-| [[603993]] | 603993 | 洛阳钼业 | 14.14 | 4.39 |
-| [[000513]] | 000513 | 丽珠集团 | 14.32 | 1.79 |
-| [[600309]] | 600309 | 万华化学 | 14.54 | 2.11 |
-| [[600795]] | 600795 | 国电电力 | 14.54 | 1.57 |
-| [[600809]] | 600809 | 山西汾酒 | 14.63 | 3.91 |
-| [[688009]] | 688009 | 中国通号 | 14.72 | 1.11 |
-| [[000333]] | 000333 | 美的集团 | 14.8 | 3.1 |
-| [[601878]] | 601878 | 浙商证券 | 14.80 | 1.15 |
-| [[000019]] | 000019 | 深粮控股 | — | — |
-| [[000505]] | 000505 | 京粮控股 | — | — |
-| [[002172]] | 002172 | 省广集团 | — | — |
-| [[002696]] | 002696 | 郑州银行 | — | — |
-| [[600313]] | 600313 | 农发种业 | — | — |
-| [[600693]] | 600693 | 东百集团 | — | — |
-| [[603118]] | 603118 | 共进股份 | — | — |
-| [[603221]] | 603221 | 梦网科技 | — | — |
-| [[603626]] | 603626 | 科森科技 | — | — |
-| [[605188]] | 605188 | 国邦医药 | — | — |
+| [[10_Reference/investing/stocks/600371]] | 600371 | 万向德农 | -727.72 | 7.71 |
+| [[10_Reference/investing/stocks/003040]] | 003040 | 楚天龙 | -640.55 | 7.03 |
+| [[10_Reference/investing/stocks/688167]] | 688167 | 炬光科技 | -506.06 | 17.96 |
+| [[10_Reference/investing/stocks/600127]] | 600127 | 金健米业 | -451.85 | 11.93 |
+| [[10_Reference/investing/stocks/002104]] | 002104 | 恒宝股份 | -444.18 | 4.78 |
+| [[10_Reference/investing/stocks/002354]] | 002354 | 天娱数科 | -440.37 | 8.1 |
+| [[10_Reference/investing/stocks/600698]] | 600698 | 湖南天雁 | -277.77 | 11.41 |
+| [[10_Reference/investing/stocks/000009]] | 000009 | 中国宝安 | -258.73 | 1.87 |
+| [[10_Reference/investing/stocks/002714]] | 002714 | 牧原股份 | -225.29 | 3.19 |
+| [[10_Reference/investing/stocks/600048]] | 600048 | 保利发展 | -195.72 | 0.32 |
+| [[10_Reference/investing/stocks/002564]] | 002564 | 天沃科技 | -195.11 | 38.74 |
+| [[10_Reference/investing/stocks/603122]] | 603122 | 合富中国 | -159.67 | 5.20 |
+| [[10_Reference/investing/stocks/603533]] | 603533 | 掌阅科技 | -158.51 | 4.63 |
+| [[10_Reference/investing/stocks/000039]] | 000039 | 中集集团 | -157.11 | 1.09 |
+| [[10_Reference/investing/stocks/600540]] | 600540 | 新赛股份 | -149.48 | 7.59 |
+| [[10_Reference/investing/stocks/000560]] | 000560 | 我爱我家 | -136.80 | 0.79 |
+| [[10_Reference/investing/stocks/688521]] | 688521 | 芯原股份 | -118.76 | 33.29 |
+| [[10_Reference/investing/stocks/600865]] | 600865 | 百大集团 | -116.92 | 1.86 |
+| [[10_Reference/investing/stocks/688047]] | 688047 | 龙芯中科 | -104.87 | 17.56 |
+| [[10_Reference/investing/stocks/003005]] | 003005 | 竞业达 | -91.36 | 2.45 |
+| [[10_Reference/investing/stocks/002909]] | 002909 | 集泰股份 | -84.97 | 3.28 |
+| [[10_Reference/investing/stocks/000661]] | 000661 | 长春高新 | -84.36 | 1.33 |
+| [[10_Reference/investing/stocks/000592]] | 000592 | 平潭发展 | -73.25 | 8.49 |
+| [[10_Reference/investing/stocks/002702]] | 002702 | 海欣食品 | -72.53 | 3.09 |
+| [[10_Reference/investing/stocks/000032]] | 000032 | 深桑达A | -71.79 | 2.36 |
+| [[10_Reference/investing/stocks/600029]] | 600029 | 南方航空 | -69.79 | 3.03 |
+| [[10_Reference/investing/stocks/600611]] | 600611 | 大众交通 | -68.87 | 1.25 |
+| [[10_Reference/investing/stocks/688506]] | 688506 | 百利天恒 | -66.07 | 22.54 |
+| [[10_Reference/investing/stocks/688141]] | 688141 | 杰华特 | -57.30 | 49.52 |
+| [[10_Reference/investing/stocks/002868]] | 002868 | 绿康生化 | -54.71 | 56.58 |
+| [[10_Reference/investing/stocks/601111]] | 601111 | 中国国航 | -53.18 | 2.00 |
+| [[10_Reference/investing/stocks/300498]] | 300498 | 温氏股份 | -39.60 | 2.91 |
+| [[10_Reference/investing/stocks/688126]] | 688126 | 沪硅产业 | -36.05 | 3.92 |
+| [[10_Reference/investing/stocks/002084]] | 002084 | 海鸥住工 | -34.75 | 3.61 |
+| [[10_Reference/investing/stocks/600115]] | 600115 | 中国东航 | -32.38 | 7.72 |
+| [[10_Reference/investing/stocks/600892]] | 600892 | 大晟文化 | -31.84 | -201.94 |
+| [[10_Reference/investing/stocks/603123]] | 603123 | 翠微股份 | -25.51 | 5.63 |
+| [[10_Reference/investing/stocks/000428]] | 000428 | 华天酒店 | -22.05 | 3.90 |
+| [[10_Reference/investing/stocks/000050]] | 000050 | 深天马A | -21.04 | 0.61 |
+| [[10_Reference/investing/stocks/600828]] | 600828 | 茂业商业 | -18.36 | 1.31 |
+| [[10_Reference/investing/stocks/002059]] | 002059 | 云南旅游 | -15.43 | 6.03 |
+| [[10_Reference/investing/stocks/000892]] | 000892 | 欢瑞世纪 | -14.08 | 10.85 |
+| [[10_Reference/investing/stocks/001330]] | 001330 | 博纳影业 | -13.73 | 2.14 |
+| [[10_Reference/investing/stocks/002855]] | 002855 | 捷荣技术 | -13.35 | 23.90 |
+| [[10_Reference/investing/stocks/002403]] | 002403 | 爱仕达 | -12.27 | 2.93 |
+| [[10_Reference/investing/stocks/601012]] | 601012 | 隆基绿能 | -11.89 | 1.86 |
+| [[10_Reference/investing/stocks/600802]] | 600802 | 福建水泥 | -11.01 | 2.85 |
+| [[10_Reference/investing/stocks/600121]] | 600121 | 郑州煤电 | -5.98 | 10.37 |
+| [[10_Reference/investing/stocks/688223]] | 688223 | 晶科能源 | -5.89 | 1.78 |
+| [[10_Reference/investing/stocks/600438]] | 600438 | 通威股份 | -5.37 | 1.62 |
+| [[10_Reference/investing/stocks/000635]] | 000635 | 英 力 特 | -4.70 | 3.08 |
+| [[10_Reference/investing/stocks/600657]] | 600657 | 信达地产 | -1.81 | 0.68 |
+| [[10_Reference/investing/stocks/002124]] | 002124 | 天邦食品 | -1.68 | 6.53 |
+| [[10_Reference/investing/stocks/000002]] | 000002 | 万科A | -0.41 | 0.37 |
+| [[10_Reference/investing/stocks/600015]] | 600015 | 华夏银行 | 3.96 | 0.31 |
+| [[10_Reference/investing/stocks/601336]] | 601336 | 新华保险 | 4.29 | 1.54 |
+| [[10_Reference/investing/stocks/601628]] | 601628 | 中国人寿 | 4.38 | 1.63 |
+| [[10_Reference/investing/stocks/601186]] | 601186 | 中国铁建 | 5.03 | 0.30 |
+| [[10_Reference/investing/stocks/601166]] | 601166 | 兴业银行 | 5.07 | 0.46 |
+| [[10_Reference/investing/indices/000001]] | 000001 | 平安银行 | 5.22 | 0.48 |
+| [[10_Reference/investing/stocks/601390]] | 601390 | 中国中铁 | 5.40 | 0.33 |
+| [[10_Reference/investing/stocks/601818]] | 601818 | 光大银行 | 5.42 | 0.35 |
+| [[10_Reference/investing/stocks/600016]] | 600016 | 民生银行 | 5.47 | 0.27 |
+| [[10_Reference/investing/stocks/601169]] | 601169 | 北京银行 | 5.52 | 0.41 |
+| [[10_Reference/investing/stocks/601229]] | 601229 | 上海银行 | 5.54 | 0.52 |
+| [[10_Reference/investing/stocks/601601]] | 601601 | 中国太保 | 5.66 | 1.00 |
+| [[10_Reference/investing/stocks/601668]] | 601668 | 中国建筑 | 5.68 | 0.36 |
+| [[10_Reference/investing/stocks/000415]] | 000415 | 渤海租赁 | 5.74 | 0.89 |
+| [[10_Reference/investing/stocks/600000]] | 600000 | 浦发银行 | 6.03 | 0.41 |
+| [[10_Reference/investing/stocks/601077]] | 601077 | 渝农商行 | 6.06 | 0.55 |
+| [[10_Reference/investing/stocks/601838]] | 601838 | 成都银行 | 6.06 | 0.89 |
+| [[10_Reference/investing/stocks/600926]] | 600926 | 杭州银行 | 6.09 | 0.85 |
+| [[10_Reference/investing/stocks/601319]] | 601319 | 中国人保 | 6.14 | 1.03 |
+| [[10_Reference/investing/stocks/600919]] | 600919 | 江苏银行 | 6.16 | 0.82 |
+| [[10_Reference/investing/stocks/601916]] | 601916 | 浙商银行 | 6.17 | 0.44 |
+| [[10_Reference/investing/stocks/601009]] | 601009 | 南京银行 | 6.39 | 0.76 |
+| [[10_Reference/investing/stocks/601318]] | 601318 | 中国平安 | 6.41 | 0.99 |
+| [[10_Reference/investing/stocks/601328]] | 601328 | 交通银行 | 6.64 | 0.55 |
+| [[10_Reference/investing/stocks/601998]] | 601998 | 中信银行 | 6.74 | 0.65 |
+| [[10_Reference/investing/stocks/600036]] | 600036 | 招商银行 | 6.84 | 0.91 |
+| [[10_Reference/investing/stocks/601117]] | 601117 | 中国化学 | 6.89 | 0.64 |
+| [[10_Reference/investing/stocks/000623]] | 000623 | 吉林敖东 | 6.9 | 0.68 |
+| [[10_Reference/investing/stocks/601825]] | 601825 | 沪农商行 | 6.90 | 0.64 |
+| [[10_Reference/investing/stocks/600741]] | 600741 | 华域汽车 | 6.98 | 0.73 |
+| [[10_Reference/investing/stocks/002142]] | 002142 | 宁波银行 | 7.18 | 0.94 |
+| [[10_Reference/investing/stocks/601658]] | 601658 | 邮储银行 | 7.19 | 0.62 |
+| [[10_Reference/investing/stocks/601398]] | 601398 | 工商银行 | 7.59 | 0.72 |
+| [[10_Reference/investing/stocks/601800]] | 601800 | 中国交建 | 7.73 | 0.33 |
+| [[10_Reference/investing/stocks/000651]] | 000651 | 格力电器 | 7.81 | 1.47 |
+| [[10_Reference/investing/stocks/601288]] | 601288 | 农业银行 | 8.01 | 0.84 |
+| [[10_Reference/investing/stocks/601939]] | 601939 | 建设银行 | 8.10 | 0.78 |
+| [[10_Reference/investing/stocks/601988]] | 601988 | 中国银行 | 8.33 | 0.75 |
+| [[10_Reference/investing/stocks/000807]] | 000807 | 云铝股份 | 8.45 | 2.43 |
+| [[10_Reference/investing/stocks/601688]] | 601688 | 华泰证券 | 8.53 | 0.98 |
+| [[10_Reference/investing/stocks/002532]] | 002532 | 天山铝业 | 8.64 | 1.86 |
+| [[10_Reference/investing/stocks/600999]] | 600999 | 招商证券 | 8.86 | 1.25 |
+| [[10_Reference/investing/stocks/600018]] | 600018 | 上港集团 | 8.98 | 0.86 |
+| [[10_Reference/investing/stocks/000776]] | 000776 | 广发证券 | 9.05 | 1.24 |
+| [[10_Reference/investing/stocks/002736]] | 002736 | 国信证券 | 9.11 | 1.07 |
+| [[10_Reference/investing/stocks/600011]] | 600011 | 华能国际 | 9.11 | 1.66 |
+| [[10_Reference/investing/stocks/601919]] | 601919 | 中远海控 | 9.18 | 1.05 |
+| [[10_Reference/investing/stocks/601600]] | 601600 | 中国铝业 | 9.34 | 1.93 |
+| [[10_Reference/investing/stocks/601669]] | 601669 | 中国电建 | 9.49 | 0.55 |
+| [[10_Reference/investing/stocks/601211]] | 601211 | 国泰海通 | 9.53 | 0.93 |
+| [[10_Reference/investing/stocks/601881]] | 601881 | 中国银河 | 9.71 | 1.11 |
+| [[10_Reference/investing/stocks/600233]] | 600233 | 圆通速递 | 10.10 | 1.54 |
+| [[10_Reference/investing/stocks/002648]] | 002648 | 卫星化学 | 10.35 | 2.39 |
+| [[10_Reference/investing/stocks/000166]] | 000166 | 申万宏源 | 10.36 | 0.99 |
+| [[10_Reference/investing/stocks/000598]] | 000598 | 兴蓉环境 | 10.39 | 1.06 |
+| [[10_Reference/investing/stocks/603799]] | 603799 | 华友钴业 | 10.40 | 1.41 |
+| [[10_Reference/investing/stocks/601898]] | 601898 | 中煤能源 | 10.41 | 1.15 |
+| [[10_Reference/investing/stocks/600039]] | 600039 | 四川路桥 | 10.47 | 1.58 |
+| [[10_Reference/investing/stocks/600027]] | 600027 | 华电国际 | 10.53 | 1.12 |
+| [[10_Reference/investing/stocks/601877]] | 601877 | 正泰电器 | 10.90 | 1.20 |
+| [[10_Reference/investing/stocks/600030]] | 600030 | 中信证券 | 10.91 | 1.46 |
+| [[10_Reference/investing/stocks/600061]] | 600061 | 国投资本 | 10.94 | 0.77 |
+| [[10_Reference/investing/stocks/000708]] | 000708 | 中信特钢 | 11.05 | 1.54 |
+| [[10_Reference/investing/stocks/600938]] | 600938 | 中国海油 | 11.20 | 1.81 |
+| [[10_Reference/investing/stocks/600989]] | 600989 | 宝丰能源 | 11.21 | 3.30 |
+| [[10_Reference/investing/stocks/600690]] | 600690 | 海尔智家 | 11.24 | 1.68 |
+| [[10_Reference/investing/stocks/000528]] | 000528 | 柳工 | 11.29 | 0.87 |
+| [[10_Reference/investing/stocks/000703]] | 000703 | 恒逸石化 | 11.34 | 2.26 |
+| [[10_Reference/investing/stocks/002001]] | 002001 | 新和成 | 11.34 | 2.33 |
+| [[10_Reference/investing/stocks/601857]] | 601857 | 中国石油 | 11.34 | 1.22 |
+| [[10_Reference/investing/stocks/600066]] | 600066 | 宇通客车 | 11.40 | 4.82 |
+| [[10_Reference/investing/stocks/600346]] | 600346 | 恒力石化 | 11.53 | 1.80 |
+| [[10_Reference/investing/stocks/000792]] | 000792 | 盐湖股份 | 11.55 | 2.92 |
+| [[10_Reference/investing/stocks/600958]] | 600958 | 东方证券 | 11.66 | 0.96 |
+| [[10_Reference/investing/stocks/600023]] | 600023 | 浙能电力 | 11.76 | 0.88 |
+| [[10_Reference/investing/stocks/601995]] | 601995 | 中金公司 | 11.81 | 1.55 |
+| [[10_Reference/investing/stocks/601225]] | 601225 | 陕西煤业 | 12.08 | 2.44 |
+| [[10_Reference/investing/stocks/601901]] | 601901 | 方正证券 | 12.43 | 1.07 |
+| [[10_Reference/investing/stocks/601058]] | 601058 | 赛轮轮胎 | 12.46 | 2.12 |
+| [[10_Reference/investing/stocks/000999]] | 000999 | 华润三九 | 12.47 | 1.79 |
+| [[10_Reference/investing/stocks/600019]] | 600019 | 宝钢股份 | 12.48 | 0.61 |
+| [[10_Reference/investing/stocks/601766]] | 601766 | 中国中车 | 12.74 | 1.00 |
+| [[10_Reference/investing/stocks/301308]] | 301308 | 江波龙 | 12.79 | 6.89 |
+| [[10_Reference/investing/stocks/601607]] | 601607 | 上海医药 | 12.79 | 0.78 |
+| [[10_Reference/investing/stocks/600219]] | 600219 | 南山铝业 | 12.81 | 1.12 |
+| [[10_Reference/investing/stocks/000027]] | 000027 | 深圳能源 | 12.96 | 0.89 |
+| [[10_Reference/investing/stocks/600104]] | 600104 | 上汽集团 | 13.02 | 0.40 |
+| [[10_Reference/investing/stocks/601899]] | 601899 | 紫金矿业 | 13.11 | 4.65 |
+| [[10_Reference/investing/stocks/601018]] | 601018 | 宁波港 | 13.13 | 0.82 |
+| [[10_Reference/investing/stocks/600551]] | 600551 | 时代出版 | 13.55 | 0.91 |
+| [[10_Reference/investing/stocks/600426]] | 600426 | 华鲁恒升 | 13.62 | 1.60 |
+| [[10_Reference/investing/stocks/600362]] | 600362 | 江西铜业 | 13.64 | 1.80 |
+| [[10_Reference/investing/stocks/000157]] | 000157 | 中联重科 | 13.69 | 1.0 |
+| [[10_Reference/investing/stocks/600803]] | 600803 | 新奥股份 | 13.69 | 2.55 |
+| [[10_Reference/investing/stocks/000963]] | 000963 | 华东医药 | 13.74 | 1.87 |
+| [[10_Reference/investing/stocks/002074]] | 002074 | 国轩高科 | 13.83 | 1.57 |
+| [[10_Reference/investing/stocks/601377]] | 601377 | 兴业证券 | 13.84 | 0.90 |
+| [[10_Reference/investing/stocks/001965]] | 001965 | 招商公路 | 13.96 | 0.96 |
+| [[10_Reference/investing/stocks/601872]] | 601872 | 招商轮船 | 13.98 | 3.24 |
+| [[10_Reference/investing/stocks/002236]] | 002236 | 大华股份 | 14.12 | 1.36 |
+| [[10_Reference/investing/stocks/603993]] | 603993 | 洛阳钼业 | 14.14 | 4.39 |
+| [[10_Reference/investing/stocks/000513]] | 000513 | 丽珠集团 | 14.32 | 1.79 |
+| [[10_Reference/investing/stocks/600309]] | 600309 | 万华化学 | 14.54 | 2.11 |
+| [[10_Reference/investing/stocks/600795]] | 600795 | 国电电力 | 14.54 | 1.57 |
+| [[10_Reference/investing/stocks/600809]] | 600809 | 山西汾酒 | 14.63 | 3.91 |
+| [[10_Reference/investing/stocks/688009]] | 688009 | 中国通号 | 14.72 | 1.11 |
+| [[10_Reference/investing/stocks/000333]] | 000333 | 美的集团 | 14.8 | 3.1 |
+| [[10_Reference/investing/stocks/601878]] | 601878 | 浙商证券 | 14.80 | 1.15 |
+| [[10_Reference/investing/stocks/000019]] | 000019 | 深粮控股 | — | — |
+| [[10_Reference/investing/stocks/000505]] | 000505 | 京粮控股 | — | — |
+| [[10_Reference/investing/stocks/002172]] | 002172 | 省广集团 | — | — |
+| [[10_Reference/investing/stocks/002696]] | 002696 | 郑州银行 | — | — |
+| [[10_Reference/investing/stocks/600313]] | 600313 | 农发种业 | — | — |
+| [[10_Reference/investing/stocks/600693]] | 600693 | 东百集团 | — | — |
+| [[10_Reference/investing/stocks/603118]] | 603118 | 共进股份 | — | — |
+| [[10_Reference/investing/stocks/603221]] | 603221 | 梦网科技 | — | — |
+| [[10_Reference/investing/stocks/603626]] | 603626 | 科森科技 | — | — |
+| [[10_Reference/investing/stocks/605188]] | 605188 | 国邦医药 | — | — |
 <!-- /dataview-precompiled -->
 
 ### 4. 图谱视图

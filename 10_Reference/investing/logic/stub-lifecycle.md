@@ -57,22 +57,22 @@ Dataview 查询（stub 实体待数据源补充）：
 <!-- dataview-precompiled:2bfae211412a -->
 | 文件 | 类型 | 状态 | 创建日 |
 |---|---|---|---|
-| [[promote-from-inbox]] | action | stub | 2026-09-07 |
-| [[sync-from-source]] | action | stub | 2026-09-07 |
-| [[食品饮料]] | industry | stub | 2026-09-07 |
-| [[broken-link-grading]] | logic | stub | 2026-09-07 |
-| [[source-drift]] | logic | stub | 2026-09-07 |
-| [[static-value-ban]] | logic | stub | 2026-09-07 |
-| [[000019]] | stock | stub | 2026-09-07 |
-| [[000505]] | stock | stub | 2026-09-07 |
-| [[002172]] | stock | stub | 2026-09-07 |
-| [[002696]] | stock | stub | 2026-09-07 |
-| [[600313]] | stock | stub | 2026-09-07 |
-| [[600693]] | stock | stub | 2026-09-07 |
-| [[603118]] | stock | stub | 2026-09-07 |
-| [[603221]] | stock | stub | 2026-09-07 |
-| [[603626]] | stock | stub | 2026-09-07 |
-| [[605188]] | stock | stub | 2026-09-07 |
+| [[10_Reference/investing/actions/promote-from-inbox]] | action | stub | 2026-09-07 |
+| [[10_Reference/investing/actions/sync-from-source]] | action | stub | 2026-09-07 |
+| [[10_Reference/investing/industries/食品饮料]] | industry | stub | 2026-09-07 |
+| [[10_Reference/investing/logic/broken-link-grading]] | logic | stub | 2026-09-07 |
+| [[10_Reference/investing/logic/source-drift]] | logic | stub | 2026-09-07 |
+| [[10_Reference/investing/logic/static-value-ban]] | logic | stub | 2026-09-07 |
+| [[10_Reference/investing/stocks/000019]] | stock | stub | 2026-09-07 |
+| [[10_Reference/investing/stocks/000505]] | stock | stub | 2026-09-07 |
+| [[10_Reference/investing/stocks/002172]] | stock | stub | 2026-09-07 |
+| [[10_Reference/investing/stocks/002696]] | stock | stub | 2026-09-07 |
+| [[10_Reference/investing/stocks/600313]] | stock | stub | 2026-09-07 |
+| [[10_Reference/investing/stocks/600693]] | stock | stub | 2026-09-07 |
+| [[10_Reference/investing/stocks/603118]] | stock | stub | 2026-09-07 |
+| [[10_Reference/investing/stocks/603221]] | stock | stub | 2026-09-07 |
+| [[10_Reference/investing/stocks/603626]] | stock | stub | 2026-09-07 |
+| [[10_Reference/investing/stocks/605188]] | stock | stub | 2026-09-07 |
 <!-- /dataview-precompiled -->
 
 ## ⚠️ 违反处置
