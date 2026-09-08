@@ -23,11 +23,9 @@
   },
   "stub_count": 15,
   "llm_generated_count": 0,
-  "placeholder_count": 23,
+  "placeholder_count": 5,
   "placeholder_by_type": {
-    "concepts": 5,
-    "logic": 1,
-    "specs": 17
+    "concepts": 5
   },
   "confidence_distribution": {
     "medium": 1027,

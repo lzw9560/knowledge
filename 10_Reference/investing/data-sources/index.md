@@ -30,7 +30,7 @@ LIMIT 50
 
 用 Templater 应用 `templates/data-source` 新建。
 
-> 2026-09-06 已从 `ARCHITECTURE.md` 批量灌入 16 个数据源（规则脚本，非 LLM）。ARCHITECTURE.md 未明示的字段标"待补"。
+> 2026-09-06 已从 `ARCHITECTURE.md` 批量灌入 16 个数据源（规则脚本，非 LLM）。字段已从源码提取并填充。
 
 ## 实体清单（入边）
 
