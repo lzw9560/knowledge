@@ -21,4 +21,4 @@ SORT file.mtime DESC
 ## 🔗 关联
 
 - **父级 MOC**：[[10_Reference/reading/MOC]]
-- **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个
+- **出链**：2 个 · **入链**：0 个

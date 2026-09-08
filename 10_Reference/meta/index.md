@@ -20,4 +20,4 @@ created: 2026-09-07
 ## 🔗 关联
 
 - **实例化领域**：[[10_Reference/investing/MOC]]（投研知识图谱）
-- **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个
+- **出链**：4 个 · **入链**：0 个

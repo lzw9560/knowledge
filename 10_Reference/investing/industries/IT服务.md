@@ -9,7 +9,7 @@ confidence: medium
 
 > [!info] 🏭 行业信息
 > **行业**：IT服务  **来源**：东财涨停池行业分类
-> **成分股数**：`=(length(filter(this.file.inlinks, (l) => l.folder = "stocks")))`
+> **成分股数**：0
 >
 > **关联**：[[10_Reference/investing/concepts/index|concepts/]] · [[10_Reference/investing/data-sources/index|data-sources/]]
 
@@ -53,4 +53,4 @@ IT服务行业覆盖信息系统从规划咨询、设计开发、系统集成到
 
 ## 🔗 关联
 
-- **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个
+- **出链**：3 个 · **入链**：0 个

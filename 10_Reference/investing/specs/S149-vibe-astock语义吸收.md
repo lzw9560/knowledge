@@ -46,7 +46,7 @@ S149 旨在解决 Vibe 编程中大量非结构化的设计意图与代码片段
 
 ## 🔗 关联
 
-- **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个
+- **出链**：9 个 · **入链**：2 个
 
 ## 🔗 技术参考
 

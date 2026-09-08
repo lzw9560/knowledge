@@ -77,4 +77,4 @@ for (code, type), files in code_type_map.items():
 - **相关规则**：[[10_Reference/investing/logic/duplicate-merge]]（旧名，本规则细化 confidence 保留策略）
 - **约束实体**：[[10_Reference/investing/stocks/index|stocks/]] [[10_Reference/investing/metrics/index|metrics/]] [[10_Reference/investing/valuations/index|valuations/]] [[10_Reference/investing/reports/index|reports/]]
 - **来源决策**：[[10_Reference/investing/specs/index|specs/]]
-- **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个
+- **出链**：1929 个 · **入链**：3 个

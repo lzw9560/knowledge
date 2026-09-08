@@ -74,4 +74,4 @@ Dataview 查询（stale 实体）：
 - **相关规则**：[[10_Reference/investing/logic/confidence-decay]]（置信度随时间衰减）
 - **约束实体**：[[10_Reference/investing/metrics/index|metrics/]] [[10_Reference/investing/valuations/index|valuations/]] [[10_Reference/investing/reports/index|reports/]]
 - **来源决策**：[[10_Reference/investing/specs/index|specs/]]
-- **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个
+- **出链**：6 个 · **入链**：3 个

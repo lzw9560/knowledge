@@ -10,7 +10,7 @@ source: astock.concept_blocks
 
 > [!info] 💡 概念信息
 > **概念**：CPO概念  **关联行业**：通信设备
-> **成分股数**：`=(length(filter(this.file.inlinks, (l) => l.folder = "stocks")))`
+> **成分股数**：0
 >
 > **关联**：[[10_Reference/investing/industries/index|industries/]] · [[10_Reference/investing/data-sources/index|data-sources/]]
 
@@ -73,4 +73,4 @@ CPO（光电共封装）是 AI 算力光互联下一代技术，解决高速光�
 
 ## 🔗 关联
 
-- **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个
+- **出链**：3 个 · **入链**：0 个

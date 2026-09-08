@@ -20,13 +20,13 @@ created: 2026-09-08
 
 | 指标 | 值 |
 |---|---|
-| 总实体数 | 2490 |
+| 总实体数 | 2498 |
 | stub 实体 | 15 |
 | LLM 生成内容 | 0 |
 | 占位符残留 | 0 |
 | 断链 | 1 |
 | 孤立实体 | 0 |
-| confidence 覆盖 | 2449/2490 (98%) |
+| confidence 覆盖 | 2457/2498 (98%) |
 
 ## 📋 各类型分布
 
@@ -37,8 +37,8 @@ created: 2026-09-08
 | report | 392 | concept | 130 |
 | industry | 126 | spec | 101 |
 | dragon_tiger | 41 | logic | 24 |
-| data_source | 17 | event | 13 |
-| strategy | 12 | agent_role | 7 |
+| event | 20 | data_source | 17 |
+| strategy | 13 | agent_role | 7 |
 | index | 5 | decision | 5 |
 | project | 4 | action | 4 |
 
@@ -63,7 +63,7 @@ created: 2026-09-08
 
 | confidence | 数量 |
 |---|---|
-| high | 1422 |
+| high | 1430 |
 | medium | 1027 |
 | (未标注) | 41 |
 

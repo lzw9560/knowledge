@@ -54,64 +54,64 @@ LIMIT 1
 
 | 信号 | 权重 | 当前值 | Z-Score | 方向 | 频率 |
 |------|------|--------|---------|------|------|
-| 社融存量同比 | 12% | `=this.l0_social_finance` | `=this.l0_social_finance_z` | `=this.l0_social_finance_dir` | 月频 |
-| M1-M2剪刀差 | 6% | `=this.l0_m1_m2` | `=this.l0_m1_m2_z` | `=this.l0_m1_m2_dir` | 月频 |
-| 制造业PMI | 5% | `=this.l0_pmi` | `=this.l0_pmi_z` | `=this.l0_pmi_dir` | 月频 |
-| 中长贷占比 | 4% | `=this.l0_credit` | `=this.l0_credit_z` | `=this.l0_credit_dir` | 月频 |
-| DR007 | 4% | `=this.l0_dr007` | `=this.l0_dr007_z` | `=this.l0_dr007_dir` | 日频 |
-| CPI-PPI剪刀差 | 3% | `=this.l0_cpi_ppi` | `=this.l0_cpi_ppi_z` | `=this.l0_cpi_ppi_dir` | 月频 |
-| **L0 综合** | **30%** | — | `=this.l0_macro_score` | `=this.l0_direction` | — |
+| 社融存量同比 | 12% | — | — | — | 月频 |
+| M1-M2剪刀差 | 6% | — | — | — | 月频 |
+| 制造业PMI | 5% | — | — | — | 月频 |
+| 中长贷占比 | 4% | — | — | — | 月频 |
+| DR007 | 4% | — | — | — | 日频 |
+| CPI-PPI剪刀差 | 3% | — | — | — | 月频 |
+| **L0 综合** | **30%** | — | — | — | — |
 
 ### L1 政策与监管层（权重 15%）
 
 | 信号 | 权重 | 当前值 | 方向 | 说明 |
 |------|------|--------|------|------|
-| 政策事件 | 6% | `=this.l1_policy_event_count` 件 | `=this.l1_policy_direction` | 力度分级 1-5 |
-| 资本市场制度 | 5% | `=this.l1_regulation_strength` | `=this.l1_regulation_dir` | 制度变化 |
-| 监管态度 | 4% | `=this.l1_regulatory_attitude` | `=this.l1_attitude_dir` | 问询函/窗口指导 |
-| **L1 综合** | **15%** | — | `=this.l1_policy_score` | `=this.l1_direction` |
+| 政策事件 | 6% | — 件 | — | 力度分级 1-5 |
+| 资本市场制度 | 5% | — | — | 制度变化 |
+| 监管态度 | 4% | — | — | 问询函/窗口指导 |
+| **L1 综合** | **15%** | — | — | — |
 
 ### L2 机构动向层（权重 20%）
 
 | 信号 | 权重 | 当前值 | Z-Score | 方向 | 频率 |
 |------|------|--------|---------|------|------|
-| 龙虎榜机构vs游资分歧 | 6% | `=this.l2_lhb_divergence` | `=this.l2_lhb_div_z` | `=this.l2_lhb_dir` | 日频 |
-| 融资融券余额变化 | 5% | `=this.l2_margin_change` 亿 | `=this.l2_margin_z` | `=this.l2_margin_dir` | 日频 |
-| 大宗交易折价率 | 4% | `=this.l2_block_discount` | `=this.l2_block_z` | `=this.l2_block_dir` | 日频 |
-| 增持/回购公告 | 5% | `=this.l2_buyback_count` 件 | — | `=this.l2_buyback_dir` | 事件 |
-| **L2 综合** | **20%** | — | `=this.l2_inst_score` | `=this.l2_direction` | — |
+| 龙虎榜机构vs游资分歧 | 6% | — | — | — | 日频 |
+| 融资融券余额变化 | 5% | — 亿 | — | — | 日频 |
+| 大宗交易折价率 | 4% | — | — | — | 日频 |
+| 增持/回购公告 | 5% | — 件 | — | — | 事件 |
+| **L2 综合** | **20%** | — | — | — | — |
 
 ### L3 资金面层（权重 20%）
 
 | 信号 | 权重 | 当前值 | Z-Score | 方向 | 频率 |
 |------|------|--------|---------|------|------|
-| 北向资金净流入 | 4% | `=this.l3_northbound_net` 亿 | `=this.l3_northbound_z` | `=this.l3_northbound_dir` | 日频 |
-| 主力资金净流入 | 6% | `=this.l3_main_capital_net` 亿 | `=this.l3_main_z` | `=this.l3_main_dir` | 日频 |
-| 竞价异动 | 4% | `=this.l3_auction_anomaly` | `=this.l3_auction_z` | `=this.l3_auction_dir` | 日频 |
-| ETF净申赎 | 3% | `=this.l3_etf_net` 亿 | `=this.l3_etf_z` | `=this.l3_etf_dir` | 日频 |
-| CDS利差 | 3% | `=this.l3_cds_spread` | `=this.l3_cds_z` | `=this.l3_cds_dir` | 日频 |
-| **L3 综合** | **20%** | — | `=this.l3_capital_score` | `=this.l3_direction` | — |
+| 北向资金净流入 | 4% | — 亿 | — | — | 日频 |
+| 主力资金净流入 | 6% | — 亿 | — | — | 日频 |
+| 竞价异动 | 4% | — | — | — | 日频 |
+| ETF净申赎 | 3% | — 亿 | — | — | 日频 |
+| CDS利差 | 3% | — | — | — | 日频 |
+| **L3 综合** | **20%** | — | — | — | — |
 
 ### L4 市场情绪层（权重 15%）
 
 | 信号 | 权重 | 当前值 | Z-Score | 方向 | 频率 |
 |------|------|--------|---------|------|------|
-| 涨停池结构 | 4% | `=this.l4_limit_up_count` 家 | `=this.l4_limit_up_z` | `=this.l4_limit_up_dir` | 日频 |
-| 炸板率+连板晋级 | 4% | `=this.l4_broken_rate`% | `=this.l4_broken_z` | `=this.l4_broken_dir` | 日频 |
-| 成交额/20日均值 | 3% | `=this.l4_volume_ratio` | `=this.l4_volume_z` | `=this.l4_volume_dir` | 日频 |
-| 板块轮动速度 | 4% | `=this.l4_rotation_speed` | `=this.l4_rotation_z` | `=this.l4_rotation_dir` | 日频 |
-| **L4 综合** | **15%** | — | `=this.l4_sentiment_score` | `=this.l4_direction` | — |
+| 涨停池结构 | 4% | — 家 | — | — | 日频 |
+| 炸板率+连板晋级 | 4% | —% | — | — | 日频 |
+| 成交额/20日均值 | 3% | — | — | — | 日频 |
+| 板块轮动速度 | 4% | — | — | — | 日频 |
+| **L4 综合** | **15%** | — | — | — | — |
 
 ### L5 衍生品/情绪预期层（权重 15%）
 
 | 信号 | 权重 | 当前值 | Z-Score | 方向 | 频率 |
 |------|------|--------|---------|------|------|
-| 持仓量PCR(沪深300) | 3.75% | `=this.l5_pcr` | `=this.l5_pcr_z` | `=this.l5_pcr_dir` | 日频 |
-| IV变化率+期限结构 | 3.75% | `=this.l5_iv_change` | `=this.l5_iv_z` | `=this.l5_iv_dir` | 日频 |
-| 期权持仓量异动 | 2.25% | `=this.l5_option_anomaly` | — | `=this.l5_option_dir` | 日频 |
-| 股指期货基差 | 3% | `=this.l5_basis` | `=this.l5_basis_z` | `=this.l5_basis_dir` | 日频 |
-| 25Delta Skew | 2.25% | `=this.l5_skew` | `=this.l5_skew_z` | `=this.l5_skew_dir` | 日频 |
-| **L5 综合** | **15%** | — | `=this.l5_derivatives_score` | `=this.l5_direction` | — |
+| 持仓量PCR(沪深300) | 3.75% | — | — | — | 日频 |
+| IV变化率+期限结构 | 3.75% | — | — | — | 日频 |
+| 期权持仓量异动 | 2.25% | — | — | — | 日频 |
+| 股指期货基差 | 3% | — | — | — | 日频 |
+| 25Delta Skew | 2.25% | — | — | — | 日频 |
+| **L5 综合** | **15%** | — | — | — | — |
 
 ---
 

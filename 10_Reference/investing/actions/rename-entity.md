@@ -45,4 +45,4 @@ source: logic_rules
 - **触发自**：[[10_Reference/investing/logic/index|logic/]]
 - **作用于**：[[10_Reference/investing/stocks/index|stocks/]]
 - **执行记录**：[[10_Reference/investing/reviews/index|reviews/]]
-- **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个
+- **出链**：4 个 · **入链**：0 个

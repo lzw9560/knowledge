@@ -2577,4 +2577,4 @@ Dataview 查询（Obsidian 原生不支持断链检测，需脚本）：
 - **触发动作**：[[10_Reference/investing/actions/index|actions/]]
 - **约束实体**：[[10_Reference/investing/stocks/index|stocks/]]
 - **来源决策**：[[10_Reference/investing/specs/index|specs/]]
-- **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个
+- **出链**：13136 个 · **入链**：2 个

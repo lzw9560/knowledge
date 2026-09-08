@@ -25,4 +25,4 @@ created: 2026-09-07
 
 - **来源**：[[10_Reference/investing/reviews/audit-procedure]]
 - **关联规则**：[[10_Reference/investing/logic/static-value-ban]] / [[10_Reference/investing/logic/broken-link-grading]]
-- **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个
+- **出链**：3 个 · **入链**：4 个

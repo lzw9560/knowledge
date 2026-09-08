@@ -37,4 +37,4 @@ source: README.md
 
 ## 🔗 关联
 
-- **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个
+- **出链**：5 个 · **入链**：2 个

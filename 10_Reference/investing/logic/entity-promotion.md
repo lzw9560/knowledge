@@ -78,4 +78,4 @@ Dataview 查询（待晋级实体——quality_score ≥ 60 但仍在 inbox）�
 - **后置规则**：[[10_Reference/investing/logic/entity-lifecycle]]（正式区生命周期）
 - **约束实体**：[[10_Reference/investing/inbox/index|inbox/]]
 - **来源决策**：[[10_Reference/investing/specs/index|specs/]]
-- **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个
+- **出链**：5 个 · **入链**：5 个

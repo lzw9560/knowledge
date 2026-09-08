@@ -39,4 +39,4 @@ K 线形态、技术指标（MACD/RSI/KDJ/布林带）、量价分析、支撑�
 
 ## 🔗 关联
 
-- **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个
+- **出链**：4 个 · **入链**：0 个

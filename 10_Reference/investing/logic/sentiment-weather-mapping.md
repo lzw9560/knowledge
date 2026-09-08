@@ -16,4 +16,4 @@ created: 2026-09-07
 ## 🔗 关联
 
 - **主文件**：[[10_Reference/investing/logic/战法天气映射]]
-- **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个
+- **出链**：4 个 · **入链**：2 个

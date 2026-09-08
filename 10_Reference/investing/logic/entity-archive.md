@@ -80,4 +80,4 @@ Dataview 查询（待归档候选）：
 - **相关规则**：[[10_Reference/investing/logic/data-freshness]]（90 天未更新判定）
 - **约束实体**：[[10_Reference/investing/stocks/index|stocks/]] [[10_Reference/investing/industries/index|industries/]] [[10_Reference/investing/concepts/index|concepts/]]
 - **来源决策**：[[10_Reference/investing/specs/index|specs/]]
-- **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个
+- **出链**：7 个 · **入链**：3 个

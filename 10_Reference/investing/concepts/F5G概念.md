@@ -10,7 +10,7 @@ source: astock.concept_blocks
 
 > [!info] 💡 概念信息
 > **概念**：F5G概念  **关联行业**：通信技术
-> **成分股数**：`=(length(filter(this.file.inlinks, (l) => l.folder = "stocks")))`
+> **成分股数**：0
 >
 > **关联**：[[10_Reference/investing/industries/index|industries/]] · [[10_Reference/investing/data-sources/eastmoney-push2|东财 push2]]
 
@@ -72,4 +72,4 @@ F5G 千兆光网概念，受益于宽带升级+全光网络。
 ## 🔗 关联
 
 - **行业**：[[10_Reference/investing/industries/index|industries/]] · **数据源**：[[10_Reference/investing/data-sources/index|data-sources/]]
-- **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个
+- **出链**：7 个 · **入链**：0 个

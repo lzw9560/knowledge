@@ -57,7 +57,7 @@ source: ARCHITECTURE.md
 
 ## 🔗 关联
 
-- **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个
+- **出链**：10 个 · **入链**：0 个
 
 ## 🔧 技术栈
 
