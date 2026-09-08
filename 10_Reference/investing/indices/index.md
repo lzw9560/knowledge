@@ -10,14 +10,10 @@ created: 2026-09-07
 
 ## 实体列表（Dataview 动态）
 
-<!-- dataview-precompiled:9e430e9219b7 -->
-| 指数代码 | 指数名称 | 市场 |
-|---|---|---|
-| 000001 | 上证指数 | A |
-| 000300 | 沪深300 | A |
-| 000905 | 中证500 | A |
-| 399001 | 深证成指 | A |
-| 399006 | 创业板指 | A |
+<!-- dataview-precompiled:9f64cc2c81a8 query:VEFCTEUK5oyH5pWw5Luj56CBIEFTICLmjIfmlbDku6PnoIEiLAogIOaMh+aVsOWQjeensCBBUyAi5oyH5pWw5ZCN56ewIiwKICDluILlnLogQVMgIuW4guWcuiIKRlJPTSAiMTBfUmVmZXJlbmNlL2ludmVzdGluZy9pbmRpY2VzIgpXSEVSRSB0eXBlID0gIm1ldGhvZG9sb2d5X2luZGV4IgpTT1JUIGNvZGUgQVNDCg== -->
+| 文件 | 指数代码 | 指数名称 | 市场 |
+|---|---|---|---|
+| [[10_Reference/investing/indices/index]] | — | — | — |
 <!-- /dataview-precompiled -->
 
 ## 关系
@@ -50,10 +46,10 @@ created: 2026-09-07
 
 ## 📊 Dataview 实时统计
 
-<!-- dataview-precompiled:5781aca274d3 -->
-| 指数总数 |
-|---|
-| 5 |
+<!-- dataview-precompiled:aeedcd2e4575 query:VEFCTEUK5oyH5pWw5oC75pWwIEFTICLmjIfmlbDmgLvmlbAiCkZST00gIjEwX1JlZmVyZW5jZS9pbnZlc3RpbmcvaW5kaWNlcyIKV0hFUkUgdHlwZSA9ICJtZXRob2RvbG9neV9pbmRleCIKU09SVCBjb2RlIEFTQwo= -->
+| 文件 | 指数总数 |
+|---|---|
+| [[10_Reference/investing/indices/index]] | — |
 <!-- /dataview-precompiled -->
 
 ## 🔗 相关子区

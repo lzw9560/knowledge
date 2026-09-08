@@ -10,22 +10,10 @@ created: 2026-09-07
 
 ## 实体列表（Dataview 动态）
 
-<!-- dataview-precompiled:7379eb19fc2c -->
-| 战法名 | edge 家族 | 入场条件 |
-|---|---|---|
-| N字反击 | 动量溢价 | — |
-| 一字竞价选股法 | 动量溢价 | — |
-| 低吸龙头 | 均值回归 | — |
-| 反包战法 | 事件溢价 | — |
-| 尾盘偷袭 | 动量溢价 | — |
-| 平台突破 | 形态突破 | — |
-| 弱转强接力 | 事件溢价 | — |
-| 形态反包 | 形态突破 | — |
-| 暴风雨逆势涨停 | 事件溢价 | — |
-| 炸板回封 | 事件溢价 | — |
-| 连板接力 | 动量溢价 | — |
-| 首板挖掘 | 动量溢价 | — |
-| 龙头战法 | 龙头追踪 | — |
+<!-- dataview-precompiled:525346134346 query:VEFCTEUK5oiY5rOV5ZCNIEFTICLmiJjms5XlkI0iLAogIGVkZ2Ug5a625pePIEFTICJlZGdlIOWutuaXjyIsCiAg5YWl5Zy65p2h5Lu2IEFTICLlhaXlnLrmnaHku7YiCkZST00gIjEwX1JlZmVyZW5jZS9pbnZlc3Rpbmcvc3RyYXRlZ2llcyIKV0hFUkUgdHlwZSA9ICJtZXRob2RvbG9neV9pbmRleCIKU09SVCBjb2RlIEFTQwo= -->
+| 文件 | 战法名 | edge 家族 | 入场条件 |
+|---|---|---|---|
+| [[10_Reference/investing/strategies/index]] | — | — | — |
 <!-- /dataview-precompiled -->
 
 ## 关系
@@ -59,10 +47,10 @@ created: 2026-09-07
 
 ## 📊 Dataview 实时统计
 
-<!-- dataview-precompiled:1d9b9f8ba002 -->
-| 战法总数 |
-|---|
-| 13 |
+<!-- dataview-precompiled:a19545651e8a query:VEFCTEUK5oiY5rOV5oC75pWwIEFTICLmiJjms5XmgLvmlbAiCkZST00gIjEwX1JlZmVyZW5jZS9pbnZlc3Rpbmcvc3RyYXRlZ2llcyIKV0hFUkUgdHlwZSA9ICJtZXRob2RvbG9neV9pbmRleCIKU09SVCBjb2RlIEFTQwo= -->
+| 文件 | 战法总数 |
+|---|---|
+| [[10_Reference/investing/strategies/index]] | — |
 <!-- /dataview-precompiled -->
 
 ## 🔗 相关子区

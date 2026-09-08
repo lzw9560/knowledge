@@ -58,12 +58,12 @@ created: 2026-09-07
 - 仓库：`lzwfirst/Vibe-Research`（私有）
 - 分级工作流：见 `AGENTS.md` 分级门（small/medium/large）
 - spec 体系：`specs/SNNN-*/` 一 spec 一分支（large）或直接 develop commit（medium/small）
-- 配套插件：10_Reference/tech-learning/tools/Obsidian-Git插件|obsidian-git]] 同步本 vault
+- 配套插件：10_Reference/tech-learning/tools/Obsidian-Git插件|obsidian-[[git]] 同步本 vault
 
 ## 相关链接
 - [[10_Reference/tech-learning/MOC]]
-- 10_Reference/tech-learning/tools/Obsidian-Git插件]]
-- 10_Reference/tech-learning/tools/GitHub-Actions]]
+- 10_Reference/tech-learning/tools/Obsidian-[[Git插件]]
+- 10_Reference/tech-learning/tools/GitHub-[[Actions]]
 - [[10_Reference/investing/MOC]]
 - [[10_Reference/investing/specs/]]
-- 10_Reference/meta/四构件本体方法论]]
+- [[10_Reference/meta/四构件本体方法论]]

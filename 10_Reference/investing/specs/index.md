@@ -11,71 +11,18 @@ created: 2026-09-07
 
 ## Spec 实体列表（Dataview 动态）
 
-<!-- dataview-precompiled:61df89bc78b3 -->
-| 编号 | 标题 | 状态 |
-|---|---|---|
-| S001 | 修复 chat._get_env_llm_config 缺失 → /api/chat 500 | 已实现 |
-| S002 | 打板工作流重构 · P1 候选池诊断统一 | 已实现 |
-| S003 | 后端 API 冒烟测试缺陷修复批次 | 已实现 |
-| S004 | 候选池漏斗 run_funnel 性能优化 | 草案 |
-| S005 | 中长线价值选股漏斗（与短线 S002 并列） | 已实现 |
-| S006 | 系统重写纲领（渐进式长分支） | 草案 |
-| S007 | 契约层（数据模型+回归基线+契约测试骨架） | 已实现 |
-| S008 | 后端数据层迁移（astock/gstock/market→模型） | 已实现 |
-| S009 | 前后端类型同步（openapi-codegen） | 已实现 |
-| S010 | AI 工具注册表 + SYSTEM_PROMPT 新边界 | 已实现 |
-| S011 | 调度收口（删 scheduler.py+重写 scheduled_tasks+状态机接线） | 已实现 |
-| S012 | 工作流标灰（realtime/post 桩+pre 清理） | 草案 |
-| S013 | 前端数据层（统一 client+TanStack Query+懒加载+apiKey 代理） | 已实现 |
-| S014 | 前端 UI 重设计（信息架构+交互统一+视觉+AI 对话） | 已实现 |
-| S015 | 配置与基础设施（config 拆分+infra 收口+路由自动发现） | 已实现 |
-| S016 | 测试网（后端覆盖率+IO 录制回放+前端 vitest+CI） | 草案 |
-| S017 | A股涨跌预测模型栈（四头解耦） | 已实现 |
-| S018 | 多源特征工程（预测模型特征供给） | 已实现 |
-| S019 | 宏观特征 Fred API 接入（macro.py 第二批） | 已实现 |
-| S020 | worldmonitor 决策因子接入（全球宏观/地缘/另类数据） | 已实现 |
-| S022 | 熔断器 health 读路径修复（尊重 recovery_timeout） | 已实现 |
-| S023 | 漏斗可用性与因子解耦（P1 打磨：盘前简报接因子+候选详情依据链+漏斗每层可观测可调参+真实数据不静默返空） | 已实现 |
-| S024 | 拓扑展示（关系网+漏斗流程+连板梯队树，EdgeProvider 扩展位） | 已实现 |
-| S025 | 补前端入口 | 已实现 |
-| S026 | pre-market 异步化 | 已实现 |
-| S028 | limitup-screener 修复（文案三态/trigger/因子层 conditions） | 已实现 |
-| S029 | GeneScreener 接通（阈值可配+执行检索+多层明细） | 已实现 |
-| S030 | 盘前简报多层化 + UX 收敛 | 已废弃 |
-| S031 | 调度收口 + 盘前简报多层 + 交互式战法 + 按战法回测 | 已实现 |
-| S032 | 调度收口第二轮（S011b）：主循环收口 + portfolio 日志重试 + 状态机接线落库 | 已实现 |
-| S033 | 状态机前端呈现（状态徽标+流转按钮+holding 价格采集） | 已实现 |
-| S034 | SettlementEngine 接线（settled 流转即结算写 winrate.db） | 已实现 |
-| S035 | ai_proxy 删除（死代码清理） | 已实现 |
-| S036 | 工作流标灰（S012 修订版：适配 S033/S034 后的前端结构） | 已实现 |
-| S037 | gene DB 路径迁移（三库 + winrate 统一到 .vibe-research/） | 已实现 |
-| S038 | 持仓市价自动结算（holding 流转 settled 时自动拉价填 exit_price） | 已实现 |
-| S039 | StockDeep 个股深度页面接线（消费已有端点，第一批核心四块） | 已实现 |
-| S040 | 历史涨停池数据 K 线重建 + 双轨累积（v2） | 已实现 |
-| S041 | 回测定时任务 + 趋势看板 | 已实现 |
-| S042 | 统一持仓建议引擎（推荐标的 + 自选 + 持仓，三场景） | 已实现 |
-| S043 | 次日溢价率单因子分位分析 | 已实现 |
-| S044 | 候选池漏斗数据源补全（北向 + 板块联动 + 龙虎榜游资频次 + 公告类型化） | 已实现 |
-| S045 | 漏斗层得分显示 + 得分排序 + 多选筛选 | 已实现 |
-| S046 | fallback 空写防护（限流返空不覆盖好缓存） | 已实现 |
-| S047 | 基因分权重口径回测校准 | 已实现 |
-| S048 | 工作流打磨（固定阶段位 + 历史视角 + 缓存 + 拓扑精简） | 已实现 |
-| S049 | 盘前简报漏斗重构与诊断修正 | 已实现 |
-| S050 | W0 行为闭环（票根 + 影子对照 + 独立性基线） | 已实现 |
-| S051 | 基因筛选体验批 | 已实现 |
-| S052 | 回测快照回填与缺口补跑 | 已实现 |
+<!-- dataview-precompiled:b520b14da0f1 query:VEFCTEUK57yW5Y+3IEFTICLnvJblj7ciLAogIOagh+mimCBBUyAi5qCH6aKYIiwKICDnirbmgIEgQVMgIueKtuaAgSIKRlJPTSAiMTBfUmVmZXJlbmNlL2ludmVzdGluZy9zcGVjcyIKV0hFUkUgdHlwZSA9ICJtZXRob2RvbG9neV9pbmRleCIKU09SVCBjb2RlIEFTQwo= -->
+| 文件 | 编号 | 标题 | 状态 |
+|---|---|---|---|
+| [[10_Reference/investing/specs/index]] | — | — | — |
 <!-- /dataview-precompiled -->
 
 ## Decision 实体列表（Dataview 动态）
 
-<!-- dataview-precompiled:4204334238cb -->
-| 编号 | 标题 | 状态 |
-|---|---|---|
-| DEC-001 | 候选池漏斗性能优化技术路线 | 已采纳 |
-| DEC-002 | 宏观特征 7 系列定稿 | 已采纳 |
-| DEC-003 | 短线胜率优化 grill 裁决 | 已采纳 |
-| DEC-004 | 盯盘教练 + 降级策略 + 方向建议口径 | 已采纳 |
-| DEC-005 | notes/debate 路由无独立 spec | 已采纳 |
+<!-- dataview-precompiled:b520b14da0f1 query:VEFCTEUK57yW5Y+3IEFTICLnvJblj7ciLAogIOagh+mimCBBUyAi5qCH6aKYIiwKICDnirbmgIEgQVMgIueKtuaAgSIKRlJPTSAiMTBfUmVmZXJlbmNlL2ludmVzdGluZy9zcGVjcyIKV0hFUkUgdHlwZSA9ICJtZXRob2RvbG9neV9pbmRleCIKU09SVCBjb2RlIEFTQwo= -->
+| 文件 | 编号 | 标题 | 状态 |
+|---|---|---|---|
+| [[10_Reference/investing/specs/index]] | — | — | — |
 <!-- /dataview-precompiled -->
 
 ## 关系
@@ -112,10 +59,10 @@ created: 2026-09-07
 
 ## 关联项目实体（ora-2 方案 D 纳入的外部投研项目）
 
-- 10_Reference/investing/specs/Vibe-Research项目]] — Vibe-Research 个人 AI 投研看板（本图谱主体，109 spec + 16 数据源 + 12 战法）
-- 10_Reference/investing/specs/a-Plate-Sentinel项目]] — A股打板情绪监控与投研决策看板（8 大模块，Tushare 数据源，MVP 骨架）
-- 10_Reference/investing/specs/TradingAgents项目]] — TradingAgents A股深度特化 fork（7 Analyst + 多 Agent 辩论）
-- 10_Reference/investing/specs/每日股票分析项目]] — 每日股票分析报告生成器（多市场、多渠道推送）
+- 10_Reference/investing/specs/Vibe-[[Research项目]] — Vibe-Research 个人 AI 投研看板（本图谱主体，109 spec + 16 数据源 + 12 战法）
+- 10_Reference/investing/specs/a-Plate-[[Sentinel项目]] — A股打板情绪监控与投研决策看板（8 大模块，Tushare 数据源，MVP 骨架）
+- [[10_Reference/investing/specs/TradingAgents项目]] — TradingAgents A股深度特化 fork（7 Analyst + 多 Agent 辩论）
+- [[10_Reference/investing/specs/每日股票分析项目]] — 每日股票分析报告生成器（多市场、多渠道推送）
 
 ---
 
@@ -126,10 +73,10 @@ created: 2026-09-07
 
 ## 📊 Dataview 实时统计
 
-<!-- dataview-precompiled:f9118402d164 -->
-| 项目决策总数 |
-|---|
-| 101 |
+<!-- dataview-precompiled:f21adf089e5e query:VEFCTEUK6aG555uu5Yaz562W5oC75pWwIEFTICLpobnnm67lhrPnrZbmgLvmlbAiCkZST00gIjEwX1JlZmVyZW5jZS9pbnZlc3Rpbmcvc3BlY3MiCldIRVJFIHR5cGUgPSAibWV0aG9kb2xvZ3lfaW5kZXgiClNPUlQgY29kZSBBU0MK -->
+| 文件 | 项目决策总数 |
+|---|---|
+| [[10_Reference/investing/specs/index]] | — |
 <!-- /dataview-precompiled -->
 
 ## 🔗 相关子区

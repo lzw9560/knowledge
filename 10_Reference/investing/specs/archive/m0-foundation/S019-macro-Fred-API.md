@@ -36,6 +36,6 @@ S018 多源特征工程需要宏观信号。第一批 macro.py 缺关键系列�
 - 上游特征层：[[10_Reference/investing/specs/archive/m0-foundation/S018-多源特征工程]]（特征工程消费 macro）
 - 下游模型：[[10_Reference/investing/specs/archive/m0-foundation/S017-A股涨跌预测模型栈]]（ML 栈消费宏观特征）
 - 衔接后续：[[10_Reference/investing/specs/archive/m0-foundation/S020-worldmonitor决策因子接入]]（worldmonitor 另类数据互补）
-- 数据源：10_Reference/investing/data-sources/FRED（宏观）]]
+- 数据源：10_Reference/investing/data-[[sources/FRED（宏观）]]
 - 决策：[[10_Reference/investing/specs/DEC-002]]（7 系列定稿 + USDCNH 改 DEXCHUS）
 - 源文件：`specs/archive/m0-foundation/S019-macro-Fred-API/spec.md`

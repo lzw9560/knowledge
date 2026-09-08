@@ -11,33 +11,10 @@ created: 2026-09-07
 
 ## 规则列表（Dataview 动态）
 
-<!-- dataview-precompiled:c5c1841443c6 -->
-| 类型 | 适用实体 | 严重级 |
-|---|---|---|
-| 推断规则 | events | medium |
-| 推断规则 | 全类型（以 frontmatter confidence + last_verified 字段的实体） | medium |
-| 校验规则 | 全类型 | medium |
-| 准入闸 | 跨域链接 | medium |
-| 校验规则 | metrics, valuations, reports | medium |
-| 状态机 | 全类型 | medium |
-| 校验规则 | 全类型 | medium |
-| 校验规则 | stocks, industries, concepts | medium |
-| 别名 | strategies | medium |
-| 漂移检测 | 全实体 | medium |
-| 校验规则 | strategies | medium |
-| 推断规则 | strategies | medium |
-| 自动化规则 | reports | medium |
-| 分级规则 | 全实体 | low |
-| 状态机 | 全类型 | low |
-| 校验规则 | inbox_item | high |
-| 校验规则 | stocks | high |
-| 校验规则 | 全类型 | high |
-| 校验规则 | 全类型 | high |
-| 状态机 | 全类型 | high |
-| 校验规则 | 全类型 | high |
-| 状态机 | inbox_item | high |
-| 校验规则 | stocks | high |
-| 自动化规则 | 全类型 | high |
+<!-- dataview-precompiled:ed7f97490292 query:VEFCTEUK57G75Z6LIEFTICLnsbvlnosiLAogIOmAgueUqOWunuS9kyBBUyAi6YCC55So5a6e5L2TIiwKICDkuKXph43nuqcgQVMgIuS4pemHjee6pyIKRlJPTSAiMTBfUmVmZXJlbmNlL2ludmVzdGluZy9sb2dpYyIKV0hFUkUgdHlwZSA9ICJtZXRob2RvbG9neV9pbmRleCIKU09SVCBjb2RlIEFTQwo= -->
+| 文件 | 类型 | 适用实体 | 严重级 |
+|---|---|---|---|
+| [[10_Reference/investing/logic/index]] | — | — | — |
 <!-- /dataview-precompiled -->
 
 ## 规则类型
@@ -65,24 +42,24 @@ created: 2026-09-07
 
 - [[10_Reference/investing/logic/LLM抽取质量门]]
 - [[10_Reference/investing/logic/PE异常]]
-- 10_Reference/investing/logic/断链告警]]
-- 10_Reference/investing/logic/断链分级]]
-- 10_Reference/investing/logic/因果链]]
-- 10_Reference/investing/logic/置信度衰减]]
-- 10_Reference/investing/logic/覆盖底线]]
-- 10_Reference/investing/logic/跨域门控]]
-- 10_Reference/investing/logic/数据新鲜度]]
-- 10_Reference/investing/logic/去重合并]]
-- 10_Reference/investing/logic/实体归档]]
-- 10_Reference/investing/logic/实体生命周期]]
-- 10_Reference/investing/logic/实体合并]]
-- 10_Reference/investing/logic/实体晋级]]
-- 10_Reference/investing/logic/孤立阈值]]
-- 10_Reference/investing/logic/关系基数]]
-- 10_Reference/investing/logic/情绪天气映射]]
-- 10_Reference/investing/logic/源漂移]]
-- 10_Reference/investing/logic/静态值禁令]]
-- 10_Reference/investing/logic/stub生命周期]]
+- [[10_Reference/investing/logic/断链告警]]
+- [[10_Reference/investing/logic/断链分级]]
+- [[10_Reference/investing/logic/因果链]]
+- [[10_Reference/investing/logic/置信度衰减]]
+- [[10_Reference/investing/logic/覆盖底线]]
+- [[10_Reference/investing/logic/跨域门控]]
+- [[10_Reference/investing/logic/数据新鲜度]]
+- [[10_Reference/investing/logic/去重合并]]
+- [[10_Reference/investing/logic/实体归档]]
+- [[10_Reference/investing/logic/实体生命周期]]
+- [[10_Reference/investing/logic/实体合并]]
+- [[10_Reference/investing/logic/实体晋级]]
+- [[10_Reference/investing/logic/孤立阈值]]
+- [[10_Reference/investing/logic/关系基数]]
+- [[10_Reference/investing/logic/情绪天气映射]]
+- [[10_Reference/investing/logic/源漂移]]
+- [[10_Reference/investing/logic/静态值禁令]]
+- [[10_Reference/investing/logic/stub生命周期]]
 - [[10_Reference/investing/logic/实体改名]]
 - [[10_Reference/investing/logic/战法卡漂移检测]]
 - [[10_Reference/investing/logic/战法天气映射]]
@@ -97,10 +74,10 @@ created: 2026-09-07
 
 ## 📊 Dataview 实时统计
 
-<!-- dataview-precompiled:8c37937ea480 -->
-| 逻辑规则总数 |
-|---|
-| 24 |
+<!-- dataview-precompiled:1fb14887a305 query:VEFCTEUK6YC76L6R6KeE5YiZ5oC75pWwIEFTICLpgLvovpHop4TliJnmgLvmlbAiCkZST00gIjEwX1JlZmVyZW5jZS9pbnZlc3RpbmcvbG9naWMiCldIRVJFIHR5cGUgPSAibWV0aG9kb2xvZ3lfaW5kZXgiClNPUlQgY29kZSBBU0MK -->
+| 文件 | 逻辑规则总数 |
+|---|---|
+| [[10_Reference/investing/logic/index]] | — |
 <!-- /dataview-precompiled -->
 
 ## 🔗 相关子区

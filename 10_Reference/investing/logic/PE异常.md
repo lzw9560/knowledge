@@ -43,59 +43,33 @@ confidence: high
 
 Dataview 查询（在审查脚本或 MOC 渲染时用）：
 
-<!-- dataview-precompiled:2aac6473469e -->
-| 代码 | 名称 | PE(TTM) |
-|---|---|---|
-| 600371 | 万向德农 | -727.72 |
-| 003040 | 楚天龙 | -640.55 |
-| 688167 | 炬光科技 | -506.06 |
-| 600127 | 金健米业 | -451.85 |
-| 002104 | 恒宝股份 | -444.18 |
-| 002354 | 天娱数科 | -440.37 |
-| 600698 | 湖南天雁 | -277.77 |
-| 000009 | 中国宝安 | -258.73 |
-| 002714 | 牧原股份 | -225.29 |
-| 600048 | 保利发展 | -195.72 |
-| 002564 | 天沃科技 | -195.11 |
-| 603122 | 合富中国 | -159.67 |
-| 603533 | 掌阅科技 | -158.51 |
-| 000039 | 中集集团 | -157.11 |
-| 600540 | 新赛股份 | -149.48 |
-| 000560 | 我爱我家 | -136.80 |
-| 688521 | 芯原股份 | -118.76 |
-| 600865 | 百大集团 | -116.92 |
-| 688047 | 龙芯中科 | -104.87 |
-| 003005 | 竞业达 | -91.36 |
-| 002909 | 集泰股份 | -84.97 |
-| 000661 | 长春高新 | -84.36 |
-| 000592 | 平潭发展 | -73.25 |
-| 002702 | 海欣食品 | -72.53 |
-| 000032 | 深桑达A | -71.79 |
-| 600029 | 南方航空 | -69.79 |
-| 600611 | 大众交通 | -68.87 |
-| 688506 | 百利天恒 | -66.07 |
-| 688141 | 杰华特 | -57.30 |
-| 002868 | 绿康生化 | -54.71 |
-| 601111 | 中国国航 | -53.18 |
-| 300498 | 温氏股份 | -39.60 |
-| 688126 | 沪硅产业 | -36.05 |
-| 002084 | 海鸥住工 | -34.75 |
-| 600115 | 中国东航 | -32.38 |
-| 600892 | 大晟文化 | -31.84 |
-| 603123 | 翠微股份 | -25.51 |
-| 000428 | 华天酒店 | -22.05 |
-| 000050 | 深天马A | -21.04 |
-| 600828 | 茂业商业 | -18.36 |
-| 002059 | 云南旅游 | -15.43 |
-| 000892 | 欢瑞世纪 | -14.08 |
-| 001330 | 博纳影业 | -13.73 |
-| 002855 | 捷荣技术 | -13.35 |
-| 002403 | 爱仕达 | -12.27 |
-| 601012 | 隆基绿能 | -11.89 |
-| 600802 | 福建水泥 | -11.01 |
-| 600121 | 郑州煤电 | -5.98 |
-| 688223 | 晶科能源 | -5.89 |
-| 600438 | 通威股份 | -5.37 |
+<!-- dataview-precompiled:d92d8dd6c5d0 query:VEFCTEUK5Luj56CBIEFTICLku6PnoIEiLAogIG5hbWUgQVMgIuWQjeensCIsCiAgcGVfdHRtIEFTICJQRShUVE0pIgpGUk9NICIxMF9SZWZlcmVuY2UvaW52ZXN0aW5nL2xvZ2ljIgpXSEVSRSB0eXBlID0gImxvZ2ljIgpTT1JUIGNvZGUgQVNDCg== -->
+| 文件 | 代码 | 名称 | PE(TTM) |
+|---|---|---|---|
+| [[10_Reference/investing/logic/LLM抽取质量门]] | — | — | — |
+| [[10_Reference/investing/logic/PE异常]] | — | — | — |
+| [[10_Reference/investing/logic/stub生命周期]] | — | — | — |
+| [[10_Reference/investing/logic/关系基数]] | — | — | — |
+| [[10_Reference/investing/logic/去重合并]] | — | — | — |
+| [[10_Reference/investing/logic/因果链]] | — | — | — |
+| [[10_Reference/investing/logic/孤立阈值]] | — | — | — |
+| [[10_Reference/investing/logic/实体合并]] | — | — | — |
+| [[10_Reference/investing/logic/实体归档]] | — | — | — |
+| [[10_Reference/investing/logic/实体改名]] | — | — | — |
+| [[10_Reference/investing/logic/实体晋级]] | — | — | — |
+| [[10_Reference/investing/logic/实体生命周期]] | — | — | — |
+| [[10_Reference/investing/logic/情绪天气映射]] | — | — | — |
+| [[10_Reference/investing/logic/战法卡漂移检测]] | — | — | — |
+| [[10_Reference/investing/logic/战法天气映射]] | — | — | — |
+| [[10_Reference/investing/logic/报告图谱关联]] | — | — | — |
+| [[10_Reference/investing/logic/数据新鲜度]] | — | — | — |
+| [[10_Reference/investing/logic/断链分级]] | — | — | — |
+| [[10_Reference/investing/logic/断链告警]] | — | — | — |
+| [[10_Reference/investing/logic/源漂移]] | — | — | — |
+| [[10_Reference/investing/logic/置信度衰减]] | — | — | — |
+| [[10_Reference/investing/logic/覆盖底线]] | — | — | — |
+| [[10_Reference/investing/logic/跨域门控]] | — | — | — |
+| [[10_Reference/investing/logic/静态值禁令]] | — | — | — |
 <!-- /dataview-precompiled -->
 
 

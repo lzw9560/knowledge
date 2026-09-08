@@ -1,6 +1,6 @@
 {
   "audit_date": "2026-09-08",
-  "total_entities": 2498,
+  "total_entities": 2500,
   "type_distribution": {
     "stock": 411,
     "metric": 401,
@@ -12,7 +12,7 @@
     "spec": 101,
     "dragon_tiger": 41,
     "logic": 24,
-    "event": 20,
+    "event": 22,
     "data_source": 17,
     "strategy": 13,
     "agent_role": 7,
@@ -26,11 +26,11 @@
   "placeholder_count": 0,
   "placeholder_by_type": {},
   "confidence_distribution": {
-    "medium": 1027,
-    "high": 1430
+    "medium": 1037,
+    "high": 1432
   },
-  "no_confidence_count": 41,
-  "broken_links": 2,
+  "no_confidence_count": 31,
+  "broken_links": 4,
   "broken_links_top10": [
     [
       "actions/rename-entity",
@@ -39,17 +39,25 @@
     [
       "actions/promote-from-inbox",
       1
+    ],
+    [
+      "stocks/603228",
+      1
+    ],
+    [
+      "strategies/dragon_head",
+      1
     ]
   ],
-  "orphan_count": 52,
+  "orphan_count": 37,
   "orphan_by_type": {
     "actions": 4,
     "data-sources": 16,
-    "logic": 16,
+    "events": 1,
     "specs": 4,
     "strategies": 12
   },
   "fragment_links": 0,
   "missing_frontmatter": 0,
-  "broken_md_links": 10
+  "broken_md_links": 7
 }

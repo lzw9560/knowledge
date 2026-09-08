@@ -54,25 +54,33 @@ stub 是"计划中待数据源补充的占位"，允许：
 
 Dataview 查询（stub 实体待数据源补充）：
 
-<!-- dataview-precompiled:2bfae211412a -->
+<!-- dataview-precompiled:0ed4a442adb5 query:VEFCTEUK57G75Z6LIEFTICLnsbvlnosiLAogIOeKtuaAgSBBUyAi54q25oCBIiwKICDliJvlu7rml6UgQVMgIuWIm+W7uuaXpSIKRlJPTSAiMTBfUmVmZXJlbmNlL2ludmVzdGluZy9sb2dpYyIKV0hFUkUgdHlwZSA9ICJsb2dpYyIKU09SVCBjb2RlIEFTQwo= -->
 | 文件 | 类型 | 状态 | 创建日 |
 |---|---|---|---|
-| 10_Reference/investing/actions/inbox晋级]] | action | stub | 2026-09-07 |
-| 10_Reference/investing/actions/源同步]] | action | stub | 2026-09-07 |
-| [[10_Reference/investing/industries/食品饮料]] | industry | stub | 2026-09-07 |
-| 10_Reference/investing/logic/断链分级]] | logic | stub | 2026-09-07 |
-| 10_Reference/investing/logic/源漂移]] | logic | stub | 2026-09-07 |
-| 10_Reference/investing/logic/静态值禁令]] | logic | stub | 2026-09-07 |
-| [[10_Reference/investing/stocks/000019]] | stock | stub | 2026-09-07 |
-| [[10_Reference/investing/stocks/000505]] | stock | stub | 2026-09-07 |
-| [[10_Reference/investing/stocks/002172]] | stock | stub | 2026-09-07 |
-| [[10_Reference/investing/stocks/002696]] | stock | stub | 2026-09-07 |
-| [[10_Reference/investing/stocks/600313]] | stock | stub | 2026-09-07 |
-| [[10_Reference/investing/stocks/600693]] | stock | stub | 2026-09-07 |
-| [[10_Reference/investing/stocks/603118]] | stock | stub | 2026-09-07 |
-| [[10_Reference/investing/stocks/603221]] | stock | stub | 2026-09-07 |
-| [[10_Reference/investing/stocks/603626]] | stock | stub | 2026-09-07 |
-| [[10_Reference/investing/stocks/605188]] | stock | stub | 2026-09-07 |
+| [[10_Reference/investing/logic/LLM抽取质量门]] | — | — | — |
+| [[10_Reference/investing/logic/PE异常]] | — | — | — |
+| [[10_Reference/investing/logic/stub生命周期]] | — | — | — |
+| [[10_Reference/investing/logic/关系基数]] | — | — | — |
+| [[10_Reference/investing/logic/去重合并]] | — | — | — |
+| [[10_Reference/investing/logic/因果链]] | — | — | — |
+| [[10_Reference/investing/logic/孤立阈值]] | — | — | — |
+| [[10_Reference/investing/logic/实体合并]] | — | — | — |
+| [[10_Reference/investing/logic/实体归档]] | — | — | — |
+| [[10_Reference/investing/logic/实体改名]] | — | — | — |
+| [[10_Reference/investing/logic/实体晋级]] | — | — | — |
+| [[10_Reference/investing/logic/实体生命周期]] | — | — | — |
+| [[10_Reference/investing/logic/情绪天气映射]] | — | — | — |
+| [[10_Reference/investing/logic/战法卡漂移检测]] | — | — | — |
+| [[10_Reference/investing/logic/战法天气映射]] | — | — | — |
+| [[10_Reference/investing/logic/报告图谱关联]] | — | — | — |
+| [[10_Reference/investing/logic/数据新鲜度]] | — | — | — |
+| [[10_Reference/investing/logic/断链分级]] | — | — | — |
+| [[10_Reference/investing/logic/断链告警]] | — | — | — |
+| [[10_Reference/investing/logic/源漂移]] | — | — | — |
+| [[10_Reference/investing/logic/置信度衰减]] | — | — | — |
+| [[10_Reference/investing/logic/覆盖底线]] | — | — | — |
+| [[10_Reference/investing/logic/跨域门控]] | — | — | — |
+| [[10_Reference/investing/logic/静态值禁令]] | — | — | — |
 <!-- /dataview-precompiled -->
 
 ## ⚠️ 违反处置
@@ -88,9 +96,9 @@ Dataview 查询（stub 实体待数据源补充）：
 ## 🔗 关联
 
 - **触发动作**：[[10_Reference/investing/actions/index|actions/]]
-- **前置规则**：10_Reference/investing/logic/实体生命周期]]（生命周期：inbox → stub → active → archive）
-- **相关规则**：10_Reference/investing/logic/实体晋级]]（inbox 晋级，stub 是晋级后的可能形态）
-- **相关规则**：10_Reference/investing/logic/实体归档]]（stub 长期不填充可归档）
+- **前置规则**[[：10_Reference/investing/logic/实体生命周期]]（生命周期：inbox → stub → active → archive）
+- **相关规则**[[：10_Reference/investing/logic/实体晋级]]（inbox 晋级，stub 是晋级后的可能形态）
+- **相关规则**[[：10_Reference/investing/logic/实体归档]]（stub 长期不填充可归档）
 - **约束实体**：[[10_Reference/investing/stocks/index|stocks/]] [[10_Reference/investing/industries/index|industries/]] [[10_Reference/investing/concepts/index|concepts/]]
 - **来源决策**：[[10_Reference/investing/specs/index|specs/]]
 - **出链**：24 个 · **入链**：2 个

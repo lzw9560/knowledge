@@ -65,6 +65,6 @@ source: ARCHITECTURE.md
 
 ## 🔧 技术栈
 
-- 🔧 10_Reference/tech-learning/concepts/优雅降级|优雅降级]] — K线日更失败时 S090 kline_refresh 降级
-- 🔧 10_Reference/tech-learning/tools/uv包管理|uv 包管理]] — baostock Python 包由 uv 管理锁版本
-- 🔧 10_Reference/tech-learning/concepts/缓存策略|缓存策略]] — 历史日 K 入缓存
+- 🔧 10_Reference/tech-learning/concepts/优雅降级|[[优雅降级]] — K线日更失败时 S090 kline_refresh 降级
+- 🔧 10_Reference/tech-learning/tools/uv包管理|uv [[包管理]] — baostock Python 包由 uv 管理锁版本
+- 🔧 10_Reference/tech-learning/concepts/缓存策略|[[缓存策略]] — 历史日 K 入缓存

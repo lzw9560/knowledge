@@ -63,6 +63,6 @@ source: ARCHITECTURE.md
 
 ## 🔧 技术栈
 
-- 🔧 10_Reference/tech-learning/concepts/熔断器|熔断器]] — 个股新闻接口采集加熔断
-- 🔧 10_Reference/tech-learning/concepts/限流|限流]] — 共用 em_get QPS≤2 限流
-- 🔧 10_Reference/tech-learning/concepts/优雅降级|优雅降级]] — 新闻缺失时标灰不臆造
+- 🔧 10_Reference/tech-learning/concepts/熔断器|[[熔断器]] — 个股新闻接口采集加熔断
+- 🔧 10_Reference/tech-[[learning/concepts/限流|限流]] — 共用 em_get QPS≤2 限流
+- 🔧 10_Reference/tech-learning/concepts/优雅降级|[[优雅降级]] — 新闻缺失时标灰不臆造

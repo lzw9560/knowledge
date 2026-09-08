@@ -11,12 +11,10 @@ created: 2026-09-07
 
 ## 审查报告列表
 
-<!-- dataview-precompiled:f4c7a83aeda8 -->
-| 日期 | 问题数 | 严重 | 状态 |
-|---|---|---|---|
-| 2026-09-06 | 122 | 11 | 已完成 |
-| 2026-09-07 | 636 | 121 | 已完成 |
-| 2026-09-08 | 1 | 0 | 已完成 |
+<!-- dataview-precompiled:800b37b3d95c query:VEFCTEUKY3JlYXRlZCBBUyAi5pel5pyfIiwKICDpl67popjmlbAgQVMgIumXrumimOaVsCIsCiAg5Lil6YeNIEFTICLkuKXph40iLAogIOeKtuaAgSBBUyAi54q25oCBIgpGUk9NICIxMF9SZWZlcmVuY2UvaW52ZXN0aW5nL3Jldmlld3MiCldIRVJFIHR5cGUgPSAibWV0aG9kb2xvZ3lfaW5kZXgiClNPUlQgY29kZSBBU0MK -->
+| 文件 | 日期 | 问题数 | 严重 | 状态 |
+|---|---|---|---|---|
+| [[10_Reference/investing/reviews/index]] | 2026-09-07 | — | — | — |
 <!-- /dataview-precompiled -->
 
 ## 8 个检查工具
@@ -58,10 +56,10 @@ created: 2026-09-07
 
 ## 📊 Dataview 实时统计
 
-<!-- dataview-precompiled:7448872772df -->
-| 审查报告总数 |
-|---|
-| 3 |
+<!-- dataview-precompiled:49f87610b888 query:VEFCTEUK5a6h5p+l5oql5ZGK5oC75pWwIEFTICLlrqHmn6XmiqXlkYrmgLvmlbAiCkZST00gIjEwX1JlZmVyZW5jZS9pbnZlc3RpbmcvcmV2aWV3cyIKV0hFUkUgdHlwZSA9ICJtZXRob2RvbG9neV9pbmRleCIKU09SVCBjb2RlIEFTQwo= -->
+| 文件 | 审查报告总数 |
+|---|---|
+| [[10_Reference/investing/reviews/index]] | — |
 <!-- /dataview-precompiled -->
 
 ## 🔗 相关子区

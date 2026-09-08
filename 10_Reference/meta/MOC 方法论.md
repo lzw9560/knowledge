@@ -42,8 +42,8 @@ MOC 是**领域入口 + 导航索引**，不是数据存储。一个 MOC 文件�
 ## 跨领域实例
 
 - [[10_Reference/investing/MOC]] — 投研子区 MOC（实例化最完整）
-- 10_Reference/market_sentiment/情绪仪表盘]] — 情绪子区 MOC（带 6 层 z-score + 三维向量 + 仓位映射）
-- 10_Reference/meta/PARA 方法论]] — PARA 方法论（与 MOC 互补的横向分层）
+- [[10_Reference/market_sentiment/情绪仪表盘]] — 情绪子区 MOC（带 6 层 z-score + 三维向量 + 仓位映射）
+- 10_Reference/meta/PARA [[方法论]] — PARA 方法论（与 MOC 互补的横向分层）
 
 ## 来源
 

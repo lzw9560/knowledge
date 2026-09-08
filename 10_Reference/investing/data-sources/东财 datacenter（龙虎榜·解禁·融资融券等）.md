@@ -90,6 +90,6 @@ source: ARCHITECTURE.md
 
 ## 🔧 技术栈
 
-- 🔧 10_Reference/tech-learning/concepts/熔断器|熔断器]] — datacenter（龙虎榜/解禁/融资融券）采集加熔断
-- 🔧 10_Reference/tech-learning/concepts/限流|限流]] — 共用 em_get QPS≤2 限流
-- 🔧 10_Reference/tech-learning/concepts/缓存策略|缓存策略]] — 低频数据入缓存降低重复请求
+- 🔧 10_Reference/tech-learning/concepts/熔断器|[[熔断器]] — datacenter（龙虎榜/解禁/融资融券）采集加熔断
+- 🔧 10_Reference/tech-[[learning/concepts/限流|限流]] — 共用 em_get QPS≤2 限流
+- 🔧 10_Reference/tech-learning/concepts/缓存策略|[[缓存策略]] — 低频数据入缓存降低重复请求

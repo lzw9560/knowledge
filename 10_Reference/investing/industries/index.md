@@ -10,59 +10,10 @@ created: 2026-09-07
 
 ## 实体列表（Dataview 动态）
 
-<!-- dataview-precompiled:f15fcb5a2c2f -->
-| 行业代码 | 行业名称 | 分类来源 |
-|---|---|---|
-| — | IT服务 | 东财涨停池行业分类 |
-| — | 一般零售 | 东财涨停池行业分类 |
-| — | 专用设备 | 东财涨停池行业分类 |
-| — | 养殖业 | 东财涨停池行业分类 |
-| — | 出版 | 东财涨停池行业分类 |
-| — | 动物保健 | 东财涨停池行业分类 |
-| — | 化学制品 | 东财涨停池行业分类 |
-| — | 化学制药 | 东财涨停池行业分类 |
-| — | 化学原料 | 东财涨停池行业分类 |
-| — | 医疗服务 | 东财涨停池行业分类 |
-| — | 地面兵装 | 东财涨停池行业分类 |
-| — | 多元金融 | 东财涨停池行业分类 |
-| — | 家居用品 | 东财涨停池行业分类 |
-| — | 小家电 | 东财涨停池行业分类 |
-| — | 影视院线 | 东财涨停池行业分类 |
-| — | 房地产开发 | 东财涨停池行业分类 |
-| — | 房地产服务 | 东财涨停池行业分类 |
-| — | 数字媒体 | 东财涨停池行业分类 |
-| — | 旅游及景区 | 东财涨停池行业分类 |
-| — | 服装家纺 | 东财涨停池行业分类 |
-| — | 林业 | 东财涨停池行业分类 |
-| — | 水泥 | 东财涨停池行业分类 |
-| — | 汽车零部件 | 东财涨停池行业分类 |
-| — | 消费电子 | 东财涨停池行业分类 |
-| — | 渔业 | 东财涨停池行业分类 |
-| — | 游戏 | 东财涨停池行业分类 |
-| — | 炼化及贸易 | 东财涨停池行业分类 |
-| — | 煤炭开采 | 东财涨停池行业分类 |
-| — | 环保 | LLM推断（由待核实行业股票业务描述推断） |
-| — | 电网设备 | 东财涨停池行业分类 |
-| — | 种植业 | 东财涨停池行业分类 |
-| — | 航空装备 | 东财涨停池行业分类 |
-| — | 航运港口 | 东财涨停池行业分类 |
-| — | 调味发酵品 | 东财涨停池行业分类 |
-| — | 通用设备 | 东财涨停池行业分类 |
-| — | 酒店餐饮 | 东财涨停池行业分类 |
-| — | 铅锌 | LLM推断（由待核实行业股票业务描述推断） |
-| — | 非白酒 | 东财涨停池行业分类 |
-| — | 食品加工 | 东财涨停池行业分类 |
-| — | 饲料 | 东财涨停池行业分类 |
-| A01 | 农业 | 证监会行业分类 |
-| A03 | 养殖 | 东方财富EM2016行业分类 |
-| B06 | 煤炭开采洗选 | 东方财富EM2016行业分类 |
-| B07 | 油田服务 | 东方财富EM2016行业分类 |
-| B07 | 石油天然气开采 | 东方财富EM2016行业分类 |
-| B09 | 其他稀有小金属 | 东方财富EM2016行业分类 |
-| B09 | 稀土 | 东方财富EM2016行业分类 |
-| B09 | 钨 | 东方财富EM2016行业分类 |
-| B09 | 铜 | 东方财富EM2016行业分类 |
-| B09 | 铝 | 东方财富EM2016行业分类 |
+<!-- dataview-precompiled:76228415ca51 query:VEFCTEUK6KGM5Lia5Luj56CBIEFTICLooYzkuJrku6PnoIEiLAogIOihjOS4muWQjeensCBBUyAi6KGM5Lia5ZCN56ewIiwKICDliIbnsbvmnaXmupAgQVMgIuWIhuexu+adpea6kCIKRlJPTSAiMTBfUmVmZXJlbmNlL2ludmVzdGluZy9pbmR1c3RyaWVzIgpXSEVSRSB0eXBlID0gIm1ldGhvZG9sb2d5X2luZGV4IgpTT1JUIGNvZGUgQVNDCg== -->
+| 文件 | 行业代码 | 行业名称 | 分类来源 |
+|---|---|---|---|
+| [[10_Reference/investing/industries/index]] | — | — | — |
 <!-- /dataview-precompiled -->
 
 ## 关系
@@ -218,10 +169,10 @@ created: 2026-09-07
 
 ## 📊 Dataview 实时统计
 
-<!-- dataview-precompiled:fa4bc848d4cc -->
-| 行业板块总数 |
-|---|
-| 126 |
+<!-- dataview-precompiled:744002c2d076 query:VEFCTEUK6KGM5Lia5p2/5Z2X5oC75pWwIEFTICLooYzkuJrmnb/lnZfmgLvmlbAiCkZST00gIjEwX1JlZmVyZW5jZS9pbnZlc3RpbmcvaW5kdXN0cmllcyIKV0hFUkUgdHlwZSA9ICJtZXRob2RvbG9neV9pbmRleCIKU09SVCBjb2RlIEFTQwo= -->
+| 文件 | 行业板块总数 |
+|---|---|
+| [[10_Reference/investing/industries/index]] | — |
 <!-- /dataview-precompiled -->
 
 ## 🔗 相关子区

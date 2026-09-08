@@ -11,14 +11,10 @@ created: 2026-09-07
 
 ## 动作列表（Dataview 动态）
 
-<!-- dataview-precompiled:3076fcbcc2a5 -->
-| 类型 | 触发条件 | 目标实体 |
-|---|---|---|
-| 状态流转 | inbox 实体通过审查，需迁移到正式区 | inbox/, stocks/, industries/, concepts/ |
-| 状态流转 | inbox 实体通过质量门审核（confidence=low 的 LLM 抽取实体经人工 approved）后，迁移到正式区 | inbox/, stocks/, industries/, concepts/ |
-| 链接维护 | 报告入库后，扫描正文 6 位代码并建 stocks/{code} 链接 | reports/, daily/ |
-| 链接维护 | 实体改名时，重写所有反向链接 | 全类型 |
-| 链接维护 | 战法卡漂移检测报 drift（vault 战法卡 source_sha ≠ 源仓对应文件当前 SHA） | strategies/ |
+<!-- dataview-precompiled:32eea7897118 query:VEFCTEUK57G75Z6LIEFTICLnsbvlnosiLAogIOinpuWPkeadoeS7tiBBUyAi6Kem5Y+R5p2h5Lu2IiwKICDnm67moIflrp7kvZMgQVMgIuebruagh+WunuS9kyIKRlJPTSAiMTBfUmVmZXJlbmNlL2ludmVzdGluZy9hY3Rpb25zIgpXSEVSRSB0eXBlID0gIm1ldGhvZG9sb2d5X2luZGV4IgpTT1JUIGNvZGUgQVNDCg== -->
+| 文件 | 类型 | 触发条件 | 目标实体 |
+|---|---|---|---|
+| [[10_Reference/investing/actions/index]] | — | — | — |
 <!-- /dataview-precompiled -->
 
 ## 动作类型
@@ -44,11 +40,11 @@ created: 2026-09-07
 
 > 本段列出该类型所有实体以建立入边链接（Dataview 表格不计入边）。
 
-- 10_Reference/investing/actions/审批实体]]
-- 10_Reference/investing/actions/研报自动链接]]
-- 10_Reference/investing/actions/inbox晋级]]
-- 10_Reference/investing/actions/实体重命名]]
-- 10_Reference/investing/actions/源同步]]
+- [[10_Reference/investing/actions/审批实体]]
+- [[10_Reference/investing/actions/研报自动链接]]
+- [[10_Reference/investing/actions/inbox晋级]]
+- [[10_Reference/investing/actions/实体重命名]]
+- [[10_Reference/investing/actions/源同步]]
 
 
 ---
@@ -60,10 +56,10 @@ created: 2026-09-07
 
 ## 📊 Dataview 实时统计
 
-<!-- dataview-precompiled:98d7adab92bb -->
-| 动作总数 |
-|---|
-| 5 |
+<!-- dataview-precompiled:6376f507f74d query:VEFCTEUK5Yqo5L2c5oC75pWwIEFTICLliqjkvZzmgLvmlbAiCkZST00gIjEwX1JlZmVyZW5jZS9pbnZlc3RpbmcvYWN0aW9ucyIKV0hFUkUgdHlwZSA9ICJtZXRob2RvbG9neV9pbmRleCIKU09SVCBjb2RlIEFTQwo= -->
+| 文件 | 动作总数 |
+|---|---|
+| [[10_Reference/investing/actions/index]] | — |
 <!-- /dataview-precompiled -->
 
 ## 🔗 相关子区

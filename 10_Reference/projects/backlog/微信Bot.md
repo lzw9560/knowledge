@@ -27,6 +27,6 @@ created: 2026-09-07
 ## 相关链接
 - [[10_Reference/projects/MOC]]
 - [[10_Reference/investing/MOC]]
-- 10_Reference/projects/active/Vibe-Research]]
+- 10_Reference/projects/active/Vibe-[[Research]]
 - [[10_Reference/tech-learning/MOC]]
-- 10_Reference/meta/四构件本体方法论]]
+- [[10_Reference/meta/四构件本体方法论]]

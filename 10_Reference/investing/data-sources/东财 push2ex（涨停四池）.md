@@ -64,6 +64,6 @@ source: ARCHITECTURE.md
 
 ## 🔧 技术栈
 
-- 🔧 10_Reference/tech-learning/concepts/熔断器|熔断器]] — 涨停四池采集加熔断，连续失败快速失败
-- 🔧 10_Reference/tech-learning/concepts/限流|限流]] — 共用 em_get QPS≤2 限流防封
-- 🔧 10_Reference/tech-learning/concepts/优雅降级|优雅降级]] — push2ex 失败 → push2delay 降级
+- 🔧 10_Reference/tech-learning/concepts/熔断器|[[熔断器]] — 涨停四池采集加熔断，连续失败快速失败
+- 🔧 10_Reference/tech-[[learning/concepts/限流|限流]] — 共用 em_get QPS≤2 限流防封
+- 🔧 10_Reference/tech-learning/concepts/优雅降级|[[优雅降级]] — push2ex 失败 → push2delay 降级

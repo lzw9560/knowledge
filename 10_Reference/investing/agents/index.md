@@ -10,16 +10,10 @@ created: 2026-09-07
 
 ## 角色列表
 
-<!-- dataview-precompiled:a19d5b77e1b1 -->
-| 角色 | 职能 | 辩论对手 |
-|---|---|---|
-| 基本面分析师 | fundamentals_analyst | [agents/news_analyst]], [[agents/policy_analyst] |
-| 市场分析师 | market_analyst | [agents/sentiment_analyst]], [[agents/news_analyst] |
-| 情绪分析师 | social_media_analyst | [agents/market_analyst]], [[agents/news_analyst] |
-| 政策分析师 | policy_analyst | [agents/fundamental_analyst]], [[agents/hot_money_tracker] |
-| 新闻分析师 | news_analyst | [agents/market_analyst]], [[agents/fundamental_analyst] |
-| 游资追踪师 | hot_money_tracker | [agents/policy_analyst]], [[agents/lockup_monitor] |
-| 解禁监控师 | lockup_watcher | [agents/hot_money_tracker]], [[agents/fundamental_analyst] |
+<!-- dataview-precompiled:bda4693c6967 query:VEFCTEUK6KeS6ImyIEFTICLop5LoibIiLAogIOiBjOiDvSBBUyAi6IGM6IO9IiwKICDovqnorrrlr7nmiYsgQVMgIui+qeiuuuWvueaJiyIKRlJPTSAiMTBfUmVmZXJlbmNlL2ludmVzdGluZy9hZ2VudHMiCldIRVJFIHR5cGUgPSAibWV0aG9kb2xvZ3lfaW5kZXgiClNPUlQgY29kZSBBU0MK -->
+| 文件 | 角色 | 职能 | 辩论对手 |
+|---|---|---|---|
+| [[10_Reference/investing/agents/index]] | — | — | — |
 <!-- /dataview-precompiled -->
 
 ## 角色分类
@@ -41,7 +35,7 @@ created: 2026-09-07
 
 7 个 Analyst 报告 → Bull/Bear 研究员辩论 → Research Manager 综合研判 → Trader 交易方案 → 三方风险辩论（激进/保守/中立）→ Portfolio Manager 最终决策。
 
-详见 10_Reference/investing/specs/TradingAgents项目]]。
+详见 [[10_Reference/investing/specs/TradingAgents项目]]。
 
 ## 与 Vibe-Research 的关系
 
@@ -58,10 +52,10 @@ trading-agents 与 Vibe-Research 共享 4 个数据源（mootdx/东财/新浪/�
 
 ## 📊 Dataview 实时统计
 
-<!-- dataview-precompiled:f28450fc7668 -->
-| AI 角色总数 |
-|---|
-| 7 |
+<!-- dataview-precompiled:0ebe75f066cf query:VEFCTEUKQUkg6KeS6Imy5oC75pWwIEFTICJBSSDop5LoibLmgLvmlbAiCkZST00gIjEwX1JlZmVyZW5jZS9pbnZlc3RpbmcvYWdlbnRzIgpXSEVSRSB0eXBlID0gIm1ldGhvZG9sb2d5X2luZGV4IgpTT1JUIGNvZGUgQVNDCg== -->
+| 文件 | AI 角色总数 |
+|---|---|
+| [[10_Reference/investing/agents/index]] | — |
 <!-- /dataview-precompiled -->
 
 ## 🔗 相关子区

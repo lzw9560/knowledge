@@ -38,7 +38,7 @@ PARA 把所有信息按"与当前项目的相关度"分四层：
 ## 跨领域实例
 
 - [[10_Reference/investing/MOC]] — 投研子区 MOC（Areas 层实例化）
-- 10_Reference/meta/MOC 方法论]] — MOC 方法论（与 PARA 互补的导航层）
+- 10_Reference/meta/MOC [[方法论]] — MOC 方法论（与 PARA 互补的导航层）
 
 ## 来源
 

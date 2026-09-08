@@ -10,59 +10,10 @@ created: 2026-09-07
 
 ## 实体列表（Dataview 动态）
 
-<!-- dataview-precompiled:c5a26046a486 -->
-| 概念代码 | 概念名称 | 关联行业 |
-|---|---|---|
-| BK0730 | 5G概念 | 通信设备 |
-| BK1111 | AIGC | 传媒 |
-| — | AIOps | 软件 |
-| BK1160 | AI应用 | 软件 |
-| BK1178 | AI眼镜 | 消费电子 |
-| BK1127 | AI硬件 | 半导体 |
-| BK1128 | CPO | 通信 |
-| BK1035 | CPO概念 | 通信设备 |
-| BK1188 | DeepSeek概念 | 软件 |
-| BK1088 | F5G概念 | 通信技术 |
-| BK0697 | IPO受益 | 证券 |
-| BK0897 | IPv6 | 通信技术 |
-| — | IT运维 | 软件 |
-| BK0948 | MicroLED | 半导体 |
-| BK0902 | MiniLED | 半导体 |
-| BK0840 | OLED | 半导体 |
-| BK0877 | PCB | 半导体 |
-| BK0712 | 一带一路 | 贸易 |
-| BK1064 | 东数西算 | 软件 |
-| BK0579 | 云计算 | 软件 |
-| BK0837 | 互联网医疗 | 软件 |
-| BK0637 | 互联网金融 | 软件 |
-| BK0800 | 人工智能 | 软件 |
-| BK1162 | 人形机器人 | 机器人 |
-| BK0700 | 传媒 | 数字媒体 |
-| BK1200 | 低空经济 | 专用设备 |
-| BK1210 | 信创 | 软件 |
-| BK1050 | 储能概念 | 电力设备 |
-| BK1009 | 元宇宙概念 | 软件 |
-| BK1090 | 充电桩 | 电力设备 |
-| advanced-packaging | 先进封装 | 半导体封测 |
-| BK1010 | 光伏概念 | 电力设备 |
-| optical-module | 光模块 | 通信设备 |
-| BK1660 | 光纤光缆 | 通信 |
-| BK1660 | 光纤概念 | 通信技术 |
-| BK1136 | 光通信模块 | — |
-| BK0823 | 养老金 | 证券 |
-| BK0500 | 军工 | 专用设备 |
-| BK0731 | 农化制品 | 化肥 |
-| BK0430 | 农林牧渔 | 农业 |
-| BK1068 | 净水概念 | 小家电 |
-| — | 出租车 | 交运 |
-| BK0506 | 创投 | 证券 |
-| BK0711 | 券商概念 | 证券 |
-| — | 动力电池 | 电池 |
-| BK0680 | 区块链 | 软件 |
-| BK0668 | 医疗器械概念 | 半导体 |
-| BK0917 | 半导体 | 半导体 |
-| BK1030 | 半导体概念 | 半导体 |
-| BK0852 | 华为概念 | 消费电子 |
+<!-- dataview-precompiled:454ed8bfb931 query:VEFCTEUK5qaC5b+15Luj56CBIEFTICLmpoLlv7Xku6PnoIEiLAogIOamguW/teWQjeensCBBUyAi5qaC5b+15ZCN56ewIiwKICDlhbPogZTooYzkuJogQVMgIuWFs+iBlOihjOS4miIKRlJPTSAiMTBfUmVmZXJlbmNlL2ludmVzdGluZy9jb25jZXB0cyIKV0hFUkUgdHlwZSA9ICJtZXRob2RvbG9neV9pbmRleCIKU09SVCBjb2RlIEFTQwo= -->
+| 文件 | 概念代码 | 概念名称 | 关联行业 |
+|---|---|---|---|
+| [[10_Reference/investing/concepts/index]] | — | — | — |
 <!-- /dataview-precompiled -->
 
 ## 关系
@@ -221,10 +172,10 @@ created: 2026-09-07
 
 ## 📊 Dataview 实时统计
 
-<!-- dataview-precompiled:91cee560ea1d -->
-| 概念板块总数 |
-|---|
-| 130 |
+<!-- dataview-precompiled:72d55fc2a358 query:VEFCTEUK5qaC5b+15p2/5Z2X5oC75pWwIEFTICLmpoLlv7Xmnb/lnZfmgLvmlbAiCkZST00gIjEwX1JlZmVyZW5jZS9pbnZlc3RpbmcvY29uY2VwdHMiCldIRVJFIHR5cGUgPSAibWV0aG9kb2xvZ3lfaW5kZXgiClNPUlQgY29kZSBBU0MK -->
+| 文件 | 概念板块总数 |
+|---|---|
+| [[10_Reference/investing/concepts/index]] | — |
 <!-- /dataview-precompiled -->
 
 ## 🔗 相关子区

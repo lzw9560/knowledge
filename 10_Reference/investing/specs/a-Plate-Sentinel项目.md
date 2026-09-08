@@ -29,7 +29,7 @@ source: README.md
 
 ## 🔗 关联
 
-- 同系列项目：10_Reference/investing/specs/TradingAgents项目]] · 10_Reference/investing/specs/每日股票分析项目]]
+- [[同系列项目：10_Reference/investing/specs/TradingAgents项目]] · [[10_Reference/investing/specs/每日股票分析项目]]
 - 上游：[[10_Reference/investing/specs/index|specs/]] Vibe-Research spec 体系
 
 

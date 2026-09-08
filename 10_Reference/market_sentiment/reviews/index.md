@@ -6,7 +6,7 @@ created: 2026-09-07
 
 # 周度复盘
 
-> 市场情绪周度复盘记录。父级：10_Reference/market_sentiment/情绪仪表盘]]
+> [[市场情绪周度复盘记录。父级：10_Reference/market_sentiment/情绪仪表盘]]
 
 ## 📂 文件列表
 

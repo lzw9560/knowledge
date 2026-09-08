@@ -36,5 +36,5 @@ registry 声明式 + chat/mcp/cli 解耦 + SYSTEM_PROMPT 按新边界放宽。�
 - 上游纲领：[[10_Reference/investing/specs/S006-系统重写纲领]]（§1 合规边界调整）
 - 衔接后续：[[10_Reference/investing/specs/archive/m0-foundation/S015-配置与基础设施]]（配置与基础设施）
 - 影响实体：[[10_Reference/investing/analysts/index|analysts/]]（AI agent 角色）
-- 数据源：10_Reference/investing/data-sources/同花顺 THS（一致预期·涨停揭秘）]]（LLM 服务）
+- 数据源：10_Reference/investing/data-sources/同花顺 [[THS（一致预期·涨停揭秘）]]（LLM 服务）
 - 源文件：`specs/archive/m0-foundation/S010-工具注册表与SYSTEM_PROMPT/spec.md`

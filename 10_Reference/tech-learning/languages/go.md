@@ -35,12 +35,12 @@ created: 2026-09-07
 ## 与 Vibe-Research 的关系
 - Vibe-Research 当前主语言是 Python + TypeScript，未用 Go
 - 但关联基础设施（Docker/K8s）用 Go，技术学习子区记录以备未来选型
-- 参考架构：10_Reference/tech-learning/architecture/微服务架构|微服务]] 模式下，Go 常被选为高性能服务节点语言
+- 参考架构：10_Reference/tech-learning/architecture/微服务架构|[[微服务]] 模式下，Go 常被选为高性能服务节点语言
 
 ## 相关链接
 - [[10_Reference/tech-learning/MOC]]
 - [[10_Reference/tech-learning/languages/python]]
 - [[10_Reference/tech-learning/languages/rust]]
-- 10_Reference/tech-learning/architecture/微服务架构]]
+- 10_Reference/tech-[[learning/architecture/微服务架构]]
 - [[10_Reference/investing/specs/archive/m0-foundation/S011-调度收口]]
-- 10_Reference/meta/四构件本体方法论]]
+- [[10_Reference/meta/四构件本体方法论]]

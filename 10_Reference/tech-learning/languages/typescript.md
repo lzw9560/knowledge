@@ -34,4 +34,4 @@ created: 2026-09-07
 - [[10_Reference/tech-learning/frameworks/react]]
 - [[10_Reference/investing/MOC]]
 - [[10_Reference/investing/specs/archive/m0-foundation/S009-前后端类型同步]]
-- 10_Reference/meta/四构件本体方法论]]
+- [[10_Reference/meta/四构件本体方法论]]
