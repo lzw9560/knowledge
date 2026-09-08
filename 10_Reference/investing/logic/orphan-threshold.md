@@ -45,11 +45,11 @@ if 孤立实体 > 5:
 
 Dataview 查询（手动审查用）：
 
-```dataview
-TABLE type AS "类型", code AS "代码", name AS "名称"
-FROM "10_Reference/investing"
-WHERE type != null AND length(file.inlinks) = 0 AND length(file.outlinks) = 0
-```
+<!-- dataview-precompiled:9d38951592f0 -->
+| 文件 | 类型 | 代码 | 名称 |
+|---|---|---|---|
+| — | — | — | — |
+<!-- /dataview-precompiled -->
 
 
 ## ⚠️ 违反处置

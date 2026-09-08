@@ -58,13 +58,11 @@ violates 判定：
 
 Dataview 查询（stock → industry 多于 1 个的嫌疑）：
 
-```dataview
-TABLE file.name AS "股票", length(rows) AS "行业数"
-FROM "10_Reference/investing/stocks"
-WHERE industry != null
-GROUP BY file.link
-HAVING length(rows) > 1
-```
+<!-- dataview-precompiled:3ffc1d2c03e4 -->
+| 文件 | 股票 | 行业数 |
+|---|---|---|
+| — | — | — |
+<!-- /dataview-precompiled -->
 
 ## ⚠️ 违反处置
 

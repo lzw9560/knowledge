@@ -5,14 +5,13 @@
 
 ## 审查报告列表
 
-```dataview
-TABLE WITHOUT ID
-  audit_date AS "日期", findings_count AS "问题数", critical AS "严重", status AS "状态"
-FROM "10_Reference/investing/reviews"
-WHERE type = "audit" AND file.name != "index"
-SORT audit_date DESC
-LIMIT 20
-```
+<!-- dataview-precompiled:f4c7a83aeda8 -->
+| 日期 | 问题数 | 严重 | 状态 |
+|---|---|---|---|
+| 2026-09-06 | 122 | 11 | 已完成 |
+| 2026-09-07 | 636 | 121 | 已完成 |
+| 2026-09-08 | 1 | 0 | 已完成 |
+<!-- /dataview-precompiled -->
 
 ## 8 个检查工具
 
@@ -53,12 +52,11 @@ LIMIT 20
 
 ## 📊 Dataview 实时统计
 
-```dataview
-TABLE WITHOUT ID
-  length(rows) AS "审查报告总数"
-FROM "10_Reference/investing/reviews"
-WHERE type = "audit" AND file.name != "index"
-```
+<!-- dataview-precompiled:7448872772df -->
+| 审查报告总数 |
+|---|
+| 3 |
+<!-- /dataview-precompiled -->
 
 ## 🔗 相关子区
 

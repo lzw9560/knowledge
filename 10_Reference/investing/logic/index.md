@@ -5,14 +5,34 @@
 
 ## 规则列表（Dataview 动态）
 
-```dataview
-TABLE WITHOUT ID
-  rule_type AS "类型", target_entity AS "适用实体", severity AS "严重级"
-FROM "10_Reference/investing/logic"
-WHERE type = "logic" AND file.name != "index"
-SORT severity DESC, rule_type ASC
-LIMIT 50
-```
+<!-- dataview-precompiled:c5c1841443c6 -->
+| 类型 | 适用实体 | 严重级 |
+|---|---|---|
+| 推断规则 | events | medium |
+| 推断规则 | 全类型（以 frontmatter confidence + last_verified 字段的实体） | medium |
+| 校验规则 | 全类型 | medium |
+| 准入闸 | 跨域链接 | medium |
+| 校验规则 | metrics, valuations, reports | medium |
+| 状态机 | 全类型 | medium |
+| 校验规则 | 全类型 | medium |
+| 校验规则 | stocks, industries, concepts | medium |
+| 别名 | strategies | medium |
+| 漂移检测 | 全实体 | medium |
+| 校验规则 | strategies | medium |
+| 推断规则 | strategies | medium |
+| 自动化规则 | reports | medium |
+| 分级规则 | 全实体 | low |
+| 状态机 | 全类型 | low |
+| 校验规则 | inbox_item | high |
+| 校验规则 | stocks | high |
+| 校验规则 | 全类型 | high |
+| 校验规则 | 全类型 | high |
+| 状态机 | 全类型 | high |
+| 校验规则 | 全类型 | high |
+| 状态机 | inbox_item | high |
+| 校验规则 | stocks | high |
+| 自动化规则 | 全类型 | high |
+<!-- /dataview-precompiled -->
 
 ## 规则类型
 
@@ -71,12 +91,11 @@ LIMIT 50
 
 ## 📊 Dataview 实时统计
 
-```dataview
-TABLE WITHOUT ID
-  length(rows) AS "逻辑规则总数"
-FROM "10_Reference/investing/logic"
-WHERE type = "logic" AND file.name != "index"
-```
+<!-- dataview-precompiled:8c37937ea480 -->
+| 逻辑规则总数 |
+|---|
+| 24 |
+<!-- /dataview-precompiled -->
 
 ## 🔗 相关子区
 

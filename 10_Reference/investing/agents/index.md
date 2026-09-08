@@ -4,14 +4,17 @@
 
 ## 角色列表
 
-```dataview
-TABLE WITHOUT ID
-  name AS "角色", role AS "职能", debates_with AS "辩论对手"
-FROM "10_Reference/investing/agents"
-WHERE type = "agent_role" AND file.name != "index"
-SORT name ASC
-LIMIT 50
-```
+<!-- dataview-precompiled:a19d5b77e1b1 -->
+| 角色 | 职能 | 辩论对手 |
+|---|---|---|
+| 基本面分析师 | fundamentals_analyst | [agents/news_analyst]], [[agents/policy_analyst] |
+| 市场分析师 | market_analyst | [agents/sentiment_analyst]], [[agents/news_analyst] |
+| 情绪分析师 | social_media_analyst | [agents/market_analyst]], [[agents/news_analyst] |
+| 政策分析师 | policy_analyst | [agents/fundamental_analyst]], [[agents/hot_money_tracker] |
+| 新闻分析师 | news_analyst | [agents/market_analyst]], [[agents/fundamental_analyst] |
+| 游资追踪师 | hot_money_tracker | [agents/policy_analyst]], [[agents/lockup_monitor] |
+| 解禁监控师 | lockup_watcher | [agents/hot_money_tracker]], [[agents/fundamental_analyst] |
+<!-- /dataview-precompiled -->
 
 ## 角色分类
 
@@ -49,12 +52,11 @@ trading-agents 与 Vibe-Research 共享 4 个数据源（mootdx/东财/新浪/�
 
 ## 📊 Dataview 实时统计
 
-```dataview
-TABLE WITHOUT ID
-  length(rows) AS "AI 角色总数"
-FROM "10_Reference/investing/agents"
-WHERE type = "agent_role" AND file.name != "index"
-```
+<!-- dataview-precompiled:f28450fc7668 -->
+| AI 角色总数 |
+|---|
+| 7 |
+<!-- /dataview-precompiled -->
 
 ## 🔗 相关子区
 

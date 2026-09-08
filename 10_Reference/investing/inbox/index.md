@@ -5,14 +5,15 @@
 
 ## 待审实体（Dataview 动态）
 
-```dataview
-TABLE WITHOUT ID
-  entity_type AS "类型", name AS "名称", confidence AS "置信度", quality_score AS "质量分", source AS "来源"
-FROM "10_Reference/investing/inbox"
-WHERE type != "index"
-SORT quality_score ASC, confidence ASC
-LIMIT 50
-```
+<!-- dataview-precompiled:1363e647c9f6 -->
+| 类型 | 名称 | 置信度 | 质量分 | 来源 |
+|---|---|---|---|---|
+| industry | 海工 | medium | 50 | regex:industry |
+| industry | 电价下 | medium | 50 | regex:industry |
+| industry | 以定力应对 | medium | 50 | regex:industry |
+| industry | 期待 | medium | 50 | regex:industry |
+| — | — | — | — | — |
+<!-- /dataview-precompiled -->
 
 ## 质量四维度
 
@@ -64,14 +65,13 @@ python3 scripts/review_inbox.py --auto --type stock
 
 最新审核报告见 [[10_Reference/investing/reviews/index|审查报告索引]]，inbox 专属晋级日志在 `reviews/inbox-promotion-<date>.md`。
 
-```dataview
-TABLE WITHOUT ID
-  audit_date AS "日期", findings_count AS "问题数", status AS "状态"
-FROM "10_Reference/investing/reviews"
-WHERE type = "audit" AND file.name != "index"
-SORT audit_date DESC
-LIMIT 5
-```
+<!-- dataview-precompiled:5b51d7b4a604 -->
+| 日期 | 问题数 | 状态 |
+|---|---|---|
+| 2026-09-06 | 122 | 已完成 |
+| 2026-09-07 | 636 | 已完成 |
+| 2026-09-08 | 1 | 已完成 |
+<!-- /dataview-precompiled -->
 
 ## 四层关系推断的落点
 

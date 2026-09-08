@@ -5,14 +5,15 @@
 
 ## 动作列表（Dataview 动态）
 
-```dataview
-TABLE WITHOUT ID
-  action_type AS "类型", trigger AS "触发条件", target AS "目标实体"
-FROM "10_Reference/investing/actions"
-WHERE type = "action" AND file.name != "index"
-SORT action_type ASC
-LIMIT 50
-```
+<!-- dataview-precompiled:3076fcbcc2a5 -->
+| 类型 | 触发条件 | 目标实体 |
+|---|---|---|
+| 状态流转 | inbox 实体通过审查，需迁移到正式区 | inbox/, stocks/, industries/, concepts/ |
+| 状态流转 | inbox 实体通过质量门审核（confidence=low 的 LLM 抽取实体经人工 approved）后，迁移到正式区 | inbox/, stocks/, industries/, concepts/ |
+| 链接维护 | 报告入库后，扫描正文 6 位代码并建 stocks/{code} 链接 | reports/, daily/ |
+| 链接维护 | 实体改名时，重写所有反向链接 | 全类型 |
+| 链接维护 | 战法卡漂移检测报 drift（vault 战法卡 source_sha ≠ 源仓对应文件当前 SHA） | strategies/ |
+<!-- /dataview-precompiled -->
 
 ## 动作类型
 
@@ -53,12 +54,11 @@ LIMIT 50
 
 ## 📊 Dataview 实时统计
 
-```dataview
-TABLE WITHOUT ID
-  length(rows) AS "动作总数"
-FROM "10_Reference/investing/actions"
-WHERE type = "action" AND file.name != "index"
-```
+<!-- dataview-precompiled:98d7adab92bb -->
+| 动作总数 |
+|---|
+| 5 |
+<!-- /dataview-precompiled -->
 
 ## 🔗 相关子区
 

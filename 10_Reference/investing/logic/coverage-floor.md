@@ -50,12 +50,31 @@ for t, count in type_counts.items():
 
 Dataview 查询（类型计数）：
 
-```dataview
-TABLE length(rows) AS "实体数"
-FROM "10_Reference/investing"
-WHERE type != null
-GROUP BY type AS "类型"
-```
+<!-- dataview-precompiled:9c9945e86630 -->
+| 文件 | 实体数 |
+|---|---|
+| [[approve-entity]] | 6 |
+| [[fundamental_analyst]] | 8 |
+| [[Austin Liang-招银国际]] | 397 |
+| [[5G概念]] | 131 |
+| [[akshare]] | 18 |
+| [[000019-2026-09-02]] | 42 |
+| [[2026-09-01-涨停池]] | 21 |
+| [[20260907-122605-industry-海工]] | 5 |
+| [[000001]] | 6 |
+| [[IT服务]] | 127 |
+| [[LLM抽取质量门]] | 25 |
+| [[000001-latest]] | 402 |
+| [[000001-2026-04-26-2025年报及2026一季报点评：收入利]] | 393 |
+| [[2026-09-06-ci-audit]] | 6 |
+| [[audit-procedure]] | 1 |
+| [[DEC-001]] | 5 |
+| [[S004-candidates-funnel-performance]] | 102 |
+| [[a-plate-sentinel-project]] | 4 |
+| [[000001]] | 412 |
+| [[break_reseal]] | 14 |
+| [[valuation]] | 402 |
+<!-- /dataview-precompiled -->
 
 
 ## ⚠️ 违反处置

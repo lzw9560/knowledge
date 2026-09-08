@@ -4,14 +4,15 @@
 
 ## 实体列表（Dataview 动态）
 
-```dataview
-TABLE WITHOUT ID
-  code AS "指数代码", name AS "指数名称", market AS "市场"
-FROM "10_Reference/investing/indices"
-WHERE type = "index" AND file.name != "index"
-SORT code ASC
-LIMIT 50
-```
+<!-- dataview-precompiled:9e430e9219b7 -->
+| 指数代码 | 指数名称 | 市场 |
+|---|---|---|
+| 000001 | 上证指数 | A |
+| 000300 | 沪深300 | A |
+| 000905 | 中证500 | A |
+| 399001 | 深证成指 | A |
+| 399006 | 创业板指 | A |
+<!-- /dataview-precompiled -->
 
 ## 关系
 
@@ -43,12 +44,11 @@ LIMIT 50
 
 ## 📊 Dataview 实时统计
 
-```dataview
-TABLE WITHOUT ID
-  length(rows) AS "指数总数"
-FROM "10_Reference/investing/indices"
-WHERE type = "index" AND file.name != "index"
-```
+<!-- dataview-precompiled:5781aca274d3 -->
+| 指数总数 |
+|---|
+| 5 |
+<!-- /dataview-precompiled -->
 
 ## 🔗 相关子区
 

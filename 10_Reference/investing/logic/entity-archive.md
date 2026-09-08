@@ -58,12 +58,11 @@ confidence: high
 
 Dataview 查询（待归档候选）：
 
-```dataview
-TABLE type AS "类型", status AS "状态", length(file.inlinks) AS "入边数"
-FROM "10_Reference/investing"
-WHERE status = "deprecated" OR (length(file.inlinks) = 0 AND status != "stub")
-SORT type ASC
-```
+<!-- dataview-precompiled:cfdc0eb1299d -->
+| 文件 | 类型 | 状态 | 入边数 |
+|---|---|---|---|
+| — | — | — | — |
+<!-- /dataview-precompiled -->
 
 ## ⚠️ 违反处置
 

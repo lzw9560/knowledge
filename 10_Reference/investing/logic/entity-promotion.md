@@ -56,14 +56,11 @@ python3 scripts/review_inbox.py --dry-run # 只评不迁，预览
 
 Dataview 查询（待晋级实体——quality_score ≥ 60 但仍在 inbox）：
 
-```dataview
-TABLE WITHOUT ID
-  entity_type AS "类型", quality_score AS "质量分", confidence AS "置信度"
-FROM "10_Reference/investing/inbox"
-WHERE type = "inbox_item" AND quality_score >= 60
-SORT quality_score DESC
-LIMIT 50
-```
+<!-- dataview-precompiled:f772431f63b0 -->
+| 类型 | 质量分 | 置信度 |
+|---|---|---|
+| — | — | — |
+<!-- /dataview-precompiled -->
 
 ## ⚠️ 违反处置
 

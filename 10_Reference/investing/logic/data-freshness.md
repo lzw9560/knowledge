@@ -53,12 +53,11 @@ for entity in [metrics, valuations, reports]:
 
 Dataview 查询（stale 实体）：
 
-```dataview
-TABLE type AS "类型", last_synced AS "最后同步", status AS "状态"
-FROM "10_Reference/investing"
-WHERE last_synced != null AND (date(today) - date(last_synced)).days > 7
-SORT last_synced ASC
-```
+<!-- dataview-precompiled:109a02f1c731 -->
+| 文件 | 类型 | 最后同步 | 状态 |
+|---|---|---|---|
+| — | — | — | — |
+<!-- /dataview-precompiled -->
 
 ## ⚠️ 违反处置
 

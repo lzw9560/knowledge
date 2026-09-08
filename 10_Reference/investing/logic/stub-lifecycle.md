@@ -54,12 +54,26 @@ stub 是"计划中待数据源补充的占位"，允许：
 
 Dataview 查询（stub 实体待数据源补充）：
 
-```dataview
-TABLE type AS "类型", status AS "状态", created AS "创建日"
-FROM "10_Reference/investing"
-WHERE status = "stub" OR status = "stub_stale"
-SORT created ASC
-```
+<!-- dataview-precompiled:2bfae211412a -->
+| 文件 | 类型 | 状态 | 创建日 |
+|---|---|---|---|
+| [[promote-from-inbox]] | action | stub | 2026-09-07 |
+| [[sync-from-source]] | action | stub | 2026-09-07 |
+| [[食品饮料]] | industry | stub | 2026-09-07 |
+| [[broken-link-grading]] | logic | stub | 2026-09-07 |
+| [[source-drift]] | logic | stub | 2026-09-07 |
+| [[static-value-ban]] | logic | stub | 2026-09-07 |
+| [[000019]] | stock | stub | 2026-09-07 |
+| [[000505]] | stock | stub | 2026-09-07 |
+| [[002172]] | stock | stub | 2026-09-07 |
+| [[002696]] | stock | stub | 2026-09-07 |
+| [[600313]] | stock | stub | 2026-09-07 |
+| [[600693]] | stock | stub | 2026-09-07 |
+| [[603118]] | stock | stub | 2026-09-07 |
+| [[603221]] | stock | stub | 2026-09-07 |
+| [[603626]] | stock | stub | 2026-09-07 |
+| [[605188]] | stock | stub | 2026-09-07 |
+<!-- /dataview-precompiled -->
 
 ## ⚠️ 违反处置
 
