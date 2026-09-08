@@ -10,13 +10,20 @@ created: 2026-09-07
 
 ## 📂 文件列表
 
-```dataview
-TABLE WITHOUT ID
-  file.link AS "文件",
-  file.mtime AS "修改时间"
-FROM "10_Reference/tech-learning/tools"
-SORT file.mtime DESC
-```
+<!-- dataview-precompiled: static-file-list -->
+
+| 文件 | 修改时间 |
+|------|---------|
+| [[obsidian]] | 2026-09-08 12:28 |
+| [[uv]] | 2026-09-08 12:24 |
+| [[cron]] | 2026-09-07 20:33 |
+| [[docker-compose]] | 2026-09-07 12:00 |
+| [[github-actions]] | 2026-09-07 12:00 |
+| [[obsidian-git]] | 2026-09-07 12:00 |
+| [[git]] | 2026-09-07 11:59 |
+| [[docker]] | 2026-09-07 06:24 |
+
+<!-- /dataview-precompiled -->
 
 ## 🔗 关联
 

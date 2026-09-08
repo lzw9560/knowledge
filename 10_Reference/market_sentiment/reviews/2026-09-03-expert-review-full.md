@@ -465,13 +465,15 @@ Obsidian只做展示归档，每天23:00从SQLite批量导出当日摘要。
 ### 4. Dataview查询示例
 
 **情绪评分趋势查询：**
-```dataview
-TABLE sentiment_score, z_score, signal_divergence
-FROM "10_Reference/market_sentiment/daily"
-WHERE file.name contains "close"
-SORT file.name DESC
-LIMIT 20
-```
+<!-- dataview-precompiled: expert-review-example1 -->
+
+| 文件 | sentiment_score | z_score | signal_divergence |
+|------|----------------|---------|-------------------|
+| — | — | — | — |
+
+<!-- /dataview-precompiled -->
+
+> 注：示例查询，数据待 daily/ 目录回填 close 类报告后统计。
 
 **信号事件查询：**
 ```dataview

@@ -10,13 +10,20 @@ created: 2026-09-07
 
 ## 📂 文件列表
 
-```dataview
-TABLE WITHOUT ID
-  file.link AS "文件",
-  file.mtime AS "修改时间"
-FROM "10_Reference/projects/backlog"
-SORT file.mtime DESC
-```
+<!-- dataview-precompiled: static-file-list -->
+
+| 文件 | 修改时间 |
+|------|---------|
+| [[semantic-search]] | 2026-09-07 22:59 |
+| [[llm-extraction-automation]] | 2026-09-07 20:35 |
+| [[realtime-data-pipeline]] | 2026-09-07 20:35 |
+| [[daily-stock-analysis-integration]] | 2026-09-07 20:33 |
+| [[wechat-bot]] | 2026-09-07 20:33 |
+| [[a-plate-sentinel-integration]] | 2026-09-07 12:06 |
+| [[incremental-sync-automation]] | 2026-09-07 12:06 |
+| [[quartz-site]] | 2026-09-07 11:17 |
+
+<!-- /dataview-precompiled -->
 
 ## 🔗 关联
 

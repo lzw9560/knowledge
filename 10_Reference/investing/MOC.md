@@ -64,9 +64,9 @@ description: 投研知识图谱入口——将代码实体（Pydantic 契约模�
 > [!note] 最近 7 天修改的 10 个文件——追踪图谱最新活动。侧边栏「最近更新」组件同步显示。
 
 <!-- dataview-precompiled:f6b70dbba98f -->
-| 文件 | 类型 | dateformat(file.mtime | 修改时间 |
-|---|---|---|---|
-| — | — | — | — |
+| 文件 | 类型 | 修改时间 |
+|---|---|---|
+| — | — | — |
 <!-- /dataview-precompiled -->
 
 ---
@@ -179,20 +179,20 @@ description: 投研知识图谱入口——将代码实体（Pydantic 契约模�
 
 | 实体类 | 文件夹 | 说明 |
 |---|---|---|
-| 📈 股票 | [[10_Reference/investing/stocks/index|stocks/]] | A 股/美股/港股个股，对应 `Quote` + `CompanyInfo` |
-| 🏭 行业板块 | [[10_Reference/investing/industries/index|industries/]] | 证监会行业分类，对应 `IndustrySector` |
-| 💡 概念板块 | [[10_Reference/investing/concepts/index|concepts/]] | 概念题材板块，对应 `ConceptBlock` + `Sector` |
-| 📊 指数 | [[10_Reference/investing/indices/index|indices/]] | 沪深300/中证500等宽基与行业指数 |
-| 📰 研报 | [[10_Reference/investing/reports/index|reports/]] | 机构研报，对应 `Report` 契约 |
-| 👤 分析师 | [[10_Reference/investing/analysts/index|analysts/]] | 研报作者，对应 `Report.researcher` |
-| 💰 财务指标 | [[10_Reference/investing/metrics/index|metrics/]] | 营收/ROE/毛利率等，对应 `Financials` + `FinancialPeriod` |
-| 📈 估值 | [[10_Reference/investing/valuations/index|valuations/]] | PE/PB/PEG/分位，对应 `Valuation` + `ValuationPercentile` |
-| 🐉 龙虎榜 | [[10_Reference/investing/dragon-tiger/index|dragon-tiger/]] | 游资席位，对应 `Seat` + `BillboardDetail` + `DragonTiger` |
-| ⚡ 事件 | [[10_Reference/investing/events/index|events/]] | 新闻/公告/涨停，对应 `News` + `Announcement` + `ZTPoolItem` |
-| ⚔️ 战法 | [[10_Reference/investing/strategies/index|strategies/]] | 战法卡（从 `backend/strategies/cards/` 导入） |
-| 📋 项目决策 | [[10_Reference/investing/specs/index|specs/]] | SDD spec 决策实体，对应 `specs/` 目录 |
-| 📡 数据源 | [[10_Reference/investing/data-sources/index|data-sources/]] | 外部数据源，对应 `ARCHITECTURE` 数据流 |
-| 🤖 AI 角色 | [[10_Reference/investing/agents/index|agents/]] | trading-agents 的 7 Analyst（区别于 analysts 真人） |
+| 📈 股票 | [stocks/](10_Reference/investing/stocks/index) | A 股/美股/港股个股，对应 `Quote` + `CompanyInfo` |
+| 🏭 行业板块 | [industries/](10_Reference/investing/industries/index) | 证监会行业分类，对应 `IndustrySector` |
+| 💡 概念板块 | [concepts/](10_Reference/investing/concepts/index) | 概念题材板块，对应 `ConceptBlock` + `Sector` |
+| 📊 指数 | [indices/](10_Reference/investing/indices/index) | 沪深300/中证500等宽基与行业指数 |
+| 📰 研报 | [reports/](10_Reference/investing/reports/index) | 机构研报，对应 `Report` 契约 |
+| 👤 分析师 | [analysts/](10_Reference/investing/analysts/index) | 研报作者，对应 `Report.researcher` |
+| 💰 财务指标 | [metrics/](10_Reference/investing/metrics/index) | 营收/ROE/毛利率等，对应 `Financials` + `FinancialPeriod` |
+| 📈 估值 | [valuations/](10_Reference/investing/valuations/index) | PE/PB/PEG/分位，对应 `Valuation` + `ValuationPercentile` |
+| 🐉 龙虎榜 | [dragon-tiger/](10_Reference/investing/dragon-tiger/index) | 游资席位，对应 `Seat` + `BillboardDetail` + `DragonTiger` |
+| ⚡ 事件 | [events/](10_Reference/investing/events/index) | 新闻/公告/涨停，对应 `News` + `Announcement` + `ZTPoolItem` |
+| ⚔️ 战法 | [strategies/](10_Reference/investing/strategies/index) | 战法卡（从 `backend/strategies/cards/` 导入） |
+| 📋 项目决策 | [specs/](10_Reference/investing/specs/index) | SDD spec 决策实体，对应 `specs/` 目录 |
+| 📡 数据源 | [data-sources/](10_Reference/investing/data-sources/index) | 外部数据源，对应 `ARCHITECTURE` 数据流 |
+| 🤖 AI 角色 | [agents/](10_Reference/investing/agents/index) | trading-agents 的 7 Analyst（区别于 analysts 真人） |
 
 
 <!-- index 入边段 -->
@@ -254,15 +254,15 @@ description: 投研知识图谱入口——将代码实体（Pydantic 契约模�
 
 | 构件 | 文件夹 | 说明 |
 |---|---|---|
-| **⚙️ 逻辑规则** | [[10_Reference/investing/logic/index|logic/]] | schema 约束/校验/状态机/推断规则 |
-| **⚡ 动作** | [[10_Reference/investing/actions/index|actions/]] | CRUD/状态流转/链接维护/审计快照 |
+| **⚙️ 逻辑规则** | [logic/](10_Reference/investing/logic/index) | schema 约束/校验/状态机/推断规则 |
+| **⚡ 动作** | [actions/](10_Reference/investing/actions/index) | CRUD/状态流转/链接维护/审计快照 |
 
 ## 🛡 质量门（Curated）
 
 | 层 | 文件夹 | 作用 |
 |---|---|---|
-| **📥 待审** | [[10_Reference/investing/inbox/index|inbox/]] | LLM 抽取实体先进此，带 confidence + source + quality_score，审核通过才进正式区 |
-| **🔍 审查** | [[10_Reference/investing/reviews/index|reviews/]] | ReAct Agent 定期体检报告（8 项检查） |
+| **📥 待审** | [inbox/](10_Reference/investing/inbox/index) | LLM 抽取实体先进此，带 confidence + source + quality_score，审核通过才进正式区 |
+| **🔍 审查** | [reviews/](10_Reference/investing/reviews/index) | ReAct Agent 定期体检报告（8 项检查） |
 
 > 不直接灌入是知识图谱健康的第一道防线。详见 [[10_Reference/investing/inbox/index]] 质量四维度。
 

@@ -8,9 +8,9 @@
 
 | 实体类 | 文件夹 | 数量 | 说明 |
 |---|---|---|---|
-| 项目 | [[10_Reference/projects/active/index|active/]] | 7 | 进行中 |
-| 候选 | [[10_Reference/projects/backlog/index|backlog/]] | 7 | 待启动 |
-| 归档 | [[10_Reference/projects/archived/index|archived/]] | 1 | 已结束 |
+| 项目 | [active/](10_Reference/projects/active/index) | 7 | 进行中 |
+| 候选 | [backlog/](10_Reference/projects/backlog/index) | 7 | 待启动 |
+| 归档 | [archived/](10_Reference/projects/archived/index) | 1 | 已结束 |
 
 > 实体合计 15 个。
 

@@ -10,13 +10,20 @@ created: 2026-09-07
 
 ## 📂 文件列表
 
-```dataview
-TABLE WITHOUT ID
-  file.link AS "文件",
-  file.mtime AS "修改时间"
-FROM "10_Reference/tech-learning/architecture"
-SORT file.mtime DESC
-```
+<!-- dataview-precompiled: static-file-list -->
+
+| 文件 | 修改时间 |
+|------|---------|
+| [[clean-architecture]] | 2026-09-08 12:31 |
+| [[cqrs]] | 2026-09-07 20:33 |
+| [[event-driven]] | 2026-09-07 20:33 |
+| [[event-sourcing]] | 2026-09-07 20:33 |
+| [[hexagonal]] | 2026-09-07 20:33 |
+| [[layered-architecture]] | 2026-09-07 20:33 |
+| [[microservices]] | 2026-09-07 20:33 |
+| [[saga]] | 2026-09-07 20:33 |
+
+<!-- /dataview-precompiled -->
 
 ## 🔗 关联
 

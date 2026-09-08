@@ -10,10 +10,12 @@ created: 2026-09-07
 
 ## 📂 文件列表
 
-```dataview
-TABLE WITHOUT ID
-  file.link AS "复盘",
-  file.mtime AS "修改时间"
-FROM "10_Reference/market_sentiment/reviews"
-SORT file.mtime DESC
-```
+<!-- dataview-precompiled: static-file-list -->
+
+| 复盘 | 修改时间 |
+|------|---------|
+| [[2026-09-03-expert-review-round2]] | 2026-09-03 17:22 |
+| [[2026-09-03-expert-review-full]] | 2026-09-03 17:12 |
+| [[2026-09-03-expert-review-draft]] | 2026-09-03 16:52 |
+
+<!-- /dataview-precompiled -->

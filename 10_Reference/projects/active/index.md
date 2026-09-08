@@ -10,13 +10,20 @@ created: 2026-09-07
 
 ## 📂 文件列表
 
-```dataview
-TABLE WITHOUT ID
-  file.link AS "文件",
-  file.mtime AS "修改时间"
-FROM "10_Reference/projects/active"
-SORT file.mtime DESC
-```
+<!-- dataview-precompiled: static-file-list -->
+
+| 文件 | 修改时间 |
+|------|---------|
+| [[knowledge-graph]] | 2026-09-08 12:24 |
+| [[trading-agents]] | 2026-09-08 12:24 |
+| [[vibe-research]] | 2026-09-08 12:24 |
+| [[knowledge-graph-bot]] | 2026-09-07 22:59 |
+| [[daily-stock-analysis]] | 2026-09-07 20:33 |
+| [[obsidian-mcp]] | 2026-09-07 12:06 |
+| [[quartz-deploy]] | 2026-09-07 12:06 |
+| [[a-plate-sentinel]] | 2026-09-07 11:16 |
+
+<!-- /dataview-precompiled -->
 
 ## 🔗 关联
 

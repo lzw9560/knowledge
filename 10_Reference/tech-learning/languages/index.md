@@ -10,13 +10,16 @@ created: 2026-09-07
 
 ## 📂 文件列表
 
-```dataview
-TABLE WITHOUT ID
-  file.link AS "文件",
-  file.mtime AS "修改时间"
-FROM "10_Reference/tech-learning/languages"
-SORT file.mtime DESC
-```
+<!-- dataview-precompiled: static-file-list -->
+
+| 文件 | 修改时间 |
+|------|---------|
+| [[go]] | 2026-09-08 12:24 |
+| [[python]] | 2026-09-08 12:24 |
+| [[rust]] | 2026-09-08 12:24 |
+| [[typescript]] | 2026-09-08 12:24 |
+
+<!-- /dataview-precompiled -->
 
 ## 🔗 关联
 

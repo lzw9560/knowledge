@@ -8,9 +8,9 @@
 
 | 实体类 | 文件夹 | 数量 | 说明 |
 |---|---|---|---|
-| 书单 | [[10_Reference/reading/booklist/index|booklist/]] | 15 | 待读/在读/已读 |
-| 笔记 | [[10_Reference/reading/notes/index|notes/]] | 16 | 读书笔记 |
-| 摘抄 | [[10_Reference/reading/quotes/index|quotes/]] | — | 精彩摘录 |
+| 书单 | [booklist/](10_Reference/reading/booklist/index) | 15 | 待读/在读/已读 |
+| 笔记 | [notes/](10_Reference/reading/notes/index) | 16 | 读书笔记 |
+| 摘抄 | [quotes/](10_Reference/reading/quotes/index) | — | 精彩摘录 |
 
 > 实体合计 31 个（书单 15 + 笔记 16 + 摘抄待建）。
 

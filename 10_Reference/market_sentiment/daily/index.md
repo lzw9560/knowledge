@@ -10,10 +10,15 @@ created: 2026-09-07
 
 ## 📂 文件列表
 
-```dataview
-TABLE WITHOUT ID
-  file.link AS "日报",
-  file.mtime AS "修改时间"
-FROM "10_Reference/market_sentiment/daily"
-SORT file.mtime DESC
-```
+<!-- dataview-precompiled: static-file-list -->
+
+| 日报 | 修改时间 |
+|------|---------|
+| [[2026-09-03_mid_盘中情绪记录]] | 2026-09-08 13:20 |
+| [[2026-09-03_pre_盘前情绪报告]] | 2026-09-08 13:20 |
+| [[2026-09-06_eve_突发情报]] | 2026-09-07 02:23 |
+| [[2026-09-04_pre_盘前情绪报告]] | 2026-09-07 01:38 |
+| [[2026-09-06_pre_盘前情绪报告]] | 2026-09-07 01:38 |
+| [[2026-09-03_pre_盘前情绪报告_模拟]] | 2026-09-03 17:58 |
+
+<!-- /dataview-precompiled -->

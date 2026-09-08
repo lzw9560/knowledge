@@ -8,12 +8,12 @@
 
 | 实体类 | 文件夹 | 数量 | 说明 |
 |---|---|---|---|
-| 语言 | [[10_Reference/tech-learning/languages/index|languages/]] | 4 | 编程语言（Python/TS/Go/Rust） |
-| 框架 | [[10_Reference/tech-learning/frameworks/index|frameworks/]] | 5 | 前后端框架（FastAPI/React/Vite/Tailwind/Pydantic） |
-| 工具 | [[10_Reference/tech-learning/tools/index|tools/]] | 8 | 工具链（Docker/Git/uv/Obsidian + Compose/GH Actions/obsidian-git/cron） |
-| 架构 | [[10_Reference/tech-learning/architecture/index|architecture/]] | 8 | 架构模式（事件驱动/清洁架构/分层架构/微服务/事件溯源 + CQRS/六边形/Saga） |
-| 概念 | [[10_Reference/investing/concepts/index|concepts/]] | 6 | 编程概念（async-await/类型安全/清洁代码/依赖注入/熔断器/缓存策略） |
-| 项目 | [[10_Reference/projects/MOC|projects/]] | — | 技术项目笔记（区别于 [[10_Reference/projects/]] 项目追踪元数据） |
+| 语言 | [languages/](10_Reference/tech-learning/languages/index) | 4 | 编程语言（Python/TS/Go/Rust） |
+| 框架 | [frameworks/](10_Reference/tech-learning/frameworks/index) | 5 | 前后端框架（FastAPI/React/Vite/Tailwind/Pydantic） |
+| 工具 | [tools/](10_Reference/tech-learning/tools/index) | 8 | 工具链（Docker/Git/uv/Obsidian + Compose/GH Actions/obsidian-git/cron） |
+| 架构 | [architecture/](10_Reference/tech-learning/architecture/index) | 8 | 架构模式（事件驱动/清洁架构/分层架构/微服务/事件溯源 + CQRS/六边形/Saga） |
+| 概念 | [concepts/](10_Reference/investing/concepts/index) | 6 | 编程概念（async-await/类型安全/清洁代码/依赖注入/熔断器/缓存策略） |
+| 项目 | [projects/](10_Reference/projects/MOC) | — | 技术项目笔记（区别于 [[10_Reference/projects/]] 项目追踪元数据） |
 
 > 实体合计 31 个 + 3 个模板 = 34 文件。
 

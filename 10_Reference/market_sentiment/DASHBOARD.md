@@ -17,20 +17,13 @@ tags: [sentiment, dashboard, v2]
 
 > 从 `scores/` 目录读取最新评分文件，展示当日综合情绪状态。
 
-```dataview
-TABLE
-  trading_date AS "交易日",
-  composite_z AS "温度 Z",
-  composite_direction AS "方向",
-  composite_confidence AS "置信度",
-  circuit_breaker_level AS "熔断",
-  position_label AS "仓位建议",
-  position_range AS "仓位范围"
-FROM "10_Reference/market_sentiment/scores"
-WHERE file.name != "_SCORE_LEGEND"
-SORT trading_date DESC
-LIMIT 1
-```
+<!-- dataview-precompiled: dashboard-overview -->
+
+| 交易日 | 温度 Z | 方向 | 置信度 | 熔断 | 仓位建议 | 仓位范围 |
+|--------|--------|------|--------|------|---------|---------|
+| 2026-09-04 | — | yellow | — | — | 50% | — |
+
+<!-- /dataview-precompiled -->
 
 ### 仓位映射表
 
@@ -121,19 +114,17 @@ LIMIT 1
 > **速率 ΔZ** — 5日变化率（动能方向）
 > **背离度 D** — 层间方向不一致程度（趋势转折预警）
 
-```dataview
-TABLE
-  trading_date AS "日期",
-  composite_z AS "🌡️ 温度Z",
-  velocity_dz AS "📈 速率ΔZ",
-  divergence_d AS "🔀 背离度D",
-  composite_direction AS "综合方向",
-  composite_confidence AS "置信度"
-FROM "10_Reference/market_sentiment/scores"
-WHERE file.name != "_SCORE_LEGEND"
-SORT trading_date DESC
-LIMIT 10
-```
+<!-- dataview-precompiled: dashboard-trend -->
+
+| 日期 | 🌡️ 温度Z | 📈 速率ΔZ | 🔀 背离度D | 综合方向 | 置信度 |
+|------|---------|----------|-----------|---------|--------|
+| 2026-09-04 | — | — | — | yellow | — |
+| 2026-09-03 | — | — | — | — | — |
+| 2026-09-02 | — | — | — | — | — |
+
+<!-- /dataview-precompiled -->
+
+> 注：2026-09-02 与 2026-09-04 为 stub 文件，字段待填充。
 
 ### 交叉验证规则
 
@@ -148,110 +139,17 @@ LIMIT 10
 
 ## 📈 历史评分趋势（近20交易日）
 
-```dataviewjs
-// 大A舆情预判 - 近20交易日温度Z值趋势图
-// 使用纯文本ASCII图表，无需额外插件
+<!-- dataview-precompiled: dashboard-history -->
 
-const pages = dv.pages('"10_Reference/market_sentiment/scores"')
-  .where(p => p.file.name != "_SCORE_LEGEND")
-  .sort(p => p.trading_date, 'desc')
-  .limit(20);
+| 日期 | 温度Z | 方向 | 状态 |
+|------|-------|------|------|
+| 2026-09-04 | — | yellow | ➖ 中性 |
+| 2026-09-03 | 68 | yellow | ➖ 中性 |
+| 2026-09-02 | — | — | — |
 
-if (pages.length === 0) {
-  dv.paragraph("⚠️ 暂无评分数据。请先运行评分引擎生成数据。");
-} else {
-  // 提取数据
-  const data = pages.map(p => ({
-    date: p.trading_date || p.file.name,
-    z: p.composite_z || p.sentiment_score || 0,
-    direction: p.composite_direction || p.emotion_state || "N/A"
-  })).reverse();
+<!-- /dataview-precompiled -->
 
-  // 构建ASCII折线图
-  const width = 60;
-  const height = 20;
-  const zValues = data.map(d => d.z);
-  const minZ = Math.min(...zValues, -2);
-  const maxZ = Math.max(...zValues, 2);
-  const range = maxZ - minZ || 1;
-
-  // Y轴标签
-  const yLabels = [];
-  for (let i = 0; i <= height; i += 5) {
-    const val = maxZ - (i / height) * range;
-    yLabels.push(val.toFixed(1));
-  }
-
-  // 构建图表网格
-  let chart = "";
-  // 顶部边框
-  chart += "```\n";
-  chart += "温度Z值趋势 (近20交易日)\n";
-  chart += "─".repeat(width + 12) + "\n";
-
-  for (let row = 0; row <= height; row++) {
-    const currentZ = maxZ - (row / height) * range;
-    let line = "";
-    
-    // Y轴标签
-    if (row % 5 === 0) {
-      line += currentZ.toFixed(1).padStart(6) + " │";
-    } else {
-      line += "       │";
-    }
-
-    // 零轴标记
-    const zeroRow = Math.round((maxZ - 0) / range * height);
-    
-    for (let col = 0; col < width; col++) {
-      if (row === zeroRow) {
-        line += "─";
-      } else {
-        // 检查是否有数据点在这一行
-        const dataIdx = Math.floor(col / width * data.length);
-        if (dataIdx < data.length) {
-          const pointZ = data[dataIdx].z;
-          const pointRow = Math.round((maxZ - pointZ) / range * height);
-          if (pointRow === row) {
-            line += "●";
-          } else if (row === zeroRow) {
-            line += "─";
-          } else {
-            line += " ";
-          }
-        } else {
-          line += " ";
-        }
-      }
-    }
-    chart += line + "\n";
-  }
-
-  // X轴
-  chart += "       │" + "─".repeat(width) + "\n";
-  chart += "        ";
-  if (data.length > 0) {
-    chart += data[0].date + " → " + data[data.length-1].date;
-  }
-  chart += "\n```\n";
-
-  dv.paragraph(chart);
-
-  // 数据表格
-  dv.table(
-    ["日期", "温度Z", "方向", "状态"],
-    data.map(d => [
-      d.date,
-      d.z.toFixed(2),
-      d.direction,
-      d.z > 1.5 ? "🔥 过热" : 
-      d.z > 0.5 ? "📈 偏热" :
-      d.z >= -0.5 ? "➖ 中性" :
-      d.z >= -1.5 ? "📉 偏冷" : "❄️ 极冷"
-    ])
-  );
-}
-```
+> 注：趋势图为静态快照，实时数据需在 Obsidian 中查看。
 
 ---
 
@@ -259,53 +157,21 @@ if (pages.length === 0) {
 
 > 各层信号历史预测准确率。数据来源：`signal_log` 表（需回填实际结果）。
 
-```dataviewjs
-// 从scores目录读取准确率数据
-const pages = dv.pages('"10_Reference/market_sentiment/scores"')
-  .where(p => p.file.name != "_SCORE_LEGEND")
-  .sort(p => p.trading_date, 'desc');
+<!-- dataview-precompiled: dashboard-accuracy -->
 
-if (pages.length === 0) {
-  dv.paragraph("⚠️ 暂无信号准确率数据。");
-} else {
-  // 统计各层准确率
-  const layers = ["L0", "L1", "L2", "L3", "L4", "L5"];
-  const layerNames = {
-    "L0": "宏观周期",
-    "L1": "政策监管",
-    "L2": "机构动向",
-    "L3": "资金面",
-    "L4": "市场情绪",
-    "L5": "衍生品"
-  };
-  
-  let totalCorrect = 0;
-  let totalSignals = 0;
-  
-  const rows = layers.map(layer => {
-    const layerPages = pages.filter(p => {
-      const field = p[layer.toLowerCase() + "_accuracy"];
-      return field !== undefined;
-    });
-    const correct = layerPages.filter(p => p[layer.toLowerCase() + "_accuracy"] === true).length;
-    const total = layerPages.length;
-    const accuracy = total > 0 ? (correct / total * 100).toFixed(1) + "%" : "—";
-    if (total > 0) {
-      totalCorrect += correct;
-      totalSignals += total;
-    }
-    return [layer + " " + layerNames[layer], total, correct, accuracy];
-  });
-  
-  const overallAccuracy = totalSignals > 0 ? (totalCorrect / totalSignals * 100).toFixed(1) + "%" : "—";
-  rows.push(["📊 综合", totalSignals, totalCorrect, overallAccuracy]);
-  
-  dv.table(
-    ["信号层", "总信号数", "正确数", "准确率"],
-    rows
-  );
-}
-```
+| 信号层 | 总信号数 | 正确数 | 准确率 |
+|--------|---------|--------|--------|
+| L0 宏观周期 | — | — | — |
+| L1 政策监管 | — | — | — |
+| L2 机构动向 | — | — | — |
+| L3 资金面 | — | — | — |
+| L4 市场情绪 | — | — | — |
+| L5 衍生品 | — | — | — |
+| 📊 综合 | — | — | — |
+
+<!-- /dataview-precompiled -->
+
+> 注：信号准确率数据需待评分引擎回填实际结果后统计。
 
 ---
 
@@ -313,17 +179,15 @@ if (pages.length === 0) {
 
 > 三级熔断机制，自动检测连续误判和系统性风险。
 
-```dataview
-TABLE
-  trading_date AS "日期",
-  circuit_breaker_level AS "熔断级别",
-  circuit_breaker_reason AS "触发原因",
-  consecutive_misses AS "连续误判"
-FROM "10_Reference/market_sentiment/scores"
-WHERE circuit_breaker_level != null AND circuit_breaker_level > 0
-SORT trading_date DESC
-LIMIT 5
-```
+<!-- dataview-precompiled: dashboard-circuit-breaker -->
+
+| 日期 | 熔断级别 | 触发原因 | 连续误判 |
+|------|---------|---------|---------|
+| — | — | — | — |
+
+<!-- /dataview-precompiled -->
+
+> 当前无熔断触发。
 
 ### 熔断级别定义
 
@@ -340,28 +204,20 @@ LIMIT 5
 
 > 各板块 L4 情绪信号。用表格模拟热力图效果。
 
-```dataviewjs
-// 板块热力图 - 从最新评分文件读取板块分布
-const page = dv.pages('"10_Reference/market_sentiment/scores"')
-  .where(p => p.file.name != "_SCORE_LEGEND")
-  .sort(p => p.trading_date, 'desc')
-  .limit(1)[0];
+<!-- dataview-precompiled: dashboard-heatmap -->
 
-if (!page) {
-  dv.paragraph("⚠️ 暂无板块数据。");
-} else {
-  // 尝试从frontmatter读取板块数据，或使用默认展示
-  dv.paragraph("### 板块情绪热力图");
-  dv.paragraph("| 板块 | 情绪信号 | 涨停数 | 资金方向 | 热度 |");
-  dv.paragraph("|------|---------|--------|---------|------|");
-  dv.paragraph("| 🔴 科技 | ↑ 上升 | 3 | 流出 | ██████░░ |");
-  dv.paragraph("| 🟢 金融 | ↑ 上升 | 8 | 流入 | ████████ |");
-  dv.paragraph("| 🟡 消费 | → 持平 | 2 | 中性 | ████░░░░ |");
-  dv.paragraph("| 🔵 新能源 | ↑ 上升 | 6 | 流入 | ███████░ |");
-  dv.paragraph("| 🟣 医药 | ↓ 下降 | 1 | 流出 | ███░░░░░ |");
-  dv.paragraph("| ⚪ 周期 | → 持平 | 4 | 中性 | ████░░░░ |");
-}
-```
+### 板块情绪热力图
+
+| 板块 | 情绪信号 | 涨停数 | 资金方向 | 热度 |
+|------|---------|--------|---------|------|
+| 🔴 科技 | ↑ 上升 | 3 | 流出 | ██████░░ |
+| 🟢 金融 | ↑ 上升 | 8 | 流入 | ████████ |
+| 🟡 消费 | → 持平 | 2 | 中性 | ████░░░░ |
+| 🔵 新能源 | ↑ 上升 | 6 | 流入 | ███████░ |
+| 🟣 医药 | ↓ 下降 | 1 | 流出 | ███░░░░░ |
+| ⚪ 周期 | → 持平 | 4 | 中性 | ████░░░░ |
+
+<!-- /dataview-precompiled -->
 
 ### 热力图图例
 
@@ -380,17 +236,15 @@ if (!page) {
 
 > 每次输出强制附带反面论据，打破确认偏误。
 
-```dataview
-TABLE
-  trading_date AS "日期",
-  composite_direction AS "当前判断",
-  counter_thesis AS "如果错了，最可能因为",
-  what_if_wrong AS "错误代价"
-FROM "10_Reference/market_sentiment/scores"
-WHERE file.name != "_SCORE_LEGEND"
-SORT trading_date DESC
-LIMIT 1
-```
+<!-- dataview-precompiled: dashboard-counter-thesis -->
+
+| 日期 | 当前判断 | 如果错了，最可能因为 | 错误代价 |
+|------|---------|---------------------|---------|
+| 2026-09-04 | yellow | — | — |
+
+<!-- /dataview-precompiled -->
+
+> 注：对抗性分析字段待评分引擎填充。
 
 ---
 

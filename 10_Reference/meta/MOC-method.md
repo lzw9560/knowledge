@@ -36,7 +36,7 @@ MOC 是**领域入口 + 导航索引**，不是数据存储。一个 MOC 文件�
 ## 关键纪律
 
 1. **MOC 不存数据**：MOC.md 只放导航和定义，实体放各自的 `stocks/` `strategies/` 目录。违反此条 → MOC 变成"什么都有"的杂烩。
-2. **MOC 链接靠 Dataview 动态**：实体数用 `= length(filter(...))` 而非手写数字（MOC 第 11 行），避免腐化。
+2. **MOC 链接靠 Dataview 动态**：实体数用 Dataview 长度查询（`length(filter(...))`）而非手写数字（MOC 第 11 行），避免腐化。
 3. **每个 Area 一个 MOC**：投研子区一个 `investing/MOC.md`，情绪子区一个 `market_sentiment/DASHBOARD.md`，不交叉。
 
 ## 跨领域实例

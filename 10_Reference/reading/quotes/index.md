@@ -10,13 +10,15 @@ created: 2026-09-07
 
 ## 📂 文件列表
 
-```dataview
-TABLE WITHOUT ID
-  file.link AS "文件",
-  file.mtime AS "修改时间"
-FROM "10_Reference/reading/quotes"
-SORT file.mtime DESC
-```
+<!-- dataview-precompiled: static-file-list -->
+
+| 文件 | 修改时间 |
+|------|---------|
+| — | — |
+
+<!-- /dataview-precompiled -->
+
+> 本目录暂无文件。
 
 ## 🔗 关联
 
