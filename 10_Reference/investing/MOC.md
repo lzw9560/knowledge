@@ -1,4 +1,5 @@
 ---
+type: moc
 draft: false
 description: 投研知识图谱入口——将代码实体（Pydantic 契约模型）、spec 决策、战法、数据源链接成可导航的语义层。16 实体类，2400+ 实体，12 战法卡。
 ---
@@ -15,7 +16,7 @@ description: 投研知识图谱入口——将代码实体（Pydantic 契约模�
 
 ## 📊 图谱健康摘要
 
-> [!summary] 实时统计——总实体数、各类型分布、最近更新、孤立节点。
+> [!abstract] 实时统计——总实体数、各类型分布、最近更新、孤立节点。
 
 <!-- dataview-precompiled:a6d4be462c4a -->
 | 实体总数 |
