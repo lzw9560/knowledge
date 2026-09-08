@@ -296,7 +296,7 @@ created: {today}
     if "--quiet" not in sys.argv:
         print(json.dumps(result, ensure_ascii=False, indent=2))
     else:
-        print(f"✅ 审查完成: {total} 实体, {broken_count} 断链, {orphan_count} 孤立, {llm_count} LLM生成")
+        print(f"✅ 审查完成: {total} 实体, {broken_count} 断链, {orphan_count} 孤立, {placeholder_count} 占位符, {llm_count} LLM生成")
         print(f"📄 报告: {report_path}")
 
 
