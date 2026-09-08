@@ -42,6 +42,12 @@ def extract_links(content):
     for m in re.finditer(r"\[\[([^\]]+)\]\]", content):
         target = m.group(1).split("|")[0].strip()
         if target and not target.startswith("http") and "<" not in target:
+            # 归一化：全路径 → investing/ 相对路径，和实体 key 对齐
+            if target.startswith("10_Reference/investing/"):
+                target = target.replace("10_Reference/investing/", "")
+            elif target.startswith("10_Reference/"):
+                # 跨领域链接保持原样（不在 investing/ 内）
+                pass
             links.append(target)
     return links
 

@@ -30,29 +30,13 @@
     "high": 1422
   },
   "no_confidence_count": 41,
-  "broken_links": 2,
+  "broken_links": 1,
   "broken_links_top10": [
     [
       "链接",
       1
-    ],
-    [
-      "logic/stale_check",
-      1
     ]
   ],
-  "orphan_count": 193,
-  "orphan_by_type": {
-    "actions": 1,
-    "concepts": 1,
-    "data-sources": 8,
-    "dragon-tiger": 41,
-    "events": 13,
-    "indices": 3,
-    "industries": 5,
-    "logic": 10,
-    "reports": 33,
-    "specs": 76,
-    "stocks": 2
-  }
+  "orphan_count": 0,
+  "orphan_by_type": {}
 }
