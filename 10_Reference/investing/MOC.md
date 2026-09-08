@@ -258,7 +258,7 @@ description: 投研知识图谱入口——将代码实体（Pydantic 契约模�
 - [[10_Reference/investing/specs/每日股票分析项目]] — 每日股票分析报告生成器（多市场、多渠道推送）
 
 关联项目使用的数据源：
-- 10_Reference/investing/data-[[sources/Tushare]]（a-Plate-Sentinel 专用，积分制）
+- [[10_Reference/investing/data-sources/Tushare]]（a-Plate-Sentinel 专用，积分制）
 - 10_Reference/investing/data-sources/AkShare]] / 10_Reference/investing/data-sources/baostock（K线日更）]] / [[10_Reference/investing/data-sources/mootdx]]（与 Vibe-Research 共用）
 
 ## 🌐 跨领域链接（ora-3 §4）

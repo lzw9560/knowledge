@@ -34,6 +34,6 @@ created: 2026-09-07
 - [[10_Reference/tech-learning/MOC]]
 - [[10_Reference/tech-learning/frameworks/fastapi]]
 - [[10_Reference/investing/MOC]]
-- 10_Reference/investing/data-[[sources/AkShare]]
+- [[10_Reference/investing/data-sources/AkShare]]
 - [[10_Reference/investing/specs/archive/m0-foundation/S008-后端数据层迁移]]
 - [[10_Reference/meta/四构件本体方法论]]
