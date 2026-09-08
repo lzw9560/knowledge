@@ -1,11 +1,3 @@
----
-type: industry
-code: 
-name: IT服务
-source: 东财涨停池行业分类
-created: 2026-09-07
-confidence: medium
----
 
 > [!info] 🏭 行业信息
 > **行业**：IT服务  **来源**：东财涨停池行业分类
@@ -33,7 +25,7 @@ IT服务行业覆盖信息系统从规划咨询、设计开发、系统集成到
 
 ## 💰 资金流向
 
-- 数据源：[[10_Reference/investing/data-sources/eastmoney-push2|东财 push2]]
+- 数据源：H_Reference/investing/data-sources/东财 push2|东财 push2]]
 
 ## 📰 行业研报
 

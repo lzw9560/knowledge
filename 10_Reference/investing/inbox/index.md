@@ -44,7 +44,7 @@
 | `quality_score` 缺失 | 留 inbox 待评，不晋级 | 规则 `ENTITY-PROMOTION-001` |
 | inbox 滞留 > 7 天且 ≥60 | 标滞留告警 | 规则 `ENTITY-PROMOTION-001` |
 
-> 规则定义见 [[10_Reference/investing/logic/entity-promotion]]。阈值 60 的依据：质量四维度中缺任一关键维度（完整度 30% + 一致性 25% + 链接度 25% + 溯源 20%）都会跌破 60。
+> 规则定义见 H_Reference/investing/logic/实体晋级]]。阈值 60 的依据：质量四维度中缺任一关键维度（完整度 30% + 一致性 25% + 链接度 25% + 溯源 20%）都会跌破 60。
 
 ## 批量审核命令
 

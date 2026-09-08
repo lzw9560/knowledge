@@ -1,8 +1,3 @@
----
-type: folder_index
-name: 待启动项目
-created: 2026-09-07
----
 
 # 待启动项目
 
@@ -14,14 +9,14 @@ created: 2026-09-07
 
 | 文件 | 修改时间 |
 |------|---------|
-| [[semantic-search]] | 2026-09-07 22:59 |
-| [[llm-extraction-automation]] | 2026-09-07 20:35 |
-| [[realtime-data-pipeline]] | 2026-09-07 20:35 |
-| [[daily-stock-analysis-integration]] | 2026-09-07 20:33 |
-| [[wechat-bot]] | 2026-09-07 20:33 |
-| [[a-plate-sentinel-integration]] | 2026-09-07 12:06 |
-| [[incremental-sync-automation]] | 2026-09-07 12:06 |
-| [[quartz-site]] | 2026-09-07 11:17 |
+| [[语义搜索]] | 2026-09-07 22:59 |
+| [[LLM抽取自动化]] | 2026-09-07 20:35 |
+| [[实时数据管线]] | 2026-09-07 20:35 |
+| [[每日股票分析集成]] | 2026-09-07 20:33 |
+| [[微信Bot]] | 2026-09-07 20:33 |
+| [[A-Plate-Sentinel集成]] | 2026-09-07 12:06 |
+| [[增量同步自动化]] | 2026-09-07 12:06 |
+| [[Quartz站点]] | 2026-09-07 11:17 |
 
 <!-- /dataview-precompiled -->
 

@@ -1,13 +1,3 @@
----
-type: spec
-number: S094
-title: 战法分类与双 pipeline 统一底座重构
-status: 已实现
-created: 2026-09-06
-last_synced: 2026-09-07
-confidence: medium
-source: scripts/extract_specs.py
----
 
 # S094 战法分类与双 pipeline 重构
 
@@ -40,6 +30,6 @@ source: scripts/extract_specs.py
 - 上游：[[10_Reference/investing/specs/archive/m3-strategy/S066-策略特定漏斗架构重构]]（策略特定漏斗） / [[10_Reference/investing/specs/archive/m3-strategy/S086-涨停战法pipeline统一架构]]（涨停战法 pipeline 统一架构）
 - 衔接后续：[[10_Reference/investing/specs/archive/m5-战法细化/S097-逐条件因子过滤]]（逐条件因子过滤） / [[10_Reference/investing/specs/archive/m7-卡片对齐/S100-战法卡片对齐]]（战法卡片对齐）
 - 影响实体：[[10_Reference/investing/stocks/index|stocks/]] [[10_Reference/investing/events/index|events/]]（涨停分类）
-- 战法：[[10_Reference/investing/strategies/platform_breakout]] [[10_Reference/investing/strategies/first_plate]] [[10_Reference/investing/strategies/low_absorption]] [[10_Reference/investing/strategies/reverse_package]]
-- 数据源：[[10_Reference/investing/data-sources/akshare]] [[10_Reference/investing/data-sources/eastmoney-push2]]
+- 战法：H_Reference/investing/strategies/平台突破]] H_Reference/investing/strategies/首板挖掘]] H_Reference/investing/strategies/低吸龙头]] H_Reference/investing/strategies/反包战法]]
+- 数据源：H_Reference/investing/data-sources/AkShare]] H_Reference/investing/data-sources/东财 push2]]
 - 源文件：`specs/archive/m5-战法细化/S094-战法分类与双pipeline重构/spec.md`

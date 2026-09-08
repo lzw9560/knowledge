@@ -1,9 +1,3 @@
----
-type: architecture
-name: Saga 模式
-category: 架构模式
-created: 2026-09-07
----
 
 # Saga 模式（分布式事务）
 
@@ -20,9 +14,9 @@ created: 2026-09-07
 - **最终一致性**：放弃 ACID，换 A + 最终一致
 
 ## 与其他模式的关系
-- 与 [[10_Reference/tech-learning/architecture/event-driven|事件驱动]] 天然搭配：协同式 Saga 即事件链
-- 与 [[10_Reference/tech-learning/architecture/event-sourcing|事件溯源]] 互补：事件溯源记"发生过什么"，Saga 管"当前事务怎么补偿"
-- 与 [[10_Reference/tech-learning/architecture/microservices|微服务]]：跨服务事务的标配
+- 与 H_Reference/tech-learning/architecture/事件驱动架构|事件驱动]] 天然搭配：协同式 Saga 即事件链
+- 与 H_Reference/tech-learning/architecture/事件溯源|事件溯源]] 互补：事件溯源记"发生过什么"，Saga 管"当前事务怎么补偿"
+- 与 H_Reference/tech-learning/architecture/微服务架构|微服务]]：跨服务事务的标配
 
 ## 在 Vibe-Research 中的使用
 - [[10_Reference/investing/specs/archive/m0-foundation/S011-调度收口|S011 调度收口]] 的多层调度本质是编排式 Saga：盘前准备 → 盘中扫描 → 盘后复盘，每步失败需回滚前序（如盘前数据源失败，盘中扫描跳过 + 标灰）
@@ -31,9 +25,9 @@ created: 2026-09-07
 
 ## 相关链接
 - [[10_Reference/tech-learning/MOC]]
-- [[10_Reference/tech-learning/architecture/event-driven]]
-- [[10_Reference/tech-learning/architecture/event-sourcing]]
-- [[10_Reference/tech-learning/architecture/microservices]]
+- H_Reference/tech-learning/architecture/事件驱动架构]]
+- H_Reference/tech-learning/architecture/事件溯源]]
+- H_Reference/tech-learning/architecture/微服务架构]]
 - [[10_Reference/investing/specs/archive/m0-foundation/S011-调度收口]]
 - [[10_Reference/investing/specs/archive/m1-workflow/S033-状态机前端呈现]]
-- [[10_Reference/meta/four-construct-ontology]]
+- H_Reference/meta/四构件本体方法论]]

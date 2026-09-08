@@ -1,13 +1,3 @@
----
-type: spec
-number: S149
-title: vibe-astock 语义吸收（4 阶段框架 spec）
-status: 草案
-created: 2026-09-07
-last_synced: 2026-09-07
-confidence: high
-source: specs/README.md
----
 
 > [!info] 📋 项目决策
 > **编号**：S149  **标题**：vibe-astock 语义吸收（4 阶段框架 spec）  **状态**：草案
@@ -50,6 +40,6 @@ S149 旨在解决 Vibe 编程中大量非结构化的设计意图与代码片段
 
 ## 🔗 技术参考
 
-- 🔧 [[10_Reference/tech-learning/concepts/data-contract|数据契约]] — 语义吸收即把裸 dict + 魔法字符串吸收为 Pydantic 契约模型
+- 🔧 H_Reference/tech-learning/concepts/数据契约|数据契约]] — 语义吸收即把裸 dict + 魔法字符串吸收为 Pydantic 契约模型
 - 🔧 [[10_Reference/tech-learning/frameworks/pydantic|Pydantic]] — 4 阶段框架用 Pydantic 做形状统一
-- 🏗️ [[10_Reference/tech-learning/architecture/layered-architecture|分层架构]] — 吸收过程遵循分层，不跨层泄漏
+- 🏗️ H_Reference/tech-learning/architecture/分层架构|分层架构]] — 吸收过程遵循分层，不跨层泄漏

@@ -1,8 +1,3 @@
----
-type: folder_index
-name: 进行中项目
-created: 2026-09-07
----
 
 # 进行中项目
 
@@ -14,14 +9,14 @@ created: 2026-09-07
 
 | 文件 | 修改时间 |
 |------|---------|
-| [[knowledge-graph]] | 2026-09-08 12:24 |
-| [[trading-agents]] | 2026-09-08 12:24 |
-| [[vibe-research]] | 2026-09-08 12:24 |
-| [[knowledge-graph-bot]] | 2026-09-07 22:59 |
-| [[daily-stock-analysis]] | 2026-09-07 20:33 |
-| [[obsidian-mcp]] | 2026-09-07 12:06 |
-| [[quartz-deploy]] | 2026-09-07 12:06 |
-| [[a-plate-sentinel]] | 2026-09-07 11:16 |
+| [[知识图谱]] | 2026-09-08 12:24 |
+| [[TradingAgents]] | 2026-09-08 12:24 |
+| [[Vibe-Research]] | 2026-09-08 12:24 |
+| [[知识图谱Bot]] | 2026-09-07 22:59 |
+| [[每日股票分析]] | 2026-09-07 20:33 |
+| [[Obsidian-MCP]] | 2026-09-07 12:06 |
+| [[Quartz部署]] | 2026-09-07 12:06 |
+| [[A-Plate-Sentinel]] | 2026-09-07 11:16 |
 
 <!-- /dataview-precompiled -->
 

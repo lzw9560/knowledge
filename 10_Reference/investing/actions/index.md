@@ -38,11 +38,11 @@
 
 > 本段列出该类型所有实体以建立入边链接（Dataview 表格不计入边）。
 
-- [[10_Reference/investing/actions/approve-entity]]
-- [[10_Reference/investing/actions/auto-link-report]]
-- [[10_Reference/investing/actions/promote-from-inbox]]
-- [[10_Reference/investing/actions/rename-entity]]
-- [[10_Reference/investing/actions/sync-from-source]]
+- H_Reference/investing/actions/审批实体]]
+- H_Reference/investing/actions/研报自动链接]]
+- H_Reference/investing/actions/inbox晋级]]
+- H_Reference/investing/actions/实体重命名]]
+- H_Reference/investing/actions/源同步]]
 
 
 ---

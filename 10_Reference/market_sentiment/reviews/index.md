@@ -1,12 +1,7 @@
----
-type: folder_index
-name: 周度复盘
-created: 2026-09-07
----
 
 # 周度复盘
 
-> 市场情绪周度复盘记录。父级：[[10_Reference/market_sentiment/DASHBOARD]]
+> 市场情绪周度复盘记录。父级：H_Reference/market_sentiment/情绪仪表盘]]
 
 ## 📂 文件列表
 

@@ -1,8 +1,3 @@
----
-type: moc
-draft: false
-description: 投研知识图谱入口——将代码实体（Pydantic 契约模型）、spec 决策、战法、数据源链接成可导航的语义层。16 实体类，2400+ 实体，12 战法卡。
----
 
 # Vibe-Research 投研知识图谱
 
@@ -29,7 +24,7 @@ description: 投研知识图谱入口——将代码实体（Pydantic 契约模�
 <!-- dataview-precompiled:e123ff43d395 -->
 | 类型 | 数量 | 样本 |
 |---|---|---|
-| action | 6 | [[10_Reference/investing/actions/approve-entity]], [[10_Reference/investing/actions/auto-link-report]], [[10_Reference/investing/actions/promote-from-inbox]], [[10_Reference/investing/actions/rename-entity]], [[10_Reference/investing/actions/sync-from-source]], [[10_Reference/investing/templates/action]] |
+| action | 6 | H_Reference/investing/actions/审批实体]], H_Reference/investing/actions/研报自动链接]], H_Reference/investing/actions/inbox晋级]], H_Reference/investing/actions/实体重命名]], H_Reference/investing/actions/源同步]], [[10_Reference/investing/templates/action]] |
 <!-- /dataview-precompiled -->
 
 <!-- dataview-precompiled:c649e86810b8 -->
@@ -272,19 +267,19 @@ description: 投研知识图谱入口——将代码实体（Pydantic 契约模�
 <!-- dataview-precompiled:9a939da0f746 -->
 | 战法 | edge 家族 | 详情 |
 |---|---|---|
-| N字反击 | 动量溢价 | [[10_Reference/investing/strategies/n_shape_counterattack]] |
+| N字反击 | 动量溢价 | H_Reference/investing/strategies/N字反击]] |
 | 一字竞价选股法 | 动量溢价 | [[10_Reference/investing/strategies/一字竞价选股法]] |
-| 低吸龙头 | 均值回归 | [[10_Reference/investing/strategies/low_absorption]] |
-| 反包战法 | 事件溢价 | [[10_Reference/investing/strategies/reverse_package]] |
-| 尾盘偷袭 | 动量溢价 | [[10_Reference/investing/strategies/end_of_day_sneak]] |
-| 平台突破 | 形态突破 | [[10_Reference/investing/strategies/platform_breakout]] |
-| 弱转强接力 | 事件溢价 | [[10_Reference/investing/strategies/weak_turn_strong]] |
-| 形态反包 | 形态突破 | [[10_Reference/investing/strategies/pattern_reversal]] |
-| 暴风雨逆势涨停 | 事件溢价 | [[10_Reference/investing/strategies/storm_reversal]] |
-| 炸板回封 | 事件溢价 | [[10_Reference/investing/strategies/break_reseal]] |
-| 连板接力 | 动量溢价 | [[10_Reference/investing/strategies/consecutive_relay]] |
-| 首板挖掘 | 动量溢价 | [[10_Reference/investing/strategies/first_plate]] |
-| 龙头战法 | 龙头追踪 | [[10_Reference/investing/strategies/dragon_head]] |
+| 低吸龙头 | 均值回归 | H_Reference/investing/strategies/低吸龙头]] |
+| 反包战法 | 事件溢价 | H_Reference/investing/strategies/反包战法]] |
+| 尾盘偷袭 | 动量溢价 | H_Reference/investing/strategies/尾盘偷袭]] |
+| 平台突破 | 形态突破 | H_Reference/investing/strategies/平台突破]] |
+| 弱转强接力 | 事件溢价 | H_Reference/investing/strategies/弱转强接力]] |
+| 形态反包 | 形态突破 | H_Reference/investing/strategies/形态反包]] |
+| 暴风雨逆势涨停 | 事件溢价 | H_Reference/investing/strategies/暴风雨逆势涨停]] |
+| 炸板回封 | 事件溢价 | H_Reference/investing/strategies/炸板回封]] |
+| 连板接力 | 动量溢价 | H_Reference/investing/strategies/连板接力]] |
+| 首板挖掘 | 动量溢价 | H_Reference/investing/strategies/首板挖掘]] |
+| 龙头战法 | 龙头追踪 | H_Reference/investing/strategies/龙头战法]] |
 <!-- /dataview-precompiled -->
 
 ### 📋 项目决策统计
@@ -556,28 +551,28 @@ description: 投研知识图谱入口——将代码实体（Pydantic 契约模�
 
 ## 🔗 关联子区
 
-- [[10_Reference/market_sentiment/DASHBOARD]] — 市场情绪追踪（每日 pre/mid/post 报告 + z-score 温度）
+- H_Reference/market_sentiment/情绪仪表盘]] — 市场情绪追踪（每日 pre/mid/post 报告 + z-score 温度）
 - 战法卡有"适用天气：阴天"，market_sentiment 有温度 Z 值——但定义"阴天 = 哪个 Z 区间"的逻辑待建（见 [[10_Reference/investing/logic/战法天气映射]]）
 
 ### 关联项目（ora-2 方案 D 纳入的外部投研项目）
 
-- [[10_Reference/investing/specs/a-plate-sentinel-project]] — A股打板情绪监控与投研决策看板（8 大模块，Tushare 数据源，MVP 骨架阶段）
-- [[10_Reference/investing/specs/trading-agents-project]] — TradingAgents A股深度特化 fork（7 Analyst + 多 Agent 辩论）
-- [[10_Reference/investing/specs/daily-stock-analysis-project]] — 每日股票分析报告生成器（多市场、多渠道推送）
+- H_Reference/investing/specs/a-Plate-Sentinel项目]] — A股打板情绪监控与投研决策看板（8 大模块，Tushare 数据源，MVP 骨架阶段）
+- H_Reference/investing/specs/TradingAgents项目]] — TradingAgents A股深度特化 fork（7 Analyst + 多 Agent 辩论）
+- H_Reference/investing/specs/每日股票分析项目]] — 每日股票分析报告生成器（多市场、多渠道推送）
 
 关联项目使用的数据源：
-- [[10_Reference/investing/data-sources/tushare]]（a-Plate-Sentinel 专用，积分制）
-- [[10_Reference/investing/data-sources/akshare]] / [[10_Reference/investing/data-sources/baostock]] / [[10_Reference/investing/data-sources/mootdx]]（与 Vibe-Research 共用）
+- H_Reference/investing/data-sources/Tushare]]（a-Plate-Sentinel 专用，积分制）
+- H_Reference/investing/data-sources/AkShare]] / H_Reference/investing/data-sources/baostock（K线日更）]] / [[10_Reference/investing/data-sources/mootdx]]（与 Vibe-Research 共用）
 
 ## 🌐 跨领域链接（ora-3 §4）
 
-> 投研方法论与其他知识域的"同构"链接。判据（[[10_Reference/investing/logic/cross-domain-gate]]，待建）：
+> 投研方法论与其他知识域的"同构"链接。判据（H_Reference/investing/logic/跨域门控]]，待建）：
 > 跨域实体必须有 ≥ 2 个具体实例 + 1 条 invariant，否则不建。
 
 ### 已建链接
 
-- [[10_Reference/investing/strategies/dragon_head]] §方法论链接 — 「板块轮动识别龙头」↔ 时间序列状态识别（🚧 待建）
-- [[10_Reference/meta/four-construct-ontology]] — 四构件本体方法论（领域无关模板）
+- H_Reference/investing/strategies/龙头战法]] §方法论链接 — 「板块轮动识别龙头」↔ 时间序列状态识别（🚧 待建）
+- H_Reference/meta/四构件本体方法论]] — 四构件本体方法论（领域无关模板）
 
 ### 待建领域
 

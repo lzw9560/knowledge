@@ -1,12 +1,3 @@
----
-type: concept
-code: BK1160
-name: AI应用
-related_industry: 软件
-created: 2026-09-07
-confidence: medium
-source: astock.concept_blocks
----
 
 > [!info] 💡 概念信息
 > **概念**：AI应用  **关联行业**：软件
@@ -62,7 +53,7 @@ AI 大模型落地应用层，覆盖 AIGC/智能体/教育/营销/办公场景�
 
 ## 💰 资金流向
 
-- 数据源：[[10_Reference/investing/data-sources/eastmoney-push2|东财 push2]]
+- 数据源：H_Reference/investing/data-sources/东财 push2|东财 push2]]
 
 ## 📰 相关研报
 

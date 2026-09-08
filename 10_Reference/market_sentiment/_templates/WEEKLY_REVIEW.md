@@ -1,14 +1,3 @@
----
-title: "周复盘"
-date: {{date:YYYY-MM-DD}}
-type: weekly_review
-tags: [sentiment, review, weekly]
-period: "{{date:YYYY-MM-DD minus 7 days}} ~ {{date:YYYY-MM-DD minus 1 days}}"
-week_avg_temp_z: 0
-week_avg_confidence: 0
-week_signal_accuracy: 0
-circuit_breaker_triggers: 0
----
 
 # 📊 周复盘 · {{date:YYYY-MM-DD}}
 
@@ -206,4 +195,4 @@ new Chart(canvas, {
 ---
 > 本周生成时间：{{date:YYYY-MM-DD HH:mm}}  
 > 框架版本：v2.0（6层稳健z-score）  
-> 关联：[[_README|框架说明]] | [[DASHBOARD|仪表盘]]
+> 关联：[[_README|框架说明]] | [[情绪仪表盘|仪表盘]]

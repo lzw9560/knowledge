@@ -1,13 +1,3 @@
----
-type: spec
-number: S010
-title: AI 工具注册表 + SYSTEM_PROMPT 新边界
-status: 已实现
-created: 2026-09-06
-last_synced: 2026-09-07
-confidence: medium
-source: scripts/extract_specs.py
----
 
 # S010 AI 工具注册表 + SYSTEM_PROMPT
 
@@ -36,5 +26,5 @@ registry 声明式 + chat/mcp/cli 解耦 + SYSTEM_PROMPT 按新边界放宽。�
 - 上游纲领：[[10_Reference/investing/specs/S006-系统重写纲领]]（§1 合规边界调整）
 - 衔接后续：[[10_Reference/investing/specs/archive/m0-foundation/S015-配置与基础设施]]（配置与基础设施）
 - 影响实体：[[10_Reference/investing/analysts/index|analysts/]]（AI agent 角色）
-- 数据源：[[10_Reference/investing/data-sources/hithink-ths]]（LLM 服务）
+- 数据源：H_Reference/investing/data-sources/同花顺 THS（一致预期·涨停揭秘）]]（LLM 服务）
 - 源文件：`specs/archive/m0-foundation/S010-工具注册表与SYSTEM_PROMPT/spec.md`

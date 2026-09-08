@@ -1,10 +1,3 @@
----
-type: framework
-name: Tailwind CSS
-language: CSS（原子化生成）
-category: 前端样式框架
-created: 2026-09-07
----
 
 # Tailwind CSS
 
@@ -34,4 +27,4 @@ created: 2026-09-07
 - [[10_Reference/tech-learning/frameworks/react]]
 - [[10_Reference/tech-learning/frameworks/vite]]
 - [[10_Reference/investing/specs/archive/m0-foundation/S014-前端UI重设计]]
-- [[10_Reference/meta/four-construct-ontology]]
+- H_Reference/meta/四构件本体方法论]]

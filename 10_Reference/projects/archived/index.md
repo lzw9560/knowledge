@@ -1,8 +1,3 @@
----
-type: folder_index
-name: 已归档项目
-created: 2026-09-07
----
 
 # 已归档项目
 
@@ -14,7 +9,7 @@ created: 2026-09-07
 
 | 文件 | 修改时间 |
 |------|---------|
-| [[vibe-research-bakup]] | 2026-09-07 11:17 |
+| [[Vibe-Research备份]] | 2026-09-07 11:17 |
 
 <!-- /dataview-precompiled -->
 

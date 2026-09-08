@@ -1,10 +1,3 @@
----
-type: language
-name: Python
-paradigm: 多范式（面向对象/函数式/过程式）
-typing: 动态类型（duck typing，可选 type hints + mypy 静态检查）
-created: 2026-09-07
----
 
 # Python
 
@@ -26,7 +19,7 @@ created: 2026-09-07
 
 ## 在 Vibe-Research 中的使用
 - 后端主语言：[[10_Reference/investing/specs/archive/m0-foundation/S008-后端数据层迁移|S008]] 数据层用 Pydantic 契约模型
-- 数据源接入：[[10_Reference/investing/data-sources/akshare|akshare]] / mootdx / 东财均用 Python SDK
+- 数据源接入：H_Reference/investing/data-sources/AkShare|akshare]] / mootdx / 东财均用 Python SDK
 - 战法执行：[[10_Reference/investing/strategies/|战法卡]] 在 `backend/strategies/cards/` 实现
 - 配套框架：[[10_Reference/tech-learning/frameworks/fastapi]]
 
@@ -34,6 +27,6 @@ created: 2026-09-07
 - [[10_Reference/tech-learning/MOC]]
 - [[10_Reference/tech-learning/frameworks/fastapi]]
 - [[10_Reference/investing/MOC]]
-- [[10_Reference/investing/data-sources/akshare]]
+- H_Reference/investing/data-sources/AkShare]]
 - [[10_Reference/investing/specs/archive/m0-foundation/S008-后端数据层迁移]]
-- [[10_Reference/meta/four-construct-ontology]]
+- H_Reference/meta/四构件本体方法论]]
