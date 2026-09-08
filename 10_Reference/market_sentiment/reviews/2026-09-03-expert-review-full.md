@@ -476,21 +476,26 @@ Obsidian只做展示归档，每天23:00从SQLite批量导出当日摘要。
 > 注：示例查询，数据待 daily/ 目录回填 close 类报告后统计。
 
 **信号事件查询：**
-```dataview
-TABLE date, signal_type, direction, confidence
-FROM "10_Reference/market_sentiment/signals"
-WHERE date >= date(2026-08-01)
-SORT date DESC
-```
+<!-- dataview-precompiled: expert-review-example2 -->
+
+| date | signal_type | direction | confidence |
+|------|-------------|-----------|-----------|
+| — | — | — | — |
+
+<!-- /dataview-precompiled -->
+
+> 注：示例查询，signals/ 目录暂未建立。
 
 **每周复盘预测准确率：**
-```dataview
-TABLE prediction, actual, correct
-FROM "10_Reference/market_sentiment/daily"
-WHERE file.name contains "summary"
-SORT file.name DESC
-LIMIT 5
-```
+<!-- dataview-precompiled: expert-review-example3 -->
+
+| prediction | actual | correct |
+|-----------|--------|---------|
+| — | — | — |
+
+<!-- /dataview-precompiled -->
+
+> 注：示例查询，数据待 daily/ 目录回填 summary 类报告后统计。
 
 ### 5. Templater模板设计
 
