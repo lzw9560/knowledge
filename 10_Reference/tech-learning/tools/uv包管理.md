@@ -21,14 +21,14 @@ created: 2026-09-07
 
 ## 在 Vibe-Research 中的使用
 - Python 依赖管理：`backend/` 用 `pyproject.toml` + `uv.lock`
-- 投研数据源 SDK 安装：[[10_Reference/investing/data-sources/AkShare|AkShare]][[akshare]] / mootdx 等 Python 包由 uv 统一管理与锁版本
-- 与 [[10_Reference/[[tech-learning/tools/Docker|Docker]][[Docker]] 配合：Dockerfile 中用 `uv sync --frozen` 做可复现构建
-- 与 [[10_Reference/[[tech-learning/frameworks/pydantic|Pydantic]] / [[10_Reference/[[tech-learning/frameworks/fastapi|FastAPI]] 配合：uv 管理这些依赖的安装与锁版本
+- 投研数据源 SDK 安装：[[10_Reference/investing/data-sources/AkShare|AkShare]] / mootdx 等 Python 包由 uv 统一管理与锁版本
+- 与 [[10_Reference/tech-learning/tools/Docker|Docker]] 配合：Dockerfile 中用 `uv sync --frozen` 做可复现构建
+- 与 [[10_Reference/tech-learning/frameworks/pydantic|Pydantic]] / [[10_Reference/tech-learning/frameworks/fastapi|FastAPI]] 配合：uv 管理这些依赖的安装与锁版本
 
 ## 相关链接
-- [[10_Reference/[[tech-learning/MOC]]
-- [[10_Reference/[[tech-learning/languages/python]]
-- [[10_Reference/[[tech-learning/tools/Docker]]
-- [[10_Reference/[[tech-learning/frameworks/pydantic]]
-- [[10_Reference/[[tech-learning/frameworks/fastapi]]
-- [[10_Reference/[[meta/四构件本体方法论]]
+- [[10_Reference/reading/MOC]]
+- [[10_Reference/tech-learning/languages/python]]
+- [[10_Reference/tech-learning/tools/Docker]]
+- [[10_Reference/tech-learning/frameworks/pydantic]]
+- [[10_Reference/tech-learning/frameworks/fastapi]]
+- [[10_Reference/meta/四构件本体方法论]]

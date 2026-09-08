@@ -51,7 +51,7 @@ IPO 受益概念，参股创投/拟上市企业。
 
 ## 💰 资金流向
 
-- 数据源：[[10_Reference/investing/data-sources/东财 push2|东财]] [[push2]]
+- 数据源：[[10_Reference/investing/data-sources/东财 push2|东财]]
 
 ## 📰 相关研报
 

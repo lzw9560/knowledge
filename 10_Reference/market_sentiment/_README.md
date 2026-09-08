@@ -194,7 +194,7 @@ tags: [sentiment, meta, framework]
 
 ## 🔗 关联项目
 
-- [[00_Active/[[projects/quant-limit-up/SUMMARY|量化涨停交易系统]] — 情绪评分作为仓位管控输入
+- [[00_Active/projects/quant-limit-up/SUMMARY|量化涨停交易系统]] — 情绪评分作为仓位管控输入
 - 回测结果 → `_data/backtest/`
 
 ---

@@ -51,7 +51,7 @@ MiniLED 背光+直显，受益于电视/平板/车载渗透。
 
 ## 💰 资金流向
 
-- 数据源：[[10_Reference/investing/data-sources/东财 push2|东财]] [[push2]]
+- 数据源：[[10_Reference/investing/data-sources/东财 push2|东财]]
 
 ## 📰 相关研报
 

@@ -51,7 +51,7 @@ OLED 面板+材料+设备，受益于国产替代+柔性屏需求。
 
 ## 💰 资金流向
 
-- 数据源：[[10_Reference/investing/data-sources/东财 push2|东财]] [[push2]]
+- 数据源：[[10_Reference/investing/data-sources/东财 push2|东财]]
 
 ## 📰 相关研报
 

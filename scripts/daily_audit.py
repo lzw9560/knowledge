@@ -54,17 +54,19 @@ def extract_links(content):
 
 def resolve_link(target):
     # Obsidian [[]] 短路径——在 vault 全局搜索
-    # 先试 investing/ 内
+    # 先试 investing/ 内（短路径如 data-sources/腾讯行情）
     candidates = [
         VAULT / (target + ".md"),
         VAULT / target,
     ]
     if any(c.exists() for c in candidates):
         return True
-    # 再试 10_Reference/ 下其他子目录（tech-learning/reading/projects/meta/market_sentiment）
+    # 再试 10_Reference/ 下（全路径如 10_Reference/investing/data-sources/腾讯行情）
     candidates = [
         REFERENCE_ROOT / (target + ".md"),
         REFERENCE_ROOT / target,
+        VAULT_ROOT / (target + ".md"),
+        VAULT_ROOT / target,
     ]
     if any(c.exists() for c in candidates):
         return True

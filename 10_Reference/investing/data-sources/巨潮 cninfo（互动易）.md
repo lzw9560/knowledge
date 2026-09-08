@@ -60,6 +60,6 @@ source: ARCHITECTURE.md
 
 ## 🔧 技术栈
 
-- 🔧 [[10_Reference/[[tech-learning/concepts/优雅降级|优雅降级]][[优雅降级]] — 巨潮互动易无降级，失败标灰
-- 🔧 [[10_Reference/[[tech-learning/concepts/数据契约|数据契约]][[数据契约]] — 互动易数据由契约层统一形状
-- 🔧 [[10_Reference/[[tech-learning/concepts/缓存策略|缓存策略]][[缓存策略]] — 低频数据入缓存
+- 🔧 [[10_Reference/tech-learning/concepts/优雅降级|优雅降级]] — 巨潮互动易无降级，失败标灰
+- 🔧 [[10_Reference/tech-learning/concepts/数据契约|数据契约]] — 互动易数据由契约层统一形状
+- 🔧 [[10_Reference/tech-learning/concepts/缓存策略|缓存策略]] — 低频数据入缓存

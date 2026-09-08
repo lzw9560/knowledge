@@ -9,7 +9,7 @@ created: 2026-09-07
 # React
 
 ## 语言
-- [[10_Reference/[[tech-learning/languages/typescript|TypeScript]] / JavaScript
+- [[10_Reference/tech-learning/languages/typescript|TypeScript]] / JavaScript
 - JSX/TSX 语法扩展
 
 ## 类别
@@ -30,10 +30,10 @@ created: 2026-09-07
 - 与后端 FastAPI 契约对齐：[[10_Reference/investing/specs/archive/m0-foundation/S009-前后端类型同步|S009]]
 
 ## 相关链接
-- [[10_Reference/[[tech-learning/MOC]]
-- [[10_Reference/[[tech-learning/languages/typescript]]
+- [[10_Reference/reading/MOC]]
+- [[10_Reference/tech-learning/languages/typescript]]
 - [[10_Reference/investing/MOC]]
 - [[10_Reference/investing/specs/archive/m0-foundation/S013-前端数据层]]
 - [[10_Reference/investing/specs/archive/m0-foundation/S014-前端UI重设计]]
 - [[10_Reference/investing/specs/archive/m0-foundation/S009-前后端类型同步]]
-- [[10_Reference/[[meta/四构件本体方法论]]
+- [[10_Reference/meta/四构件本体方法论]]

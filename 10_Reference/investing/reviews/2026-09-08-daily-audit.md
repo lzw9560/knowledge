@@ -3,9 +3,9 @@ type: audit
 audit_date: 2026-09-08
 auditor: daily-audit-script
 scope: 全量
-findings_count: 1432
-critical: 18
-high: 1429
+findings_count: 22
+critical: 0
+high: 19
 medium: 3
 low: 15
 status: 已完成
@@ -24,7 +24,7 @@ created: 2026-09-08
 | stub 实体 | 15 |
 | LLM 生成内容 | 0 |
 | 占位符残留 | 0 |
-| 断链 | 1429 |
+| 断链 | 19 |
 | 孤立实体 | 3 |
 | confidence 覆盖 | 2469/2500 (98%) |
 
@@ -46,16 +46,16 @@ created: 2026-09-08
 
 | 断链目标 | 次数 |
 |---|---|
-| push2 | 677 |
-| 腾讯行情 | 411 |
-| 10_Reference/[[tech-learning/concepts/优雅降级 | 22 |
-| 优雅降级 | 22 |
-| 10_Reference/[[tech-learning/concepts/缓存策略 | 21 |
-| 缓存策略 | 21 |
-| 10_Reference/[[tech-learning/concepts/数据契约 | 20 |
-| 数据契约 | 19 |
-| 10_Reference/[[reading/notes/均值回归-笔记 | 16 |
-| 10_Reference/[[reading/notes/趋势跟踪-笔记 | 15 |
+| data-sources/同花顺 THS（一致预期·涨停揭秘）（LLM 服务） | 2 |
+| [[10_Reference/tech-learning/concepts/限流 — 共用 em_get QPS≤2 限流 | 2 |
+| [[10_Reference/tech-learning/concepts/限流 — 共用 em_get QPS≤2 限流防封 | 2 |
+| specs/a-Plate-Sentinel项目 — A股打板情绪监控与投研决策看板（8 大模块，Tushare 数据源，MVP 骨架阶段） | 1 |
+| [[10_Reference/tech-learning/concepts/限流 — stale-run 堵塞的根因之一是限流队列积压 | 1 |
+| specs/Vibe-Research项目 — Vibe-Research 个人 AI 投研看板（本图谱主体，109 spec + 16 数据源 + 12 战法） | 1 |
+| specs/a-Plate-Sentinel项目 — A股打板情绪监控与投研决策看板（8 大模块，Tushare 数据源，MVP 骨架） | 1 |
+| actions/rename-entity | 1 |
+| actions/promote-from-inbox | 1 |
+| [[10_Reference/tech-learning/concepts/限流 — 光伏/风能/氢能多概念聚合，数据源限流防封 | 1 |
 
 ## 🏝️ 孤立实体分布
 
@@ -82,14 +82,14 @@ created: 2026-09-08
 
 | KPI | 当前值 | 阈值 | 状态 |
 |---|---|---|---|
-| 断链 | 1429 | ≤50 | 🔴 |
+| 断链 | 19 | ≤50 | 🟢 |
 | 孤立实体 | 3 | ≤200 | 🟢 |
 | stub 实体 | 15 | ≤100 | 🟢 |
 | 占位符残留 | 0 | ≤10 | 🟢 |
 | confidence 覆盖 | 98% | ≥95% | 🟢 |
-| 链接残片(H_Reference) | 0 | =0 | 🟢 |
+| 链接残片(H_Reference) | 64 | =0 | 🔴 |
 | 缺 frontmatter | 0 | =0 | 🟢 |
-| markdown链接损坏 | 64 | =0 | 🟡 |
+| markdown链接损坏 | 0 | =0 | 🟢 |
 
 ## 📈 趋势
 

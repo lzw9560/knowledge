@@ -665,7 +665,7 @@ SORT type ASC
 | 项目实体 | `projects/a-plate-sentinel.md` | 1 | license=proprietary/stack=[FastAPI, React, TimescaleDB, Celery, Redis]/market=[A股]/status=mvp |
 | 数据源 | tushare 追加 `projects:` | 0 新建 | Tushare 已在 daily-stock-analysis 纳入时建 |
 | 8 模块 | 项目实体内部章节 | 0 独立实体 | 待实现后评估是否建 `modules/` 文件夹 |
-| STI 情绪指数 | 待探查 | — | 与 `[[10_Reference/[[market_sentiment/` 子区建 `complements` 关系 |` 子区建 `complements` 关系]]
+| STI 情绪指数 | 待探查 | — | 与 `[[[[10_Reference/market_sentiment/` 子区建 `complements` 关系 |` 子区建 `complements` 关系]]
 
 ---
 

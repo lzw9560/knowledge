@@ -9,7 +9,7 @@ created: 2026-09-07
 
 ## 类别
 - Obsidian 社区插件
-- 把 [[10_Reference/[[tech-learning/tools/Git|Git]][[Git]] 集成进 Obsidian，实现 vault 自动同步
+- 把 [[10_Reference/tech-learning/tools/Git|Git]] 集成进 Obsidian，实现 vault 自动同步
 
 ## 核心特性
 - **自动 commit/push**：定时或文件变更时自动提交
@@ -25,12 +25,12 @@ created: 2026-09-07
 
 ## 在 Vibe-Research 生态中的使用
 - 本知识图谱 vault（`/Users/lizhiwei/Documents/Obsidian Vault/`）即用 obsidian-git 同步
-- 与 [[10_Reference/[[tech-learning/tools/GitHub-Actions|GitHub]] [[Actions]] 配合：push 后触发 vault-audit / quartz-deploy workflow
+- 与 [[10_Reference/tech-learning/tools/GitHub-Actions|GitHub]] 配合：push 后触发 vault-audit / quartz-deploy workflow
 - 是知识图谱"代码改了实体/关系/决策，同步更新图谱"承诺的**执行层**——多设备改 vault 不冲突
 
 ## 相关链接
-- [[10_Reference/[[tech-learning/MOC]]
-- [[10_Reference/[[tech-learning/tools/Git]]
-- [[10_Reference/[[tech-learning/tools/Obsidian]]
-- [[10_Reference/[[tech-learning/tools/GitHub-Actions]]
-- [[10_Reference/[[meta/四构件本体方法论]]
+- [[10_Reference/reading/MOC]]
+- [[10_Reference/tech-learning/tools/Git]]
+- [[10_Reference/tech-learning/tools/Obsidian]]
+- [[10_Reference/tech-learning/tools/GitHub-Actions]]
+- [[10_Reference/meta/四构件本体方法论]]

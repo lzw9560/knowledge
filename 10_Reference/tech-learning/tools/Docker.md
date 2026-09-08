@@ -19,10 +19,10 @@ created: 2026-09-07
 
 ## 在 Vibe-Research 中的使用
 - 本地开发：`docker-compose.yml` 起 backend + frontend + DB
-- 关联项目 a-Plate-Sentinel 也用 Docker Compose 本地部署（见 [[10_Reference/investing/specs/a-Plate-Sentinel项目|a-Plate-]][[Sentinel]]）
+- 关联项目 a-Plate-Sentinel 也用 Docker Compose 本地部署（见 [[10_Reference/investing/specs/a-Plate-Sentinel项目|a-Plate-]]）
 
 ## 相关链接
-- [[10_Reference/[[tech-learning/MOC]]
+- [[10_Reference/reading/MOC]]
 - [[10_Reference/investing/MOC]]
 - [[10_Reference/investing/specs/a-Plate-Sentinel项目]]
-- [[10_Reference/[[meta/四构件本体方法论]]
+- [[10_Reference/meta/四构件本体方法论]]

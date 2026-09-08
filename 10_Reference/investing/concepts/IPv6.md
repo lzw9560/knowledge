@@ -51,7 +51,7 @@ IPv6 升级概念，受益于下一代互联网推进。
 
 ## 💰 资金流向
 
-- 数据源：[[10_Reference/investing/data-sources/东财 push2|东财]] [[push2]]
+- 数据源：[[10_Reference/investing/data-sources/东财 push2|东财]]
 
 ## 📰 相关研报
 

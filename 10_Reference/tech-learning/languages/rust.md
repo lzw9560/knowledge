@@ -15,7 +15,7 @@ created: 2026-09-07
 - 显式优于隐式（编译器严格，`unwrap()` 是反模式）
 
 ## 类型系统
-- 静态类型 + nominal typing（与 [[10_Reference/[[tech-learning/languages/go|Go]] 同类）
+- 静态类型 + nominal typing（与 [[10_Reference/tech-learning/languages/go|Go]] 同类）
 - 代数数据类型：enum + match（穷尽匹配，编译期保证覆盖）
 - trait 系统（类似 interface 但更强大，可泛型约束）
 - Result<T, E> / Option<T> 替代异常与 null
@@ -34,13 +34,13 @@ created: 2026-09-07
 
 ## 与 Vibe-Research 的关系
 - Vibe-Research 当前未用 Rust
-- 但前端构建工具 [[10_Reference/[[tech-learning/frameworks/vite|Vite]] 底层依赖 esbuild（Go）/ rolldown（Rust 重写）——技术栈间接关联
-- 参考架构：[[10_Reference/[[tech-learning/architecture/事件溯源|事件溯源]][[事件溯源]] 的高性能 event store 可用 Rust 实现
+- 但前端构建工具 [[10_Reference/tech-learning/frameworks/vite|Vite]] 底层依赖 esbuild（Go）/ rolldown（Rust 重写）——技术栈间接关联
+- 参考架构：[[10_Reference/tech-learning/architecture/事件溯源|事件溯源]] 的高性能 event store 可用 Rust 实现
 
 ## 相关链接
-- [[10_Reference/[[tech-learning/MOC]]
-- [[10_Reference/[[tech-learning/languages/go]]
-- [[10_Reference/[[tech-learning/languages/python]]
-- [[10_Reference/[[tech-learning/frameworks/vite]]
-- [[10_Reference/[[tech-learning/architecture/事件溯源]]
-- [[10_Reference/[[meta/四构件本体方法论]]
+- [[10_Reference/reading/MOC]]
+- [[10_Reference/tech-learning/languages/go]]
+- [[10_Reference/tech-learning/languages/python]]
+- [[10_Reference/tech-learning/frameworks/vite]]
+- [[10_Reference/tech-learning/architecture/事件溯源]]
+- [[10_Reference/meta/四构件本体方法论]]

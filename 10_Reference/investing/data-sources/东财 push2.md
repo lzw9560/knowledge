@@ -82,7 +82,7 @@ source: ARCHITECTURE.md
 
 ## 🔧 技术栈
 
-- 🔧 [[10_Reference/[[tech-learning/concepts/熔断器|熔断器]][[熔断器]] — circuit_breaker.get_breaker("eastmoney") 快速失败不重复重试
-- 🔧 [[10_Reference/[[tech-learning/concepts/限流 — em_get 限流 QPS≤2（1.0s+抖动0.1~0.5s）防被东财风控识别为机器流量]]
-- 🔧 [[10_Reference/[[tech-learning/concepts/优雅降级|优雅降级]][[优雅降级]] — push2 失败 → push2delay（延时行情）→ 路由级缓存的多级回退
-- 🔧 [[10_Reference/[[tech-learning/concepts/缓存策略|缓存策略]][[缓存策略]] — cache_response(ttl) 路由级缓存
+- 🔧 [[10_Reference/tech-learning/concepts/熔断器|熔断器]] — circuit_breaker.get_breaker("eastmoney") 快速失败不重复重试
+- 🔧 [[[[10_Reference/tech-learning/concepts/限流 — em_get 限流 QPS≤2（1.0s+抖动0.1~0.5s）防被东财风控识别为机器流量]]
+- 🔧 [[10_Reference/tech-learning/concepts/优雅降级|优雅降级]] — push2 失败 → push2delay（延时行情）→ 路由级缓存的多级回退
+- 🔧 [[10_Reference/tech-learning/concepts/缓存策略|缓存策略]] — cache_response(ttl) 路由级缓存

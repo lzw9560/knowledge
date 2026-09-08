@@ -62,7 +62,7 @@ AI 大模型落地应用层，覆盖 AIGC/智能体/教育/营销/办公场景�
 
 ## 💰 资金流向
 
-- 数据源：[[10_Reference/investing/data-sources/东财 push2|东财]] [[push2]]
+- 数据源：[[10_Reference/investing/data-sources/东财 push2|东财]]
 
 ## 📰 相关研报
 

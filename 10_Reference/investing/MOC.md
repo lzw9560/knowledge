@@ -124,20 +124,20 @@ description: 投研知识图谱入口——将代码实体（Pydantic 契约模�
 
 | 实体类 | 文件夹 | 说明 |
 |---|---|---|
-| 📈 股票 | [stocks/]([[10_Reference/investing/stocks/index) |A 股/美股/港股个股]]，对应 `Quote` + `CompanyInfo` |
-| 🏭 行业板块 | [industries/]([[10_Reference/investing/industries/index) |证监会行业分类]]，对应 `IndustrySector` |
-| 💡 概念板块 | [concepts/]([[10_Reference/investing/concepts/index) |概念题材板块]]，对应 `ConceptBlock` + `Sector` |
-| 📊 指数 | [indices/]([[10_Reference/investing/indices/index) |沪深300/中证500等宽基与行业指数 |]]
-| 📰 研报 | [reports/]([[10_Reference/investing/reports/index) |机构研报]]，对应 `Report` 契约 |
-| 👤 分析师 | [analysts/]([[10_Reference/investing/analysts/index) |研报作者]]，对应 `Report.researcher` |
-| 💰 财务指标 | [metrics/]([[10_Reference/investing/metrics/index) |营收/ROE/毛利率等]]，对应 `Financials` + `FinancialPeriod` |
-| 📈 估值 | [valuations/]([[10_Reference/investing/valuations/index) |PE/PB/PEG/分位]]，对应 `Valuation` + `ValuationPercentile` |
-| 🐉 龙虎榜 | [dragon-tiger/]([[10_Reference/investing/dragon-tiger/index) |游资席位]]，对应 `Seat` + `BillboardDetail` + `DragonTiger` |
-| ⚡ 事件 | [events/]([[10_Reference/investing/events/index) |新闻/公告/涨停]]，对应 `News` + `Announcement` + `ZTPoolItem` |
-| ⚔️ 战法 | [strategies/]([[10_Reference/investing/strategies/index) |战法卡（从 `backend/strategies/cards/` 导入） |]]
-| 📋 项目决策 | [specs/]([[10_Reference/investing/specs/index) |SDD spec 决策实体]]，对应 `specs/` 目录 |
-| 📡 数据源 | [data-sources/]([[10_Reference/investing/data-sources/index) |外部数据源]]，对应 `ARCHITECTURE` 数据流 |
-| 🤖 AI 角色 | [agents/]([[10_Reference/investing/agents/index) |trading-agents 的 7 Analyst（区别于 analysts 真人） |]]
+| 📈 股票 | [stocks/](10_Reference/meta/index) |A 股/美股/港股个股]]，对应 `Quote` + `CompanyInfo` |
+| 🏭 行业板块 | [industries/](10_Reference/meta/index) |证监会行业分类]]，对应 `IndustrySector` |
+| 💡 概念板块 | [concepts/](10_Reference/meta/index) |概念题材板块]]，对应 `ConceptBlock` + `Sector` |
+| 📊 指数 | [indices/](10_Reference/meta/index) |沪深300/中证500等宽基与行业指数 |]]
+| 📰 研报 | [reports/](10_Reference/meta/index) |机构研报]]，对应 `Report` 契约 |
+| 👤 分析师 | [analysts/](10_Reference/meta/index) |研报作者]]，对应 `Report.researcher` |
+| 💰 财务指标 | [metrics/](10_Reference/meta/index) |营收/ROE/毛利率等]]，对应 `Financials` + `FinancialPeriod` |
+| 📈 估值 | [valuations/](10_Reference/meta/index) |PE/PB/PEG/分位]]，对应 `Valuation` + `ValuationPercentile` |
+| 🐉 龙虎榜 | [dragon-tiger/](10_Reference/meta/index) |游资席位]]，对应 `Seat` + `BillboardDetail` + `DragonTiger` |
+| ⚡ 事件 | [events/](10_Reference/meta/index) |新闻/公告/涨停]]，对应 `News` + `Announcement` + `ZTPoolItem` |
+| ⚔️ 战法 | [strategies/](10_Reference/meta/index) |战法卡（从 `backend/strategies/cards/` 导入） |]]
+| 📋 项目决策 | [specs/](10_Reference/meta/index) |SDD spec 决策实体]]，对应 `specs/` 目录 |
+| 📡 数据源 | [data-sources/](10_Reference/meta/index) |外部数据源]]，对应 `ARCHITECTURE` 数据流 |
+| 🤖 AI 角色 | [agents/](10_Reference/meta/index) |trading-agents 的 7 Analyst（区别于 analysts 真人） |]]
 
 
 <!-- index 入边段 -->
@@ -179,15 +179,15 @@ description: 投研知识图谱入口——将代码实体（Pydantic 契约模�
 
 | 构件 | 文件夹 | 说明 |
 |---|---|---|
-| **⚙️ 逻辑规则** | [logic/]([[10_Reference/investing/logic/index) |schema 约束/校验/状态机/推断规则 |]]
-| **⚡ 动作** | [actions/]([[10_Reference/investing/actions/index) |CRUD/状态流转/链接维护/审计快照 |]]
+| **⚙️ 逻辑规则** | [logic/](10_Reference/meta/index) |schema 约束/校验/状态机/推断规则 |]]
+| **⚡ 动作** | [actions/](10_Reference/meta/index) |CRUD/状态流转/链接维护/审计快照 |]]
 
 ## 🛡 质量门（Curated）
 
 | 层 | 文件夹 | 作用 |
 |---|---|---|
-| **📥 待审** | [inbox/]([[10_Reference/investing/inbox/index) |LLM 抽取实体先进此]]，带 confidence + source + quality_score，审核通过才进正式区 |
-| **🔍 审查** | [reviews/]([[10_Reference/investing/reviews/index) |ReAct Agent 定期体检报告（8 项检查） |]]
+| **📥 待审** | [inbox/](10_Reference/meta/index) |LLM 抽取实体先进此]]，带 confidence + source + quality_score，审核通过才进正式区 |
+| **🔍 审查** | [reviews/](10_Reference/meta/index) |ReAct Agent 定期体检报告（8 项检查） |]]
 
 > 不直接灌入是知识图谱健康的第一道防线。详见 [[10_Reference/investing/inbox/index]] 质量四维度。
 
@@ -268,7 +268,7 @@ description: 投研知识图谱入口——将代码实体（Pydantic 契约模�
 
 ## 🔗 关联子区
 
-- [[10_Reference/[[market_sentiment/情绪仪表盘]] — 市场情绪追踪（每日 pre/mid/post 报告 + z-score 温度）
+- [[10_Reference/market_sentiment/情绪仪表盘]] — 市场情绪追踪（每日 pre/mid/post 报告 + z-score 温度）
 - 战法卡有"适用天气：阴天"，market_sentiment 有温度 Z 值——但定义"阴天 = 哪个 Z 区间"的逻辑待建（见 [[10_Reference/investing/logic/战法天气映射]]）
 
 ### 关联项目（ora-2 方案 D 纳入的外部投研项目）
@@ -283,17 +283,17 @@ description: 投研知识图谱入口——将代码实体（Pydantic 契约模�
 
 ## 🌐 跨领域链接（ora-3 §4）
 
-> 投研方法论与其他知识域的"同构"[[链接。判据（[[10_Reference/investing/logic/跨域门控]]，待建）：
+> 投研方法论与其他知识域的"同构"[[10_Reference/investing/logic/跨域门控]]，待建）：
 > 跨域实体必须有 ≥ 2 个具体实例 + 1 条 invariant，否则不建。
 
 ### 已建链接
 
 - [[10_Reference/investing/strategies/龙头战法]] §方法论链接 — 「板块轮动识别龙头」↔ 时间序列状态识别（🚧 待建）
-- [[10_Reference/[[meta/四构件本体方法论]] — 四构件本体方法论（领域无关模板）
+- [[10_Reference/meta/四构件本体方法论]] — 四构件本体方法论（领域无关模板）
 
 ### 待建领域
 
 - **技术学习领域**（智驾/时序模型/世界模型）：与投研的同构点见 ora-3 §4.2 表（时序模型↔情绪温度 ΔZ / 世界模型↔反事实推演 / 端到端 vs 模块化↔规则+LLM 兜底 / 多传感器融合↔6 层 z-score+三重护栏 / corner case↔熔断机制）
-- **元知识层**：[[10_Reference/[[meta/index]] — 通用方法论（PARA/MOC/四构件本体）
+- **元知识层**：[[10_Reference/meta/index]] — 通用方法论（PARA/MOC/四构件本体）
 
 > 跨域链接数 / 单域链接数 < 20%（防"什么都记但什么都不深"）。当前投研子区跨域链接 = 0，远未到风险，待跨域实体落地后监控。

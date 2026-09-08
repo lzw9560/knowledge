@@ -5,7 +5,7 @@ project: trading-agents
 origin_project: trading-agents
 role: market_analyst
 data_sources: [mootdx, eastmoney, sina]
-debates_with: "[[agents/sentiment_analyst]], [[agents/news_analyst]]"
+debates_with: "[[10_Reference/investing/agents/sentiment_analyst]], [[10_Reference/investing/agents/news_analyst]]"
 created: 2026-09-07
 confidence: high
 source: trading-agents/README.md

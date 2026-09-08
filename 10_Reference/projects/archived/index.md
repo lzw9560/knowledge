@@ -6,7 +6,7 @@ created: 2026-09-07
 
 # 已归档项目
 
-> 本目录的导航索引。父级：[[10_Reference/[[projects/MOC]]
+> 本目录的导航索引。父级：[[10_Reference/reading/MOC]]
 
 ## 📂 文件列表
 
@@ -14,11 +14,11 @@ created: 2026-09-07
 
 | 文件 | 修改时间 |
 |------|---------|
-| [[10_Reference/[[projects/archived/Vibe-Research备份]] | 2026-09-07 11:17 |
+| [[10_Reference/projects/archived/Vibe-Research备份]] | 2026-09-07 11:17 |
 
 <!-- /dataview-precompiled -->
 
 ## 🔗 关联
 
-- **父级 MOC**：[[10_Reference/[[projects/MOC]]
+- **父级 MOC**：[[10_Reference/reading/MOC]]
 - **出链**：2 个 · **入链**：0 个

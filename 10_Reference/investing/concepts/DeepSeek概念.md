@@ -51,7 +51,7 @@ DeepSeek 大模型相关概念股，受益于国产大模型突破+应用落地�
 
 ## 💰 资金流向
 
-- 数据源：[[10_Reference/investing/data-sources/东财 push2|东财]] [[push2]]
+- 数据源：[[10_Reference/investing/data-sources/东财 push2|东财]]
 
 ## 📰 相关研报
 

@@ -51,7 +51,7 @@ AI 眼镜是下一代智能终端入口，融合大模型语音助手+视觉感�
 
 ## 💰 资金流向
 
-- 数据源：[[10_Reference/investing/data-sources/东财 push2|东财]] [[push2]]
+- 数据源：[[10_Reference/investing/data-sources/东财 push2|东财]]
 
 ## 📰 相关研报
 

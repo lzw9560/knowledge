@@ -5,7 +5,7 @@ project: trading-agents
 origin_project: trading-agents
 role: news_analyst
 data_sources: [eastmoney, worldmonitor]
-debates_with: "[[agents/market_analyst]], [[agents/fundamental_analyst]]"
+debates_with: "[[10_Reference/investing/agents/market_analyst]], [[10_Reference/investing/agents/fundamental_analyst]]"
 created: 2026-09-07
 confidence: high
 source: trading-agents/README.md

@@ -30,47 +30,47 @@
     "high": 1432
   },
   "no_confidence_count": 31,
-  "broken_links": 1429,
+  "broken_links": 19,
   "broken_links_top10": [
     [
-      "push2",
-      677
+      "data-sources/同花顺 THS（一致预期·涨停揭秘）（LLM 服务）",
+      2
     ],
     [
-      "腾讯行情",
-      411
+      "[[10_Reference/tech-learning/concepts/限流 — 共用 em_get QPS≤2 限流",
+      2
     ],
     [
-      "10_Reference/[[tech-learning/concepts/优雅降级",
-      22
+      "[[10_Reference/tech-learning/concepts/限流 — 共用 em_get QPS≤2 限流防封",
+      2
     ],
     [
-      "优雅降级",
-      22
+      "specs/a-Plate-Sentinel项目 — A股打板情绪监控与投研决策看板（8 大模块，Tushare 数据源，MVP 骨架阶段）",
+      1
     ],
     [
-      "10_Reference/[[tech-learning/concepts/缓存策略",
-      21
+      "[[10_Reference/tech-learning/concepts/限流 — stale-run 堵塞的根因之一是限流队列积压",
+      1
     ],
     [
-      "缓存策略",
-      21
+      "specs/Vibe-Research项目 — Vibe-Research 个人 AI 投研看板（本图谱主体，109 spec + 16 数据源 + 12 战法）",
+      1
     ],
     [
-      "10_Reference/[[tech-learning/concepts/数据契约",
-      20
+      "specs/a-Plate-Sentinel项目 — A股打板情绪监控与投研决策看板（8 大模块，Tushare 数据源，MVP 骨架）",
+      1
     ],
     [
-      "数据契约",
-      19
+      "actions/rename-entity",
+      1
     ],
     [
-      "10_Reference/[[reading/notes/均值回归-笔记",
-      16
+      "actions/promote-from-inbox",
+      1
     ],
     [
-      "10_Reference/[[reading/notes/趋势跟踪-笔记",
-      15
+      "[[10_Reference/tech-learning/concepts/限流 — 光伏/风能/氢能多概念聚合，数据源限流防封",
+      1
     ]
   ],
   "orphan_count": 3,
@@ -78,7 +78,7 @@
     "events": 1,
     "specs": 2
   },
-  "fragment_links": 0,
+  "fragment_links": 64,
   "missing_frontmatter": 0,
-  "broken_md_links": 64
+  "broken_md_links": 0
 }

@@ -5,7 +5,7 @@ project: trading-agents
 origin_project: trading-agents
 role: lockup_watcher
 data_sources: [mootdx, eastmoney, hithink-ths]
-debates_with: "[[agents/hot_money_tracker]], [[agents/fundamental_analyst]]"
+debates_with: "[[10_Reference/investing/agents/hot_money_tracker]], [[10_Reference/investing/agents/fundamental_analyst]]"
 created: 2026-09-07
 confidence: high
 source: trading-agents/README.md
