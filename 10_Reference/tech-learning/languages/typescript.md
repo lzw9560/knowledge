@@ -1,3 +1,10 @@
+---
+type: language
+name: TypeScript
+paradigm: 多范式（面向对象/函数式）
+typing: 静态类型（结构化类型系统，gradual typing）
+created: 2026-09-07
+---
 
 # TypeScript
 
@@ -27,4 +34,4 @@
 - [[10_Reference/tech-learning/frameworks/react]]
 - [[10_Reference/investing/MOC]]
 - [[10_Reference/investing/specs/archive/m0-foundation/S009-前后端类型同步]]
-- H_Reference/meta/四构件本体方法论]]
+- 10_Reference/meta/四构件本体方法论]]

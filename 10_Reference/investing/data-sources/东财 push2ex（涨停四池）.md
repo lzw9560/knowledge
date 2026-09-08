@@ -1,3 +1,17 @@
+---
+type: data_source
+name: 东财 push2ex（涨停四池）
+layer: 2
+endpoint: push2ex.eastmoney.com
+rate_limit: em_get 限流 QPS≤2
+fallback: 熔断器+push2delay降级
+compliance: ok
+provides: [涨停四池, 连板梯队, 封板率, 炸板率, 晋级率]
+created: 2026-09-06
+last_synced: 2026-09-07
+confidence: high
+source: ARCHITECTURE.md
+---
 
 > [!info] 📡 数据源
 > **名称**：东财 push2ex（涨停四池）  **层级**：L2
@@ -50,6 +64,6 @@
 
 ## 🔧 技术栈
 
-- 🔧 H_Reference/tech-learning/concepts/熔断器|熔断器]] — 涨停四池采集加熔断，连续失败快速失败
-- 🔧 H_Reference/tech-learning/concepts/限流|限流]] — 共用 em_get QPS≤2 限流防封
-- 🔧 H_Reference/tech-learning/concepts/优雅降级|优雅降级]] — push2ex 失败 → push2delay 降级
+- 🔧 10_Reference/tech-learning/concepts/熔断器|熔断器]] — 涨停四池采集加熔断，连续失败快速失败
+- 🔧 10_Reference/tech-learning/concepts/限流|限流]] — 共用 em_get QPS≤2 限流防封
+- 🔧 10_Reference/tech-learning/concepts/优雅降级|优雅降级]] — push2ex 失败 → push2delay 降级

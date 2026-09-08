@@ -1,3 +1,9 @@
+---
+type: concept
+name: async/await
+category: 编程概念
+created: 2026-09-07
+---
 
 # async/await（异步编程）
 
@@ -21,7 +27,7 @@
 ## 在 Vibe-Research 中的使用
 - [[10_Reference/investing/specs/archive/m1-workflow/S026-pre-market-async|S026 pre-market async]] — 盘前数据拉取从同步改 async/await，多数据源并发拉取
 - [[10_Reference/tech-learning/frameworks/fastapi|FastAPI]] 基于 Starlette + async/await，路由天然异步
-- H_Reference/tech-learning/architecture/事件驱动架构|事件驱动]] 架构的运行时即基于 async 事件循环
+- 10_Reference/tech-learning/architecture/事件驱动架构|事件驱动]] 架构的运行时即基于 async 事件循环
 
 ## 反模式（避免）
 - 在 async 函数中调同步阻塞 IO（如 `requests.get`）——会阻塞整个事件循环
@@ -30,6 +36,6 @@
 ## 相关链接
 - [[10_Reference/tech-learning/MOC]]
 - [[10_Reference/tech-learning/frameworks/fastapi]]
-- H_Reference/tech-learning/architecture/事件驱动架构]]
+- 10_Reference/tech-learning/architecture/事件驱动架构]]
 - [[10_Reference/investing/specs/archive/m1-workflow/S026-pre-market-async]]
-- H_Reference/meta/四构件本体方法论]]
+- 10_Reference/meta/四构件本体方法论]]

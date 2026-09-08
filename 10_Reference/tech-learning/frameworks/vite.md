@@ -1,3 +1,10 @@
+---
+type: framework
+name: Vite
+language: TypeScript/JavaScript
+category: 前端构建工具
+created: 2026-09-07
+---
 
 # Vite
 
@@ -27,4 +34,4 @@
 - [[10_Reference/tech-learning/frameworks/react]]
 - [[10_Reference/tech-learning/languages/typescript]]
 - [[10_Reference/investing/specs/archive/m0-foundation/S014-前端UI重设计]]
-- H_Reference/meta/四构件本体方法论]]
+- 10_Reference/meta/四构件本体方法论]]

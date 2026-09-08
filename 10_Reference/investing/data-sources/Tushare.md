@@ -1,3 +1,19 @@
+---
+type: data_source
+name: Tushare
+layer: 3
+endpoint: api.tushare.pro
+rate_limit: 积分制（免费 5000 积分，高级需付费）
+fallback: 无
+compliance: ok
+provides: [A股行情, 财务, 指数, 期货, 基金, 可转债]
+projects: [a-plate-sentinel]
+origin_project: a-plate-sentinel
+created: 2026-09-07
+last_synced: 2026-09-07
+confidence: high
+source: ARCHITECTURE.md
+---
 
 > [!info] 📡 数据源
 > **名称**：Tushare  **层级**：L3
@@ -45,6 +61,6 @@
 
 ## 🔧 技术栈
 
-- 🔧 H_Reference/tech-learning/tools/uv包管理|uv 包管理]] — tushare Python 包由 uv 管理锁版本
-- 🔧 H_Reference/tech-learning/concepts/限流|限流]] — Tushare API 有调用频率限制，需限流
-- 🔧 H_Reference/tech-learning/concepts/数据契约|数据契约]] — 返回数据由契约层统一形状
+- 🔧 10_Reference/tech-learning/tools/uv包管理|uv 包管理]] — tushare Python 包由 uv 管理锁版本
+- 🔧 10_Reference/tech-learning/concepts/限流|限流]] — Tushare API 有调用频率限制，需限流
+- 🔧 10_Reference/tech-learning/concepts/数据契约|数据契约]] — 返回数据由契约层统一形状

@@ -1,3 +1,17 @@
+---
+type: data_source
+name: 巨潮 cninfo（互动易）
+layer: 4
+endpoint: www.cninfo.com.cn
+rate_limit: requests 直连
+fallback: 无
+compliance: ok
+provides: [公告, 互动易问答]
+created: 2026-09-06
+last_synced: 2026-09-07
+confidence: high
+source: ARCHITECTURE.md
+---
 
 > [!info] 📡 数据源
 > **名称**：巨潮 cninfo（互动易）  **层级**：L4
@@ -46,6 +60,6 @@
 
 ## 🔧 技术栈
 
-- 🔧 H_Reference/tech-learning/concepts/优雅降级|优雅降级]] — 巨潮互动易无降级，失败标灰
-- 🔧 H_Reference/tech-learning/concepts/数据契约|数据契约]] — 互动易数据由契约层统一形状
-- 🔧 H_Reference/tech-learning/concepts/缓存策略|缓存策略]] — 低频数据入缓存
+- 🔧 10_Reference/tech-learning/concepts/优雅降级|优雅降级]] — 巨潮互动易无降级，失败标灰
+- 🔧 10_Reference/tech-learning/concepts/数据契约|数据契约]] — 互动易数据由契约层统一形状
+- 🔧 10_Reference/tech-learning/concepts/缓存策略|缓存策略]] — 低频数据入缓存

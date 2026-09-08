@@ -1,3 +1,19 @@
+---
+type: data_source
+name: baostock（K线日更）
+layer: 4
+endpoint: bbaostock.com
+rate_limit: 无
+fallback: S090 kline_refresh
+compliance: ok
+provides: [K线日更, 5minK线]
+projects: [vibe-research, daily-stock-analysis]
+origin_project: vibe-research
+created: 2026-09-06
+last_synced: 2026-09-07
+confidence: high
+source: ARCHITECTURE.md
+---
 
 > [!info] 📡 数据源
 > **名称**：baostock（K线日更）  **层级**：L4
@@ -49,6 +65,6 @@
 
 ## 🔧 技术栈
 
-- 🔧 H_Reference/tech-learning/concepts/优雅降级|优雅降级]] — K线日更失败时 S090 kline_refresh 降级
-- 🔧 H_Reference/tech-learning/tools/uv包管理|uv 包管理]] — baostock Python 包由 uv 管理锁版本
-- 🔧 H_Reference/tech-learning/concepts/缓存策略|缓存策略]] — 历史日 K 入缓存
+- 🔧 10_Reference/tech-learning/concepts/优雅降级|优雅降级]] — K线日更失败时 S090 kline_refresh 降级
+- 🔧 10_Reference/tech-learning/tools/uv包管理|uv 包管理]] — baostock Python 包由 uv 管理锁版本
+- 🔧 10_Reference/tech-learning/concepts/缓存策略|缓存策略]] — 历史日 K 入缓存

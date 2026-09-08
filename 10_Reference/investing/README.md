@@ -1,3 +1,9 @@
+---
+title: "Codex长期记忆知识库"
+type: readme
+created: 2026-09-07
+tags: [readme, knowledge-base]
+---
 # Vibe-Research 投研知识图谱（Obsidian Vault）
 
 > 阶段 0 · 纯结构骨架。本 vault 是 Vibe-Research 项目的语义层，把代码里的实体（Pydantic 契约）、spec 决策、战法、数据源链接成可导航的知识图谱。

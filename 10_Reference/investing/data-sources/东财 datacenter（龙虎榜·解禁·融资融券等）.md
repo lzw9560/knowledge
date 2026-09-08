@@ -1,3 +1,17 @@
+---
+type: data_source
+name: 东财 datacenter（龙虎榜/解禁/融资融券等）
+layer: 2
+endpoint: datacenter-web.eastmoney.com
+rate_limit: em_get 限流 QPS≤2
+fallback: 熔断器+push2delay降级
+compliance: ok
+provides: [龙虎榜, 解禁, 融资融券, 大宗交易, 股东户数, 分红, 资金流, 行业排名]
+created: 2026-09-06
+last_synced: 2026-09-07
+confidence: high
+source: ARCHITECTURE.md
+---
 
 > [!info] 📡 数据源
 > **名称**：东财 datacenter（龙虎榜/解禁/融资融券等）  **层级**：L2
@@ -76,6 +90,6 @@
 
 ## 🔧 技术栈
 
-- 🔧 H_Reference/tech-learning/concepts/熔断器|熔断器]] — datacenter（龙虎榜/解禁/融资融券）采集加熔断
-- 🔧 H_Reference/tech-learning/concepts/限流|限流]] — 共用 em_get QPS≤2 限流
-- 🔧 H_Reference/tech-learning/concepts/缓存策略|缓存策略]] — 低频数据入缓存降低重复请求
+- 🔧 10_Reference/tech-learning/concepts/熔断器|熔断器]] — datacenter（龙虎榜/解禁/融资融券）采集加熔断
+- 🔧 10_Reference/tech-learning/concepts/限流|限流]] — 共用 em_get QPS≤2 限流
+- 🔧 10_Reference/tech-learning/concepts/缓存策略|缓存策略]] — 低频数据入缓存降低重复请求

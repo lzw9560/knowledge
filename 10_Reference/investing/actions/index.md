@@ -1,3 +1,9 @@
+---
+type: methodology_index
+name: 元知识层
+domain: 通用
+created: 2026-09-07
+---
 # 动作（Actions）索引
 
 > 本体第四构件。基于实体类型与关系生成的可执行行为——CRUD、状态流转、链接维护动作。
@@ -38,11 +44,11 @@
 
 > 本段列出该类型所有实体以建立入边链接（Dataview 表格不计入边）。
 
-- H_Reference/investing/actions/审批实体]]
-- H_Reference/investing/actions/研报自动链接]]
-- H_Reference/investing/actions/inbox晋级]]
-- H_Reference/investing/actions/实体重命名]]
-- H_Reference/investing/actions/源同步]]
+- 10_Reference/investing/actions/审批实体]]
+- 10_Reference/investing/actions/研报自动链接]]
+- 10_Reference/investing/actions/inbox晋级]]
+- 10_Reference/investing/actions/实体重命名]]
+- 10_Reference/investing/actions/源同步]]
 
 
 ---

@@ -1,3 +1,9 @@
+---
+type: methodology_index
+name: 元知识层
+domain: 通用
+created: 2026-09-07
+---
 # 战法 索引
 
 > 投研战法卡片节点。12 张战法卡已从 `backend/strategies/cards/` 导入，另有淘股吧战法补充。每张卡链接其入场条件、出场条件、历史战绩、匹配股票、关联事件、来源 spec。

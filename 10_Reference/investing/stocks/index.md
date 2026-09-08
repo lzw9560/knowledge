@@ -1,3 +1,9 @@
+---
+type: methodology_index
+name: 元知识层
+domain: 通用
+created: 2026-09-07
+---
 # 股票 索引
 
 > 个股是投研知识图谱的核心节点。对应 Pydantic 契约 `Quote` + `CompanyInfo`，覆盖 A 股/美股/港股。每只股票链接其行业、研报、财务、估值、龙虎榜、相关事件、匹配战法。

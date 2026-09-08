@@ -1,3 +1,15 @@
+---
+type: logic
+rule_id: STUB-LIFECYCLE-001
+rule_type: 状态机
+target_entity: 全类型
+severity: low
+condition: "stub 实体（status: stub）→ 填充关键字段 → 转 status: active"
+action_on_violation: stub 滞留 > 30 天未填充 → 标 stub_stale；stub 直接当 active 用 → 报 medium
+source: ora-3 §1.3（inbox stub 通道）+ AGENTS.md 工程底线（不臆造数据——stub 是占位非成品）
+created: 2026-09-07
+confidence: high
+---
 
 > [!info] ⚙️ 规则
 > **规则**：`STUB-LIFECYCLE-001`  **类型**：状态机
@@ -45,12 +57,12 @@ Dataview 查询（stub 实体待数据源补充）：
 <!-- dataview-precompiled:2bfae211412a -->
 | 文件 | 类型 | 状态 | 创建日 |
 |---|---|---|---|
-| H_Reference/investing/actions/inbox晋级]] | action | stub | 2026-09-07 |
-| H_Reference/investing/actions/源同步]] | action | stub | 2026-09-07 |
+| 10_Reference/investing/actions/inbox晋级]] | action | stub | 2026-09-07 |
+| 10_Reference/investing/actions/源同步]] | action | stub | 2026-09-07 |
 | [[10_Reference/investing/industries/食品饮料]] | industry | stub | 2026-09-07 |
-| H_Reference/investing/logic/断链分级]] | logic | stub | 2026-09-07 |
-| H_Reference/investing/logic/源漂移]] | logic | stub | 2026-09-07 |
-| H_Reference/investing/logic/静态值禁令]] | logic | stub | 2026-09-07 |
+| 10_Reference/investing/logic/断链分级]] | logic | stub | 2026-09-07 |
+| 10_Reference/investing/logic/源漂移]] | logic | stub | 2026-09-07 |
+| 10_Reference/investing/logic/静态值禁令]] | logic | stub | 2026-09-07 |
 | [[10_Reference/investing/stocks/000019]] | stock | stub | 2026-09-07 |
 | [[10_Reference/investing/stocks/000505]] | stock | stub | 2026-09-07 |
 | [[10_Reference/investing/stocks/002172]] | stock | stub | 2026-09-07 |
@@ -76,9 +88,9 @@ Dataview 查询（stub 实体待数据源补充）：
 ## 🔗 关联
 
 - **触发动作**：[[10_Reference/investing/actions/index|actions/]]
-- **前置规则**：H_Reference/investing/logic/实体生命周期]]（生命周期：inbox → stub → active → archive）
-- **相关规则**：H_Reference/investing/logic/实体晋级]]（inbox 晋级，stub 是晋级后的可能形态）
-- **相关规则**：H_Reference/investing/logic/实体归档]]（stub 长期不填充可归档）
+- **前置规则**：10_Reference/investing/logic/实体生命周期]]（生命周期：inbox → stub → active → archive）
+- **相关规则**：10_Reference/investing/logic/实体晋级]]（inbox 晋级，stub 是晋级后的可能形态）
+- **相关规则**：10_Reference/investing/logic/实体归档]]（stub 长期不填充可归档）
 - **约束实体**：[[10_Reference/investing/stocks/index|stocks/]] [[10_Reference/investing/industries/index|industries/]] [[10_Reference/investing/concepts/index|concepts/]]
 - **来源决策**：[[10_Reference/investing/specs/index|specs/]]
 - **出链**：24 个 · **入链**：2 个

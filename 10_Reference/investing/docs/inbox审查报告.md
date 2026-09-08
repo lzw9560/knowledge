@@ -1,3 +1,10 @@
+---
+type: report
+title: inbox审查报告
+created: 2026-09-07
+updated: 2026-09-08
+---
+
 # Inbox 审核报告
 
 > 生成时间：2026-09-07

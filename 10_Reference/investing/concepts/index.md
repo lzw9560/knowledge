@@ -1,3 +1,9 @@
+---
+type: methodology_index
+name: 元知识层
+domain: 通用
+created: 2026-09-07
+---
 # 概念板块 索引
 
 > 概念题材板块节点。对应 Pydantic 契约 `ConceptBlock` + `Sector`。每个概念链接其成分股、题材轮动节奏、相关研报、近期事件。

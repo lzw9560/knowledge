@@ -1,9 +1,15 @@
+---
+type: architecture
+name: CQRS
+category: 架构模式
+created: 2026-09-07
+---
 
 # CQRS（命令查询职责分离）
 
 ## 类别
 - 架构模式（Greg Young，2010）
-- 与 H_Reference/tech-learning/architecture/清洁架构|清洁架构]] 互补：CQRS 把"读"和"写"彻底分离，清洁架构只分层不分离读写
+- 与 10_Reference/tech-learning/architecture/清洁架构|清洁架构]] 互补：CQRS 把"读"和"写"彻底分离，清洁架构只分层不分离读写
 
 ## 核心特性
 - **命令（Command）**：改变状态，无返回值（或仅返回 id）—— create/update/delete
@@ -20,8 +26,8 @@
 | 适用 | 简单业务 | 读多写少 / 读写模型差异大 |
 
 ## 与事件驱动的天然搭配
-- CQRS 常配 H_Reference/tech-learning/architecture/事件驱动架构|事件驱动]]：写模型发事件，读模型订阅事件更新物化视图
-- 进一步即 H_Reference/tech-learning/architecture/事件溯源|事件溯源]] + CQRS 的经典组合
+- CQRS 常配 10_Reference/tech-learning/architecture/事件驱动架构|事件驱动]]：写模型发事件，读模型订阅事件更新物化视图
+- 进一步即 10_Reference/tech-learning/architecture/事件溯源|事件溯源]] + CQRS 的经典组合
 
 ## 在 Vibe-Research 中的使用
 - [[10_Reference/investing/specs/archive/m0-foundation/S007-契约层|S007 契约层]] 的读路径（前端查询战法/候选/快照）与写路径（调度器写状态）天然是 CQRS 雏形
@@ -30,8 +36,8 @@
 
 ## 相关链接
 - [[10_Reference/tech-learning/MOC]]
-- H_Reference/tech-learning/architecture/清洁架构]]
-- H_Reference/tech-learning/architecture/事件驱动架构]]
-- H_Reference/tech-learning/architecture/事件溯源]]
+- 10_Reference/tech-learning/architecture/清洁架构]]
+- 10_Reference/tech-learning/architecture/事件驱动架构]]
+- 10_Reference/tech-learning/architecture/事件溯源]]
 - [[10_Reference/investing/specs/archive/m0-foundation/S007-契约层]]
-- H_Reference/meta/四构件本体方法论]]
+- 10_Reference/meta/四构件本体方法论]]

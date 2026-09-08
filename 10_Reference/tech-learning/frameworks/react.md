@@ -1,3 +1,10 @@
+---
+type: framework
+name: React
+language: TypeScript/JavaScript
+category: 前端 UI 框架
+created: 2026-09-07
+---
 
 # React
 
@@ -29,4 +36,4 @@
 - [[10_Reference/investing/specs/archive/m0-foundation/S013-前端数据层]]
 - [[10_Reference/investing/specs/archive/m0-foundation/S014-前端UI重设计]]
 - [[10_Reference/investing/specs/archive/m0-foundation/S009-前后端类型同步]]
-- H_Reference/meta/四构件本体方法论]]
+- 10_Reference/meta/四构件本体方法论]]

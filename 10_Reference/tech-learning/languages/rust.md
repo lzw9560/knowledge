@@ -1,3 +1,10 @@
+---
+type: language
+name: Rust
+paradigm: 多范式（系统编程/函数式/并发）
+typing: 静态类型（nominal，强类型）
+created: 2026-09-07
+---
 
 # Rust
 
@@ -28,12 +35,12 @@
 ## 与 Vibe-Research 的关系
 - Vibe-Research 当前未用 Rust
 - 但前端构建工具 [[10_Reference/tech-learning/frameworks/vite|Vite]] 底层依赖 esbuild（Go）/ rolldown（Rust 重写）——技术栈间接关联
-- 参考架构：H_Reference/tech-learning/architecture/事件溯源|事件溯源]] 的高性能 event store 可用 Rust 实现
+- 参考架构：10_Reference/tech-learning/architecture/事件溯源|事件溯源]] 的高性能 event store 可用 Rust 实现
 
 ## 相关链接
 - [[10_Reference/tech-learning/MOC]]
 - [[10_Reference/tech-learning/languages/go]]
 - [[10_Reference/tech-learning/languages/python]]
 - [[10_Reference/tech-learning/frameworks/vite]]
-- H_Reference/tech-learning/architecture/事件溯源]]
-- H_Reference/meta/四构件本体方法论]]
+- 10_Reference/tech-learning/architecture/事件溯源]]
+- 10_Reference/meta/四构件本体方法论]]

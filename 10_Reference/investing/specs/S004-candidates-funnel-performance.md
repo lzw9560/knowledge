@@ -1,3 +1,13 @@
+---
+type: spec
+number: S004
+title: 候选池漏斗 run_funnel 性能优化
+status: 草案
+created: 2026-09-07
+last_synced: 2026-09-07
+confidence: high
+source: specs/README.md
+---
 
 > [!info] 📋 项目决策
 > **编号**：S004  **标题**：候选池漏斗 run_funnel 性能优化  **状态**：草案
@@ -38,6 +48,6 @@
 
 ## 🔗 技术参考
 
-- 🔧 H_Reference/tech-learning/concepts/缓存策略|缓存策略]] — 性能优化的核心手段：热点数据（行情/估值）入缓存降低 DB 压力
-- 🏗️ H_Reference/tech-learning/architecture/分层架构|分层架构]] — 漏斗性能优化在 service 与 repository 之间加缓存层
-- 🔧 H_Reference/tech-learning/concepts/优雅降级|优雅降级]] — 性能降级时的兜底处理
+- 🔧 10_Reference/tech-learning/concepts/缓存策略|缓存策略]] — 性能优化的核心手段：热点数据（行情/估值）入缓存降低 DB 压力
+- 🏗️ 10_Reference/tech-learning/architecture/分层架构|分层架构]] — 漏斗性能优化在 service 与 repository 之间加缓存层
+- 🔧 10_Reference/tech-learning/concepts/优雅降级|优雅降级]] — 性能降级时的兜底处理

@@ -1,3 +1,9 @@
+---
+type: methodology_index
+name: 元知识层
+domain: 通用
+created: 2026-09-07
+---
 # 研报 索引
 
 > 机构研报节点。对应 Pydantic 契约 `Report`。每份研报链接其覆盖标的、分析师、核心观点、评级与目标价。

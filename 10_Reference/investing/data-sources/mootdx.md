@@ -1,3 +1,19 @@
+---
+type: data_source
+name: mootdx
+layer: 3
+endpoint: TCP 7709
+rate_limit: 无（惰性导入）
+fallback: DependencyMissing 优雅报错
+compliance: ok
+provides: [K线, 财报原始快照]
+projects: [vibe-research, trading-agents, daily-stock-analysis]
+origin_project: vibe-research
+created: 2026-09-06
+last_synced: 2026-09-07
+confidence: high
+source: ARCHITECTURE.md
+---
 
 > [!info] 📡 数据源
 > **名称**：mootdx  **层级**：L3
@@ -51,6 +67,6 @@
 
 ## 🔧 技术栈
 
-- 🔧 H_Reference/tech-learning/tools/uv包管理|uv 包管理]] — mootdx Python 包由 uv 管理锁版本
-- 🔧 H_Reference/tech-learning/concepts/优雅降级|优雅降级]] — 惰性导入，缺失时 DependencyMissing 优雅报错
-- 🔧 H_Reference/tech-learning/concepts/数据契约|数据契约]] — TCP 7709 返回数据由契约层统一形状
+- 🔧 10_Reference/tech-learning/tools/uv包管理|uv 包管理]] — mootdx Python 包由 uv 管理锁版本
+- 🔧 10_Reference/tech-learning/concepts/优雅降级|优雅降级]] — 惰性导入，缺失时 DependencyMissing 优雅报错
+- 🔧 10_Reference/tech-learning/concepts/数据契约|数据契约]] — TCP 7709 返回数据由契约层统一形状

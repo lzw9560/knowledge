@@ -1,7 +1,12 @@
+---
+type: folder_index
+name: 每日情绪日报
+created: 2026-09-07
+---
 
 # 每日情绪日报
 
-> 盘前/盘中/盘后情绪记录归档。父级：H_Reference/market_sentiment/情绪仪表盘]]
+> 盘前/盘中/盘后情绪记录归档。父级：10_Reference/market_sentiment/情绪仪表盘]]
 
 ## 📂 文件列表
 

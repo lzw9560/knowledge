@@ -1,3 +1,17 @@
+---
+type: data_source
+name: 百度股市通（日K线）
+layer: 4
+endpoint: finance.pae.baidu.com
+rate_limit: 不封IP
+fallback: 无
+compliance: ok
+provides: [日K线]
+created: 2026-09-06
+last_synced: 2026-09-07
+confidence: high
+source: ARCHITECTURE.md
+---
 
 > [!info] 📡 数据源
 > **名称**：百度股市通（日K线）  **层级**：L4
@@ -52,6 +66,6 @@
 
 ## 🔧 技术栈
 
-- 🔧 H_Reference/tech-learning/concepts/优雅降级|优雅降级]] — 百度股市通日 K 线无降级，失败即标灰
-- 🔧 H_Reference/tech-learning/concepts/数据契约|数据契约]] — 返回数据由 Pydantic 契约层统一形状
-- 🔧 H_Reference/tech-learning/concepts/缓存策略|缓存策略]] — 日 K 入缓存
+- 🔧 10_Reference/tech-learning/concepts/优雅降级|优雅降级]] — 百度股市通日 K 线无降级，失败即标灰
+- 🔧 10_Reference/tech-learning/concepts/数据契约|数据契约]] — 返回数据由 Pydantic 契约层统一形状
+- 🔧 10_Reference/tech-learning/concepts/缓存策略|缓存策略]] — 日 K 入缓存

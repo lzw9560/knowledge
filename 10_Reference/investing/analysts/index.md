@@ -1,3 +1,9 @@
+---
+type: methodology_index
+name: 元知识层
+domain: 通用
+created: 2026-09-07
+---
 # 分析师 索引
 
 > 研报作者节点。对应 Pydantic 契约 `Report.researcher`。每位分析师链接其覆盖领域、近期研报、历史评级胜率。

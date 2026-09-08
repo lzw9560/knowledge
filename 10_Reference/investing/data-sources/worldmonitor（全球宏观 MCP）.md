@@ -1,3 +1,17 @@
+---
+type: data_source
+name: worldmonitor（全球宏观 MCP）
+layer: 5
+endpoint: MCP 远程
+rate_limit: 无
+fallback: 无
+compliance: ok
+provides: [全球宏观指标]
+created: 2026-09-06
+last_synced: 2026-09-07
+confidence: high
+source: ARCHITECTURE.md
+---
 
 > [!info] 📡 数据源
 > **名称**：worldmonitor（全球宏观 MCP）  **层级**：L5
@@ -58,6 +72,6 @@
 
 ## 🔧 技术栈
 
-- 🔧 H_Reference/tech-learning/concepts/数据契约|数据契约]] — 全球宏观决策因子由契约层统一形状（S020 接入）
-- 🔧 H_Reference/tech-learning/concepts/优雅降级|优雅降级]] — MCP 远程无降级，失败标灰
-- 🔧 H_Reference/tech-learning/concepts/缓存策略|缓存策略]] — 宏观决策因子低频，入缓存
+- 🔧 10_Reference/tech-learning/concepts/数据契约|数据契约]] — 全球宏观决策因子由契约层统一形状（S020 接入）
+- 🔧 10_Reference/tech-learning/concepts/优雅降级|优雅降级]] — MCP 远程无降级，失败标灰
+- 🔧 10_Reference/tech-learning/concepts/缓存策略|缓存策略]] — 宏观决策因子低频，入缓存

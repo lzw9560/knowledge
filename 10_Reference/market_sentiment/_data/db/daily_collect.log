@@ -799,3 +799,78 @@
 [2026-09-08 17:39:34] [INFO] ============================================================
 [2026-09-08 17:39:34] [INFO] 日终采集完成
 [2026-09-08 17:39:34] [INFO] ============================================================
+[2026-09-08 17:49:46] [INFO] ============================================================
+[2026-09-08 17:49:46] [INFO] 📊 大A舆情预判框架 v2.0 - 日终数据采集
+[2026-09-08 17:49:46] [INFO] 交易日: 2026-09-08
+[2026-09-08 17:49:46] [INFO] ============================================================
+[2026-09-08 17:49:46] [INFO] >> 步骤1: 运行6层数据采集器
+[2026-09-08 17:49:46] [INFO] L0 开始采集: 宏观采集器(CPI/PPI/PMI) (collect_macro.py)
+[2026-09-08 17:49:53] [INFO] L0 采集完成: collect_macro.py
+  PPI同比: 3.5 (2026-07-01) 可用: 2026-07-11
+  制造业PMI: 49.8 (2026-08-01) 可用: 2026-08-01
+  CPI-PPI剪刀差: -3.0 (2026-07-01) 可用: 2026-07-11
+
+⚠️ TODO: 社融/M1-M2/DR007 需用akshare或央行官网接口（待接入）
+[2026-09-08 17:49:53] [INFO] L0 开始采集: 宏观补充(社融/M1M2/DR007) (collect_macro_extra.py)
+[2026-09-08 17:50:19] [INFO] L0 采集完成: collect_macro_extra.py
+  社融增量 总记录数: 136
+  M1同比 总记录数: 223
+  M2同比 总记录数: 223
+  M1-M2剪刀差 总记录数: 223
+  DR007 总记录数: 252
+[2026-09-08 17:50:19] [INFO] L1 开始采集: 政策事件采集器 (collect_policy.py)
+[2026-09-08 17:50:23] [INFO] L1 采集完成: collect_policy.py
+
+============================================================
+✅ L1政策事件采集完成: 共 16 条
+📂 脚本: /Users/lizhiwei/Documents/Obsidian Vault/10_Reference/market_sentiment/_data/db/collect_policy.py
+📂 数据库: /Users/lizhiwei/Documents/Obsidian Vault/10_Reference/market_sentiment/_data/db/sentiment.db
+[2026-09-08 17:50:23] [INFO] L2 开始采集: 机构动向采集器(龙虎榜/融资融券) (collect_institution.py)
+[2026-09-08 17:50:42] [INFO] L2 采集完成: collect_institution.py
+  回购/增持合计:
+    日期: 2026-09-08 | 值: 7.447138 | 来源: eastmoney | 可用: 2026-09-09
+      buyback_count: 5
+      buyback_amount_yi: 7.45
+      window_days: 7
+[2026-09-08 17:50:42] [INFO] L3 开始采集: 资金面采集器(北向/主力/成交额) (collect_capital.py)
+[2026-09-08 17:51:27] [INFO] L3 采集完成: collect_capital.py
+  northbound_net: 无有效值 (2026-09-01) 来源:web_search_legulegu
+  main_capital_net: -59.45 (2026-09-08) 可用:2026-09-08 来源:web_search_sina
+  volume_ratio: 无有效值 (2026-09-08) 来源:failed
+  etf_net_subscribe: 无有效值 (2026-09-08) 来源:failed
+  cds_spread: -3.12 (2026-09-01) 可用:2026-09-08 来源:web_search_macromicro
+[2026-09-08 17:51:27] [INFO] L4 开始采集: 市场情绪采集器(涨停池/炸板) (collect_sentiment.py)
+[2026-09-08 17:53:27] [INFO] ============================================================
+[2026-09-08 17:53:27] [INFO] 📊 大A舆情预判框架 v2.0 - 日终数据采集
+[2026-09-08 17:53:27] [INFO] 交易日: 2026-09-08
+[2026-09-08 17:53:27] [INFO] ============================================================
+[2026-09-08 17:53:27] [INFO] >> 步骤1: 运行6层数据采集器
+[2026-09-08 17:53:27] [INFO] L0 开始采集: 宏观采集器(CPI/PPI/PMI) (collect_macro.py)
+[2026-09-08 17:53:30] [INFO] L0 采集完成: collect_macro.py
+  PPI同比: 3.5 (2026-07-01) 可用: 2026-07-11
+  制造业PMI: 49.8 (2026-08-01) 可用: 2026-08-01
+  CPI-PPI剪刀差: -3.0 (2026-07-01) 可用: 2026-07-11
+
+⚠️ TODO: 社融/M1-M2/DR007 需用akshare或央行官网接口（待接入）
+[2026-09-08 17:53:30] [INFO] L0 开始采集: 宏观补充(社融/M1M2/DR007) (collect_macro_extra.py)
+[2026-09-08 17:53:42] [INFO] L0 采集完成: collect_macro_extra.py
+  社融增量 总记录数: 136
+  M1同比 总记录数: 223
+  M2同比 总记录数: 223
+  M1-M2剪刀差 总记录数: 223
+  DR007 总记录数: 252
+[2026-09-08 17:53:42] [INFO] L1 开始采集: 政策事件采集器 (collect_policy.py)
+[2026-09-08 17:53:45] [INFO] L1 采集完成: collect_policy.py
+
+============================================================
+✅ L1政策事件采集完成: 共 16 条
+📂 脚本: /Users/lizhiwei/Documents/Obsidian Vault/10_Reference/market_sentiment/_data/db/collect_policy.py
+📂 数据库: /Users/lizhiwei/Documents/Obsidian Vault/10_Reference/market_sentiment/_data/db/sentiment.db
+[2026-09-08 17:53:45] [INFO] L2 开始采集: 机构动向采集器(龙虎榜/融资融券) (collect_institution.py)
+[2026-09-08 17:53:56] [INFO] L2 采集完成: collect_institution.py
+  回购/增持合计:
+    日期: 2026-09-08 | 值: 7.447138 | 来源: eastmoney | 可用: 2026-09-09
+      buyback_count: 5
+      buyback_amount_yi: 7.45
+      window_days: 7
+[2026-09-08 17:53:56] [INFO] L3 开始采集: 资金面采集器(北向/主力/成交额) (collect_capital.py)

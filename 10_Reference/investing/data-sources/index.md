@@ -1,3 +1,9 @@
+---
+type: methodology_index
+name: 元知识层
+domain: 通用
+created: 2026-09-07
+---
 # 数据源 索引
 
 > 外部数据源节点。对应 `ARCHITECTURE.md` 数据流。16 数据源（2026-09-06 从 ARCHITECTURE.md 批量灌入）。每条记录链接其提供字段、限流策略、降级链、相关实体。
@@ -49,23 +55,23 @@
 
 > 本段列出该类型所有实体以建立入边链接（Dataview 表格不计入边）。
 
-- H_Reference/investing/data-sources/AkShare]]
-- H_Reference/investing/data-sources/百度股市通（日K线）]]
-- H_Reference/investing/data-sources/baostock（K线日更）]]
-- H_Reference/investing/data-sources/巨潮 cninfo（互动易）]]
-- H_Reference/investing/data-sources/东财 datacenter（龙虎榜·解禁·融资融券等）]]
-- H_Reference/investing/data-sources/东财 push2]]
-- H_Reference/investing/data-sources/东财 push2ex（涨停四池）]]
-- H_Reference/investing/data-sources/东财 reportapi（研报）]]
-- H_Reference/investing/data-sources/东财 searchapi（个股新闻）]]
-- H_Reference/investing/data-sources/FRED（宏观）]]
-- H_Reference/investing/data-sources/同花顺 THS（一致预期·涨停揭秘）]]
+- 10_Reference/investing/data-sources/AkShare]]
+- 10_Reference/investing/data-sources/百度股市通（日K线）]]
+- 10_Reference/investing/data-sources/baostock（K线日更）]]
+- 10_Reference/investing/data-sources/巨潮 cninfo（互动易）]]
+- 10_Reference/investing/data-sources/东财 datacenter（龙虎榜·解禁·融资融券等）]]
+- 10_Reference/investing/data-sources/东财 push2]]
+- 10_Reference/investing/data-sources/东财 push2ex（涨停四池）]]
+- 10_Reference/investing/data-sources/东财 reportapi（研报）]]
+- 10_Reference/investing/data-sources/东财 searchapi（个股新闻）]]
+- 10_Reference/investing/data-sources/FRED（宏观）]]
+- 10_Reference/investing/data-sources/同花顺 THS（一致预期·涨停揭秘）]]
 - [[10_Reference/investing/data-sources/mootdx]]
-- H_Reference/investing/data-sources/108 RSS 源（资讯雷达）]]
-- H_Reference/investing/data-sources/新浪财经（财报三表）]]
-- H_Reference/investing/data-sources/腾讯行情]]
-- H_Reference/investing/data-sources/Tushare]]
-- H_Reference/investing/data-sources/worldmonitor（全球宏观 MCP）]]
+- 10_Reference/investing/data-sources/108 RSS 源（资讯雷达）]]
+- 10_Reference/investing/data-sources/新浪财经（财报三表）]]
+- 10_Reference/investing/data-sources/腾讯行情]]
+- 10_Reference/investing/data-sources/Tushare]]
+- 10_Reference/investing/data-sources/worldmonitor（全球宏观 MCP）]]
 
 
 ---

@@ -1,3 +1,17 @@
+---
+type: data_source
+name: 东财 reportapi（研报）
+layer: 2
+endpoint: reportapi.eastmoney.com
+rate_limit: em_get 限流 QPS≤2
+fallback: 熔断器+push2delay降级
+compliance: ok
+provides: [研报标题, 机构, 评级, 日期, 一致预期EPS]
+created: 2026-09-06
+last_synced: 2026-09-07
+confidence: high
+source: ARCHITECTURE.md
+---
 
 > [!info] 📡 数据源
 > **名称**：东财 reportapi（研报）  **层级**：L2
@@ -53,6 +67,6 @@
 
 ## 🔧 技术栈
 
-- 🔧 H_Reference/tech-learning/concepts/熔断器|熔断器]] — 研报接口采集加熔断
-- 🔧 H_Reference/tech-learning/concepts/限流|限流]] — 共用 em_get QPS≤2 限流防封
-- 🔧 H_Reference/tech-learning/concepts/缓存策略|缓存策略]] — 研报数据低频更新，入缓存降低请求
+- 🔧 10_Reference/tech-learning/concepts/熔断器|熔断器]] — 研报接口采集加熔断
+- 🔧 10_Reference/tech-learning/concepts/限流|限流]] — 共用 em_get QPS≤2 限流防封
+- 🔧 10_Reference/tech-learning/concepts/缓存策略|缓存策略]] — 研报数据低频更新，入缓存降低请求

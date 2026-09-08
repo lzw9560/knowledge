@@ -1,3 +1,10 @@
+---
+type: summary
+title: Spec 归档总结
+created: 2026-09-06
+updated: 2026-09-08
+---
+
 # Spec 决策总结
 
 > 知识图谱 specs/ 目录的 109 个 spec/decision/project 实体的归档总结。

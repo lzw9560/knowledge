@@ -1,3 +1,9 @@
+---
+type: methodology_index
+name: 元知识层
+domain: 通用
+created: 2026-09-07
+---
 # 龙虎榜 索引
 
 > 游资席位与机构买卖明细节点。对应 Pydantic 契约 `Seat` + `BillboardDetail` + `DragonTiger`。每条记录链接其所属股票、席位明细、游资画像、相关事件。

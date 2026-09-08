@@ -1,3 +1,9 @@
+---
+type: methodology_index
+name: 元知识层
+domain: 通用
+created: 2026-09-07
+---
 # AI 角色（Agents）索引
 
 > trading-agents 的 7 个 Analyst 角色。区别于 [[10_Reference/investing/analysts/index|analysts/]]（真人券商研报作者）：此处是 AI Agent，不是真人。
@@ -35,7 +41,7 @@
 
 7 个 Analyst 报告 → Bull/Bear 研究员辩论 → Research Manager 综合研判 → Trader 交易方案 → 三方风险辩论（激进/保守/中立）→ Portfolio Manager 最终决策。
 
-详见 H_Reference/investing/specs/TradingAgents项目]]。
+详见 10_Reference/investing/specs/TradingAgents项目]]。
 
 ## 与 Vibe-Research 的关系
 

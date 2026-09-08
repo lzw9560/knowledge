@@ -1,3 +1,9 @@
+---
+type: methodology_index
+name: 元知识层
+domain: 通用
+created: 2026-09-07
+---
 # 项目决策 索引
 
 > SDD spec 决策实体节点。对应 `specs/` 目录下的 spec 文档。每条记录链接其问题/目标、需求、受影响文件、验收标准、关联决策。
@@ -106,10 +112,10 @@
 
 ## 关联项目实体（ora-2 方案 D 纳入的外部投研项目）
 
-- H_Reference/investing/specs/Vibe-Research项目]] — Vibe-Research 个人 AI 投研看板（本图谱主体，109 spec + 16 数据源 + 12 战法）
-- H_Reference/investing/specs/a-Plate-Sentinel项目]] — A股打板情绪监控与投研决策看板（8 大模块，Tushare 数据源，MVP 骨架）
-- H_Reference/investing/specs/TradingAgents项目]] — TradingAgents A股深度特化 fork（7 Analyst + 多 Agent 辩论）
-- H_Reference/investing/specs/每日股票分析项目]] — 每日股票分析报告生成器（多市场、多渠道推送）
+- 10_Reference/investing/specs/Vibe-Research项目]] — Vibe-Research 个人 AI 投研看板（本图谱主体，109 spec + 16 数据源 + 12 战法）
+- 10_Reference/investing/specs/a-Plate-Sentinel项目]] — A股打板情绪监控与投研决策看板（8 大模块，Tushare 数据源，MVP 骨架）
+- 10_Reference/investing/specs/TradingAgents项目]] — TradingAgents A股深度特化 fork（7 Analyst + 多 Agent 辩论）
+- 10_Reference/investing/specs/每日股票分析项目]] — 每日股票分析报告生成器（多市场、多渠道推送）
 
 ---
 

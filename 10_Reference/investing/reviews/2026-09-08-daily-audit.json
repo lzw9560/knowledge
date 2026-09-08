@@ -2,41 +2,50 @@
   "audit_date": "2026-09-08",
   "total_entities": 2498,
   "type_distribution": {
-    "stock": 411,
+    "unknown": 735,
     "metric": 401,
     "valuation": 401,
     "analyst": 396,
     "report": 392,
-    "concept": 130,
-    "industry": 126,
-    "spec": 101,
-    "dragon_tiger": 41,
-    "logic": 24,
-    "event": 20,
-    "data_source": 17,
-    "strategy": 13,
+    "spec": 81,
+    "concept": 28,
+    "dragon_tiger": 12,
+    "strategy": 11,
+    "event": 11,
+    "logic": 10,
     "agent_role": 7,
     "index": 5,
-    "decision": 5,
-    "project": 4,
-    "action": 4
+    "project": 3,
+    "action": 3,
+    "decision": 1,
+    "industry": 1
   },
-  "stub_count": 15,
+  "stub_count": 2,
   "llm_generated_count": 0,
   "placeholder_count": 0,
   "placeholder_by_type": {},
   "confidence_distribution": {
-    "medium": 1027,
-    "high": 1430
+    "medium": 787,
+    "high": 947
   },
-  "no_confidence_count": 41,
-  "broken_links": 1,
+  "no_confidence_count": 764,
+  "broken_links": 2,
   "broken_links_top10": [
     [
-      "链接",
+      "actions/rename-entity",
+      1
+    ],
+    [
+      "actions/promote-from-inbox",
       1
     ]
   ],
-  "orphan_count": 0,
-  "orphan_by_type": {}
+  "orphan_count": 52,
+  "orphan_by_type": {
+    "actions": 4,
+    "data-sources": 16,
+    "logic": 16,
+    "specs": 4,
+    "strategies": 12
+  }
 }

@@ -1,3 +1,9 @@
+---
+type: methodology_index
+name: 元知识层
+domain: 通用
+created: 2026-09-07
+---
 # 行业板块 索引
 
 > 证监会行业分类节点。对应 Pydantic 契约 `IndustrySector`。每个行业链接其成分股、相关概念、近期事件、资金流向。

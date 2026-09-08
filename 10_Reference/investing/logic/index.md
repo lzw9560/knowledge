@@ -1,3 +1,9 @@
+---
+type: methodology_index
+name: 元知识层
+domain: 通用
+created: 2026-09-07
+---
 # 逻辑规则（Logic）索引
 
 > 本体第三构件。从 schema 约束、质量报告、状态字段和图关系中发现的规则——校验/状态机/推断/自动化规则。
@@ -59,24 +65,24 @@
 
 - [[10_Reference/investing/logic/LLM抽取质量门]]
 - [[10_Reference/investing/logic/PE异常]]
-- H_Reference/investing/logic/断链告警]]
-- H_Reference/investing/logic/断链分级]]
-- H_Reference/investing/logic/因果链]]
-- H_Reference/investing/logic/置信度衰减]]
-- H_Reference/investing/logic/覆盖底线]]
-- H_Reference/investing/logic/跨域门控]]
-- H_Reference/investing/logic/数据新鲜度]]
-- H_Reference/investing/logic/去重合并]]
-- H_Reference/investing/logic/实体归档]]
-- H_Reference/investing/logic/实体生命周期]]
-- H_Reference/investing/logic/实体合并]]
-- H_Reference/investing/logic/实体晋级]]
-- H_Reference/investing/logic/孤立阈值]]
-- H_Reference/investing/logic/关系基数]]
-- H_Reference/investing/logic/情绪天气映射]]
-- H_Reference/investing/logic/源漂移]]
-- H_Reference/investing/logic/静态值禁令]]
-- H_Reference/investing/logic/stub生命周期]]
+- 10_Reference/investing/logic/断链告警]]
+- 10_Reference/investing/logic/断链分级]]
+- 10_Reference/investing/logic/因果链]]
+- 10_Reference/investing/logic/置信度衰减]]
+- 10_Reference/investing/logic/覆盖底线]]
+- 10_Reference/investing/logic/跨域门控]]
+- 10_Reference/investing/logic/数据新鲜度]]
+- 10_Reference/investing/logic/去重合并]]
+- 10_Reference/investing/logic/实体归档]]
+- 10_Reference/investing/logic/实体生命周期]]
+- 10_Reference/investing/logic/实体合并]]
+- 10_Reference/investing/logic/实体晋级]]
+- 10_Reference/investing/logic/孤立阈值]]
+- 10_Reference/investing/logic/关系基数]]
+- 10_Reference/investing/logic/情绪天气映射]]
+- 10_Reference/investing/logic/源漂移]]
+- 10_Reference/investing/logic/静态值禁令]]
+- 10_Reference/investing/logic/stub生命周期]]
 - [[10_Reference/investing/logic/实体改名]]
 - [[10_Reference/investing/logic/战法卡漂移检测]]
 - [[10_Reference/investing/logic/战法天气映射]]

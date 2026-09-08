@@ -1,3 +1,8 @@
+---
+type: folder_index
+name: 已归档项目
+created: 2026-09-07
+---
 
 # 已归档项目
 

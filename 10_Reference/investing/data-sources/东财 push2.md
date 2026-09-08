@@ -1,3 +1,19 @@
+---
+type: data_source
+name: 东财 push2
+layer: 2
+endpoint: push2/api.eastmoney.com
+rate_limit: em_get 限流 QPS≤2（1.0s+抖动0.1~0.5s）
+fallback: 熔断器+push2delay降级
+compliance: ok
+provides: [行情, K线, 分时]
+projects: [vibe-research, trading-agents]
+origin_project: vibe-research
+created: 2026-09-06
+last_synced: 2026-09-07
+confidence: high
+source: ARCHITECTURE.md
+---
 
 > [!info] 📡 数据源
 > **名称**：东财 push2  **层级**：L2
@@ -66,7 +82,7 @@
 
 ## 🔧 技术栈
 
-- 🔧 H_Reference/tech-learning/concepts/熔断器|熔断器]] — circuit_breaker.get_breaker("eastmoney") 快速失败不重复重试
-- 🔧 H_Reference/tech-learning/concepts/限流|限流]] — em_get 限流 QPS≤2（1.0s+抖动0.1~0.5s）防被东财风控识别为机器流量
-- 🔧 H_Reference/tech-learning/concepts/优雅降级|优雅降级]] — push2 失败 → push2delay（延时行情）→ 路由级缓存的多级回退
-- 🔧 H_Reference/tech-learning/concepts/缓存策略|缓存策略]] — cache_response(ttl) 路由级缓存
+- 🔧 10_Reference/tech-learning/concepts/熔断器|熔断器]] — circuit_breaker.get_breaker("eastmoney") 快速失败不重复重试
+- 🔧 10_Reference/tech-learning/concepts/限流|限流]] — em_get 限流 QPS≤2（1.0s+抖动0.1~0.5s）防被东财风控识别为机器流量
+- 🔧 10_Reference/tech-learning/concepts/优雅降级|优雅降级]] — push2 失败 → push2delay（延时行情）→ 路由级缓存的多级回退
+- 🔧 10_Reference/tech-learning/concepts/缓存策略|缓存策略]] — cache_response(ttl) 路由级缓存

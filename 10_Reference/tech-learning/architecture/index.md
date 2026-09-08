@@ -1,3 +1,8 @@
+---
+type: folder_index
+name: 架构模式
+created: 2026-09-07
+---
 
 # 架构模式
 

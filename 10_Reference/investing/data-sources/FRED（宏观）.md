@@ -1,3 +1,17 @@
+---
+type: data_source
+name: FRED（宏观）
+layer: 5
+endpoint: api.stlouisfed.org
+rate_limit: API key 隔离
+fallback: 无
+compliance: ok
+provides: [宏观指标]
+created: 2026-09-06
+last_synced: 2026-09-07
+confidence: high
+source: ARCHITECTURE.md
+---
 
 > [!info] 📡 数据源
 > **名称**：FRED（宏观）  **层级**：L5
@@ -52,6 +66,6 @@
 
 ## 🔧 技术栈
 
-- 🔧 H_Reference/tech-learning/concepts/数据契约|数据契约]] — 宏观 7 系列（DEC-002 定稿）由 Pydantic 契约层统一形状
-- 🔧 H_Reference/tech-learning/concepts/优雅降级|优雅降级]] — FRED 宏观无降级，失败标灰
-- 🔧 H_Reference/tech-learning/concepts/缓存策略|缓存策略]] — 宏观数据低频，入缓存降低请求
+- 🔧 10_Reference/tech-learning/concepts/数据契约|数据契约]] — 宏观 7 系列（DEC-002 定稿）由 Pydantic 契约层统一形状
+- 🔧 10_Reference/tech-learning/concepts/优雅降级|优雅降级]] — FRED 宏观无降级，失败标灰
+- 🔧 10_Reference/tech-learning/concepts/缓存策略|缓存策略]] — 宏观数据低频，入缓存降低请求

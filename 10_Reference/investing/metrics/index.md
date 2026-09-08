@@ -1,3 +1,9 @@
+---
+type: methodology_index
+name: 元知识层
+domain: 通用
+created: 2026-09-07
+---
 # 财务指标 索引
 
 > 个股财务周期数据节点。对应 Pydantic 契约 `Financials` + `FinancialPeriod`。每条记录链接其所属股票、趋势、盈利能力。

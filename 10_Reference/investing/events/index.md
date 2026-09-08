@@ -1,3 +1,9 @@
+---
+type: methodology_index
+name: 元知识层
+domain: 通用
+created: 2026-09-07
+---
 # 事件 索引
 
 > 新闻/公告/涨停/异动事件节点。对应 Pydantic 契约 `News` + `Announcement` + `ZTPoolItem`。每条记录链接其影响标的、触发战法、来源。

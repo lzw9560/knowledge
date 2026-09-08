@@ -1,3 +1,10 @@
+---
+type: project
+name: wechat-bot
+title: 微信 Bot
+status: 待配置
+created: 2026-09-07
+---
 
 # wechat-bot
 
@@ -10,16 +17,16 @@
 
 ## 技术栈
 - 语言：[[10_Reference/tech-learning/languages/python|Python]]
-- 集成：H_Reference/projects/active/Vibe-Research|Vibe-Research]] 的 [[10_Reference/investing/specs/archive/m0-foundation/S011-调度收口|S011 调度收口]] 调度产出 → 微信推送
+- 集成：10_Reference/projects/active/Vibe-Research|Vibe-Research]] 的 [[10_Reference/investing/specs/archive/m0-foundation/S011-调度收口|S011 调度收口]] 调度产出 → 微信推送
 
 ## 与 Vibe-Research 的关系
 - wechat-bot 是 Vibe-Research 的**输出渠道扩展**
-- 推送内容：[[10_Reference/investing/strategies/|战法卡]] 触发信号、H_Reference/market_sentiment/情绪仪表盘|情绪看板]] 异动
+- 推送内容：[[10_Reference/investing/strategies/|战法卡]] 触发信号、10_Reference/market_sentiment/情绪仪表盘|情绪看板]] 异动
 - 合规边界：推送是**私人决策辅助**，非荐股——遵守 AGENTS.md 弱合规（CLAUDE.md §1）
 
 ## 相关链接
 - [[10_Reference/projects/MOC]]
 - [[10_Reference/investing/MOC]]
-- H_Reference/projects/active/Vibe-Research]]
+- 10_Reference/projects/active/Vibe-Research]]
 - [[10_Reference/tech-learning/MOC]]
-- H_Reference/meta/四构件本体方法论]]
+- 10_Reference/meta/四构件本体方法论]]

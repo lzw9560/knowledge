@@ -1,3 +1,12 @@
+---
+type: concept
+code: BK1035
+name: CPO概念
+related_industry: 通信设备
+created: 2026-09-07
+confidence: medium
+source: astock.concept_blocks
+---
 
 > [!info] 💡 概念信息
 > **概念**：CPO概念  **关联行业**：通信设备
@@ -44,7 +53,7 @@ CPO（光电共封装）是 AI 算力光互联下一代技术，解决高速光�
 
 ## 💰 资金流向
 
-- 数据源：H_Reference/investing/data-sources/东财 push2|东财 push2]]
+- 数据源：10_Reference/investing/data-sources/东财 push2|东财 push2]]
 
 ## 📰 相关研报
 
