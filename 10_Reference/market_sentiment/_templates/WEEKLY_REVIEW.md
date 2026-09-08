@@ -12,8 +12,8 @@ circuit_breaker_triggers: 0
 
 # 📊 周复盘 · {{date:YYYY-MM-DD}}
 
-> 复盘周期：`=this.period`
-> 本周均温Z：`=this.week_avg_temp_z` | 均置信度：`=this.week_avg_confidence` | 信号准确率：`=this.week_signal_accuracy` | 熔断触发：`=this.circuit_breaker_triggers`次
+> 复盘周期：<!-- period -->
+> 本周均温Z：<!-- week_avg_temp_z --> | 均置信度：<!-- week_avg_confidence --> | 信号准确率：<!-- week_signal_accuracy --> | 熔断触发：<!-- circuit_breaker_triggers -->次
 
 ---
 

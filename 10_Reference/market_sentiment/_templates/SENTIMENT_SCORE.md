@@ -36,26 +36,26 @@ volume_ratio: 0.00
 
 | 维度 | Z值 | 含义 |
 |------|-----|------|
-| 🌡️ 温度 Z | `=this.temperature_z` | 当前状态 vs 历史分位 |
-| 📈 速率 ΔZ | `=this.velocity_dz` | 5日变化率 |
-| 🔀 背离度 D | `=this.divergence_d` | 层间方向不一致程度 |
+| 🌡️ 温度 Z | <!-- temperature_z --> | 当前状态 vs 历史分位 |
+| 📈 速率 ΔZ | <!-- velocity_dz --> | 5日变化率 |
+| 🔀 背离度 D | <!-- divergence_d --> | 层间方向不一致程度 |
 
-**方向**: `=this.direction` | **置信度**: `=this.confidence * 100`% | **熔断**: Level `=this.circuit_breaker_level`
+**方向**: <!-- direction --> | **置信度**: <!-- confidence --> * 100`% | **熔断**: Level <!-- circuit_breaker_level -->
 
 ## 六层信号
 
 | 层级 | Z值 | 方向 | 关键信号 |
 |------|-----|------|---------|
-| L0 宏观周期 | `=this.l0_macro_z` | — | 社融/PMI/DR007 |
-| L1 政策监管 | `=this.l1_policy_z` | — | 政策事件/监管态度 |
-| L2 机构动向 | `=this.l2_inst_z` | — | 龙虎榜席位博弈 |
-| L3 资金面 | `=this.l3_capital_z` | — | 主力资金/竞价异动 |
-| L4 市场情绪 | `=this.l4_sentiment_z` | — | 涨停池/连板天梯 |
-| L5 衍生品 | `=this.l5_derivatives_z` | — | PCR/IV/基差/Skew |
+| L0 宏观周期 | <!-- l0_macro_z --> | — | 社融/PMI/DR007 |
+| L1 政策监管 | <!-- l1_policy_z --> | — | 政策事件/监管态度 |
+| L2 机构动向 | <!-- l2_inst_z --> | — | 龙虎榜席位博弈 |
+| L3 资金面 | <!-- l3_capital_z --> | — | 主力资金/竞价异动 |
+| L4 市场情绪 | <!-- l4_sentiment_z --> | — | 涨停池/连板天梯 |
+| L5 衍生品 | <!-- l5_derivatives_z --> | — | PCR/IV/基差/Skew |
 
 ## 仓位建议
 
-> **`=this.position_label`** → 仓位 `=this.position_range` | `=this.position_action`
+> **<!-- position_label -->** → 仓位 <!-- position_range --> | <!-- position_action -->
 
 | Z-Score区间 | 状态 | 仓位 | 操作 |
 |-------------|------|------|------|
@@ -69,11 +69,11 @@ volume_ratio: 0.00
 
 | 指标 | 今日值 | 说明 |
 |------|--------|------|
-| 涨停数 | `=this.limit_up_count` | 涨停池总量 |
-| 最高连板 | `=this.max_consecutive`板 | 连板天梯顶端 |
-| 炸板率 | `=this.broken_rate * 100`% | 炸板/涨停+炸板 |
-| 北向资金 | `=this.northbound_net`亿 | 降权后信号 |
-| 量能比 | `=this.volume_ratio` | 成交额/20日均值 |
+| 涨停数 | <!-- limit_up_count --> | 涨停池总量 |
+| 最高连板 | <!-- max_consecutive -->板 | 连板天梯顶端 |
+| 炸板率 | <!-- broken_rate --> * 100`% | 炸板/涨停+炸板 |
+| 北向资金 | <!-- northbound_net -->亿 | 降权后信号 |
+| 量能比 | <!-- volume_ratio --> | 成交额/20日均值 |
 
 ## ⚠️ 对抗性分析
 

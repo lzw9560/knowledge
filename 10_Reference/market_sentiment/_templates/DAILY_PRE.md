@@ -26,32 +26,32 @@ circuit_breaker_level: 0
 
 ## 战略方向（L0宏观 + L1政策）
 
-> **方向：`=this.strategic_direction`** | 周期：`=this.strategic_horizon`
+> **方向：<!-- strategic_direction -->** | 周期：<!-- strategic_horizon -->
 
-- L0 宏观层 Z值：`=this.l0_macro_z`
+- L0 宏观层 Z值：<!-- l0_macro_z -->
   - 社融/M1-M2/PMI/DR007 状态
-- L1 政策层 Z值：`=this.l1_policy_z`
+- L1 政策层 Z值：<!-- l1_policy_z -->
   - 昨日政策事件：
   - 政策力度：
 
 ## 战术时机（L2机构 + L3资金）
 
-> **信号：`=this.tactical_signal`** | 周期：`=this.tactical_horizon`
+> **信号：<!-- tactical_signal -->** | 周期：<!-- tactical_horizon -->
 
-- L2 机构层 Z值：`=this.l2_inst_z`
+- L2 机构层 Z值：<!-- l2_inst_z -->
   - 龙虎榜机构vs游资：
   - 融资融券变化：
-- L3 资金面 Z值：`=this.l3_capital_z`
+- L3 资金面 Z值：<!-- l3_capital_z -->
   - 北向资金（降权）：
   - 竞价异动：
 
 ## 交叉确认（L4情绪 + L5衍生品）
 
-> **确认度：`=this.confidence * 100`%**
+> **确认度：<!-- confidence --> * 100`%**
 
-- L4 情绪层 Z值：`=this.l4_sentiment_z`
+- L4 情绪层 Z值：<!-- l4_sentiment_z -->
   - 昨日涨停池/连板/炸板率：
-- L5 衍生品 Z值：`=this.l5_derivatives_z`
+- L5 衍生品 Z值：<!-- l5_derivatives_z -->
   - PCR/IV/基差/Skew：
 
 ## 隔夜外盘
@@ -73,7 +73,7 @@ circuit_breaker_level: 0
 
 ## 仓位建议
 
-> **`=this.position_label`** → 仓位 `=this.position_range`
+> **<!-- position_label -->** → 仓位 <!-- position_range -->
 
 ## ⚠️ 对抗性分析
 
@@ -84,7 +84,7 @@ circuit_breaker_level: 0
 
 ## 熔断状态
 
-Level `=this.circuit_breaker_level` `=this.circuit_breaker_level == 0 ? "正常" : "⚠️ 已触发"`
+Level <!-- circuit_breaker_level --> <!-- circuit_breaker_level --> == 0 ? "正常" : "⚠️ 已触发"`
 
 ---
 > 评分引擎：`_data/db/sentiment_engine.py` | 配置：`_data/db/framework_config.json`

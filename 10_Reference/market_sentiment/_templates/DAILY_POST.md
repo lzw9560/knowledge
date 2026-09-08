@@ -25,13 +25,13 @@ circuit_breaker_level: 0
 
 ## 预测验证
 
-> 盘前预测：`=this.predicted_direction`
-> 实际走势：`=this.actual_direction`
-> 预测准确：`=this.prediction_correct`
+> 盘前预测：<!-- predicted_direction -->
+> 实际走势：<!-- actual_direction -->
+> 预测准确：<!-- prediction_correct -->
 
 | 维度 | 盘前 | 盘后 | 变化 |
 |------|------|------|------|
-| 温度 Z | `=this.morning_z` | `=this.closing_z` | `=this.z_change` |
+| 温度 Z | <!-- morning_z --> | <!-- closing_z --> | <!-- z_change --> |
 
 ## 大盘概况
 
@@ -45,10 +45,10 @@ circuit_breaker_level: 0
 
 | 指标 | 今日 | 昨日 | 变化 |
 |------|------|------|------|
-| 涨停数 | `=this.limit_up_count` | | |
-| 炸板数 | `=this.broken_count` | | |
-| 最高连板 | `=this.max_consecutive`板 | | |
-| 量能比 | `=this.volume_ratio` | | |
+| 涨停数 | <!-- limit_up_count --> | | |
+| 炸板数 | <!-- broken_count --> | | |
+| 最高连板 | <!-- max_consecutive -->板 | | |
+| 量能比 | <!-- volume_ratio --> | | |
 
 连板天梯：
 
@@ -78,7 +78,7 @@ circuit_breaker_level: 0
 ## 信号衰减检查
 
 - 今日信号衰减率：
-- 连续误判次数：`=this.circuit_breaker_level`
+- 连续误判次数：<!-- circuit_breaker_level -->
 - 是否需要降权：
 
 ---

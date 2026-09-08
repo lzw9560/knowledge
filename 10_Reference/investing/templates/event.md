@@ -12,7 +12,7 @@ created: <% tp.date.now("YYYY-MM-DD") %>
 > **日期**：date  **类型**：event_type  **来源**：source
 > **摘要**：summary
 > 
-> **影响标的数**：`=(length(split(this.codes, ",")))`
+> **影响标的数**：0
 
 ## 📋 事件概述
 

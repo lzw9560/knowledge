@@ -20,10 +20,10 @@ expiry_effect: false
 |------|------|
 | **政策名称** | |
 | **发布机构** | |
-| **发布时间** | `=this.trading_date` |
+| **发布时间** | <!-- trading_date --> |
 | **政策类型** | 货币政策 / 监管政策 / 产业政策 / 财政政策 |
-| **影响评分** | `=this.impact_score`（-5 极度利空 ~ +5 极度利好）|
-| **L1 Z贡献** | `=this.l1_z_contribution` |
+| **影响评分** | <!-- impact_score -->（-5 极度利空 ~ +5 极度利好）|
+| **L1 Z贡献** | <!-- l1_z_contribution --> |
 
 ## 政策要点
 
@@ -39,10 +39,10 @@ expiry_effect: false
 
 | 维度 | 评分 | 权重 | 加权Z |
 |------|------|------|-------|
-| 政策事件力度 | `=this.impact_score` | 40% | |
+| 政策事件力度 | <!-- impact_score --> | 40% | |
 | 资本市场监管态度 | | 30% | |
 | 监管政策连续性 | | 30% | |
-| **L1层级Z合计** | | 100% | `=this.l1_z_contribution` |
+| **L1层级Z合计** | | 100% | <!-- l1_z_contribution --> |
 
 ### 关键词匹配规则
 
@@ -90,7 +90,7 @@ expiry_effect: false
 
 ## 到期日效应检查
 
-> 当前是否到期周？ `=this.expiry_effect`
+> 当前是否到期周？ <!-- expiry_effect -->
 > 到期周内政策影响打0.7折
 
 ## 后续跟踪清单
