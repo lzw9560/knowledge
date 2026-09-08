@@ -15,12 +15,12 @@ source: logic_rules
 > **动作**：`SYNC-001`  **类型**：链接维护
 > **触发**：`战法卡漂移检测报 drift（vault 战法卡 source_sha ≠ 源仓对应文件当前 SHA）`  **目标**：`strategies/`
 >
-> **触发自**：[[logic/]]
+> **触发自**：[[10_Reference/investing/logic/index|logic/]]
 
 ## 📋 动作定义
 
 - **类型**：链接维护（源仓 → vault 增量同步）
-- **触发条件**：[[logic/战法卡漂移检测]]（DRIFT-001）报告 drift=true（vault 战法卡 frontmatter 的 `source_sha` ≠ 源仓 `backend/strategies/cards/` 对应文件的当前 SHA）
+- **触发条件**：[[10_Reference/investing/logic/战法卡漂移检测]]（DRIFT-001）报告 drift=true（vault 战法卡 frontmatter 的 `source_sha` ≠ 源仓 `backend/strategies/cards/` 对应文件的当前 SHA）
 - **目标实体**：`strategies/`（12 张战法卡）
 - **审计**：true（记录同步前后 SHA + diff）
 
@@ -45,7 +45,7 @@ source: logic_rules
 
 ## 🔗 关联
 
-- **触发自**：[[logic/]]
-- **作用于**：[[stocks/]]
-- **执行记录**：[[reviews/]]
+- **触发自**：[[10_Reference/investing/logic/index|logic/]]
+- **作用于**：[[10_Reference/investing/stocks/index|stocks/]]
+- **执行记录**：[[10_Reference/investing/reviews/index|reviews/]]
 - **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个

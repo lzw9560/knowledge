@@ -12,7 +12,7 @@ source: specs/README.md
 > [!info] 📋 项目决策
 > **编号**：S149  **标题**：vibe-astock 语义吸收（4 阶段框架 spec）  **状态**：草案
 >
-> **关联**：[[specs/]] · [[strategies/]] · [[data-sources/]]
+> **关联**：[[10_Reference/investing/specs/index|specs/]] · [[10_Reference/investing/strategies/index|strategies/]] · [[10_Reference/investing/data-sources/index|data-sources/]]
 
 ## 🎯 问题/目标
 
@@ -34,15 +34,15 @@ S149 旨在解决 Vibe 编程中大量非结构化的设计意图与代码片段
 - 源文件：`specs/S149-vibe-astock语义吸收/spec.md`（Vibe-Research 仓）
 - README 索引：`specs/README.md`
 - 子文档：spec
-- 数据源：[[data-sources/]]
-- 战法：[[strategies/]]
+- 数据源：[[10_Reference/investing/data-sources/index|data-sources/]]
+- 战法：[[10_Reference/investing/strategies/index|strategies/]]
 
 
 ## 🔗 关联决策
 
 > 与其他 spec 的依赖/冲突/替代关系。
 
-- [[specs/]]
+- [[10_Reference/investing/specs/index|specs/]]
 
 ## 🔗 关联
 
@@ -50,6 +50,6 @@ S149 旨在解决 Vibe 编程中大量非结构化的设计意图与代码片段
 
 ## 🔗 技术参考
 
-- 🔧 [[tech-learning/concepts/data-contract|数据契约]] — 语义吸收即把裸 dict + 魔法字符串吸收为 Pydantic 契约模型
-- 🔧 [[tech-learning/frameworks/pydantic|Pydantic]] — 4 阶段框架用 Pydantic 做形状统一
-- 🏗️ [[tech-learning/architecture/layered-architecture|分层架构]] — 吸收过程遵循分层，不跨层泄漏
+- 🔧 [[10_Reference/tech-learning/concepts/data-contract|数据契约]] — 语义吸收即把裸 dict + 魔法字符串吸收为 Pydantic 契约模型
+- 🔧 [[10_Reference/tech-learning/frameworks/pydantic|Pydantic]] — 4 阶段框架用 Pydantic 做形状统一
+- 🏗️ [[10_Reference/tech-learning/architecture/layered-architecture|分层架构]] — 吸收过程遵循分层，不跨层泄漏

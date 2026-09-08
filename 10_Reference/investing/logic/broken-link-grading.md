@@ -12,7 +12,7 @@ created: 2026-09-07
 > **规则**：`BROKEN-LINK-GRADING-001`  **类型**：分级规则
 > **严重级**：low  **适用实体**：全实体
 >
-> **关联**：[[logic/broken-link-alert]]
+> **关联**：[[10_Reference/investing/logic/broken-link-alert]]
 
 ## 📋 规则定义
 
@@ -26,10 +26,10 @@ created: 2026-09-07
 | medium | 目录未建（目标文件夹缺失） | 建目录 |
 | low | 未导入悬空（目标 spec 未导入 vault） | 导入实体 or 标记待导入 |
 
-详见 [[reviews/audit-procedure]] §4。
+详见 [[10_Reference/investing/reviews/audit-procedure]] §4。
 
 ## 🔗 关联
 
-- **触发动作**：[[actions/]]
-- **来源**：[[reviews/audit-procedure]]
+- **触发动作**：[[10_Reference/investing/actions/index|actions/]]
+- **来源**：[[10_Reference/investing/reviews/audit-procedure]]
 - **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个

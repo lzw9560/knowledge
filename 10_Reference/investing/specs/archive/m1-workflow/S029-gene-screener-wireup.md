@@ -24,5 +24,5 @@ S029 为 Vibe-Research 系统引入了一个可配置阈值的基因筛选器前
 - 源文件：`specs/S029-gene-screener-wireup/spec.md`（Vibe-Research 仓）
 - README 索引：`specs/README.md`
 - 子文档：spec
-- 数据源：[[data-sources/]]
-- 战法：[[strategies/]]
+- 数据源：[[10_Reference/investing/data-sources/index|data-sources/]]
+- 战法：[[10_Reference/investing/strategies/index|strategies/]]

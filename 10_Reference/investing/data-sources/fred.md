@@ -49,16 +49,16 @@ source: ARCHITECTURE.md
 
 ## 🔗 相关实体
 
-- [[stocks/]]
-- [[reports/]]
-- [[dragon-tiger/]]
-- [[metrics/]]
-- [[valuations/]]
-- [[events/]]
+- [[10_Reference/investing/stocks/index|stocks/]]
+- [[10_Reference/investing/reports/index|reports/]]
+- [[10_Reference/investing/dragon-tiger/index|dragon-tiger/]]
+- [[10_Reference/investing/metrics/index|metrics/]]
+- [[10_Reference/investing/valuations/index|valuations/]]
+- [[10_Reference/investing/events/index|events/]]
 
 ## 📜 关联 spec
 
-- [[specs/]]
+- [[10_Reference/investing/specs/index|specs/]]
 
 ## 🔗 关联
 
@@ -66,6 +66,6 @@ source: ARCHITECTURE.md
 
 ## 🔧 技术栈
 
-- 🔧 [[tech-learning/concepts/data-contract|数据契约]] — 宏观 7 系列（DEC-002 定稿）由 Pydantic 契约层统一形状
-- 🔧 [[tech-learning/concepts/graceful-degradation|优雅降级]] — FRED 宏观无降级，失败标灰
-- 🔧 [[tech-learning/concepts/caching-strategy|缓存策略]] — 宏观数据低频，入缓存降低请求
+- 🔧 [[10_Reference/tech-learning/concepts/data-contract|数据契约]] — 宏观 7 系列（DEC-002 定稿）由 Pydantic 契约层统一形状
+- 🔧 [[10_Reference/tech-learning/concepts/graceful-degradation|优雅降级]] — FRED 宏观无降级，失败标灰
+- 🔧 [[10_Reference/tech-learning/concepts/caching-strategy|缓存策略]] — 宏观数据低频，入缓存降低请求

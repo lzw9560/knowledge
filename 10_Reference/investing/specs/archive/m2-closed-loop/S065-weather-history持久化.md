@@ -24,5 +24,5 @@ S065 为 Vibe-Research 平台引入天气历史数据的持久化能力，解决
 - 源文件：`specs/S065-weather-history持久化/spec.md`（Vibe-Research 仓）
 - README 索引：`specs/README.md`
 - 子文档：spec
-- 数据源：[[data-sources/]]
-- 战法：[[strategies/]]
+- 数据源：[[10_Reference/investing/data-sources/index|data-sources/]]
+- 战法：[[10_Reference/investing/strategies/index|strategies/]]

@@ -14,7 +14,7 @@ source: astock.eastmoney_reports.researcher
 > **姓名**：Ji SHI  **机构**：招银国际
 > **覆盖数**：1
 >
-> **关联**：[[reports/]] · [[stocks/]]
+> **关联**：[[10_Reference/investing/reports/index|reports/]] · [[10_Reference/investing/stocks/index|stocks/]]
 
 ## 📋 覆盖领域
 **覆盖领域**：Ji SHI 专注于汽车整车领域，当前覆盖标的为比亚迪（002594）。

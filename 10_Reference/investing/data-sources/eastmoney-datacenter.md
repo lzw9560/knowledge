@@ -73,16 +73,16 @@ source: ARCHITECTURE.md
 
 ## 🔗 相关实体
 
-- [[stocks/]]
-- [[reports/]]
-- [[dragon-tiger/]]
-- [[metrics/]]
-- [[valuations/]]
-- [[events/]]
+- [[10_Reference/investing/stocks/index|stocks/]]
+- [[10_Reference/investing/reports/index|reports/]]
+- [[10_Reference/investing/dragon-tiger/index|dragon-tiger/]]
+- [[10_Reference/investing/metrics/index|metrics/]]
+- [[10_Reference/investing/valuations/index|valuations/]]
+- [[10_Reference/investing/events/index|events/]]
 
 ## 📜 关联 spec
 
-- [[specs/]]
+- [[10_Reference/investing/specs/index|specs/]]
 
 ## 🔗 关联
 
@@ -90,6 +90,6 @@ source: ARCHITECTURE.md
 
 ## 🔧 技术栈
 
-- 🔧 [[tech-learning/concepts/circuit-breaker|熔断器]] — datacenter（龙虎榜/解禁/融资融券）采集加熔断
-- 🔧 [[tech-learning/concepts/rate-limiting|限流]] — 共用 em_get QPS≤2 限流
-- 🔧 [[tech-learning/concepts/caching-strategy|缓存策略]] — 低频数据入缓存降低重复请求
+- 🔧 [[10_Reference/tech-learning/concepts/circuit-breaker|熔断器]] — datacenter（龙虎榜/解禁/融资融券）采集加熔断
+- 🔧 [[10_Reference/tech-learning/concepts/rate-limiting|限流]] — 共用 em_get QPS≤2 限流
+- 🔧 [[10_Reference/tech-learning/concepts/caching-strategy|缓存策略]] — 低频数据入缓存降低重复请求

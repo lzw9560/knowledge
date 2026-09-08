@@ -37,9 +37,9 @@ source: scripts/extract_specs.py
 
 ## 关联
 
-- 上游：[[specs/archive/m3-strategy/S066-策略特定漏斗架构重构]]（策略特定漏斗） / [[specs/archive/m3-strategy/S086-涨停战法pipeline统一架构]]（涨停战法 pipeline 统一架构）
-- 衔接后续：[[specs/archive/m5-战法细化/S097-逐条件因子过滤]]（逐条件因子过滤） / [[specs/archive/m7-卡片对齐/S100-战法卡片对齐]]（战法卡片对齐）
-- 影响实体：[[stocks/]] [[events/]]（涨停分类）
-- 战法：[[strategies/platform_breakout]] [[strategies/first_plate]] [[strategies/low_absorption]] [[strategies/reverse_package]]
-- 数据源：[[data-sources/akshare]] [[data-sources/eastmoney-push2]]
+- 上游：[[10_Reference/investing/specs/archive/m3-strategy/S066-策略特定漏斗架构重构]]（策略特定漏斗） / [[10_Reference/investing/specs/archive/m3-strategy/S086-涨停战法pipeline统一架构]]（涨停战法 pipeline 统一架构）
+- 衔接后续：[[10_Reference/investing/specs/archive/m5-战法细化/S097-逐条件因子过滤]]（逐条件因子过滤） / [[10_Reference/investing/specs/archive/m7-卡片对齐/S100-战法卡片对齐]]（战法卡片对齐）
+- 影响实体：[[10_Reference/investing/stocks/index|stocks/]] [[10_Reference/investing/events/index|events/]]（涨停分类）
+- 战法：[[10_Reference/investing/strategies/platform_breakout]] [[10_Reference/investing/strategies/first_plate]] [[10_Reference/investing/strategies/low_absorption]] [[10_Reference/investing/strategies/reverse_package]]
+- 数据源：[[10_Reference/investing/data-sources/akshare]] [[10_Reference/investing/data-sources/eastmoney-push2]]
 - 源文件：`specs/archive/m5-战法细化/S094-战法分类与双pipeline重构/spec.md`

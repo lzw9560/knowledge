@@ -9,7 +9,7 @@ created: 2026-09-07
 > [!info] 概念信息
 > **概念**：IT运维  **关联行业**：软件  **成分股数**：`=(length(filter(this.file.inlinks, (l) => l.folder = "stocks")))`
 > 
-> **关联**：[[industries/]] · [[data-sources/]]
+> **关联**：[[10_Reference/investing/industries/index|industries/]] · [[10_Reference/investing/data-sources/index|data-sources/]]
 
 ## 📖 题材逻辑
 **题材逻辑**：IT 运维是保障企业信息系统稳定、高效运行的关键环节，随着企业数字化转型深入，IT 架构日益复杂，对运维的自动化、智能化需求不断提升。A 股市场中该概念成分股极少，稀缺性使其容易受到主题性资金关注。
@@ -30,6 +30,6 @@ LIMIT 20
 
 ## 🔗 关联
 
-- **行业**：[[industries/]]
-- **数据源**：[[data-sources/]]
+- **行业**：[[10_Reference/investing/industries/index|industries/]]
+- **数据源**：[[10_Reference/investing/data-sources/index|data-sources/]]
 - **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个

@@ -76,9 +76,9 @@ LIMIT 50
 
 ## 🔗 关联
 
-- **触发动作**：[[actions/]]
-- **前置规则**：[[logic/LLM抽取质量门]]（抽取阶段打分）
-- **后置规则**：[[logic/entity-lifecycle]]（正式区生命周期）
-- **约束实体**：[[inbox/]]
-- **来源决策**：[[specs/]]
+- **触发动作**：[[10_Reference/investing/actions/index|actions/]]
+- **前置规则**：[[10_Reference/investing/logic/LLM抽取质量门]]（抽取阶段打分）
+- **后置规则**：[[10_Reference/investing/logic/entity-lifecycle]]（正式区生命周期）
+- **约束实体**：[[10_Reference/investing/inbox/index|inbox/]]
+- **来源决策**：[[10_Reference/investing/specs/index|specs/]]
 - **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个

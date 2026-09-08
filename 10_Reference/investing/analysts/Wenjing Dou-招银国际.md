@@ -14,7 +14,7 @@ source: astock.eastmoney_reports.researcher
 > **姓名**：Wenjing Dou  **机构**：招银国际
 > **覆盖数**：1
 >
-> **关联**：[[reports/]] · [[stocks/]]
+> **关联**：[[10_Reference/investing/reports/index|reports/]] · [[10_Reference/investing/stocks/index|stocks/]]
 
 ## 📋 覆盖领域
 **覆盖领域**：专注于汽车整车行业，对相关整车制造企业的基本面与市场动态进行跟踪分析。

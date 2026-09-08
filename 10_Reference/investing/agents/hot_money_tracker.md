@@ -14,7 +14,7 @@ source: trading-agents/README.md
 > [!info] 🤖 AI 角色
 > **角色**：游资追踪师  **职能**：`hot_money_tracker`
 > **来源项目**：trading-agents
-> **辩论对手**：[[agents/policy_analyst]], [[agents/lockup_monitor]]
+> **辩论对手**：[[10_Reference/investing/agents/policy_analyst]], [[10_Reference/investing/agents/lockup_monitor]]
 
 ## 🎯 角色职责
 
@@ -25,13 +25,13 @@ source: trading-agents/README.md
 
 ## 📡 数据源
 
-- [[data-sources/]]
+- [[10_Reference/investing/data-sources/index|data-sources/]]
 
 ## ⚔️ 辩论对手
 
 > 该 Agent 在 Bull/Bear 辩论与风险三方辩论中的对手角色。
 
-- [[agents/]]
+- [[10_Reference/investing/agents/index|agents/]]
 
 ## 🔗 与 Vibe-Research 的关系
 

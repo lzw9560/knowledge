@@ -18,5 +18,5 @@ source: scripts/extract_specs.py
 ## 关联
 
 - 源文件：`specs/S030-pre-market-multilayer/spec.md`（Vibe-Research 仓）
-- 数据源：[[data-sources/]]
-- 战法：[[strategies/]]
+- 数据源：[[10_Reference/investing/data-sources/index|data-sources/]]
+- 战法：[[10_Reference/investing/strategies/index|strategies/]]

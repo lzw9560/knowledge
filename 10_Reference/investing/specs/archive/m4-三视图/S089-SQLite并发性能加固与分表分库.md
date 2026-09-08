@@ -24,5 +24,5 @@ S089 规范旨在解决 SQLite 在承载 seal_intraday 高频行情数据时因�
 - 源文件：`specs/archive/m4-三视图/S089-SQLite并发性能加固与分表分库/spec.md`（Vibe-Research 仓）
 - README 索引：`specs/README.md`
 - 子文档：spec
-- 数据源：[[data-sources/]]
-- 战法：[[strategies/]]
+- 数据源：[[10_Reference/investing/data-sources/index|data-sources/]]
+- 战法：[[10_Reference/investing/strategies/index|strategies/]]

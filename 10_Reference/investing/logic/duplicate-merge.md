@@ -66,12 +66,12 @@ HAVING length(rows) > 1
   1. 保留信息最完整的（非 placeholder 优先）
   2. 合并冗余文件的 frontmatter 字段（取非空值）+ 正文段
   3. 冗余文件 move_note 到 `archive/duplicates/`（可恢复，不真删）
-- 合并后需更新所有指向冗余文件的反向链接（走 [[actions/rename-entity]]）
+- 合并后需更新所有指向冗余文件的反向链接（走 [[10_Reference/investing/actions/rename-entity]]）
 
 
 ## 🔗 关联
 
-- **触发动作**：[[actions/]]
-- **约束实体**：[[stocks/]]
-- **来源决策**：[[specs/]]
+- **触发动作**：[[10_Reference/investing/actions/index|actions/]]
+- **约束实体**：[[10_Reference/investing/stocks/index|stocks/]]
+- **来源决策**：[[10_Reference/investing/specs/index|specs/]]
 - **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个

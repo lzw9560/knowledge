@@ -57,12 +57,12 @@ LIMIT 50
 
 - `action_on_violation`：标记 `data_suspect: true` + `suspect_reason`
 - 标记后该实体不应作为"PE 排序""估值对比"等场景的数据源
-- 应触发 [[actions/]] 的人工复核流程（待建）
+- 应触发 [[10_Reference/investing/actions/index|actions/]] 的人工复核流程（待建）
 
 
 ## 🔗 关联
 
-- **触发动作**：[[actions/]]
-- **约束实体**：[[stocks/]]
-- **来源决策**：[[specs/]]
+- **触发动作**：[[10_Reference/investing/actions/index|actions/]]
+- **约束实体**：[[10_Reference/investing/stocks/index|stocks/]]
+- **来源决策**：[[10_Reference/investing/specs/index|specs/]]
 - **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个

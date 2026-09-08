@@ -67,7 +67,7 @@ GROUP BY type AS "类型"
 
 ## 🔗 关联
 
-- **触发动作**：[[actions/]]
-- **约束实体**：[[stocks/]]
-- **来源决策**：[[specs/]]
+- **触发动作**：[[10_Reference/investing/actions/index|actions/]]
+- **约束实体**：[[10_Reference/investing/stocks/index|stocks/]]
+- **来源决策**：[[10_Reference/investing/specs/index|specs/]]
 - **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个

@@ -48,16 +48,16 @@ source: ARCHITECTURE.md
 
 ## 🔗 相关实体
 
-- [[stocks/]]
-- [[reports/]]
-- [[dragon-tiger/]]
-- [[metrics/]]
-- [[valuations/]]
-- [[events/]]
+- [[10_Reference/investing/stocks/index|stocks/]]
+- [[10_Reference/investing/reports/index|reports/]]
+- [[10_Reference/investing/dragon-tiger/index|dragon-tiger/]]
+- [[10_Reference/investing/metrics/index|metrics/]]
+- [[10_Reference/investing/valuations/index|valuations/]]
+- [[10_Reference/investing/events/index|events/]]
 
 ## 📜 关联 spec
 
-- [[specs/]]
+- [[10_Reference/investing/specs/index|specs/]]
 
 ## 🔗 关联
 
@@ -65,6 +65,6 @@ source: ARCHITECTURE.md
 
 ## 🔧 技术栈
 
-- 🔧 [[tech-learning/concepts/graceful-degradation|优雅降级]] — 108 源单源失败不拖垮整体，聚合层容错
-- 🔧 [[tech-learning/concepts/circuit-breaker|熔断器]] — 单源连续失败可加熔断
-- 🔧 [[tech-learning/concepts/caching-strategy|缓存策略]] — 资讯入缓存降低重复抓取
+- 🔧 [[10_Reference/tech-learning/concepts/graceful-degradation|优雅降级]] — 108 源单源失败不拖垮整体，聚合层容错
+- 🔧 [[10_Reference/tech-learning/concepts/circuit-breaker|熔断器]] — 单源连续失败可加熔断
+- 🔧 [[10_Reference/tech-learning/concepts/caching-strategy|缓存策略]] — 资讯入缓存降低重复抓取

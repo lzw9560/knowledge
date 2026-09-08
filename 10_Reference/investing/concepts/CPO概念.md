@@ -12,7 +12,7 @@ source: astock.concept_blocks
 > **概念**：CPO概念  **关联行业**：通信设备
 > **成分股数**：`=(length(filter(this.file.inlinks, (l) => l.folder = "stocks")))`
 >
-> **关联**：[[industries/]] · [[data-sources/]]
+> **关联**：[[10_Reference/investing/industries/index|industries/]] · [[10_Reference/investing/data-sources/index|data-sources/]]
 
 ## 📊 概念概览
 
@@ -51,7 +51,7 @@ LIMIT 20
 
 ## 💰 资金流向
 
-- 数据源：[[data-sources/eastmoney-push2|东财 push2]]
+- 数据源：[[10_Reference/investing/data-sources/eastmoney-push2|东财 push2]]
 
 ## 📰 相关研报
 

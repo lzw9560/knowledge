@@ -69,14 +69,14 @@ for (code, type), files in code_type_map.items():
 | 违反 | 严重级 | 处置 |
 |---|---|---|
 | 同 code + 同 type 多份未合并 | high | 触发合并工单，按 confidence 选 keeper |
-| 合并后未迁移反向链接 | high | 走 [[actions/rename-entity]] 批量改链 |
+| 合并后未迁移反向链接 | high | 走 [[10_Reference/investing/actions/rename-entity]] 批量改链 |
 | 合并直接删冗余文件（未归档） | critical | 从 git 恢复 + move 到 archive/duplicates/ |
 | 同 code 不同 type 误报为重复 | low | 已豁免（联合键去重，属正常关联） |
 
 ## 🔗 关联
 
-- **触发动作**：[[actions/]]
-- **相关规则**：[[logic/duplicate-merge]]（旧名，本规则细化 confidence 保留策略）
-- **约束实体**：[[stocks/]] [[metrics/]] [[valuations/]] [[reports/]]
-- **来源决策**：[[specs/]]
+- **触发动作**：[[10_Reference/investing/actions/index|actions/]]
+- **相关规则**：[[10_Reference/investing/logic/duplicate-merge]]（旧名，本规则细化 confidence 保留策略）
+- **约束实体**：[[10_Reference/investing/stocks/index|stocks/]] [[10_Reference/investing/metrics/index|metrics/]] [[10_Reference/investing/valuations/index|valuations/]] [[10_Reference/investing/reports/index|reports/]]
+- **来源决策**：[[10_Reference/investing/specs/index|specs/]]
 - **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个

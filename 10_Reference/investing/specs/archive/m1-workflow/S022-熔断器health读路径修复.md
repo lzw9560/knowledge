@@ -24,5 +24,5 @@ S022 修复了熔断器健康检查读路径忽略 recovery_timeout 的问题，
 - 源文件：`specs/S022-熔断器health读路径修复/spec.md`（Vibe-Research 仓）
 - README 索引：`specs/README.md`
 - 子文档：spec
-- 数据源：[[data-sources/]]
-- 战法：[[strategies/]]
+- 数据源：[[10_Reference/investing/data-sources/index|data-sources/]]
+- 战法：[[10_Reference/investing/strategies/index|strategies/]]

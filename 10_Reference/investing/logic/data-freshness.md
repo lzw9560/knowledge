@@ -71,8 +71,8 @@ SORT last_synced ASC
 
 ## 🔗 关联
 
-- **触发动作**：[[actions/]]
-- **相关规则**：[[logic/confidence-decay]]（置信度随时间衰减）
-- **约束实体**：[[metrics/]] [[valuations/]] [[reports/]]
-- **来源决策**：[[specs/]]
+- **触发动作**：[[10_Reference/investing/actions/index|actions/]]
+- **相关规则**：[[10_Reference/investing/logic/confidence-decay]]（置信度随时间衰减）
+- **约束实体**：[[10_Reference/investing/metrics/index|metrics/]] [[10_Reference/investing/valuations/index|valuations/]] [[10_Reference/investing/reports/index|reports/]]
+- **来源决策**：[[10_Reference/investing/specs/index|specs/]]
 - **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个

@@ -12,7 +12,7 @@ source: astock.concept_blocks
 > **概念**：PCB  **关联行业**：半导体
 > **成分股数**：`=(length(filter(this.file.inlinks, (l) => l.folder = "stocks")))`
 >
-> **关联**：[[industries/]] · [[data-sources/eastmoney-push2|东财 push2]]
+> **关联**：[[10_Reference/investing/industries/index|industries/]] · [[10_Reference/investing/data-sources/eastmoney-push2|东财 push2]]
 
 ## 📊 概念概览
 
@@ -42,9 +42,9 @@ LIMIT 20
 
 ### 成分股链接
 
-- [[stocks/000100|000100 TCL科技]]
-- [[stocks/000988|000988 华工科技]]
-- [[stocks/000657|000657 中钨高新]]
+- [[10_Reference/investing/stocks/000100|000100 TCL科技]]
+- [[10_Reference/investing/stocks/000988|000988 华工科技]]
+- [[10_Reference/investing/stocks/000657|000657 中钨高新]]
 
 ## 🔄 题材轮动
 
@@ -57,7 +57,7 @@ LIMIT 20
 
 ## 💰 资金流向
 
-- 数据源：[[data-sources/eastmoney-push2|东财 push2]]
+- 数据源：[[10_Reference/investing/data-sources/eastmoney-push2|东财 push2]]
 
 ## 📰 相关研报
 
@@ -87,5 +87,5 @@ LIMIT 10
 
 ## 🔗 关联
 
-- **行业**：[[industries/]] · **数据源**：[[data-sources/]]
+- **行业**：[[10_Reference/investing/industries/index|industries/]] · **数据源**：[[10_Reference/investing/data-sources/index|data-sources/]]
 - **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个

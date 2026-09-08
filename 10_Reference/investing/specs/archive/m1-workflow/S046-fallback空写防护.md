@@ -24,5 +24,5 @@ _is_empty + save_cache 空不写 + load_cache 损坏自愈删除 + 空 fetch 降
 - 源文件：`specs/S046-fallback空写防护/spec.md`（Vibe-Research 仓）
 - README 索引：`specs/README.md`
 - 子文档：spec
-- 数据源：[[data-sources/]]
-- 战法：[[strategies/]]
+- 数据源：[[10_Reference/investing/data-sources/index|data-sources/]]
+- 战法：[[10_Reference/investing/strategies/index|strategies/]]

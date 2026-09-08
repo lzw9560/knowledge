@@ -42,7 +42,7 @@ confidence: high
     在原路径留 stub：<entity>.md 仅含 frontmatter(status: archived, redirect: <target>)
     扫描所有指向原路径的 [[链接]]：
       不改链接文本（stub 的 redirect 字段保留可达性）
-      或批量改指向 target（走 [[actions/rename-entity]]）
+      或批量改指向 target（走 [[10_Reference/investing/actions/rename-entity]]）
     更新 fm: + archived_date: <today>
     生成归档日志
 ```
@@ -76,9 +76,9 @@ SORT type ASC
 
 ## 🔗 关联
 
-- **触发动作**：[[actions/]]
-- **前置规则**：[[logic/entity-lifecycle]]（生命周期末端进归档）
-- **相关规则**：[[logic/stale_check]]（90 天未更新判定）
-- **约束实体**：[[stocks/]] [[industries/]] [[concepts/]]
-- **来源决策**：[[specs/]]
+- **触发动作**：[[10_Reference/investing/actions/index|actions/]]
+- **前置规则**：[[10_Reference/investing/logic/entity-lifecycle]]（生命周期末端进归档）
+- **相关规则**：[[10_Reference/investing/logic/stale_check]]（90 天未更新判定）
+- **约束实体**：[[10_Reference/investing/stocks/index|stocks/]] [[10_Reference/investing/industries/index|industries/]] [[10_Reference/investing/concepts/index|concepts/]]
+- **来源决策**：[[10_Reference/investing/specs/index|specs/]]
 - **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个

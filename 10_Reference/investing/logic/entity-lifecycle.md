@@ -62,12 +62,12 @@ for file in vault:
 | 不经 inbox 直接进正式区 | high | 移回 inbox + 走晋级流程 |
 | 正式区直接删文件 | critical | 从 git 恢复 + 归档而非删除 |
 | inbox 滞留 > 14 天未处置 | low | 标 rejected |
-| 时点数据放 frontmatter | high | 移到 valuations/ 实体（[[logic/static-value-ban]]） |
+| 时点数据放 frontmatter | high | 移到 valuations/ 实体（[[10_Reference/investing/logic/static-value-ban]]） |
 
 
 ## 🔗 关联
 
-- **触发动作**：[[actions/]]
-- **约束实体**：[[stocks/]]
-- **来源决策**：[[specs/]]
+- **触发动作**：[[10_Reference/investing/actions/index|actions/]]
+- **约束实体**：[[10_Reference/investing/stocks/index|stocks/]]
+- **来源决策**：[[10_Reference/investing/specs/index|specs/]]
 - **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个

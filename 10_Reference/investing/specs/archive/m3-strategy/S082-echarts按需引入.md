@@ -24,5 +24,5 @@ S082 针对 Vibe-Research 项目中因 ECharts 全量引入导致的打包体积
 - 源文件：`specs/archive/m3-strategy/S082-echarts按需引入/spec.md`（Vibe-Research 仓）
 - README 索引：`specs/README.md`
 - 子文档：spec
-- 数据源：[[data-sources/]]
-- 战法：[[strategies/]]
+- 数据源：[[10_Reference/investing/data-sources/index|data-sources/]]
+- 战法：[[10_Reference/investing/strategies/index|strategies/]]

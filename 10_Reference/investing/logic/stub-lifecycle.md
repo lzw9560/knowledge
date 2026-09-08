@@ -73,10 +73,10 @@ SORT created ASC
 
 ## 🔗 关联
 
-- **触发动作**：[[actions/]]
-- **前置规则**：[[logic/entity-lifecycle]]（生命周期：inbox → stub → active → archive）
-- **相关规则**：[[logic/entity-promotion]]（inbox 晋级，stub 是晋级后的可能形态）
-- **相关规则**：[[logic/entity-archive]]（stub 长期不填充可归档）
-- **约束实体**：[[stocks/]] [[industries/]] [[concepts/]]
-- **来源决策**：[[specs/]]
+- **触发动作**：[[10_Reference/investing/actions/index|actions/]]
+- **前置规则**：[[10_Reference/investing/logic/entity-lifecycle]]（生命周期：inbox → stub → active → archive）
+- **相关规则**：[[10_Reference/investing/logic/entity-promotion]]（inbox 晋级，stub 是晋级后的可能形态）
+- **相关规则**：[[10_Reference/investing/logic/entity-archive]]（stub 长期不填充可归档）
+- **约束实体**：[[10_Reference/investing/stocks/index|stocks/]] [[10_Reference/investing/industries/index|industries/]] [[10_Reference/investing/concepts/index|concepts/]]
+- **来源决策**：[[10_Reference/investing/specs/index|specs/]]
 - **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个

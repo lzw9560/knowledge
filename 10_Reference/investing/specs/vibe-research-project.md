@@ -17,7 +17,7 @@ source: README.md
 > **名称**：vibe-research  **标题**：Vibe-Research 个人 AI 投研看板  **状态**：活跃
 > **GitHub**：`lzw9560/Vibe-Research`
 >
-> **关联**：[[specs/]] · [[data-sources/]] · [[agents/]]
+> **关联**：[[10_Reference/investing/specs/index|specs/]] · [[10_Reference/investing/data-sources/index|data-sources/]] · [[10_Reference/investing/agents/index|agents/]]
 
 ## 📋 项目概述
 
@@ -31,8 +31,8 @@ source: README.md
 
 ## 🔗 关联
 
-- [[specs/]]
-- [[data-sources/]]
+- [[10_Reference/investing/specs/index|specs/]]
+- [[10_Reference/investing/data-sources/index|data-sources/]]
 
 
 ## 🔗 关联

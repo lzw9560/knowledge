@@ -24,5 +24,5 @@ S026 旨在解决 pre-market 阶段因同步执行外部数据采集与因子计
 - 源文件：`specs/S026-pre-market-async/spec.md`（Vibe-Research 仓）
 - README 索引：`specs/README.md`
 - 子文档：spec
-- 数据源：[[data-sources/]]
-- 战法：[[strategies/]]
+- 数据源：[[10_Reference/investing/data-sources/index|data-sources/]]
+- 战法：[[10_Reference/investing/strategies/index|strategies/]]

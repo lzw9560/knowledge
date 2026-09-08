@@ -49,16 +49,16 @@ source: ARCHITECTURE.md
 
 ## 🔗 相关实体
 
-- [[stocks/]]
-- [[reports/]]
-- [[dragon-tiger/]]
-- [[metrics/]]
-- [[valuations/]]
-- [[events/]]
+- [[10_Reference/investing/stocks/index|stocks/]]
+- [[10_Reference/investing/reports/index|reports/]]
+- [[10_Reference/investing/dragon-tiger/index|dragon-tiger/]]
+- [[10_Reference/investing/metrics/index|metrics/]]
+- [[10_Reference/investing/valuations/index|valuations/]]
+- [[10_Reference/investing/events/index|events/]]
 
 ## 📜 关联 spec
 
-- [[specs/]]
+- [[10_Reference/investing/specs/index|specs/]]
 
 ## 🔗 关联
 
@@ -66,6 +66,6 @@ source: ARCHITECTURE.md
 
 ## 🔧 技术栈
 
-- 🔧 [[tech-learning/concepts/graceful-degradation|优雅降级]] — 百度股市通日 K 线无降级，失败即标灰
-- 🔧 [[tech-learning/concepts/data-contract|数据契约]] — 返回数据由 Pydantic 契约层统一形状
-- 🔧 [[tech-learning/concepts/caching-strategy|缓存策略]] — 日 K 入缓存
+- 🔧 [[10_Reference/tech-learning/concepts/graceful-degradation|优雅降级]] — 百度股市通日 K 线无降级，失败即标灰
+- 🔧 [[10_Reference/tech-learning/concepts/data-contract|数据契约]] — 返回数据由 Pydantic 契约层统一形状
+- 🔧 [[10_Reference/tech-learning/concepts/caching-strategy|缓存策略]] — 日 K 入缓存

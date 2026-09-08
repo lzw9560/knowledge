@@ -15,7 +15,7 @@ source: logic_rules
 > **动作**：`PROMOTE-001`  **类型**：状态流转
 > **触发**：`inbox 实体通过质量门审核（confidence=low 的 LLM 抽取实体经人工 approved）后，迁移到正式区`  **目标**：`inbox/, stocks/, industries/, concepts/`
 >
-> **触发自**：[[logic/]]
+> **触发自**：[[10_Reference/investing/logic/index|logic/]]
 
 ## 📋 动作定义
 
@@ -28,7 +28,7 @@ source: logic_rules
 ## 🔧 执行步骤
 
 1. 校验 inbox 实体 frontmatter 完整性（必填字段：type/code/name）
-2. 调用 `move_note(old=inbox/xxx.md, new=stocks/xxx.md)` 迁移到正式区（走 [[logic/实体改名]] 的 move_note 约束）
+2. 调用 `move_note(old=inbox/xxx.md, new=stocks/xxx.md)` 迁移到正式区（走 [[10_Reference/investing/logic/实体改名]] 的 move_note 约束）
 3. 更新实体 `status` 字段（candidate → approved）+ 写入 `approved_date`
 4. 在 `reviews/` 记录审批快照（who/when/inbox_path/formal_path）
 
@@ -42,7 +42,7 @@ source: logic_rules
 
 ## 🔗 关联
 
-- **触发自**：[[logic/]]
-- **作用于**：[[stocks/]]
-- **执行记录**：[[reviews/]]
+- **触发自**：[[10_Reference/investing/logic/index|logic/]]
+- **作用于**：[[10_Reference/investing/stocks/index|stocks/]]
+- **执行记录**：[[10_Reference/investing/reviews/index|reviews/]]
 - **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个

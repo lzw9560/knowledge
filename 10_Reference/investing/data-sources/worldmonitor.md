@@ -55,16 +55,16 @@ source: ARCHITECTURE.md
 
 ## 🔗 相关实体
 
-- [[stocks/]]
-- [[reports/]]
-- [[dragon-tiger/]]
-- [[metrics/]]
-- [[valuations/]]
-- [[events/]]
+- [[10_Reference/investing/stocks/index|stocks/]]
+- [[10_Reference/investing/reports/index|reports/]]
+- [[10_Reference/investing/dragon-tiger/index|dragon-tiger/]]
+- [[10_Reference/investing/metrics/index|metrics/]]
+- [[10_Reference/investing/valuations/index|valuations/]]
+- [[10_Reference/investing/events/index|events/]]
 
 ## 📜 关联 spec
 
-- [[specs/]]
+- [[10_Reference/investing/specs/index|specs/]]
 
 ## 🔗 关联
 
@@ -72,6 +72,6 @@ source: ARCHITECTURE.md
 
 ## 🔧 技术栈
 
-- 🔧 [[tech-learning/concepts/data-contract|数据契约]] — 全球宏观决策因子由契约层统一形状（S020 接入）
-- 🔧 [[tech-learning/concepts/graceful-degradation|优雅降级]] — MCP 远程无降级，失败标灰
-- 🔧 [[tech-learning/concepts/caching-strategy|缓存策略]] — 宏观决策因子低频，入缓存
+- 🔧 [[10_Reference/tech-learning/concepts/data-contract|数据契约]] — 全球宏观决策因子由契约层统一形状（S020 接入）
+- 🔧 [[10_Reference/tech-learning/concepts/graceful-degradation|优雅降级]] — MCP 远程无降级，失败标灰
+- 🔧 [[10_Reference/tech-learning/concepts/caching-strategy|缓存策略]] — 宏观决策因子低频，入缓存

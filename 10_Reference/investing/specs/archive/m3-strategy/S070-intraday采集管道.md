@@ -24,5 +24,5 @@ S070 旨在为 Vibe-Research 构建一条高可用的日内数据采集管道，
 - 源文件：`specs/archive/m3-strategy/S070-intraday采集管道/spec.md`（Vibe-Research 仓）
 - README 索引：`specs/README.md`
 - 子文档：spec
-- 数据源：[[data-sources/]]
-- 战法：[[strategies/]]
+- 数据源：[[10_Reference/investing/data-sources/index|data-sources/]]
+- 战法：[[10_Reference/investing/strategies/index|strategies/]]

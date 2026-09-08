@@ -23,6 +23,6 @@ created: 2026-09-07
 
 ## 🔗 关联
 
-- **来源**：[[reviews/audit-procedure]]
-- **关联规则**：[[logic/static-value-ban]] / [[logic/broken-link-grading]]
+- **来源**：[[10_Reference/investing/reviews/audit-procedure]]
+- **关联规则**：[[10_Reference/investing/logic/static-value-ban]] / [[10_Reference/investing/logic/broken-link-grading]]
 - **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个

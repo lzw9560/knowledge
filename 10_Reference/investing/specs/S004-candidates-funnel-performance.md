@@ -12,7 +12,7 @@ source: specs/README.md
 > [!info] 📋 项目决策
 > **编号**：S004  **标题**：候选池漏斗 run_funnel 性能优化  **状态**：草案
 >
-> **关联**：[[specs/]] · [[strategies/]] · [[data-sources/]]
+> **关联**：[[10_Reference/investing/specs/index|specs/]] · [[10_Reference/investing/strategies/index|strategies/]] · [[10_Reference/investing/data-sources/index|data-sources/]]
 
 ## 🎯 问题/目标
 
@@ -32,15 +32,15 @@ source: specs/README.md
 ## ✅ 验收标准
 
 - 源文件：`specs/S004-candidates-funnel-performance/spec.md`（Vibe-Research 仓）
-- 数据源：[[data-sources/]]
-- 战法：[[strategies/]]
+- 数据源：[[10_Reference/investing/data-sources/index|data-sources/]]
+- 战法：[[10_Reference/investing/strategies/index|strategies/]]
 
 
 ## 🔗 关联决策
 
 > 与其他 spec 的依赖/冲突/替代关系。
 
-- [[specs/]]
+- [[10_Reference/investing/specs/index|specs/]]
 
 ## 🔗 关联
 
@@ -48,6 +48,6 @@ source: specs/README.md
 
 ## 🔗 技术参考
 
-- 🔧 [[tech-learning/concepts/caching-strategy|缓存策略]] — 性能优化的核心手段：热点数据（行情/估值）入缓存降低 DB 压力
-- 🏗️ [[tech-learning/architecture/layered-architecture|分层架构]] — 漏斗性能优化在 service 与 repository 之间加缓存层
-- 🔧 [[tech-learning/concepts/graceful-degradation|优雅降级]] — 性能降级时的兜底处理
+- 🔧 [[10_Reference/tech-learning/concepts/caching-strategy|缓存策略]] — 性能优化的核心手段：热点数据（行情/估值）入缓存降低 DB 压力
+- 🏗️ [[10_Reference/tech-learning/architecture/layered-architecture|分层架构]] — 漏斗性能优化在 service 与 repository 之间加缓存层
+- 🔧 [[10_Reference/tech-learning/concepts/graceful-degradation|优雅降级]] — 性能降级时的兜底处理

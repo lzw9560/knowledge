@@ -58,14 +58,14 @@ ora-3 §2.5 第 3 步：时点数据（PE/PB/市值）**禁止放 frontmatter**�
 
 | 数据类型 | 处置 | 理由 |
 |---|---|---|
-| `pe_ttm` / `pb` / `market_cap` | 从 frontmatter 删除，走 `valuations/` 实体 | 时点数据放 frontmatter + 让 MCP 查出来当实时值用 = 臆造数据（[[logic/static-value-ban]]） |
+| `pe_ttm` / `pb` / `market_cap` | 从 frontmatter 删除，走 `valuations/` 实体 | 时点数据放 frontmatter + 让 MCP 查出来当实时值用 = 臆造数据（[[10_Reference/investing/logic/static-value-ban]]） |
 | `industry` / `list_date` / `st` | 保留 frontmatter + 配 `last_verified` | 这些真的很少变 |
 | `confidence` | 不变 | 语义纯化（抽取可靠度） |
 
 
 ## 🔗 关联
 
-- **触发动作**：[[actions/]]
-- **约束实体**：[[stocks/]]
-- **来源决策**：[[specs/]]
+- **触发动作**：[[10_Reference/investing/actions/index|actions/]]
+- **约束实体**：[[10_Reference/investing/stocks/index|stocks/]]
+- **来源决策**：[[10_Reference/investing/specs/index|specs/]]
 - **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个

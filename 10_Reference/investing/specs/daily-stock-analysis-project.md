@@ -13,7 +13,7 @@ source: README.md
 > **名称**：daily-stock-analysis  **标题**：每日股票分析（ZhuLinsen/daily-stock-analysis）  **状态**：活跃
 > **GitHub**：`ZhuLinsen/daily_stock_analysis`
 >
-> **关联**：[[specs/]] · [[data-sources/]] · [[agents/]]
+> **关联**：[[10_Reference/investing/specs/index|specs/]] · [[10_Reference/investing/data-sources/index|data-sources/]] · [[10_Reference/investing/agents/index|agents/]]
 
 ## 📋 项目概述
 
@@ -30,7 +30,7 @@ source: README.md
 - GitHub：https://github.com/ZhuLinsen/daily_stock_analysis
 - 官方文档：`docs/full-guide.md`（完整配置与部署指南）
 - 同系列项目：[AlphaSift](https://github.com/ZhuLinsen/alphasift)（多因子选股）、[AlphaEvo](https://github.com/ZhuLinsen/alphaevo)（策略回测与进化）
-- 上游：[[specs/]] Vibe-Research spec 体系
+- 上游：[[10_Reference/investing/specs/index|specs/]] Vibe-Research spec 体系
 
 
 ## 🔗 关联

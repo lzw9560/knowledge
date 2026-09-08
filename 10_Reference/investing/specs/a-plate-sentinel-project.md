@@ -15,7 +15,7 @@ source: README.md
 > **名称**：a-Plate-Sentinel  **标题**：A股打板情绪监控与投研决策看板  **状态**：MVP骨架
 > **GitHub**：`data_source: Tushare`
 >
-> **关联**：[[specs/]] · [[data-sources/]] · [[agents/]]
+> **关联**：[[10_Reference/investing/specs/index|specs/]] · [[10_Reference/investing/data-sources/index|data-sources/]] · [[10_Reference/investing/agents/index|agents/]]
 
 ## 📋 项目概述
 
@@ -29,8 +29,8 @@ source: README.md
 
 ## 🔗 关联
 
-- 同系列项目：[[specs/trading-agents-project]] · [[specs/daily-stock-analysis-project]]
-- 上游：[[specs/]] Vibe-Research spec 体系
+- 同系列项目：[[10_Reference/investing/specs/trading-agents-project]] · [[10_Reference/investing/specs/daily-stock-analysis-project]]
+- 上游：[[10_Reference/investing/specs/index|specs/]] Vibe-Research spec 体系
 
 
 ## 🔗 关联

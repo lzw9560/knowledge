@@ -55,14 +55,14 @@ WHERE length(file.outlinks) > 0
 
 - `action_on_violation`：触发修复工单
 - 修复优先级：
-  1. 多个源指向同一不存在的目标 → 优先建目标实体（inbox stub → [[actions/approve-entity]]）
+  1. 多个源指向同一不存在的目标 → 优先建目标实体（inbox stub → [[10_Reference/investing/actions/approve-entity]]）
   2. 拼写错误 → 修正链接文本
   3. 目标实体已删除 → 移除断链或改指向替代实体
 
 
 ## 🔗 关联
 
-- **触发动作**：[[actions/]]
-- **约束实体**：[[stocks/]]
-- **来源决策**：[[specs/]]
+- **触发动作**：[[10_Reference/investing/actions/index|actions/]]
+- **约束实体**：[[10_Reference/investing/stocks/index|stocks/]]
+- **来源决策**：[[10_Reference/investing/specs/index|specs/]]
 - **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个

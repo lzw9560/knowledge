@@ -48,16 +48,16 @@ source: ARCHITECTURE.md
 
 ## 🔗 相关实体
 
-- [[stocks/]]
-- [[reports/]]
-- [[dragon-tiger/]]
-- [[metrics/]]
-- [[valuations/]]
-- [[events/]]
+- [[10_Reference/investing/stocks/index|stocks/]]
+- [[10_Reference/investing/reports/index|reports/]]
+- [[10_Reference/investing/dragon-tiger/index|dragon-tiger/]]
+- [[10_Reference/investing/metrics/index|metrics/]]
+- [[10_Reference/investing/valuations/index|valuations/]]
+- [[10_Reference/investing/events/index|events/]]
 
 ## 📜 关联 spec
 
-- [[specs/]]
+- [[10_Reference/investing/specs/index|specs/]]
 
 ## 🔗 关联
 
@@ -65,6 +65,6 @@ source: ARCHITECTURE.md
 
 ## 🔧 技术栈
 
-- 🔧 [[tech-learning/concepts/graceful-degradation|优雅降级]] — K线日更失败时 S090 kline_refresh 降级
-- 🔧 [[tech-learning/tools/uv|uv 包管理]] — baostock Python 包由 uv 管理锁版本
-- 🔧 [[tech-learning/concepts/caching-strategy|缓存策略]] — 历史日 K 入缓存
+- 🔧 [[10_Reference/tech-learning/concepts/graceful-degradation|优雅降级]] — K线日更失败时 S090 kline_refresh 降级
+- 🔧 [[10_Reference/tech-learning/tools/uv|uv 包管理]] — baostock Python 包由 uv 管理锁版本
+- 🔧 [[10_Reference/tech-learning/concepts/caching-strategy|缓存策略]] — 历史日 K 入缓存

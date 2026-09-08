@@ -14,7 +14,7 @@ source: logic_rules
 > **动作**：`RENAME-ACT-001`  **类型**：链接维护
 > **触发**：`实体改名时，重写所有反向链接`  **目标**：`全类型`
 >
-> **触发自**：[[logic/]]
+> **触发自**：[[10_Reference/investing/logic/index|logic/]]
 
 ## 📋 动作定义
 
@@ -42,7 +42,7 @@ source: logic_rules
 
 ## 🔗 关联
 
-- **触发自**：[[logic/]]
-- **作用于**：[[stocks/]]
-- **执行记录**：[[reviews/]]
+- **触发自**：[[10_Reference/investing/logic/index|logic/]]
+- **作用于**：[[10_Reference/investing/stocks/index|stocks/]]
+- **执行记录**：[[10_Reference/investing/reviews/index|reviews/]]
 - **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个

@@ -24,5 +24,5 @@ advisory P0-P3 全落地（缓存+预热+并发+批量+超时降级），>40s→
 - 源文件：`specs/S067-advisory-perf/spec.md`（Vibe-Research 仓）
 - README 索引：`specs/README.md`
 - 子文档：spec
-- 数据源：[[data-sources/]]
-- 战法：[[strategies/]]
+- 数据源：[[10_Reference/investing/data-sources/index|data-sources/]]
+- 战法：[[10_Reference/investing/strategies/index|strategies/]]

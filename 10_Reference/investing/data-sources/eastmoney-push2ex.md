@@ -47,16 +47,16 @@ source: ARCHITECTURE.md
 
 ## 🔗 相关实体
 
-- [[stocks/]]
-- [[reports/]]
-- [[dragon-tiger/]]
-- [[metrics/]]
-- [[valuations/]]
-- [[events/]]
+- [[10_Reference/investing/stocks/index|stocks/]]
+- [[10_Reference/investing/reports/index|reports/]]
+- [[10_Reference/investing/dragon-tiger/index|dragon-tiger/]]
+- [[10_Reference/investing/metrics/index|metrics/]]
+- [[10_Reference/investing/valuations/index|valuations/]]
+- [[10_Reference/investing/events/index|events/]]
 
 ## 📜 关联 spec
 
-- [[specs/]]
+- [[10_Reference/investing/specs/index|specs/]]
 
 ## 🔗 关联
 
@@ -64,6 +64,6 @@ source: ARCHITECTURE.md
 
 ## 🔧 技术栈
 
-- 🔧 [[tech-learning/concepts/circuit-breaker|熔断器]] — 涨停四池采集加熔断，连续失败快速失败
-- 🔧 [[tech-learning/concepts/rate-limiting|限流]] — 共用 em_get QPS≤2 限流防封
-- 🔧 [[tech-learning/concepts/graceful-degradation|优雅降级]] — push2ex 失败 → push2delay 降级
+- 🔧 [[10_Reference/tech-learning/concepts/circuit-breaker|熔断器]] — 涨停四池采集加熔断，连续失败快速失败
+- 🔧 [[10_Reference/tech-learning/concepts/rate-limiting|限流]] — 共用 em_get QPS≤2 限流防封
+- 🔧 [[10_Reference/tech-learning/concepts/graceful-degradation|优雅降级]] — push2ex 失败 → push2delay 降级

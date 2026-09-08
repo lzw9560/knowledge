@@ -184,5 +184,5 @@ created: YYYY-MM-DD
 - 脚本：`scripts/vault_audit.py`（8 项检查 + 工单输出）
 - 周度报告：`reviews/YYYY-MM-DD-ci-audit.md`（CI 自动生成）
 - 工单目录：`.scratch/kg-audit/`（对齐 AGENTS.md issue tracker）
-- 规则来源：[[logic/broken-link-grading]] / [[logic/source-drift]] / [[logic/static-value-ban]]
-- 方法论：[[meta/four-construct-ontology]]（四构件填充度判定）
+- 规则来源：[[10_Reference/investing/logic/broken-link-grading]] / [[10_Reference/investing/logic/source-drift]] / [[10_Reference/investing/logic/static-value-ban]]
+- 方法论：[[10_Reference/meta/four-construct-ontology]]（四构件填充度判定）

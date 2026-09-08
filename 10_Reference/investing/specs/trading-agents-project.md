@@ -14,7 +14,7 @@ source: README.md
 > **名称**：trading-agents  **标题**：TradingAgents A股深度特化 fork  **状态**：活跃
 > **GitHub**：`lzwfirst/tradingagents-astock`
 >
-> **关联**：[[specs/]] · [[data-sources/]] · [[agents/]]
+> **关联**：[[10_Reference/investing/specs/index|specs/]] · [[10_Reference/investing/data-sources/index|data-sources/]] · [[10_Reference/investing/agents/index|agents/]]
 
 ## 📋 项目概述
 
@@ -37,7 +37,7 @@ source: README.md
 
 - GitHub：https://github.com/lzwfirst/tradingagents-astock
 - 论文：[arXiv:2412.20138](https://arxiv.org/abs/2412.20138)
-- 上游：[[specs/]] Vibe-Research spec 体系
+- 上游：[[10_Reference/investing/specs/index|specs/]] Vibe-Research spec 体系
 
 
 ## 🔗 关联

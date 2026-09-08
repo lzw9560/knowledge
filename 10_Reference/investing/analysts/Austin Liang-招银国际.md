@@ -14,7 +14,7 @@ source: astock.eastmoney_reports.researcher
 > **姓名**：Austin Liang  **机构**：招银国际
 > **覆盖数**：1
 >
-> **关联**：[[reports/]] · [[stocks/]]
+> **关联**：[[10_Reference/investing/reports/index|reports/]] · [[10_Reference/investing/stocks/index|stocks/]]
 
 ## 📋 覆盖领域
 **覆盖领域**：Austin Liang专注于汽车整车行业，重点覆盖比亚迪（002594），对该领域的技术路线、市场竞争及产业政策有持续跟踪。
