@@ -52,6 +52,9 @@ LIMIT 50
 - [[10_Reference/investing/events/2026-09-07-异动]]
 - [[10_Reference/investing/events/2026-09-07-涨停池]]
 - [[10_Reference/investing/events/2026-09-07-炸板池]]
+- [[10_Reference/investing/events/2026-09-08-美伊冲突升级]]
+- [[10_Reference/investing/events/2026-09-08-基差异动]]
+- [[10_Reference/investing/events/2026-09-08-持仓追踪]]
 
 
 ---
