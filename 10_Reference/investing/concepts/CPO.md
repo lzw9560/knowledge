@@ -1,19 +1,15 @@
 ---
 type: concept
-code: 
+code: BK1128
 name: CPO
-related_industry: 
-status: stub
+related_industry: 通信
 created: 2026-09-07
 ---
 
 > [!info] 概念信息
-> **概念**：CPO  **关联行业**：related_industry  **成分股数**：`=(length(filter(this.file.inlinks, (l) => l.folder = "stocks")))`
+> **概念**：CPO  **关联行业**：通信  **成分股数**：`=(length(filter(this.file.inlinks, (l) => l.folder = "stocks")))`
 > 
 > **关联**：[[industries/]] · [[data-sources/]]
-
-> [!warning] Stub
-> 此实体为断链修复自动生成的占位文件，正文待补充。
 
 ## 📖 题材逻辑
 **题材逻辑**：CPO（共封装光学）技术将光引擎与交换芯片进行高密度集成，能大幅缩短电信号传输距离，被认为是突破数据中心高带宽、低功耗互联瓶颈的关键路径，因此在算力基础设施持续升级的背景下备受市场关注。

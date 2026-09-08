@@ -2,18 +2,14 @@
 type: concept
 code: 
 name: IT运维
-related_industry: 
-status: stub
+related_industry: 软件
 created: 2026-09-07
 ---
 
 > [!info] 概念信息
-> **概念**：IT运维  **关联行业**：related_industry  **成分股数**：`=(length(filter(this.file.inlinks, (l) => l.folder = "stocks")))`
+> **概念**：IT运维  **关联行业**：软件  **成分股数**：`=(length(filter(this.file.inlinks, (l) => l.folder = "stocks")))`
 > 
 > **关联**：[[industries/]] · [[data-sources/]]
-
-> [!warning] Stub
-> 此实体为断链修复自动生成的占位文件，正文待补充。
 
 ## 📖 题材逻辑
 **题材逻辑**：IT 运维是保障企业信息系统稳定、高效运行的关键环节，随着企业数字化转型深入，IT 架构日益复杂，对运维的自动化、智能化需求不断提升。A 股市场中该概念成分股极少，稀缺性使其容易受到主题性资金关注。

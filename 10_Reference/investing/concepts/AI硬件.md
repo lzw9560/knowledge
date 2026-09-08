@@ -1,19 +1,15 @@
 ---
 type: concept
-code: 
+code: BK1127
 name: AI硬件
-related_industry: 
-status: stub
+related_industry: 半导体
 created: 2026-09-07
 ---
 
 > [!info] 概念信息
-> **概念**：AI硬件  **关联行业**：related_industry  **成分股数**：`=(length(filter(this.file.inlinks, (l) => l.folder = "stocks")))`
+> **概念**：AI硬件  **关联行业**：半导体  **成分股数**：`=(length(filter(this.file.inlinks, (l) => l.folder = "stocks")))`
 > 
 > **关联**：[[industries/]] · [[data-sources/]]
-
-> [!warning] Stub
-> 此实体为断链修复自动生成的占位文件，正文待补充。
 
 ## 📖 题材逻辑
 **题材逻辑**：AI硬件泛指为人工智能计算与应用提供基础支撑的物理设备，涵盖AI服务器、高速光模块、专用芯片及散热系统等关键环节。该方向受市场关注的核心在于，大模型训练与推理需求持续攀升，直接拉动算力基础设施的资本开支，使硬件环节成为产业链中率先兑现业绩的领域。

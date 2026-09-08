@@ -2,18 +2,14 @@
 type: concept
 code: 
 name: AIOps
-related_industry: 
-status: stub
+related_industry: 软件
 created: 2026-09-07
 ---
 
 > [!info] 概念信息
-> **概念**：AIOps  **关联行业**：related_industry  **成分股数**：`=(length(filter(this.file.inlinks, (l) => l.folder = "stocks")))`
+> **概念**：AIOps  **关联行业**：软件  **成分股数**：`=(length(filter(this.file.inlinks, (l) => l.folder = "stocks")))`
 > 
 > **关联**：[[industries/]] · [[data-sources/]]
-
-> [!warning] Stub
-> 此实体为断链修复自动生成的占位文件，正文待补充。
 
 ## 📖 题材逻辑
 **题材逻辑**：AIOps（智能运维）将人工智能与大数据技术应用于IT运维管理，能够实现故障预测、根因分析和自动化处置，显著降低运维人力成本与系统风险。随着企业数字化转型深入，IT架构日益复杂，传统运维手段难以应对海量告警与性能瓶颈，AIOps成为提升运维效率的关键路径，市场关注其替代人工运维的长期价值。

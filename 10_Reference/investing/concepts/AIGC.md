@@ -1,19 +1,15 @@
 ---
 type: concept
-code: 
+code: BK1111
 name: AIGC
-related_industry: 
-status: stub
+related_industry: 传媒
 created: 2026-09-07
 ---
 
 > [!info] 概念信息
-> **概念**：AIGC  **关联行业**：related_industry  **成分股数**：`=(length(filter(this.file.inlinks, (l) => l.folder = "stocks")))`
+> **概念**：AIGC  **关联行业**：传媒  **成分股数**：`=(length(filter(this.file.inlinks, (l) => l.folder = "stocks")))`
 > 
 > **关联**：[[industries/]] · [[data-sources/]]
-
-> [!warning] Stub
-> 此实体为断链修复自动生成的占位文件，正文待补充。
 
 ## 📖 题材逻辑
 **题材逻辑**：AIGC（人工智能生成内容）被视为继专业生产内容、用户生产内容之后的新型内容生产方式，能够大幅降低创作门槛并提升内容生产效率。市场关注点在于其有望重塑传媒、营销、游戏、影视等多个行业的成本结构与商业模式，并被视为人工智能技术商业化落地的重要方向之一。

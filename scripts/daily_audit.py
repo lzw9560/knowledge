@@ -80,8 +80,17 @@ def run_audit():
     type_counts = Counter()
     stub_count = 0
     llm_count = 0
+    placeholder_count = 0
+    placeholder_by_type = defaultdict(list)
     confidence_dist = Counter()
     no_confidence = 0
+    
+    # 占位符模式
+    placeholder_patterns = [
+        r"待补", r"待人工补充", r"待人工校验",
+        r"TODO", r"占位符", r"待填充", r"待完善",
+        r"暂无数据", r"待接入", r"待查",
+    ]
     
     for f in VAULT.rglob("*.md"):
         if "templates" in str(f) or ".quartz" in str(f):
@@ -121,6 +130,14 @@ def run_audit():
         if "LLM 生成" in content:
             llm_count += 1
         
+        # 占位符检测
+        for pat in placeholder_patterns:
+            if re.search(pat, body):
+                placeholder_count += 1
+                folder = f.parent.name
+                placeholder_by_type[folder].append(f.name)
+                break  # 每个文件只计一次
+        
         # confidence 分布
         conf = fm.get("confidence", "")
         if conf:
@@ -159,6 +176,8 @@ def run_audit():
         "type_distribution": dict(type_counts.most_common()),
         "stub_count": stub_count,
         "llm_generated_count": llm_count,
+        "placeholder_count": placeholder_count,
+        "placeholder_by_type": {k: len(v) for k, v in sorted(placeholder_by_type.items())},
         "confidence_distribution": dict(confidence_dist),
         "no_confidence_count": no_confidence,
         "broken_links": broken_count,
@@ -196,6 +215,7 @@ created: {today}
 | 总实体数 | {total} |
 | stub 实体 | {stub_count} |
 | LLM 生成内容 | {llm_count} |
+| 占位符残留 | {placeholder_count} |
 | 断链 | {broken_count} |
 | 孤立实体 | {orphan_count} |
 | confidence 覆盖 | {total - no_confidence}/{total} ({(total-no_confidence)*100//total}%) |
@@ -230,6 +250,18 @@ created: {today}
         report += f"| {folder} | {count} |\n"
     
     report += f"""
+## 🔍 占位符残留分布
+
+| 类型 | 文件数 |
+|---|---|
+"""
+    if placeholder_by_type:
+        for folder, files in sorted(placeholder_by_type.items()):
+            report += f"| {folder} | {len(files)} |\n"
+    else:
+        report += "| (无) | 0 |\n"
+    
+    report += f"""
 ## 📊 confidence 分布
 
 | confidence | 数量 |
@@ -247,13 +279,12 @@ created: {today}
 | 断链 | {broken_count} | ≤50 | {'🟢' if broken_count <= 50 else '🔴'} |
 | 孤立实体 | {orphan_count} | ≤200 | {'🟢' if orphan_count <= 200 else '🟡' if orphan_count <= 500 else '🔴'} |
 | stub 实体 | {stub_count} | ≤100 | {'🟢' if stub_count <= 100 else '🟡'} |
+| 占位符残留 | {placeholder_count} | ≤10 | {'🟢' if placeholder_count <= 10 else '🟡' if placeholder_count <= 50 else '🔴'} |
 | confidence 覆盖 | {(total-no_confidence)*100//total}% | ≥95% | {'🟢' if (total-no_confidence)*100//total >= 95 else '🟡'} |
 
 ## 📈 趋势
 
-> 与上次审查对比（如有 reviews/ 前一份报告）
-
-待填充（需要读前一份报告对比）
+> 审查脚本已自动检测占位符残留。如需与上次审查对比，读 reviews/ 前一份报告。
 """
     
     report_path.write_text(report, encoding="utf-8")
