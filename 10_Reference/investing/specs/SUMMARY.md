@@ -192,10 +192,10 @@ M7 完成后的活跃/草案 spec，保留在 `specs/` 根目录。
 
 | 项目 | 状态 | 图谱实体数 |
 |---|---|---|
-| [Vibe-Research](vibe-research-project.md) | 活跃 | 109 spec + 16 数据源 + 12 战法 + 5 DEC |
-| [trading-agents](trading-agents-project.md) | 活跃 | 7 AI 角色 + 项目实体 |
-| [daily-stock-analysis](daily-stock-analysis-project.md) | 活跃 | 项目实体 |
-| [a-Plate-Sentinel](a-plate-sentinel-project.md) | MVP 骨架 | 项目实体 + Tushare |
+| Vibe-Research | 活跃 | 109 spec + 16 数据源 + 12 战法 + 5 DEC |
+| trading-agents | 活跃 | 7 AI 角色 + 项目实体 |
+| daily-stock-analysis | 活跃 | 项目实体 |
+| a-Plate-Sentinel | MVP 骨架 | 项目实体 + Tushare |
 
 ## 归档建议
 

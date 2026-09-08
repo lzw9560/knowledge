@@ -53,12 +53,12 @@
 - [[10_Reference/tech-learning/architecture/saga]] — Saga：分布式事务/S011 多层调度补偿参考
 
 ### 概念
-- [[10_Reference/investing/concepts/async-await]] — async/await：异步编程/S026 异步化参考
-- [[10_Reference/investing/concepts/type-safety]] — 类型安全：静态类型/S007 Pydantic 契约参考
-- [[10_Reference/investing/concepts/clean-code]] — 清洁代码：代码层清洁/S006 重写参考
-- [[10_Reference/investing/concepts/dependency-injection]] — 依赖注入：IoC 实现/S015 config 拆分参考
-- [[10_Reference/investing/concepts/circuit-breaker]] — 熔断器：容错模式/S022 防封熔断参考
-- [[10_Reference/investing/concepts/caching-strategy]] — 缓存策略：性能优化/S004 性能优化参考
+- [[10_Reference/tech-learning/concepts/async-await]] — async/await：异步编程/S026 异步化参考
+- [[10_Reference/tech-learning/concepts/type-safety]] — 类型安全：静态类型/S007 Pydantic 契约参考
+- [[10_Reference/tech-learning/concepts/clean-code]] — 清洁代码：代码层清洁/S006 重写参考
+- [[10_Reference/tech-learning/concepts/dependency-injection]] — 依赖注入：IoC 实现/S015 config 拆分参考
+- [[10_Reference/tech-learning/concepts/circuit-breaker]] — 熔断器：容错模式/S022 防封熔断参考
+- [[10_Reference/tech-learning/concepts/caching-strategy]] — 缓存策略：性能优化/S004 性能优化参考
 
 ## 与投研的跨领域链接
 

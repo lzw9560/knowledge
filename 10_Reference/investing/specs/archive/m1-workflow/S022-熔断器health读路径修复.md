@@ -17,7 +17,7 @@ peek_state 只读探测 + health 读路径自愈，修体检 🔴 circuit_breake
 
 ## 问题/目标
 
-> 此 spec 为 P2 pipeline 从 `specs/README.md` 自动生成的 stub，待人工补充正文。
+S022 修复了熔断器健康检查读路径忽略 recovery_timeout 的问题，导致在断路器打开后，即使恢复时限已过，健康端点仍持续返回不健康状态，阻断了自动化恢复流程。核心设计决策是让健康读路径实时计算当前时间与 breaker 打开时刻的差值，并与 recovery_timeout 配置比对，若已超时则允许进入半开状态并返回健康，否则保持不健康响应。该修复联动熔断器状态机、健康检查路由与 recovery_timeout 参数，确保读路径严格遵循恢复超时语义。
 
 ## 关联
 

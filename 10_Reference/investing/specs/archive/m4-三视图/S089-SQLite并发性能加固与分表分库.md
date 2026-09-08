@@ -17,7 +17,7 @@ WAL+busy_timeout 落地；分表分库 deferred
 
 ## 问题/目标
 
-> 此 spec 为 P2 pipeline 从 `specs/README.md` 自动生成的 stub，待人工补充正文。
+S089 规范旨在解决 SQLite 在承载 seal_intraday 高频行情数据时因写锁竞争和单表数据膨胀引发的性能瓶颈。核心设计决策是实施基于交易日与证券代码的二级分库分表策略，同时将 SQLite 切换至 WAL 模式并辅以异步批量提交与连接池，以在保持轻量化的同时显著提升并发吞吐能力。该方案涉及的关键技术组件包括 SQLite WAL 与共享缓存机制、分库分表路由代理、连接
 
 ## 关联
 
