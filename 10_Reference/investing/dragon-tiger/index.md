@@ -15,10 +15,10 @@ LIMIT 50
 
 ## 关系
 
-- belongs_to: [[stocks/]]（每条龙虎榜记录所属股票）
-- relates_to: [[events/]]（龙虎榜上榜当日的涨停/异动事件）
-- triggers: [[strategies/]]（游资席位数据是反包战法等加分项）
-- sourced_from: [[data-sources/]]（龙虎榜数据来源，如东方财富）
+- belongs_to: [[10_Reference/investing/stocks/index|stocks/]]（每条龙虎榜记录所属股票）
+- relates_to: [[10_Reference/investing/events/index|events/]]（龙虎榜上榜当日的涨停/异动事件）
+- triggers: [[10_Reference/investing/strategies/index|strategies/]]（游资席位数据是反包战法等加分项）
+- sourced_from: [[10_Reference/investing/data-sources/index|data-sources/]]（龙虎榜数据来源，如东方财富）
 
 ## 新建实体
 
@@ -28,47 +28,47 @@ LIMIT 50
 
 > 本段列出该类型所有实体以建立入边链接（Dataview 表格不计入边）。
 
-- [[dragon-tiger/000019-2026-09-02]]
-- [[dragon-tiger/000505-2026-09-02]]
-- [[dragon-tiger/000560-2026-09-04]]
-- [[dragon-tiger/000635-2026-09-03]]
-- [[dragon-tiger/000703-2026-08-20]]
-- [[dragon-tiger/000892-2026-09-04]]
-- [[dragon-tiger/000977-2026-09-04]]
-- [[dragon-tiger/001366-2026-08-20]]
-- [[dragon-tiger/002028-2026-08-27]]
-- [[dragon-tiger/002084-2026-09-02]]
-- [[dragon-tiger/002104-2026-09-04]]
-- [[dragon-tiger/002156-2026-08-17]]
-- [[dragon-tiger/002172-2026-08-27]]
-- [[dragon-tiger/002202-2026-08-11]]
-- [[dragon-tiger/002679-2026-09-02]]
-- [[dragon-tiger/002696-2026-09-02]]
-- [[dragon-tiger/002855-2026-09-03]]
-- [[dragon-tiger/003005-2026-09-04]]
-- [[dragon-tiger/2026-09-05]]
-- [[dragon-tiger/300413-2026-09-01]]
-- [[dragon-tiger/600108-2026-09-04]]
-- [[dragon-tiger/600127-2026-09-04]]
-- [[dragon-tiger/600313-2026-08-20]]
-- [[dragon-tiger/600354-2026-09-04]]
-- [[dragon-tiger/600371-2026-09-02]]
-- [[dragon-tiger/600540-2026-09-04]]
-- [[dragon-tiger/600551-2026-09-01]]
-- [[dragon-tiger/600693-2026-09-04]]
-- [[dragon-tiger/600828-2026-09-04]]
-- [[dragon-tiger/600865-2026-09-04]]
-- [[dragon-tiger/600892-2026-09-04]]
-- [[dragon-tiger/601086-2026-09-04]]
-- [[dragon-tiger/603083-2026-08-14]]
-- [[dragon-tiger/603118-2026-08-24]]
-- [[dragon-tiger/603221-2026-09-03]]
-- [[dragon-tiger/603533-2026-09-01]]
-- [[dragon-tiger/603626-2026-08-21]]
-- [[dragon-tiger/603696-2026-08-14]]
-- [[dragon-tiger/603721-2026-09-01]]
-- [[dragon-tiger/605188-2026-09-01]]
-- [[dragon-tiger/605577-2026-09-03]]
+- [[10_Reference/investing/dragon-tiger/000019-2026-09-02]]
+- [[10_Reference/investing/dragon-tiger/000505-2026-09-02]]
+- [[10_Reference/investing/dragon-tiger/000560-2026-09-04]]
+- [[10_Reference/investing/dragon-tiger/000635-2026-09-03]]
+- [[10_Reference/investing/dragon-tiger/000703-2026-08-20]]
+- [[10_Reference/investing/dragon-tiger/000892-2026-09-04]]
+- [[10_Reference/investing/dragon-tiger/000977-2026-09-04]]
+- [[10_Reference/investing/dragon-tiger/001366-2026-08-20]]
+- [[10_Reference/investing/dragon-tiger/002028-2026-08-27]]
+- [[10_Reference/investing/dragon-tiger/002084-2026-09-02]]
+- [[10_Reference/investing/dragon-tiger/002104-2026-09-04]]
+- [[10_Reference/investing/dragon-tiger/002156-2026-08-17]]
+- [[10_Reference/investing/dragon-tiger/002172-2026-08-27]]
+- [[10_Reference/investing/dragon-tiger/002202-2026-08-11]]
+- [[10_Reference/investing/dragon-tiger/002679-2026-09-02]]
+- [[10_Reference/investing/dragon-tiger/002696-2026-09-02]]
+- [[10_Reference/investing/dragon-tiger/002855-2026-09-03]]
+- [[10_Reference/investing/dragon-tiger/003005-2026-09-04]]
+- [[10_Reference/investing/dragon-tiger/2026-09-05]]
+- [[10_Reference/investing/dragon-tiger/300413-2026-09-01]]
+- [[10_Reference/investing/dragon-tiger/600108-2026-09-04]]
+- [[10_Reference/investing/dragon-tiger/600127-2026-09-04]]
+- [[10_Reference/investing/dragon-tiger/600313-2026-08-20]]
+- [[10_Reference/investing/dragon-tiger/600354-2026-09-04]]
+- [[10_Reference/investing/dragon-tiger/600371-2026-09-02]]
+- [[10_Reference/investing/dragon-tiger/600540-2026-09-04]]
+- [[10_Reference/investing/dragon-tiger/600551-2026-09-01]]
+- [[10_Reference/investing/dragon-tiger/600693-2026-09-04]]
+- [[10_Reference/investing/dragon-tiger/600828-2026-09-04]]
+- [[10_Reference/investing/dragon-tiger/600865-2026-09-04]]
+- [[10_Reference/investing/dragon-tiger/600892-2026-09-04]]
+- [[10_Reference/investing/dragon-tiger/601086-2026-09-04]]
+- [[10_Reference/investing/dragon-tiger/603083-2026-08-14]]
+- [[10_Reference/investing/dragon-tiger/603118-2026-08-24]]
+- [[10_Reference/investing/dragon-tiger/603221-2026-09-03]]
+- [[10_Reference/investing/dragon-tiger/603533-2026-09-01]]
+- [[10_Reference/investing/dragon-tiger/603626-2026-08-21]]
+- [[10_Reference/investing/dragon-tiger/603696-2026-08-14]]
+- [[10_Reference/investing/dragon-tiger/603721-2026-09-01]]
+- [[10_Reference/investing/dragon-tiger/605188-2026-09-01]]
+- [[10_Reference/investing/dragon-tiger/605577-2026-09-03]]
 
 
 ---

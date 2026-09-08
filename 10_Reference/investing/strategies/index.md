@@ -15,10 +15,10 @@ LIMIT 50
 
 ## 关系
 
-- matches: [[stocks/]]（战法匹配的股票）
-- triggered_by: [[events/]]（战法由事件触发，如涨停池触发首板）
-- defined_in: [[specs/]]（战法 match 逻辑对应的 SDD spec）
-- pairs_with: [[dragon-tiger/]]（反包战法依赖游资席位加分项）
+- matches: [[10_Reference/investing/stocks/index|stocks/]]（战法匹配的股票）
+- triggered_by: [[10_Reference/investing/events/index|events/]]（战法由事件触发，如涨停池触发首板）
+- defined_in: [[10_Reference/investing/specs/index|specs/]]（战法 match 逻辑对应的 SDD spec）
+- pairs_with: [[10_Reference/investing/dragon-tiger/index|dragon-tiger/]]（反包战法依赖游资席位加分项）
 
 ## edge 家族说明
 

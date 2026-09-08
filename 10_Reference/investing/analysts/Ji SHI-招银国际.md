@@ -17,8 +17,6 @@ source: astock.eastmoney_reports.researcher
 > **关联**：[[reports/]] · [[stocks/]]
 
 ## 📋 覆盖领域
-
-<!-- LLM 生成，待人工校验 -->
 **覆盖领域**：Ji SHI 专注于汽车整车领域，当前覆盖标的为比亚迪（002594）。
 **风格特点**：其研究覆盖高度集中，仅跟踪单一标的，风格偏向深度精准。
 

@@ -18,9 +18,9 @@ LIMIT 50
 
 | 类型 | 说明 | 示例 |
 |---|---|---|
-| **CRUD** | 创建/读取/更新/删除实体 | 新研报入库 → 创建 [[reports/]] 实体 |
+| **CRUD** | 创建/读取/更新/删除实体 | 新研报入库 → 创建 [[10_Reference/investing/reports/index|reports/]] 实体 |
 | **状态流转** | 改变实体状态字段 | 候选股 → watching（工作流流转） |
-| **链接维护** | 自动建立/修复 `[[]]` 链接 | 研报提到 600519 → 链接到 [[stocks/600519]] |
+| **链接维护** | 自动建立/修复 `[[]]` 链接 | 研报提到 600519 → 链接到 [[10_Reference/investing/stocks/600519]] |
 | **审计快照** | 动作执行前后的状态快照 | 结算前快照 winrate 状态 |
 
 ## 新建动作
@@ -29,19 +29,19 @@ LIMIT 50
 
 ## 与其他构件的关系
 
-- 触发自 → [[logic/]]（规则满足时触发动作）
-- 作用于 → [[stocks/]] [[reports/]] 等实体
-- 执行记录 → [[reviews/]]（动作执行的审计追踪）
+- 触发自 → [[10_Reference/investing/logic/index|logic/]]（规则满足时触发动作）
+- 作用于 → [[10_Reference/investing/stocks/index|stocks/]] [[10_Reference/investing/reports/index|reports/]] 等实体
+- 执行记录 → [[10_Reference/investing/reviews/index|reviews/]]（动作执行的审计追踪）
 
 ## 实体清单（入边）
 
 > 本段列出该类型所有实体以建立入边链接（Dataview 表格不计入边）。
 
-- [[actions/approve-entity]]
-- [[actions/auto-link-report]]
-- [[actions/promote-from-inbox]]
-- [[actions/rename-entity]]
-- [[actions/sync-from-source]]
+- [[10_Reference/investing/actions/approve-entity]]
+- [[10_Reference/investing/actions/auto-link-report]]
+- [[10_Reference/investing/actions/promote-from-inbox]]
+- [[10_Reference/investing/actions/rename-entity]]
+- [[10_Reference/investing/actions/sync-from-source]]
 
 
 ---

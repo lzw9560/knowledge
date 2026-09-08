@@ -43,7 +43,7 @@ LIMIT 50
 | `quality_score` 缺失 | 留 inbox 待评，不晋级 | 规则 `ENTITY-PROMOTION-001` |
 | inbox 滞留 > 7 天且 ≥60 | 标滞留告警 | 规则 `ENTITY-PROMOTION-001` |
 
-> 规则定义见 [[logic/entity-promotion]]。阈值 60 的依据：质量四维度中缺任一关键维度（完整度 30% + 一致性 25% + 链接度 25% + 溯源 20%）都会跌破 60。
+> 规则定义见 [[10_Reference/investing/logic/entity-promotion]]。阈值 60 的依据：质量四维度中缺任一关键维度（完整度 30% + 一致性 25% + 链接度 25% + 溯源 20%）都会跌破 60。
 
 ## 批量审核命令
 
@@ -62,7 +62,7 @@ python3 scripts/review_inbox.py --auto --type stock
 
 ## 审核报告
 
-最新审核报告见 [[reviews/index|审查报告索引]]，inbox 专属晋级日志在 `reviews/inbox-promotion-<date>.md`。
+最新审核报告见 [[10_Reference/investing/reviews/index|审查报告索引]]，inbox 专属晋级日志在 `reviews/inbox-promotion-<date>.md`。
 
 ```dataview
 TABLE WITHOUT ID

@@ -15,8 +15,8 @@ LIMIT 50
 
 ## 关系
 
-- supplies: [[stocks/]] / [[reports/]] / [[metrics/]] / [[valuations/]] / [[dragon-tiger/]] / [[events/]]（数据源供给的实体）
-- defined_in: [[specs/]]（数据源接入的 spec）
+- supplies: [[10_Reference/investing/stocks/index|stocks/]] / [[10_Reference/investing/reports/index|reports/]] / [[10_Reference/investing/metrics/index|metrics/]] / [[10_Reference/investing/valuations/index|valuations/]] / [[10_Reference/investing/dragon-tiger/index|dragon-tiger/]] / [[10_Reference/investing/events/index|events/]]（数据源供给的实体）
+- defined_in: [[10_Reference/investing/specs/index|specs/]]（数据源接入的 spec）
 
 ## 层级说明
 
@@ -36,23 +36,23 @@ LIMIT 50
 
 > 本段列出该类型所有实体以建立入边链接（Dataview 表格不计入边）。
 
-- [[data-sources/akshare]]
-- [[data-sources/baidu-stock]]
-- [[data-sources/baostock]]
-- [[data-sources/cninfo]]
-- [[data-sources/eastmoney-datacenter]]
-- [[data-sources/eastmoney-push2]]
-- [[data-sources/eastmoney-push2ex]]
-- [[data-sources/eastmoney-reportapi]]
-- [[data-sources/eastmoney-searchapi]]
-- [[data-sources/fred]]
-- [[data-sources/hithink-ths]]
-- [[data-sources/mootdx]]
-- [[data-sources/rss-newsradar]]
-- [[data-sources/sina-financial]]
-- [[data-sources/tencent]]
-- [[data-sources/tushare]]
-- [[data-sources/worldmonitor]]
+- [[10_Reference/investing/data-sources/akshare]]
+- [[10_Reference/investing/data-sources/baidu-stock]]
+- [[10_Reference/investing/data-sources/baostock]]
+- [[10_Reference/investing/data-sources/cninfo]]
+- [[10_Reference/investing/data-sources/eastmoney-datacenter]]
+- [[10_Reference/investing/data-sources/eastmoney-push2]]
+- [[10_Reference/investing/data-sources/eastmoney-push2ex]]
+- [[10_Reference/investing/data-sources/eastmoney-reportapi]]
+- [[10_Reference/investing/data-sources/eastmoney-searchapi]]
+- [[10_Reference/investing/data-sources/fred]]
+- [[10_Reference/investing/data-sources/hithink-ths]]
+- [[10_Reference/investing/data-sources/mootdx]]
+- [[10_Reference/investing/data-sources/rss-newsradar]]
+- [[10_Reference/investing/data-sources/sina-financial]]
+- [[10_Reference/investing/data-sources/tencent]]
+- [[10_Reference/investing/data-sources/tushare]]
+- [[10_Reference/investing/data-sources/worldmonitor]]
 
 
 ---

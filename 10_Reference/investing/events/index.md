@@ -15,10 +15,10 @@ LIMIT 50
 
 ## 关系
 
-- affects: [[stocks/]]（事件影响标的）
-- triggers: [[strategies/]]（事件触发战法，如涨停池触发首板/连板/炸板回封）
-- pairs_with: [[dragon-tiger/]]（涨停事件与龙虎榜配对）
-- sourced_from: [[data-sources/]]（新闻/公告/涨停池数据来源）
+- affects: [[10_Reference/investing/stocks/index|stocks/]]（事件影响标的）
+- triggers: [[10_Reference/investing/strategies/index|strategies/]]（事件触发战法，如涨停池触发首板/连板/炸板回封）
+- pairs_with: [[10_Reference/investing/dragon-tiger/index|dragon-tiger/]]（涨停事件与龙虎榜配对）
+- sourced_from: [[10_Reference/investing/data-sources/index|data-sources/]]（新闻/公告/涨停池数据来源）
 
 ## 事件类型说明
 
@@ -39,19 +39,19 @@ LIMIT 50
 
 > 本段列出该类型所有实体以建立入边链接（Dataview 表格不计入边）。
 
-- [[events/2026-09-01-涨停池]]
-- [[events/2026-09-01-炸板池]]
-- [[events/2026-09-02-涨停池]]
-- [[events/2026-09-02-炸板池]]
-- [[events/2026-09-03-涨停池]]
-- [[events/2026-09-03-炸板池]]
-- [[events/2026-09-04-涨停池]]
-- [[events/2026-09-04-炸板池]]
-- [[events/2026-09-04-竞价异动]]
-- [[events/2026-09-05-涨停池]]
-- [[events/2026-09-07-异动]]
-- [[events/2026-09-07-涨停池]]
-- [[events/2026-09-07-炸板池]]
+- [[10_Reference/investing/events/2026-09-01-涨停池]]
+- [[10_Reference/investing/events/2026-09-01-炸板池]]
+- [[10_Reference/investing/events/2026-09-02-涨停池]]
+- [[10_Reference/investing/events/2026-09-02-炸板池]]
+- [[10_Reference/investing/events/2026-09-03-涨停池]]
+- [[10_Reference/investing/events/2026-09-03-炸板池]]
+- [[10_Reference/investing/events/2026-09-04-涨停池]]
+- [[10_Reference/investing/events/2026-09-04-炸板池]]
+- [[10_Reference/investing/events/2026-09-04-竞价异动]]
+- [[10_Reference/investing/events/2026-09-05-涨停池]]
+- [[10_Reference/investing/events/2026-09-07-异动]]
+- [[10_Reference/investing/events/2026-09-07-涨停池]]
+- [[10_Reference/investing/events/2026-09-07-炸板池]]
 
 
 ---

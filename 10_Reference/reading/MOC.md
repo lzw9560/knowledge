@@ -8,50 +8,50 @@
 
 | 实体类 | 文件夹 | 数量 | 说明 |
 |---|---|---|---|
-| 书单 | [[booklist/]] | 15 | 待读/在读/已读 |
-| 笔记 | [[notes/]] | 16 | 读书笔记 |
-| 摘抄 | [[quotes/]] | — | 精彩摘录 |
+| 书单 | [[10_Reference/reading/booklist/index|booklist/]] | 15 | 待读/在读/已读 |
+| 笔记 | [[10_Reference/reading/notes/index|notes/]] | 16 | 读书笔记 |
+| 摘抄 | [[10_Reference/reading/quotes/index|quotes/]] | — | 精彩摘录 |
 
 > 实体合计 31 个（书单 15 + 笔记 16 + 摘抄待建）。
 
 ## 种子实体
 
 ### 书单
-- [[booklist/聪明的投资者]] — 价值投资经典（格雷厄姆），链接低吸龙头战法
-- [[booklist/量化交易]] — 链接 A 股涨跌预测模型栈
-- [[booklist/股票作手回忆录]] — 短线交易经典（利弗莫尔），链接龙头战法
-- [[booklist/走进我的交易室]] — 交易心理学（埃尔德），链接市场情绪看板
-- [[booklist/穷查理宝典]] — 多元思维模型（芒格），链接四构件本体
-- [[booklist/海龟交易法则]] — 量化交易系统（费思），链接龙头/平台突破战法
-- [[booklist/金融市场技术分析]] — 技术分析经典（墨菲），链接形态/平台突破战法
-- [[booklist/技术分析精论]] — 技术分析百科（墨菲同书不同译本），链接形态战法
-- [[booklist/周期]] — 经济周期（达利欧），链接 macro 数据源
-- [[booklist/投资最重要的事]] — 价值投资（马克斯），链接低吸龙头战法
-- [[booklist/矛盾论]] — 哲学/矛盾分析（毛泽东），链接多空辩论
-- [[booklist/证券分析]] — 价值投资圣经（格雷厄姆/多德），链接估值实体
-- [[booklist/金融炼金术]] — 反身性理论（索罗斯），链接龙头/弱转强战法
-- [[booklist/股市趋势技术分析]] — 趋势分析经典（爱德华兹/迈吉），链接平台突破战法
-- [[booklist/克罗谈投资]] — 趋势跟踪策略（克罗），链接龙头/平台突破战法
+- [[10_Reference/reading/booklist/聪明的投资者]] — 价值投资经典（格雷厄姆），链接低吸龙头战法
+- [[10_Reference/reading/booklist/量化交易]] — 链接 A 股涨跌预测模型栈
+- [[10_Reference/reading/booklist/股票作手回忆录]] — 短线交易经典（利弗莫尔），链接龙头战法
+- [[10_Reference/reading/booklist/走进我的交易室]] — 交易心理学（埃尔德），链接市场情绪看板
+- [[10_Reference/reading/booklist/穷查理宝典]] — 多元思维模型（芒格），链接四构件本体
+- [[10_Reference/reading/booklist/海龟交易法则]] — 量化交易系统（费思），链接龙头/平台突破战法
+- [[10_Reference/reading/booklist/金融市场技术分析]] — 技术分析经典（墨菲），链接形态/平台突破战法
+- [[10_Reference/reading/booklist/技术分析精论]] — 技术分析百科（墨菲同书不同译本），链接形态战法
+- [[10_Reference/reading/booklist/周期]] — 经济周期（达利欧），链接 macro 数据源
+- [[10_Reference/reading/booklist/投资最重要的事]] — 价值投资（马克斯），链接低吸龙头战法
+- [[10_Reference/reading/booklist/矛盾论]] — 哲学/矛盾分析（毛泽东），链接多空辩论
+- [[10_Reference/reading/booklist/证券分析]] — 价值投资圣经（格雷厄姆/多德），链接估值实体
+- [[10_Reference/reading/booklist/金融炼金术]] — 反身性理论（索罗斯），链接龙头/弱转强战法
+- [[10_Reference/reading/booklist/股市趋势技术分析]] — 趋势分析经典（爱德华兹/迈吉），链接平台突破战法
+- [[10_Reference/reading/booklist/克罗谈投资]] — 趋势跟踪策略（克罗），链接龙头/平台突破战法
 
 ### 笔记
-- [[notes/安全边际]] — 从《聪明的投资者》提取，链接投研价值投资
-- [[notes/逆向投资]] — 从《聪明的投资者》提取，链接低吸龙头战法
-- [[notes/市场情绪]] — 从《走进我的交易室》提取，链接市场情绪看板
-- [[notes/趋势跟踪]] — 从技术分析/海龟提取，链接龙头战法
-- [[notes/均值回归]] — 从投资最重要的事/周期提取，链接低吸龙头战法
-- [[notes/风险控制]] — 从海龟交易法则提取，链接天气熔断
-- [[notes/聪明的投资者-笔记]] — LLM 生成读书笔记，链接安全边际/逆向投资
-- [[notes/穷查理宝典-笔记]] — LLM 生成读书笔记，链接四构件本体
-- [[notes/股票作手回忆录-笔记]] — LLM 生成读书笔记，链接龙头/平台突破战法
-- [[notes/走进我的交易室-笔记]] — LLM 生成读书笔记，链接市场情绪看板
-- [[notes/海龟交易法则-笔记]] — LLM 生成读书笔记，链接龙头/平台突破/预测模型栈
-- [[notes/金融市场技术分析-笔记]] — LLM 生成读书笔记，链接形态/平台突破战法
-- [[notes/周期-笔记]] — LLM 生成读书笔记，链接 macro 数据源
-- [[notes/投资最重要的事-笔记]] — LLM 生成读书笔记，链接低吸龙头/弱转强战法
-- [[notes/矛盾论-笔记]] — LLM 生成读书笔记，链接多空辩论/矛盾转化
-- [[notes/量化交易-笔记]] — LLM 生成读书笔记，链接预测模型栈/特征工程
+- [[10_Reference/reading/notes/安全边际]] — 从《聪明的投资者》提取，链接投研价值投资
+- [[10_Reference/reading/notes/逆向投资]] — 从《聪明的投资者》提取，链接低吸龙头战法
+- [[10_Reference/reading/notes/市场情绪]] — 从《走进我的交易室》提取，链接市场情绪看板
+- [[10_Reference/reading/notes/趋势跟踪]] — 从技术分析/海龟提取，链接龙头战法
+- [[10_Reference/reading/notes/均值回归]] — 从投资最重要的事/周期提取，链接低吸龙头战法
+- [[10_Reference/reading/notes/风险控制]] — 从海龟交易法则提取，链接天气熔断
+- [[10_Reference/reading/notes/聪明的投资者-笔记]] — LLM 生成读书笔记，链接安全边际/逆向投资
+- [[10_Reference/reading/notes/穷查理宝典-笔记]] — LLM 生成读书笔记，链接四构件本体
+- [[10_Reference/reading/notes/股票作手回忆录-笔记]] — LLM 生成读书笔记，链接龙头/平台突破战法
+- [[10_Reference/reading/notes/走进我的交易室-笔记]] — LLM 生成读书笔记，链接市场情绪看板
+- [[10_Reference/reading/notes/海龟交易法则-笔记]] — LLM 生成读书笔记，链接龙头/平台突破/预测模型栈
+- [[10_Reference/reading/notes/金融市场技术分析-笔记]] — LLM 生成读书笔记，链接形态/平台突破战法
+- [[10_Reference/reading/notes/周期-笔记]] — LLM 生成读书笔记，链接 macro 数据源
+- [[10_Reference/reading/notes/投资最重要的事-笔记]] — LLM 生成读书笔记，链接低吸龙头/弱转强战法
+- [[10_Reference/reading/notes/矛盾论-笔记]] — LLM 生成读书笔记，链接多空辩论/矛盾转化
+- [[10_Reference/reading/notes/量化交易-笔记]] — LLM 生成读书笔记，链接预测模型栈/特征工程
 
-> 带 "-笔记" 后缀的笔记为 LLM 生成（`<!-- LLM 生成，待人工校验 -->`），待人工校验后可去掉标记。
+> 带 "-笔记" 后缀的笔记为 LLM 生成（``），待人工校验后可去掉标记。
 
 ## 与投研的跨领域链接
 

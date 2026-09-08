@@ -151,41 +151,41 @@ LIMIT 10
 
 | 实体类 | 文件夹 | 说明 |
 |---|---|---|
-| 📈 股票 | [[stocks/]] | A 股/美股/港股个股，对应 `Quote` + `CompanyInfo` |
-| 🏭 行业板块 | [[industries/]] | 证监会行业分类，对应 `IndustrySector` |
-| 💡 概念板块 | [[concepts/]] | 概念题材板块，对应 `ConceptBlock` + `Sector` |
-| 📊 指数 | [[indices/]] | 沪深300/中证500等宽基与行业指数 |
-| 📰 研报 | [[reports/]] | 机构研报，对应 `Report` 契约 |
-| 👤 分析师 | [[analysts/]] | 研报作者，对应 `Report.researcher` |
-| 💰 财务指标 | [[metrics/]] | 营收/ROE/毛利率等，对应 `Financials` + `FinancialPeriod` |
-| 📈 估值 | [[valuations/]] | PE/PB/PEG/分位，对应 `Valuation` + `ValuationPercentile` |
-| 🐉 龙虎榜 | [[dragon-tiger/]] | 游资席位，对应 `Seat` + `BillboardDetail` + `DragonTiger` |
-| ⚡ 事件 | [[events/]] | 新闻/公告/涨停，对应 `News` + `Announcement` + `ZTPoolItem` |
-| ⚔️ 战法 | [[strategies/]] | 战法卡（从 `backend/strategies/cards/` 导入） |
-| 📋 项目决策 | [[specs/]] | SDD spec 决策实体，对应 `specs/` 目录 |
-| 📡 数据源 | [[data-sources/]] | 外部数据源，对应 `ARCHITECTURE` 数据流 |
-| 🤖 AI 角色 | [[agents/]] | trading-agents 的 7 Analyst（区别于 analysts 真人） |
+| 📈 股票 | [[10_Reference/investing/stocks/index|stocks/]] | A 股/美股/港股个股，对应 `Quote` + `CompanyInfo` |
+| 🏭 行业板块 | [[10_Reference/investing/industries/index|industries/]] | 证监会行业分类，对应 `IndustrySector` |
+| 💡 概念板块 | [[10_Reference/investing/concepts/index|concepts/]] | 概念题材板块，对应 `ConceptBlock` + `Sector` |
+| 📊 指数 | [[10_Reference/investing/indices/index|indices/]] | 沪深300/中证500等宽基与行业指数 |
+| 📰 研报 | [[10_Reference/investing/reports/index|reports/]] | 机构研报，对应 `Report` 契约 |
+| 👤 分析师 | [[10_Reference/investing/analysts/index|analysts/]] | 研报作者，对应 `Report.researcher` |
+| 💰 财务指标 | [[10_Reference/investing/metrics/index|metrics/]] | 营收/ROE/毛利率等，对应 `Financials` + `FinancialPeriod` |
+| 📈 估值 | [[10_Reference/investing/valuations/index|valuations/]] | PE/PB/PEG/分位，对应 `Valuation` + `ValuationPercentile` |
+| 🐉 龙虎榜 | [[10_Reference/investing/dragon-tiger/index|dragon-tiger/]] | 游资席位，对应 `Seat` + `BillboardDetail` + `DragonTiger` |
+| ⚡ 事件 | [[10_Reference/investing/events/index|events/]] | 新闻/公告/涨停，对应 `News` + `Announcement` + `ZTPoolItem` |
+| ⚔️ 战法 | [[10_Reference/investing/strategies/index|strategies/]] | 战法卡（从 `backend/strategies/cards/` 导入） |
+| 📋 项目决策 | [[10_Reference/investing/specs/index|specs/]] | SDD spec 决策实体，对应 `specs/` 目录 |
+| 📡 数据源 | [[10_Reference/investing/data-sources/index|data-sources/]] | 外部数据源，对应 `ARCHITECTURE` 数据流 |
+| 🤖 AI 角色 | [[10_Reference/investing/agents/index|agents/]] | trading-agents 的 7 Analyst（区别于 analysts 真人） |
 
 
 <!-- index 入边段 -->
 > 各类型 index.md 入边——确保每个类型索引页至少有 1 个入边。
 
-- [[actions/index]]
-- [[agents/index]]
-- [[analysts/index]]
-- [[concepts/index]]
-- [[data-sources/index]]
-- [[dragon-tiger/index]]
-- [[events/index]]
-- [[indices/index]]
-- [[industries/index]]
-- [[logic/index]]
-- [[metrics/index]]
-- [[reports/index]]
-- [[specs/index]]
-- [[stocks/index]]
-- [[strategies/index]]
-- [[valuations/index]]
+- [[10_Reference/investing/actions/index]]
+- [[10_Reference/investing/agents/index]]
+- [[10_Reference/investing/analysts/index]]
+- [[10_Reference/investing/concepts/index]]
+- [[10_Reference/investing/data-sources/index]]
+- [[10_Reference/investing/dragon-tiger/index]]
+- [[10_Reference/investing/events/index]]
+- [[10_Reference/investing/indices/index]]
+- [[10_Reference/investing/industries/index]]
+- [[10_Reference/investing/logic/index]]
+- [[10_Reference/investing/metrics/index]]
+- [[10_Reference/investing/reports/index]]
+- [[10_Reference/investing/specs/index]]
+- [[10_Reference/investing/stocks/index]]
+- [[10_Reference/investing/strategies/index]]
+- [[10_Reference/investing/valuations/index]]
 
 ### 各类型实体计数（Dataview 动态）
 
@@ -211,17 +211,17 @@ LIMIT 30
 
 | 构件 | 文件夹 | 说明 |
 |---|---|---|
-| **⚙️ 逻辑规则** | [[logic/]] | schema 约束/校验/状态机/推断规则 |
-| **⚡ 动作** | [[actions/]] | CRUD/状态流转/链接维护/审计快照 |
+| **⚙️ 逻辑规则** | [[10_Reference/investing/logic/index|logic/]] | schema 约束/校验/状态机/推断规则 |
+| **⚡ 动作** | [[10_Reference/investing/actions/index|actions/]] | CRUD/状态流转/链接维护/审计快照 |
 
 ## 🛡 质量门（Curated）
 
 | 层 | 文件夹 | 作用 |
 |---|---|---|
-| **📥 待审** | [[inbox/]] | LLM 抽取实体先进此，带 confidence + source + quality_score，审核通过才进正式区 |
-| **🔍 审查** | [[reviews/]] | ReAct Agent 定期体检报告（8 项检查） |
+| **📥 待审** | [[10_Reference/investing/inbox/index|inbox/]] | LLM 抽取实体先进此，带 confidence + source + quality_score，审核通过才进正式区 |
+| **🔍 审查** | [[10_Reference/investing/reviews/index|reviews/]] | ReAct Agent 定期体检报告（8 项检查） |
 
-> 不直接灌入是知识图谱健康的第一道防线。详见 [[inbox/index]] 质量四维度。
+> 不直接灌入是知识图谱健康的第一道防线。详见 [[10_Reference/investing/inbox/index]] 质量四维度。
 
 ### ⚔️ 战法卡统计
 
@@ -263,9 +263,9 @@ LIMIT 30
 
 ### 2. 链接（`[[]]` 双链）
 
-- 在任意笔记正文中输入 `[[stocks/600519]]` 即可链接到个股笔记；若笔记不存在，Obsidian 会高亮提示并支持一键创建。
-- **双向**：在股票笔记里写 `[[industries/食品饮料]]`，行业笔记的"反向链接"区会自动出现该股票。
-- 文件夹链接用 `[[stocks/]]` 形式，Obsidian 会指向该文件夹的 `index.md`。
+- 在任意笔记正文中输入 `[[10_Reference/investing/stocks/600519]]` 即可链接到个股笔记；若笔记不存在，Obsidian 会高亮提示并支持一键创建。
+- **双向**：在股票笔记里写 `[[10_Reference/investing/industries/食品饮料]]`，行业笔记的"反向链接"区会自动出现该股票。
+- 文件夹链接用 `[[10_Reference/investing/stocks/index|stocks/]]` 形式，Obsidian 会指向该文件夹的 `index.md`。
 
 ### 3. 查询（Dataview）
 
@@ -292,7 +292,7 @@ SORT pe_ttm ASC
   - 社区发现（LPA 标签传播）/ 入度中心性（hub 节点）/ 桥节点（跨社区连接者）/ BFS 最短路径
 - **时间线视图**：`scripts/timeline_view.py` → `docs/timeline-report.md`
   - 按 frontmatter date 字段排列所有事件实体，按月分组
-- **因果链规则**：[[logic/causal-chains]] — 因果（→）vs 相关（↔）vs 待验证（?>）标注规范
+- **因果链规则**：[[10_Reference/investing/logic/causal-chains]] — 因果（→）vs 相关（↔）vs 待验证（?>）标注规范
 
 ---
 
@@ -312,28 +312,28 @@ SORT pe_ttm ASC
 
 ## 🔗 关联子区
 
-- [[market_sentiment/DASHBOARD]] — 市场情绪追踪（每日 pre/mid/post 报告 + z-score 温度）
-- 战法卡有"适用天气：阴天"，market_sentiment 有温度 Z 值——但定义"阴天 = 哪个 Z 区间"的逻辑待建（见 [[logic/战法天气映射]]）
+- [[10_Reference/market_sentiment/DASHBOARD]] — 市场情绪追踪（每日 pre/mid/post 报告 + z-score 温度）
+- 战法卡有"适用天气：阴天"，market_sentiment 有温度 Z 值——但定义"阴天 = 哪个 Z 区间"的逻辑待建（见 [[10_Reference/investing/logic/战法天气映射]]）
 
 ### 关联项目（ora-2 方案 D 纳入的外部投研项目）
 
-- [[specs/a-plate-sentinel-project]] — A股打板情绪监控与投研决策看板（8 大模块，Tushare 数据源，MVP 骨架阶段）
-- [[specs/trading-agents-project]] — TradingAgents A股深度特化 fork（7 Analyst + 多 Agent 辩论）
-- [[specs/daily-stock-analysis-project]] — 每日股票分析报告生成器（多市场、多渠道推送）
+- [[10_Reference/investing/specs/a-plate-sentinel-project]] — A股打板情绪监控与投研决策看板（8 大模块，Tushare 数据源，MVP 骨架阶段）
+- [[10_Reference/investing/specs/trading-agents-project]] — TradingAgents A股深度特化 fork（7 Analyst + 多 Agent 辩论）
+- [[10_Reference/investing/specs/daily-stock-analysis-project]] — 每日股票分析报告生成器（多市场、多渠道推送）
 
 关联项目使用的数据源：
-- [[data-sources/tushare]]（a-Plate-Sentinel 专用，积分制）
-- [[data-sources/akshare]] / [[data-sources/baostock]] / [[data-sources/mootdx]]（与 Vibe-Research 共用）
+- [[10_Reference/investing/data-sources/tushare]]（a-Plate-Sentinel 专用，积分制）
+- [[10_Reference/investing/data-sources/akshare]] / [[10_Reference/investing/data-sources/baostock]] / [[10_Reference/investing/data-sources/mootdx]]（与 Vibe-Research 共用）
 
 ## 🌐 跨领域链接（ora-3 §4）
 
-> 投研方法论与其他知识域的"同构"链接。判据（[[logic/cross-domain-gate]]，待建）：
+> 投研方法论与其他知识域的"同构"链接。判据（[[10_Reference/investing/logic/cross-domain-gate]]，待建）：
 > 跨域实体必须有 ≥ 2 个具体实例 + 1 条 invariant，否则不建。
 
 ### 已建链接
 
-- [[strategies/dragon_head]] §方法论链接 — 「板块轮动识别龙头」↔ 时间序列状态识别（🚧 待建）
-- [[meta/four-construct-ontology]] — 四构件本体方法论（领域无关模板）
+- [[10_Reference/investing/strategies/dragon_head]] §方法论链接 — 「板块轮动识别龙头」↔ 时间序列状态识别（🚧 待建）
+- [[10_Reference/meta/four-construct-ontology]] — 四构件本体方法论（领域无关模板）
 
 ### 待建领域
 

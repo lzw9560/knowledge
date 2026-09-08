@@ -8,34 +8,34 @@
 
 | 实体类 | 文件夹 | 数量 | 说明 |
 |---|---|---|---|
-| 项目 | [[active/]] | 7 | 进行中 |
-| 候选 | [[backlog/]] | 7 | 待启动 |
-| 归档 | [[archived/]] | 1 | 已结束 |
+| 项目 | [[10_Reference/projects/active/index|active/]] | 7 | 进行中 |
+| 候选 | [[10_Reference/projects/backlog/index|backlog/]] | 7 | 待启动 |
+| 归档 | [[10_Reference/projects/archived/index|archived/]] | 1 | 已结束 |
 
 > 实体合计 15 个。
 
 ## 种子实体
 
 ### 进行中
-- [[active/vibe-research]] — Vibe-Research 私人投研助理（本知识图谱的宿主项目）
-- [[active/trading-agents]] — TradingAgents A 股深度特化 fork
-- [[active/knowledge-graph]] — 本知识图谱项目本身（元项目）
-- [[active/a-plate-sentinel]] — A-Plate-Sentinel 板块情绪哨兵
-- [[active/daily-stock-analysis]] — 每日股票分析
-- [[active/obsidian-mcp]] — Obsidian MCP 连接项目
-- [[active/quartz-deploy]] — Quartz 站点部署项目
+- [[10_Reference/projects/active/vibe-research]] — Vibe-Research 私人投研助理（本知识图谱的宿主项目）
+- [[10_Reference/projects/active/trading-agents]] — TradingAgents A 股深度特化 fork
+- [[10_Reference/projects/active/knowledge-graph]] — 本知识图谱项目本身（元项目）
+- [[10_Reference/projects/active/a-plate-sentinel]] — A-Plate-Sentinel 板块情绪哨兵
+- [[10_Reference/projects/active/daily-stock-analysis]] — 每日股票分析
+- [[10_Reference/projects/active/obsidian-mcp]] — Obsidian MCP 连接项目
+- [[10_Reference/projects/active/quartz-deploy]] — Quartz 站点部署项目
 
 ### 待启动
-- [[backlog/quartz-site]] — Quartz 静态站点（刚部署）
-- [[backlog/wechat-bot]] — 微信 bot（代码就绪待配置）
-- [[backlog/daily-stock-analysis-integration]] — daily-stock-analysis 纳入图谱
-- [[backlog/a-plate-sentinel-integration]] — a-Plate-Sentinel 纳入图谱
-- [[backlog/incremental-sync-automation]] — 增量同步自动化
-- [[backlog/realtime-data-pipeline]] — 实时数据管道（盘中信号生成基础设施）
-- [[backlog/llm-extraction-automation]] — LLM 抽取自动化（非结构化→结构化管线）
+- [[10_Reference/projects/backlog/quartz-site]] — Quartz 静态站点（刚部署）
+- [[10_Reference/projects/backlog/wechat-bot]] — 微信 bot（代码就绪待配置）
+- [[10_Reference/projects/backlog/daily-stock-analysis-integration]] — daily-stock-analysis 纳入图谱
+- [[10_Reference/projects/backlog/a-plate-sentinel-integration]] — a-Plate-Sentinel 纳入图谱
+- [[10_Reference/projects/backlog/incremental-sync-automation]] — 增量同步自动化
+- [[10_Reference/projects/backlog/realtime-data-pipeline]] — 实时数据管道（盘中信号生成基础设施）
+- [[10_Reference/projects/backlog/llm-extraction-automation]] — LLM 抽取自动化（非结构化→结构化管线）
 
 ### 已归档
-- [[archived/vibe-research-bakup]] — Vibe-Research 备份仓（S006 重写后归档）
+- [[10_Reference/projects/archived/vibe-research-bakup]] — Vibe-Research 备份仓（S006 重写后归档）
 
 ## 与投研的跨领域链接
 

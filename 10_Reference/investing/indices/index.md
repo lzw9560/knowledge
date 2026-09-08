@@ -15,9 +15,9 @@ LIMIT 50
 
 ## 关系
 
-- has_members: [[stocks/]]（指数成分股）
-- has_events: [[events/]]（指数调整/纳入剔除事件）
-- sourced_from: [[data-sources/]]（指数行情来源）
+- has_members: [[10_Reference/investing/stocks/index|stocks/]]（指数成分股）
+- has_events: [[10_Reference/investing/events/index|events/]]（指数调整/纳入剔除事件）
+- sourced_from: [[10_Reference/investing/data-sources/index|data-sources/]]（指数行情来源）
 
 ## 新建实体
 
@@ -27,11 +27,11 @@ LIMIT 50
 
 > 本段列出该类型所有实体以建立入边链接（Dataview 表格不计入边）。
 
-- [[indices/000001]]
-- [[indices/000300]]
-- [[indices/000905]]
-- [[indices/399001]]
-- [[indices/399006]]
+- [[10_Reference/investing/indices/000001]]
+- [[10_Reference/investing/indices/000300]]
+- [[10_Reference/investing/indices/000905]]
+- [[10_Reference/investing/indices/399001]]
+- [[10_Reference/investing/indices/399006]]
 
 
 ---
