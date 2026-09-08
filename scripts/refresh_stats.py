@@ -191,6 +191,45 @@ def replace_precompiled(content: str, block_id_substring: str, new_inner: str) -
     return PRECOMPILED_RE.sub(repl, content)
 
 
+# 锚点注释——稳定标识，不随 hash 漂移
+# 在 MOC.md 等文件的统计表格上方加 <!-- stats-anchor:xxx --> 注释，
+# refresh_stats 按锚点定位表格，而非易漂移的 dataview-precompiled hash ID。
+ANCHOR_RE = re.compile(
+    r"(<!--\s*stats-anchor:([a-z0-9_-]+)\s*-->\n)"  # group 1: anchor comment, group 2: anchor name
+    r"(.*?)"  # group 3: content until close
+    r"(\n<!--\s*/stats-anchor\s*-->)",
+    re.DOTALL,
+)
+
+
+def replace_by_anchor(content: str, anchor_name: str, new_inner: str) -> str:
+    """按锚点注释 <!-- stats-anchor:name -->...<!-- /stats-anchor --> 替换内容。
+
+    保留锚点注释，仅替换中间内容。若未匹配到锚点则原样返回。
+    """
+    def repl(m: re.Match) -> str:
+        if m.group(2) == anchor_name:
+            return f"{m.group(1)}{new_inner}{m.group(4)}"
+        return m.group(0)
+
+    return ANCHOR_RE.sub(repl, content)
+
+
+def replace_precompiled_or_anchor(
+    content: str, anchor_name: str, old_hash: str, new_inner: str
+) -> str:
+    """优先按锚点注释定位，回退到旧 hash ID。
+
+    锚点注释存在时用锚点（稳定）；不存在时回退到旧 hash（向后兼容）。
+    """
+    # 优先锚点
+    if f"stats-anchor:{anchor_name}" in content:
+        content = replace_by_anchor(content, anchor_name, new_inner)
+        return content
+    # 回退旧 hash（向后兼容未加锚点的旧 MOC）
+    return replace_precompiled(content, old_hash, new_inner)
+
+
 def replace_plain_table(content: str, header_marker: str, new_table: str) -> str:
     """替换非 precompiled 的普通 markdown 表格段（首页用）。
 
@@ -256,16 +295,24 @@ def update_home(total: int, type_counts: Counter, folder_counts: Counter, dry: b
 
 
 def update_moc(total: int, type_counts: Counter, dry: bool) -> bool:
-    """更新 10_Reference/investing/MOC.md。"""
+    """更新 10_Reference/investing/MOC.md。
+
+    统计表格按 <!-- stats-anchor:total --> / <!-- stats-anchor:type-counts -->
+    锚点定位（稳定，不随 dataview-precompiled hash 漂移）。无锚点时回退旧 hash。
+    """
     path = INVESTING / "MOC.md"
     content = path.read_text(encoding="utf-8")
     orig = content
 
-    # 1) 实体总数 precompiled 块（单行表）
-    content = replace_precompiled(content, "a6d4be462c4a", render_total_table(total))
+    # 1) 实体总数表——锚点 stats-anchor:total，回退 hash a6d4be462c4a
+    content = replace_precompiled_or_anchor(
+        content, "total", "a6d4be462c4a", render_total_table(total)
+    )
 
-    # 2) 各类型实体计数 precompiled 块（完整 21 类型表，ID c649e86810b8）
-    content = replace_precompiled(content, "c649e86810b8", render_type_counts_table(type_counts))
+    # 2) 各类型实体计数表——锚点 stats-anchor:type-counts，回退 hash c649e86810b8
+    content = replace_precompiled_or_anchor(
+        content, "type-counts", "c649e86810b8", render_type_counts_table(type_counts)
+    )
 
     # 3) 正文里硬编码的 "2400+ 实体" / "16 实体类"
     content = content.replace(

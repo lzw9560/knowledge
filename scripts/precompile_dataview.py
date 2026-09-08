@@ -947,7 +947,7 @@ def render_cell(value: Any, idx: VaultIndex, rec_key: str = "") -> str:
     if isinstance(value, date):
         return value.strftime("%Y-%m-%d")
     s = str(value).strip()
-    if s == "":
+    if s == "" or s == "null":
         return "—"
     return s
 
