@@ -9,7 +9,7 @@
 
 | 文件 | 修改时间 |
 |------|---------|
-| [[Vibe-Research备份]] | 2026-09-07 11:17 |
+| [[10_Reference/projects/archived/Vibe-Research备份]] | 2026-09-07 11:17 |
 
 <!-- /dataview-precompiled -->
 

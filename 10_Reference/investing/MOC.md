@@ -531,7 +531,7 @@
   - 社区发现（LPA 标签传播）/ 入度中心性（hub 节点）/ 桥节点（跨社区连接者）/ BFS 最短路径
 - **时间线视图**：`scripts/timeline_view.py` → `docs/timeline-report.md`
   - 按 frontmatter date 字段排列所有事件实体，按月分组
-- **因果链规则**：[[10_Reference/investing/logic/causal-chains]] — 因果（→）vs 相关（↔）vs 待验证（?>）标注规范
+- **因果链规则**：[[10_Reference/investing/logic/因果链]] — 因果（→）vs 相关（↔）vs 待验证（?>）标注规范
 
 ---
 

@@ -9,14 +9,14 @@
 
 | 文件 | 修改时间 |
 |------|---------|
-| [[清洁架构]] | 2026-09-08 12:31 |
-| [[cqrs]] | 2026-09-07 20:33 |
-| [[事件驱动架构]] | 2026-09-07 20:33 |
-| [[事件溯源]] | 2026-09-07 20:33 |
-| [[六边形架构]] | 2026-09-07 20:33 |
-| [[分层架构]] | 2026-09-07 20:33 |
-| [[微服务架构]] | 2026-09-07 20:33 |
-| [[saga]] | 2026-09-07 20:33 |
+| [[10_Reference/tech-learning/architecture/清洁架构]] | 2026-09-08 12:31 |
+| [[10_Reference/tech-learning/architecture/cqrs]] | 2026-09-07 20:33 |
+| [[10_Reference/tech-learning/architecture/事件驱动架构]] | 2026-09-07 20:33 |
+| [[10_Reference/tech-learning/architecture/事件溯源]] | 2026-09-07 20:33 |
+| [[10_Reference/tech-learning/architecture/六边形架构]] | 2026-09-07 20:33 |
+| [[10_Reference/tech-learning/architecture/分层架构]] | 2026-09-07 20:33 |
+| [[10_Reference/tech-learning/architecture/微服务架构]] | 2026-09-07 20:33 |
+| [[10_Reference/tech-learning/architecture/saga]] | 2026-09-07 20:33 |
 
 <!-- /dataview-precompiled -->
 

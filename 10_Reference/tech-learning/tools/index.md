@@ -9,14 +9,14 @@
 
 | 文件 | 修改时间 |
 |------|---------|
-| [[Obsidian]] | 2026-09-08 12:28 |
-| [[uv包管理]] | 2026-09-08 12:24 |
-| [[定时任务]] | 2026-09-07 20:33 |
-| [[Docker-Compose]] | 2026-09-07 12:00 |
-| [[GitHub-Actions]] | 2026-09-07 12:00 |
-| [[Obsidian-Git插件]] | 2026-09-07 12:00 |
-| [[Git]] | 2026-09-07 11:59 |
-| [[Docker]] | 2026-09-07 06:24 |
+| [[10_Reference/tech-learning/tools/Obsidian]] | 2026-09-08 12:28 |
+| [[10_Reference/tech-learning/tools/uv包管理]] | 2026-09-08 12:24 |
+| [[10_Reference/tech-learning/tools/定时任务]] | 2026-09-07 20:33 |
+| [[10_Reference/tech-learning/tools/Docker-Compose]] | 2026-09-07 12:00 |
+| [[10_Reference/tech-learning/tools/GitHub-Actions]] | 2026-09-07 12:00 |
+| [[10_Reference/tech-learning/tools/Obsidian-Git插件]] | 2026-09-07 12:00 |
+| [[10_Reference/tech-learning/tools/Git]] | 2026-09-07 11:59 |
+| [[10_Reference/tech-learning/tools/Docker]] | 2026-09-07 06:24 |
 
 <!-- /dataview-precompiled -->
 

@@ -14,10 +14,10 @@ created: 2026-09-07
 
 | 文件 | 修改时间 |
 |------|---------|
-| [[go]] | 2026-09-08 12:24 |
-| [[python]] | 2026-09-08 12:24 |
-| [[rust]] | 2026-09-08 12:24 |
-| [[typescript]] | 2026-09-08 12:24 |
+| [[10_Reference/tech-learning/languages/go]] | 2026-09-08 12:24 |
+| [[10_Reference/tech-learning/languages/python]] | 2026-09-08 12:24 |
+| [[10_Reference/tech-learning/languages/rust]] | 2026-09-08 12:24 |
+| [[10_Reference/tech-learning/languages/typescript]] | 2026-09-08 12:24 |
 
 <!-- /dataview-precompiled -->
 

@@ -14,11 +14,11 @@ created: 2026-09-07
 
 | 文件 | 修改时间 |
 |------|---------|
-| [[fastapi]] | 2026-09-08 12:24 |
-| [[pydantic]] | 2026-09-08 12:24 |
-| [[react]] | 2026-09-08 12:24 |
-| [[tailwindcss]] | 2026-09-08 12:24 |
-| [[vite]] | 2026-09-08 12:24 |
+| [[10_Reference/tech-learning/frameworks/fastapi]] | 2026-09-08 12:24 |
+| [[10_Reference/tech-learning/frameworks/pydantic]] | 2026-09-08 12:24 |
+| [[10_Reference/tech-learning/frameworks/react]] | 2026-09-08 12:24 |
+| [[10_Reference/tech-learning/frameworks/tailwindcss]] | 2026-09-08 12:24 |
+| [[10_Reference/tech-learning/frameworks/vite]] | 2026-09-08 12:24 |
 
 <!-- /dataview-precompiled -->
 
