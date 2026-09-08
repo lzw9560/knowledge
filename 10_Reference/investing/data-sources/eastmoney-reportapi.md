@@ -20,8 +20,21 @@ source: ARCHITECTURE.md
 
 ## 📋 提供字段
 
-待补充
+| 字段 | 类型 | 说明 |
+|---|---|---|
+| title | str | 研报标题 |
+| org | str | 研究机构名称 |
+| rating | str | 评级 |
+| ratingChange | str | 评级变动 |
+| publish_date | str | 发布日期 |
+| code | str | 个股代码 |
+| industryCode | str | 行业代码 |
+| info_code | str | 研报信息码（PDF 拼接用） |
+| beginTime | str | 检索起始时间 |
+| endTime | str | 检索结束时间 |
 
+> 数据源：`reportapi.eastmoney.com/report/list`（qType=0 个股 / qType=1 行业）
+> PDF 全文链接：`pdf.dfcfw.com/pdf/H3_{info_code}_1.pdf`
 
 ## ⏱ 限流策略
 

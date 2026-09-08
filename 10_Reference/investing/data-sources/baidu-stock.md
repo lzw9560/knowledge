@@ -20,8 +20,21 @@ source: ARCHITECTURE.md
 
 ## 📋 提供字段
 
-待补充
+| 字段 | 类型 | 说明 |
+|---|---|---|
+| date | str | 交易日（YYYY-MM-DD） |
+| open | float | 开盘价 |
+| close | float | 收盘价 |
+| high | float | 最高价 |
+| low | float | 最低价 |
+| volume | int | 成交量（股） |
+| amount | float | 成交额 |
+| ma5 | float | 5日均价 |
+| ma10 | float | 10日均价 |
+| ma20 | float | 20日均价 |
 
+> 数据源：`finance.pae.baidu.com/selfselect/getstockquotation`（urllib 直连，不封 IP）
+> 自带 ma5/ma10/ma20，免本地重算移动平均
 
 ## ⏱ 限流策略
 

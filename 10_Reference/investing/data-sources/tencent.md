@@ -20,8 +20,30 @@ source: ARCHITECTURE.md
 
 ## 📋 提供字段
 
-待补充
+| 字段 | 类型 | 说明 |
+|---|---|---|
+| code | str | 股票代码（6位） |
+| name | str | 股票名称 |
+| price | float | 最新价（现价） |
+| last_close | float | 昨收价 |
+| open | float | 今开价 |
+| change_amt | float | 涨跌额 |
+| change_pct | float | 涨跌幅（%） |
+| high | float | 最高价 |
+| low | float | 最低价 |
+| amount_wan | float | 成交额（万元） |
+| turnover_pct | float | 换手率（%） |
+| pe_ttm | float | 滚动市盈率（PE-TTM） |
+| amplitude_pct | float | 振幅（%） |
+| mcap_yi | float | 总市值（亿元） |
+| float_mcap_yi | float | 流通市值（亿元） |
+| pb | float | 市净率（PB） |
+| limit_up | float | 涨停价 |
+| limit_down | float | 跌停价 |
+| vol_ratio | float | 量比 |
+| pe_static | float | 静态市盈率 |
 
+> 数据源：`qt.gtimg.cn`（GBK 编码，urllib 直连）
 
 ## ⏱ 限流策略
 

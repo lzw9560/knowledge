@@ -20,8 +20,44 @@ source: ARCHITECTURE.md
 
 ## 📋 提供字段
 
-待补充
+| 字段 | 类型 | 说明 |
+|---|---|---|
+| date | str | 交易日期（YYYY-MM-DD） |
+| rzye | float | 融资余额（融资融券） |
+| rzmre | float | 融资买入额 |
+| rzche | float | 融资偿还额 |
+| rqye | float | 融券余额 |
+| rqmcl | float | 融券卖出量 |
+| rzrqye | float | 两融合计余额 |
+| price | float | 成交价（大宗交易） |
+| close | float | 收盘价（大宗交易） |
+| premium_pct | float | 折溢价率（%，大宗交易） |
+| vol | float | 成交量（大宗交易） |
+| amount | float | 成交额（大宗交易） |
+| buyer | str | 买方营业部 |
+| seller | str | 卖方营业部 |
+| holder_num | int | 股东户数 |
+| change_ratio | float | 户数环比变化 |
+| avg_shares | float | 户均持股 |
+| bonus_rmb | float | 每股派息（税前，分红） |
+| transfer_ratio | float | 每10股转增（分红） |
+| bonus_ratio | float | 每10股送股（分红） |
+| plan | str | 分红进度 |
+| reason | str | 龙虎榜上榜原因 |
+| net_buy | float | 龙虎榜净买入（万元） |
+| turnover | float | 龙虎榜换手率 |
+| type | str | 解禁类型（限售解禁） |
+| shares | float | 解禁股数 |
+| able_shares | float | 实际可流通股数 |
+| ratio | float | 解禁比例 |
+| main_net | float | 主力净流入（资金流，元） |
+| small_net | float | 小单净流入 |
+| mid_net | float | 中单净流入 |
+| large_net | float | 大单净流入 |
+| super_net | float | 超大单净流入 |
+| source | str | 数据来源标识（eastmoney/sina_fallback） |
 
+> 数据源：`datacenter-web.eastmoney.com` 统一查询（reportName：RPTA_WEB_RZRQ_GGMX/RPT_DATA_BLOCKTRADE/RPT_HOLDERNUMLATEST/RPT_SHAREBONUS_DET/RPT_DAILYBILLBOARD_DETAILSNEW/RPT_LIFT_STAGE）
 
 ## ⏱ 限流策略
 

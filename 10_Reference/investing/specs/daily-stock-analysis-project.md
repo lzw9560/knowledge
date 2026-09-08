@@ -17,12 +17,12 @@ source: README.md
 
 ## 📋 项目概述
 
-待补充
+详见 spec 原文（daily-stock-analysis-project）
 
 
 ## 🏗 架构
 
-待补充
+详见 spec 原文（daily-stock-analysis-project）
 
 
 ## 🔗 关联

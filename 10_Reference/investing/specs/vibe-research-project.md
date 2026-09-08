@@ -21,12 +21,12 @@ source: README.md
 
 ## 📋 项目概述
 
-待补充
+详见 spec 原文（vibe-research-project）
 
 
 ## 🏗 架构
 
-待补充
+详见 spec 原文（vibe-research-project）
 
 
 ## 🔗 关联

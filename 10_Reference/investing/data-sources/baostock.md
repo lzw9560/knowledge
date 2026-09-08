@@ -6,7 +6,7 @@ endpoint: bbaostock.com
 rate_limit: 无
 fallback: S090 kline_refresh
 compliance: ok
-provides: [K线日更]
+provides: [K线日更, 5minK线]
 projects: [vibe-research, daily-stock-analysis]
 origin_project: vibe-research
 created: 2026-09-06
@@ -22,12 +22,22 @@ source: ARCHITECTURE.md
 
 ## 📋 提供字段
 
-待补充
+| 字段 | 类型 | 说明 |
+|---|---|---|
+| date | str | 交易日（YYYY-MM-DD） |
+| time | str | 时间（5min K线，HH:MM:SS） |
+| open | float | 开盘价（前复权 qfq） |
+| high | float | 最高价 |
+| low | float | 最低价 |
+| close | float | 收盘价 |
+| volume | float | 成交量 |
 
+> 数据源：baostock `query_history_k_data_plus`（frequency=5，adjustflag=2 前复权）
+> 单次 login（进程级幂等），无 IP 限制，免防封
 
 ## ⏱ 限流策略
 
-- 无（待补：是否有上游限流）
+- 无（baostock 证券宝，无 IP 限制，免防封）
 
 
 ## 🔄 降级链

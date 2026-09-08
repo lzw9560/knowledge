@@ -31,7 +31,7 @@ stub 实体的状态流转三阶段：
 2. **填充**：补全关键字段（code/name/title 等）+ 建立至少 1 个入边
 3. **转正**：关键字段齐全 + 有入边 → `status: stub` 改 `status: active`
 
-stub 是"计划中待填充的占位"，允许：
+stub 是"计划中待数据源补充的占位"，允许：
 - 字段不完整（schema_infer 跳过 stub，不报缺字段）
 - 无入边（orphan_check 跳过 stub，不报孤立）
 
@@ -52,7 +52,7 @@ stub 是"计划中待填充的占位"，允许：
 
 关键：`vault_audit.py` 的 `schema_infer` 和 `orphan_check` 已对 `status: stub` 豁免（见脚本 check_orphan / check_schema），避免把占位误报为缺陷。
 
-Dataview 查询（stub 实体待填充）：
+Dataview 查询（stub 实体待数据源补充）：
 
 ```dataview
 TABLE type AS "类型", status AS "状态", created AS "创建日"

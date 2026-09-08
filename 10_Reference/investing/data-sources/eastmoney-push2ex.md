@@ -20,8 +20,17 @@ source: ARCHITECTURE.md
 
 ## 📋 提供字段
 
-待补充
+| 字段 | 类型 | 说明 |
+|---|---|---|
+| code | str | 股票代码（原始池含） |
+| name | str | 股票名称 |
+| lbc | int | 连板数 |
+| zbc | int | 炸板次数 |
+| hybk | str | 所属行业板块 |
+| fbt | float | 首次封板时间（sort 字段） |
 
+> 数据源：`push2ex.eastmoney.com` 端点 getTopicZTPool/getTopicZBPool/getTopicDTPool/getYesterdayZTPool
+> ⚠️ 原始池含个股 code/name，仅供 market.py 聚合成无个股的短线情绪指标，切勿直接接 API/UI（破零标的红线）
 
 ## ⏱ 限流策略
 

@@ -20,8 +20,17 @@ source: ARCHITECTURE.md
 
 ## 📋 提供字段
 
-待补充
+| 字段 | 类型 | 说明 |
+|---|---|---|
+| date | str | 公告日期（YYYY-MM-DD） |
+| title | str | 公告标题 |
+| type | str | 公告类型/栏目 |
+| url | str | 公告详情链接 |
+| Code | str | 搜索结果代码（搜索接口） |
+| Name | str | 搜索结果名称 |
+| MktNum | int | 市场编号（搜索接口） |
 
+> 数据源：`searchapi.eastmoney.com/api/suggest/get`（搜索） + `np-anotice-stock.eastmoney.com/api/security/ann`（公告）
 
 ## ⏱ 限流策略
 

@@ -6,7 +6,7 @@ endpoint: akshare Python 包
 rate_limit: 无（惰性导入）
 fallback: DependencyMissing 优雅报错
 compliance: ok
-provides: [legu行业资金流, 行业资金流, 财报三表(待补)]
+provides: [legu行业资金流, 行业资金流, 财报三表]
 projects: [vibe-research, trading-agents, daily-stock-analysis]
 origin_project: vibe-research
 created: 2026-09-06
@@ -22,8 +22,33 @@ source: ARCHITECTURE.md
 
 ## 📋 提供字段
 
-待补充
+| 字段 | 类型 | 说明 |
+|---|---|---|
+| period | str | 报告期（财务摘要） |
+| revenue | float | 营业总收入 |
+| revenue_yoy | float | 营收同比增长率 |
+| net_profit | float | 净利润 |
+| net_profit_yoy | float | 净利同比增长率 |
+| eps | float | 基本每股收益 |
+| bvps | float | 每股净资产 |
+| roe | float | 净资产收益率 |
+| gross_margin | float | 销售毛利率 |
+| net_margin | float | 销售净利率 |
+| op_cf_ps | float | 每股经营现金流 |
+| current | float | 估值当前值（PE/PB） |
+| percentile | float | 历史分位（%） |
+| min | float | 历史最小值 |
+| max | float | 历史最大值 |
+| p20 | float | 20分位 |
+| p50 | float | 50分位 |
+| p80 | float | 80分位 |
+| chip_profit_ratio | float | 获利比例（筹码分布，0-1） |
+| avg_cost | float | 平均成本 |
+| concentration | float | 90%集中度 |
+| 90_cost | str | 90%成本区间（low-high） |
+| 70_cost | str | 70%成本区间（low-high） |
 
+> 数据源：akshare Python 包（stock_profit_forecast_ths/stock_news_em/stock_individual_info_em/stock_zh_a_disclosure_report_cninfo/stock_financial_abstract_ths/stock_zh_valuation_baidu + 自建东财 CYQ 筹码）
 
 ## ⏱ 限流策略
 

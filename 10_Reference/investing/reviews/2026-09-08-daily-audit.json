@@ -21,8 +21,14 @@
     "project": 4,
     "action": 4
   },
-  "stub_count": 43,
-  "llm_generated_count": 952,
+  "stub_count": 15,
+  "llm_generated_count": 0,
+  "placeholder_count": 23,
+  "placeholder_by_type": {
+    "concepts": 5,
+    "logic": 1,
+    "specs": 17
+  },
   "confidence_distribution": {
     "medium": 1027,
     "high": 1422
@@ -39,6 +45,18 @@
       1
     ]
   ],
-  "orphan_count": 0,
-  "orphan_by_type": {}
+  "orphan_count": 193,
+  "orphan_by_type": {
+    "actions": 1,
+    "concepts": 1,
+    "data-sources": 8,
+    "dragon-tiger": 41,
+    "events": 13,
+    "indices": 3,
+    "industries": 5,
+    "logic": 10,
+    "reports": 33,
+    "specs": 76,
+    "stocks": 2
+  }
 }

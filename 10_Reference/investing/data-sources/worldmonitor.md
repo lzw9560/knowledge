@@ -20,13 +20,32 @@ source: ARCHITECTURE.md
 
 ## 📋 提供字段
 
-待补充
+| 字段 | 类型 | 说明 |
+|---|---|---|
+| symbol | str | 商品/外汇代码（市场数据） |
+| price | float | 最新价 |
+| change_pct | float | 涨跌幅（%） |
+| currency | str | 币种 |
+| country | str | 国家名（CII 31国） |
+| cii | float | 国家不稳定指数 |
+| trend | str | 趋势 |
+| title | str | 资讯/聚类标题 |
+| summary | str | 摘要 |
+| category | str | 资讯分类 |
+| ts | int | 时间戳 |
+| bdi | float | 波罗的海干散货指数 |
+| stress_indicators | dict | 供应链压力指标 |
+| name | str | 热点名称 |
+| level | str | 热点升级级别 |
 
+> 数据源：`worldmonitor.app/mcp`（MCP JSON-RPC，streamable HTTP，11 fetcher）
+> 聚合 65+ 外部源、500+ 资讯、CII 31国不稳定指数、Finance Radar、跨源关联
+> 合成分标注 source="worldmonitor_composite"（只作输入之一，不作唯一依据）
 
 ## ⏱ 限流策略
 
 - MCP 远程调用
-- 无（待补：是否有上游限流）
+- 无（源端无明示限流，MCP 远程调用）
 
 
 ## 🔄 降级链

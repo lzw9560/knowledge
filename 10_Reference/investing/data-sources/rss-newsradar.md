@@ -20,8 +20,18 @@ source: ARCHITECTURE.md
 
 ## 📋 提供字段
 
-待补充
+| 字段 | 类型 | 说明 |
+|---|---|---|
+| title | str | 资讯标题 |
+| url | str | 资讯链接 |
+| time | str | 发布时间（MM-DD HH:MM 北京时间） |
+| ts | int | 发布时间戳（Unix 秒） |
+| summary | str | 摘要（≤160字，HTML 已剥离） |
+| source | str | RSS 源名称 |
+| track | str | 12 赛道分类 |
 
+> 数据源：108 个公开 RSS 源（urllib + xml.etree，ThreadPoolExecutor 40 线程并发）
+> 零 key、零个股字段；合规红线过滤（赌/预测市场/加密/色情）
 
 ## ⏱ 限流策略
 

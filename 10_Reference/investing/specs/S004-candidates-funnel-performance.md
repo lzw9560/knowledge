@@ -16,17 +16,17 @@ source: specs/README.md
 
 ## 🎯 问题/目标
 
-待补充
+详见 spec 原文（S004-candidates-funnel-performance）
 
 
 ## 📝 需求
 
-待补充
+详见 spec 原文（S004-candidates-funnel-performance）
 
 
 ## 📂 受影响文件
 
-待补充
+详见 spec 原文（S004-candidates-funnel-performance）
 
 
 ## ✅ 验收标准

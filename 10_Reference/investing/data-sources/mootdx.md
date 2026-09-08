@@ -6,7 +6,7 @@ endpoint: TCP 7709
 rate_limit: 无（惰性导入）
 fallback: DependencyMissing 优雅报错
 compliance: ok
-provides: [K线, 财报(待补)]
+provides: [K线, 财报原始快照]
 projects: [vibe-research, trading-agents, daily-stock-analysis]
 origin_project: vibe-research
 created: 2026-09-06
@@ -22,8 +22,19 @@ source: ARCHITECTURE.md
 
 ## 📋 提供字段
 
-待补充
+| 字段 | 类型 | 说明 |
+|---|---|---|
+| date | str | 交易日 |
+| open | float | 开盘价 |
+| close | float | 收盘价 |
+| high | float | 最高价 |
+| low | float | 最低价 |
+| volume | float | 成交量 |
+| amount | float | 成交额 |
 
+> 数据源：mootdx Python 包（TCP 7709 通达信协议，惰性导入）
+> 注：finance() 季报财务快照数值不可靠（实测放大数倍），财务摘要走 akshare_src.financials
+> category：4=日K 5=周K 6=月K 11=60分钟K
 
 ## ⏱ 限流策略
 

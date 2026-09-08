@@ -22,8 +22,30 @@ source: ARCHITECTURE.md
 
 ## 📋 提供字段
 
-待补充
+| 字段 | 类型 | 说明 |
+|---|---|---|
+| code | str | 股票代码 |
+| name | str | 股票名称 |
+| latest | float | 最新价（五档买卖盘） |
+| prev_close | float | 昨收价 |
+| buy | list | 五档买盘 [{level,price,vol}] |
+| sell | list | 五档卖盘 [{level,price,vol}] |
+| pct | float | 涨跌幅（成交额榜） |
+| amount | float | 成交额（元，成交额榜） |
+| mcap | float | 总市值（元） |
+| float_cap | float | 流通市值（元） |
+| industry | str | 所属行业 |
+| net | float | 行业板块主力净额（亿） |
+| inflow | float | 行业流入额（亿） |
+| outflow | float | 行业流出额（亿） |
+| firms | int | 行业涨跌家数合计 |
+| change_pct | float | 板块涨跌幅（概念归属） |
+| lead_stock | str | 板块领涨股 |
+| concept | str | 热门概念名（hot_concepts） |
+| bk | str | 概念板块代码 |
+| hit | int | 热度命中次数 |
 
+> 数据源：`push2/api.eastmoney.com` + push2delay 降级镜像
 
 ## ⏱ 限流策略
 

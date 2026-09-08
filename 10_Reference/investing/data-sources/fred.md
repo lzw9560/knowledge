@@ -20,13 +20,26 @@ source: ARCHITECTURE.md
 
 ## 📋 提供字段
 
-待补充
+| 字段 | 类型 | 说明 |
+|---|---|---|
+| date | str | 观测日期（YYYY-MM-DD） |
+| value | float | 指标值（None=缺失观测） |
+| series_id | str | FRED 序列 ID |
+| us_10y_yield | float | 美债10Y收益率（DGS10） |
+| dxy | float | 贸易加权美元指数（DTWEXBGS） |
+| us_fed_funds_eff | float | 有效联邦基金利率（DFF） |
+| us_10y2y_spread | float | 美债10Y-2Y利差（T10Y2Y） |
+| usd_cny | float | 人民币兑美元现汇（DEXCHUS） |
+| wti_crude | float | WTI原油即期（DCOILWTICO） |
+| lme_copper | float | LME铜价（PCOPPUSDM） |
 
+> 数据源：`api.stlouisfed.org/fred/series/observations`（独立 requests 通道，非 em_get）
+> 7 宏观序列均日频，T 开盘前（S2）可得
 
 ## ⏱ 限流策略
 
 - API key 隔离
-- 待补：具体 QPS 限制
+- FRED 免费 API key 限 120 次/分钟（官方文档），本源低频调用不触顶
 
 
 ## 🔄 降级链

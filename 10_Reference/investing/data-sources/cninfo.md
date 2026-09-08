@@ -20,13 +20,20 @@ source: ARCHITECTURE.md
 
 ## 📋 提供字段
 
-待补充
+| 字段 | 类型 | 说明 |
+|---|---|---|
+| company | str | 公司简称 |
+| question | str | 投资者提问内容 |
+| answer | str | 公司回复内容（None=未回复） |
+| answerer | str | 回复人 |
+| ask_time | str | 提问时间（YYYY-MM-DD HH:MM） |
 
+> 数据源：`irm.cninfo.com.cn` 互动易（requests 直连，非东财封 IP 域）
 
 ## ⏱ 限流策略
 
 - requests 直连
-- 待补：具体限流策略（未在 ARCHITECTURE.md 明示封禁行为）
+- 源端未明示封禁行为，低频调用直连
 
 
 ## 🔄 降级链

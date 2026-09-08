@@ -22,13 +22,20 @@ source: ARCHITECTURE.md
 
 ## 📋 提供字段
 
-待补充
+| 字段 | 类型 | 说明 |
+|---|---|---|
+| 报告期 | str | 报告期日期（YYYY-MM-DD） |
+| <科目> | str | 财务科目值（中文键，字符串） |
+| <科目>_同比 | str | 科目同比变化 |
 
+> 数据源：`quotes.sina.cn/cn/api/openapi.php/CompanyFinanceService.getFinanceReport2022`（urllib 直连）
+> 三表 report_type：lrb（利润表）/ fzb（资产负债表）/ llb（现金流量表）
+> 按 period 倒序，中文科目键 + 可选同比；fetch_merged_periods 合并三表产完整 FinancialPeriod
 
 ## ⏱ 限流策略
 
 - urllib 直连
-- 待补：具体限流策略（未在 ARCHITECTURE.md 明示封禁行为）
+- 源端未明示封禁行为，低频调用直连
 
 
 ## 🔄 降级链
