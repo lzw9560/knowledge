@@ -1,7 +1,7 @@
 ---
 type: moc
 draft: false
-description: 投研知识图谱入口——将代码实体（Pydantic 契约模型）、spec 决策、战法、数据源链接成可导航的语义层。16 实体类，2400+ 实体，12 战法卡。
+description: 投研知识图谱入口——将代码实体（Pydantic 契约模型）、spec 决策、战法、数据源链接成可导航的语义层。21 实体类，2510+ 实体，12 战法卡。
 ---
 
 # Vibe-Research 投研知识图谱
@@ -21,7 +21,7 @@ description: 投研知识图谱入口——将代码实体（Pydantic 契约模�
 <!-- dataview-precompiled:a6d4be462c4a -->
 | 实体总数 |
 |---|
-| 2526 |
+| 2510 |
 <!-- /dataview-precompiled -->
 
 ### 各类型实体计数
@@ -33,29 +33,29 @@ description: 投研知识图谱入口——将代码实体（Pydantic 契约模�
 <!-- /dataview-precompiled -->
 
 <!-- dataview-precompiled:c649e86810b8 -->
-| 类型 | 实体数 |
+| 类型 | 数量 |
 |---|---|
-| action | 6 |
-| agent_role | 8 |
-| analyst | 397 |
-| audit | 6 |
-| concept | 131 |
-| data_source | 18 |
-| decision | 5 |
-| dragon_tiger | 42 |
-| event | 21 |
-| inbox_item | 5 |
-| index | 5 |
-| industry | 127 |
-| logic | 25 |
-| metric | 402 |
-| procedure | 1 |
-| project | 4 |
+| stock | 411 |
+| metric | 401 |
+| valuation | 401 |
+| analyst | 396 |
 | report | 393 |
-| spec | 102 |
-| stock | 412 |
-| strategy | 14 |
-| valuation | 402 |
+| concept | 130 |
+| industry | 126 |
+| spec | 101 |
+| dragon_tiger | 41 |
+| logic | 24 |
+| event | 22 |
+| data_source | 17 |
+| strategy | 13 |
+| agent_role | 7 |
+| action | 5 |
+| decision | 5 |
+| index | 5 |
+| inbox_item | 4 |
+| project | 4 |
+| audit | 3 |
+| procedure | 1 |
 <!-- /dataview-precompiled -->
 
 ---
@@ -219,29 +219,29 @@ description: 投研知识图谱入口——将代码实体（Pydantic 契约模�
 ### 各类型实体计数（Dataview 动态）
 
 <!-- dataview-precompiled:c649e86810b8 -->
-| 类型 | 实体数 |
+| 类型 | 数量 |
 |---|---|
-| action | 6 |
-| agent_role | 8 |
-| analyst | 397 |
-| audit | 6 |
-| concept | 131 |
-| data_source | 18 |
-| decision | 5 |
-| dragon_tiger | 42 |
-| event | 21 |
-| inbox_item | 5 |
-| index | 5 |
-| industry | 127 |
-| logic | 25 |
-| metric | 402 |
-| procedure | 1 |
-| project | 4 |
+| stock | 411 |
+| metric | 401 |
+| valuation | 401 |
+| analyst | 396 |
 | report | 393 |
-| spec | 102 |
-| stock | 412 |
-| strategy | 14 |
-| valuation | 402 |
+| concept | 130 |
+| industry | 126 |
+| spec | 101 |
+| dragon_tiger | 41 |
+| logic | 24 |
+| event | 22 |
+| data_source | 17 |
+| strategy | 13 |
+| agent_role | 7 |
+| action | 5 |
+| decision | 5 |
+| index | 5 |
+| inbox_item | 4 |
+| project | 4 |
+| audit | 3 |
+| procedure | 1 |
 <!-- /dataview-precompiled -->
 
 ---
