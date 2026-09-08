@@ -40,4 +40,4 @@ created: <% tp.date.now("YYYY-MM-DD") %>
 - **触发动作**：[[actions/]]
 - **约束实体**：[[<target_entity>/]]
 - **来源决策**：[[specs/]]（如适用）
-- **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个
+- **出链**：0 个 · **入链**：0 个

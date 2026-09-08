@@ -7,7 +7,7 @@ created: <% tp.date.now("YYYY-MM-DD") %>
 ---
 
 > [!info] 行业信息
-> **行业**：name  **来源**：source  **成分股数**：`=(length(filter(this.file.inlinks, (l) => l.folder = "stocks")))`
+> **行业**：name  **来源**：source  **成分股数**：0
 > 
 > **关联**：[[concepts/]] · [[data-sources/]]
 
@@ -64,4 +64,4 @@ LIMIT 10
 
 - **概念**：[[concepts/]]
 - **数据源**：[[data-sources/]]
-- **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个
+- **出链**：0 个 · **入链**：0 个

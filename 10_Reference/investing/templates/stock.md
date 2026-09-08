@@ -110,4 +110,4 @@ SORT name ASC
 ## 🔗 关系网
 
 - **数据源**：[[data-sources/tencent|腾讯行情]] · [[data-sources/eastmoney-push2|东财 push2]]
-- **关联实体**：`=(length(this.file.outlinks))` 个出链 · `=(length(this.file.inlinks))` 个入链
+- **关联实体**：0 个出链 · 0 个入链

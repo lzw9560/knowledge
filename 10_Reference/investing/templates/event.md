@@ -47,4 +47,4 @@ LIMIT 30
 ## 🔗 关联
 
 - **数据源**：[[data-sources/]]
-- **出链**：`=(length(this.file.outlinks))` 个 · **入链**：`=(length(this.file.inlinks))` 个
+- **出链**：0 个 · **入链**：0 个
