@@ -90,6 +90,10 @@ def run_audit():
     placeholder_by_type = defaultdict(list)
     confidence_dist = Counter()
     no_confidence = 0
+    # P1 防线探针
+    fragment_links = 0  # H_Reference/ 残片（[[ 被砍掉）
+    missing_frontmatter = 0  # 实体文件缺 frontmatter
+    broken_md_links = 0  # markdown 链接丢分隔符
     
     # 占位符模式
     placeholder_patterns = [
@@ -111,6 +115,18 @@ def run_audit():
         content = f.read_text(encoding="utf-8")
         fm = parse_frontmatter(content)
         body = strip_frontmatter(content)
+        
+        # P1 防线探针 1：frontmatter 缺失检测
+        if not content.startswith("---"):
+            missing_frontmatter += 1
+        
+        # P1 防线探针 2：H_Reference/ 残片检测（[[ 被砍掉）
+        if re.search(r"(?<!\[\[)(?<!\]\()H_Reference/", body):
+            fragment_links += 1
+        
+        # P1 防线探针 3：markdown 链接丢分隔符检测
+        if re.search(r"\[[^\]\[]+[A-Za-z0-9_\-]+/[^\]\[]*\)", body):
+            broken_md_links += 1
         
         # index.md/MOC.md 不作为实体，但其 [[]] 链接计入入边
         if is_index:
@@ -190,6 +206,9 @@ def run_audit():
         "broken_links_top10": broken_counter.most_common(10),
         "orphan_count": orphan_count,
         "orphan_by_type": {k: len(v) for k, v in sorted(orphan_by_type.items())},
+        "fragment_links": fragment_links,
+        "missing_frontmatter": missing_frontmatter,
+        "broken_md_links": broken_md_links,
     }
     
     # 写审查报告
@@ -287,6 +306,9 @@ created: {today}
 | stub 实体 | {stub_count} | ≤100 | {'🟢' if stub_count <= 100 else '🟡'} |
 | 占位符残留 | {placeholder_count} | ≤10 | {'🟢' if placeholder_count <= 10 else '🟡' if placeholder_count <= 50 else '🔴'} |
 | confidence 覆盖 | {(total-no_confidence)*100//total}% | ≥95% | {'🟢' if (total-no_confidence)*100//total >= 95 else '🟡'} |
+| 链接残片(H_Reference) | {fragment_links} | =0 | {'🟢' if fragment_links == 0 else '🔴'} |
+| 缺 frontmatter | {missing_frontmatter} | =0 | {'🟢' if missing_frontmatter == 0 else '🔴'} |
+| markdown链接损坏 | {broken_md_links} | =0 | {'🟢' if broken_md_links == 0 else '🟡'} |
 
 ## 📈 趋势
 
