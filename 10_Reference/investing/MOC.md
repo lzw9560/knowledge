@@ -18,19 +18,39 @@ description: 投研知识图谱入口——将代码实体（Pydantic 契约模�
 
 > [!abstract] 实时统计——总实体数、各类型分布、最近更新、孤立节点。
 
-<!-- dataview-precompiled:55552046b273 query:VEFCTEUK5a6e5L2T5oC75pWwIEFTICLlrp7kvZPmgLvmlbAiCkZST00gIjEwX1JlZmVyZW5jZS9pbnZlc3RpbmciCldIRVJFIHR5cGUgPSAibW9jIgpTT1JUIGNvZGUgQVNDCg== -->
-| 文件 | 实体总数 |
-|---|---|
-| [[10_Reference/investing/MOC]] | — |
-<!-- /dataview-precompiled -->
+<!-- stats-anchor:total -->
+| 实体总数 |
+|---|
+| 2510 |
+<!-- /stats-anchor -->
 
 ### 各类型实体计数
 
-<!-- dataview-precompiled:ecd5f22621db query:VEFCTEUK57G75Z6LIEFTICLnsbvlnosiLAogIOaVsOmHjyBBUyAi5pWw6YePIiwKICDmoLfmnKwgQVMgIuagt+acrCIKRlJPTSAiMTBfUmVmZXJlbmNlL2ludmVzdGluZyIKV0hFUkUgdHlwZSA9ICJtb2MiClNPUlQgY29kZSBBU0MK -->
-| 文件 | 类型 | 数量 | 样本 |
-|---|---|---|---|
-| [[10_Reference/investing/MOC]] | — | — | — |
-<!-- /dataview-precompiled -->
+<!-- stats-anchor:type-counts -->
+| 类型 | 数量 |
+|---|---|
+| stock | 411 |
+| metric | 401 |
+| valuation | 401 |
+| analyst | 396 |
+| report | 393 |
+| concept | 130 |
+| industry | 126 |
+| spec | 101 |
+| dragon_tiger | 41 |
+| logic | 24 |
+| event | 22 |
+| data_source | 17 |
+| strategy | 13 |
+| agent_role | 7 |
+| action | 5 |
+| decision | 5 |
+| index | 5 |
+| inbox_item | 4 |
+| project | 4 |
+| audit | 3 |
+| procedure | 1 |
+<!-- /stats-anchor -->
 
 <!-- dataview-precompiled:4c078f03a97b query:VEFCTEUK57G75Z6LIEFTICLnsbvlnosiLAogIOaVsOmHjyBBUyAi5pWw6YePIgpGUk9NICIxMF9SZWZlcmVuY2UvaW52ZXN0aW5nIgpXSEVSRSB0eXBlID0gIm1vYyIKU09SVCBjb2RlIEFTQwo= -->
 | 文件 | 类型 | 数量 |
