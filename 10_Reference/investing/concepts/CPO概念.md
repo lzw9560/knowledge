@@ -53,7 +53,7 @@ CPO（光电共封装）是 AI 算力光互联下一代技术，解决高速光�
 
 ## 💰 资金流向
 
-- 数据源：10_Reference/investing/data-sources/东财 push2|东财 [[push2]]
+- 数据源：[[10_Reference/investing/data-sources/东财 push2|东财]] [[push2]]
 
 ## 📰 相关研报
 

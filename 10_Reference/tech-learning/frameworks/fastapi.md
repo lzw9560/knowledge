@@ -9,7 +9,7 @@ created: 2026-09-07
 # FastAPI
 
 ## 语言
-- [[10_Reference/tech-learning/languages/python|Python]] 3.7+
+- [[10_Reference/[[tech-learning/languages/python|Python]] 3.7+
 - 基于 Starlette（ASGI）+ Pydantic
 
 ## 类别
@@ -30,10 +30,10 @@ created: 2026-09-07
 - 与前端 TS 类型对齐：[[10_Reference/investing/specs/archive/m0-foundation/S009-前后端类型同步|S009]] 前后端类型同步
 
 ## 相关链接
-- [[10_Reference/tech-learning/MOC]]
-- [[10_Reference/tech-learning/languages/python]]
+- [[10_Reference/[[tech-learning/MOC]]
+- [[10_Reference/[[tech-learning/languages/python]]
 - [[10_Reference/investing/MOC]]
 - [[10_Reference/investing/specs/archive/m0-foundation/S007-契约层]]
 - [[10_Reference/investing/specs/archive/m0-foundation/S008-后端数据层迁移]]
 - [[10_Reference/investing/specs/archive/m0-foundation/S009-前后端类型同步]]
-- [[10_Reference/meta/四构件本体方法论]]
+- [[10_Reference/[[meta/四构件本体方法论]]

@@ -72,6 +72,6 @@ source: ARCHITECTURE.md
 
 ## 🔧 技术栈
 
-- 🔧 10_Reference/tech-learning/concepts/数据契约|[[数据契约]] — 全球宏观决策因子由契约层统一形状（S020 接入）
-- 🔧 10_Reference/tech-learning/concepts/优雅降级|[[优雅降级]] — MCP 远程无降级，失败标灰
-- 🔧 10_Reference/tech-learning/concepts/缓存策略|[[缓存策略]] — 宏观决策因子低频，入缓存
+- 🔧 [[10_Reference/[[tech-learning/concepts/数据契约|数据契约]][[数据契约]] — 全球宏观决策因子由契约层统一形状（S020 接入）
+- 🔧 [[10_Reference/[[tech-learning/concepts/优雅降级|优雅降级]][[优雅降级]] — MCP 远程无降级，失败标灰
+- 🔧 [[10_Reference/[[tech-learning/concepts/缓存策略|缓存策略]][[缓存策略]] — 宏观决策因子低频，入缓存

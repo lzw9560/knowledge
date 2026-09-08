@@ -5,8 +5,8 @@
 
 ## 活跃项目
 
-- [[00_Active/projects/quant-limit-up/SUMMARY|quant-limit-up]]
-- [[00_Active/projects/vibe-research/SUMMARY|vibe-research]]
+- [[00_Active/[[projects/quant-limit-up/SUMMARY|quant-limit-up]]
+- [[00_Active/[[projects/vibe-research/SUMMARY|vibe-research]]
 
 ## 近期决策（30天内）
 

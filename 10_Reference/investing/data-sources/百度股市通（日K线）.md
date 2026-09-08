@@ -66,6 +66,6 @@ source: ARCHITECTURE.md
 
 ## 🔧 技术栈
 
-- 🔧 10_Reference/tech-learning/concepts/优雅降级|[[优雅降级]] — 百度股市通日 K 线无降级，失败即标灰
-- 🔧 10_Reference/tech-learning/concepts/数据契约|[[数据契约]] — 返回数据由 Pydantic 契约层统一形状
-- 🔧 10_Reference/tech-learning/concepts/缓存策略|[[缓存策略]] — 日 K 入缓存
+- 🔧 [[10_Reference/[[tech-learning/concepts/优雅降级|优雅降级]][[优雅降级]] — 百度股市通日 K 线无降级，失败即标灰
+- 🔧 [[10_Reference/[[tech-learning/concepts/数据契约|数据契约]][[数据契约]] — 返回数据由 Pydantic 契约层统一形状
+- 🔧 [[10_Reference/[[tech-learning/concepts/缓存策略|缓存策略]][[缓存策略]] — 日 K 入缓存

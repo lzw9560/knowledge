@@ -14,7 +14,7 @@ created: 2026-09-07
 ## 技术栈
 - Quartz v4（Hugo-based 静态站点生成器）
 - GitHub Pages / Cloudflare Pages（托管）
-- 10_Reference/tech-learning/tools/GitHub-Actions|GitHub [[Actions]]（自动部署 workflow）
+- [[10_Reference/[[tech-learning/tools/GitHub-Actions|GitHub]] [[Actions]]（自动部署 workflow）
 
 ## 工作流
 ```
@@ -24,13 +24,13 @@ Obsidian 编辑 → obsidian-git push →
 ```
 
 ## 与本知识图谱的链接
-- 公开镜像：本 vault 的公开版（敏感项目实体如 10_Reference/projects/active/Vibe-Research|Vibe-[[Research]] 私有信息过滤后发布）
-- 10_Reference/tech-learning/tools/Obsidian-Git插件|obsidian-[[git]] 是同步层，quartz-deploy 是发布层
-- 10_Reference/projects/backlog/Quartz站点|quartz-[[site]]（候选）→ 本项目即其落地实现，状态升级为活跃
+- 公开镜像：本 vault 的公开版（敏感项目实体如 [[10_Reference/[[projects/active/Vibe-Research|Vibe-]][[Research]] 私有信息过滤后发布）
+- [[10_Reference/[[tech-learning/tools/Obsidian-Git插件|obsidian-]][[git]] 是同步层，quartz-deploy 是发布层
+- [[10_Reference/[[projects/backlog/Quartz站点|quartz-]][[site]]（候选）→ 本项目即其落地实现，状态升级为活跃
 
 ## 相关链接
-- [[10_Reference/projects/MOC]]
-- 10_Reference/tech-learning/tools/GitHub-[[Actions]]
-- 10_Reference/tech-learning/tools/Obsidian-[[Git插件]]
-- 10_Reference/tech-[[learning/tools/Git]]
-- [[10_Reference/meta/四构件本体方法论]]
+- [[10_Reference/[[projects/MOC]]
+- [[10_Reference/[[tech-learning/tools/GitHub-Actions]]
+- [[10_Reference/[[tech-learning/tools/Obsidian-Git插件]]
+- [[10_Reference/[[tech-learning/tools/Git]]
+- [[10_Reference/[[meta/四构件本体方法论]]

@@ -336,7 +336,7 @@ name: 龙头战法
 edge_family: 龙头追踪
 project: vibe-research                          # 【新增】发源项目
 imported_from: backend/strategies/cards/
-variant_of: "[[10_Reference/projects/active/daily-stock-analysis]]#dragon_head.yaml"  # 【新增】跨项目同源
+variant_of: "[[10_Reference/[[projects/active/daily-stock-analysis]]#dragon_head.yaml"  # 【新增】跨项目同源
 created: 2026-09-06
 ---
 ```
@@ -473,10 +473,10 @@ MOC.md 改造点（在现有内容基础上新增，不删）：
 
 | 项目 | 定位 | 许可证 | 状态 | 专属实体数 |
 |---|---|---|---|---|
-| [[10_Reference/projects/active/vibe-research]] | 个人 AI 投研看板 | 私有 | 🟢 活跃 | `= length(filter(...))` |
-| [[10_Reference/projects/active/trading-agents]] | 多 Agent 辩论投研 | Apache 2.0 | 🟢 活跃 | ... |
-| [[10_Reference/projects/active/daily-stock-analysis]] | 多市场智能分析推送 | MIT | 🟢 活跃 | ... |
-| [[10_Reference/projects/active/a-plate-sentinel]] | 打板情绪监控看板 | 私有 | 🟡 MVP | ... |
+| [[10_Reference/[[projects/active/vibe-research]] | 个人 AI 投研看板 | 私有 | 🟢 活跃 | `= length(filter(...))` |
+| [[10_Reference/[[projects/active/trading-agents]] | 多 Agent 辩论投研 | Apache 2.0 | 🟢 活跃 | ... |
+| [[10_Reference/[[projects/active/daily-stock-analysis]] | 多市场智能分析推送 | MIT | 🟢 活跃 | ... |
+| [[10_Reference/[[projects/active/a-plate-sentinel]] | 打板情绪监控看板 | 私有 | 🟡 MVP | ... |
 
 ### 各项目实体计数（Dataview 动态）
 
@@ -665,7 +665,7 @@ SORT type ASC
 | 项目实体 | `projects/a-plate-sentinel.md` | 1 | license=proprietary/stack=[FastAPI, React, TimescaleDB, Celery, Redis]/market=[A股]/status=mvp |
 | 数据源 | tushare 追加 `projects:` | 0 新建 | Tushare 已在 daily-stock-analysis 纳入时建 |
 | 8 模块 | 项目实体内部章节 | 0 独立实体 | 待实现后评估是否建 `modules/` 文件夹 |
-| STI 情绪指数 | 待探查 | — | 与 `10_Reference/market_sentiment/` 子区建 `complements` 关系 |
+| STI 情绪指数 | 待探查 | — | 与 `[[10_Reference/[[market_sentiment/` 子区建 `complements` 关系 |` 子区建 `complements` 关系]]
 
 ---
 

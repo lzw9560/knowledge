@@ -12,7 +12,7 @@ source: astock.concept_blocks
 > **概念**：MicroLED  **关联行业**：半导体
 > **成分股数**：2
 >
-> **关联**：[[10_Reference/investing/industries/index|industries/]] · 10_Reference/investing/data-sources/东财 push2|东财 push2]]
+> **关联**：[[10_Reference/investing/industries/index|industries/]] · [[10_Reference/investing/data-sources/东财 push2|东财 push2]]
 
 ## 📊 概念概览
 
@@ -51,7 +51,7 @@ MicroLED 显示技术，下一代显示方向。受益于苹果/三星布局。
 
 ## 💰 资金流向
 
-- 数据源：10_Reference/investing/data-sources/东财 push2|东财 [[push2]]
+- 数据源：[[10_Reference/investing/data-sources/东财 push2|东财]] [[push2]]
 
 ## 📰 相关研报
 

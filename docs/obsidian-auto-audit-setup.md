@@ -60,8 +60,8 @@
 
 | 触发方式 | 落盘位置 | 文件名 |
 |---|---|---|
-| QuickAdd 快速审查 | `10_Reference/investing/reviews/` | `YYYY-MM-DD-quick-audit.md` |
-| Templater 完整审查 | `10_Reference/investing/reviews/`（需设 New file folder） | `YYYY-MM-DD-obsidian-audit.md`（手动改名） |
+| QuickAdd 快速审查 | `[[10_Reference/investing/reviews/` |`YYYY-MM-DD-quick-audit.md` |]]
+| Templater 完整审查 | `[[10_Reference/investing/reviews/`（需设 New file folder） |`YYYY-MM-DD-obsidian-audit.md`（手动改名） |]]
 
 两类报告的 frontmatter 均 `type: audit`，会被 `reviews/index.md` 的 Dataview 表自动收录：
 

@@ -21,7 +21,7 @@ created: 2026-09-07
 ## 候选理由
 - 当前 [[10_Reference/investing/valuations/|估值实体]] 等数据依赖人工录入，规模不可持续
 - LLM 抽取是"非结构化 → 结构化"的杠杆，但需先验证抽取准确率
-- 已有 10_Reference/projects/active/Obsidian-MCP|obsidian-[[mcp]] 做图谱写入基础设施，可复用
+- 已有 [[10_Reference/[[projects/active/Obsidian-MCP|obsidian-]][[mcp]] 做图谱写入基础设施，可复用
 
 ## 与现有 llm_extract.py 的关系
 - `scripts/llm_extract.py` 已有 LLM 抽取雏形（关系抽取），本项目是其产品化：
@@ -32,18 +32,18 @@ created: 2026-09-07
 ## 与投研的跨领域链接
 - [[10_Reference/investing/valuations/|估值实体]] — 研报目标价 LLM 抽取的主要产出
 - [[10_Reference/investing/specs/|specs 目录]] — 抽取出的实体/关系同步到 specs 相关 md
-- 10_Reference/projects/backlog/增量同步自动化|[[增量同步自动化]] — 本项目的图谱同步部分可复用增量同步管线
+- [[10_Reference/[[projects/backlog/增量同步自动化|增量同步自动化]][[增量同步自动化]] — 本项目的图谱同步部分可复用增量同步管线
 
 ## 技术栈候选
 - LLM 调度：百炼 API（[[10_Reference/investing/specs/archive/m0-foundation/S015-配置与基础设施|S015 config]] 管理 key）
 - 抽取模板：Jinja2 / JSON schema
-- 校验：Pydantic（[[10_Reference/tech-learning/frameworks/fastapi|FastAPI]] 同栈）
+- 校验：Pydantic（[[10_Reference/[[tech-learning/frameworks/fastapi|FastAPI]] 同栈）
 - 存储：PostgreSQL + Obsidian md 双写
 
 ## 相关链接
-- [[10_Reference/projects/MOC]]
-- [[10_Reference/projects/backlog/增量同步自动化]]
-- 10_Reference/projects/active/Obsidian-[[MCP]]
+- [[10_Reference/[[projects/MOC]]
+- [[10_Reference/[[projects/backlog/增量同步自动化]]
+- [[10_Reference/[[projects/active/Obsidian-MCP]]
 - [[10_Reference/investing/valuations/]]
-- [[10_Reference/tech-learning/frameworks/fastapi]]
-- [[10_Reference/meta/四构件本体方法论]]
+- [[10_Reference/[[tech-learning/frameworks/fastapi]]
+- [[10_Reference/[[meta/四构件本体方法论]]

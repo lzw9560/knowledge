@@ -30,34 +30,55 @@
     "high": 1432
   },
   "no_confidence_count": 31,
-  "broken_links": 4,
+  "broken_links": 1429,
   "broken_links_top10": [
     [
-      "actions/rename-entity",
-      1
+      "push2",
+      677
     ],
     [
-      "actions/promote-from-inbox",
-      1
+      "腾讯行情",
+      411
     ],
     [
-      "stocks/603228",
-      1
+      "10_Reference/[[tech-learning/concepts/优雅降级",
+      22
     ],
     [
-      "strategies/dragon_head",
-      1
+      "优雅降级",
+      22
+    ],
+    [
+      "10_Reference/[[tech-learning/concepts/缓存策略",
+      21
+    ],
+    [
+      "缓存策略",
+      21
+    ],
+    [
+      "10_Reference/[[tech-learning/concepts/数据契约",
+      20
+    ],
+    [
+      "数据契约",
+      19
+    ],
+    [
+      "10_Reference/[[reading/notes/均值回归-笔记",
+      16
+    ],
+    [
+      "10_Reference/[[reading/notes/趋势跟踪-笔记",
+      15
     ]
   ],
-  "orphan_count": 37,
+  "orphan_count": 3,
   "orphan_by_type": {
-    "actions": 4,
-    "data-sources": 16,
     "events": 1,
-    "specs": 4,
-    "strategies": 12
+    "specs": 2
   },
   "fragment_links": 0,
   "missing_frontmatter": 0,
-  "broken_md_links": 7
+  "broken_md_links": 64
 }

@@ -15,7 +15,7 @@ created: 2026-09-07
 - 接口是隐式实现（duck typing 的静态版本）
 
 ## 类型系统
-- 静态类型 + nominal typing（与 [[10_Reference/tech-learning/languages/typescript|TS]] 的 structural 相反）
+- 静态类型 + nominal typing（与 [[10_Reference/[[tech-learning/languages/typescript|TS]] 的 structural 相反）
 - 无类继承，用 struct embedding 组合
 - interface 是隐式满足（struct 实现了 interface 的方法集即算实现）
 - 错误处理：error 作为返回值（无异常），`if err != nil` 是惯用法
@@ -35,12 +35,12 @@ created: 2026-09-07
 ## 与 Vibe-Research 的关系
 - Vibe-Research 当前主语言是 Python + TypeScript，未用 Go
 - 但关联基础设施（Docker/K8s）用 Go，技术学习子区记录以备未来选型
-- 参考架构：10_Reference/tech-learning/architecture/微服务架构|[[微服务]] 模式下，Go 常被选为高性能服务节点语言
+- 参考架构：[[10_Reference/[[tech-learning/architecture/微服务架构|微服务架构]][[微服务]] 模式下，Go 常被选为高性能服务节点语言
 
 ## 相关链接
-- [[10_Reference/tech-learning/MOC]]
-- [[10_Reference/tech-learning/languages/python]]
-- [[10_Reference/tech-learning/languages/rust]]
-- 10_Reference/tech-[[learning/architecture/微服务架构]]
+- [[10_Reference/[[tech-learning/MOC]]
+- [[10_Reference/[[tech-learning/languages/python]]
+- [[10_Reference/[[tech-learning/languages/rust]]
+- [[10_Reference/[[tech-learning/architecture/微服务架构]]
 - [[10_Reference/investing/specs/archive/m0-foundation/S011-调度收口]]
-- [[10_Reference/meta/四构件本体方法论]]
+- [[10_Reference/[[meta/四构件本体方法论]]

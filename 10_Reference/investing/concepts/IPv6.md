@@ -12,7 +12,7 @@ source: astock.concept_blocks
 > **概念**：IPv6  **关联行业**：通信技术
 > **成分股数**：2
 >
-> **关联**：[[10_Reference/investing/industries/index|industries/]] · 10_Reference/investing/data-sources/东财 push2|东财 push2]]
+> **关联**：[[10_Reference/investing/industries/index|industries/]] · [[10_Reference/investing/data-sources/东财 push2|东财 push2]]
 
 ## 📊 概念概览
 
@@ -51,7 +51,7 @@ IPv6 升级概念，受益于下一代互联网推进。
 
 ## 💰 资金流向
 
-- 数据源：10_Reference/investing/data-sources/东财 push2|东财 [[push2]]
+- 数据源：[[10_Reference/investing/data-sources/东财 push2|东财]] [[push2]]
 
 ## 📰 相关研报
 

@@ -120,12 +120,28 @@ def run_audit():
         if not content.startswith("---"):
             missing_frontmatter += 1
         
-        # P1 防线探针 2：H_Reference/ 残片检测（[[ 被砍掉）
-        if re.search(r"(?<!\[\[)(?<!\]\()H_Reference/", body):
+        # P1 防线探针 2：缺 [[ 前缀的完整路径 wikilink 残片检测（[[ 被砍掉）
+        # 匹配：裸路径 + 可选 |alias + ]] 残尾，前不紧邻 [[
+        # 用 [^\[\]|] 排除 [ ] |，避免相邻正常 wikilink 误报；允许空格（如"东财 push2"）
+        if re.search(
+            r"(?<!\[\[)(?<![\]])"
+            r"(10_Reference|tech-learning|reading|projects|meta)"
+            r"[^\[\]|]*"
+            r"(?:\|[^\[\]]*)?"
+            r"\]\]",
+            body,
+        ):
             fragment_links += 1
-        
-        # P1 防线探针 3：markdown 链接丢分隔符检测
-        if re.search(r"\[[^\]\[]+[A-Za-z0-9_\-]+/[^\]\[]*\)", body):
+
+        # P1 防线探针 3：路径中间插入 [[ 的损坏检测
+        # 匹配：10_Reference/ 或 tech-learning/ 路径段中间嵌入 [[ ]]，前不紧邻 ]（排除相邻正常 wikilink）
+        if re.search(
+            r"(?<![\]])"
+            r"(10_Reference|tech-learning)"
+            r"[^\s\[\]]+"
+            r"\[\[",
+            body,
+        ):
             broken_md_links += 1
         
         # index.md/MOC.md 不作为实体，但其 [[]] 链接计入入边

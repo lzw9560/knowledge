@@ -12,7 +12,7 @@ source: astock.concept_blocks
 > **概念**：F5G概念  **关联行业**：通信技术
 > **成分股数**：2
 >
-> **关联**：[[10_Reference/investing/industries/index|industries/]] · 10_Reference/investing/data-sources/东财 push2|东财 push2]]
+> **关联**：[[10_Reference/investing/industries/index|industries/]] · [[10_Reference/investing/data-sources/东财 push2|东财 push2]]
 
 ## 📊 概念概览
 
@@ -51,7 +51,7 @@ F5G 千兆光网概念，受益于宽带升级+全光网络。
 
 ## 💰 资金流向
 
-- 数据源：10_Reference/investing/data-sources/东财 push2|东财 [[push2]]
+- 数据源：[[10_Reference/investing/data-sources/东财 push2|东财]] [[push2]]
 
 ## 📰 相关研报
 

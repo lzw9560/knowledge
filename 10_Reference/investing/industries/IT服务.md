@@ -33,7 +33,7 @@ IT服务行业覆盖信息系统从规划咨询、设计开发、系统集成到
 
 ## 💰 资金流向
 
-- 数据源：10_Reference/investing/data-sources/东财 push2|东财 [[push2]]
+- 数据源：[[10_Reference/investing/data-sources/东财 push2|东财]] [[push2]]
 
 ## 📰 行业研报
 
