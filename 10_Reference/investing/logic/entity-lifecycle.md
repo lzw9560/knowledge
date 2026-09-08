@@ -26,12 +26,33 @@ confidence: high
 
 ## ⚡ 触发条件
 
-待补充
-
+- 实体创建时（inbox → approved → 正式区）
+- 实体更新时（frontmatter 字段变更）
+- 实体归档时（从正式区 → archive）
+- `daily_audit.py` 每日扫描 inbox 滞留 > 14 天的实体
 
 ## 🔧 执行逻辑
 
-待补充
+```
+状态流转: inbox → approved → published → archived/deleted
+
+for file in vault:
+    state = get_entity_state(file)  # inbox / approved / published / archived
+    if state == "inbox":
+        age = days_since(file.created)
+        if age > 14:
+            mark_rejected(file)  # 标 rejected
+    elif state == "published":
+        if has_time_point_data_in_frontmatter(file):
+            report(HIGH, "时点数据放 frontmatter", file)
+    elif state == "deleted":
+        report(CRITICAL, "正式区直接删文件", file)
+        restore_from_git(file)
+```
+
+- inbox 通道：LLM 抽取的实体先进 inbox/，人工审核通过后才进正式区
+- approved 字段：frontmatter 加 `approved: true` 标记已通过质量门
+- 归档优先：正式区实体过时不再删文件，移到 archive/ 子目录
 
 
 ## ⚠️ 违反处置

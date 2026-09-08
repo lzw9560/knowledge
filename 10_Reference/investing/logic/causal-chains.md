@@ -28,12 +28,28 @@ source: ora-3_diagnosis
 
 ## ⚡ 触发条件
 
-待补充
-
+- 每日收盘后 `daily_audit.py` 扫描 events/ + dragon-tiger/ 新增实体
+- 当 events/ 新增涨停池记录时，触发链 1（涨停池 → 个股涨幅）
+- 当 dragon-tiger/ 新增席位记录时，触发链 2（席位 → 次日走势）
+- 当 analysts/ 新增评级调整时，触发链 4（评级 → 股价波动）
+- 当 metrics/ 营收字段更新时，触发链 5（营收 → PE 估值切换）
 
 ## 🔧 执行逻辑
 
-待补充
+```
+for chain in causal_chains:
+    source_entities = scan(chain.source_path, new_since=last_run)
+    for src in source_entities:
+        target = resolve_link(src, chain.edge_type)
+        if target:
+            correlation = compute_correlation(src, target, window=30)
+            if abs(correlation) > chain.threshold:
+                report(f"{chain.id}: {src} → {target} r={correlation:.2f}")
+```
+
+- 链 1/2/4/5 标注"待验证"——需 ≥30 个样本 + 显著性 p<0.05 才转"已验证"
+- 链 3 已知相关——板块联动是 A 股常识，无需再验
+- 验证方式见规则定义表第 5 列
 
 
 ## ⚠️ 违反处置

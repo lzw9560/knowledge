@@ -26,7 +26,11 @@ confidence: high
 
 ## ⚡ 触发条件
 
-待补充
+- `daily_audit.py` 每日扫描全库 frontmatter
+- 实体有 `last_verified` 字段 → 计算 `days_since = (today - last_verified).days`
+- `days_since > 90` → 标 stale，提示降级（不自动改 confidence）
+- `days_since > 180` → 标 critical-stale，进入复审队列
+- 无 `last_verified` 字段的实体跳过（不强求所有实体都有此字段）
 
 
 ## 🔧 执行逻辑

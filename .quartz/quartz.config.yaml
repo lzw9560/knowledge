@@ -18,7 +18,7 @@ configuration:
     - .scratch
     - scripts
     - Claude-Memory
-    - daily
+    - "daily/*"
     - "**/*.py"
     - "**/*.db"
     - "**/*.json"
@@ -61,6 +61,9 @@ plugins:
         - git
         - filesystem
     order: 10
+    layout:
+      position: beforeBody
+      priority: 8
   - source: "@quartz-community/syntax-highlighting"
     enabled: true
     options:
@@ -87,7 +90,7 @@ plugins:
   - source: "@quartz-community/crawl-links"
     enabled: true
     options:
-      markdownLinkResolution: shortest
+      markdownLinkResolution: absolute
     order: 60
   - source: "@quartz-community/description"
     enabled: true
