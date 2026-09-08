@@ -49,3 +49,6 @@ __pycache__/
 .quartz/content/
 .quartz/quartz.lock.json
 .quartz/.quartz/plugins/
+
+# Dataview 预编译 mtime 缓存（各设备/CI 独立维护，不进仓）
+.precompile_cache.json

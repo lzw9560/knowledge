@@ -1523,8 +1523,7 @@ def should_skip_file(
     """mtime 增量判定：文件 mtime 未变 且 所有被引用文件（outlinks）mtime 未变 才跳过。
 
     被引用文件变化会改变本文件预编译表格内容——所以必须连带重算。
-    本函数有副作用：命中跳过时会顺手更新 cache 里本文件的 mtime（保证 cache 漂移自愈），
-    且把 outlinks mtime 一起记录进 cache['deps']。
+    纯只读：不写 cache，cache 的更新由 main() 在处理结束后统一重建。
     """
     try:
         rel_key = path.resolve().relative_to(VAULT).with_suffix("").as_posix()
@@ -1535,20 +1534,17 @@ def should_skip_file(
     deps_cache = cache["deps"]
     # 文件本身 mtime 变了 → 不跳过
     if files_cache.get(rel_key) != cur_mtime:
-        files_cache[rel_key] = cur_mtime
-        # mtime 变了，deps 也要重新记
-        out_targets = idx.outlinks.get(rel_key, set())
-        deps_cache[rel_key] = sorted(t for t in out_targets)
         return False
     # 文件 mtime 没变——再查 deps
     deps = deps_cache.get(rel_key)
     out_targets = idx.outlinks.get(rel_key, set())
+    # 无 deps 记录 + 无 outlinks → 视为匹配（文件无引用关系）
+    if deps is None and not out_targets:
+        return True
     if deps is None or set(deps) != out_targets:
         # outlinks 集合变了（新增/删链）→ 不跳过
-        files_cache[rel_key] = cur_mtime
-        deps_cache[rel_key] = sorted(t for t in out_targets)
         return False
-    # outlinks 没变——逐个查被引用文件 mtime
+    # outlinks 没变——逐个查被引用文件 mtime（与缓存里的对比，而非当前实际值）
     for dep_key in deps:
         dep_path = (VAULT / (dep_key + ".md"))
         if not dep_path.exists():
@@ -1559,6 +1555,38 @@ def should_skip_file(
             return False
     # 全部没变——跳过
     return True
+
+
+def rebuild_cache(idx: "VaultIndex", md_files: list[Path]) -> dict:
+    """处理完成后，从当前文件 mtime + outlinks 重建缓存。
+
+    这保证下次运行时，should_skip_file 拿到的 cache['files'] 反映的是本次
+    运行结束时的磁盘状态——避免在单次运行里 cache 被中途污染（dep 处理
+    顺序导致的假"未变"判定）。
+    """
+    cache = {"version": 2, "files": {}, "deps": {}}
+    # 先记所有索引文件 mtime（即使不在处理列表里——stocks/metrics/valuations
+    # 都在 INVESTING 子树，理应都被 idx 扫到）
+    for rec in idx.records:
+        try:
+            key = rec.vault_key
+        except Exception:
+            continue
+        cache["files"][key] = _file_mtime(rec.path)
+    # 再补处理列表中索引未覆盖的（如 cache 目录外但被传 --path 的）
+    for p in md_files:
+        try:
+            key = p.resolve().relative_to(VAULT).with_suffix("").as_posix()
+        except ValueError:
+            continue
+        if key not in cache["files"]:
+            cache["files"][key] = _file_mtime(p)
+    # deps：所有索引文件都记（无 outlinks 的也记空列表）
+    for rec in idx.records:
+        k = rec.vault_key
+        targets = idx.outlinks.get(k, set())
+        cache["deps"][k] = sorted(t for t in targets)
+    return cache
 
 
 def process_file(path: Path, idx: VaultIndex, dry_run: bool, qmap: QueryHashMap | None = None,
@@ -1803,7 +1831,9 @@ def main():
             failed_samples.append((p, r))
 
     # 持久化缓存（只在真实写入模式 + 启用缓存时）
+    # 处理结束后统一重建——避免单次运行内 cache 被 dep 处理顺序污染
     if use_cache and cache is not None:
+        cache = rebuild_cache(idx, md_files)
         save_precompile_cache(cache)
 
     print(f"[4/4] 统计")
