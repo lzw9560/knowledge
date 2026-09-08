@@ -43,4 +43,4 @@ PARA 把所有信息按"与当前项目的相关度"分四层：
 ## 来源
 
 - Tiago Forte《Building a Second Brain》（2022）
-- 详见 [[10_Reference/investing/docs/multi-project-integration-plan]] §3 对应讨论
+- 详见 multi-project-integration-plan §3 对应讨论

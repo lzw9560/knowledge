@@ -1,8 +1,8 @@
 # Vibe-Research Obsidian Vault 使用指南
 
-> 面向"vault 已搭好但不知道怎么用"的用户。本指南假设你已经能跟着 [knowledge/README.md](../knowledge/README.md) 用 Obsidian 打开 `knowledge/` 文件夹，但想真正把它跑起来——装插件、新建实体、做查询、看图谱、接 AI。
+> 面向"vault 已搭好但不知道怎么用"的用户。本指南假设你已经能跟着 knowledge/README.md 用 Obsidian 打开 `knowledge/` 文件夹，但想真正把它跑起来——装插件、新建实体、做查询、看图谱、接 AI。
 >
-> 配套文档：[obsidian-mcp-setup.md](obsidian-mcp-setup.md) 讲 MCP 连接的详细步骤。本文只讲 vault 内的操作。
+> 配套文档：obsidian-mcp-setup.md 讲 MCP 连接的详细步骤。本文只讲 vault 内的操作。
 
 ---
 
@@ -27,7 +27,7 @@ Vibe-Research 项目分两层：
 
 ### 2.1 安装 Obsidian
 
-到 [obsidian.md](https://obsidian.md/) 下载桌面端（Windows/macOS/Linux 均免费），安装。
+到 obsidian.md 下载桌面端（Windows/macOS/Linux 均免费），安装。
 
 ### 2.2 打开 vault
 
@@ -180,8 +180,8 @@ created: 2026-09-06
 ```markdown
 # 核心业务
 
-贵州茅台是 [[10_Reference/investing/industries/食品饮料]] 龙头，主营高端酱香型白酒。
-品牌矩阵：飞天茅台为主，[[10_Reference/investing/concepts/白酒]] 题材核心标的。
+贵州茅台是 食品饮料 龙头，主营高端酱香型白酒。
+品牌矩阵：飞天茅台为主，白酒 题材核心标的。
 被多份研报覆盖，详见"相关研报"章节自动渲染。
 ```
 
@@ -272,7 +272,7 @@ Dataview 查询可以放在任意 `.md` 笔记里。建议放法：
 #### 基本语法
 
 ```markdown
-[[10_Reference/investing/stocks/600519]]
+600519
 ```
 
 链接到 `stocks/600519.md`。若笔记不存在，Obsidian 高亮提示，点击即创建。
@@ -280,15 +280,15 @@ Dataview 查询可以放在任意 `.md` 笔记里。建议放法：
 #### 别名语法
 
 ```markdown
-[[10_Reference/investing/stocks/600519|茅台]]
+茅台
 ```
 
-显示为"茅台"，实际指向 600519 笔记。在正文里写"[[stocks/600519|茅台]]今日涨停"更自然。
+显示为"茅台"，实际指向 600519 笔记。在正文里写"茅台今日涨停"更自然。
 
 #### 嵌入语法
 
 ```markdown
-![[10_Reference/investing/stocks/600519]]
+!600519
 ```
 
 把 600519 笔记内容嵌入当前笔记——适合在战法卡里嵌入它匹配的股票的财务摘要。
@@ -296,7 +296,7 @@ Dataview 查询可以放在任意 `.md` 笔记里。建议放法：
 #### 文件夹链接
 
 ```markdown
-[[10_Reference/investing/stocks/index|stocks/]]
+stocks/
 ```
 
 指向 `stocks/index.md`，作为该实体类的入口。
@@ -321,7 +321,7 @@ MOC.md 当前包含：
 ### 6.2 从 MOC 导航到任意实体类
 
 1. 打开 `MOC.md`。
-2. 点导航表里的文件夹链接（如 `[[industries/]]`）→ 跳到该文件夹的 `index.md`。
+2. 点导航表里的文件夹链接（如 ``）→ 跳到该文件夹的 `index.md`。
 3. `index.md` 里是 Dataview 查询，列出该类所有实体。
 4. 点列表里任意一行 → 进入该实体笔记。
 
@@ -357,8 +357,8 @@ SORT market_cap DESC
 ```markdown
 # 近期触发标的
 
-- [[10_Reference/investing/stocks/600519]]（2026-09-05 弱转强，2 连板）
-- [[10_Reference/investing/stocks/000858]]（2026-09-04 首板）
+- 600519（2026-09-05 弱转强，2 连板）
+- 000858（2026-09-04 首板）
 ```
 
 保存后，股票笔记的"匹配战法"章节反向链接区会自动出现这张战法卡。
@@ -370,19 +370,19 @@ SORT market_cap DESC
 ### 8.1 看到一只新股票
 
 1. **建实体**：在 `stocks/` 右键新建 → 套 `stock` 模板 → 填 frontmatter（code/name/industry/pe/pb/market_cap）。
-2. **链接行业/概念**：正文写 `[[industries/食品饮料]]`、`[[concepts/白酒]]`。若行业/概念笔记不存在，先去对应文件夹建（套 `industry`/`concept` 模板）。
+2. **链接行业/概念**：正文写 `食品饮料`、`白酒`。若行业/概念笔记不存在，先去对应文件夹建（套 `industry`/`concept` 模板）。
 3. **填财务/估值**：在 `metrics/` 和 `valuations/` 建对应周期笔记（套 `metric`/`valuation` 模板），frontmatter 的 `code` 字段填该股票代码——股票笔记里的财务/估值 Dataview 表会自动渲染这些数据。
 
 ### 8.2 读到一份新研报
 
 1. **建研报实体**：在 `reports/` 建笔记 → 套 `report` 模板 → 填 frontmatter（title/org/researcher/publish_date/rating_change/target_price/code）。
-2. **链接股票/分析师**：正文写 `[[stocks/600519]]`、`[[analysts/张三]]`。若分析师笔记不存在，去 `analysts/` 建（套 `analyst` 模板）。
+2. **链接股票/分析师**：正文写 `600519`、`张三`。若分析师笔记不存在，去 `analysts/` 建（套 `analyst` 模板）。
 3. **摘录核心观点**：在"核心观点"章节手写或粘贴研报关键论点（投资逻辑/催化剂/风险）。这是 vault 沉淀的投研知识本体，区别于代码层只存结构化字段。
 
 ### 8.3 项目出了新 spec
 
 1. **建 spec 实体**：在 `specs/` 建笔记 → 套 `spec` 模板 → 填 frontmatter（number/title/status）。
-2. **链接受影响模块**：正文写 `[[data-sources/akshare]]`（用了哪个数据源）、`[[strategies/首板]]`（影响哪张战法卡）。
+2. **链接受影响模块**：正文写 `akshare`（用了哪个数据源）、`首板`（影响哪张战法卡）。
 3. **记录决策**：正文摘录 spec 的核心决策（为什么这么定、数据支撑是什么），链接到 `specs/SNNN-*/spec.md` 源文件路径（如果 spec 在仓库里有原始 markdown）。
 
 > 这样 vault 的 spec 实体是**决策的知识表征**（谁连谁、为什么），不是 spec 正文副本。查 spec 正文去 `specs/` 目录，查决策之间的关联来 vault。
@@ -397,7 +397,7 @@ SORT market_cap DESC
 
 ### 9.2 选型
 
-两条路线（详细对比和安装见 [obsidian-mcp-setup.md](./obsidian-mcp-setup.md)）：
+两条路线（详细对比和安装见 obsidian-mcp-setup.md）：
 
 - **起步：yanxue06/obsidian-mcp**——基于 Local REST API 插件，支持图遍历、Dataview 直传、重命名重写反向链接。需要 Obsidian 保持打开。
 - **升级：obsidian-mcp-pro**——直接读 vault 文件系统，支持 canvas 操作、语义搜索，不需要 Obsidian 开着。
@@ -412,7 +412,7 @@ SORT market_cap DESC
    claude mcp add obsidian -e OBSIDIAN_API_KEY=你的key -- npx -y @yanxue06/obsidian-mcp
    ```
 3. 完全退出并重开 Claude Code → `/mcp` → 看到 `obsidian ✓ Connected`。
-4. 详细配置 + 故障排除 + 工具列表见 [obsidian-mcp-setup.md](obsidian-mcp-setup.md)。
+4. 详细配置 + 故障排除 + 工具列表见 obsidian-mcp-setup.md。
 
 ### 9.4 用 AI 做"从研报自动抽取实体灌入 vault"
 

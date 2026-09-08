@@ -22,7 +22,7 @@ created: 2026-09-07
 |---|---|---|
 | Entity | 战法卡 / 数据源抽象 | [[10_Reference/investing/strategies/|战法卡]] 业务规则 |
 | Use Case | `backend/services/` | 调度 / 战法执行编排 |
-| Adapter | `backend/routers/` + Pydantic 模型 | [[10_Reference/investing/specs/archive/m0-foundation/S007-契约层\|S007 契约层]] |
+| Adapter | `backend/routers/` + Pydantic 模型 | [[10_Reference/investing/specs/archive/m0-foundation/S007-契约层|S007 契约层]] |
 | Framework | FastAPI / React / Docker | 外层框架 |
 
 ## 在 Vibe-Research 中的使用

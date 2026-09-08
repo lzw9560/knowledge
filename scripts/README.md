@@ -43,8 +43,8 @@ python scripts/vault_audit.py --root /path/to/vault
 |---|---|---|---|
 | 1 | summary | — | 实体总数 + 各类型分布 + 各文件夹分布 |
 | 2 | coverage | critical | 各实体类型数量对比，标完全缺失（0 个）的类型 |
-| 3 | orphan_check | medium | 未被任何 `[[链接]]` 引用过的孤立文件 |
-| 4 | broken_link | high | 指向不存在文件的 `[[链接]]` 断链 |
+| 3 | orphan_check | medium | 未被任何 `链接` 引用过的孤立文件 |
+| 4 | broken_link | high | 指向不存在文件的 `链接` 断链 |
 | 5 | schema_infer | high | 实体 frontmatter 字段 vs `templates/` 模板字段，标缺失 |
 | 6 | relation_density | low | 每个文件被引用次数（入边数），标异常多的 hub |
 | 7 | duplicate_check | critical | 按 frontmatter `code` 字段分组，同 code 多份记录 |
@@ -84,7 +84,7 @@ python scripts/vault_audit.py --root /path/to/vault
 
 - `[[10_Reference/investing/stocks/600519]]` → `10_Reference/investing/stocks/600519.md`（先试加 `.md`，再试原路径）
 - `[[10_Reference/investing/stocks/index|stocks/]]` → 文件夹链接，指向 `stocks/index.md`
-- `[[path|alias]]` → 别名剥离，取 `path`
+- `[[scripts/README.md|alias]]` → 别名剥离，取 `path`
 - 优先在 `10_Reference/investing/` 下找，再在 vault 根找
 - 过滤 ` ```dataview ... ``` ` 代码块内的伪链接（避免把 `FROM "stocks"` 当链接）
 

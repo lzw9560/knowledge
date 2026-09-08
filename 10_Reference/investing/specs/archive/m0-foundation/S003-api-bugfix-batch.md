@@ -23,6 +23,6 @@ API 缺陷批量修复（含 value_funnel 等）
 
 - 源文件：`specs/S003-api-bugfix-batch/spec.md`（Vibe-Research 仓）
 - README 索引：`specs/README.md`
-- 子文档：spec · [tasks](S003-api-bugfix-batch/tasks.md)
+- 子文档：spec · tasks
 - 数据源：[[10_Reference/investing/data-sources/index|data-sources/]]
 - 战法：[[10_Reference/investing/strategies/index|strategies/]]

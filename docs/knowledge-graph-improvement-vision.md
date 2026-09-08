@@ -46,7 +46,7 @@
 ### 事实 2：消费入口物理断开（0 个双链）
 
 ```
-grep -roh '\[\[[^]]*\]\]' daily/ | wc -l   →  0
+grep -roh '\[\^*\]\]' daily/ | wc -l   →  0
 ```
 
 - `daily/` 3 份报告（盘前情绪/竞价异动/盘后复盘）：**0 个双链**。
@@ -119,7 +119,7 @@ vault 已有 spec：13 个（S007 S008 S010 S011 S017 S018 S019 S020 S031 S047 S
 被引用但不存在：S004 S006 S009 S013 S015 S023 S030 S032 S041 S042 S049 S064 S075 S086 S097 S101 S102（17 个）
 ```
 
-源仓有 60 个 spec，vault 只导入了 13 个，而导入的这 13 个在正文里互相引用了 16 个未导入的编号。这是**部分导入的必然结果**，不是图谱错误。另 3 条断链（`[[news/]]` `[[macro/]]` `[[sectors/]]`）是模板设计时规划了目录但未建。
+源仓有 60 个 spec，vault 只导入了 13 个，而导入的这 13 个在正文里互相引用了 16 个未导入的编号。这是**部分导入的必然结果**，不是图谱错误。另 3 条断链（`` `` ``）是模板设计时规划了目录但未建。
 
 含义：**修脚本 + 定规则的成本远低于补 101 个实体**。当前 high 级噪声淹没了真问题，导致「反正修不完」→ 复选框全空。
 
@@ -184,13 +184,13 @@ diff <(cat backend/strategies/cards/first_plate.md) \
 
 1. 定位报告生成器（`Vibe-Research` 后端的盘前报告生成逻辑，参见 `docs/premarket-workflow-logic.md`）。
 2. 在报告的「🎯 关注方向」与「Top5 龙虎榜/热榜」两处，对每个出现的股票代码做一次 vault 查询：
-   - **命中已有实体** → 输出 `[[10_Reference/investing/stocks/600519|贵州茅台]]` 双链 + 一行摘要（行业/已关联战法数）。
+   - **命中已有实体** → 输出 `贵州茅台` 双链 + 一行摘要（行业/已关联战法数）。
    - **未命中** → 输出裸代码 `楚天龙(003040)`，并在报告末尾「图谱缺口」段追加一行：`- [ ] 003040 楚天龙 未入图谱`（这直接喂养 1.3）。
 3. 报告末尾固定追加「📚 图谱关联」段：
    ```markdown
    ## 📚 图谱关联
    - 本报告涉及个股：N 只，其中 M 只已在图谱（M/N）
-   - 关联战法：[[strategies/first_plate]] [[strategies/dragon_head]]
+   - 关联战法：first_plate dragon_head
    - 图谱缺口：见下方待办
    - [ ] 003040 楚天龙 未入图谱
    ```
@@ -215,13 +215,13 @@ WHERE type = "stock" AND contains(matched_strategies, this.name)
 
 但核查 `stocks/*.md` 的 frontmatter 字段（`type` `code` `name` `market` `industry` `concept` `list_date` `st` `pe_ttm` `pb` `market_cap` `created`）——**没有任何一个实体有 `matched_strategies` 字段**。这个查询永久返回空表。
 
-反向：`stocks/600519.md` 正文有 2 条手工战法链接（`[[10_Reference/investing/strategies/low_absorption]]`、`[[10_Reference/investing/strategies/dragon_head]]`），但 `strategies/*.md` 正文里**没有一个 `[[10_Reference/investing/stocks/index|stocks/]]` 链接**（只有 `strategies/index.md` 有）。
+反向：`stocks/600519.md` 正文有 2 条手工战法链接（`low_absorption`、`dragon_head`），但 `strategies/*.md` 正文里**没有一个 `stocks/` 链接**（只有 `strategies/index.md` 有）。
 
 后果：「这张战法历史上匹配过哪些票」——投研里最高频的问题之一——在图谱里问不出来。
 
 **落地路径**（二选一，推荐 A）：
 
-- **方案 A（正边，推荐）**：给 `stocks/*.md` frontmatter 补 `matched_strategies: [low_absorption, dragon_head]`。数据源现成——正文里已有手工链接，写个 10 行脚本把正文的 `[[10_Reference/investing/strategies/xxx]]` 提取到 frontmatter。
+- **方案 A（正边，推荐）**：给 `stocks/*.md` frontmatter 补 `matched_strategies: [low_absorption, dragon_head]`。数据源现成——正文里已有手工链接，写个 10 行脚本把正文的 `xxx` 提取到 frontmatter。
   - 优点：Dataview 的 `contains()` 直接可用，模板查询零改动。
   - 成本：11 个文件，脚本化 5 分钟。
 - **方案 B（反边）**：靠 Obsidian 反向链接面板，不加字段。
@@ -382,14 +382,14 @@ WHERE type = "stock" AND contains(matched_strategies, this.name)
 
 **落地路径**：
 
-1. **vault 战法实体只保留三块**：frontmatter（结构化字段，供 Dataview 查询）+ 「图谱关联」段（`[[10_Reference/investing/stocks/index|stocks/]]` `[[10_Reference/investing/events/index|events/]]` 等真实知识边）+ **源指针**。正文逻辑段删除，替换为：
+1. **vault 战法实体只保留三块**：frontmatter（结构化字段，供 Dataview 查询）+ 「图谱关联」段（`stocks/` `events/` 等真实知识边）+ **源指针**。正文逻辑段删除，替换为：
    ```markdown
    # 战法逻辑
    > 源文件：`Vibe-Research/backend/strategies/cards/first_plate.md`（单一真相源）
    > 源仓 sha：`a1b2c3d`（导入时记录）
-   > 用 Obsidian 打开源文件：[[../../../project/code/stock/.../first_plate|本地链接]]
+   > 用 Obsidian 打开源文件：本地链接
    ```
-   或者用 `![[...]]` embed 直接嵌入源文件内容（Obsidian 支持 vault 外路径需配置，或用符号链接）。
+   或者用 `!...` embed 直接嵌入源文件内容（Obsidian 支持 vault 外路径需配置，或用符号链接）。
 2. **漂移检测进审查脚本**（第 9 项检查）：比对 vault frontmatter 里记录的 `source_sha` 与源仓 `git rev-parse HEAD:backend/strategies/cards/first_plate.md`。不一致 → 报 medium「源已变更，vault 待同步」。
 3. **结构化字段进 frontmatter**（顺便修掉 2.2(a) 的 body_only）：把正文的入场/退出条件提取为 frontmatter：
    ```yaml
@@ -410,7 +410,7 @@ WHERE type = "stock" AND contains(matched_strategies, this.name)
 
 `knowledge-graph-llm-pipeline.md` §2 设计了 `.entity-dictionary.json`，明确「词典是链接一致性的核心——贵州茅台/茅台/600519/Moutai 必须归一到同一文件」。**该文件不存在**。
 
-而事实 4 的断链问题，本质就是缺词典：`[[10_Reference/investing/specs/S004]]` 该指向哪里？没有词典就无法判断「这是未导入还是真错链」。
+而事实 4 的断链问题，本质就是缺词典：`S004` 该指向哪里？没有词典就无法判断「这是未导入还是真错链」。
 
 **落地路径**（按 pipeline §2 的设计实现，不修改设计）：
 
@@ -419,9 +419,9 @@ WHERE type = "stock" AND contains(matched_strategies, this.name)
 3. **消费方**：① `vault_audit.py` 断链分级；② 未来的抽取脚本（pipeline P2-P5）建链前查词典；③ MCP 的 `query_dataview` 之外的别名解析。
 4. **git 追踪**（pipeline §2 已指定），各设备同步。
 
-**附带决策**：`[[news/]]` `[[macro/]]` `[[sectors/]]` 三个目录——建还是不建？
+**附带决策**：`` `` `` 三个目录——建还是不建？
 
-建议**不建，改模板**。理由：`news/` 与 `events/` 语义重叠（MOC.md 第 20 行 `events/` 已定义为「新闻/公告/涨停，对应 News + Announcement + ZTPoolItem」），建 `news/` 会制造两套并行分类。把 `data-sources/cninfo.md` 等 3 个文件里的 `[[news/]]` 改为 `[[10_Reference/investing/events/index|events/]]`，`[[macro/]]` 改为新建的 `macro/`（FRED/worldmonitor 的宏观数据确实无处安放，这个该建）或并入 `indices/`。`[[sectors/]]` 改 `[[10_Reference/investing/industries/index|industries/]]`（akshare.md 里的历史遗留命名）。
+建议**不建，改模板**。理由：`news/` 与 `events/` 语义重叠（MOC.md 第 20 行 `events/` 已定义为「新闻/公告/涨停，对应 News + Announcement + ZTPoolItem」），建 `news/` 会制造两套并行分类。把 `data-sources/cninfo.md` 等 3 个文件里的 `` 改为 `events/`，`` 改为新建的 `macro/`（FRED/worldmonitor 的宏观数据确实无处安放，这个该建）或并入 `indices/`。`` 改 `industries/`（akshare.md 里的历史遗留命名）。
 
 ### 2.5 【P2】时效性：用「最后验证日期」替代「置信度衰减」
 
@@ -624,20 +624,20 @@ SORT date ASC
    ---
    | 天气 | 温度 Z 区间 | 背离度 D | 推荐战法 | 禁用战法 |
    |---|---|---|---|---|
-   | 晴 | Z > 1.5 | D < 0.3 | [[strategies/consecutive_relay]] [[strategies/dragon_head]] | [[strategies/low_absorption]] |
-   | 阴 | -0.5 ~ 0.5 | 任意 | [[strategies/first_plate]] [[strategies/low_absorption]] | [[strategies/consecutive_relay]] |
-   | 雨 | Z < -1.5 | D > 0.6 | [[strategies/pattern_reversal]] [[strategies/storm_reversal]] | 全部动量类 |
+   | 晴 | Z > 1.5 | D < 0.3 | consecutive_relay dragon_head | low_absorption |
+   | 阴 | -0.5 ~ 0.5 | 任意 | first_plate low_absorption | consecutive_relay |
+   | 雨 | Z < -1.5 | D > 0.6 | pattern_reversal storm_reversal | 全部动量类 |
    ```
    **注意**：这张表的 Z 区间阈值**必须有回测数据支撑**（`AGENTS.md`「数据支撑优先」）。源仓有 `specs/S031-调度收口盘前多层按战法回测.md` 和 `specs/S047-基因分权重回测校准.md`——先查这两个 spec 的回测结论，有数据就填数据，没数据就标 `exploratory: true`。**不要凭直觉填阈值。**
 2. **盘前报告注入天气判定 + 战法推荐**（复用 1.1 的模板改造）：
    ```markdown
    ## 🌤️ 图谱战法匹配
    当前天气：阴（Z=+0.1210，D=0.6593）
-   → 适用：[[strategies/first_plate]] [[strategies/low_absorption]]
-   → 禁用：[[strategies/consecutive_relay]]（背离度过高）
-   依据：[[logic/sentiment-weather-mapping]]
+   → 适用：first_plate low_absorption
+   → 禁用：consecutive_relay（背离度过高）
+   依据：sentiment-weather-mapping
    ```
-3. **反向**：每张战法卡的「适用天气」段改为链接 `[[10_Reference/investing/logic/sentiment-weather-mapping]]`，不再各自用自然语言描述「阴天」（12 张卡各写各的，无统一定义 = 不可执行）。
+3. **反向**：每张战法卡的「适用天气」段改为链接 `sentiment-weather-mapping`，不再各自用自然语言描述「阴天」（12 张卡各写各的，无统一定义 = 不可执行）。
 
 **这一项同时解决 4 个问题**：① 两孤岛连通；② `logic/` 构件填充（3.1）；③ 12 张战法的「适用天气」从模糊描述变成可执行规则；④ 盘前报告增加图谱消费点（1.1）。
 
@@ -666,7 +666,7 @@ SORT date ASC
    type: methodology
    instances:
      - 智驾：多传感器融合（camera + lidar + radar）+ 冗余降级
-     - 投研：[[10_Reference/market_sentiment/DASHBOARD|6 层 z-score]] + 三维向量交叉确认 + 三重护栏
+     - 投研：6 层 z-score + 三维向量交叉确认 + 三重护栏
      - 知识图谱：四层关系推断（L1 精确 → L4 LLM 语义），逐层降置信度
    invariant: 多源独立信号交叉确认，单源失效不导致系统失效；置信度随推断层级递减
    ```
@@ -731,8 +731,8 @@ SORT date ASC
    date: 2026-09-05
    price: null            # 私有数据，见下方合规
    size_pct: null
-   strategy: "[[strategies/first_plate]]"
-   weather: "[[10_Reference/market_sentiment/daily/2026-09-05_pre_盘前情绪报告]]"
+   strategy: "first_plate"
+   weather: "2026-09-05_pre_盘前情绪报告"
    sentiment_z: 0.1210
    divergence_d: 0.6593
    thesis: "首板 + 基因分达标，情绪中性偏修复，游资净买入"
@@ -749,7 +749,7 @@ SORT date ASC
    - thesis 验证：「游资净买入」正确，但「首板次日溢价」未兑现
    - 图谱当时的信号：天气阴 + first_plate 适用 → 信号一致
    - 教训：背离度 D=0.66 偏高时，即使天气适用也应降仓位
-   - → 反哺规则：[[logic/sentiment-weather-mapping]] 需加 D>0.6 的降仓约束
+   - → 反哺规则：sentiment-weather-mapping 需加 D>0.6 的降仓约束
    ```
 4. **最后一步是关键**：复盘的教训**必须回流到 `logic/` 规则**。否则交易日志只是日记，不产生知识。这条回流机制本身写成 `logic/trade-feedback.md`（自动化规则）。
 
@@ -873,7 +873,7 @@ A股/财经源: 3（华尔街见闻、东方财富股票、东方财富资讯）
    ---
    ```
 2. **强制进 inbox**（pipeline §4：LLM 产出必须过质量门）。辩论结果是 LLM 产出，**不能直接进正式区**。
-3. **与 5.1 的交易日志对接**：`trade.md` 的 `thesis` 可以引用 `[[insights/2026-09-05-003040]]`，复盘时对比「AI 辩论结论 vs 我的判断 vs 实际结果」。这是三方交叉验证，价值高。
+3. **与 5.1 的交易日志对接**：`trade.md` 的 `thesis` 可以引用 `2026-09-05-003040`，复盘时对比「AI 辩论结论 vs 我的判断 vs 实际结果」。这是三方交叉验证，价值高。
 4. **纪律**：`AGENTS.md` 明确 AI 产出「样本量 <30 标探索性，不得作为定稿依据」。所以 insight 实体**不能作为 `causal` 边的 evidence**（3.3），只能作为线索。这条写进 `logic/`。
 
 **时机**：建议在 `trading-agents` 纳入图谱时一并做（`multi-project-integration-plan.md` §6.1 已定 trading-agents 为第一优先纳入项目）。**但见 6.4 的暂缓建议。**
@@ -1037,7 +1037,7 @@ A股/财经源: 3（华尔街见闻、东方财富股票、东方财富资讯）
 | D1 | 2.2 修 `vault_audit.py`：`schema_infer` 读正文 + 断链三级分流 + `relation_density` 排除 index | 脚本 commit | 重跑审查：high 从 101 → < 15 |
 | D2 | 4.1 建 `logic/sentiment-weather-mapping.md`（**先查 S031/S047 回测结论，有数据填数据，无数据标 `exploratory: true`**） | 1 个 logic 实体 | 12 张战法卡的「适用天气」段改为链接此规则 |
 | D3 | 1.1 改盘前报告生成器：注入「📚 图谱关联」段 + 命中双链 + 缺口待办 | 报告模板 commit | 生成的报告双链数 > 0 |
-| D4 | 1.2 脚本提取 `stocks/*.md` 正文的 `[[10_Reference/investing/strategies/index|strategies/]]` → frontmatter `matched_strategies` | 11 个实体更新 | `strategies/dragon_head.md` 的「匹配股票」表非空 |
+| D4 | 1.2 脚本提取 `stocks/*.md` 正文的 `strategies/` → frontmatter `matched_strategies` | 11 个实体更新 | `strategies/dragon_head.md` 的「匹配股票」表非空 |
 | D5 | 2.1 `vault_audit.py` 输出 `.scratch/kg-audit/` 工单 + 报告加「本期关闭」段 | 脚本 + 工单目录 | 周日 CI 报告含工单链接 |
 | D7 | 跑周日 CI，人工关闭工单 | 第 2 份审查报告 | `findings_count` 环比下降，「本期关闭」非空 |
 

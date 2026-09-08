@@ -79,7 +79,7 @@ SORT audit_date DESC
 | 1 | summary | — | 各文件夹笔记数统计 + 关系总数 |
 | 2 | coverage | low | 标出空/偏少文件夹（<3 条） |
 | 3 | orphan_check | high | 无入边的实体 |
-| 4 | broken_link | critical | `[[目标]]` 不存在的链接 |
+| 4 | broken_link | critical | `目标` 不存在的链接 |
 | 5 | schema_infer | medium | 实际 frontmatter vs 设计模板偏差 + 必填缺失 |
 | 6 | relation_density | medium | 入边 ≥10 的 hub / 0 入 0 出的孤岛 |
 | 7 | duplicate_check | medium | 同 code / 同 name 多记录 |

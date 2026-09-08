@@ -23,6 +23,6 @@ gene_scores/winrate/market_data 三库统一 VR_DATA_DIR，迁移完整
 
 - 源文件：`specs/S037-gene-db-迁移/spec.md`（Vibe-Research 仓）
 - README 索引：`specs/README.md`
-- 子文档：spec · [plan](S037-gene-db-迁移/plan.md) · [tasks](S037-gene-db-迁移/tasks.md)
+- 子文档：spec · plan · tasks
 - 数据源：[[10_Reference/investing/data-sources/index|data-sources/]]
 - 战法：[[10_Reference/investing/strategies/index|strategies/]]

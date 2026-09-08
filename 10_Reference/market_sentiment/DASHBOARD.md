@@ -411,14 +411,14 @@ LIMIT 1
 
 | 入口 | 说明 |
 |------|------|
-| [[_README\|框架说明]] | 框架设计与方法论 |
-| [[_SCORE_LEGEND\|评分说明]] | 评分维度与规则 |
-| [[_TAG_SYSTEM\|标签体系]] | 统一标签定义 |
-| [[_DATA_INDEX\|数据索引]] | 原始数据清单 |
-| [[10_Reference/market_sentiment/scores/2026-09-03_score\|最新评分]] | 今日详细评分 |
-| [[daily/\|每日日报]] | 日报归档 |
-| [[10_Reference/investing/reviews/\|周复盘]] | 周度复盘 |
-| [[_data/db/alert_monitor\|告警监控]] | 事件驱动告警脚本 |
+| [[10_Reference/market_sentiment/_README|框架说明]] | 框架设计与方法论 |
+| [[10_Reference/market_sentiment/_SCORE_LEGEND|评分说明]] | 评分维度与规则 |
+| [[10_Reference/market_sentiment/_TAG_SYSTEM|标签体系]] | 统一标签定义 |
+| [[10_Reference/market_sentiment/_DATA_INDEX|数据索引]] | 原始数据清单 |
+| [[10_Reference/market_sentiment/scores/2026-09-03_score|最新评分]] | 今日详细评分 |
+| [[10_Reference/market_sentiment/DASHBOARD|每日日报]] | 日报归档 |
+| [[10_Reference/investing/reviews/index|周复盘]] | 周度复盘 |
+| 告警监控]] | 事件驱动告警脚本 |
 
 ---
 
