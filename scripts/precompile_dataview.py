@@ -9,14 +9,18 @@ frontmatter，执行 Dataview TABLE 查询逻辑，生成静态 Markdown 表格�
 用法：
     python3 scripts/precompile_dataview.py [--dry-run] [--stats-only] [--path PATH]
 
-幂等：已预编译的块用 HTML 注释包裹标记，重复执行自动跳过；查询文本变更则重新生成。
-无法解析的查询保留原代码块，前面加注释标记。
+可重算（recalculate）：预编译块在 HTML 注释里保留 query 原文（base64 编码），
+每次运行解码 query 重新执行——frontmatter 变了表格自动更新。第二次运行幂等：
+表格内容不变则跳过。旧格式块（无 query 标记）用 hash 反查模板 query 原文升级
+为新格式；反查失败则保留原表格。无法解析的查询保留原代码块，前面加注释标记。
 
 设计文档见 AGENTS.md / 任务说明。覆盖 vault 实测的 58 种 WHERE 变体 + 6 种 GROUP BY 变体。
 """
 from __future__ import annotations
 
 import argparse
+import base64
+import binascii
 import hashlib
 import os
 import re
@@ -145,27 +149,45 @@ class VaultIndex:
             target = target[:-3]
         return target
 
+    @staticmethod
+    def _resolve_stem_collision(keys: list[str]) -> str:
+        """stem 碰撞时择优——股票优先于指数，再按字母序兜底。
+
+        背景：000001 股票与指数同名（stocks/000001.md 与 indices/000001.md），
+        短链接 [[000001]] 历史被解析到 indices/，导致 metrics/valuations 的
+        "所属股票" 表格错链到指数。修复后优先 stocks/。
+        """
+        for k in keys:
+            if "/stocks/" in k:
+                return k
+        for k in keys:
+            if "/indices/" in k:
+                return k
+        return sorted(keys)[0]
+
     def _build_links(self) -> None:
         link_re = re.compile(r"\[\[([^\]]+)\]\]")
-        # 路径索引：stem/名 → 记录，用于解析短链接
-        stem_index: dict[str, list[str]] = defaultdict(list)
+        # stem → vault_key 索引（碰撞时择优），用于解析短链接 [[000001]]
+        stem_index: dict[str, str] = {}
+        stem_collisions: dict[str, list[str]] = defaultdict(list)
         for key, rec in self.by_path.items():
-            stem_index[rec.stem].append(key)
+            stem_collisions[rec.stem].append(key)
+        for stem, keys in stem_collisions.items():
+            stem_index[stem] = self._resolve_stem_collision(keys)
         for rec in self.records:
             src_key = rec.vault_key
             body = _FM_RE.sub("", rec.content)
             for m in link_re.finditer(body):
                 raw = VaultIndex._norm_link(m.group(1))
                 # 解析为标准路径：若已是路径形式命中则直接用；否则按 stem 查
-                targets: list[str] = []
+                target = ""
                 if raw in self.by_path:
-                    targets = [raw]
+                    target = raw
                 elif raw in stem_index:
-                    targets = stem_index[raw]
-                for tgt in targets:
-                    if tgt != src_key:
-                        self.outlinks[src_key].add(tgt)
-                        self.inlinks[tgt].add(src_key)
+                    target = stem_index[raw]
+                if target and target != src_key:
+                    self.outlinks[src_key].add(target)
+                    self.inlinks[target].add(src_key)
 
     def records_from(self, from_spec: str) -> list[FileRecord]:
         """FROM "path" → 该目录下所有 .md 记录（递归）。FROM "文件名" 形式也兜底。"""
@@ -973,7 +995,7 @@ def field_value(field_expr: str, rec: FileRecord, idx: VaultIndex, group_key=Non
         for r in group_rows:
             rk = r.vault_key
             if sub == "file.link":
-                links.append(f"[[{r.stem}]]")
+                links.append(f"[[{r.vault_key}]]")
             else:
                 links.append(render_cell(field_value(sub, r, idx), idx, rk))
         return ", ".join(links) if links else "—"
@@ -982,7 +1004,7 @@ def field_value(field_expr: str, rec: FileRecord, idx: VaultIndex, group_key=Non
         attr = fe[5:]
         rk = rec.vault_key
         if attr == "link":
-            return f"[[{rec.stem}]]"
+            return f"[[{rec.vault_key}]]"
         if attr == "name":
             return rec.stem
         if attr == "mtime":
@@ -990,9 +1012,9 @@ def field_value(field_expr: str, rec: FileRecord, idx: VaultIndex, group_key=Non
         if attr == "ctime":
             return rec.ctime
         if attr == "outlinks":
-            return [f"[[{x.split('/')[-1]}]]" for x in idx.outlinks.get(rk, set())]
+            return [f"[[{x}]]" for x in idx.outlinks.get(rk, set())]
         if attr == "inlinks":
-            return [f"[[{x.split('/')[-1]}]]" for x in idx.inlinks.get(rk, set())]
+            return [f"[[{x}]]" for x in idx.inlinks.get(rk, set())]
         return "—"
     # 普通字段
     v = rec.fm.get(fe)
@@ -1023,7 +1045,7 @@ def render_table(
         cells: list[str] = []
         if not query.without_id:
             if rec is not None:
-                cells.append(f"[[{rec.stem}]]")
+                cells.append(f"[[{rec.vault_key}]]")
             else:
                 cells.append("—")
         for field, _alias in query.columns:
@@ -1218,8 +1240,16 @@ def sort_groups(groups: list[tuple[Any, list[FileRecord]]], field: str, directio
 # --------------------------------------------------------------------------- #
 # 文件处理：替换代码块
 # --------------------------------------------------------------------------- #
-# 已预编译块标记（幂等）
+# 新格式预编译块（可重算）：注释里带 query 原文 base64
+#   <!-- dataview-precompiled:<hash> query:<base64> -->
+#   | 表格 |
+#   <!-- /dataview-precompiled -->
 PRECOMPILED_RE = re.compile(
+    r"<!-- dataview-precompiled:([a-f0-9]+)(?:(?: query:)([A-Za-z0-9+/=]+))? -->\n(.*?)\n<!-- /dataview-precompiled -->",
+    re.DOTALL,
+)
+# 旧格式预编译块（无 query 标记，不可直接重算）——与 PRECOMPILED_RE 合并匹配
+LEGACY_PRECOMPILED_RE = re.compile(
     r"<!-- dataview-precompiled:([a-f0-9]+) -->\n(.*?)\n<!-- /dataview-precompiled -->",
     re.DOTALL,
 )
@@ -1234,7 +1264,217 @@ BLOCKQUOTE_DATAVIEW_RE = re.compile(
 )
 
 
-def process_file(path: Path, idx: VaultIndex, dry_run: bool) -> dict:
+def _b64_encode(text: str) -> str:
+    """base64 编码 query 原文（utf-8）。"""
+    return base64.b64encode(text.encode("utf-8")).decode("ascii")
+
+
+def _b64_decode(s: str) -> str | None:
+    """base64 解码，失败返回 None。"""
+    try:
+        return base64.b64decode(s.encode("ascii")).decode("utf-8")
+    except (binascii.Error, UnicodeDecodeError):
+        return None
+
+
+def _query_hash(query_text: str) -> str:
+    """预编译块 hash——md5(query_text)[:12]，用于块标识 + 旧格式反查。"""
+    return hashlib.md5(query_text.encode("utf-8")).hexdigest()[:12]
+
+
+class QueryHashMap:
+    """hash → query 原文 反向映射表。
+
+    旧格式预编译块（无 query 标记）丢失了 query 原文。本表扫描 vault 模板
+    和裸 dataview 代码块，建立 md5(query)[:12] → query_text 映射，让旧块
+    可升级为新格式（可重算）。
+    """
+
+    def __init__(self):
+        self._map: dict[str, str] = {}
+
+    def add(self, query_text: str) -> None:
+        h = _query_hash(query_text)
+        if h not in self._map:
+            self._map[h] = query_text
+
+    def lookup(self, hash_str: str) -> str | None:
+        return self._map.get(hash_str)
+
+    def build_from_vault(self, root: Path) -> None:
+        """扫描模板目录 + 所有裸 dataview 块，填充映射。"""
+        # 1. 模板目录
+        templates = root / "10_Reference" / "investing" / "templates"
+        if templates.is_dir():
+            for p in templates.rglob("*.md"):
+                try:
+                    content = p.read_text(encoding="utf-8")
+                except Exception:
+                    continue
+                for m in DATAVIEW_RE.finditer(content):
+                    self.add(m.group(1))
+        # 2. 全 vault 裸 dataview 块（含 blockquote 内）
+        for p in root.rglob("*.md"):
+            if "templates" in p.parts:
+                continue
+            try:
+                content = p.read_text(encoding="utf-8")
+            except Exception:
+                continue
+            # 先剥离已预编译块（避免把表格里残留的 dataview 文本误当 query）
+            stripped = PRECOMPILED_RE.sub("", content)
+            stripped = LEGACY_PRECOMPILED_RE.sub("", stripped)
+            stripped = FAILED_RE.sub("", stripped)
+            for m in DATAVIEW_RE.finditer(stripped):
+                self.add(m.group(1))
+            # blockquote 内 dataview 块
+            for m in BLOCKQUOTE_DATAVIEW_RE.finditer(stripped):
+                raw = m.group(1)
+                inner = []
+                for ln in raw.split("\n"):
+                    s = re.sub(r"^>+\s?", "", ln)
+                    inner.append(s)
+                body = "\n".join(inner)
+                body = re.sub(r"^```dataview\n", "", body)
+                body = re.sub(r"\n```$", "", body)
+                if body.strip():
+                    self.add(body)
+
+
+# 表头别名 → frontmatter 字段名（用于旧块 query 重建）
+ALIAS_TO_FIELD: dict[str, str] = {
+    "周期": "period",
+    "营收(亿)": "revenue",
+    "净利(亿)": "net_profit",
+    "ROE%": "roe",
+    "毛利率%": "gross_margin",
+    "净利率%": "net_margin",
+    "EPS": "eps",
+    "BVPS": "bvps",
+    "名称": "name",
+    "行业": "industry",
+    "市值": "market_cap",
+    "日期": "created",
+    "PE(TTM)": "pe_ttm",
+    "PB": "pb",
+    "PS(TTM)": "ps_ttm",
+    "PCF(TTM)": "pcf_ttm",
+    "PE分位%": "pe_percentile",
+    "PB分位%": "pb_percentile",
+    "PEG": "peg",
+    "股息率%": "dividend_yield",
+    "远期PE": "forward_pe",
+    "一致EPS": "consensus_eps",
+    "股票代码": "code",
+    "报告期": "period",
+}
+
+
+def _parse_header_row(table: str) -> list[str] | None:
+    """从表格文本提取表头列名（已去除空/分隔）。"""
+    lines = table.strip().split("\n")
+    if not lines:
+        return None
+    header = lines[0]
+    cols = [c.strip() for c in header.split("|")]
+    # 去掉首尾空
+    while cols and cols[0] == "":
+        cols.pop(0)
+    while cols and cols[-1] == "":
+        cols.pop()
+    if not cols:
+        return None
+    # 第二行是分隔（|---|---|），校验
+    if len(lines) < 2 or not re.match(r"^\|?[-\s|:]+$", lines[1]):
+        return None
+    return cols
+
+
+def reconstruct_query_from_block(
+    block_table: str, current_rec: FileRecord, idx: VaultIndex
+) -> str | None:
+    """从旧预编译块的表格内容重建 query 文本。
+
+    策略：表头列名 → 别名 → 字段；FROM 路径按字段归属推断；WHERE = type+code。
+    首列"文件"→ 非 WITHOUT ID（Dataview 默认 file.link 列）。
+
+    FROM 启发式：
+    - 字段含 name/industry/market_cap → FROM stocks（所属股票表）
+    - 字段含 period/revenue/net_profit/roe/gross_margin/net_margin → FROM 当前目录（趋势表）
+    - 字段含 pe_ttm/pb/pe_percentile/pb_percentile/created → FROM 当前目录（估值序列表）
+    """
+    cols = _parse_header_row(block_table)
+    if not cols:
+        return None
+    fm = current_rec.fm
+    file_type = fm.get("type", "")
+    cur_dir = ""
+    try:
+        cur_dir = current_rec.path.resolve().relative_to(VAULT).parent.as_posix()
+    except ValueError:
+        return None
+    # 字段集合
+    fields: list[str] = []
+    has_file_col = False
+    select_cols: list[str] = []
+    first = True
+    for c in cols:
+        if c == "文件":
+            if first:
+                has_file_col = True
+                first = False
+                continue
+            select_cols.append('file.link AS "文件"')
+            first = False
+            continue
+        first = False
+        field = ALIAS_TO_FIELD.get(c, c)
+        fields.append(field)
+        select_cols.append(f'{field} AS "{c}"')
+    # FROM 路径推断
+    stock_fields = {"name", "industry", "market_cap"}
+    if fields and any(f in stock_fields for f in fields) and not any(
+        f in {"revenue", "net_profit", "roe", "pe_ttm", "pb"} for f in fields
+    ):
+        # 含 name/industry/market_cap 且无财务/估值字段 → FROM stocks
+        from_dir = "10_Reference/investing/stocks"
+        where_type = "stock"
+    else:
+        from_dir = cur_dir
+        where_type = file_type
+    # WHERE
+    where_parts = []
+    if where_type:
+        where_parts.append(f'type = "{where_type}"')
+    if fm.get("code"):
+        where_parts.append("code = this.code")
+    where = " AND ".join(where_parts) if where_parts else ""
+    # SORT/LIMIT（按 type 推断）
+    if where_type == "metric":
+        sort = "SORT period DESC"
+        limit = "LIMIT 8"
+    elif where_type == "valuation":
+        sort = "SORT created DESC"
+        limit = "LIMIT 10"
+    else:
+        # stocks：按 code 排序
+        sort = "SORT code ASC"
+        limit = ""
+    # 拼 query
+    parts = ["TABLE"]
+    if select_cols:
+        parts.append(",\n  ".join(select_cols))
+    parts.append(f'FROM "{from_dir}"')
+    if where:
+        parts.append(f"WHERE {where}")
+    if sort:
+        parts.append(sort)
+    if limit:
+        parts.append(limit)
+    return "\n".join(parts) + "\n"
+
+
+def process_file(path: Path, idx: VaultIndex, dry_run: bool, qmap: QueryHashMap | None = None) -> dict:
     try:
         content = path.read_text(encoding="utf-8")
     except Exception:
@@ -1242,7 +1482,24 @@ def process_file(path: Path, idx: VaultIndex, dry_run: bool) -> dict:
     original = content
     current_rec = FileRecord(path, content)
 
-    stats = {"parsed": 0, "success": 0, "failed": 0, "unchanged": 0}
+    stats = {"parsed": 0, "success": 0, "failed": 0, "unchanged": 0, "recomputed": 0}
+
+    def _wrap_block(query_text: str, table: str, blockquote: bool = False) -> str:
+        """生成新格式预编译块（带 query base64）。"""
+        h = _query_hash(query_text)
+        qb64 = _b64_encode(query_text)
+        if blockquote:
+            lines = [
+                f"<!-- dataview-precompiled:{h} query:{qb64} -->",
+                *table.split("\n"),
+                "<!-- /dataview-precompiled -->",
+            ]
+            return "\n".join(f"> {ln}" for ln in lines)
+        return (
+            f"<!-- dataview-precompiled:{h} query:{qb64} -->\n"
+            f"{table}\n"
+            f"<!-- /dataview-precompiled -->"
+        )
 
     def _handle_query(query_text: str, blockquote: bool = False) -> tuple[str, bool]:
         """执行单个查询，返回 (替换文本, 是否成功)。"""
@@ -1256,26 +1513,11 @@ def process_file(path: Path, idx: VaultIndex, dry_run: bool) -> dict:
                     False,
                 )
             table = execute(query, current_rec, idx)
-            h = hashlib.md5(query_text.encode("utf-8")).hexdigest()[:12]
             stats["success"] += 1
-            if blockquote:
-                # 每行加 > 前缀，保持引用块结构
-                lines = [
-                    f"<!-- dataview-precompiled:{h} -->",
-                    *table.split("\n"),
-                    "<!-- /dataview-precompiled -->",
-                ]
-                return "\n".join(f"> {ln}" for ln in lines), True
-            return (
-                f"<!-- dataview-precompiled:{h} -->\n"
-                f"{table}\n"
-                f"<!-- /dataview-precompiled -->",
-                True,
-            )
+            return _wrap_block(query_text, table, blockquote=blockquote), True
         except Exception as e:
             stats["failed"] += 1
             if blockquote:
-                # 保留原 blockquote 代码块
                 return _rebuild_blockquote_dataview(query_text), False
             return f"<!-- dataview-failed: {str(e)[:80]} -->\n```dataview\n{query_text}\n```", False
 
@@ -1290,49 +1532,107 @@ def process_file(path: Path, idx: VaultIndex, dry_run: bool) -> dict:
 
     def replace_blockquote_block(m: re.Match) -> str:
         raw = m.group(1)
-        # 去掉 > 前缀和围栏，还原查询文本
         inner_lines = []
         for ln in raw.split("\n"):
             stripped = re.sub(r"^>+\s?", "", ln)
             inner_lines.append(stripped)
         body = "\n".join(inner_lines)
-        # 去掉首尾围栏
         body = re.sub(r"^```dataview\n", "", body)
         body = re.sub(r"\n```$", "", body)
         text, _ok = _handle_query(body, blockquote=True)
         return text
 
-    # 1. 先把已预编译块替换为占位符（保护，保持幂等）
-    precompiled_blocks: list[str] = []
+    # --- 可重算：处理已预编译块 ---
+    # 新格式块（带 query base64）：解码 query 重算，表格变了才更新
+    # 旧格式块（无 query）：hash 反查 qmap → 失败则从表格表头重建 query → 升级为新格式
+    def recompute_precompiled(m: re.Match) -> str:
+        h = m.group(1)
+        qb64 = m.group(2)  # 新格式有；旧格式 None
+        old_table = m.group(3) if m.group(3) is not None else ""
+        # 取 query 原文：优先 base64 解码 → hash 反查 → 表头重建
+        query_text = None
+        if qb64:
+            query_text = _b64_decode(qb64)
+        if query_text is None and qmap is not None:
+            query_text = qmap.lookup(h)
+        if query_text is None and old_table:
+            query_text = reconstruct_query_from_block(old_table, current_rec, idx)
+        if query_text is None:
+            # 无法重算——保留原块
+            return m.group(0)
+        stats["parsed"] += 1
+        try:
+            query = Query.parse(query_text)
+            if query is None:
+                stats["failed"] += 1
+                return m.group(0)
+            new_table = execute(query, current_rec, idx)
+            stats["success"] += 1
+            # 表格未变 → 保留原块；变了 → 写新格式块（带 query base64）
+            new_block = _wrap_block(query_text, new_table)
+            if new_block == m.group(0):
+                stats["unchanged"] += 1
+                return m.group(0)
+            stats["recomputed"] += 1
+            return new_block
+        except Exception:
+            stats["failed"] += 1
+            return m.group(0)
 
-    def stash_precompiled(m: re.Match) -> str:
-        precompiled_blocks.append(m.group(0))
-        return f"\x00PRECOMPILED{len(precompiled_blocks) - 1}\x00"
-
-    content = PRECOMPILED_RE.sub(stash_precompiled, content)
-    # blockquote 内的已预编译块也保护
+    # blockquote 内预编译块的重算
     bq_precompiled_re = re.compile(
-        r"(>+\s*<!-- dataview-precompiled:[a-f0-9]+ -->\n(?:>.*\n)*?>+\s*<!-- /dataview-precompiled -->)",
+        r"(>+\s*<!-- dataview-precompiled:([a-f0-9]+)(?:(?: query:)([A-Za-z0-9+/=]+))? -->\n(?:>.*\n)*?>+\s*<!-- /dataview-precompiled -->)",
         re.MULTILINE,
     )
-    bq_precompiled_blocks: list[str] = []
 
-    def stash_bq_precompiled(m: re.Match) -> str:
-        bq_precompiled_blocks.append(m.group(0))
-        return f"\x00BQPRECOMPILED{len(bq_precompiled_blocks) - 1}\x00"
+    def recompute_bq_precompiled(m: re.Match) -> str:
+        raw = m.group(0)
+        h = m.group(2)
+        qb64 = m.group(3)
+        # 提取旧表格（去 > 前缀）
+        inner = []
+        for ln in raw.split("\n"):
+            s = re.sub(r"^>+\s?", "", ln)
+            inner.append(s)
+        body = "\n".join(inner)
+        old_table = re.sub(r"^<!-- dataview-precompiled:[a-f0-9]+(?: query:[A-Za-z0-9+/=]+)? -->\n", "", body)
+        old_table = re.sub(r"\n<!-- /dataview-precompiled -->$", "", old_table)
+        # 取 query 原文
+        query_text = None
+        if qb64:
+            query_text = _b64_decode(qb64)
+        if query_text is None and qmap is not None:
+            query_text = qmap.lookup(h)
+        if query_text is None and old_table:
+            query_text = reconstruct_query_from_block(old_table, current_rec, idx)
+        if query_text is None:
+            return m.group(0)
+        stats["parsed"] += 1
+        try:
+            query = Query.parse(query_text)
+            if query is None:
+                stats["failed"] += 1
+                return m.group(0)
+            new_table = execute(query, current_rec, idx)
+            stats["success"] += 1
+            new_block = _wrap_block(query_text, new_table, blockquote=True)
+            if new_block == m.group(0):
+                stats["unchanged"] += 1
+                return m.group(0)
+            stats["recomputed"] += 1
+            return new_block
+        except Exception:
+            stats["failed"] += 1
+            return m.group(0)
 
-    content = bq_precompiled_re.sub(stash_bq_precompiled, content)
-
-    # 2. 处理 blockquote 内 dataview 块
+    # 1. 先重算 blockquote 内预编译块
+    content = bq_precompiled_re.sub(recompute_bq_precompiled, content)
+    # 2. 重算普通预编译块
+    content = PRECOMPILED_RE.sub(recompute_precompiled, content)
+    # 3. 处理 blockquote 内裸 dataview 块
     content = BLOCKQUOTE_DATAVIEW_RE.sub(replace_blockquote_block, content)
-    # 3. 处理裸 dataview 块
+    # 4. 处理裸 dataview 块
     content = DATAVIEW_RE.sub(replace_block, content)
-
-    # 4. 还原预编译块
-    for i, blk in enumerate(precompiled_blocks):
-        content = content.replace(f"\x00PRECOMPILED{i}\x00", blk)
-    for i, blk in enumerate(bq_precompiled_blocks):
-        content = content.replace(f"\x00BQPRECOMPILED{i}\x00", blk)
 
     if content == original:
         stats["unchanged"] = stats["parsed"]
@@ -1355,26 +1655,33 @@ def main():
     args = ap.parse_args()
 
     target = Path(args.path)
-    print(f"[1/3] 扫描 vault: {target}")
+    print(f"[1/4] 扫描 vault: {target}")
     idx = VaultIndex(target)
     print(f"    索引文件数: {len(idx.records)}")
     print(f"    双链边数: {sum(len(v) for v in idx.outlinks.values())}")
+
+    # 构建 hash → query 反查表（用于旧格式块升级）
+    print("[2/4] 构建 query 反查表")
+    qmap = QueryHashMap()
+    qmap.build_from_vault(VAULT)
+    print(f"    query 模板数: {len(qmap._map)}")
 
     # 收集待处理 .md
     md_files = [p for p in target.rglob("*.md")]
     # 排除 templates
     md_files = [p for p in md_files if "templates" not in p.parts]
 
-    print(f"[2/3] 处理 {len(md_files)} 个文件")
-    total = {"parsed": 0, "success": 0, "failed": 0, "changed": 0, "unchanged": 0}
+    print(f"[3/4] 处理 {len(md_files)} 个文件")
+    total = {"parsed": 0, "success": 0, "failed": 0, "changed": 0, "unchanged": 0, "recomputed": 0}
     failed_samples = []
     for i, p in enumerate(sorted(md_files), 1):
         if i % 200 == 0:
             print(f"    进度 {i}/{len(md_files)}")
-        r = process_file(p, idx, dry_run=args.dry_run or args.stats_only)
+        r = process_file(p, idx, dry_run=args.dry_run or args.stats_only, qmap=qmap)
         total["parsed"] += r.get("parsed", 0)
         total["success"] += r.get("success", 0)
         total["failed"] += r.get("failed", 0)
+        total["recomputed"] += r.get("recomputed", 0)
         if r.get("status") == "changed":
             total["changed"] += 1
         else:
@@ -1382,10 +1689,11 @@ def main():
         if args.verbose and r.get("failed"):
             failed_samples.append((p, r))
 
-    print(f"[3/3] 统计")
+    print(f"[4/4] 统计")
     print(f"    解析 dataview 块: {total['parsed']}")
     print(f"    成功替换: {total['success']}")
     print(f"    失败保留: {total['failed']}")
+    print(f"    重算更新: {total['recomputed']}")
     print(f"    变更文件: {total['changed']}")
     print(f"    未变文件: {total['unchanged']}")
     if args.dry_run or args.stats_only:
