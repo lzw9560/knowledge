@@ -1,3 +1,10 @@
+---
+title: "Codex长期记忆知识库"
+type: readme
+created: 2026-09-07
+tags: [readme, knowledge-base]
+---
+
 # 🧠 Codex 长期记忆知识库
 
 > Obsidian管存储，Codex管调用。无限扩容，稳定控Token。

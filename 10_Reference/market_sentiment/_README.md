@@ -1,3 +1,10 @@
+---
+title: "大A舆情预判框架 v2.0"
+date: 2026-09-03
+type: reference
+tags: [sentiment, meta, framework]
+---
+
 # 大A舆情预判框架 v2.0
 
 > 更新日期：2026-09-03 | 版本：v2.0（基于10位专家评审P0改造）

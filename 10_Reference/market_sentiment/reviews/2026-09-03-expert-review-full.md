@@ -1,3 +1,10 @@
+---
+title: "五位专家联合评审报告 2026-09-03"
+date: 2026-09-03
+type: review
+tags: [market, sentiment, review, expert, full]
+---
+
 # 大A舆情预判框架 — 五位专家联合评审报告
 
 > 日期：2026-09-03

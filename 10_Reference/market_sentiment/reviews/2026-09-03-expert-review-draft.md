@@ -1,3 +1,10 @@
+---
+title: "专家评审草稿 2026-09-03"
+date: 2026-09-03
+type: review
+tags: [market, sentiment, review, expert]
+---
+
 # 大A舆情预判框架 — 专家评审（草稿，等其余3位补齐）
 
 ## 角度一：量化策略师（15年A股实战经验）

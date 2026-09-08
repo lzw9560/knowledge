@@ -1,3 +1,10 @@
+---
+title: "舆情预判框架回测报告"
+date: 2026-09-03
+type: backtest
+tags: [market, sentiment, backtest, walk-forward]
+---
+
 # 大A舆情预判框架 v2.0 - Walk-Forward Analysis 回测报告
 
 **生成时间**: 2026-09-03 18:34:47
