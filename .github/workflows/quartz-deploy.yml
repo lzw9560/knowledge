@@ -51,11 +51,11 @@ jobs:
           <head>
           <meta charset="utf-8">
           <meta http-equiv="refresh" content="0; url=🏠-首页">
-          <title>投研知识图谱</title>
+          <title>我的知识图谱</title>
           <script>window.location.href='🏠-首页';</script>
           </head>
           <body>
-          <p>跳转中... <a href="🏠-首页">投研知识图谱</a></p>
+          <p>跳转中... <a href="🏠-首页">我的知识图谱</a></p>
           </body>
           </html>
           EOF
