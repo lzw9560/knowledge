@@ -23,6 +23,10 @@ created: 2026-09-07
 | 605398 | 新炬网络 | 43.38亿 |
 <!-- /dataview-precompiled -->
 
+## 📋 成分股列表
+
+- [[10_Reference/investing/stocks/605398|新炬网络（605398）]]
+
 ## 🔗 关联
 
 - **行业**：[[10_Reference/investing/industries/index|industries/]]

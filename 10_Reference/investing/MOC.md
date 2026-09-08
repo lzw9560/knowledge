@@ -52,6 +52,10 @@ description: 投研知识图谱入口——将代码实体（Pydantic 契约模�
 | procedure | 1 |
 <!-- /stats-anchor -->
 
+### 研报覆盖率
+
+> 📊 研报覆盖率：131/411 只个股有研报覆盖（32%）——东财 reportapi 仅覆盖热门股，非图谱缺陷。280 只 0 研报个股通过行业/概念节点获得聚合入边，不呈现为信息孤岛。
+
 <!-- dataview-precompiled:4c078f03a97b query:VEFCTEUK57G75Z6LIEFTICLnsbvlnosiLAogIOaVsOmHjyBBUyAi5pWw6YePIgpGUk9NICIxMF9SZWZlcmVuY2UvaW52ZXN0aW5nIgpXSEVSRSB0eXBlID0gIm1vYyIKU09SVCBjb2RlIEFTQwo= -->
 | 文件 | 类型 | 数量 |
 |---|---|---|

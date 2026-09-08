@@ -22,7 +22,6 @@ source: astock.concept_blocks
 
 AI 大模型落地应用层，覆盖 AIGC/智能体/教育/营销/办公场景。逻辑围绕「模型能力提升+垂直场景渗透+商业化变现」展开，是 AI 产业链离 C 端最近的一环。
 
-
 ## 📖 题材逻辑
 **题材逻辑**：AI应用概念聚焦人工智能技术在具体场景的落地与商业化，涵盖办公、教育、医疗、金融等垂直领域。市场关注其从模型能力突破转向产品变现的潜力，随着基础大模型逐步成熟，应用层企业有望率先实现收入增长，成为产业链中市场空间最被看好的环节。
 **催化因素**：海外头部AI应用企业用户量与收入超预期，以及国内厂商密集发布AI原生应用或功能迭代，常成为板块情绪催化点。此外，重大模型能力升级、算力成本显著下降及行业政策支持，也会推动市场对应用端加速渗透的预期。
@@ -51,6 +50,26 @@ AI 大模型落地应用层，覆盖 AIGC/智能体/教育/营销/办公场景�
 | 003005 | 竞业达 | 24.8亿 |
 <!-- /dataview-precompiled -->
 
+## 📋 成分股列表
+
+- [[10_Reference/investing/stocks/000725|京东方A（000725）]]
+- [[10_Reference/investing/stocks/002230|科大讯飞（002230）]]
+- [[10_Reference/investing/stocks/002027|分众传媒（002027）]]
+- [[10_Reference/investing/stocks/300058|蓝色光标（300058）]]
+- [[10_Reference/investing/stocks/002236|大华股份（002236）]]
+- [[10_Reference/investing/stocks/300413|芒果超媒（300413）]]
+- [[10_Reference/investing/stocks/000034|神州数码（000034）]]
+- [[10_Reference/investing/stocks/000528|柳工（000528）]]
+- [[10_Reference/investing/stocks/002354|天娱数科（002354）]]
+- [[10_Reference/investing/stocks/603533|掌阅科技（603533）]]
+- [[10_Reference/investing/stocks/003040|楚天龙（003040）]]
+- [[10_Reference/investing/stocks/000560|我爱我家（000560）]]
+- [[10_Reference/investing/stocks/603123|翠微股份（603123）]]
+- [[10_Reference/investing/stocks/605577|龙版传媒（605577）]]
+- [[10_Reference/investing/stocks/001330|博纳影业（001330）]]
+- [[10_Reference/investing/stocks/600551|时代出版（600551）]]
+- [[10_Reference/investing/stocks/003005|竞业达（003005）]]
+
 ## 🔄 题材轮动
 
 > 记录该概念的轮动节奏：发酵期/高潮期/退潮期标志性事件。
@@ -58,7 +77,6 @@ AI 大模型落地应用层，覆盖 AIGC/智能体/教育/营销/办公场景�
 - **发酵期**：政策催化 / 行业拐点 / 龙头订单
 - **高潮期**：板块情绪过热，龙头翻倍
 - **退潮期**：估值过高 / 业绩证伪 / 风格切换
-
 
 ## 💰 资金流向
 

@@ -23,6 +23,10 @@ created: 2026-09-07
 | 002281 | 光迅科技 | 1318.17亿 |
 <!-- /dataview-precompiled -->
 
+## 📋 成分股列表
+
+- [[10_Reference/investing/stocks/002281|光迅科技（002281）]]
+
 ## 🔗 关联
 
 - **行业**：[[10_Reference/investing/industries/index|industries/]]

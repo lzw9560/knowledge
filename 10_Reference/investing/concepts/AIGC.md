@@ -24,6 +24,11 @@ created: 2026-09-07
 | 002354 | 天娱数科 | 137.48亿 |
 <!-- /dataview-precompiled -->
 
+## 📋 成分股列表
+
+- [[10_Reference/investing/stocks/300058|蓝色光标（300058）]]
+- [[10_Reference/investing/stocks/002354|天娱数科（002354）]]
+
 ## 🔗 关联
 
 - **行业**：[[10_Reference/investing/industries/index|industries/]]

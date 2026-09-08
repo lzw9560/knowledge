@@ -19,7 +19,6 @@ confidence: medium
 - 名称：PC、服务器及硬件
 - 分类来源：东方财富EM2016行业分类（本次股票灌入时从东财数据中心拉取）
 
-
 ## 🏢 成分股
 
 <!-- dataview-precompiled:f71acf6540f0 query:VEFCTEUgV0lUSE9VVCBJRAogIGNvZGUgQVMgIuS7o+eggSIsCiAgbmFtZSBBUyAi5ZCN56ewIiwKICBwZV90dG0gQVMgIlBFIiwKICBtYXJrZXRfY2FwIEFTICLluILlgLwiCkZST00gIjEwX1JlZmVyZW5jZS9pbnZlc3Rpbmcvc3RvY2tzIgpXSEVSRSB0eXBlID0gInN0b2NrIiBBTkQgaW5kdXN0cnkgPSB0aGlzLm5hbWUKU09SVCBtYXJrZXRfY2FwIERFU0MKTElNSVQgMjA= -->
@@ -28,6 +27,11 @@ confidence: medium
 | 002415 | 海康威视 | 19.27 | 3126.33亿 |
 | 000977 | 浪潮信息 | 23.82 | 1087B |
 <!-- /dataview-precompiled -->
+
+## 📋 成分股列表
+
+- [[10_Reference/investing/stocks/002415|海康威视（002415）]]
+- [[10_Reference/investing/stocks/000977|浪潮信息（000977）]]
 
 ## 💰 资金流向
 
