@@ -31,8 +31,15 @@ source: ARCHITECTURE.md
 | low | float | 最低价 |
 | close | float | 收盘价 |
 | volume | float | 成交量 |
+| **peTTM** | float | **市盈率 TTM（2026-09-09 核实 w7go86zon：kline fields 自带，日频现成，不用自己算）** |
+| **pbMRQ** | float | **市净率 MRQ（kline 自带）** |
+| **psTTM** | float | **市销率 TTM（kline 自带）** |
+| **pcfNcfTTM** | float | **市现率 TTM（kline 自带）** |
+| **turn** | float | **换手率（kline 自带）** |
+| isST | str | ST 标记（"0"/"1"） |
 
-> 数据源：baostock `query_history_k_data_plus`（frequency=5，adjustflag=2 前复权）
+> 数据源：baostock `query_history_k_data_plus`（frequency=5/d，adjustflag=2 前复权 或 3 不复权）
+> **2026-09-09 重大修正**：fields 自带 peTTM/pbMRQ/psTTM/pcfNcfTTM/turn 日频值——选股 capture 层直接用 kline 一次出 PE/PB/换手，不用跑 query_profit_data 44Q PIT（省 ~22hr）。caveat：kline peTTM 是 as-reported 按当日股本+close 算（可能 restated），pubDate PIT 锚点在 query_profit_data（仅深度回测验证需，S171 已停）。
 > 单次 login（进程级幂等），无 IP 限制，免防封
 
 ## ⏱ 限流策略

@@ -291,17 +291,20 @@ def run():
     else:
         print(f"[daily_sync] DASHBOARD 不存在: {DASHBOARD}")
 
-    # 6. 重跑 precompile + refresh_stats
-    for script in ("scripts/precompile_dataview.py", "scripts/refresh_stats.py"):
+    # 6. 重跑 precompile（增量模式，跳过未变文件）+ refresh_stats
+    for script, args, tmout in [
+        ("scripts/precompile_dataview.py", [], 120),  # 增量模式，cache 存在时 ~9s
+        ("scripts/refresh_stats.py", [], 30),
+    ]:
         try:
-            r = subprocess.run(["python3", script], cwd=str(VAULT),
-                                capture_output=True, text=True, timeout=180)
+            r = subprocess.run(["python3", script] + args, cwd=str(VAULT),
+                                capture_output=True, text=True, timeout=tmout)
             if r.returncode == 0:
                 print(f"[daily_sync] {script} OK")
             else:
                 print(f"[daily_sync] {script} FAIL: {r.stderr[:200]}")
         except subprocess.TimeoutExpired:
-            print(f"[daily_sync] {script} 超时（180s）")
+            print(f"[daily_sync] {script} 超时（{tmout}s）——跳过，不影响数据同步")
         except Exception as e:
             print(f"[daily_sync] {script} 异常: {e}")
 

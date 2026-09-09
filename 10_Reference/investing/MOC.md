@@ -21,7 +21,7 @@ description: 投研知识图谱入口——将代码实体（Pydantic 契约模�
 <!-- stats-anchor:total -->
 | 实体总数 |
 |---|
-| 2510 |
+| 2522 |
 <!-- /stats-anchor -->
 
 ### 各类型实体计数
@@ -29,8 +29,8 @@ description: 投研知识图谱入口——将代码实体（Pydantic 契约模�
 <!-- stats-anchor:type-counts -->
 | 类型 | 数量 |
 |---|---|
+| metric | 411 |
 | stock | 411 |
-| metric | 401 |
 | valuation | 401 |
 | analyst | 396 |
 | report | 393 |
@@ -46,10 +46,11 @@ description: 投研知识图谱入口——将代码实体（Pydantic 契约模�
 | action | 5 |
 | decision | 5 |
 | index | 5 |
+| audit | 4 |
 | inbox_item | 4 |
 | project | 4 |
-| audit | 3 |
 | procedure | 1 |
+| strategy_index | 1 |
 <!-- /stats-anchor -->
 
 ### 研报覆盖率
