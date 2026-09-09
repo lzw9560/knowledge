@@ -63,7 +63,7 @@ created: 2026-09-09
 | 类型 | 数量 |
 |---|---|
 | events | ['events/2026-09-08-龙虎榜衍生品'] |
-| metrics | ['metrics/打板_连板位置', 'metrics/打板_炸板回封', 'metrics/打板_OFI盘口', 'metrics/打板_涨跌停规则', 'metrics/打板_封单强度比', 'metrics/打板_量比换手', 'metrics/打板_封板时间', 'metrics/打板_题材热度', 'metrics/打板_情绪周期', 'metrics/打板_竞价量能'] |
+| metrics | ['metrics/打板_竞价量能', 'metrics/打板_题材热度', 'metrics/打板_量比换手', 'metrics/打板_封单强度比', 'metrics/打板_封板时间', 'metrics/打板_连板位置', 'metrics/打板_炸板回封', 'metrics/打板_情绪周期', 'metrics/打板_涨跌停规则', 'metrics/打板_OFI盘口'] |
 | specs | ['specs/Vibe-Research项目', 'specs/a-Plate-Sentinel项目'] |
 | strategies | ['strategies/打板因子集索引'] |
 
