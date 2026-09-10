@@ -1,6 +1,6 @@
 ---
 type: audit
-audit_date: 2026-09-09
+audit_date: 2026-09-10
 auditor: daily-audit-script
 scope: 全量
 findings_count: 91
@@ -9,10 +9,10 @@ high: 77
 medium: 14
 low: 15
 status: 已完成
-created: 2026-09-09
+created: 2026-09-10
 ---
 
-# 每日审查报告：2026-09-09
+# 每日审查报告：2026-09-10
 
 > 自动审查（daily_audit.py 轻量版，纯文件扫描）。
 
@@ -63,7 +63,7 @@ created: 2026-09-09
 | 类型 | 数量 |
 |---|---|
 | events | ['events/2026-09-08-龙虎榜衍生品'] |
-| metrics | ['metrics/打板_题材热度', 'metrics/打板_涨跌停规则', 'metrics/打板_OFI盘口', 'metrics/打板_情绪周期', 'metrics/打板_封单强度比', 'metrics/打板_炸板回封', 'metrics/打板_量比换手', 'metrics/打板_连板位置', 'metrics/打板_竞价量能', 'metrics/打板_封板时间'] |
+| metrics | ['metrics/打板_OFI盘口', 'metrics/打板_封板时间', 'metrics/打板_炸板回封', 'metrics/打板_量比换手', 'metrics/打板_题材热度', 'metrics/打板_封单强度比', 'metrics/打板_竞价量能', 'metrics/打板_涨跌停规则', 'metrics/打板_连板位置', 'metrics/打板_情绪周期'] |
 | specs | ['specs/a-Plate-Sentinel项目', 'specs/Vibe-Research项目'] |
 | strategies | ['strategies/打板因子集索引'] |
 

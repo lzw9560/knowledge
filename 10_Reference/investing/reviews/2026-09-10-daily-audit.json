@@ -1,0 +1,88 @@
+{
+  "audit_date": "2026-09-10",
+  "total_entities": 2511,
+  "type_distribution": {
+    "metric": 411,
+    "stock": 411,
+    "valuation": 401,
+    "analyst": 396,
+    "report": 392,
+    "concept": 130,
+    "industry": 126,
+    "spec": 101,
+    "dragon_tiger": 41,
+    "logic": 24,
+    "event": 22,
+    "data_source": 17,
+    "strategy": 13,
+    "agent_role": 7,
+    "index": 5,
+    "decision": 5,
+    "project": 4,
+    "action": 4,
+    "strategy_index": 1
+  },
+  "stub_count": 15,
+  "llm_generated_count": 0,
+  "placeholder_count": 0,
+  "placeholder_by_type": {},
+  "confidence_distribution": {
+    "medium": 1045,
+    "low": 2,
+    "high": 1433
+  },
+  "no_confidence_count": 31,
+  "broken_links": 77,
+  "broken_links_top10": [
+    [
+      "打板因子集索引",
+      10
+    ],
+    [
+      "龙头战法",
+      5
+    ],
+    [
+      "炸板回封",
+      4
+    ],
+    [
+      "弱转强接力",
+      3
+    ],
+    [
+      "一字竞价选股法",
+      3
+    ],
+    [
+      "连板接力",
+      2
+    ],
+    [
+      "低吸龙头",
+      2
+    ],
+    [
+      "暴风雨逆势涨停",
+      2
+    ],
+    [
+      "平台突破",
+      2
+    ],
+    [
+      "尾盘偷袭",
+      2
+    ]
+  ],
+  "orphan_count": 14,
+  "orphan_by_type": {
+    "events": 1,
+    "metrics": 10,
+    "specs": 2,
+    "strategies": 1
+  },
+  "fragment_links": 64,
+  "missing_frontmatter": 0,
+  "broken_md_links": 0
+}
