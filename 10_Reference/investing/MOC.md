@@ -21,7 +21,7 @@ description: 投研知识图谱入口——将代码实体（Pydantic 契约模�
 <!-- stats-anchor:total -->
 | 实体总数 |
 |---|
-| 2522 |
+| 2523 |
 <!-- /stats-anchor -->
 
 ### 各类型实体计数
@@ -44,9 +44,9 @@ description: 投研知识图谱入口——将代码实体（Pydantic 契约模�
 | strategy | 13 |
 | agent_role | 7 |
 | action | 5 |
+| audit | 5 |
 | decision | 5 |
 | index | 5 |
-| audit | 4 |
 | inbox_item | 4 |
 | project | 4 |
 | procedure | 1 |
