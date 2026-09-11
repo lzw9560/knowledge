@@ -47,15 +47,15 @@ created: 2026-09-08
 | 断链目标 | 次数 |
 |---|---|
 | data-sources/同花顺 THS（一致预期·涨停揭秘）（LLM 服务） | 2 |
-| [[10_Reference/tech-learning/concepts/限流 — 共用 em_get QPS≤2 限流 | 2 |
-| [[10_Reference/tech-learning/concepts/限流 — 共用 em_get QPS≤2 限流防封 | 2 |
+| 10_Reference/tech-learning/concepts/限流 — 共用 em_get QPS≤2 限流 | 2 |
+| 10_Reference/tech-learning/concepts/限流 — 共用 em_get QPS≤2 限流防封 | 2 |
 | specs/a-Plate-Sentinel项目 — A股打板情绪监控与投研决策看板（8 大模块，Tushare 数据源，MVP 骨架阶段） | 1 |
-| [[10_Reference/tech-learning/concepts/限流 — stale-run 堵塞的根因之一是限流队列积压 | 1 |
+| 10_Reference/tech-learning/concepts/限流 — stale-run 堵塞的根因之一是限流队列积压 | 1 |
 | specs/Vibe-Research项目 — Vibe-Research 个人 AI 投研看板（本图谱主体，109 spec + 16 数据源 + 12 战法） | 1 |
 | specs/a-Plate-Sentinel项目 — A股打板情绪监控与投研决策看板（8 大模块，Tushare 数据源，MVP 骨架） | 1 |
-| [[10_Reference/tech-learning/concepts/限流 — 光伏/风能/氢能多概念聚合，数据源限流防封 | 1 |
-| [[10_Reference/tech-learning/concepts/限流 — 行情数据源限流防封 | 1 |
-| [[10_Reference/tech-learning/concepts/限流 — 行情数据源限流 | 1 |
+| 10_Reference/tech-learning/concepts/限流 — 光伏/风能/氢能多概念聚合，数据源限流防封 | 1 |
+| 10_Reference/tech-learning/concepts/限流 — 行情数据源限流防封 | 1 |
+| 10_Reference/tech-learning/concepts/限流 — 行情数据源限流 | 1 |
 
 ## 🏝️ 孤立实体分布
 

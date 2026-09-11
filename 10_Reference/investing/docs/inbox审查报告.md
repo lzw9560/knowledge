@@ -58,7 +58,7 @@ updated: 2026-09-08
 4. 不存在的行业新建行业文件（如"铅锌""环保"）
 5. 更新每个 stock 的：
    - frontmatter `industry: 待核实` → `industry: {推断行业名}`
-   - body 中 `[[10_Reference/investing/industries/待核实]]` → `（推断行业名）`
+   - body 中 `10_Reference/investing/industries/待核实` → `（推断行业名）`
    - info 块中 `**行业**：\`待核实\`` → `**行业**：\`{推断行业名}\``
 
 ### 统计

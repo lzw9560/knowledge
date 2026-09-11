@@ -62,5 +62,5 @@ source: ARCHITECTURE.md
 ## 🔧 技术栈
 
 - 🔧 [[10_Reference/tech-learning/tools/uv包管理|uv]] — tushare Python 包由 uv 管理锁版本
-- 🔧 [[[[10_Reference/tech-learning/concepts/限流 — Tushare API 有调用频率限制，需限流]]
+- 🔧 [[10_Reference/tech-learning/concepts/限流]] — Tushare API 有调用频率限制，需限流
 - 🔧 [[10_Reference/tech-learning/concepts/数据契约|数据契约]] — 返回数据由契约层统一形状

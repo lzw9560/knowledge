@@ -10,7 +10,7 @@ tags: [readme, knowledge-base]
 
 ## 这是什么
 
-Vibe-Research 是 A 股投研系统，已有 12+ Pydantic 契约模型（Quote/Valuation/Financials/Report/KLine/FundFlow/News/Seat/GlobalStock/Emotion/Sector/IndustrySector/LianbanStock/ZTPoolItem）和 12 张战法卡（`backend/strategies/cards/`）。代码层管"数据怎么流"，本 vault 管"知识怎么连"——个股属于哪个行业、被哪些研报覆盖、触发哪张战法、数据从哪个源来，都在这里通过 `[[]]` 双链和 Dataview 查询织成网。
+Vibe-Research 是 A 股投研系统，已有 12+ Pydantic 契约模型（Quote/Valuation/Financials/Report/KLine/FundFlow/News/Seat/GlobalStock/Emotion/Sector/IndustrySector/LianbanStock/ZTPoolItem）和 12 张战法卡（`backend/strategies/cards/`）。代码层管"数据怎么流"，本 vault 管"知识怎么连"——个股属于哪个行业、被哪些研报覆盖、触发哪张战法、数据从哪个源来，都在这里通过 `` 双链和 Dataview 查询织成网。
 
 ## 如何打开
 

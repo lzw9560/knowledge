@@ -43,4 +43,4 @@ description: A股异常交易监管细则——打板/封单/连板合法性边�
 
 ## 关联
 
-[[A股交易成本结构]]（打板成本最差 1.0-1.5%+无 edge）+ [[红利低波复合因子]]（打板搁置后的长线主仓替代）+ memory `expert-round-cost-accountant`（打板信仰池 verdict）。
+[[00_Active/projects/vibe-research/expert-rounds/A股交易成本结构]]（打板成本最差 1.0-1.5%+无 edge）+ [[00_Active/projects/vibe-research/expert-rounds/红利低波复合因子]]（打板搁置后的长线主仓替代）+ memory `expert-round-cost-accountant`（打板信仰池 verdict）。

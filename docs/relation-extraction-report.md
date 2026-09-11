@@ -57,7 +57,7 @@ date: 2026-09-07
 | 工具→函数 | `stock_tools.py` `@register_tool` | high | 装饰器抓工具名，函数体抓被调函数 |
 | ARCHITECTURE 数据流 | `ARCHITECTURE.md` 一图概览 | high | 正则匹配外部源行 |
 | 数据源→实体类型 | `ARCHITECTURE.md` 推断 | medium | 从数据流图 + 已灌入实体推断 |
-| spec→数据源 | vault `specs/*.md` 关联段 | high | 抓 `[[]]` 链接 |
+| spec→数据源 | vault `specs/*.md` 关联段 | high | 抓 `` 链接 |
 
 ## 冲突处理（优先级）
 

@@ -24,9 +24,9 @@ created: 2026-09-07
 | 检查 | 目的 | Obsidian/MCP 实现 |
 |---|---|---|
 | `summary` | 图谱整体摘要 | Dataview 聚合 + `get_vault_stats` |
-| `coverage` | 各实体类型覆盖率 | `TABLE FROM "[[10_Reference/investing/stocks"` 计数对比预期 |stocks"` 计数对比预期]]
+| `coverage` | 各实体类型覆盖率 | `TABLE FROM "10_Reference/investing/stocks"` 计数对比预期 |
 | `orphan_check` | 无入边实体 | `find_orphans` MCP |
-| `broken_link` | `[[]]` 指向不存在文件 | `find_broken_links` MCP |
+| `broken_link` | wikilink 指向不存在文件 | `find_broken_links` MCP |
 | `schema_infer` | 实际 schema vs 设计偏差 | Dataview 查 frontmatter 字段分布 |
 | `relation_density` | 关系密度异常 | `get_backlinks` 计数 |
 | `duplicate_check` | 同实体多份记录 | 按代码/名称分组查重 |

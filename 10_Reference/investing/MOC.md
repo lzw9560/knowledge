@@ -7,7 +7,7 @@ description: 投研知识图谱入口——将代码实体（Pydantic 契约模�
 # Vibe-Research 投研知识图谱
 
 > [!abstract] 关于本图谱
-> 这个 vault 是 Vibe-Research 项目的**语义层**，把代码里的实体（Pydantic 契约模型）、spec 决策、战法、数据源链接成可导航的知识图谱。代码层管"数据怎么流"，本 vault 管"知识怎么连"——个股属于哪个行业、被哪些研报覆盖、触发哪张战法、数据从哪个源来，都在这里通过 `[[]]` 双链和 Dataview 查询织成网。
+> 这个 vault 是 Vibe-Research 项目的**语义层**，把代码里的实体（Pydantic 契约模型）、spec 决策、战法、数据源链接成可导航的知识图谱。代码层管"数据怎么流"，本 vault 管"知识怎么连"——个股属于哪个行业、被哪些研报覆盖、触发哪张战法、数据从哪个源来，都在这里通过 `` 双链和 Dataview 查询织成网。
 
 > [!tip] 🔍 快速搜索
 > 在特定类型里找内容？按 `Ctrl/Cmd + K` 打开搜索，支持按标题/正文/标签匹配。下方「热门查询」段直接展示 5 个最常用查询的结果。
@@ -129,20 +129,20 @@ description: 投研知识图谱入口——将代码实体（Pydantic 契约模�
 
 | 实体类 | 文件夹 | 说明 |
 |---|---|---|
-| 📈 股票 | [stocks/](10_Reference/meta/index) |A 股/美股/港股个股]]，对应 `Quote` + `CompanyInfo` |
-| 🏭 行业板块 | [industries/](10_Reference/meta/index) |证监会行业分类]]，对应 `IndustrySector` |
-| 💡 概念板块 | [concepts/](10_Reference/meta/index) |概念题材板块]]，对应 `ConceptBlock` + `Sector` |
-| 📊 指数 | [indices/](10_Reference/meta/index) |沪深300/中证500等宽基与行业指数 |]]
-| 📰 研报 | [reports/](10_Reference/meta/index) |机构研报]]，对应 `Report` 契约 |
-| 👤 分析师 | [analysts/](10_Reference/meta/index) |研报作者]]，对应 `Report.researcher` |
-| 💰 财务指标 | [metrics/](10_Reference/meta/index) |营收/ROE/毛利率等]]，对应 `Financials` + `FinancialPeriod` |
-| 📈 估值 | [valuations/](10_Reference/meta/index) |PE/PB/PEG/分位]]，对应 `Valuation` + `ValuationPercentile` |
-| 🐉 龙虎榜 | [dragon-tiger/](10_Reference/meta/index) |游资席位]]，对应 `Seat` + `BillboardDetail` + `DragonTiger` |
-| ⚡ 事件 | [events/](10_Reference/meta/index) |新闻/公告/涨停]]，对应 `News` + `Announcement` + `ZTPoolItem` |
-| ⚔️ 战法 | [strategies/](10_Reference/meta/index) |战法卡（从 `backend/strategies/cards/` 导入） |]]
-| 📋 项目决策 | [specs/](10_Reference/meta/index) |SDD spec 决策实体]]，对应 `specs/` 目录 |
-| 📡 数据源 | [data-sources/](10_Reference/meta/index) |外部数据源]]，对应 `ARCHITECTURE` 数据流 |
-| 🤖 AI 角色 | [agents/](10_Reference/meta/index) |trading-agents 的 7 Analyst（区别于 analysts 真人） |]]
+| 📈 股票 | [stocks/](10_Reference/meta/index) |A 股/美股/港股个股，对应 `Quote` + `CompanyInfo` |
+| 🏭 行业板块 | [industries/](10_Reference/meta/index) |证监会行业分类，对应 `IndustrySector` |
+| 💡 概念板块 | [concepts/](10_Reference/meta/index) |概念题材板块，对应 `ConceptBlock` + `Sector` |
+| 📊 指数 | [indices/](10_Reference/meta/index) |沪深300/中证500等宽基与行业指数 |
+| 📰 研报 | [reports/](10_Reference/meta/index) |机构研报，对应 `Report` 契约 |
+| 👤 分析师 | [analysts/](10_Reference/meta/index) |研报作者，对应 `Report.researcher` |
+| 💰 财务指标 | [metrics/](10_Reference/meta/index) |营收/ROE/毛利率等，对应 `Financials` + `FinancialPeriod` |
+| 📈 估值 | [valuations/](10_Reference/meta/index) |PE/PB/PEG/分位，对应 `Valuation` + `ValuationPercentile` |
+| 🐉 龙虎榜 | [dragon-tiger/](10_Reference/meta/index) |游资席位，对应 `Seat` + `BillboardDetail` + `DragonTiger` |
+| ⚡ 事件 | [events/](10_Reference/meta/index) |新闻/公告/涨停，对应 `News` + `Announcement` + `ZTPoolItem` |
+| ⚔️ 战法 | [strategies/](10_Reference/meta/index) |战法卡（从 `backend/strategies/cards/` 导入） |
+| 📋 项目决策 | [specs/](10_Reference/meta/index) |SDD spec 决策实体，对应 `specs/` 目录 |
+| 📡 数据源 | [data-sources/](10_Reference/meta/index) |外部数据源，对应 `ARCHITECTURE` 数据流 |
+| 🤖 AI 角色 | [agents/](10_Reference/meta/index) |trading-agents 的 7 Analyst（区别于 analysts 真人） |
 
 
 <!-- index 入边段 -->
@@ -177,22 +177,22 @@ description: 投研知识图谱入口——将代码实体（Pydantic 契约模�
 
 ## 🔗 关系层（本体构件 2：关系）
 
-关系通过 `[[]]` 双向链接 + frontmatter 谓词标注实现。预定义关系谓词：
+关系通过 `` 双向链接 + frontmatter 谓词标注实现。预定义关系谓词：
 `belongs_to` / `tagged` / `covered_by` / `has_metric` / `valued_at` / `involves` / `affects` / `matches` / `authored_by` / `triggered_by`
 
 ## ⚙️ 动态层（本体构件 3-4）
 
 | 构件 | 文件夹 | 说明 |
 |---|---|---|
-| **⚙️ 逻辑规则** | [logic/](10_Reference/meta/index) |schema 约束/校验/状态机/推断规则 |]]
-| **⚡ 动作** | [actions/](10_Reference/meta/index) |CRUD/状态流转/链接维护/审计快照 |]]
+| **⚙️ 逻辑规则** | [logic/](10_Reference/meta/index) |schema 约束/校验/状态机/推断规则 |
+| **⚡ 动作** | [actions/](10_Reference/meta/index) |CRUD/状态流转/链接维护/审计快照 |
 
 ## 🛡 质量门（Curated）
 
 | 层 | 文件夹 | 作用 |
 |---|---|---|
-| **📥 待审** | [inbox/](10_Reference/meta/index) |LLM 抽取实体先进此]]，带 confidence + source + quality_score，审核通过才进正式区 |
-| **🔍 审查** | [reviews/](10_Reference/meta/index) |ReAct Agent 定期体检报告（8 项检查） |]]
+| **📥 待审** | [inbox/](10_Reference/meta/index) |LLM 抽取实体先进此，带 confidence + source + quality_score，审核通过才进正式区 |
+| **🔍 审查** | [reviews/](10_Reference/meta/index) |ReAct Agent 定期体检报告（8 项检查） |
 
 > 不直接灌入是知识图谱健康的第一道防线。详见 [[10_Reference/investing/inbox/index]] 质量四维度。
 
@@ -223,11 +223,11 @@ description: 投研知识图谱入口——将代码实体（Pydantic 契约模�
 3. 在任意实体文件夹下新建笔记 → 命令面板 `Ctrl/Cmd+P` → `Templater: Create new note from template` → 选对应模板（如 `stock`）。
 4. 模板会自动填入 YAML frontmatter + 正文骨架，`<% tp.date.now("YYYY-MM-DD") %>` 自动替换为当日日期。
 
-### 2. 链接（`[[]]` 双链）
+### 2. 链接（`` 双链）
 
-- 在任意笔记正文中输入 `[[10_Reference/investing/stocks/600519]]` 即可链接到个股笔记；若笔记不存在，Obsidian 会高亮提示并支持一键创建。
-- **双向**：在股票笔记里写 `[[10_Reference/investing/industries/食品饮料]]`，行业笔记的"反向链接"区会自动出现该股票。
-- 文件夹链接用 `[[10_Reference/investing/stocks/index|stocks/]]` 形式，Obsidian 会指向该文件夹的 `index.md`。
+- 在任意笔记正文中输入 `10_Reference/investing/stocks/600519` 即可链接到个股笔记；若笔记不存在，Obsidian 会高亮提示并支持一键创建。
+- **双向**：在股票笔记里写 `10_Reference/investing/industries/食品饮料`，行业笔记的"反向链接"区会自动出现该股票。
+- 文件夹链接用 `10_Reference/investing/stocks/index|stocks/` 形式，Obsidian 会指向该文件夹的 `index.md`。
 
 ### 3. 查询（Dataview）
 
@@ -278,7 +278,7 @@ description: 投研知识图谱入口——将代码实体（Pydantic 契约模�
 
 ### 关联项目（ora-2 方案 D 纳入的外部投研项目）
 
-- [[10_Reference/investing/specs/a-Plate-Sentinel项目 — A股打板情绪监控与投研决策看板（8 大模块，Tushare 数据源，MVP 骨架阶段）]]
+- [[10_Reference/investing/specs/a-Plate-Sentinel项目]] — A股打板情绪监控与投研决策看板（8 大模块，Tushare 数据源，MVP 骨架阶段）
 - [[10_Reference/investing/specs/TradingAgents项目]] — TradingAgents A股深度特化 fork（7 Analyst + 多 Agent 辩论）
 - [[10_Reference/investing/specs/每日股票分析项目]] — 每日股票分析报告生成器（多市场、多渠道推送）
 

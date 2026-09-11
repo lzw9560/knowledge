@@ -21,14 +21,14 @@ MOC 是**领域入口 + 导航索引**，不是数据存储。一个 MOC 文件�
 
 | 方法论 | 职责 | 本 vault 实例 |
 |---|---|---|
-| PARA | **横向分层**（按可行动性分 Project/Area/Resource/Archive） | `00_Active` / `[[10_Reference/investing` / `[[10_Reference/meta` / `20_Archive` |`20_Archive`]]
-| MOC | **纵向导航**（每个 Area 内的入口索引） | `[[10_Reference/investing/MOC.md` / `[[[[10_Reference/market_sentiment/DASHBOARD.md` |DASHBOARD.md`]]
+| PARA | **横向分层**（按可行动性分 Project/Area/Resource/Archive） | `00_Active` / `10_Reference/investing` / `10_Reference/meta` / `20_Archive` |`20_Archive`
+| MOC | **纵向导航**（每个 Area 内的入口索引） | `10_Reference/investing/MOC.md` / `10_Reference/market_sentiment/DASHBOARD.md` |DASHBOARD.md`
 
 两者互补：PARA 管"这文件该放哪一层"，MOC 管"这一层怎么找到具体文件"。
 
 ## MOC 的四要素（本 vault 实例化情况）
 
-1. **领域定义段**：`[[10_Reference/investing/MOC]]` 第 1-3 行——"Vibe-Research 项目的语义层"
+1. **领域定义段**：`10_Reference/investing/MOC` 第 1-3 行——"Vibe-Research 项目的语义层"
 2. **实体类导航表**：MOC 第 9-24 行——14 类实体 × 文件夹 × 说明 × 数量
 3. **关系层说明**：MOC 第 36-39 行——10 个谓词 + 双链 + frontmatter 标注
 4. **使用说明**：MOC 第 77-108 行——新建/链接/查询/视图四步操作
@@ -43,7 +43,7 @@ MOC 是**领域入口 + 导航索引**，不是数据存储。一个 MOC 文件�
 
 - [[10_Reference/investing/MOC]] — 投研子区 MOC（实例化最完整）
 - [[10_Reference/market_sentiment/情绪仪表盘]] — 情绪子区 MOC（带 6 层 z-score + 三维向量 + 仓位映射）
-- [[[[10_Reference/meta/PARA 方法论 — PARA 方法论（与 MOC 互补的横向分层）]]
+- [[10_Reference/meta/PARA 方法论]] — PARA 方法论（与 MOC 互补的横向分层）
 
 ## 来源
 

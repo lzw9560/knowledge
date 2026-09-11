@@ -80,4 +80,4 @@ description: 打板各形态§44v2 selection verdict核实图(recorder.db 83行)
 
 ## 关联
 
-[[A股异常交易监管]]（late_lock 真买不撤单 legal）+ [[A股交易成本结构]]（打板成本最差 1.0-1.5%）+ memory `expert-round-compliance` + `gap-edge-cost-never-wired`（gap t/p 未落盘）。
+[[00_Active/projects/vibe-research/expert-rounds/A股异常交易监管]]（late_lock 真买不撤单 legal）+ [[00_Active/projects/vibe-research/expert-rounds/A股交易成本结构]]（打板成本最差 1.0-1.5%）+ memory `expert-round-compliance` + `gap-edge-cost-never-wired`（gap t/p 未落盘）。

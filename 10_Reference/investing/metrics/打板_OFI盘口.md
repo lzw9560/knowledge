@@ -33,6 +33,6 @@ OFI（Order Flow Imbalance）/queue imbalance = bid/ask queue 不平衡。学术
 - 何时卖：盘口转弱/撤单激增
 
 ## links
-- 战法卡：[[弱转强接力]] [[一字竞价选股法]]
-- 数据源：[[data-sources/mootdx]]
-- 索引：[[打板因子集索引]]
+- 战法卡：[[10_Reference/investing/strategies/弱转强接力]] [[10_Reference/investing/strategies/一字竞价选股法]]
+- 数据源：[[10_Reference/investing/data-sources/mootdx]]
+- 索引：[[10_Reference/investing/strategies/打板因子集索引]]

@@ -5,12 +5,12 @@
 
 ## 活跃项目
 
-- [[projects/quant-limit-up/SUMMARY|quant-limit-up]]
-- [[projects/vibe-research/SUMMARY|vibe-research]]
+- [[00_Active/projects/quant-limit-up/SUMMARY|quant-limit-up]]
+- [[00_Active/projects/vibe-research/SUMMARY|vibe-research]]
 
 ## 近期决策（30天内）
 
-- [[decisions/2026-09-08_持仓减仓决策|持仓减仓决策]] — 2026-09-08
+- [[00_Active/decisions/2026-09-08_持仓减仓决策|持仓减仓决策]] — 2026-09-08
 
 ## 近期沟通（30天内）
 

@@ -83,8 +83,8 @@ S173 orchestrator 模块实现 + 单测 mock 调用点验证逻辑，**但 call-
 
 ## C. 设计/讨论产出（KG active + memory，无 commit）
 
-- 打板战法真实模型（[[打板战法真实模型]]）+ 打板量化模型设计（[[打板量化模型设计]]，6 盘中 conditional 因子）
-- 趋势波段臂量化模型设计（[[趋势波段臂量化模型设计]]，7 维题材/政策趋势）
+- 打板战法真实模型（[[00_Active/projects/vibe-research/expert-rounds/打板战法真实模型]]）+ 打板量化模型设计（[[00_Active/projects/vibe-research/expert-rounds/打板量化模型设计]]，6 盘中 conditional 因子）
+- 趋势波段臂量化模型设计（[[00_Active/projects/vibe-research/expert-rounds/趋势波段臂量化模型设计]]，7 维题材/政策趋势）
 - #6 臂间相关 + portfolio 最终版（4 臂 + 发酵期 cap≤30% 正交化 + 数据基建多臂共用）
 - A 股交易成本结构 / 异常交易监管 / 红利低波复合因子 / 动量因子 A 股 / 打板形态 §44 verdict 图
 - 8 专家逐个讨论 verdict（成本会计师 / 合规监管 / 社区开源实践者 + 战法模型重新讨论）

@@ -14,7 +14,7 @@ created: 2026-09-07
 | 方法论 | 用途 | 投研实例化 |
 |---|---|---|
 | [[10_Reference/meta/MOC 方法论]]| 导航层组织（Maps of Content） | 各领域 `MOC.md` |
-| [[10_Reference/meta/PARA 方法论]]| 知识分层（Projects/Areas/Resources/Archives） | `[[10_Reference/` = Resources |` = Resources]]
+| [[10_Reference/meta/PARA 方法论]]| 知识分层（Projects/Areas/Resources/Archives） | `10_Reference/` = Resources |` = Resources
 | [[10_Reference/meta/四构件本体方法论]] | 知识图谱四构件本体 | stocks/industries/concepts/logic/... |
 
 ## 🔗 关联

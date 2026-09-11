@@ -17,8 +17,8 @@ PARA 把所有信息按"与当前项目的相关度"分四层：
 | 层 | 文件夹 | 性质 | 投研 vault 实例化 |
 |---|---|---|---|
 | **P**rojects | `00_Active/` | 有截止日期的活跃项目 | `00_Active/PROFILE.md`（当前关注领域 + 风格声明）|
-| **A**reas | `[[10_Reference/investing/` |长期维护的领域（无截止日期） | 投研知识图谱本体（stocks/strategies/...） |]]
-| **R**esources | `[[[[10_Reference/meta/` |跨领域主题资料 | 本文件所在目录（方法论） |]]
+| **A**reas | `10_Reference/investing/` |长期维护的领域（无截止日期） | 投研知识图谱本体（stocks/strategies/...） |
+| **R**esources | `10_Reference/meta/` |跨领域主题资料 | 本文件所在目录（方法论） |
 | **A**rchives | `20_Archive/` | 完成或废弃的项目 | 已归档 spec / 历史决策 |
 
 ## 关键原则
@@ -38,7 +38,7 @@ PARA 把所有信息按"与当前项目的相关度"分四层：
 ## 跨领域实例
 
 - [[10_Reference/investing/MOC]] — 投研子区 MOC（Areas 层实例化）
-- [[[[10_Reference/meta/MOC 方法论 — MOC 方法论（与 PARA 互补的导航层）]]
+- [[10_Reference/meta/MOC 方法论]] — MOC 方法论（与 PARA 互补的导航层）
 
 ## 来源
 

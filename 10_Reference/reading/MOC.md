@@ -14,9 +14,9 @@ tags: [moc, reading]
 
 | 实体类 | 文件夹 | 数量 | 说明 |
 |---|---|---|---|
-| 书单 | [booklist/](10_Reference/meta/index) |15 | 待读/在读/已读 |]]
-| 笔记 | [notes/](10_Reference/meta/index) |16 | 读书笔记 |]]
-| 摘抄 | [quotes/](10_Reference/meta/index) |— | 精彩摘录 |]]
+| 书单 | [booklist/](10_Reference/meta/index) |15 | 待读/在读/已读 |
+| 笔记 | [notes/](10_Reference/meta/index) |16 | 读书笔记 |
+| 摘抄 | [quotes/](10_Reference/meta/index) |— | 精彩摘录 |
 
 > 实体合计 31 个（书单 15 + 笔记 16 + 摘抄待建）。
 

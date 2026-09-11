@@ -68,5 +68,5 @@ source: ARCHITECTURE.md
 ## 🔧 技术栈
 
 - 🔧 [[10_Reference/tech-learning/concepts/熔断器|熔断器]] — 研报接口采集加熔断
-- 🔧 [[[[10_Reference/tech-learning/concepts/限流 — 共用 em_get QPS≤2 限流防封]]
+- 🔧 [[10_Reference/tech-learning/concepts/限流]] — 共用 em_get QPS≤2 限流防封
 - 🔧 [[10_Reference/tech-learning/concepts/缓存策略|缓存策略]] — 研报数据低频更新，入缓存降低请求

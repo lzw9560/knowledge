@@ -98,11 +98,11 @@ vault 路径：`/Users/lizhiwei/Documents/Obsidian Vault/`，投研子区在 `10
 |---|---|---|---|---|
 | **共享实体归属** | ❌ 困境：东财放 `specs/vibe-research/` 还是 `specs/trading-agents/`？数据源/股票无法分子文件夹 | ✅ 平铺，frontmatter 标多项目 | ⚠️ 单 `project` 字段无法表达「被 3 个项目引用」 | ✅ `projects:` 列表标引用，`origin_project:` 标溯源 |
 | **项目级元信息** | ❌ 无项目节点，仓库/许可证/技术栈无处放 | ❌ 同左 | ✅ `projects/x.md` 承载 | ✅ 同 C |
-| **导航锚点** | ⚠️ 靠文件夹，但共享实体无锚点 | ❌ 无节点可链 | ✅ 项目实体是 `[[]]` 锚点 | ✅ 同 C |
+| **导航锚点** | ⚠️ 靠文件夹，但共享实体无锚点 | ❌ 无节点可链 | ✅ 项目实体是 `` 锚点 | ✅ 同 C |
 | **Dataview 按项目筛** | ⚠️ `FROM "specs/vibe-research"` 可以，但共享实体筛不到 | ✅ `WHERE project = "x"` | ✅ `WHERE project = "x"` | ✅ 专属 `WHERE project = "x"` / 共享 `WHERE contains(projects, "x")` |
 | **Dataview 跨项目查** | ❌ 子文件夹割裂，跨项目查要 union 多路径 | ✅ 平铺天然跨项目 | ✅ 平铺 | ✅ 平铺 |
 | **新项目扩展性** | ❌ 每加项目建 N 个子文件夹，共享实体要决定归属 | ✅ 加 frontmatter 值即可 | ✅ 加项目实体 + frontmatter 值 | ✅ 同 C |
-| **存量迁移成本** | ❌ 高：要移动文件 + 改所有 `[[]]` 链接路径 | ⚠️ 中：加字段 | ⚠️ 中：加字段 + 建项目实体 | ⚠️ 中：加字段 + 建项目实体（不移动文件，链接不变） |
+| **存量迁移成本** | ❌ 高：要移动文件 + 改所有 `` 链接路径 | ⚠️ 中：加字段 | ⚠️ 中：加字段 + 建项目实体 | ⚠️ 中：加字段 + 建项目实体（不移动文件，链接不变） |
 | **命名冲突处理** | ❌ 无机制（analysts/ 冲突无解） | ⚠️ 靠 type 字段区分，但同文件夹仍混 | ⚠️ 同 B | ✅ 新建 `agents/` 文件夹分流（见 §2.3） |
 
 ### 1.2 推荐方案 D（决策）
@@ -118,16 +118,16 @@ vault 路径：`/Users/lizhiwei/Documents/Obsidian Vault/`，投研子区在 `10
 
 **理由**：
 - **共享实体是图谱的主体价值所在**。东财数据源被 3 个项目用、贵州茅台被所有项目关注——这些跨项目连接正是知识图谱区别于「每项目一个文档堆」的核心。方案 A 的子文件夹会把这些连接割裂成「每项目一份副本」或「归属争议」，直接摧毁图谱价值。
-- **项目实体是必要的锚点**。项目本身有元信息（仓库/许可证/技术栈/状态），这些信息不属于任何单个 spec 或数据源，需要一个一等实体承载。同时它是 `[[]]` 双链和 Dataview 反向聚合的目标——在 `projects/vibe-research.md` 里可以 `FROM ... WHERE project = this.name OR contains(projects, this.name)` 一键盘点该项目所有相关实体。
+- **项目实体是必要的锚点**。项目本身有元信息（仓库/许可证/技术栈/状态），这些信息不属于任何单个 spec 或数据源，需要一个一等实体承载。同时它是 `` 双链和 Dataview 反向聚合的目标——在 `projects/vibe-research.md` 里可以 `FROM ... WHERE project = this.name OR contains(projects, this.name)` 一键盘点该项目所有相关实体。
 - **双字段解决「发源 vs 引用」语义**。单一 `project` 字段无法回答「东财数据源属于谁」——它发源于 Vibe-Research 的灌入，但被 trading-agents 也引用。`origin_project`（单值，溯源）+ `projects`（列表，引用）分开，Dataview 查询和审计都清晰。
-- **平铺不移动文件 = 存量 `[[]]` 链接零破坏**。现有 18 spec + 16 数据源 + 12 战法 + 11 股票的所有双链路径不变，只加 frontmatter 字段。方案 A 要移动文件并改所有链接，迁移成本和出错风险都高一个量级。
+- **平铺不移动文件 = 存量 `` 链接零破坏**。现有 18 spec + 16 数据源 + 12 战法 + 11 股票的所有双链路径不变，只加 frontmatter 字段。方案 A 要移动文件并改所有链接，迁移成本和出错风险都高一个量级。
 - **`agents/` 新文件夹是语义正确性要求**。事实 2 已证明 `analysts/` 是真人券商分析师，AI agent 角色塞进去会污染 Dataview 查询。新建 `agents/` 是 YAGNI 的反面——这不是过度设计，是修复一个已存在的语义冲突。
 
 **被否决方案**：
 
 1. **方案 A（项目子文件夹）**：否决理由——共享实体（数据源/股票/行业/概念）无法归属单一项目子文件夹。东财放 `data-sources/vibe-research/` 则 trading-agents 引用时路径别扭且暗示「不属于它」；放 `data-sources/trading-agents/` 则 Vibe-Research 同理。每项目各建一份副本则违反「同一数据源只建一份」的去重原则，且副本间同步是维护噩梦。子文件夹还割裂跨项目 Dataview 查询（要 union 多路径）。**核心矛盾：方案 A 假设实体能按项目分区，但图谱的主体价值恰恰是跨项目共享实体，这个假设与目标冲突。**
 
-2. **方案 B（纯 frontmatter，无项目实体）**：否决理由——项目本身没有节点。仓库路径/许可证/技术栈/状态/市场覆盖这些项目级元信息无处安放（塞进每个 spec 的 frontmatter 会重复 N 次）。没有 `[[]]` 锚点意味着无法从「项目」这个维度导航，也无法做项目级 Dataview 聚合（`FROM "projects"` 不存在）。MOC 想加项目导航也没有目标可链。**B 是「有字段无实体」，能筛不能聚。**
+2. **方案 B（纯 frontmatter，无项目实体）**：否决理由——项目本身没有节点。仓库路径/许可证/技术栈/状态/市场覆盖这些项目级元信息无处安放（塞进每个 spec 的 frontmatter 会重复 N 次）。没有 `` 锚点意味着无法从「项目」这个维度导航，也无法做项目级 Dataview 聚合（`FROM "projects"` 不存在）。MOC 想加项目导航也没有目标可链。**B 是「有字段无实体」，能筛不能聚。**
 
 3. **方案 C（项目实体 + 单一 `project` 字段）**：部分采纳（项目实体 + 平铺），但单一 `project` 字段否决——它无法表达共享实体的多项目归属。若强行用单值，东财数据源的 `project:` 填谁？填 vibe-research 则 trading-agents 查不到，填 trading-agents 则 Vibe-Research 查不到，填列表则又退化成方案 D 的 `projects:`。**C 的缺陷是「有实体无区分」——不区分专属实体和共享实体，用一把钥匙开两种锁。D 是 C 的精细化：专属实体用单值（简单），共享实体用列表+溯源（准确）。**
 
@@ -453,7 +453,7 @@ created: <% tp.date.now("YYYY-MM-DD") %>
 **理由**：
 - 单轴「实体类型」（现状）适合回答「所有股票有哪些」「所有数据源有哪些」，但无法回答「trading-agents 这个项目有什么」。
 - 单轴「项目」适合回答「某项目有什么」，但无法回答「跨项目的数据源全景」。
-- 双轴并存，MOC 顶部放项目轴（4 个项目实体链接 + 各项目实体计数 Dataview），中部保留实体类型轴（13 类表），底部放跨项目对比视图入口（§5 的 Dataview）。两轴通过 `[[]]` 双链交叉——项目实体里链类型文件夹，类型 index 里链项目实体。
+- 双轴并存，MOC 顶部放项目轴（4 个项目实体链接 + 各项目实体计数 Dataview），中部保留实体类型轴（13 类表），底部放跨项目对比视图入口（§5 的 Dataview）。两轴通过 `` 双链交叉——项目实体里链类型文件夹，类型 index 里链项目实体。
 
 **被否决方案**：
 1. **仅按项目导航（替换实体类型轴）**：否决——摧毁现有 13 类实体的导航能力，跨项目查询无入口。
@@ -631,7 +631,7 @@ SORT type ASC
    - 产品功能模块（如 a-Plate-Sentinel 8 模块）→ **暂不建独立实体**，作为项目实体内部章节。待项目实现后再评估。
 6. **更新共享实体的 `projects:` 列表**：当前项目引用的已有股票/行业/概念/指数实体，在其 `projects:` 列表追加当前项目名。
 7. **跑质量门 + 更新 MOC**：
-   - `reviews/` 体检：检查孤儿实体（查询 8）、字段完整性、`[[]]` 链接有效性。
+   - `reviews/` 体检：检查孤儿实体（查询 8）、字段完整性、`` 链接有效性。
    - MOC.md 项目轴表追加当前项目行。
    - `10_Reference/index/MASTER_INDEX.md` 项目目录表追加当前项目（若 MASTER_INDEX 有「项目目录」表）。
 
@@ -665,7 +665,7 @@ SORT type ASC
 | 项目实体 | `projects/a-plate-sentinel.md` | 1 | license=proprietary/stack=[FastAPI, React, TimescaleDB, Celery, Redis]/market=[A股]/status=mvp |
 | 数据源 | tushare 追加 `projects:` | 0 新建 | Tushare 已在 daily-stock-analysis 纳入时建 |
 | 8 模块 | 项目实体内部章节 | 0 独立实体 | 待实现后评估是否建 `modules/` 文件夹 |
-| STI 情绪指数 | 待探查 | — | 与 `[[[[10_Reference/market_sentiment/` 子区建 `complements` 关系 |` 子区建 `complements` 关系]]
+| STI 情绪指数 | 待探查 | — | 与 `10_Reference/market_sentiment/` 子区建 `complements` 关系 |` 子区建 `complements` 关系
 
 ---
 

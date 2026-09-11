@@ -139,7 +139,7 @@ query_kg_relations(entity_code="first_plate", entity_type="strategy")
 ```
 返回的 `relations` 里 `target` 前缀 `stocks/` 的即匹配过的股票。
 
-**备注**：依赖 `matched_strategies` frontmatter 字段（ora-3 §1.2 已修复——从正文 `[[strategies/]]` 提取回填）。
+**备注**：依赖 `matched_strategies` frontmatter 字段（ora-3 §1.2 已修复——从正文 `strategies/` 提取回填）。
 
 ---
 

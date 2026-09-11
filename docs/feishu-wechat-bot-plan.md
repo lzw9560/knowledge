@@ -201,8 +201,8 @@ Bot:  [调 query_kg_entities(stock, industry=白酒) → 5 只股票]
 用户: 600519 关联哪些战法和数据源？
 Bot:  [调 query_kg_relations(600519) → traverse_graph 1 跳]
       贵州茅台(600519) 关联：
-      - 行业: [[industries/白酒]]
-      - 概念: [[concepts/高端白酒]]
+      - 行业: [[10_Reference/investing/industries/白酒]]
+      - 概念: [[10_Reference/investing/concepts/高端白酒]]
       - 战法: [[strategies/low_absorption]]（低吸龙头）
       - 数据源: [[data-sources/tencent]] [[data-sources/eastmoney-push2]]
 

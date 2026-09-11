@@ -21,8 +21,8 @@ github.com/zlotus/ash-mcp — baostock + akshare 的 MCP server，自带**长期
 
 ## 短板
 
-- baostock 分红数据薄 → 叠 [[Tushare]] `daily_basic` 补股息率
-- 继承其因子选择/rebalance 逻辑（需 review 是否符合 [[红利低波复合因子]] 结论，警惕价值陷阱）
+- baostock 分红数据薄 → 叠 [[10_Reference/investing/data-sources/Tushare]] `daily_basic` 补股息率
+- 继承其因子选择/rebalance 逻辑（需 review 是否符合 [[00_Active/projects/vibe-research/expert-rounds/红利低波复合因子]] 结论，警惕价值陷阱）
 
 ## 退路
 
@@ -30,4 +30,4 @@ fork `hb4ch/tushare-etl`（Tushare→Parquet ETL 当数据骨干，含 daily_bas
 
 ## 关联
 
-[[baostock（K线日更）]] + [[AkShare]] + [[Tushare]] + [[红利低波复合因子]] + [[qlib]]（qlib 无价值因子，别 fork 做价值）。
+[[10_Reference/investing/data-sources/baostock（K线日更）]] + [[10_Reference/investing/data-sources/AkShare]] + [[10_Reference/investing/data-sources/Tushare]] + [[00_Active/projects/vibe-research/expert-rounds/红利低波复合因子]] + [[00_Active/projects/vibe-research/expert-rounds/qlib]]（qlib 无价值因子，别 fork 做价值）。

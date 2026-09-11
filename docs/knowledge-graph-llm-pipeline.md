@@ -2,7 +2,7 @@
 
 > 把 Vibe-Research 项目的存量知识（spec/代码/战法/数据源）自动抽取到 Obsidian 知识图谱 vault 的 pipeline 设计。
 > 方法论对齐 `ontology-knowledge-graph` skill 四构件（实体/关系/逻辑规则/动作）+ Curated 质量门 + 四层关系推断 + ReAct 审查。
-> 借鉴 nano-ontoprompt（MIT）的 Pipeline Mapping 思路，落地到 markdown + `[[]]` + Dataview + MCP，不引入 Neo4j/Postgres 重栈。
+> 借鉴 nano-ontoprompt（MIT）的 Pipeline Mapping 思路，落地到 markdown + `` + Dataview + MCP，不引入 Neo4j/Postgres 重栈。
 
 ---
 
@@ -151,7 +151,7 @@
 
 新实体出现时：
 1. LLM/规则抽取产出新实体
-2. 查词典——已有则用规范名建 `[[]]` 链接
+2. 查词典——已有则用规范名建 `` 链接
 3. 词典无——先建 stub 文件到 inbox/，再追加词典条目
 
 ---
@@ -300,7 +300,7 @@ created: {date}
 
 ### 一致性校验（pipeline 末尾）
 
-1. `find_broken_links`（MCP）：扫所有 `[[]]`，目标不存在则报 high 级问题
+1. `find_broken_links`（MCP）：扫所有 ``，目标不存在则报 high 级问题
 2. `find_orphans`（MCP）：无入边实体报 medium 级问题
 3. `duplicate_check`（Dataview）：按 code 分组，同 code 多份报 critical
 4. 结果写到 `reviews/<date>-pipeline-audit.md`
@@ -434,7 +434,7 @@ ARCHITECTURE.md 模块清单  → 后端模块实体                 → (待建
 ### P4：灌入关系层
 
 **输入**：`backend/data/sources/*.py` + `ARCHITECTURE.md` 数据流
-**动作**：规则抽取函数→数据源调用关系，建 `[[]]` 链接
+**动作**：规则抽取函数→数据源调用关系，建 `` 链接
 **产出**：data-sources/ 实体的入边增加（被 spec/模块引用）
 **验收**：`relation_density` 检查无孤岛
 

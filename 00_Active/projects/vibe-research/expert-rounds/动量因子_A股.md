@@ -17,8 +17,8 @@ description: A股动量长期无效——别套美股动量逻辑，反转才有
 
 ## verdict
 
-学术一致：长期动量在 A 股是「社区流行但未严验」的反例。**别拿美股动量 fork 套 A 股。** A 股长线选 [[红利低波复合因子]]，短中期可看反转（但衰减中，待攒 60 天复测）。
+学术一致：长期动量在 A 股是「社区流行但未严验」的反例。**别拿美股动量 fork 套 A 股。** A 股长线选 [[00_Active/projects/vibe-research/expert-rounds/红利低波复合因子]]，短中期可看反转（但衰减中，待攒 60 天复测）。
 
 ## 关联
 
-[[红利低波复合因子]]（A 股长线最硬）+ [[A股交易成本结构]]。
+[[00_Active/projects/vibe-research/expert-rounds/红利低波复合因子]]（A 股长线最硬）+ [[00_Active/projects/vibe-research/expert-rounds/A股交易成本结构]]。

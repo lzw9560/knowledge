@@ -33,7 +33,7 @@
 
 1. **图遍历**：`traverse_graph` 工具能从任意笔记出发遍历 N 度双链——这是 vault 作为"知识图谱"最核心的查询能力，基础读写类 server 没有。
 2. **Dataview 直传**：`query_dataview` 工具直接把 DQL 查询发给 Obsidian 跑并返回结果，复用 vault 里已有的所有 ```dataview 查询逻辑，不用在 agent 侧重写。
-3. **重命名重写反向链接**：`move_note`/`rename` 操作会自动更新所有指向该笔记的 `[[]]` 链接——纯文件系统直读类 server 重命名后反向链接会断，yanxue06 经 Obsidian 处理不会。
+3. **重命名重写反向链接**：`move_note`/`rename` 操作会自动更新所有指向该笔记的 `` 链接——纯文件系统直读类 server 重命名后反向链接会断，yanxue06 经 Obsidian 处理不会。
 
 升级到 obsidian-mcp-pro 的触发条件：需要操作 canvas（`.canvas` 文件）、需要语义搜索（向量化检索）、或不想让 Obsidian 一直开着。
 
@@ -263,7 +263,7 @@ obsidian-mcp-pro 支持 `OBSIDIAN_WRITE_PATHS` 白名单（见 §3.3），**强�
 
 ### 5.3 delete_note 慎用
 
-`delete_note` 工具会直接删笔记，且**不会主动清理指向该笔记的 `[[]]` 反向链接**（反向链接会变成"未创建的链接"高亮）。建议：
+`delete_note` 工具会直接删笔记，且**不会主动清理指向该笔记的 `` 反向链接**（反向链接会变成"未创建的链接"高亮）。建议：
 
 1. **生产环境禁用**：注册 MCP 时不给 `delete_note` 权限（若 server 支持工具级白名单），或设 `OBSIDIAN_READ_ONLY=true` 只读。
 2. **替代方案**：要"删"笔记时，改为 `move_note` 移到 `archive/` 文件夹（保留可恢复），而非真删。

@@ -16,8 +16,8 @@ description: microsoft/qlib——Alpha158全是量价因子无价值因子，纠
 
 ## verdict
 
-做 A 股长线价值，**别 fork qlib**（无价值因子）。fork [[zlotus-ash-mcp]] 对路。qlib 适合做量价 ML 选股，但 A 股 [[动量因子_A股]] 长期无效，量价动量类也受限。
+做 A 股长线价值，**别 fork qlib**（无价值因子）。fork [[00_Active/projects/vibe-research/expert-rounds/zlotus-ash-mcp]] 对路。qlib 适合做量价 ML 选股，但 A 股 [[00_Active/projects/vibe-research/expert-rounds/动量因子_A股]] 长期无效，量价动量类也受限。
 
 ## 关联
 
-[[红利低波复合因子]] + [[zlotus-ash-mcp]] + [[动量因子_A股]]。
+[[00_Active/projects/vibe-research/expert-rounds/红利低波复合因子]] + [[00_Active/projects/vibe-research/expert-rounds/zlotus-ash-mcp]] + [[00_Active/projects/vibe-research/expert-rounds/动量因子_A股]]。

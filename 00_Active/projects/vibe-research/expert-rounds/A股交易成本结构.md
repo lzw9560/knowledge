@@ -42,4 +42,4 @@ description: A股交易摩擦成本结构——5元最低佣金+印花0.05%+滑�
 
 ## 关联
 
-[[红利低波复合因子]]（长线最硬因子，成本吃<3% 舒适区）+ [[动量因子_A股]]（超短量价动量在 A 股无效）。
+[[00_Active/projects/vibe-research/expert-rounds/红利低波复合因子]]（长线最硬因子，成本吃<3% 舒适区）+ [[00_Active/projects/vibe-research/expert-rounds/动量因子_A股]]（超短量价动量在 A 股无效）。
